@@ -35,4 +35,8 @@ public class prueba {
     public void setLista_nums(List<Integer> lista_nums) {
         this.lista_nums = lista_nums;
     }
+
+    public void nuevaFuncion() {
+        int sum = 2 * 1;
+    }
 }
