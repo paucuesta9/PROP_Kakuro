@@ -4,6 +4,7 @@ public class prueba {
     private String nombre;
     private int num;
     private List<Integer> lista_nums;
+    private String nuevo_string;
 
     public prueba(String nombre, int num, List<Integer> lista_nums) {
         this.nombre = nombre;
