@@ -5,6 +5,7 @@ public class prueba {
     private int num;
     private List<Integer> lista_nums;
     private Boolean verdadero;
+    private String nuevo_string;
 
     public prueba(String nombre, int num, List<Integer> lista_nums) {
         this.nombre = nombre;
