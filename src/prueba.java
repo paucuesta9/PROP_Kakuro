@@ -38,6 +38,6 @@ public class prueba {
     }
 
     public void nuevaFuncion() {
-        int sum = 2 * 1;
+        int sum = 2 * 1 + 1;
     }
 }
