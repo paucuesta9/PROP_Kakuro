@@ -3,12 +3,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class WhiteCell {
+public class WhiteCell extends Cell {
     private int value;
     private int correctValue;
     private List<Boolean> tempValues;
 
-    public WhiteCell() {
+    public WhiteCell(int posX, int posY) {
+        super(posX, posY);
         tempValues = new ArrayList<>(9);
     }
 
