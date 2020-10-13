@@ -1,8 +1,13 @@
-public class BlackCell{
+public class BlackCell extends Cell{
     private int vertical;
     private int horizontal;
 
-    public void BlackCell(int vertical, int horizontal) {
+    public BlackCell(int posX, int posY) {
+        super(posX, posY);
+    }
+
+    public BlackCell(int posX, int posY, int vertical, int horizontal) {
+        super(posX, posY);
         this.vertical = vertical;
         this.horizontal = horizontal;
     }
