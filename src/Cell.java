@@ -7,6 +7,8 @@ public class Cell {
         this.posY = posY;
     }
 
+    public boolean isWhite() {return false;}
+
     public void setPosX(int posX) { this.posX = posX; }
 
     public int getPosX() { return posX; }
