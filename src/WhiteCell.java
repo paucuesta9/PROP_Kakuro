@@ -44,4 +44,9 @@ public class WhiteCell extends Cell {
     public void setTempValue(int index, Boolean value) {
         this.tempValues.set(index, value);
     }
+
+    @Override
+    public boolean isWhite() {
+        return true;
+    }
 }
