@@ -13,6 +13,12 @@ public class WhiteCell extends Cell {
         tempValues = new ArrayList<>(9);
     }
 
+    public WhiteCell(int posX, int posY, int value) {
+        super(posX, posY);
+        this.value = value;
+        tempValues = new ArrayList<>(9);
+    }
+
     public int getValue() {
         return value;
     }
