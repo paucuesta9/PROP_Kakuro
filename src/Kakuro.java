@@ -1,14 +1,18 @@
 /* Alvaro Armada Ruiz */
 
+import java.util.ArrayList;
+
 public class Kakuro {
     private String id;
     private int difficulty;
     private int size;
+    private int [][] board;
 
-    public Kakuro(String id, int difficulty, int size) {
+    public Kakuro(String id, int difficulty, int size, int[][] board) {
         this.id = id;
         this.difficulty = difficulty;
         this.size = size;
+        this.board = board;
     }
 
     public String getId() {
@@ -33,5 +37,13 @@ public class Kakuro {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public int[][] getBoard() {
+        return board;
+    }
+
+    public void setBoard(int[][] board) {
+        this.board = board;
     }
 }
