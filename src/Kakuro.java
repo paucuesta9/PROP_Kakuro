@@ -5,13 +5,15 @@ import java.util.ArrayList;
 public class Kakuro {
     private String id;
     private int difficulty;
-    private int size;
+    private int rowSize;
+    private int columnSize;
     private Cell [][] board;
 
-    public Kakuro(String id, int difficulty, int size, Cell[][] board) {
+    public Kakuro(String id, int difficulty, int rowSize, int columnSize, Cell[][] board) {
         this.id = id;
         this.difficulty = difficulty;
-        this.size = size;
+        this.rowSize = rowSize;
+        this.columnSize = columnSize;
         this.board = board;
     }
 
@@ -31,12 +33,20 @@ public class Kakuro {
         this.difficulty = difficulty;
     }
 
-    public int getSize() {
-        return size;
+    public int getRowSize() {
+        return rowSize;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public void setRowSize(int rowSize) {
+        this.rowSize = rowSize;
+    }
+
+    public int getColumnSize() {
+        return columnSize;
+    }
+
+    public void setColumnSize(int columnSize) {
+        this.columnSize = columnSize;
     }
 
     public Cell[][] getBoard() {
