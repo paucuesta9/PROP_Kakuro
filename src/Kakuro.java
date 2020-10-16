@@ -6,9 +6,9 @@ public class Kakuro {
     private String id;
     private int difficulty;
     private int size;
-    private int [][] board;
+    private Cell [][] board;
 
-    public Kakuro(String id, int difficulty, int size, int[][] board) {
+    public Kakuro(String id, int difficulty, int size, Cell[][] board) {
         this.id = id;
         this.difficulty = difficulty;
         this.size = size;
@@ -39,11 +39,11 @@ public class Kakuro {
         this.size = size;
     }
 
-    public int[][] getBoard() {
+    public Cell[][] getBoard() {
         return board;
     }
 
-    public void setBoard(int[][] board) {
+    public void setBoard(Cell[][] board) {
         this.board = board;
     }
 }
