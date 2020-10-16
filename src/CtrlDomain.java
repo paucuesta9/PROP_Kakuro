@@ -2,6 +2,11 @@ import java.io.*;
 
 public class CtrlDomain {
 
+    //constructora
+    public CtrlDomain() {
+
+    }
+
     boolean checkColumn(int r,int c,int sum, boolean f,int i, Cell [][] board) {
         if(board[r][c].isWhite()){
             WhiteCell w = (WhiteCell) board[r][c];
@@ -59,16 +64,57 @@ public class CtrlDomain {
         }
         return false;
     }
-    //constructora
-    public CtrlDomain() {
-
-    }
 
     public void play(String filePath) {
         Kakuro kakuro = readKakuro(filePath);
-        Cell[][] board = kakuro.getBoard();
-        for (int i = 0; i < kakuro.getRowSize(); ++i) {
-            for (int j = 0; j < kakuro.getColumnSize(); ++j) {
+        writeKakuroInTerminal(kakuro);
+    }
+
+    public Kakuro readKakuro(String filePath) {
+        try {
+            File file = new File(filePath);
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = br.readLine();
+            String[] values = line.split(",");
+            int rowSize = Integer.parseInt(values[0]);
+            int columnSize = Integer.parseInt(values[1]);
+            Cell[][] board = new Cell[rowSize][columnSize];
+            for (int i = 0; i < rowSize; ++i) {
+                line = br.readLine();
+                values = line.split(",");
+                for (int j = 0; j < columnSize; ++j) {
+                    if (values[j].equals("*")) board[i][j] = new BlackCell(i, j);
+                    else if (values[j].equals("?")) board[i][j] = new WhiteCell(i, j);
+                    else if (values[j].charAt(0) == 'C' || values[j].charAt(0) == 'F') {
+                        int vertical = 0, horizontal = 0;
+                        if (values[j].charAt(0) == 'C') {
+                            values[j] = values[j].substring(1);
+                            if (values[j].contains("F")) {
+                                String[] CF = values[j].split("F");
+                                vertical = Integer.parseInt(CF[0]);
+                                horizontal = Integer.parseInt(CF[1]);
+                            } else {
+                                vertical = Integer.parseInt(values[j]);
+                            }
+                        } else {
+                            horizontal = Integer.parseInt(values[j].substring(1));
+                        }
+                        board[i][j] = new BlackCell(i, j, vertical, horizontal);
+                    } else board[i][j] = new WhiteCell(i, j, Integer.parseInt(values[j]));
+                }
+            }
+            return new Kakuro("0", 0, rowSize, columnSize, board);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void writeKakuroInTerminal(Kakuro k) {
+        Cell[][] board = k.getBoard();
+        for (int i = 0; i < k.getRowSize(); ++i) {
+            for (int j = 0; j < k.getColumnSize(); ++j) {
                 if (board[i][j].isWhite()) System.out.print("?");
                 else {
                     BlackCell bc = (BlackCell) board[i][j];
@@ -78,64 +124,9 @@ public class CtrlDomain {
                     if (bc.getVertical() != 0) System.out.print("C" + bc.getVertical());
                     if (bc.getHorizontal() != 0) System.out.print("F" + bc.getHorizontal());
                 }
-                System.out.print(",");
+                if (j != k.getColumnSize() - 1) System.out.print(",");
             }
             System.out.println("");
         }
-    }
-
-    private Kakuro readKakuro(String filePath) {
-        try {
-            File file = new File(filePath);
-            FileReader fr = new FileReader(file);
-            int rowSize = fr.read();
-            fr.read();
-            int columnSize = fr.read();
-            Cell[][] board = new Cell[rowSize][columnSize];
-            for (int i = 0; i < rowSize; ++i) {
-                for (int j = 0; j < columnSize; ++j) {
-                    int currentChar = fr.read();
-                    if ((char)currentChar == '*') board[i][j] = new BlackCell(i, j);
-                    else if ((char)currentChar == '?') board[i][j] = new WhiteCell(i, j);
-                    else if (currentChar > 0 && currentChar < 10) board[i][j] = new WhiteCell(i, j, currentChar);
-                    else {
-                        int verticalInt, horizontalInt;
-                        verticalInt = horizontalInt = 0;
-                        if (currentChar == 'C') {
-                            currentChar = fr.read();
-                            String vertical = "";
-                            while ((char) currentChar != ',' || (char) currentChar != 'F') {
-                                vertical.concat(String.valueOf(currentChar));
-                                currentChar = fr.read();
-                            }
-                            if ((char) currentChar == 'F') {
-                                currentChar = fr.read();
-                                String horizontal = "";
-                                while ((char) currentChar != ',') {
-                                    horizontal.concat(String.valueOf(currentChar));
-                                    currentChar = fr.read();
-                                }
-                                horizontalInt = Integer.valueOf(horizontal);
-                            }
-                            verticalInt = Integer.valueOf(vertical);
-                        } else {
-                            currentChar = fr.read();
-                            String horizontal = "";
-                            while ((char) currentChar != ',') {
-                                horizontal.concat(String.valueOf(currentChar));
-                                currentChar = fr.read();
-                            }
-                            horizontalInt = Integer.valueOf(horizontal);
-                        }
-                        board[i][j] = new BlackCell(i, j, verticalInt, horizontalInt);
-                    }
-                }
-            }
-            Kakuro kakuro = new Kakuro("0", 0, rowSize, columnSize, board);
-            return kakuro;
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }
