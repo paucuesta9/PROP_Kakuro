@@ -68,6 +68,7 @@ public class CtrlDomain {
     public void play(String filePath) {
         Kakuro kakuro = readKakuro(filePath);
         writeKakuroInTerminal(kakuro);
+        writeKakuro(kakuro, "prueba.txt");
     }
 
     public Kakuro readKakuro(String filePath) {
@@ -109,6 +110,41 @@ public class CtrlDomain {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public void writeKakuro (Kakuro k, String filePath) {
+        FileWriter file = null;
+        try {
+            file = new FileWriter("data/" + filePath);
+            PrintWriter pw = new PrintWriter(file);
+            Cell[][] board = k.getBoard();
+            pw.println(k.getRowSize() + "," + k.getColumnSize());
+            for (int i = 0; i < k.getRowSize(); ++i) {
+                for (int j = 0; j < k.getColumnSize(); ++j) {
+                    if (board[i][j].isWhite()) pw.print("?");
+                    else {
+                        BlackCell bc = (BlackCell) board[i][j];
+                        if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
+                            pw.print("*");
+                        }
+                        if (bc.getVertical() != 0) pw.print("C" + bc.getVertical());
+                        if (bc.getHorizontal() != 0) pw.print("F" + bc.getHorizontal());
+                    }
+                    if (j != k.getColumnSize() - 1) pw.print(",");
+                }
+                pw.println("");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        finally {
+            try {
+                if (null != file)
+                    file.close();
+            } catch (Exception e2) {
+                e2.printStackTrace();
+            }
+        }
     }
 
     public void writeKakuroInTerminal(Kakuro k) {
