@@ -129,7 +129,11 @@ public class CtrlDomain {
             pw.println(k.getRowSize() + "," + k.getColumnSize());
             for (int i = 0; i < k.getRowSize(); ++i) {
                 for (int j = 0; j < k.getColumnSize(); ++j) {
-                    if (board[i][j].isWhite()) pw.print("?");
+                    if (board[i][j].isWhite()) {
+                        WhiteCell w = (WhiteCell) board[i][j];
+                        if (w.getValue() != 0) pw.print(w.getValue());
+                        else pw.print("?");
+                    }
                     else {
                         BlackCell bc = (BlackCell) board[i][j];
                         if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
@@ -161,7 +165,8 @@ public class CtrlDomain {
             for (int j = 0; j < k.getColumnSize(); ++j) {
                 if (board[i][j].isWhite()) {
                     WhiteCell w = (WhiteCell) board[i][j];
-                    System.out.print(w.getValue());
+                    if (w.getValue() != 0) System.out.print(w.getValue());
+                    else System.out.print("?");
                 }
                 else {
                     BlackCell bc = (BlackCell) board[i][j];

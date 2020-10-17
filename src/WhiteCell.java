@@ -10,12 +10,15 @@ public class WhiteCell extends Cell {
 
     public WhiteCell(int posX, int posY) {
         super(posX, posY);
+        this.value = 0;
+        this.correctValue = 0;
         tempValues = new ArrayList<>(9);
     }
 
     public WhiteCell(int posX, int posY, int value) {
         super(posX, posY);
         this.value = value;
+        this.correctValue = 0;
         tempValues = new ArrayList<>(9);
     }
 
