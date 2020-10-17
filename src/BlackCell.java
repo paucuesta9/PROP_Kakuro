@@ -1,3 +1,4 @@
+/* Judith Almoño Gómez */
 public class BlackCell extends Cell{
     private int vertical;
     private int horizontal;
