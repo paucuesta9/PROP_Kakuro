@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class CtrlDomain {
 
@@ -7,7 +8,83 @@ public class CtrlDomain {
 
     }
 
-    boolean checkColumn(Cell[][] board, int r, int c, int i, boolean f, int sum) {
+    public void run () {
+        System.out.println("########## BIENVENIDO A KAKURO ##########");
+        System.out.println("");
+        menu();
+    }
+
+    public void menu () {
+        System.out.println("MENÚ:");
+        System.out.println("1. Jugar");
+        System.out.println("2. Crear/Validar");
+        System.out.println("3. Resolver");
+        System.out.println("4. Generar Automáticamente");
+        System.out.println("5. Salir");
+        System.out.println("");
+        int choice = readNumber();
+        switch(choice) {
+            case 1:
+                play();
+                break;
+            case 2:
+                //TODO: Hacer la función crear/validar
+                break;
+            case 3:
+                //TODO: Hacer la función resolver
+                break;
+            case 4:
+                //TODO: Hacer la función generar
+                break;
+            case 5:
+                System.exit(0);
+                break;
+            default:
+                System.out.println("El número introducido es incorrecto");
+                System.out.println("Debe introducir un número entre 1 y 4");
+                menu();
+                break;
+        }
+    }
+
+    public void play() {
+        System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
+        int difficulty = readNumber();
+        System.out.print("Escoge tamaño N (NxN): ");
+        int kakuroSize = readNumber();
+        Kakuro k = searchKakuro(difficulty, kakuroSize);
+        System.out.println(" -- INSTRUCCIONES --");
+        System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
+        System.out.println("Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9");
+        while (true) {
+            writeKakuroInTerminal(k);
+            System.out.println("");
+            Scanner reader = new Scanner(System.in);
+            int x = reader.nextInt();
+            int y = reader.nextInt();
+            int value = reader.nextInt();
+            //k.setValue(x, y, value);
+            System.out.println("");
+        }
+    }
+
+    public void createValidate() {}
+
+    public void resolve() {
+        Kakuro kakuro = null;
+        int [] vec = {0,0,0,0,0,0,0,0,0,0};
+        boolean t = resKakuro(kakuro,0,0, 0, vec);
+        System.out.println(t);
+    }
+
+    public void generate() {}
+
+    public Kakuro searchKakuro (int difficulty, int kakuroSize) {
+        //TODO: Hacer función searchKakuro
+        return readKakuro("data/Kakuro4.txt");
+    }
+
+    public boolean checkColumn(Cell[][] board, int r, int c, int i, boolean f, int sum) {
         if( !board[r][c].isWhite() ) {
             BlackCell b = (BlackCell) board[r][c];
             if(f && b.getVertical() == sum) return true;
@@ -22,7 +99,7 @@ public class CtrlDomain {
         return false;
     }
 
-    boolean resKakuro(Kakuro k, int r, int c, int sum, int [] vec) {
+    public boolean resKakuro(Kakuro k, int r, int c, int sum, int [] vec) {
         System.out.print(r);
         System.out.print(" ");
         System.out.print(c);
@@ -70,13 +147,17 @@ public class CtrlDomain {
         return false;
     }
 
-    public void play(String filePath) {
-        Kakuro kakuro = readKakuro(filePath);
-        int [] vec = {0,0,0,0,0,0,0,0,0,0};
-        boolean t = resKakuro(kakuro,0,0, 0, vec);
-        System.out.println(t);
-        writeKakuroInTerminal(kakuro);
-        writeKakuro(kakuro, "prueba.txt");
+
+
+
+
+
+    //Inputs/Outputs
+    public int readNumber() {
+        Scanner reader = new Scanner(System.in);
+        int number = 0;
+        number = reader.nextInt();
+        return number;
     }
 
     public Kakuro readKakuro(String filePath) {
