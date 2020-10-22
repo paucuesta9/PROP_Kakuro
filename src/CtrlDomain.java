@@ -68,7 +68,63 @@ public class CtrlDomain {
         }
     }
 
-    public void createValidate() {}
+    public boolean validate() {
+        int [] res = new int[1];
+        System.out.println(res[0]);
+        Kakuro kakuro = readKakuro("data/Novalido2.txt");
+        int [] vec = {0,0,0,0,0,0,0,0,0,0};
+        validateKakuro(kakuro,0,0, 0, vec, res);
+        if (res[0]!=1) {
+            System.out.println("El kakuro no es válido :c");
+            return false;
+        }
+        else {
+            System.out.println("El kakuro es válido c:");
+            return true;
+        }
+    }
+
+    public void validateKakuro(Kakuro k, int r, int c, int sum, int [] vec, int [] res) {
+
+        if( r == k.getRowSize() ) { res[0]++; } //hemos llegado al final, la solucion es correcta
+        else {
+            Cell[][] board = k.getBoard();
+            if( !board[r][c].isWhite() ) { // estamos en una casilla negra; queremos cambiar de columna o de casilla
+                if (sum != 0) return;
+                BlackCell b = (BlackCell) board[r][c];
+
+                if (c != k.getColumnSize() - 1) { // si no estem a la utlima columna
+                    if (board[r][c + 1].isWhite()) {
+                        sum = b.getHorizontal();
+                    }
+                }
+                int [] aux = {0,0,0,0,0,0,0,0,0,0};
+                if (c == k.getColumnSize() - 1) validateKakuro(k, r + 1, 0, 0, aux, res); //cambiamos de fila, estamos en la ultima columna }
+                else validateKakuro(k,r,c+1, sum, aux, res); //cambiamos de columna
+            }
+            else { // si estamos en una casilla blanca
+                vec[0] = 1; //indica que s'ha modificat
+                WhiteCell w = (WhiteCell) board[r][c];
+                for(int i = 1; i < 10 && sum-i >= 0; ++i ) {
+                    if ( vec[i] == 0) {
+                        vec[i] = 1;
+                        w.setValue(i);
+                        boolean f = false;
+                        if(r == k.getRowSize() - 1 || !board[r+1][c].isWhite()) f =true;
+                        if(checkColumn(board, r-1, c, i, f, i)) {
+                            if (c == k.getColumnSize() - 1 && sum-i != 0) { }
+                            else if (c == k.getColumnSize() - 1 && sum-i == 0) { // estamos en la ultima casilla de la fila pero la suma es correcta
+                                validateKakuro(k, r + 1, 0, 0, vec, res);
+                            }
+                            else validateKakuro(k, r, c + 1, sum-i, vec, res);
+                        }
+                        vec[i] = 0;
+                    }
+                }
+            }
+        }
+        return;
+    }
 
     public void resolve() {
         Kakuro kakuro = null;
