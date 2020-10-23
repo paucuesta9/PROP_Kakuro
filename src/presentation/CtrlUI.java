@@ -60,12 +60,14 @@ public class CtrlUI {
         System.out.println(" -- INSTRUCCIONES --");
         System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
         System.out.println("Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9");
+        System.out.println("Para salir escribe -1");
         //TODO: Hacer la comprovación while (mientras no queden numeros por poner y sea correcto)
         while (true) {
             writeKakuroInTerminal();
             System.out.println("");
             Scanner reader = new Scanner(System.in);
             int x = reader.nextInt();
+            if (x == -1) System.exit(0);
             int y = reader.nextInt();
             int value = reader.nextInt();
             if (!cd.kakuroSetValue(x, y, value)) {
