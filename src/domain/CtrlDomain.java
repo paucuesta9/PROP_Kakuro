@@ -69,25 +69,25 @@ public class CtrlDomain {
         String content;
         Cell[][] board = currentKakuro.getBoard();
         content = currentKakuro.getRowSize() + "," + currentKakuro.getColumnSize() + "\n";
-        pw.println(k.getRowSize() + "," + k.getColumnSize());
-        for (int i = 0; i < k.getRowSize(); ++i) {
-            for (int j = 0; j < k.getColumnSize(); ++j) {
+        for (int i = 0; i < currentKakuro.getRowSize(); ++i) {
+            for (int j = 0; j < currentKakuro.getColumnSize(); ++j) {
                 if (board[i][j].isWhite()) {
                     WhiteCell w = (WhiteCell) board[i][j];
-                    if (w.getValue() != 0) pw.print(w.getValue());
-                    else pw.print("?");
+                    if (w.getValue() != 0) content.concat(String.valueOf(w.getValue()));
+                    else content.concat("?");
                 }
                 else {
                     BlackCell bc = (BlackCell) board[i][j];
                     if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
-                        pw.print("*");
+                        content.concat("*");
                     }
-                    if (bc.getVertical() != 0) pw.print("C" + bc.getVertical());
-                    if (bc.getHorizontal() != 0) pw.print("F" + bc.getHorizontal());
+                    if (bc.getVertical() != 0) content.concat("C" + bc.getVertical());
+                    if (bc.getHorizontal() != 0) content.concat("F" + bc.getHorizontal());
                 }
-                if (j != k.getColumnSize() - 1) pw.print(",");
+                if (j != currentKakuro.getColumnSize() - 1) content.concat(",");
             }
-            pw.println("");
+            content.concat("\n");
         }
+        data.saveKakuro(content, currentKakuro.getDifficulty(), currentKakuro.getRowSize());
     }
 }
