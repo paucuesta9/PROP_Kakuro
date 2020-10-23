@@ -28,6 +28,7 @@ public class CtrlUI {
         System.out.println("5. Salir");
         System.out.println("");
         int choice = readNumber();
+        reader.nextLine();
         String kakuro;
         switch(choice) {
             case 1:
@@ -110,9 +111,7 @@ public class CtrlUI {
     }
 
     public String readLine() {
-        String input = "";
-        input = reader.nextLine();
-        return input;
+        return reader.nextLine();
     }
 
     public void writeKakuroInTerminal() {
