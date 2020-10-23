@@ -71,11 +71,6 @@ public class Kakuro {
     }
 
     public boolean resolve(int r, int c, int sum, int [] vec) {
-        System.out.print(r);
-        System.out.print(" ");
-        System.out.print(c);
-        System.out.println();
-
         if( r == this.getRowSize() ) { return true; } //hemos llegado al final, la solucion es correcta
         else {
             Cell[][] board = this.getBoard();
@@ -119,7 +114,6 @@ public class Kakuro {
     }
 
     public void validate(int r, int c, int sum, int [] vec, int [] res) {
-
         if( r == this.getRowSize() ) { res[0]++; } //hemos llegado al final, la solucion es correcta
         else {
             Cell[][] board = this.getBoard();

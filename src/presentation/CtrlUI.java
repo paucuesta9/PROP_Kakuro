@@ -27,15 +27,28 @@ public class CtrlUI {
         System.out.println("5. Salir");
         System.out.println("");
         int choice = readNumber();
+        Scanner reader = new Scanner(System.in);
+        String kakuro;
         switch(choice) {
             case 1:
                 play();
                 break;
             case 2:
-                //TODO: Hacer la función crear/validar
+                System.out.println("Indique el Kakuro dentro de la carpeta data que desea validar");
+                kakuro = reader.nextLine();
+                cd.getKakuro("data/" + kakuro + ".txt");
+                if (cd.validate()) {
+                    System.out.println("El Kakuro es correcto");
+                } else {
+                    System.out.println("El Kakuro no es correcto");
+                }
                 break;
             case 3:
-                //TODO: Hacer la función resolver
+                System.out.println("Indique el Kakuro dentro de la carpeta data que desea resolver");
+                 kakuro = reader.nextLine();
+                cd.getKakuro("data/" + kakuro + ".txt");
+                cd.resolve();
+                writeKakuroInTerminal();
                 break;
             case 4:
                 //TODO: Hacer la función generar

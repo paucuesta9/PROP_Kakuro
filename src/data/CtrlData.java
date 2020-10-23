@@ -68,7 +68,6 @@ public class CtrlData {
     }
 
     public void saveKakuro(String content, int diff, int size) {
-
         FileWriter file = null;
         try {
             file = new FileWriter("data/diff" + diff + "/" + size + "/" + getNumberOfFiles(diff, size));

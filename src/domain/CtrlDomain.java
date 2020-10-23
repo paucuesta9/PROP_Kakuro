@@ -15,17 +15,10 @@ public class CtrlDomain {
 
     public boolean validate() {
         int [] res = new int[1];
-        System.out.println(res[0]);
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         currentKakuro.validate(0,0, 0, vec, res);
-        if (res[0]!=1) {
-            System.out.println("El kakuro no es válido :c");
-            return false;
-        }
-        else {
-            System.out.println("El kakuro es válido c:");
-            return true;
-        }
+        if (res[0]!=1) return false;
+        else return true;
     }
 
     public void resolve() {
@@ -38,6 +31,10 @@ public class CtrlDomain {
 
     public void searchKakuro(int difficulty, int kakuroSize) {
         this.currentKakuro = data.searchKakuro(difficulty, kakuroSize);
+    }
+
+    public void getKakuro(String filePath) {
+        this.currentKakuro = data.getKakuro(filePath);
     }
 
     public String getValueCell(int i, int j) {
