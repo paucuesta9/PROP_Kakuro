@@ -1,6 +1,6 @@
 package domain;
-
-public class Cell {
+/*Pol Vallespí Soro uwu*/
+public abstract class Cell {
     private int posX;
     private int posY;
 
@@ -18,4 +18,6 @@ public class Cell {
     public void setPosY(int posY) { this.posY = posY; }
 
     public int getPosY() { return posY; }
+
+    public abstract boolean setValue(int value);
 }
