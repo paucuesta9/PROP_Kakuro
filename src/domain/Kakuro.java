@@ -139,7 +139,7 @@ public class Kakuro {
                 for(int i = 1; i < 10 && sum-i >= 0; ++i ) {
                     if ( vec[i] == 0) {
                         vec[i] = 1;
-                        w.setValue(i);
+                        w.setCorrectValue(i);
                         boolean f = false;
                         if(r == this.getRowSize() - 1 || !board[r+1][c].isWhite()) f =true;
                         if(checkColumn(board, r-1, c, i, f, i)) {

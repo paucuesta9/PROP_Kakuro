@@ -97,4 +97,13 @@ public class CtrlDomain {
     }
 
 
+    public boolean isFinished() {
+        Cell[][] board = currentKakuro.getBoard();
+        for (int i = 0; i < currentKakuro.getRowSize(); ++i) {
+            for (int j = 0; j < currentKakuro.getColumnSize(); ++j) {
+                if (board[i][j].isWhite() && ((WhiteCell) board[i][j]).getValue() != ((WhiteCell) board[i][j]).getCorrectValue()) return false;
+            }
+        }
+        return true;
+    }
 }

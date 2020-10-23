@@ -57,7 +57,7 @@ public class CtrlUI {
                 System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
                 int diff = readNumber();
                 System.out.println("");
-                cd.generate(size, diff);
+                //cd.generate(size, diff);
                 break;
             case 5:
                 System.exit(0);
@@ -76,12 +76,12 @@ public class CtrlUI {
         System.out.print("Escoge tamaño N (NxN): ");
         int kakuroSize = readNumber();
         cd.searchKakuro(difficulty, kakuroSize);
+        cd.resolve();
         System.out.println(" -- INSTRUCCIONES --");
         System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
         System.out.println("Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9");
         System.out.println("Para salir escribe -1");
-        //TODO: Hacer la comprovación while (mientras no queden numeros por poner y sea correcto)
-        while (true) {
+        while (!cd.isFinished()) {
             writeKakuroInTerminal();
             System.out.println("");
             Scanner reader = new Scanner(System.in);
