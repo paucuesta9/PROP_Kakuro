@@ -31,4 +31,5 @@ public class BlackCell extends Cell{
         this.horizontal = horizontal;
     }
 
+    public boolean setValue(int value) { return false; }
 }
