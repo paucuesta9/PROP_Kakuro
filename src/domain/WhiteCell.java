@@ -1,4 +1,4 @@
-/* Pau Cuesta Arcos */
+package domain;/* Pau Cuesta Arcos */
 
 import java.util.ArrayList;
 import java.util.List;

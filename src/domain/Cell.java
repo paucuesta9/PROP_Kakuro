@@ -1,3 +1,5 @@
+package domain;
+
 public class Cell {
     private int posX;
     private int posY;
