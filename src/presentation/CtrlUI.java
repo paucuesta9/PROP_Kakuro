@@ -45,7 +45,7 @@ public class CtrlUI {
                 break;
             case 3:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea resolver");
-                 kakuro = reader.nextLine();
+                kakuro = reader.nextLine();
                 cd.getKakuro("data/" + kakuro + ".txt");
                 cd.resolve();
                 writeKakuroInTerminal();
@@ -85,6 +85,9 @@ public class CtrlUI {
             int value = reader.nextInt();
             if (!cd.kakuroSetValue(x, y, value)) {
                 System.out.println("Posición de casilla incorrecto. Por favor, introduzca una posición de una casilla blanca");
+            }
+            else if (!cd.checkValidity(x, y, value)) {
+                System.out.println("Valor de la casilla incorrecto. Por favor, introduzca un valor correcto");
             }
             System.out.println("");
         }

@@ -70,6 +70,52 @@ public class Kakuro {
         return false;
     }
 
+    public boolean checkRowValidity(Cell[][] board, int r, int c, int value, int sum, int total, int posy) {
+        if( !board[r][c].isWhite()) {
+            if (total != -1) {
+                sum -= value;
+                return total >= sum || total == 0;
+            }
+            else {
+                BlackCell b = (BlackCell) board[r][c];
+                total = b.getHorizontal();
+                return checkRowValidity(board, r, c + 1, value, sum, total, posy);
+            }
+        }
+        else {
+            if (total == -1) return checkRowValidity(board, r, c - 1, value, sum, total, posy);
+            else {
+                WhiteCell w = (WhiteCell) board[r][c];
+                if (w.getValue() == value && c != posy) return false;
+                sum += w.getValue();
+                return checkRowValidity(board, r, c + 1, value, sum, total, posy);
+            }
+        }
+    }
+
+    public boolean checkColumnValidity(Cell[][] board, int r, int c, int value, int sum, int total, int posx) {
+        if( !board[r][c].isWhite()) {
+            if (total != -1) {
+                sum -= value;
+                return total >= sum || total == 0;
+            }
+            else {
+                BlackCell b = (BlackCell) board[r][c];
+                total = b.getVertical();
+                return checkColumnValidity(board, r+1, c, value, sum, total, posx);
+            }
+        }
+        else {
+            if (total == -1) return checkColumnValidity(board, r -1, c, value, sum, total, posx);
+            else {
+                WhiteCell w = (WhiteCell) board[r][c];
+                if (w.getValue() == value && r != posx) return false;
+                sum += w.getValue();
+                return checkColumnValidity(board, r+1, c, value, sum, total, posx);
+            }
+        }
+    }
+
     public boolean resolve(int r, int c, int sum, int [] vec) {
         if( r == this.getRowSize() ) { return true; } //hemos llegado al final, la solucion es correcta
         else {
@@ -154,8 +200,7 @@ public class Kakuro {
         return;
     }
 
-    public boolean setValue(int x, int y, int value)
-    {
+    public boolean setValue(int x, int y, int value) {
         return board[x][y].setValue(value);
     }
 }

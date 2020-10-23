@@ -91,4 +91,10 @@ public class CtrlDomain {
     public boolean kakuroSetValue(int x, int y, int value) {
         return currentKakuro.setValue(x, y, value);
     }
+
+    public boolean checkValidity(int x, int y, int value) {
+        return currentKakuro.checkRowValidity(currentKakuro.getBoard(), x, y-1, value, value, -1, y) && currentKakuro.checkColumnValidity(currentKakuro.getBoard(), x, y, value, value, -1, x);
+    }
+
+
 }
