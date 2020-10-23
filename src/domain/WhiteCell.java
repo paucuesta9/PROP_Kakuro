@@ -26,8 +26,9 @@ public class WhiteCell extends Cell {
         return value;
     }
 
-    public void setValue(int value) {
+    public boolean setValue(int value) {
         this.value = value;
+        return true;
     }
 
     public int getCorrectValue() {

@@ -90,4 +90,8 @@ public class CtrlDomain {
         }
         data.saveKakuro(content, currentKakuro.getDifficulty(), currentKakuro.getRowSize());
     }
+
+    public boolean kakuroSetValue(int x, int y, int value) {
+        return currentKakuro.setValue(x, y, value);
+    }
 }

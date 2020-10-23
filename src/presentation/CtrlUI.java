@@ -68,7 +68,9 @@ public class CtrlUI {
             int x = reader.nextInt();
             int y = reader.nextInt();
             int value = reader.nextInt();
-            //cd.kakuroSetValue(x, y, value);
+            if (!cd.kakuroSetValue(x, y, value)) {
+                System.out.println("Posición de casilla incorrecto. Por favor, introduzca una posición de una casilla blanca");
+            }
             System.out.println("");
         }
     }
