@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 public class CtrlUI {
     private CtrlDomain cd;
+    private Scanner reader = new Scanner(System.in);
 
     public CtrlUI() {
         cd = new CtrlDomain();
@@ -27,7 +28,6 @@ public class CtrlUI {
         System.out.println("5. Salir");
         System.out.println("");
         int choice = readNumber();
-        Scanner reader = new Scanner(System.in);
         String kakuro;
         switch(choice) {
             case 1:
@@ -35,20 +35,22 @@ public class CtrlUI {
                 break;
             case 2:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea validar");
-                kakuro = reader.nextLine();
+                kakuro = readLine();
                 cd.getKakuro("data/" + kakuro + ".txt");
                 if (cd.validate()) {
                     System.out.println("El Kakuro es correcto");
                 } else {
                     System.out.println("El Kakuro no es correcto");
                 }
+                menu();
                 break;
             case 3:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea resolver");
-                kakuro = reader.nextLine();
+                kakuro = readLine();
                 cd.getKakuro("data/" + kakuro + ".txt");
                 cd.resolve();
                 writeKakuroInTerminal();
+                menu();
                 break;
             case 4:
                 System.out.print("Indique la dimension n (NxN) del Kakuro que desea generar: ");
@@ -58,6 +60,7 @@ public class CtrlUI {
                 int diff = readNumber();
                 System.out.println("");
                 //cd.generate(size, diff);
+                menu();
                 break;
             case 5:
                 System.exit(0);
@@ -84,11 +87,10 @@ public class CtrlUI {
         while (!cd.isFinished()) {
             writeKakuroInTerminal();
             System.out.println("");
-            Scanner reader = new Scanner(System.in);
-            int x = reader.nextInt();
+            int x = readNumber();
             if (x == -1) System.exit(0);
-            int y = reader.nextInt();
-            int value = reader.nextInt();
+            int y = readNumber();
+            int value = readNumber();
             if (!cd.kakuroSetValue(x, y, value)) {
                 System.out.println("Posición de casilla incorrecto. Por favor, introduzca una posición de una casilla blanca");
             }
@@ -97,13 +99,20 @@ public class CtrlUI {
             }
             System.out.println("");
         }
+        System.out.println("Felicidades! Has completado el Kakuro");
+        menu();
     }
 
     public int readNumber() {
-        Scanner reader = new Scanner(System.in);
         int number = 0;
         number = reader.nextInt();
         return number;
+    }
+
+    public String readLine() {
+        String input = "";
+        input = reader.nextLine();
+        return input;
     }
 
     public void writeKakuroInTerminal() {
