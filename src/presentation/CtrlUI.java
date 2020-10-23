@@ -51,7 +51,13 @@ public class CtrlUI {
                 writeKakuroInTerminal();
                 break;
             case 4:
-                //TODO: Hacer la función generar
+                System.out.print("Indique la dimension n (NxN) del Kakuro que desea generar: ");
+                int size = readNumber();
+                System.out.println("");
+                System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
+                int diff = readNumber();
+                System.out.println("");
+                cd.generate(size, diff);
                 break;
             case 5:
                 System.exit(0);

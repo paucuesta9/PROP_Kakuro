@@ -160,6 +160,7 @@ public class Kakuro {
     }
 
     public void validate(int r, int c, int sum, int [] vec, int [] res) {
+        if (res[0]==2) return;
         if( r == this.getRowSize() ) { res[0]++; } //hemos llegado al final, la solucion es correcta
         else {
             Cell[][] board = this.getBoard();
