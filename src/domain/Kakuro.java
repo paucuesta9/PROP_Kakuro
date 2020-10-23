@@ -159,4 +159,9 @@ public class Kakuro {
         }
         return;
     }
+
+    public boolean setValue(int x, int y, int value)
+    {
+        return board[x][y].setValue(value);
+    }
 }
