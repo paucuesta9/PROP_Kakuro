@@ -2,11 +2,14 @@ package domain;
 
 import data.CtrlData;
 
+import java.util.ArrayList;
+
 public class CtrlDomain {
 
     private CtrlData data;
     private Game currentGame;
     private Kakuro currentKakuro;
+    private Player currentPlayer;
 
     //constructora
     public CtrlDomain() {
@@ -114,5 +117,19 @@ public class CtrlDomain {
             return true;
         }
         return false;
+    }
+
+    public ArrayList<Integer> getStartedGames() {
+        return currentPlayer.getStartedGames();
+    }
+
+    public void setGame(int game) {
+        //TODO: Leer game
+    }
+
+    public void startNewGame(int difficulty, int kakuroSize) {
+        searchKakuro(difficulty, kakuroSize);
+        currentGame = new Game(0,0,currentKakuro);
+        currentGame.startResumeTimer();
     }
 }

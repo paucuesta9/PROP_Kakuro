@@ -19,6 +19,7 @@ public class Game {
         this.id = id;
         this.timeSec = time;
         this.kakuro = kakuro;
+        this.timer = new Timer();
     }
 
     public int getId() {
