@@ -204,4 +204,13 @@ public class Kakuro {
     public boolean setValue(int x, int y, int value) {
         return board[x][y].setValue(value);
     }
+
+    public boolean isFinished() {
+        for (int i = 0; i < rowSize; ++i) {
+            for (int j = 0; j < columnSize; ++j) {
+                if (board[i][j].isWhite() && ((WhiteCell) board[i][j]).getValue() != ((WhiteCell) board[i][j]).getCorrectValue()) return false;
+            }
+        }
+        return true;
+    }
 }

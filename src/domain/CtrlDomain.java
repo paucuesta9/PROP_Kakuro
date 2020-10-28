@@ -23,8 +23,7 @@ public class CtrlDomain {
 
     public void resolve() {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
-        boolean t = currentKakuro.resolve(0,0, 0, vec);
-        System.out.println(t);
+        currentKakuro.resolve(0,0, 0, vec);
     }
 
     public void generate() {}
@@ -96,14 +95,24 @@ public class CtrlDomain {
         return currentKakuro.checkRowValidity(currentKakuro.getBoard(), x, y-1, value, value, -1, y) && currentKakuro.checkColumnValidity(currentKakuro.getBoard(), x, y, value, value, -1, x);
     }
 
-
     public boolean isFinished() {
-        Cell[][] board = currentKakuro.getBoard();
-        for (int i = 0; i < currentKakuro.getRowSize(); ++i) {
-            for (int j = 0; j < currentKakuro.getColumnSize(); ++j) {
-                if (board[i][j].isWhite() && ((WhiteCell) board[i][j]).getValue() != ((WhiteCell) board[i][j]).getCorrectValue()) return false;
-            }
+        return currentKakuro.isFinished();
+    }
+
+    public int helpMyValue(int x, int y) {
+        if (currentKakuro.getBoard()[x][y].isWhite()) {
+            int value = ((WhiteCell) currentKakuro.getBoard()[x][y]).getValue();
+            if (value == 0) return -2;
+            else return (((WhiteCell) currentKakuro.getBoard()[x][y]).getCorrectValue() == value) ? 1 : 0;
         }
-        return true;
+        return -1;
+    }
+
+    public boolean helpCorrectNumber(int x, int y) {
+        if (currentKakuro.getBoard()[x][y].isWhite()) {
+            currentKakuro.setValue(x, y, ((WhiteCell) currentKakuro.getBoard()[x][y]).getCorrectValue());
+            return true;
+        }
+        return false;
     }
 }

@@ -8,19 +8,17 @@ public class Game {
     private int timeSec;
     private Timer timer;
     private Kakuro kakuro;
-    private Help help;
 
     public Game() {
-        this.id = 0; //TODO: Cogér el número de kakuros del usuario y ponerle uno mas.
+        this.id = 0; //TODO: Coger el número de kakuros del usuario y ponerle uno mas.
         this.timeSec = 0;
         this.timer = new Timer();
     }
 
-    public Game(int id, int time, Kakuro kakuro, Help help) {
+    public Game(int id, int time, Kakuro kakuro) {
         this.id = id;
         this.timeSec = time;
         this.kakuro = kakuro;
-        this.help = help;
     }
 
     public int getId() {
@@ -43,15 +41,7 @@ public class Game {
         this.kakuro = kakuro;
     }
 
-    public Help getHelp() {
-        return help;
-    }
-
-    public void setHelp(Help help) {
-        this.help = help;
-    }
-
-    public void startResume() {
+    public void startResumeTimer() {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
@@ -61,7 +51,7 @@ public class Game {
         timer.scheduleAtFixedRate(timerTask, 0, 1000);
     }
 
-    public void pause() {
+    public void pauseTimer() {
         timer.cancel();
     }
 }
