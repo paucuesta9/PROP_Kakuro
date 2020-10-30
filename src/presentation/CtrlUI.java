@@ -204,13 +204,9 @@ public class CtrlUI {
     }
 
     public void writeKakuroInTerminal() {
-        for (int i = 0; i < cd.getRowSize(); ++i) {
-            for (int j = 0; j < cd.getColumnSize(); ++j) {
-                System.out.print(cd.getValueCell(i, j));
-                if (j != cd.getColumnSize() - 1) System.out.print(",");
-            }
-            System.out.println("");
-        }
+        String[] kakuro = cd.getKakuroToString().split("\n");
+        for (int i = 0; i < kakuro.length; ++i)
+            System.out.println(kakuro[i]);
     }
 
 }

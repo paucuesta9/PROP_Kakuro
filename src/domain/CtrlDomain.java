@@ -47,23 +47,6 @@ public class CtrlDomain {
         this.currentKakuro = new Kakuro(data.getKakuro(filePath));
     }
 
-    public String getValueCell(int i, int j) {
-        if (currentKakuro.getBoard()[i][j].isWhite()) {
-            WhiteCell w = (WhiteCell) currentKakuro.getBoard()[i][j];
-            if (w.getCorrectValue() != 0) return String.valueOf(w.getCorrectValue());
-            else return "?";
-        }
-        else {
-            BlackCell bc = (BlackCell) currentKakuro.getBoard()[i][j];
-            if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
-                return "*";
-            }
-            if (bc.getVertical() != 0) return ("C" + bc.getVertical());
-            if (bc.getHorizontal() != 0) return ("F" + bc.getHorizontal());
-        }
-        return null;
-    }
-
     public int getRowSize() {
         return currentKakuro.getRowSize();
     }
@@ -117,5 +100,9 @@ public class CtrlDomain {
         searchKakuro(difficulty, kakuroSize);
         currentGame = new Game(0,0,currentKakuro);
         currentGame.startResumeTimer();
+    }
+
+    public String getKakuroToString() {
+        return currentKakuro.toString();
     }
 }

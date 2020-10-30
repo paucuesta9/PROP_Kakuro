@@ -47,28 +47,30 @@ public class Kakuro {
     }
 
     public String toString() {
-        String content;
-        content = rowSize + "," + columnSize + "\n";
+        StringBuilder content = new StringBuilder();
+        String line;
+        line = rowSize + "," + columnSize;
+        content.append(line).append("\n");
         for (int i = 0; i < rowSize; ++i) {
             for (int j = 0; j < columnSize; ++j) {
                 if (board[i][j].isWhite()) {
                     WhiteCell w = (WhiteCell) board[i][j];
-                    if (w.getValue() != 0) content.concat(String.valueOf(w.getValue()));
-                    else content.concat("?");
+                    if (w.getValue() != 0) content.append(w.getValue());
+                    else content.append("?");
                 }
                 else {
                     BlackCell bc = (BlackCell) board[i][j];
                     if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
-                        content.concat("*");
+                        content.append("*");
                     }
-                    if (bc.getVertical() != 0) content.concat("C" + bc.getVertical());
-                    if (bc.getHorizontal() != 0) content.concat("F" + bc.getHorizontal());
+                    if (bc.getVertical() != 0) content.append("C" + bc.getVertical());
+                    if (bc.getHorizontal() != 0) content.append("F" + bc.getHorizontal());
                 }
-                if (j != columnSize - 1) content.concat(",");
+                if (j != columnSize - 1) content.append(",");
             }
-            content.concat("\n");
+            content.append("\n");
         }
-        return content;
+        return content.toString();
     }
 
     public String getId() {

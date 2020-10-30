@@ -1,10 +1,5 @@
 package data;
 
-import domain.BlackCell;
-import domain.Cell;
-import domain.Kakuro;
-import domain.WhiteCell;
-
 import java.io.*;
 import java.util.Random;
 
