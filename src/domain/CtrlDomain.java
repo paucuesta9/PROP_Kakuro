@@ -52,19 +52,19 @@ public class CtrlDomain {
     void fixCol(char [][] aux, int i, int j,int cont) {
         if( cont > 9 ) {
             aux[i][j] = '.';
-            fixRow(aux,i+1,j,cont-1);
+            fixCol(aux,i+1,j,cont-1);
         }
     }
     int moreThanNineC(char[][]aux,int i,int j,int cont,int size) {
-        if(i == 0 || aux[i][j] == '.' ) {
-            if(cont > 9) fixCol(aux,i,j,cont);
+        if(i == -1 || aux[i][j] == '.' || cont>8) {
+            if(cont > 8)  aux[i+1][j] = '.';
             return 0;
         }
-        return 1 + moreThanNineF(aux,i-1,j,cont+1,size);
+        return 1 + moreThanNineC(aux,i-1,j,cont+1,size);
     }
     int  moreThanNineF(char[][] aux,int i,int j, int cont,int size) {
-        if(j == size || aux[i][j] == '.' ) {
-            if(cont > 9) fixRow(aux,i,j-1,cont);
+        if(j == size || aux[i][j] == '.' || cont>8) {
+            if(cont > 8) aux[i][j-1] = '.';
             return 0;
         }
         return 1 + moreThanNineF(aux,i,j+1,cont+1,size);
@@ -83,7 +83,7 @@ public class CtrlDomain {
         for(int i = 1; i < size-1; ++i) {
             for( int j = i; j < size-1; ++j) {
                 int random = (int) (Math.random()*10);
-                if (random < 10) {
+                if (random < 4) {
                     aux[i][j] = '.';
                     aux[j][i] = '.';
                 }
@@ -93,6 +93,7 @@ public class CtrlDomain {
                 }
             }
         }
+        ///miramos que no haya una casilla blanca sola
         for(int i = 1; i < size-1; ++i) {
             for( int j = i; j < size-1; ++j) {
                 if(aux[i][j-1] == '.' && aux[i][j+1] == '.' && aux[i][j] == '_') { //evitamos que haya casillas blancas sin vecinos por fila
@@ -105,38 +106,36 @@ public class CtrlDomain {
                 }
             }
         }
-        System.out.println("F");
-        int ic = 1;
-        while(ic < size-1) {
+        //miramos que no haya mas de 9 casillas blancas seguidas por fila
+        int ic = 0;
+        while(ic < size) {
             int jc = 0;
             while(jc < size) {
                 if(aux[ic][jc] != '.') {
                     int cont = 0;
-                    jc += moreThanNineF(aux,ic, jc, cont, size);
+                    moreThanNineF(aux,ic, jc, cont, size);
+                    ++jc;
                 }
                 ++jc;
             }
             ++ic;
         }
-        System.out.println("F");
+
         //miramos que no haya mas de 9 casillas blancas seguidas por columna
-        int jc = 1;
-        while(jc < size-1) {
+        int jc = 0;
+        while(jc < size) {
             ic = 0;
-            while(ic < size-1) {
+            while(ic < size) {
                 if(aux[ic][jc] != '.') {
                     int cont = 0;
-                    ic += moreThanNineC(aux,ic, jc, cont, size);
+                    moreThanNineC(aux,ic, jc, cont, size);
+                    ++ic;
                 }
                 ++ic;
             }
             ++jc;
         }
-        System.out.println("F");
-        //miramos que se complan algunas reglas
 
-        System.out.println("F");
-        //miramos que no haya mas de 9 casillas blancas seguidas por fila
 
         for(int i = 0; i < size; ++i) {
             for( int j = 0; j < size; ++j) {
@@ -150,7 +149,7 @@ public class CtrlDomain {
         for(int i = 0; i < size-1; ++i){
             for(int j = 0; j < size-1; ++j) {
                 if(aux[i][j] == '.'){
-                    if(aux[i][j+1] != 'B') { //si el siguiente es blanco, queremos mirar cuantas casillas se tienen que rellenar
+                    if(aux[i][j+1] != '.') { //si el siguiente es blanco, queremos mirar cuantas casillas se tienen que rellenar
                         int jaux = j+1;
                         while(jaux < size && aux[i][jaux] != '.') { ++jaux; } //se tienen que rellenar jaux-j-1 casilla
                         int [] usedNumbers = new int [10];
@@ -159,11 +158,9 @@ public class CtrlDomain {
                         for(int k = j+1; k < jaux; ++k){
                             int r = (int) (Math.random()*8)+1;
                             while( usedNumbers[r] == 1  || numberInColumn(aux,r,i-1,k)) {
-
                                 r += 1;
                                 if(r == 10) r = 1;
                             }
-
                             aux[i][k] = (char) (r+'0');
                             sum += r;
                             usedNumbers[r] = 1;
