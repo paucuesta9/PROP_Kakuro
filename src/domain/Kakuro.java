@@ -15,7 +15,61 @@ public class Kakuro {
         this.board = board;
     }
 
+    public Kakuro(String kakuro) {
+        String[] values = kakuro.split("\n");
+        String[] valuesSize = values[0].split(",");
+        rowSize = Integer.parseInt(valuesSize[0]);
+        columnSize = Integer.parseInt(valuesSize[1]);
+        board = new Cell[rowSize][columnSize];
+        for (int i = 0; i < rowSize; ++i) {
+            String[] valuesRow = values[i + 1].split(",");
+            for (int j = 0; j < columnSize; ++j) {
+                if (valuesRow[j].equals("*")) board[i][j] = new BlackCell(i, j);
+                else if (valuesRow[j].equals("?")) board[i][j] = new WhiteCell(i, j);
+                else if (valuesRow[j].charAt(0) == 'C' || valuesRow[j].charAt(0) == 'F') {
+                    int vertical = 0, horizontal = 0;
+                    if (valuesRow[j].charAt(0) == 'C') {
+                        valuesRow[j] = valuesRow[j].substring(1);
+                        if (valuesRow[j].contains("F")) {
+                            String[] CF = valuesRow[j].split("F");
+                            vertical = Integer.parseInt(CF[0]);
+                            horizontal = Integer.parseInt(CF[1]);
+                        } else {
+                            vertical = Integer.parseInt(valuesRow[j]);
+                        }
+                    } else {
+                        horizontal = Integer.parseInt(valuesRow[j].substring(1));
+                    }
+                    board[i][j] = new BlackCell(i, j, vertical, horizontal);
+                } else board[i][j] = new WhiteCell(i, j, Integer.parseInt(valuesRow[j]));
+            }
+        }
+    }
 
+    public String toString() {
+        String content;
+        content = rowSize + "," + columnSize + "\n";
+        for (int i = 0; i < rowSize; ++i) {
+            for (int j = 0; j < columnSize; ++j) {
+                if (board[i][j].isWhite()) {
+                    WhiteCell w = (WhiteCell) board[i][j];
+                    if (w.getValue() != 0) content.concat(String.valueOf(w.getValue()));
+                    else content.concat("?");
+                }
+                else {
+                    BlackCell bc = (BlackCell) board[i][j];
+                    if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
+                        content.concat("*");
+                    }
+                    if (bc.getVertical() != 0) content.concat("C" + bc.getVertical());
+                    if (bc.getHorizontal() != 0) content.concat("F" + bc.getHorizontal());
+                }
+                if (j != columnSize - 1) content.concat(",");
+            }
+            content.concat("\n");
+        }
+        return content;
+    }
 
     public String getId() {
         return id;

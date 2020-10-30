@@ -21,46 +21,22 @@ public class CtrlData {
     public CtrlData() {
     }
 
-    public Kakuro searchKakuro (int difficulty, int kakuroSize) {
+    public String searchKakuro (int difficulty, int kakuroSize) {
         Random random = new Random();
         return getKakuro("data/diff" + difficulty + "/" + kakuroSize + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSize)) + ".txt");
     }
 
-    public Kakuro getKakuro(String filePath) {
+    public String getKakuro(String filePath) {
         try {
+            StringBuilder content = new StringBuilder();
             File file = new File(filePath);
             FileReader fr = new FileReader(file);
             BufferedReader br = new BufferedReader(fr);
-            String line = br.readLine();
-            String[] values = line.split(",");
-            int rowSize = Integer.parseInt(values[0]);
-            int columnSize = Integer.parseInt(values[1]);
-            Cell[][] board = new Cell[rowSize][columnSize];
-            for (int i = 0; i < rowSize; ++i) {
-                line = br.readLine();
-                values = line.split(",");
-                for (int j = 0; j < columnSize; ++j) {
-                    if (values[j].equals("*")) board[i][j] = new BlackCell(i, j);
-                    else if (values[j].equals("?")) board[i][j] = new WhiteCell(i, j);
-                    else if (values[j].charAt(0) == 'C' || values[j].charAt(0) == 'F') {
-                        int vertical = 0, horizontal = 0;
-                        if (values[j].charAt(0) == 'C') {
-                            values[j] = values[j].substring(1);
-                            if (values[j].contains("F")) {
-                                String[] CF = values[j].split("F");
-                                vertical = Integer.parseInt(CF[0]);
-                                horizontal = Integer.parseInt(CF[1]);
-                            } else {
-                                vertical = Integer.parseInt(values[j]);
-                            }
-                        } else {
-                            horizontal = Integer.parseInt(values[j].substring(1));
-                        }
-                        board[i][j] = new BlackCell(i, j, vertical, horizontal);
-                    } else board[i][j] = new WhiteCell(i, j, Integer.parseInt(values[j]));
-                }
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                content.append(line).append("\n");
             }
-            return new Kakuro("0", 0, rowSize, columnSize, board);
+            return content.toString();
         } catch (IOException e) {
             e.printStackTrace();
         }

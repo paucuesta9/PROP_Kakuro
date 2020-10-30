@@ -40,11 +40,11 @@ public class CtrlDomain {
     public void generate() {}
 
     public void searchKakuro(int difficulty, int kakuroSize) {
-        this.currentKakuro = data.searchKakuro(difficulty, kakuroSize);
+        this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSize));
     }
 
     public void getKakuro(String filePath) {
-        this.currentKakuro = data.getKakuro(filePath);
+        this.currentKakuro = new Kakuro(data.getKakuro(filePath));
     }
 
     public String getValueCell(int i, int j) {
@@ -73,29 +73,7 @@ public class CtrlDomain {
     }
 
     public void saveKakuro() {
-        String content;
-        Cell[][] board = currentKakuro.getBoard();
-        content = currentKakuro.getRowSize() + "," + currentKakuro.getColumnSize() + "\n";
-        for (int i = 0; i < currentKakuro.getRowSize(); ++i) {
-            for (int j = 0; j < currentKakuro.getColumnSize(); ++j) {
-                if (board[i][j].isWhite()) {
-                    WhiteCell w = (WhiteCell) board[i][j];
-                    if (w.getValue() != 0) content.concat(String.valueOf(w.getValue()));
-                    else content.concat("?");
-                }
-                else {
-                    BlackCell bc = (BlackCell) board[i][j];
-                    if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
-                        content.concat("*");
-                    }
-                    if (bc.getVertical() != 0) content.concat("C" + bc.getVertical());
-                    if (bc.getHorizontal() != 0) content.concat("F" + bc.getHorizontal());
-                }
-                if (j != currentKakuro.getColumnSize() - 1) content.concat(",");
-            }
-            content.concat("\n");
-        }
-        data.saveKakuro(content, currentKakuro.getDifficulty(), currentKakuro.getRowSize());
+        data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize());
     }
 
     public boolean kakuroSetValue(int x, int y, int value) {
