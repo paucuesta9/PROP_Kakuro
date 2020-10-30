@@ -14,6 +14,7 @@ public class CtrlData {
     }
 
     public CtrlData() {
+
     }
 
     public String searchKakuro (int difficulty, int kakuroSize) {
