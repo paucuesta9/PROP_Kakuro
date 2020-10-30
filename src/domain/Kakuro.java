@@ -73,6 +73,32 @@ public class Kakuro {
         return content.toString();
     }
 
+    public String correctToString() {
+        StringBuilder content = new StringBuilder();
+        String line;
+        line = rowSize + "," + columnSize;
+        content.append(line).append("\n");
+        for (int i = 0; i < rowSize; ++i) {
+            for (int j = 0; j < columnSize; ++j) {
+                if (board[i][j].isWhite()) {
+                    WhiteCell w = (WhiteCell) board[i][j];
+                    content.append(w.getCorrectValue());
+                }
+                else {
+                    BlackCell bc = (BlackCell) board[i][j];
+                    if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
+                        content.append("*");
+                    }
+                    if (bc.getVertical() != 0) content.append("C" + bc.getVertical());
+                    if (bc.getHorizontal() != 0) content.append("F" + bc.getHorizontal());
+                }
+                if (j != columnSize - 1) content.append(",");
+            }
+            content.append("\n");
+        }
+        return content.toString();
+    }
+
     public String getId() {
         return id;
     }

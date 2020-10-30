@@ -105,4 +105,8 @@ public class CtrlDomain {
     public String getKakuroToString() {
         return currentKakuro.toString();
     }
+
+    public String getCorrectKakuroToString() {
+        return currentKakuro.correctToString();
+    }
 }

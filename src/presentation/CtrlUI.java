@@ -51,7 +51,7 @@ public class CtrlUI {
                 kakuro = readLine();
                 cd.getKakuro("data/" + kakuro + ".txt");
                 cd.resolve();
-                writeKakuroInTerminal();
+                writeCorrectKakuroInTerminal();
                 menu();
                 break;
             case 4:
@@ -205,6 +205,12 @@ public class CtrlUI {
 
     public void writeKakuroInTerminal() {
         String[] kakuro = cd.getKakuroToString().split("\n");
+        for (int i = 0; i < kakuro.length; ++i)
+            System.out.println(kakuro[i]);
+    }
+
+    public void writeCorrectKakuroInTerminal() {
+        String[] kakuro = cd.getCorrectKakuroToString().split("\n");
         for (int i = 0; i < kakuro.length; ++i)
             System.out.println(kakuro[i]);
     }
