@@ -18,11 +18,19 @@ public class CtrlDomain {
 
     public boolean validate() {
         int [] res = new int[1];
+        res[0] = 0;
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         currentKakuro.validate(0,0, 0, vec, res);
         if (res[0]!=1) return false;
         else return true;
     }
+
+    //solo de prueba
+
+    public void difficulty() {
+        currentKakuro.setDifficulty();
+    }
+
 
     public void resolve() {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
@@ -42,7 +50,7 @@ public class CtrlDomain {
     public String getValueCell(int i, int j) {
         if (currentKakuro.getBoard()[i][j].isWhite()) {
             WhiteCell w = (WhiteCell) currentKakuro.getBoard()[i][j];
-            if (w.getValue() != 0) return String.valueOf(w.getValue());
+            if (w.getCorrectValue() != 0) return String.valueOf(w.getCorrectValue());
             else return "?";
         }
         else {

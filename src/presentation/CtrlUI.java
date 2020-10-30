@@ -38,6 +38,7 @@ public class CtrlUI {
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea validar");
                 kakuro = readLine();
                 cd.getKakuro("data/" + kakuro + ".txt");
+                //cd.difficulty();
                 if (cd.validate()) {
                     System.out.println("El Kakuro es correcto");
                 } else {
