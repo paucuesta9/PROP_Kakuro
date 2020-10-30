@@ -61,7 +61,7 @@ public class CtrlUI {
                 System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
                 int diff = readNumber();
                 System.out.println("");
-                //cd.generate(size, diff);
+                cd.generate(size, diff);
                 menu();
                 break;
             case 5:

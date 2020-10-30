@@ -1,5 +1,5 @@
 package domain;
-/*Pol Vallespí Soro uwu*/
+/*Pol Vallespí Soro */
 public abstract class Cell {
     private int posX;
     private int posY;
