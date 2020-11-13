@@ -16,30 +16,69 @@ public class CtrlDomain {
         data = CtrlData.getInstance();
     }
 
+    // OPTION 1 - PLAY
+    public void startNewGame(int difficulty, int kakuroSize) {
+        searchKakuro(difficulty, kakuroSize);
+        CtrlPlay.startGame(currentKakuro);
+        //currentGame = new Game(0,0, currentKakuro);
+        //currentGame.startResumeTimer();
+    }
+
+    public void setGame(int game) {
+        //TODO: Leer game
+    }
+
+    public boolean isFinished() {
+        return currentKakuro.isFinished();
+    }
+
+    public boolean checkValidity(int x, int y, int value) {
+        return currentKakuro.checkValidity(x, y, value);
+    }
+
+    public int helpMyValue(int x, int y) {
+        return CtrlPlay.helpMyValue(x, y);
+    }
+
+    public boolean helpCorrectNumber(int x, int y) {
+        return CtrlPlay.helpCorrectNumber(x, y);
+    }
+
+    // OPTION 2 - CREATE VALIDATE
     public boolean validate() {
         int [] res = new int[1];
         res[0] = 0;
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
-        currentKakuro.validate(0,0, 0, vec, res);
+        CtrlValidate.validate(0,0, 0, vec, res);
         if (res[0]!=1) return false;
         else return true;
     }
 
-    //solo de prueba
-
-    public void difficulty() {
-        currentKakuro.setDifficulty();
-    }
-
+    // OPTION 3 - RESOLVE
     public void resolve() {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
-        currentKakuro.resolve(0,0, 0, vec);
+        CtrlResolve.setKakuro(currentKakuro);
+        CtrlResolve.resolve(0,0, 0, vec);
+    }
+
+    // OPTION 4 - GENEREATE
+    public boolean numberInColumn(Cell[][] board, int r, int i, int j) {
+        if(!board[i][j].isWhite()) return false;
+        if(((WhiteCell) board[i][j]).getValue() == r) return true;
+        return numberInColumn(board, r,i - 1, j);
     }
 
     boolean numberInColumn(char[][] board,int r,int i,int j) {
         if(board[i][j] == '.') return false;
         if( board[i][j] == (char) (r)) return true;
         return numberInColumn(board,r,i-1,j);
+    }
+
+    public void fixRow(Cell[][] board, int i, int j, int cont) {
+        if (j >= 0 && i >= 0 && cont > 9) {
+            board[i][j] = new BlackCell(i, j);
+            fixRow(board, i,j - 1,cont - 1);
+        }
     }
 
     void fixRow(char [][] aux, int i, int j,int cont) {
@@ -49,11 +88,26 @@ public class CtrlDomain {
         }
     }
 
+    public void fixCol(Cell[][] board, int i, int j, int cont) {
+        if(i >= 0 && j >= 0 && cont > 9 ) {
+            board[i][j] = new BlackCell(i, j);
+            fixCol(board,i - 1, j,cont - 1);
+        }
+    }
+
     void fixCol(char [][] aux, int i, int j,int cont) {
         if(i >= 0 && j >= 0 && cont > 9 ) {
             aux[i][j] = '.';
-            fixRow(aux,i-1,j,cont-1);
+            fixCol(aux,i-1,j,cont-1);
         }
+    }
+
+    public int moreThanNineC(Cell[][] board,int i,int j,int cont) {
+        if(!board[i][j].isWhite()) {
+            if (cont > 9) fixCol(board,i - 1, j, cont);
+            return 0;
+        }
+        return 1 + moreThanNineC(board,i + 1, j,cont + 1);
     }
 
     int moreThanNineC(char[][]aux,int i,int j,int cont,int size) {
@@ -64,12 +118,114 @@ public class CtrlDomain {
         return 1 + moreThanNineC(aux,i-1,j,cont+1,size);
     }
 
+    public int moreThanNineF(Cell[][] board, int i, int j, int cont) {
+        if (!board[i][j].isWhite()) {
+            if (cont > 9) fixRow(board, i, j - 1, cont);
+            return 0;
+        }
+        return 1 + moreThanNineF(board, i, j + 1, cont + 1);
+    }
+
     int  moreThanNineF(char[][] aux,int i,int j, int cont,int size) {
         if (aux[i][j] == '.') {
             if(cont > 9) fixRow(aux,i,j-1,cont);
             return 0;
         }
         return 1 + moreThanNineF(aux,i,j+1,cont+1,size);
+    }
+
+    public void generate(int size) {
+        Cell board[][] = new Cell[size][size];
+        for (int i = 0; i < size; ++i)
+            board[0][i] = board[i][0] = board[size - 1][i] = board[i][size - 1] = new BlackCell(0, 0);
+
+        for (int i = 1; i < size - 1; ++i) {
+            for (int j = i; j < size - 1; ++j) {
+                int random = (int) (Math.random()* 10);
+                if (random < 4) {
+                    board[i][j] = new BlackCell(i, j);
+                    board[j][i] = new BlackCell(j, i);
+                } else {
+                    board[i][j] = new WhiteCell(i, j);
+                    board[j][i] = new WhiteCell(j, i);
+                }
+            }
+        }
+
+        for (int i = 1; i < size - 1; ++i) {
+            for (int j = i; j < size - 1; ++j) {
+                if (!board[i][j - 1].isWhite() && !board[i][j + 1].isWhite() && board[i][j].isWhite()) {
+                    if (j < size / 2) {
+                        board[i][j + 1] = new WhiteCell(i, j + 1);
+                        board[j + 1][i] = new WhiteCell(j + 1, i);
+                    } else {
+                        board[i][j - 1] = new WhiteCell(i, j - 1);
+                        board[j - 1][i] = new WhiteCell(j - 1, i);
+                    }
+                }
+                if (!board[i - 1][j].isWhite() && !board[i + 1][j].isWhite() && board[i][j].isWhite()) {
+                    if (i < size / 2) {
+                        board[i + 1][j] = new WhiteCell(i + 1, j);
+                        board[j][i + 1] = new WhiteCell(j, i + 1);
+                    }
+                    else {
+                        board[i - 1][j] = new WhiteCell(i - 1, j);
+                        board[j][i - 1] = new WhiteCell(j, i - 1);
+                    }
+                }
+            }
+        }
+
+        int ic = 1;
+        while (ic < size) {
+            int jc = 0;
+            while (jc < size) {
+                if (board[ic][jc].isWhite()) {
+                    int cont = 0;
+                    jc += moreThanNineF(board, ic, jc, cont);
+                }
+                ++jc;
+            }
+            ++ic;
+        }
+
+        int jc = 1;
+        while (jc < size) {
+            ic = 0;
+            while (ic < size) {
+                if (board[ic][jc].isWhite()) {
+                    int cont = 0;
+                    ic += moreThanNineC(board, ic, jc, cont);
+                }
+                ++ic;
+            }
+            ++jc;
+        }
+
+        for (int i = 0; i < size - 1; ++i) {
+            for (int j = 0; j < size - 1; ++j) {
+                if (!board[i][j].isWhite()){
+                    if (board[i][j + 1].isWhite()) {
+                        int jaux = j + 1;
+                        while (board[i][jaux].isWhite())
+                            ++jaux;
+                        int[] usedNumbers = new int [9];
+                        int sum = 0;
+                        for (int k = j + 1; k < jaux; ++k){
+                            int r = (int) (Math.random() * 8) + 1;
+                            while(usedNumbers[r - 1] == 1  || numberInColumn(board, r,i - 1, k)) {
+                                r += 1;
+                                if(r == 10) r = 1;
+                            }
+                            board[i][k].setValue(r);
+                            sum += r;
+                            usedNumbers[r - 1] = 1;
+                        }
+                    }
+                }
+            }
+        }
+        currentKakuro = new Kakuro("0", 1, size, size, board);
     }
 
     public void generate(int size,  int dif) {
@@ -162,6 +318,7 @@ public class CtrlDomain {
                         int sum = 0;
                         for(int k = j+1; k < jaux; ++k){
                             int r = (int) (Math.random()*8)+1;
+
                             while(usedNumbers[r - 1] == 1  || numberInColumn(aux,r,i-1,k)) {
                                 r += 1;
                                 if(r == 10) r = 1;
@@ -198,12 +355,10 @@ public class CtrlDomain {
 
     }
 
-    public void searchKakuro(int difficulty, int kakuroSize) {
-        this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSize));
-    }
 
-    public void getKakuro(String filePath) {
-        this.currentKakuro = new Kakuro(data.getKakuro(filePath));
+    /* GETTERS AND SETTERS (CLASSES) */
+    public boolean kakuroSetValue(int x, int y, int value) {
+        return currentKakuro.setValue(x, y, value);
     }
 
     public int getRowSize() {
@@ -214,58 +369,29 @@ public class CtrlDomain {
         return currentKakuro.getColumnSize();
     }
 
-    public void saveKakuro() {
-        data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize());
-    }
-
-    public boolean kakuroSetValue(int x, int y, int value) {
-        return currentKakuro.setValue(x, y, value);
-    }
-
-    public boolean checkValidity(int x, int y, int value) {
-        return currentKakuro.checkRowValidity(currentKakuro.getBoard(), x, y-1, value, value, -1, y) && currentKakuro.checkColumnValidity(currentKakuro.getBoard(), x, y, value, value, -1, x);
-    }
-
-    public boolean isFinished() {
-        return currentKakuro.isFinished();
-    }
-
-    public int helpMyValue(int x, int y) {
-        if (currentKakuro.getBoard()[x][y].isWhite()) {
-            int value = ((WhiteCell) currentKakuro.getBoard()[x][y]).getValue();
-            if (value == 0) return -2;
-            else return (((WhiteCell) currentKakuro.getBoard()[x][y]).getCorrectValue() == value) ? 1 : 0;
-        }
-        return -1;
-    }
-
-    public boolean helpCorrectNumber(int x, int y) {
-        if (currentKakuro.getBoard()[x][y].isWhite()) {
-            currentKakuro.setValue(x, y, ((WhiteCell) currentKakuro.getBoard()[x][y]).getCorrectValue());
-            return true;
-        }
-        return false;
-    }
-
-    public ArrayList<Integer> getStartedGames() {
-        return currentPlayer.getStartedGames();
-    }
-
-    public void setGame(int game) {
-        //TODO: Leer game
-    }
-
-    public void startNewGame(int difficulty, int kakuroSize) {
-        searchKakuro(difficulty, kakuroSize);
-        currentGame = new Game(0,0,currentKakuro);
-        currentGame.startResumeTimer();
-    }
-
     public String getKakuroToString() {
         return currentKakuro.toString();
     }
 
     public String getCorrectKakuroToString() {
         return currentKakuro.correctToString();
+    }
+
+
+    /* READ AND WRITE (FILE) */
+    public void searchKakuro(int difficulty, int kakuroSize) {
+        this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSize));
+    }
+
+    public void getKakuro(String filePath) {
+        this.currentKakuro = new Kakuro(data.getKakuro(filePath));
+    }
+
+    public ArrayList<Integer> getStartedGames() {
+        return currentPlayer.getStartedGames();
+    }
+
+    public void saveKakuro() {
+        data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize());
     }
 }

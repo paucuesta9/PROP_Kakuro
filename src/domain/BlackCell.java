@@ -7,6 +7,8 @@ public class BlackCell extends Cell{
 
     public BlackCell(int posX, int posY) {
         super(posX, posY);
+        this.vertical = 0;
+        this.horizontal = 0;
     }
 
     public BlackCell(int posX, int posY, int vertical, int horizontal) {

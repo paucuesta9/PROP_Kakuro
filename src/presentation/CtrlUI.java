@@ -61,7 +61,8 @@ public class CtrlUI {
                 System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
                 int diff = readNumber();
                 System.out.println("");
-                cd.generate(size, diff);
+                cd.generate(size);
+                writeKakuroInTerminal();
                 menu();
                 break;
             case 5:
@@ -207,12 +208,14 @@ public class CtrlUI {
         String[] kakuro = cd.getKakuroToString().split("\n");
         for (int i = 0; i < kakuro.length; ++i)
             System.out.println(kakuro[i]);
+        System.out.println("");
     }
 
     public void writeCorrectKakuroInTerminal() {
         String[] kakuro = cd.getCorrectKakuroToString().split("\n");
         for (int i = 0; i < kakuro.length; ++i)
             System.out.println(kakuro[i]);
+        System.out.println("");
     }
 
 }
