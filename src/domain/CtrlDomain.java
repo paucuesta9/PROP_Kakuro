@@ -31,7 +31,6 @@ public class CtrlDomain {
         currentKakuro.setDifficulty();
     }
 
-
     public void resolve() {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         currentKakuro.resolve(0,0, 0, vec);
@@ -49,12 +48,14 @@ public class CtrlDomain {
             fixRow(aux,i,j-1,cont-1);
         }
     }
+
     void fixCol(char [][] aux, int i, int j,int cont) {
         if(i >= 0 && j >= 0 && cont > 9 ) {
             aux[i][j] = '.';
             fixRow(aux,i-1,j,cont-1);
         }
     }
+
     int moreThanNineC(char[][]aux,int i,int j,int cont,int size) {
         if(aux[i][j] == '.' ) {
             if(cont > 9) fixCol(aux,i-1,j,cont);
@@ -62,6 +63,7 @@ public class CtrlDomain {
         }
         return 1 + moreThanNineC(aux,i-1,j,cont+1,size);
     }
+
     int  moreThanNineF(char[][] aux,int i,int j, int cont,int size) {
         if (aux[i][j] == '.') {
             if(cont > 9) fixRow(aux,i,j-1,cont);
@@ -106,8 +108,14 @@ public class CtrlDomain {
                     }
                 }
                 if(aux[i-1][j] == '.' && aux[i+1][j] == '.' && aux[i][j] == '_') { //evitamos que haya casillas blancas sin vecinos por columna
-                    if( i < size/2) { aux[i+1][j] = '_'; aux[j][i+1] = '_'; }
-                    else { aux[i-1][j] = '_'; aux[j][i-1] = '_'; }
+                    if( i < size/2) {
+                        aux[i+1][j] = '_';
+                        aux[j][i+1] = '_';
+                    }
+                    else {
+                        aux[i-1][j] = '_';
+                        aux[j][i-1] = '_';
+                    }
                 }
             }
         }
