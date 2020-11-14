@@ -156,42 +156,95 @@ public class Kakuro {
         return id;
     }
 
+    /** @brief Setter del indentificador
+     *
+     * @param id Identificador del Kakuro
+     */
     public void setId(String id) {
         this.id = id;
     }
 
+    /** @brief Getter de la dificultad
+     *
+     * @return Devuelve un entero con la dificultad (De 1 a 3)
+     */
     public int getDifficulty() {
         return difficulty;
     }
 
+    /** @brief Setter de la dificultad
+     *
+     * @param difficulty Dificultad del Kakuro, entero entre 1 y 3
+     */
+    public void setDifficulty(int difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    /** @brief Getter del tamaño de fila
+     *
+     * @return Devuelve un entero con el tamaño de la fila
+     */
     public int getRowSize() {
         return rowSize;
     }
 
+    /** @brief Setter del tamaño de fila
+     *
+     * @param rowSize Tamaño de fila, entero
+     */
     public void setRowSize(int rowSize) {
         this.rowSize = rowSize;
     }
 
+    /** @brief Getter del tamaño de columna
+     *
+     * @return Devuelve un entero con el tamaño de la columna
+     */
     public int getColumnSize() {
         return columnSize;
     }
 
+    /** @brief Setter del tamaño de columna
+     *
+     * @param columnSize Tamaño de columna, entero
+     */
     public void setColumnSize(int columnSize) {
         this.columnSize = columnSize;
     }
 
+    /** @brief Getter del tablero
+     *
+     * @return Devuelve una matriz de celdas, es decir el tablero del kakuro
+     */
     public Cell[][] getBoard() {
         return board;
     }
 
+    /** @brief Getter de celda
+     *
+     * @param x Posición de fila de la celda
+     * @param y Posición de columna de la celda
+     * @return Devuelve la Celda de nuestro tablero en la posición [x][y]
+     */
     public Cell getCell(int x, int y) {
         return board[x][y];
     }
 
+    /** @brief Setter del tablero
+     *
+     * @param board Matriz de Celdas
+     */
     public void setBoard(Cell[][] board) {
         this.board = board;
     }
 
+    /** @brief Setter de un valor en una celda de tipo blanca
+     *
+     * @param x Posición de fila de la celda
+     * @param y Posición de la columna de la celda
+     * @param value Valor que se quiere settear a la celda
+     * @return Devuelve true si la llamada a la celda devuelve true, en este caso, si la celda es blanca, en caso contrario devuelve false
+     */
     public boolean setValue(int x, int y, int value) {
         return board[x][y].setValue(value);
     }
@@ -261,6 +314,10 @@ public class Kakuro {
         return checkRowValidity(x, y-1, value, value, -1, y) && checkColumnValidity(x, y, value, value, -1, x);
     }
 
+    /** @brief Comprueva si se ha rellenado el tablero entero y correctamente
+     *
+     * @return Devuelve cierto si el usuario ha completado el tablero de forma correcto, en caso que falte algun valor por colocar o alguna no sea correcto devuelve falso
+     */
     public boolean isFinished() {
         for (int i = 0; i < rowSize; ++i) {
             for (int j = 0; j < columnSize; ++j) {
