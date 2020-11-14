@@ -251,6 +251,15 @@ public class Kakuro {
         return board[x][y].setValue(value);
     }
 
+    /**
+     *
+     * @param r representa el número de fila del tablero
+     * @param c representa el número de columna del tablero
+     * @param i representa el valor añadido a la celda blanca
+     * @param f
+     * @param sum
+     * @return
+     */
     public boolean checkColumn(int r, int c, int i, boolean f, int sum) {
         if(!board[r][c].isWhite()) {
             BlackCell b = (BlackCell) board[r][c];
@@ -266,6 +275,17 @@ public class Kakuro {
         return false;
     }
 
+    /** @brief Comprueba la validez de la fila
+     *
+     * Comprueba que en la fila no se repita ningún número y la suma de todos los valores no supere el valor de la celda negra que marca esa fila
+     * @param r representa el número de fila del tablero
+     * @param c representa el número de columna del tablero
+     * @param value representa el valor añadido a la celda blanca
+     * @param sum representa la suma total de los valores de las celdas blancas de la fila
+     * @param total representa el valor máximo que puede tener la suma de las celdas blancas de la fila
+     * @param posy representa el número de columna de la celda blanca a la que se le ha añadido un valor
+     * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
+     */
     public boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
@@ -289,6 +309,17 @@ public class Kakuro {
         }
     }
 
+    /** @brief Comprueba la validez de la columna
+     *
+     * Comprueba que en la columna no se repita ningún número y la suma de todos los valores no supere el valor de la celda negra que marca esa columna
+     * @param r representa el número de fila del tablero
+     * @param c representa el número de columna del tablero
+     * @param value representa el valor añadido a la celda blanca
+     * @param sum representa la suma total de los valores de las celdas blancas de la columna
+     * @param total representa el valor máximo que puede tener la suma de las celdas blancas de la columna
+     * @param posx representa el número de fila de la celda blanca a la que se le ha añadido un valor
+     * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
+     */
     public boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
@@ -312,11 +343,19 @@ public class Kakuro {
         }
     }
 
+    /** Comprueba la validez de un número añadido a una celda blanca
+     *
+     * Comprueba si el valor añadido a la celda blanca cumple las condiciones de la fila y de la columna
+     * @param x representa el número de la fila del tablero
+     * @param y representa el número de la columna del tablero
+     * @param value representa el valor añadido a la celda blanca
+     * @return devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas
+     */
     public boolean checkValidity(int x, int y, int value) {
         return checkRowValidity(x, y-1, value, value, -1, y) && checkColumnValidity(x, y, value, value, -1, x);
     }
 
-    /** @brief Comprueva si se ha rellenado el tablero entero y correctamente
+    /** @brief Comprueba si se ha rellenado el tablero entero y correctamente
      *
      * @return cierto si el usuario ha completado el tablero de forma correcto, en caso que falte algun valor por colocar o alguna no sea correcto devuelve falso
      */

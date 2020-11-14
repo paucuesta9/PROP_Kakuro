@@ -43,7 +43,7 @@ public class WhiteCell extends Cell {
 
     /** @brief Getter del atributo value
      *
-     * @return devuelve el valor del atributo value
+     * @return el valor del atributo value
      */
     public int getValue() {
         return value;
@@ -52,7 +52,7 @@ public class WhiteCell extends Cell {
     /** @brief Setter del atributo value
      *
      * @param value representa el valor que tiene la celda
-     * @return devuelve siempre cierto indicando que es una celda blanca
+     * @return siempre cierto indicando que es una celda blanca
      */
     @Override
     public boolean setValue(int value) {
@@ -62,7 +62,7 @@ public class WhiteCell extends Cell {
 
     /** @brief Getter del atributo CorrectValue
      *
-     * @return devuelve el valor del atributo CorrectValue
+     * @return el valor del atributo CorrectValue
      */
     public int getCorrectValue() {
         return correctValue;
@@ -94,7 +94,7 @@ public class WhiteCell extends Cell {
 
     /** @brief Función que indica que la celda es blanca
      *
-     * @return devuelve siempre cierto indicando que es una celda blanca
+     * @return siempre cierto indicando que es una celda blanca
      */
     @Override
     public boolean isWhite() {

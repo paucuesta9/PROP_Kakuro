@@ -16,7 +16,7 @@ public class Cell {
 
     /** @brief Comprobadora del tipo de celda
      *
-     * @return devuelve siempre falso
+     * @return siempre falso
      */
     public boolean isWhite() {
         return false;
@@ -25,7 +25,7 @@ public class Cell {
     /** @brief Setter de value
      *
      * @param value representa el valor de la celda
-     * @return devuelve siempre falso
+     * @return siempre falso
      */
     public boolean setValue(int value) {
         return false;

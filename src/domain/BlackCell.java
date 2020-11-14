@@ -39,7 +39,7 @@ public class BlackCell extends Cell{
 
     /** @brief Getter del atributo vertical
      *
-     * @return devuelve el valor del atributo column
+     * @return el valor del atributo column
      */
     public int getColumn() {
         return column;
@@ -47,7 +47,7 @@ public class BlackCell extends Cell{
 
     /** @brief Getter del atributo row
      *
-     * @return devuelve el valor del atributo row
+     * @return el valor del atributo row
      */
     public int getRow() {
         return row;
