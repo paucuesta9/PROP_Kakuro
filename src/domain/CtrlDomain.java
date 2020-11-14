@@ -63,12 +63,13 @@ public class CtrlDomain {
         return currentKakuro.isFinished();
     }
 
-    /** @brief
+    /** @brief Comprueba la validez de un número añadido a una celda blanca
      *
-     * @param x
-     * @param y
-     * @param value
-     * @return
+     * Comprueba si el valor añadido a la celda blanca cumple las condiciones de la fila y de la columna
+     * @param x representa el número de la fila del tablero
+     * @param y representa el número de la columna del tablero
+     * @param value representa el valor añadido a la celda blanca
+     * @return devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas
      */
     public boolean checkValidity(int x, int y, int value) {
         return currentKakuro.checkValidity(x, y, value);

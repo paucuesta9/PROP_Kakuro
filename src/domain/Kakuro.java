@@ -343,7 +343,7 @@ public class Kakuro {
         }
     }
 
-    /** Comprueba la validez de un número añadido a una celda blanca
+    /** @brief Comprueba la validez de un número añadido a una celda blanca
      *
      * Comprueba si el valor añadido a la celda blanca cumple las condiciones de la fila y de la columna
      * @param x representa el número de la fila del tablero
