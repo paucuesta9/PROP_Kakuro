@@ -1,22 +1,45 @@
 package domain;
 
 import data.CtrlData;
-
 import java.util.ArrayList;
+
+/** @file CtrlDomain.java
+ @brief Clase  <em>CtrlDomain</em>.
+ */
 
 public class CtrlDomain {
 
+    /**
+     * Instáncia del cotrolador persistencia
+     */
     private CtrlData data;
+    /**
+     *
+     */
     private Game currentGame;
+    /**
+     * Instància del kakuro con el que se trabaja en cada momento
+     */
     private Kakuro currentKakuro;
     private Player currentPlayer;
 
-    //constructora
+    /** @brief Creadora por defecto
+     *
+     * Se obtiene la instancia singleton del controlador persistencia
+     */
     public CtrlDomain() {
         data = CtrlData.getInstance();
     }
 
     // OPTION 1 - PLAY
+
+    /** @brief Inicia una nueva partida
+     *
+     * Se busca un tablero que cumpla las condiciones y llama al CtrlPlay para iniciar la partida
+     *
+     * @param difficulty dificultad del tablero, entre 1 y 3
+     * @param kakuroSize tamaño del tablero
+     */
     public void startNewGame(int difficulty, int kakuroSize) {
         searchKakuro(difficulty, kakuroSize);
         CtrlPlay.startGame(currentKakuro);
@@ -24,28 +47,59 @@ public class CtrlDomain {
         //currentGame.startResumeTimer();
     }
 
+    /** @brief
+     *
+     * @param game
+     */
     public void setGame(int game) {
         //TODO: Leer game
     }
 
+    /** @brief Se mira si el usuario ha completado el tablero
+     *
+     * @return Devuelve cierto si el usuario ha colocado todos los valores de las celdas y son correctos, en caso contrario, devuelve falso
+     */
     public boolean isFinished() {
         return currentKakuro.isFinished();
     }
 
+    /** @brief
+     *
+     * @param x
+     * @param y
+     * @param value
+     * @return
+     */
     public boolean checkValidity(int x, int y, int value) {
         return currentKakuro.checkValidity(x, y, value);
     }
 
+    /** @brief Se activa la ayuda que mira si el valor que el usuario ha puesto es correcto
+     *
+     * @param x Posición de fila de la celda
+     * @param y Posición de columna de la celda
+     * @return Devuelve 1 si el valor que el usuario ha colocado en la posición del tablero [x][y] es correcto, 0 si es incorrecto, -1 si la casilla [x][y] es negra, -2 si no se ha colocado un valor
+     */
     public int helpMyValue(int x, int y) {
         return CtrlPlay.helpMyValue(x, y);
     }
 
+    /** @brief Se activa la ayuda que coloca el valor correcto de una celda
+     *
+     * @param x Posición de fila de la celda
+     * @param y Posición de columna de la celda
+     * @return Devuelve cierto si la posición [x][y] es una celda blanca, en caso contrario, devuelve falso
+     */
     public boolean helpCorrectNumber(int x, int y) {
         return CtrlPlay.helpCorrectNumber(x, y);
     }
 
-
     // OPTION 2 - CREATE VALIDATE
+
+    /** @brief Se valida un Kakuro que sea correcto
+     *
+     * @return Devuelve cierto si el Kakuro es correcto, en caso contrario, devuelve falso
+     */
     public boolean validate() {
         int [] res = new int[1];
         res[0] = 0;
@@ -57,6 +111,10 @@ public class CtrlDomain {
 
 
     // OPTION 3 - RESOLVE
+
+    /** @brief Se resuelve un Kakuro
+     *
+     */
     public void resolve() {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         CtrlResolve.setKakuro(currentKakuro);
@@ -360,40 +418,86 @@ public class CtrlDomain {
 
 
     /* GETTERS AND SETTERS (CLASSES) */
+
+    /** @brief Setter de valor en una celda
+     *
+     * Se setea el valor en la celda de la posición [x][y] con el valor "value" si la celda es blanca
+     *
+     * @param x Posición de fila de una celda
+     * @param y Posición de columna de una celda
+     * @param value Valor que el usuario quiere colocar
+     * @return Devuelve cierto si la celda es blanco, en caso contrario, devuelve falso
+     */
     public boolean kakuroSetValue(int x, int y, int value) {
         return currentKakuro.setValue(x, y, value);
     }
 
+    /** @brief Getter del tamaño de fila
+     *
+     * @return Devuelve un entero con el tamaño de fila del tablero
+     */
     public int getRowSize() {
         return currentKakuro.getRowSize();
     }
 
+    /** @brief Getter del tamaño de columna
+     *
+     * @return Devuelve un entero con el tamaño de columna del tablero
+     */
     public int getColumnSize() {
         return currentKakuro.getColumnSize();
     }
 
+    /** @brief Getter del kakuro en formato String
+     *
+     * @return Devuelve un String con el kakuro en formato para fichero o para printear en consola
+     */
     public String getKakuroToString() {
         return currentKakuro.toString();
     }
 
+    /** @brief Getter del kakuro correcto en formato String
+     *
+     * @return Devuelve un String con el kakuro correcto (resuelto) en formato para fichero o para printear en consola
+     */
     public String getCorrectKakuroToString() {
         return currentKakuro.correctToString();
     }
 
 
     /* READ AND WRITE (FILE) */
+    /** @bief Busca un Kakuro
+     *
+     * Busca un kakuro que coincida con las condiciones de dificultad y tamaño
+     *
+     * @param difficulty Dificultad del Kakuro
+     * @param kakuroSize Tamaño del tablero
+     */
     public void searchKakuro(int difficulty, int kakuroSize) {
         this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSize));
     }
 
+    /** @brief Getter de Kakuro
+     *
+     * Se obtiene un Kakuro y se asigna al currentKakuro a partir de una ruta relativa
+     *
+     * @param filePath Ruta relativa al fichero con el Kakuro que se busca
+     */
     public void getKakuro(String filePath) {
         this.currentKakuro = new Kakuro(data.getKakuro(filePath));
     }
 
+    /** @brief Getter de partidas empezadas por el usuario actual
+     *
+     * @return Devuelve una lista de Strings con los identificadores de las partidas que tiene empezadas el usuario
+     */
     public ArrayList<Integer> getStartedGames() {
         return currentPlayer.getStartedGames();
     }
 
+    /** @brief Guarda un Kakuro en un fichero
+     *
+     */
     public void saveKakuro() {
         data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize());
     }

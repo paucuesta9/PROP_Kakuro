@@ -1,11 +1,11 @@
 package domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /** @file WhiteCell.java
  @brief Clase  <em>WhiteCell</em>.
  */
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class WhiteCell extends Cell {
     /**

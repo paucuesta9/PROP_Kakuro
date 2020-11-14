@@ -89,7 +89,7 @@ public class Kakuro {
      *
      * Se convierte el Kakuro a un String en formato fichero
      *
-     * @return Devuelve un String en formato de fichero para guardarlo en un archivo
+     * @return Devuelve un String en formato de fichero para guardarlo en un archivo o printear en consola
      */
     public String toString() {
         StringBuilder content = new StringBuilder();
@@ -118,9 +118,11 @@ public class Kakuro {
         return content.toString();
     }
 
-    /**
+    /** @brief Conversor de Kakuro a String, valores correctos
      *
-     * @return
+     * Se convierte el Kakuro a un String en formato fichero
+     *
+     * @return Devuelve un String en formato de fichero para guardarlo en un archivo o printear en consola
      */
     public String correctToString() {
         StringBuilder content = new StringBuilder();
