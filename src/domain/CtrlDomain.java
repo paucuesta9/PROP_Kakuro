@@ -44,6 +44,7 @@ public class CtrlDomain {
         return CtrlPlay.helpCorrectNumber(x, y);
     }
 
+
     // OPTION 2 - CREATE VALIDATE
     public boolean validate() {
         int [] res = new int[1];
@@ -54,12 +55,14 @@ public class CtrlDomain {
         else return true;
     }
 
+
     // OPTION 3 - RESOLVE
     public void resolve() {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         CtrlResolve.setKakuro(currentKakuro);
         CtrlResolve.resolve(0,0, 0, vec);
     }
+
 
     // OPTION 4 - GENEREATE
     public boolean numberInColumn(Cell[][] board, int r, int i, int j) {
