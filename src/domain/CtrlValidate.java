@@ -1,5 +1,8 @@
 package domain;
 
+/** @file CtrlValidate.java
+ @brief Clase <em>CtrlValidate</em>.
+ */
 
 /** @brief Clase CtrlValidate que contiene los atributos y metodos para la funcionalidad de validar
  */

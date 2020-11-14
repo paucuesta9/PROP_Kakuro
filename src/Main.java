@@ -12,6 +12,8 @@ En este proyecto de desarrolla una aplicación para jugar, resolver, validar y g
  @brief Programa principal del proyecto  <em>Kakuro</em>.
  */
 
+/** @brief Clase Main que lanza el juego
+ */
 public class Main {
 
     /** @brief Función inicial que lanza la interfaz (en este caso por consola)
