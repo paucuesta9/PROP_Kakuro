@@ -146,11 +146,11 @@ public class CtrlDomain {
             for (int j = i; j < size - 1; ++j) {
                 int random = (int) (Math.random()* 10);
                 if (random < 4) {
-                    board[i][j] = new BlackCell(i, j);
-                    board[j][i] = new BlackCell(j, i);
+                    board[i][j] = new BlackCell();
+                    board[j][i] = new BlackCell();
                 } else {
-                    board[i][j] = new WhiteCell(i, j);
-                    board[j][i] = new WhiteCell(j, i);
+                    board[i][j] = new WhiteCell();
+                    board[j][i] = new WhiteCell();
                 }
             }
         }
@@ -159,21 +159,21 @@ public class CtrlDomain {
             for (int j = i; j < size - 1; ++j) {
                 if (!board[i][j - 1].isWhite() && !board[i][j + 1].isWhite() && board[i][j].isWhite()) {
                     if (j < size / 2) {
-                        board[i][j + 1] = new WhiteCell(i, j + 1);
-                        board[j + 1][i] = new WhiteCell(j + 1, i);
+                        board[i][j + 1] = new WhiteCell();
+                        board[j + 1][i] = new WhiteCell();
                     } else {
-                        board[i][j - 1] = new WhiteCell(i, j - 1);
-                        board[j - 1][i] = new WhiteCell(j - 1, i);
+                        board[i][j - 1] = new WhiteCell();
+                        board[j - 1][i] = new WhiteCell();
                     }
                 }
                 if (!board[i - 1][j].isWhite() && !board[i + 1][j].isWhite() && board[i][j].isWhite()) {
                     if (i < size / 2) {
-                        board[i + 1][j] = new WhiteCell(i + 1, j);
-                        board[j][i + 1] = new WhiteCell(j, i + 1);
+                        board[i + 1][j] = new WhiteCell();
+                        board[j][i + 1] = new WhiteCell();
                     }
                     else {
-                        board[i - 1][j] = new WhiteCell(i - 1, j);
-                        board[j][i - 1] = new WhiteCell(j, i - 1);
+                        board[i - 1][j] = new WhiteCell();
+                        board[j][i - 1] = new WhiteCell();
                     }
                 }
             }

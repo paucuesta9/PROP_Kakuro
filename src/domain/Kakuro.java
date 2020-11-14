@@ -63,8 +63,8 @@ public class Kakuro {
         for (int i = 0; i < rowSize; ++i) {
             String[] valuesRow = values[i + 1].split(",");
             for (int j = 0; j < columnSize; ++j) {
-                if (valuesRow[j].equals("*")) board[i][j] = new BlackCell(i, j);
-                else if (valuesRow[j].equals("?")) board[i][j] = new WhiteCell(i, j);
+                if (valuesRow[j].equals("*")) board[i][j] = new BlackCell();
+                else if (valuesRow[j].equals("?")) board[i][j] = new WhiteCell();
                 else if (valuesRow[j].charAt(0) == 'C' || valuesRow[j].charAt(0) == 'F') {
                     int vertical = 0, horizontal = 0;
                     if (valuesRow[j].charAt(0) == 'C') {
@@ -79,8 +79,8 @@ public class Kakuro {
                     } else {
                         horizontal = Integer.parseInt(valuesRow[j].substring(1));
                     }
-                    board[i][j] = new BlackCell(i, j, vertical, horizontal);
-                } else board[i][j] = new WhiteCell(i, j, Integer.parseInt(valuesRow[j]));
+                    board[i][j] = new BlackCell(vertical, horizontal);
+                } else board[i][j] = new WhiteCell(Integer.parseInt(valuesRow[j]));
             }
         }
     }

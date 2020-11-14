@@ -18,11 +18,9 @@ public class BlackCell extends Cell{
     /** @brief Creadora de celda negra sin valores.
      *
      * Se ejecuta automáticamente al declarar una celda negra sin valores.
-     * @param posX representa el número de fila del tablero
-     * @param posY representa el número de columna del tablero
      */
-    public BlackCell(int posX, int posY) {
-        super(posX, posY);
+    public BlackCell() {
+        super();
         this.column = 0;
         this.row = 0;
     }
@@ -30,13 +28,11 @@ public class BlackCell extends Cell{
     /** @brief Creadora de celda negra con valores.
      *
      * Se ejecuta automáticamente al declarar una celda negra con valores.
-     * @param posX representa el número de fila del tablero
-     * @param posY representa el número de columna del tablero
      * @param column representa el valor de la suma de la columna
      * @param row representa el valor de la suma de la fila
      */
-    public BlackCell(int posX, int posY, int column, int row) {
-        super(posX, posY);
+    public BlackCell(int column, int row) {
+        super();
         this.column = column;
         this.row = row;
     }

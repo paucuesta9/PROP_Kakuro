@@ -21,11 +21,9 @@ public class WhiteCell extends Cell {
     /** @brief Creadora de una celda blanca sin valor
      *
      * Se ejecuta automáticamente al declarar una celda blanca sin valor.
-     * @param posX representa el número de fila del tablero
-     * @param posY representa el número de columna del tablero
      */
-    public WhiteCell(int posX, int posY) {
-        super(posX, posY);
+    public WhiteCell() {
+        super();
         this.value = 0;
         this.correctValue = 0;
         tempValues = new ArrayList<>(9);
@@ -34,12 +32,10 @@ public class WhiteCell extends Cell {
     /** @brief Creadora de una celda blanca con valor
      *
      * Se ejecuta automáticamente al declarar una celda blanca con valor.
-     * @param posX representa el número de fila del tablero
-     * @param posY representa el número de columna del tablero
      * @param value representa el valor que tiene la casilla
      */
-    public WhiteCell(int posX, int posY, int value) {
-        super(posX, posY);
+    public WhiteCell(int value) {
+        super();
         this.value = value;
         this.correctValue = 0;
         tempValues = new ArrayList<>(9);
