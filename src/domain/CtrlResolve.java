@@ -3,6 +3,9 @@ package domain;
 /** @file CtrlResolve.java
  @brief Clase  <em>CtrlResolve</em>.
  */
+
+/** @brief Clase CtrlResolve que contiene los atributos y metodos para la funcionalidad de resolver
+ */
 public class CtrlResolve {
 
     /**

@@ -7,6 +7,8 @@ import java.util.List;
  @brief Clase  <em>WhiteCell</em>.
  */
 
+/** @brief Clase WhiteCell que identifica y contiene los atributos necesarios de una celda blanca
+ */
 public class WhiteCell extends Cell {
     /**
      * value es el valor que tiene la celda [1-9]

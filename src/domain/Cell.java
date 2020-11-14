@@ -1,9 +1,12 @@
 package domain;
 
-/** @file BlackCell.java
- @brief Clase  <em>BlackCell</em>.
+/** @file Cell.java
+ @brief Clase  <em>Cell</em>.
  */
 
+
+/** @brief Clase Cell que contiene los métodos necesarios para cualquier tipo de Celda
+ */
 public class Cell {
 
     /** @brief Creadora de una celda

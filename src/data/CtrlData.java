@@ -7,6 +7,9 @@ import java.util.Random;
  @brief Clase  <em>CtrlData</em>.
  */
 
+/** @brief Clase CtrlData para obtener y guardar datos en nuestra base de datos (ficheros)
+ */
+
 public class CtrlData {
     /**
      * ctrlData es la instancia del CtrlData

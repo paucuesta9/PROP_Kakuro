@@ -7,6 +7,8 @@ package domain;/* Alvaro Armada Ruiz */
  */
 
 
+/** @brief Clase Kakuro que contiene los atributos y metodos de un tablero
+ */
 public class Kakuro {
 
     /**

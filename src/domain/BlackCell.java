@@ -4,6 +4,9 @@ package domain;
  @brief Clase  <em>BlackCell</em>.
  */
 
+
+/** @brief Clase BlackCell que identifica y contiene los atributos necesarios de una celda negra
+ */
 public class BlackCell extends Cell{
     /**
      * column es el valor de la suma de la columna

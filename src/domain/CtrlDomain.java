@@ -7,6 +7,9 @@ import java.util.ArrayList;
  @brief Clase  <em>CtrlDomain</em>.
  */
 
+
+/** @brief Clase CtrlDomain que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ */
 public class CtrlDomain {
 
     /**

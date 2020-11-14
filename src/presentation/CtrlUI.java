@@ -9,6 +9,9 @@ import java.util.Scanner;
  @brief Clase  <em>CtrlUI</em>.
  */
 
+
+/** @brief Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ */
 public class CtrlUI {
     /**
      * cd es la instancia del CtrlDomain

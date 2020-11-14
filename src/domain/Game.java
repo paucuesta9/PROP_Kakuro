@@ -3,6 +3,8 @@ package domain;
 import java.util.Timer;
 import java.util.TimerTask;
 
+/** @brief Clase Game que contiene los atributos y metodos de la clase Game
+ */
 public class Game {
     private int id;
     private int timeSec;

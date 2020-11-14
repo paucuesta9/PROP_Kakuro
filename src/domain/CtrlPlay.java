@@ -4,6 +4,8 @@ package domain;
  @brief Clase  <em>CtrlPlay</em>.
  */
 
+/** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar
+ */
 public class CtrlPlay {
     /**
      * kakuro instancia del kakuro con el que se trabaja en este momento

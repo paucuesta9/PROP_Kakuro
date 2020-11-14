@@ -1,5 +1,8 @@
 package domain;
 
+
+/** @brief Clase CtrlValidate que contiene los atributos y metodos para la funcionalidad de validar
+ */
 public class CtrlValidate {
 
     private static Kakuro kakuro;
