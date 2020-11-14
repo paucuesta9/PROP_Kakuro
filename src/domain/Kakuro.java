@@ -1,5 +1,12 @@
 package domain;/* Alvaro Armada Ruiz */
 
+
+/** @file Kakuro.java
+ @brief Clase  <em>Kakuro</em>.
+ @author Alvaro Armada Ruiz
+ */
+
+
 public class Kakuro {
     private String id;
     private int difficulty;
@@ -7,6 +14,12 @@ public class Kakuro {
     private int columnSize;
     private Cell [][] board;
 
+    /** @brief Creadora por defecto.
+
+    Se ejecuta automáticamente al declarar una lavadora.
+    \pre <em>cierto</em>
+    \post El resultado es una lavadora no inicializada
+     */
     public Kakuro(String id, int difficulty, int rowSize, int columnSize, Cell[][] board) {
         this.id = id;
         this.difficulty = difficulty;
