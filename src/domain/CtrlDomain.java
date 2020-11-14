@@ -129,79 +129,6 @@ public class CtrlDomain {
     }
 
 
-    // OPTION 4 - GENEREATE
-    public boolean numberInColumn(Cell[][] board, int r, int i, int j) {
-        if(!board[i][j].isWhite()) return false;
-        if(((WhiteCell) board[i][j]).getValue() == r) return true;
-        return numberInColumn(board, r,i - 1, j);
-    }
-
-    boolean numberInColumn(char[][] board,int r,int i,int j) {
-        if(board[i][j] == '.') return false;
-        if( board[i][j] == (char) (r)) return true;
-        return numberInColumn(board,r,i-1,j);
-    }
-
-    public void fixRow(Cell[][] board, int i, int j, int cont) {
-        if (j >= 0 && i >= 0 && cont > 9) {
-            board[i][j] = new BlackCell(i, j);
-            fixRow(board, i,j - 1,cont - 1);
-        }
-    }
-
-    void fixRow(char [][] aux, int i, int j,int cont) {
-        if (j >= 0 && i >= 0 && cont > 9) {
-            aux[i][j] = '.';
-            fixRow(aux,i,j-1,cont-1);
-        }
-    }
-
-    public void fixCol(Cell[][] board, int i, int j, int cont) {
-        if(i >= 0 && j >= 0 && cont > 9 ) {
-            board[i][j] = new BlackCell(i, j);
-            fixCol(board,i - 1, j,cont - 1);
-        }
-    }
-
-    void fixCol(char [][] aux, int i, int j,int cont) {
-        if(i >= 0 && j >= 0 && cont > 9 ) {
-            aux[i][j] = '.';
-            fixCol(aux,i-1,j,cont-1);
-        }
-    }
-
-    public int moreThanNineC(Cell[][] board,int i,int j,int cont) {
-        if(!board[i][j].isWhite()) {
-            if (cont > 9) fixCol(board,i - 1, j, cont);
-            return 0;
-        }
-        return 1 + moreThanNineC(board,i + 1, j,cont + 1);
-    }
-
-    int moreThanNineC(char[][]aux,int i,int j,int cont,int size) {
-        if(aux[i][j] == '.' ) {
-            if(cont > 9) fixCol(aux,i-1,j,cont);
-            return 0;
-        }
-        return 1 + moreThanNineC(aux,i-1,j,cont+1,size);
-    }
-
-    public int moreThanNineF(Cell[][] board, int i, int j, int cont) {
-        if (!board[i][j].isWhite()) {
-            if (cont > 9) fixRow(board, i, j - 1, cont);
-            return 0;
-        }
-        return 1 + moreThanNineF(board, i, j + 1, cont + 1);
-    }
-
-    int  moreThanNineF(char[][] aux,int i,int j, int cont,int size) {
-        if (aux[i][j] == '.') {
-            if(cont > 9) fixRow(aux,i,j-1,cont);
-            return 0;
-        }
-        return 1 + moreThanNineF(aux,i,j+1,cont+1,size);
-    }
-
     int countWhiteCellsV(Cell[][] board,int i,int j) {
         if( !board[i][j].isWhite()) return 0;
         return 1+countWhiteCellsV(board,i-1,j);
@@ -729,8 +656,8 @@ public class CtrlDomain {
             System.out.println("Tablero creado");
 
             printBoard(board);
-            if(!repeat && fillBoard(board)) System.out.println("Kakuro with unique solution found");
-            else repeat = true;
+            //if(!repeat && fillBoard(board)) System.out.println("Kakuro with unique solution found");
+            //else repeat = true;
         }
 
     }
