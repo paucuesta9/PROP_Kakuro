@@ -1,15 +1,38 @@
 package domain;
 
+/** @file CtrlResolve.java
+ @brief Clase  <em>CtrlResolve</em>.
+ */
 public class CtrlResolve {
 
+    /**
+     * Instància del kakuro con el que se trabaja en cada momento
+     */
     private static Kakuro kakuro;
 
+    /** @brief Creadora por defecto
+     *
+     */
     public CtrlResolve() {}
 
+    /** @brief Setter de Kakuro
+     *
+     * Settea un Kakuro al controlador para poder trabajar con él
+     *
+     * @param currentKakuro instància de Kakuro
+     */
     public static void setKakuro(Kakuro currentKakuro) {
         kakuro = currentKakuro;
     }
 
+    /** @brief Resuelve un Kakuro
+     *
+     * @param r
+     * @param c
+     * @param sum
+     * @param vec
+     * @return
+     */
     public static boolean resolve(int r, int c, int sum, int [] vec) {
         if( r == kakuro.getRowSize() ) { return true; } //hemos llegado al final, la solucion es correcta
         else {

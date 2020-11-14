@@ -89,7 +89,7 @@ public class Kakuro {
      *
      * Se convierte el Kakuro a un String en formato fichero
      *
-     * @return Devuelve un String en formato de fichero para guardarlo en un archivo o printear en consola
+     * @return String en formato de fichero para guardarlo en un archivo o printear en consola
      */
     public String toString() {
         StringBuilder content = new StringBuilder();
@@ -122,7 +122,7 @@ public class Kakuro {
      *
      * Se convierte el Kakuro a un String en formato fichero
      *
-     * @return Devuelve un String en formato de fichero para guardarlo en un archivo o printear en consola
+     * @return String en formato de fichero para guardarlo en un archivo o printear en consola
      */
     public String correctToString() {
         StringBuilder content = new StringBuilder();
@@ -152,7 +152,7 @@ public class Kakuro {
 
     /** @brief Getter del Identificador
      *
-     * @return Devuelve un String con el identificador
+     * @return String con el identificador
      */
     public String getId() {
         return id;
@@ -168,7 +168,7 @@ public class Kakuro {
 
     /** @brief Getter de la dificultad
      *
-     * @return Devuelve un entero con la dificultad (De 1 a 3)
+     * @return entero con la dificultad (De 1 a 3)
      */
     public int getDifficulty() {
         return difficulty;
@@ -184,7 +184,7 @@ public class Kakuro {
 
     /** @brief Getter del tamaño de fila
      *
-     * @return Devuelve un entero con el tamaño de la fila
+     * @return entero con el tamaño de la fila
      */
     public int getRowSize() {
         return rowSize;
@@ -200,7 +200,7 @@ public class Kakuro {
 
     /** @brief Getter del tamaño de columna
      *
-     * @return Devuelve un entero con el tamaño de la columna
+     * @return entero con el tamaño de la columna
      */
     public int getColumnSize() {
         return columnSize;
@@ -216,7 +216,7 @@ public class Kakuro {
 
     /** @brief Getter del tablero
      *
-     * @return Devuelve una matriz de celdas, es decir el tablero del kakuro
+     * @return una matriz de celdas, es decir el tablero del kakuro
      */
     public Cell[][] getBoard() {
         return board;
@@ -226,7 +226,7 @@ public class Kakuro {
      *
      * @param x Posición de fila de la celda
      * @param y Posición de columna de la celda
-     * @return Devuelve la Celda de nuestro tablero en la posición [x][y]
+     * @return la Celda de nuestro tablero en la posición [x][y]
      */
     public Cell getCell(int x, int y) {
         return board[x][y];
@@ -245,7 +245,7 @@ public class Kakuro {
      * @param x Posición de fila de la celda
      * @param y Posición de la columna de la celda
      * @param value Valor que se quiere settear a la celda
-     * @return Devuelve true si la llamada a la celda devuelve true, en este caso, si la celda es blanca, en caso contrario devuelve false
+     * @return true si la llamada a la celda devuelve true, en este caso, si la celda es blanca, en caso contrario devuelve false
      */
     public boolean setValue(int x, int y, int value) {
         return board[x][y].setValue(value);
@@ -318,7 +318,7 @@ public class Kakuro {
 
     /** @brief Comprueva si se ha rellenado el tablero entero y correctamente
      *
-     * @return Devuelve cierto si el usuario ha completado el tablero de forma correcto, en caso que falte algun valor por colocar o alguna no sea correcto devuelve falso
+     * @return cierto si el usuario ha completado el tablero de forma correcto, en caso que falte algun valor por colocar o alguna no sea correcto devuelve falso
      */
     public boolean isFinished() {
         for (int i = 0; i < rowSize; ++i) {

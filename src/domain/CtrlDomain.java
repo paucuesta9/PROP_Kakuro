@@ -57,7 +57,7 @@ public class CtrlDomain {
 
     /** @brief Se mira si el usuario ha completado el tablero
      *
-     * @return Devuelve cierto si el usuario ha colocado todos los valores de las celdas y son correctos, en caso contrario, devuelve falso
+     * @return cierto si el usuario ha colocado todos los valores de las celdas y son correctos, en caso contrario, devuelve falso
      */
     public boolean isFinished() {
         return currentKakuro.isFinished();
@@ -78,7 +78,10 @@ public class CtrlDomain {
      *
      * @param x Posición de fila de la celda
      * @param y Posición de columna de la celda
-     * @return Devuelve 1 si el valor que el usuario ha colocado en la posición del tablero [x][y] es correcto, 0 si es incorrecto, -1 si la casilla [x][y] es negra, -2 si no se ha colocado un valor
+     * @return 1 si el valor que el usuario ha colocado en la posición del tablero [x][y] es correcto,
+     * @return 0 si es incorrecto,
+     * @return -1 si la casilla [x][y] es negra,
+     * @return -2 si no se ha colocado un valor
      */
     public int helpMyValue(int x, int y) {
         return CtrlPlay.helpMyValue(x, y);
