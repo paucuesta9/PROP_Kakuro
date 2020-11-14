@@ -1,23 +1,36 @@
 package domain;
-/*Pol Vallespí Soro */
-public abstract class Cell {
-    private int posX;
-    private int posY;
 
-    public Cell(int posX, int posY) {
-        this.posX = posX;
-        this.posY = posY;
+/** @file Cell.java
+ @brief Clase  <em>Cell</em>.
+ */
+
+
+/** @brief Clase Cell que contiene los métodos necesarios para cualquier tipo de Celda
+ */
+public class Cell {
+
+    /** @brief Creadora de una celda
+     *
+     * Se ejecuta automáticamente al declarar una celda.
+     */
+    public Cell() {
+
     }
 
-    public boolean isWhite() {return false;}
+    /** @brief Comprobadora del tipo de celda
+     *
+     * @return siempre falso
+     */
+    public boolean isWhite() {
+        return false;
+    }
 
-    public void setPosX(int posX) { this.posX = posX; }
-
-    public int getPosX() { return posX; }
-
-    public void setPosY(int posY) { this.posY = posY; }
-
-    public int getPosY() { return posY; }
-
-    public abstract boolean setValue(int value);
+    /** @brief Setter de value
+     *
+     * @param value representa el valor de la celda
+     * @return siempre falso
+     */
+    public boolean setValue(int value) {
+        return false;
+    }
 }

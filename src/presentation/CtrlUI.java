@@ -5,20 +5,46 @@ import domain.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/** @file CtrlUI.java
+ @brief Clase  <em>CtrlUI</em>.
+ */
+
+
+/** @brief Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ */
 public class CtrlUI {
+    /**
+     * cd es la instancia del CtrlDomain
+     */
     private CtrlDomain cd;
+    /**
+     * reader es una atributo que sirve para leer de la terminal
+     */
     private Scanner reader = new Scanner(System.in);
 
+    /** @brief Creadora por defecto
+     *
+     * Se ejecuta automáticamente al declarar una instancia del CtrlDomain.
+     *
+     */
     public CtrlUI() {
         cd = new CtrlDomain();
     }
 
+    /** @brief Inicio del juego
+     *
+     * Se da la bienvenida al usuario y lanza el menu
+     */
     public void run () {
         System.out.println("########## BIENVENIDO A KAKURO ##########");
         System.out.println("");
         menu();
     }
 
+    /** @brief Menú principal del juego
+     *
+     * Se da al usuario las diferentes opciones que tiene del juego y se lanza cada una de ellas
+     */
     public void menu () {
         System.out.println("MENÚ:");
         System.out.println("1. Jugar");
@@ -61,7 +87,8 @@ public class CtrlUI {
                 System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
                 int diff = readNumber();
                 System.out.println("");
-                cd.generate(size, diff);
+                cd.generate(size);
+                writeKakuroInTerminal();
                 menu();
                 break;
             case 5:
@@ -75,6 +102,10 @@ public class CtrlUI {
         }
     }
 
+    /** @brief Opcion de jugar del menu
+     *
+     * Se crea/carga una partida y se juega
+     */
     public void play() {
         System.out.println("1. Empezar nueva partida");
         System.out.println("2. Cargar partida empezada");
@@ -142,10 +173,19 @@ public class CtrlUI {
         menu();
     }
 
+    /** @brief Guardar una partida
+     *
+     */
     private void saveGame() {
         //TODO: Hacer la funcion entera de guardar partida
     }
 
+    /** @brief Ayudas
+     *
+     * Ofrece dos tipos de ayudas al usuario:
+     *  - Le comprueba si el valor de la celda blanca que ha introducido es correcto o no
+     *  - Le introduce el valor correcto de la celda blanca que el usuario pide
+     */
     private void help() {
         System.out.println(" -- INSTRUCCIONES AYUDA --");
         System.out.println("1. Comprobar valor: Comprobar si un valor que ha introducido es correcto");
@@ -189,30 +229,55 @@ public class CtrlUI {
         }
     }
 
+    /** @brief Comprobadora de coordenadas
+     *
+     * Comprueba si las coordenadas dadas se encuentran dentro del tablero
+     * @param x representa el número de la fila del tablero
+     * @param y representa el número de la columna del tablero
+     * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
+     */
     private boolean checkCoord(int x, int y) {
         return (x < cd.getRowSize() || x >= 0 || y < cd.getColumnSize() || y >= 0);
     }
 
+    /** @brief Lectura de un número por terminal
+     *
+     * @return el número introducido por la terminal
+     */
     public int readNumber() {
         int number = 0;
         number = reader.nextInt();
         return number;
     }
 
+    /** @brief Lectura de una linea por terminal
+     *
+     * @return la linea introducida por la terminal
+     */
     public String readLine() {
         return reader.nextLine();
     }
 
+    /** @brief Escritura del Kakuro por terminal
+     *
+     * Escribe el Kakuro con los valores que tiene en ese momento por la terminal
+     */
     public void writeKakuroInTerminal() {
         String[] kakuro = cd.getKakuroToString().split("\n");
         for (int i = 0; i < kakuro.length; ++i)
             System.out.println(kakuro[i]);
+        System.out.println("");
     }
 
+    /** @brief Escritura Kakuro correcto por terminal
+     *
+     * Escribe la solución del Kakuro por la terminal
+     */
     public void writeCorrectKakuroInTerminal() {
         String[] kakuro = cd.getCorrectKakuroToString().split("\n");
         for (int i = 0; i < kakuro.length; ++i)
             System.out.println(kakuro[i]);
+        System.out.println("");
     }
 
 }

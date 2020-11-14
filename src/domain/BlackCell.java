@@ -1,35 +1,75 @@
 package domain;
 
-/* Judith Almoño Gómez */
+/** @file BlackCell.java
+ @brief Clase  <em>BlackCell</em>.
+ */
+
+
+/** @brief Clase BlackCell que identifica y contiene los atributos necesarios de una celda negra
+ */
 public class BlackCell extends Cell{
-    private int vertical;
-    private int horizontal;
+    /**
+     * column es el valor de la suma de la columna
+     */
+    private int column;
 
-    public BlackCell(int posX, int posY) {
-        super(posX, posY);
+    /**
+     * row es el valor de la suma de la fila
+     */
+    private int row;
+
+    /** @brief Creadora de celda negra sin valores.
+     *
+     * Se ejecuta automáticamente al declarar una celda negra sin valores.
+     */
+    public BlackCell() {
+        super();
+        this.column = 0;
+        this.row = 0;
     }
 
-    public BlackCell(int posX, int posY, int vertical, int horizontal) {
-        super(posX, posY);
-        this.vertical = vertical;
-        this.horizontal = horizontal;
+    /** @brief Creadora de celda negra con valores.
+     *
+     * Se ejecuta automáticamente al declarar una celda negra con valores.
+     * @param column representa el valor de la suma de la columna
+     * @param row representa el valor de la suma de la fila
+     */
+    public BlackCell(int column, int row) {
+        super();
+        this.column = column;
+        this.row = row;
     }
 
-    public int getVertical() {
-        return vertical;
+    /** @brief Getter del atributo vertical
+     *
+     * @return el valor del atributo column
+     */
+    public int getColumn() {
+        return column;
     }
 
-    public int getHorizontal() {
-        return horizontal;
+    /** @brief Getter del atributo row
+     *
+     * @return el valor del atributo row
+     */
+    public int getRow() {
+        return row;
     }
 
-    public void setVertical(int vertical) {
-        this.vertical = vertical;
+    /** @brief Setter del atributo column
+     *
+     * @param column representa el valor de la suma de la columna
+     */
+    public void setColumn(int column) {
+        this.column = column;
     }
 
-    public void setHorizontal(int horizontal) {
-        this.horizontal = horizontal;
+    /** @brief Setter del atributo row
+     *
+     * @param row representa el valor de la suma de la fila
+     */
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    public boolean setValue(int value) { return false; }
 }
