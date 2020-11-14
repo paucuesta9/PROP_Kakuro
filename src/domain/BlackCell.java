@@ -2,35 +2,35 @@ package domain;
 
 /* Judith Almoño Gómez */
 public class BlackCell extends Cell{
-    private int vertical;
-    private int horizontal;
+    private int column;
+    private int row;
 
     public BlackCell(int posX, int posY) {
         super(posX, posY);
-        this.vertical = 0;
-        this.horizontal = 0;
+        this.column = 0;
+        this.row = 0;
     }
 
-    public BlackCell(int posX, int posY, int vertical, int horizontal) {
+    public BlackCell(int posX, int posY, int column, int row) {
         super(posX, posY);
-        this.vertical = vertical;
-        this.horizontal = horizontal;
+        this.column = column;
+        this.row = row;
     }
 
-    public int getVertical() {
-        return vertical;
+    public int getColumn() {
+        return column;
     }
 
-    public int getHorizontal() {
-        return horizontal;
+    public int getRow() {
+        return row;
     }
 
-    public void setVertical(int vertical) {
-        this.vertical = vertical;
+    public void setColumn(int column) {
+        this.column = column;
     }
 
-    public void setHorizontal(int horizontal) {
-        this.horizontal = horizontal;
+    public void setRow(int row) {
+        this.row = row;
     }
 
     public boolean setValue(int value) { return false; }

@@ -20,7 +20,7 @@ public class CtrlResolve {
 
                 if (c != kakuro.getColumnSize() - 1) { // si no estem a la utlima columna
                     if (board[r][c + 1].isWhite()) {
-                        sum = b.getHorizontal();
+                        sum = b.getRow();
                     }
                 }
                 int [] aux = {0,0,0,0,0,0,0,0,0,0};

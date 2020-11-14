@@ -26,6 +26,7 @@ public class WhiteCell extends Cell {
         return value;
     }
 
+    @Override
     public boolean setValue(int value) {
         this.value = value;
         return true;

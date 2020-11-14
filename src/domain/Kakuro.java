@@ -8,17 +8,37 @@ package domain;/* Alvaro Armada Ruiz */
 
 
 public class Kakuro {
+
+    /**
+     * Es el identificador del Kakuro
+     */
     private String id;
+    /**
+     * Es la dificultad del Kakuro, va de 1 a 3
+     */
     private int difficulty;
+    /**
+     * Es el tamaño horizontal del Kakuro
+     */
     private int rowSize;
+    /**
+     * Es el tamaño vertical del Kakuro
+     */
     private int columnSize;
+    /**
+     * Es la matriz de celdas, es decir, el tablero
+     */
     private Cell [][] board;
 
-    /** @brief Creadora por defecto.
-
-    Se ejecuta automáticamente al declarar una lavadora.
-    \pre <em>cierto</em>
-    \post El resultado es una lavadora no inicializada
+    /** @brief Creadora con todos los parámtros
+     *
+     * Se crea un nueva instáncia de Kakuro a partir de todos los atributos
+     *
+     * @param id Es el identificador del Kakuro
+     * @param difficulty Es la dificultad del Kakuro
+     * @param rowSize Es el tamaño horizontal del Kakuro
+     * @param columnSize Es el tamaño vertical del Kakuro
+     * @param board Es el tablero del Kakuro
      */
     public Kakuro(String id, int difficulty, int rowSize, int columnSize, Cell[][] board) {
         this.id = id;
@@ -28,6 +48,12 @@ public class Kakuro {
         this.board = board;
     }
 
+    /** @brief Creadora a partir de String
+     *
+     * Se crea una nueva instáncia de Kakuro a partir de un String que se ha leido de fichero
+     *
+     * @param kakuro Es un String de un fichero entero de un Kakuro
+     */
     public Kakuro(String kakuro) {
         String[] values = kakuro.split("\n");
         String[] valuesSize = values[0].split(",");
@@ -59,6 +85,12 @@ public class Kakuro {
         }
     }
 
+    /** @brief Conversor de Kakuro a String
+     *
+     * Se convierte el Kakuro a un String en formato fichero
+     *
+     * @return Devuelve un String en formato de fichero para guardarlo en un archivo
+     */
     public String toString() {
         StringBuilder content = new StringBuilder();
         String line;
@@ -73,11 +105,11 @@ public class Kakuro {
                 }
                 else {
                     BlackCell bc = (BlackCell) board[i][j];
-                    if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
+                    if (bc.getColumn() == 0 && bc.getRow() == 0) {
                         content.append("*");
                     }
-                    if (bc.getVertical() != 0) content.append("C" + bc.getVertical());
-                    if (bc.getHorizontal() != 0) content.append("F" + bc.getHorizontal());
+                    if (bc.getColumn() != 0) content.append("C" + bc.getColumn());
+                    if (bc.getRow() != 0) content.append("F" + bc.getRow());
                 }
                 if (j != columnSize - 1) content.append(",");
             }
@@ -86,6 +118,10 @@ public class Kakuro {
         return content.toString();
     }
 
+    /**
+     *
+     * @return
+     */
     public String correctToString() {
         StringBuilder content = new StringBuilder();
         String line;
@@ -99,11 +135,11 @@ public class Kakuro {
                 }
                 else {
                     BlackCell bc = (BlackCell) board[i][j];
-                    if (bc.getVertical() == 0 && bc.getHorizontal() == 0) {
+                    if (bc.getColumn() == 0 && bc.getRow() == 0) {
                         content.append("*");
                     }
-                    if (bc.getVertical() != 0) content.append("C" + bc.getVertical());
-                    if (bc.getHorizontal() != 0) content.append("F" + bc.getHorizontal());
+                    if (bc.getColumn() != 0) content.append("C" + bc.getColumn());
+                    if (bc.getRow() != 0) content.append("F" + bc.getRow());
                 }
                 if (j != columnSize - 1) content.append(",");
             }
@@ -112,6 +148,10 @@ public class Kakuro {
         return content.toString();
     }
 
+    /** @brief Getter del Identificador
+     *
+     * @return Devuelve un String con el identificador
+     */
     public String getId() {
         return id;
     }
@@ -159,8 +199,8 @@ public class Kakuro {
     public boolean checkColumn(int r, int c, int i, boolean f, int sum) {
         if(!board[r][c].isWhite()) {
             BlackCell b = (BlackCell) board[r][c];
-            if(f && b.getVertical() == sum) return true;
-            else if (!f && b.getVertical() > sum) return true;
+            if(f && b.getColumn() == sum) return true;
+            else if (!f && b.getColumn() > sum) return true;
         }
         else {
             WhiteCell w = (WhiteCell) board[r][c];
@@ -179,7 +219,7 @@ public class Kakuro {
             }
             else {
                 BlackCell b = (BlackCell) board[r][c];
-                total = b.getHorizontal();
+                total = b.getRow();
                 return checkRowValidity(r, c + 1, value, sum, total, posy);
             }
         }
@@ -202,7 +242,7 @@ public class Kakuro {
             }
             else {
                 BlackCell b = (BlackCell) board[r][c];
-                total = b.getVertical();
+                total = b.getColumn();
                 return checkColumnValidity(r+1, c, value, sum, total, posx);
             }
         }

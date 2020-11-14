@@ -129,7 +129,7 @@ public class CtrlValidate {
                             // System.out.println("i: "+i+"j: "+j);
                             ++changed;
                             BlackCell b = (BlackCell) board[i][j];
-                            numTemp = b.getHorizontal()-numTemp;
+                            numTemp = b.getRow()-numTemp;
                             for(int r = 1; r<=numWhiteRun; ++r) {
                                 if (!isUnique(tempboard[i][j+r])) {
                                     System.out.println("New unique: "+(i)+" "+(j+r));
@@ -166,7 +166,7 @@ public class CtrlValidate {
                         if (numWhiteRun == numUnique + 1) {
                             ++changed;
                             BlackCell b = (BlackCell) board[i][j];
-                            numTemp = b.getVertical()-numTemp;
+                            numTemp = b.getColumn()-numTemp;
                             for(int r = 1; r<=numWhiteRun; ++r) {
                                 if (!isUnique(tempboard[i+r][j])) {
                                     System.out.println("New unique: "+(i+r)+" "+j);
@@ -231,7 +231,7 @@ public class CtrlValidate {
                         int numWhiteRun = 1;
                         while(j+1+numWhiteRun< kakuro.getColumnSize() && board[i][j+1+numWhiteRun].isWhite()) ++numWhiteRun;
                         BlackCell b = (BlackCell) board[i][j];
-                        int [] posSums = computePosSums(b.getHorizontal(), numWhiteRun,0);
+                        int [] posSums = computePosSums(b.getRow(), numWhiteRun,0);
                         unique+= validatePosSums(tempBoard, posSums, numWhiteRun, 1, i, j);
                     }
                     if (i< kakuro.getRowSize()-1 && board[i+1][j].isWhite()) { //columna hacia abajo
@@ -239,7 +239,7 @@ public class CtrlValidate {
                         while(i+1+numWhiteRun< kakuro.getRowSize() && board[i+1+numWhiteRun][j].isWhite()) ++numWhiteRun;
                         // if (i==0 && numWhiteRun==4) System.out.println("aaaaaaaaa");
                         BlackCell b = (BlackCell) board[i][j];
-                        int [] posSums = computePosSums(b.getVertical(), numWhiteRun,0);
+                        int [] posSums = computePosSums(b.getColumn(), numWhiteRun,0);
                         unique+= validatePosSums(tempBoard, posSums, numWhiteRun, 0, i, j);
                     }
                 }
@@ -296,7 +296,7 @@ public class CtrlValidate {
                         int numWhiteRun = 1;
                         while ((i-numWhiteRun)>=0 && board[i-numWhiteRun][j].isWhite()) ++numWhiteRun;
                         BlackCell b = (BlackCell) board[i-numWhiteRun][j];
-                        int vertical = b.getVertical();
+                        int vertical = b.getColumn();
                         temp = 1;   //contar fichas blancas hacia abajo
 
                         while ((i+temp)< kakuro.getRowSize() && board[i+temp][j].isWhite()) {
@@ -343,7 +343,7 @@ public class CtrlValidate {
                         numWhiteRun = 1;
                         while ((j-numWhiteRun)>=0 && board[i][j-numWhiteRun].isWhite()) ++numWhiteRun;
                         b = (BlackCell) board[i][j-numWhiteRun];
-                        int horizontal = b.getHorizontal();
+                        int horizontal = b.getRow();
                         temp = 1;   //contar fichas blancas hacia derecha
 
                         while ((j+temp)< kakuro.getColumnSize() && board[i][j+temp].isWhite()) {
@@ -418,7 +418,7 @@ public class CtrlValidate {
 
                 if (c != kakuro.getColumnSize() - 1) { // si no estem a la utlima columna
                     if (board[r][c + 1].isWhite()) {
-                        sum = b.getHorizontal();
+                        sum = b.getRow();
                     }
                 }
                 int [] aux = {0,0,0,0,0,0,0,0,0,0};
