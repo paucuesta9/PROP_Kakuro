@@ -4,6 +4,11 @@ package domain.controllers;
  @brief Clase <em>CtrlGenerate</em>.
  */
 
+import domain.classes.BlackCell;
+import domain.classes.Cell;
+import domain.classes.Kakuro;
+import domain.classes.WhiteCell;
+
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de generar
  */
 public class CtrlGenerate {
@@ -27,7 +32,7 @@ public class CtrlGenerate {
     public static void setKakuro(Kakuro kakuro) {
         currentKakuro = kakuro;
     }
-    public static int countWhiteCellsV(Cell[][] board,int i,int j) {
+    public static int countWhiteCellsV(Cell[][] board, int i, int j) {
         if( !board[i][j].isWhite()) return 0;
         return 1+countWhiteCellsV(board,i-1,j);
     }
