@@ -1,4 +1,4 @@
-package domain;
+package domain.controllers;
 
 /** @file CtrlGenerate.java
  @brief Clase <em>CtrlGenerate</em>.

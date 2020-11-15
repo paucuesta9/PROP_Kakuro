@@ -1,6 +1,6 @@
 package presentation;
 
-import domain.*;
+import domain.controllers.CtrlDomain;
 
 import java.util.ArrayList;
 import java.util.Scanner;

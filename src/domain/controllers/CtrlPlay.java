@@ -1,8 +1,11 @@
-package domain;
+package domain.controllers;
 
 /** @file CtrlPlay.java
  @brief Clase  <em>CtrlPlay</em>.
  */
+
+import domain.classes.Kakuro;
+import domain.classes.WhiteCell;
 
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar
  */

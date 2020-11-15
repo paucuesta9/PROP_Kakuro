@@ -1,4 +1,4 @@
-package domain;/* Alvaro Armada Ruiz */
+package domain.classes;/* Alvaro Armada Ruiz */
 
 
 /** @file Kakuro.java

@@ -1,8 +1,13 @@
-package domain;
+package domain.controllers;
 
 /** @file CtrlResolve.java
  @brief Clase  <em>CtrlResolve</em>.
  */
+
+import domain.classes.BlackCell;
+import domain.classes.Cell;
+import domain.classes.Kakuro;
+import domain.classes.WhiteCell;
 
 /** @brief Clase CtrlResolve que contiene los atributos y metodos para la funcionalidad de resolver
  */
