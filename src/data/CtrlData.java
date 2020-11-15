@@ -42,7 +42,7 @@ public class CtrlData {
      */
     public String searchKakuro (int difficulty, int kakuroSize) {
         Random random = new Random();
-        return getKakuro("data/diff" + difficulty + "/" + kakuroSize + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSize)) + ".txt");
+        return getKakuro("../data/diff" + difficulty + "/" + kakuroSize + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSize)) + ".txt");
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa
@@ -76,7 +76,7 @@ public class CtrlData {
     public void saveKakuro(String content, int diff, int size) {
         FileWriter file = null;
         try {
-            file = new FileWriter("data/diff" + diff + "/" + size + "/" + getNumberOfFiles(diff, size));
+            file = new FileWriter("../data/diff" + diff + "/" + size + "/" + getNumberOfFiles(diff, size));
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
             } catch (IOException ioException) {
@@ -92,7 +92,7 @@ public class CtrlData {
      * @return la cantidad de ficheros que cumplen las condiciones
      */
     public int getNumberOfFiles(int diff, int size) {
-        File folder = new File("data/diff" + diff + "/" + size);
+        File folder = new File("../data/diff" + diff + "/" + size);
         File[] listFiles = folder.listFiles();
         return listFiles.length;
     }
