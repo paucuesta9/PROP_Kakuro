@@ -111,6 +111,7 @@ public class CtrlDomain {
         int [] res = new int[1];
         res[0] = 0;
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
+        CtrlValidate.setKakuro(currentKakuro);
         CtrlValidate.validate(0,0, 0, vec, res);
         if (res[0]!=1) return false;
         else return true;

@@ -4,6 +4,11 @@ package domain;
  @brief Clase <em>CtrlGenerate</em>.
  */
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
+
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de generar
  */
 public class CtrlGenerate {
@@ -27,17 +32,43 @@ public class CtrlGenerate {
     public static void setKakuro(Kakuro kakuro) {
         currentKakuro = kakuro;
     }
+
+    /**
+     *
+     * @param board
+     * @param i
+     * @param j
+     * @return número de celdas blancas seguidas en vertical
+     */
     public static int countWhiteCellsV(Cell[][] board,int i,int j) {
         if( !board[i][j].isWhite()) return 0;
         return 1+countWhiteCellsV(board,i-1,j);
     }
 
+    /**
+     *
+     * @param board representa un tablero
+     * @param i indica la fila actual
+     * @param j indica la columna actual
+     * @return número de celdas blancas seguidas en horizontal
+     */
     public static int countWhiteCellsH(Cell[][] board,int i,int j) {
         if( !board[i][j].isWhite()) return 0;
         return 1+countWhiteCellsH(board,i,j-1);
     }
 
-
+    /**
+     *
+     * @param board representa un tablero.
+     * @param i indica la fila acutal.
+     * @param j indica la columna actual.
+     * @param posValues vector de 10 posiciones que nos indica que valores han sido usados.
+     *
+     * Esta funcion nos indica que valores se han usado en la run horizontal.
+     * Si en la posicion i de posValues hay un 1, indica que ese valor ha sido usado en la "run" (posValues[i]=1).
+     * Si es un 0, indica que ese valor esta disponible (posValues[i]=0).
+     *
+     */
     public static void valuesUsedRow(Cell[][] board,int i,int j, int [] posValues) {
         if(!board[i][j].isWhite()) {
             return;
@@ -50,6 +81,17 @@ public class CtrlGenerate {
         }
     }
 
+    /**
+     *
+     * @param board representa un tablero.
+     * @param i indica la fila actual.
+     * @param j indica la columna actual.
+     * @param posValues vector de 10 posiciones que nos indica que valores han sido usados.
+     *
+     * Esta funcion nos indica que valores se han usado en la run vertical.
+     * Si en la posicion i de posValues hay un 1, indica que ese valor ha sido usado en la "run" (posValues[i]=1).
+     * Si es un 0, indica que ese valor esta disponible (posValues[i]=0).
+     */
     public static void valuesUsedCol(Cell[][] board,int i,int j, int [] posValues) {
         if(!board[i][j].isWhite()) {
             return;
@@ -62,6 +104,10 @@ public class CtrlGenerate {
         }
     }
 
+    /**
+     * @param board representa un tablero
+     * Esta función calcula la suma de las runs horizontales y las setea en su correspondiente celda negra.
+     */
     public static void rowSums(Cell[][] board) {
         int sum = 0;
         int lastCol = -1; //last col that has a blackCell
@@ -88,6 +134,11 @@ public class CtrlGenerate {
             b.setRow(sum);
         }
     }
+
+    /**
+     * @param board
+     * Esta función calcula la suma de las runs vertical y las setea en su correspondiente celda negra.
+     */
     public static void colSums(Cell[][] board) {
         int sum = 0;
         int lastCol = -1; //last col that has a blackCell
@@ -115,139 +166,8 @@ public class CtrlGenerate {
         }
     }
 
-    public static void nineCellsRow(Cell[][] board, int[][][] tempBoard) { //horizontal
-        int lastC = 0;
-        int lastR = 0;
-        int count = 0;
-        for(int i = 0; i < board.length; ++i ) {
-            for(int j = 0; j < board[0].length; ++j) {
-                if(!board[i][j].isWhite()) {
-                    if(count != 0) {
-                        if(count == 9) {
-                            BlackCell b = (BlackCell) board[lastR][lastC];
-                            b.setRow(45);
-                            tempBoard[lastR][lastC][1] = 9;
-                        }
-                        else {
-                            tempBoard[lastR][lastC][1] = count;
-                        }
-                    }
-                    count = 0;
-                    lastC= j;
-                    lastR = i;
-                }
-                else ++count;
-            }
-        }
-        if(count == 9) {
-            BlackCell b = (BlackCell) board[lastR][lastC];
-            b.setRow(45);
-            tempBoard[lastR][lastC][1] = 9;
-        }
-        else {
-            tempBoard[lastR][lastC][1] = count;
-        }
-    }
-    public static void nineCellsCol(Cell[][] board, int [][][] tempBoard) { //vertical
-        int lastC = 0;
-        int lastR = 0;
-        int count = 0;
-        for(int j = 0; j < board[0].length; ++j ) {
-            for(int i = 0; i < board.length; ++i) {
-                if(!board[i][j].isWhite()) {
-                    if(count != 0) {
-                        if(count == 9) {
-                            BlackCell b = (BlackCell) board[lastR][lastC];
-                            b.setColumn(45);
-                            tempBoard[lastR][lastC][0] = 9;
-                        }
-                        else {
-                            tempBoard[lastR][lastC][0] = count;
-                        }
-                    }
-                    count = 0;
-                    lastC= j;
-                    lastR = i;
-                }
-                else ++count;
-            }
-        }
-        if(count != 0) {
-            if(count == 9) {
-                BlackCell b = (BlackCell) board[lastR][lastC];
-                b.setColumn(45);
-                tempBoard[lastR][lastC][0] = 9;
-            }
-            else {
-                tempBoard[lastR][lastC][0] = count;
-            }
-        }
-    }
 
-    public static void computePosSumsRec(int arr[], int index, int num, int reducedNum, int lim, int posSums[], int no) {
-        if (reducedNum < 0 || index > lim)
-            return;
 
-        if (reducedNum == 0 && index == lim) {
-            for (int i = 0; i < index; i++)
-                posSums[arr[i]-1] = 1;
-            return;
-        }
-
-        int prev = (index == 0) ? 0 : arr[index - 1];
-
-        if(prev == 9 || index >= lim) return;
-
-        for (int k = prev+1; k <= 9 ; k++) {
-            if (k!=no) {
-                arr[index] = k;
-                computePosSumsRec(arr, index + 1, num, reducedNum - k, lim, posSums, no);
-            }
-        }
-    }
-
-    public static int [] computePosSums(int x, int n, int no) { //calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.
-        int [] posSums = new int[9];
-        for(int i=0; i<9; ++i) posSums[i] = 0;
-
-        int [] arr = new int[n];
-
-        computePosSumsRec(arr, 0, x-no, x-no, n, posSums, no);
-        return posSums;
-    }
-
-    public static int intersection(int [] valuesH,int [] valuesV) {
-        int c = 0;
-        int x = -1;
-        for(int i =0; i < 9 && c != 2; ++i) {
-            if(valuesH[i] == 1 && valuesV[i] == 1) {
-                c++;
-                x = i;
-            }
-        }
-        if(c == 1) return x;
-        return -1;
-    }
-    public static int atLeastOneValue(int [] valuesH,int [] valuesV) {
-        for(int i =0; i < 9; ++i) {
-            if(valuesH[i] == 1 && valuesV[i] == 1) {
-                return 1;
-            }
-        }
-        return 0;
-    }
-
-    public static int [] possibleUsedValuesRow(Cell[][] board,int i,int j,int [][][] tempBoard) {
-        int[] res = new int[] {0,0,0,0,0,0,0,0,0};
-        int c = j;
-        while( c < board[0].length && board[i][c].isWhite()){
-            for(int k = 0; k < 9; ++k) {
-                if(tempBoard[i][c][k] == 1) res[k] = 1;
-            }
-            ++c;
-        }
-        return res;
-    }
     public static boolean ValueInRow(Cell[][] board,int r,int c,int x) {
         if(!board[r][c].isWhite()) {
             return false;
@@ -265,12 +185,74 @@ public class CtrlGenerate {
         else return ValueInRow(board,r-1,c,x);
     }
 
+
+    /**
+     * @param board representa un talbero
+     *
+     * Esta función setea el correctValue de las celdas del tablero a 0.
+     */
+    public static void clearBoard(Cell[][] board) {
+        for(int i = 0; i < board.length;++i) {
+            for(int j = 0; j < board[0].length;++j) {
+                if(board[i][j].isWhite()) {
+                    WhiteCell w = (WhiteCell) board[i][j];
+                    w.setCorrectValue(0);
+                }
+            }
+        }
+    }
+
+
+
+    /**
+     *
+     * @param board representa un tablero
+     * @return una copia del tablero board
+     *
+     */
+    public static Cell[][] copyBoard(Cell[][] board) {
+        Cell[][] r = new Cell[board.length][board[0].length];
+        for(int i = 0; i < board.length;++i) {
+            for(int j = 0;j < board[0].length;++j) {
+                if(!board[i][j].isWhite()) {
+                    r[i][j] = new BlackCell();
+                    BlackCell b = (BlackCell) board[i][j];
+                    BlackCell b1 = (BlackCell) r[i][j];
+                    b1.setRow(b.getRow());
+                    b1.setColumn(b.getColumn());
+                }
+                else {
+                    WhiteCell w = (WhiteCell) board[i][j];
+                    r[i][j] = new WhiteCell();
+                    WhiteCell w1 = (WhiteCell) r[i][j];
+                    w1.setCorrectValue(w.getCorrectValue());
+                }
+            }
+        }
+        return r;
+    }
+
+    /**
+     *
+     * @param board representa un tablero
+     * @return numero de casillas blancas del tablero
+     */
+    public static int countCells(Cell[][] board) {
+        int r = 0;
+        for(int i = 0; i < board.length;++i) {
+            for(int j = 0; j < board[0].length;++j) {
+                if(board[i][j].isWhite()) ++r;
+            }
+        }
+        return r;
+    }
+
     public static void printBoard(Cell[][] board) {
         for(int i = 0; i < board.length; ++i) {
             for(int j = 0; j < board.length; ++j) {
                 if(board[i][j].isWhite()) {
-                    //WhiteCell w = (WhiteCell) board[i][j];
-                    System.out.print('X');
+                    WhiteCell w = (WhiteCell) board[i][j];
+                    System.out.print(w.getCorrectValue());
                 }
                 else System.out.print('.');
                 System.out.print(' ');
@@ -279,89 +261,77 @@ public class CtrlGenerate {
         }
     }
 
-    public static boolean fillBoardAux(Cell[][] board,int r,int c, int[][] posComb, int[][][] tempBoard) {
-        if(r == board.length){
-            rowSums(board);
+
+   public static boolean fillBoardAux(Cell[][] board,int r,int c, int[][] posComb) {
+        //( 1 ) Rellenamos el tablero
+        //( 2 ) Calculamos las sumas
+        if( r == board.length) {
             colSums(board);
-            currentKakuro = new Kakuro("0",0, board.length, board[0].length,board);
-            int [] res = new int[1];
-            res[0] = 0;
-            int [] vec = {0,0,0,0,0,0,0,0,0,0};
+            rowSums(board);
+            printBoard(board);
+            Cell[][] sol = copyBoard(board);
+            clearBoard(sol);
+            currentKakuro = new Kakuro("0",0, board.length, board.length, sol);
             CtrlValidate.setKakuro(currentKakuro);
-            CtrlValidate.validate(0,0, 0, vec, res);
-            if(res[0]!=1 ){
-                System.out.println("El kakuro generado no es unico");
-                return false;
+            int[] vec = {0,0,0,0,0,0,0,0,0,0};
+            int[] res = new int[1];
+            CtrlValidate.validate(0,0,0,vec,res);
+            if(res[0] == 1) {
+                System.out.println("kakuro único generado");
             }
+            else System.out.println("kakuro no es unico");
             return true;
         }
-        else if(c == board[0].length) return fillBoardAux(board,r+1,0,posComb,tempBoard);
-        else if(board[r][c].isWhite()) return fillBoardAux(board,r,c+1,posComb,tempBoard);
+        else if( c == board[0].length) return fillBoardAux(board,r+1,0,posComb);
+        else if(!board[r][c].isWhite()) return fillBoardAux(board,r,c+1,posComb);
         else {
-            int nH = tempBoard[r][c][1];
-            int nV = tempBoard[r][c][0];
-            if(nH != 0 && nV!=0 ) {
-                BlackCell b = (BlackCell) board[r][c];
-                for(int i = 0; i < posComb[nH].length;++i){
-                    for(int j = posComb[nV].length-1; j >= 0;--j){
-                        b.setRow(posComb[nH][i]);
-                        b.setColumn(posComb[nV][j]);
-                        if(fillBoardAux(board,r,c+1,posComb,tempBoard)) return true;
-                        b.setRow(0);
-                        b.setColumn(0);
-                    }
+            WhiteCell w = (WhiteCell) board[r][c];
+            int random = (int) Math.abs(ThreadLocalRandom.current().nextInt()) % 9 + 1;
+            int[] posValues = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            valuesUsedCol(board, r - 1, c, posValues);
+            valuesUsedRow(board, r, c - 1, posValues);
+            if (random == 0) random = 1;
+            for (int k = 1; k < 10; ++k) {
+                if (posValues[random] == 0) {
+                    w.setCorrectValue(random);
+                    if (fillBoardAux(board, r, c + 1, posComb)) return true;
+                    w.setCorrectValue(0);
                 }
+                ++random;
+                if (random == 10) random = 1;
             }
-            else if(nH!= 0) {
-                BlackCell b = (BlackCell) board[r][c];
-                for(int i = 0; i < posComb[nH].length;++i){
-                    b.setRow(posComb[nH][i]);
-                    if(fillBoardAux(board,r,c+1,posComb,tempBoard)) return true;
-                    b.setRow(0);
-                }
-            }
-            else if(nV!= 0) {
-                BlackCell b = (BlackCell) board[r][c];
-                for(int i = 0; i < posComb[nV].length;++i){
-                    b.setColumn(posComb[nV][i]);
-                    if(fillBoardAux(board,r,c+1,posComb,tempBoard)) return true;
-                    b.setColumn(0);
-                }
-            }
-            else return fillBoardAux(board,r,c+1,posComb,tempBoard);
         }
         return false;
-    }
+   }
 
+
+    /**
+     *
+     * @param board representa un tablero
+     * @return retorna cierto si se ha podido crear un tablero único, sino, false.
+     */
     public static boolean fillBoard(Cell[][] board){
         int [][] posComb =new int[][] { //possible values for sum using n cels
-                {}, //0
-                {1,2,3,4,5,6,7,8,9}, //1
-                {3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}, //2
-                {6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24}, //3
-                {10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30}, //4
-                {15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,36}, //5
-                {21,22,23,24,25,26,27,28,29,30,31,32,33,34,36,37,38,39}, //6
-                {28,29,30,31,32,33,34,36,37,38,39,40,41,42}, //7
-                {36,37,38,39,40,41,42,43,44}, //8
-                {45} //9
+                {}, //con zero
+                {1,2,3,4,5,6,7,8,9}, //una casilla
+                {3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}, //dos casillas
+                {6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24}, //tres casillas
+                {10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30}, //cuatro casillas
+                {15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,36}, //cinco casillas
+                {21,22,23,24,25,26,27,28,29,30,31,32,33,34,36,37,38,39}, //seis casillas
+                {28,29,30,31,32,33,34,36,37,38,39,40,41,42}, //siete casillas
+                {36,37,38,39,40,41,42,43,44}, //ocho casillas
+                {45} //nueve casillas
         };
-
-        //calcular totes les possibles
-        //List<List<Integer>>[][] combinations = calculateCombinations();
-        int tempBoard[][][] = new int[board.length][board[0].length][9];
-        for(int i = 0; i < board.length; ++i) {
-            for(int j = 0; j < board.length; ++j ) {
-                for(int k = 0; k < 9; ++k) {
-                    tempBoard[i][j][k] = 0;
-                }
-            }
-        }
-        nineCellsRow(board,tempBoard);
-        nineCellsCol(board, tempBoard);
-        return fillBoardAux(board,0,0,posComb,tempBoard);
+        return fillBoardAux(board,0,0,posComb);
     }
 
+    /**
+     *
+     * @param board representa un tablero
+     *
+     * Nos crea la primera fila y columna, y la última fila y columna
+     */
     public static void firstColRow(Cell[][] board) {
         int size = board.length;
         int i = 1;
@@ -398,6 +368,11 @@ public class CtrlGenerate {
         ++i;
     }
 
+    /**
+     *
+     * @param board representa un tablero
+     * Situa en el tablero celdas negras y blancas.
+     */
     public static void randomCells(Cell[][] board) {
         int i = 1;
         int size = board.length;
@@ -449,6 +424,32 @@ public class CtrlGenerate {
         }
     }
 
+
+    public static void checkMaxRows(Cell[][] board) {
+        int size = board.length;
+
+        for(int i = 1; i < size; ++i ) {
+            for(int j = 1; j < size;++j) {
+                int n = countWhiteCellsV(board,i-1,j);
+                int m = countWhiteCellsH(board,i,j-1);
+                int n1 = countWhiteCellsV(board,i-1,j-1);
+                int m1 = countWhiteCellsH(board,i-1,j-1);
+                if( n == 9 && n>= n1-2 ) {
+                    board[i][j] = new BlackCell();
+                }
+                else if( m == 9 && m>= m1-2) {
+                    board[i][j] = new BlackCell();
+                }
+            }
+        }
+    }
+
+    /**
+     *
+     * @param board representa un tablero
+     * Esta función se encarga de comprobar que no hay runs de una sola casilla blanca.
+     * Si esto sucede, hace los cambios necesarios para arreglarlo
+     */
     public static void checkBoard(Cell[][] board) {
         int size = board.length;
         boolean canvi = true;
@@ -486,12 +487,25 @@ public class CtrlGenerate {
                                 board[r][c+1] = new BlackCell();
                             }
                         }
+                        if( r == size-2) {
+                            if(board[r+1][c].isWhite()) {
+                                board[r+1][c] = new BlackCell();
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
+    /**
+     *
+     * @param board representa un tablero
+     * @param i indica la fila actual
+     * @param j indica la columna actual
+     * @param auxBoard tablero que nos indica si una casilla ha sido visitada
+     * @return número de casillas blancas a las que podemos llegar
+     */
     public static int DFS(Cell[][] board,int i,int j,int[][] auxBoard) {
         if( i >= board.length || i < 0 || j >= board[0].length || j<0) return 0;
         else if(!board[i][j].isWhite()) {
@@ -505,6 +519,11 @@ public class CtrlGenerate {
         }
     }
 
+    /**
+     *
+     * @param board representa un tablero
+     * @return true si el tablero es connexo, false si no lo es.
+     */
     public static boolean connexBoard(Cell[][] board) {
         int size = board.length;
         int nDFS = 0;
@@ -532,7 +551,15 @@ public class CtrlGenerate {
         return false;
     }
 
-    //FUNCION PARA GENERAR TABLEROS
+
+
+    /**
+     *
+     * @param size
+     * @return un kakuro con solución única
+     *
+     * Esta función es la encargada de generar una kakuro des de zero, siguiendo las normas básicas
+     */
     public static Kakuro generate(int size) {
         boolean repeat = true;
         while(repeat) {
@@ -546,6 +573,7 @@ public class CtrlGenerate {
             //Construimos el tablero
             firstColRow(board);
             randomCells(board);
+            checkMaxRows(board);
             checkBoard(board);
             //falta mirar que sigui connex
             if(!connexBoard(board)){
@@ -553,12 +581,13 @@ public class CtrlGenerate {
             }
             System.out.println("Tablero creado");
 
-            printBoard(board);
             currentKakuro = new Kakuro("0",0,size,size,board);
+            if(!repeat ) fillBoard(board);
             //if(!repeat && fillBoard(board)) System.out.println("Kakuro with unique solution found");
             //else repeat = true;
         }
         return currentKakuro;
     }
-
 }
+
+
