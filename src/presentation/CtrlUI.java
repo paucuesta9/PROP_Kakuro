@@ -7,6 +7,7 @@ import java.util.Scanner;
 
 /** @file CtrlUI.java
  @brief Clase  <em>CtrlUI</em>.
+ @author Judith Almoño Gómez
  */
 
 
@@ -176,7 +177,7 @@ public class CtrlUI {
     /** @brief Guardar una partida
      *
      */
-    private void saveGame() {
+    public void saveGame() {
         //TODO: Hacer la funcion entera de guardar partida
     }
 
@@ -186,7 +187,7 @@ public class CtrlUI {
      *  - Le comprueba si el valor de la celda blanca que ha introducido es correcto o no
      *  - Le introduce el valor correcto de la celda blanca que el usuario pide
      */
-    private void help() {
+    public void help() {
         System.out.println(" -- INSTRUCCIONES AYUDA --");
         System.out.println("1. Comprobar valor: Comprobar si un valor que ha introducido es correcto");
         System.out.println("2. Obtener valor: Obtener el valor correcto de una casilla");
@@ -236,7 +237,7 @@ public class CtrlUI {
      * @param y representa el número de la columna del tablero
      * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
      */
-    private boolean checkCoord(int x, int y) {
+    public boolean checkCoord(int x, int y) {
         return (x < cd.getRowSize() || x >= 0 || y < cd.getColumnSize() || y >= 0);
     }
 
