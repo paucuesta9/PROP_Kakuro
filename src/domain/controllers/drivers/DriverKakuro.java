@@ -5,7 +5,7 @@ import domain.classes.Cell;
 import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class DriverKakuro {
     private static Scanner reader = new Scanner(System.in);

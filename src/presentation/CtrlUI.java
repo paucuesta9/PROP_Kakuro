@@ -108,7 +108,7 @@ public class CtrlUI {
      */
     public void play() {
         System.out.println("1. Empezar nueva partida");
-        System.out.println("2. Cargar partida empezada");
+        //System.out.println("2. Cargar partida empezada");
         int choice = readNumber();
         if (choice == 1) {
             System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
@@ -117,15 +117,15 @@ public class CtrlUI {
             int kakuroSize = readNumber();
             cd.startNewGame(difficulty, kakuroSize);
         }
-        else if (choice == 2) {
-            ArrayList<Integer> startedGames= cd.getStartedGames();
-            for (int i = 0; i < startedGames.size(); ++i) {
-                System.out.println(i + ": " + startedGames.get(i));
-            }
-            System.out.println("Escoja la partida que desea retomar");
-            int game = readNumber();
-            cd.setGame(startedGames.get(game));
-        }
+//        else if (choice == 2) {
+//            ArrayList<Integer> startedGames= cd.getStartedGames();
+//            for (int i = 0; i < startedGames.size(); ++i) {
+//                System.out.println(i + ": " + startedGames.get(i));
+//            }
+//            System.out.println("Escoja la partida que desea retomar");
+//            int game = readNumber();
+//            cd.setGame(startedGames.get(game));
+//        }
         cd.resolve();
         System.out.println(" -- INSTRUCCIONES JUGAR --");
         System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
