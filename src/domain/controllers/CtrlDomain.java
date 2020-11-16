@@ -18,15 +18,12 @@ public class CtrlDomain {
      * Instáncia del cotrolador persistencia
      */
     private CtrlData data;
-    /**
-     *
-     */
-    private Game currentGame;
+    //private Game currentGame;
     /**
      * Instància del kakuro con el que se trabaja en cada momento
      */
     private Kakuro currentKakuro;
-    private Player currentPlayer;
+    //private Player currentPlayer;
 
     /** @brief Creadora por defecto
      *
@@ -56,9 +53,9 @@ public class CtrlDomain {
      *
      * @param game
      */
-    public void setGame(int game) {
-        //TODO: Leer game
-    }
+//    public void setGame(int game) {
+//        //TODO: Leer game
+//    }
 
     /** @brief Se mira si el usuario ha completado el tablero
      *
@@ -104,7 +101,6 @@ public class CtrlDomain {
     }
 
     // OPTION 2 - CREATE VALIDATE
-
     /** @brief Se valida un Kakuro que sea correcto
      *
      * @return Devuelve cierto si el Kakuro es correcto, en caso contrario, devuelve falso
@@ -119,9 +115,7 @@ public class CtrlDomain {
         else return true;
     }
 
-
     // OPTION 3 - RESOLVE
-
     /** @brief Se resuelve un Kakuro
      *
      */
@@ -140,7 +134,6 @@ public class CtrlDomain {
     }
 
     /* GETTERS AND SETTERS (CLASSES) */
-
     /** @brief Setter de valor en una celda
      *
      * Se setea el valor en la celda de la posición [x][y] con el valor "value" si la celda es blanca
@@ -213,9 +206,9 @@ public class CtrlDomain {
      *
      * @return Devuelve una lista de Strings con los identificadores de las partidas que tiene empezadas el usuario
      */
-    public ArrayList<Integer> getStartedGames() {
-        return currentPlayer.getStartedGames();
-    }
+//    public ArrayList<Integer> getStartedGames() {
+//        return currentPlayer.getStartedGames();
+//    }
 
     /** @brief Guarda un Kakuro en un fichero
      *
