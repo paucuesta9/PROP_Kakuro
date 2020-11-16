@@ -1,4 +1,4 @@
-package domain;
+package domain.classes;
 
 import java.util.Timer;
 import java.util.TimerTask;

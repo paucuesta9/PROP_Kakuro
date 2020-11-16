@@ -1,8 +1,13 @@
-package domain;
+package domain.controllers;
 
 /** @file CtrlValidate.java
  @brief Clase <em>CtrlValidate</em>.
  */
+
+import domain.classes.BlackCell;
+import domain.classes.Cell;
+import domain.classes.Kakuro;
+import domain.classes.WhiteCell;
 
 /** @brief Clase CtrlValidate que contiene los atributos y metodos para la funcionalidad de validar
  */
@@ -103,7 +108,7 @@ public class CtrlValidate {
     }
 
     public static int checkForNewUniques(int [][][] tempboard) {
-        Cell [][] board = kakuro.getBoard();
+        Cell[][] board = kakuro.getBoard();
         int changed = 0;
         for(int i=0; i<kakuro.getRowSize(); ++i) {
             for(int j=0; j< kakuro.getColumnSize(); ++j) {

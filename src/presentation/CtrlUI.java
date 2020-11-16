@@ -1,12 +1,13 @@
 package presentation;
 
-import domain.*;
+import domain.controllers.CtrlDomain;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 /** @file CtrlUI.java
  @brief Clase  <em>CtrlUI</em>.
+ @author Judith Almoño Gómez
  */
 
 
@@ -108,7 +109,7 @@ public class CtrlUI {
      */
     public void play() {
         System.out.println("1. Empezar nueva partida");
-        System.out.println("2. Cargar partida empezada");
+        //System.out.println("2. Cargar partida empezada");
         int choice = readNumber();
         if (choice == 1) {
             System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
@@ -117,15 +118,15 @@ public class CtrlUI {
             int kakuroSize = readNumber();
             cd.startNewGame(difficulty, kakuroSize);
         }
-        else if (choice == 2) {
-            ArrayList<Integer> startedGames= cd.getStartedGames();
-            for (int i = 0; i < startedGames.size(); ++i) {
-                System.out.println(i + ": " + startedGames.get(i));
-            }
-            System.out.println("Escoja la partida que desea retomar");
-            int game = readNumber();
-            cd.setGame(startedGames.get(game));
-        }
+//        else if (choice == 2) {
+//            ArrayList<Integer> startedGames= cd.getStartedGames();
+//            for (int i = 0; i < startedGames.size(); ++i) {
+//                System.out.println(i + ": " + startedGames.get(i));
+//            }
+//            System.out.println("Escoja la partida que desea retomar");
+//            int game = readNumber();
+//            cd.setGame(startedGames.get(game));
+//        }
         cd.resolve();
         System.out.println(" -- INSTRUCCIONES JUGAR --");
         System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
@@ -176,7 +177,7 @@ public class CtrlUI {
     /** @brief Guardar una partida
      *
      */
-    private void saveGame() {
+    public void saveGame() {
         //TODO: Hacer la funcion entera de guardar partida
     }
 
@@ -186,7 +187,7 @@ public class CtrlUI {
      *  - Le comprueba si el valor de la celda blanca que ha introducido es correcto o no
      *  - Le introduce el valor correcto de la celda blanca que el usuario pide
      */
-    private void help() {
+    public void help() {
         System.out.println(" -- INSTRUCCIONES AYUDA --");
         System.out.println("1. Comprobar valor: Comprobar si un valor que ha introducido es correcto");
         System.out.println("2. Obtener valor: Obtener el valor correcto de una casilla");
@@ -236,7 +237,7 @@ public class CtrlUI {
      * @param y representa el número de la columna del tablero
      * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
      */
-    private boolean checkCoord(int x, int y) {
+    public boolean checkCoord(int x, int y) {
         return (x < cd.getRowSize() || x >= 0 || y < cd.getColumnSize() || y >= 0);
     }
 
@@ -263,10 +264,7 @@ public class CtrlUI {
      * Escribe el Kakuro con los valores que tiene en ese momento por la terminal
      */
     public void writeKakuroInTerminal() {
-        String[] kakuro = cd.getKakuroToString().split("\n");
-        for (int i = 0; i < kakuro.length; ++i)
-            System.out.println(kakuro[i]);
-        System.out.println("");
+        System.out.println(cd.getKakuroToString());
     }
 
     /** @brief Escritura Kakuro correcto por terminal
@@ -274,10 +272,7 @@ public class CtrlUI {
      * Escribe la solución del Kakuro por la terminal
      */
     public void writeCorrectKakuroInTerminal() {
-        String[] kakuro = cd.getCorrectKakuroToString().split("\n");
-        for (int i = 0; i < kakuro.length; ++i)
-            System.out.println(kakuro[i]);
-        System.out.println("");
+        System.out.println(cd.getCorrectKakuroToString());
     }
 
 }

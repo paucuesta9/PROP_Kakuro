@@ -1,4 +1,4 @@
-package domain;
+package domain.classes;
 
 /** @file Cell.java
  @brief Clase  <em>Cell</em>.

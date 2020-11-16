@@ -1,0 +1,3 @@
+domain.Main-Class: .Main
+Package-Name: Kakuro
+Created-By: GR23.3

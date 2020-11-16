@@ -5,6 +5,7 @@ import java.util.Random;
 
 /** @file CtrlData.java
  @brief Clase  <em>CtrlData</em>.
+ @author Pau Cuesta Arcos
  */
 
 /** @brief Clase CtrlData para obtener y guardar datos en nuestra base de datos (ficheros)
