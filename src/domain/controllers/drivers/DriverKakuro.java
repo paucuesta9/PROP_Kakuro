@@ -286,6 +286,7 @@ public class DriverKakuro {
                     testCheckColumn();
                     break;
                 case 15:
+                    System.out.println("Se llama a checkRowValidity");
                     testCheckRowValidity();
                     break;
                 case 16:
