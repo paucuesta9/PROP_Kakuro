@@ -25,7 +25,7 @@ public class DriverCtrlUI {
 
     }
 
-    private static void testCheckCoord(String filepath, int x, int y) {
+    private static void testCheckCoord(String kakuro, int x, int y) {
         CtrlUI ctrlUI = new CtrlUI();
         Kakuro k = new Kakuro(kakuro);
         ctrlUI.checkCoord(x,y);

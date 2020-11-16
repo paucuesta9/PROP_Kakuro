@@ -1,10 +1,8 @@
 package domain.controllers.drivers;
 
-import domain.classes.Cell;
 import domain.classes.Kakuro;
-import domain.classes.WhiteCell;
 import domain.controllers.CtrlPlay;
-import presentation.CtrlUI;
+
 
 import java.util.Scanner;
 
