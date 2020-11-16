@@ -263,10 +263,7 @@ public class CtrlUI {
      * Escribe el Kakuro con los valores que tiene en ese momento por la terminal
      */
     public void writeKakuroInTerminal() {
-        String[] kakuro = cd.getKakuroToString().split("\n");
-        for (int i = 0; i < kakuro.length; ++i)
-            System.out.println(kakuro[i]);
-        System.out.println("");
+        System.out.println(cd.getKakuroToString());
     }
 
     /** @brief Escritura Kakuro correcto por terminal
@@ -274,10 +271,7 @@ public class CtrlUI {
      * Escribe la solución del Kakuro por la terminal
      */
     public void writeCorrectKakuroInTerminal() {
-        String[] kakuro = cd.getCorrectKakuroToString().split("\n");
-        for (int i = 0; i < kakuro.length; ++i)
-            System.out.println(kakuro[i]);
-        System.out.println("");
+        System.out.println(cd.getCorrectKakuroToString());
     }
 
 }

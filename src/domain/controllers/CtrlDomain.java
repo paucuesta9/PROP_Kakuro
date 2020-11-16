@@ -206,7 +206,7 @@ public class CtrlDomain {
      * @param filePath Ruta relativa al fichero con el Kakuro que se busca
      */
     public void getKakuro(String filePath) {
-        this.currentKakuro = new Kakuro(data.getKakuro("../" + filePath));
+        this.currentKakuro = new Kakuro(data.getKakuro(/*"../" + */ filePath));
     }
 
     /** @brief Getter de partidas empezadas por el usuario actual

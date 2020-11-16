@@ -288,7 +288,7 @@ public class CtrlGenerate {
         if(r == board.length){
             rowSums(board);
             colSums(board);
-            currentKakuro = new Kakuro("0",0, board.length, board[0].length,board);
+            currentKakuro = new Kakuro("0",0, board);
             int [] res = new int[1];
             res[0] = 0;
             int [] vec = {0,0,0,0,0,0,0,0,0,0};
@@ -559,7 +559,7 @@ public class CtrlGenerate {
             System.out.println("Tablero creado");
 
             printBoard(board);
-            currentKakuro = new Kakuro("0",0,size,size,board);
+            currentKakuro = new Kakuro("0",0, board);
             //if(!repeat && fillBoard(board)) System.out.println("Kakuro with unique solution found");
             //else repeat = true;
         }

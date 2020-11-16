@@ -38,15 +38,13 @@ public class Kakuro {
      *
      * @param id Es el identificador del Kakuro
      * @param difficulty Es la dificultad del Kakuro
-     * @param rowSize Es el tamaño horizontal del Kakuro
-     * @param columnSize Es el tamaño vertical del Kakuro
      * @param board Es el tablero del Kakuro
      */
-    public Kakuro(String id, int difficulty, int rowSize, int columnSize, Cell[][] board) {
+    public Kakuro(String id, int difficulty, Cell[][] board) {
         this.id = id;
         this.difficulty = difficulty;
-        this.rowSize = rowSize;
-        this.columnSize = columnSize;
+        this.rowSize = board.length;
+        this.columnSize = board[0].length;
         this.board = board;
     }
 
@@ -164,9 +162,9 @@ public class Kakuro {
      *
      * @param id Identificador del Kakuro
      */
-    public void setId(String id) {
-        this.id = id;
-    }
+//    public void setId(String id) {
+//        this.id = id;
+//    }
 
     /** @brief Getter de la dificultad
      *
@@ -196,9 +194,9 @@ public class Kakuro {
      *
      * @param rowSize Tamaño de fila, entero
      */
-    public void setRowSize(int rowSize) {
-        this.rowSize = rowSize;
-    }
+//    public void setRowSize(int rowSize) {
+//        this.rowSize = rowSize;
+//    }
 
     /** @brief Getter del tamaño de columna
      *
@@ -212,9 +210,9 @@ public class Kakuro {
      *
      * @param columnSize Tamaño de columna, entero
      */
-    public void setColumnSize(int columnSize) {
-        this.columnSize = columnSize;
-    }
+//    public void setColumnSize(int columnSize) {
+//        this.columnSize = columnSize;
+//    }
 
     /** @brief Getter del tablero
      *
@@ -238,9 +236,9 @@ public class Kakuro {
      *
      * @param board Matriz de Celdas
      */
-    public void setBoard(Cell[][] board) {
-        this.board = board;
-    }
+//    public void setBoard(Cell[][] board) {
+//        this.board = board;
+//    }
 
     /** @brief Setter de un valor en una celda de tipo blanca
      *
@@ -288,7 +286,7 @@ public class Kakuro {
      * @param posy representa el número de columna de la celda blanca a la que se le ha añadido un valor
      * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
      */
-    public boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy) {
+    private boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
                 sum -= value;
@@ -322,7 +320,7 @@ public class Kakuro {
      * @param posx representa el número de fila de la celda blanca a la que se le ha añadido un valor
      * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
      */
-    public boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx) {
+    private boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
                 sum -= value;

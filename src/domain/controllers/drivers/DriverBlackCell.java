@@ -9,12 +9,12 @@ public class DriverBlackCell {
 
     private static void testCreadoraSinValor() {
         BlackCell bc = new BlackCell();
-        System.out.println("Row = " + bc.getRow() + "\n Column = " + bc.getColumn());
+        System.out.println("Se ha creado la celda negra sin valores");
     }
 
     private static void testCreadoraConValor(int row, int column) {
         BlackCell bc = new BlackCell(column, row);
-        System.out.println("Row = " + bc.getRow() + "\n Column = " + bc.getColumn());
+        System.out.println("Se ha creado la celda negra con los valores");
     }
 
     private static void testGetRow(int row) {
