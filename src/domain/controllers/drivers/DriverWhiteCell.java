@@ -96,19 +96,19 @@ public class DriverWhiteCell {
                     testCreadoraSinValor();
                     break;
                 case 2:
-                    System.out.println("Indique el valor de la celda o escriba -1 para usar fichero");
+                    System.out.println("Indique el valor de la celda");
                     x = readNumber();
                     System.out.println("Se llama a la creadora con valor");
                     testCreadoraConValor(x);
                     break;
                 case 3:
-                    System.out.println("Indique el valor de la celda o escriba -1 para usar fichero");
+                    System.out.println("Indique el valor de la celda");
                     x = readNumber();
                     System.out.println("Se llama a getValue");
                     testGetValue(x);
                     break;
                 case 4:
-                    System.out.println("Indique el valor de la celda o escriba -1 para usar fichero");
+                    System.out.println("Indique el valor de la celda");
                     x = readNumber();
                     System.out.println("Se llama a setValue");
                     testSetValue(x);
@@ -118,7 +118,7 @@ public class DriverWhiteCell {
                     testGetCorrectValue();
                     break;
                 case 6:
-                    System.out.println("Indique el valor de la celda o escriba -1 para usar fichero");
+                    System.out.println("Indique el valor de la celda");
                     x = readNumber();
                     System.out.println("Se llama a setCorrectValue");
                     testSetCorrectValue(x);

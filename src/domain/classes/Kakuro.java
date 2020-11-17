@@ -1,6 +1,5 @@
 package domain.classes;/* Alvaro Armada Ruiz */
 
-
 /** @file Kakuro.java
  @brief Clase  <em>Kakuro</em>.
  @author Alvaro Armada Ruiz

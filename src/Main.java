@@ -1,5 +1,3 @@
-package domain;
-
 import presentation.CtrlUI;
 
 /**
@@ -9,11 +7,11 @@ En este proyecto de desarrolla una aplicación para jugar, resolver, validar y g
 
  */
 
-/** @file domain.Main.java
+/** @file Main.java
  @brief Programa principal del proyecto  <em>Kakuro</em>.
  */
 
-/** @brief Clase domain.Main que lanza el juego
+/** @brief Clase Main que lanza el juego
  */
 public class Main {
 
