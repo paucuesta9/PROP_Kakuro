@@ -71,7 +71,7 @@ public class DriverCell {
                     System.out.println("El número no es correcto");
                     break;
             }
-            System.out.println("Opciones: \n 1. Creadora \n 2. isWhite \n 3. setValue \n 4. Salir");
+            System.out.println("\nOpciones: \n 1. Creadora \n 2. isWhite \n 3. setValue \n 4. Salir");
             value = readNumber();
         }
         System.exit(0);

@@ -182,12 +182,12 @@ public class CtrlUI {
         menu();
     }
 
-    /** @brief Guardar una partida
-     *
-     */
-    public void saveGame() {
-        //TODO: Hacer la funcion entera de guardar partida
-    }
+//    /** @brief Guardar una partida
+//     *
+//     */
+////    public void saveGame() {
+////        //TODO: Hacer la funcion entera de guardar partida
+////    }
 
     /** @brief Ayudas
      *

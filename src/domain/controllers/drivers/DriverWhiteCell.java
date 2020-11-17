@@ -131,7 +131,7 @@ public class DriverWhiteCell {
                     System.out.println("El número introducido es incorrecto");
                     break;
             }
-            System.out.println("Opciones: \n 1. Creadora sin valor \n 2. Creadora con valor \n 3. Getter de value \n 4. Setter de value \n 5. Getter de CorrectValue \n 6. Setter de CorrectValue \n 7. Comprobar si es una celda blanca \n 8. Salir");
+            System.out.println("\nOpciones: \n 1. Creadora sin valor \n 2. Creadora con valor \n 3. Getter de value \n 4. Setter de value \n 5. Getter de CorrectValue \n 6. Setter de CorrectValue \n 7. Comprobar si es una celda blanca \n 8. Salir");
             value = readNumber();
         }
         System.exit(0);
