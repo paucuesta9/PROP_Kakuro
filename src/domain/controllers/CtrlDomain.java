@@ -216,4 +216,15 @@ public class CtrlDomain {
     public void saveKakuro() {
         data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize());
     }
+
+    /** @brief Comprobadora de coordenadas
+     *
+     * Comprueba si las coordenadas dadas se encuentran dentro del tablero
+     * @param x representa el número de la fila del tablero
+     * @param y representa el número de la columna del tablero
+     * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
+     */
+    public boolean checkCoord(int x, int y) {
+        return (x < getRowSize() || x >= 0 || y < getColumnSize() || y >= 0);
+    }
 }

@@ -238,7 +238,7 @@ public class CtrlUI {
      * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
      */
     public boolean checkCoord(int x, int y) {
-        return (x < cd.getRowSize() || x >= 0 || y < cd.getColumnSize() || y >= 0);
+        return cd.checkCoord(x,y);
     }
 
     /** @brief Lectura de un número por terminal
