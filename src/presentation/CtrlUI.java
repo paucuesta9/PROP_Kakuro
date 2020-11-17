@@ -114,9 +114,10 @@ public class CtrlUI {
         //if (choice == 1) {
             System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
             int difficulty = readNumber();
-            System.out.print("Escoge tamaño N (NxN): ");
-            int kakuroSize = readNumber();
-            cd.startNewGame(difficulty, kakuroSize);
+            System.out.print("Escoge tamaño N M (NxM): ");
+            int kakuroSizeRow = readNumber();
+            int kakuroSizeColumn = readNumber();
+            cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn);
        // }
 //        else if (choice == 2) {
 //            ArrayList<Integer> startedGames= cd.getStartedGames();

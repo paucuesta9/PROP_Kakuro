@@ -195,7 +195,6 @@ public class DriverKakuro {
         else System.out.println("El valor introducido no cumple las condiciones de la columna");
     }
 
-
     private static void testIsFinished(String kakuro1, String kakuroFinished) {
         Kakuro k = new Kakuro(kakuro1);
         Kakuro kFin = new Kakuro(kakuroFinished);

@@ -37,11 +37,12 @@ public class DriverCtrlData {
      *
      * Comprueba que la función searchKakuro se ejecute correctamente
      * @param diff representa la dificultad del kakuro
-     * @param kakuroSize representa el tamaño del kakuro
+     * @param kakuroSizeRow representa el tamaño de filas del kakuro
+     * @param kakuroSizeColumn representa el tamaño de columnas del kakuro
      */
-    private static void testSearchKakuro(int diff, int kakuroSize) {
+    private static void testSearchKakuro(int diff, int kakuroSizeRow, int kakuroSizeColumn) {
         CtrlData ctrlData = new CtrlData();
-        String kakuro = ctrlData.searchKakuro(diff, kakuroSize);
+        String kakuro = ctrlData.searchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
         System.out.println(kakuro);
     }
 
@@ -63,11 +64,12 @@ public class DriverCtrlData {
      * Comprueba que la función saveKakuro se ejecute correctamente
      * @param kakuro representa el kakuro a guardar
      * @param diff representa la dificultad del kakuro
-     * @param size representa el tamaño del kakuro
+     * @param sizeRow representa el tamaño de filas del kakuro
+     * @param sizeColumn representa el tamaño de columnas del kakuro
      */
-    private static void testSaveKakuro(String kakuro, int diff, int size) {
+    private static void testSaveKakuro(String kakuro, int diff, int sizeRow, int sizeColumn) {
         CtrlData ctrlData = new CtrlData();
-        ctrlData.saveKakuro(kakuro, diff, size);
+        ctrlData.saveKakuro(kakuro, diff, sizeRow, sizeColumn);
         System.out.println("Se ha generado un fichero con el kakuro guardado");
     }
 
@@ -75,12 +77,13 @@ public class DriverCtrlData {
      *
      * Comprueba que la función getNumberOfFiles se ejecute correctamente
      * @param diff representa la dificultad del kakuro
-     * @param size representa el tamaño del kakuro
+     * @param sizeRow representa el tamaño de filas del kakuro
+     * @param sizeColumn representa el tamaño de columnas del kakuro
      * @param num representa la cantidad de kakuros que hay con dificultad = diff y tamaño = size
      */
-    private static void testGetNumberOfFiles(int diff, int size, int num) {
+    private static void testGetNumberOfFiles(int diff, int sizeRow, int sizeColumn, int num) {
         CtrlData ctrlData = new CtrlData();
-        int result = ctrlData.getNumberOfFiles(diff, size);
+        int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);
         if (result == num) System.out.println("Se ha obtenido el número esperado");
         else System.out.println("No se ha obtenido el número esperado");
     }
@@ -103,11 +106,12 @@ public class DriverCtrlData {
                     testCreadora();
                     break;
                 case 3:
-                    System.out.println("Introduzca la dificultad, el tamaño del kakuro");
+                    System.out.println("Introduzca la dificultad, el tamaño del kakuro (NxM)");
                     int diff = readNumber();
-                    int kakuroSize = readNumber();
+                    int kakuroSizeRow = readNumber();
+                    int kakuroSizeColumn = readNumber();
                     System.out.println("Se llama a searchKakuro");
-                    testSearchKakuro(diff, kakuroSize);
+                    testSearchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
                     break;
                 case 4:
                     System.out.println("Introduzca el filePath del kakuro  y el kakuro en el formato correcto");
@@ -117,20 +121,22 @@ public class DriverCtrlData {
                     testGetKakuro(filePath, kakuroProbar);
                     break;
                 case 5:
-                    System.out.println("Introduzca el kakuro a guardar, la dificultad y el tamaño del kakuro");
+                    System.out.println("Introduzca el kakuro a guardar, la dificultad y el tamaño del kakuro (NxM)");
                     String kakuro = readKakuro();
                     diff = readNumber();
-                    int size = readNumber();
+                    int sizeRow = readNumber();
+                    int sizeColumn = readNumber();
                     System.out.println("Se llama saveKakuro");
-                    testSaveKakuro(kakuro, diff, size);
+                    testSaveKakuro(kakuro, diff, sizeRow, sizeColumn);
                     break;
                 case 6:
-                    System.out.println("Introduzca la dificultad y el tamaño del kakuro y la cantidad de kakuros que hay con esas características");
+                    System.out.println("Introduzca la dificultad y el tamaño del kakuro (NxM) y la cantidad de kakuros que hay con esas características");
                     diff = readNumber();
-                    size = readNumber();
+                    sizeRow = readNumber();
+                    sizeColumn = readNumber();
                     int num = readNumber();
                     System.out.println("Se llama a getNumberOfFiles");
-                    testGetNumberOfFiles(diff, size, num);
+                    testGetNumberOfFiles(diff, sizeRow, sizeColumn, num);
                     break;
                 default:
                     System.out.println("El número introducido es incorrecto");

@@ -1,6 +1,8 @@
 package domain.controllers.drivers;
 
+import domain.classes.Cell;
 import domain.classes.Kakuro;
+import domain.classes.WhiteCell;
 import domain.controllers.CtrlPlay;
 
 import java.util.Scanner;
@@ -41,12 +43,18 @@ public class DriverCtrlPlay {
      *
      * Comprueba que la función helpMyValue se ejecute correctamente
      * @param kakuro1 representa el kakuro hecho por el usuario
+     * @param kakuroSol representa el kakuro con esa posición resuelta
      * @param x representa el número de fila de la celda que quiere comprobar
      * @param y representa el número de columna de la celda que quiere comprobar
      */
-    private static void testHelpMyValue(String kakuro1, int x, int y) {
+    private static void testHelpMyValue(String kakuro1, String kakuroSol, int x, int y) {
         Kakuro k = new Kakuro(kakuro1);
+        Kakuro kSol = new Kakuro(kakuroSol);
+        Cell[][] board = k.getBoard();
+        Cell[][] boardSol = kSol.getBoard();
+        if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
         CtrlPlay.startGame(k);
+
         int result = CtrlPlay.helpMyValue(x,y);
         if (result == -2) System.out.println("La celda no tiene un valor asignado");
         else if (result == -1) System.out.println("La celda no es blanca");
@@ -61,8 +69,13 @@ public class DriverCtrlPlay {
      * @param x representa el número de fila de la celda que quiere comprobar
      * @param y representa el número de columna de la celda que quiere comprobar
      */
-    private static void testHelpCorrectNumber(String kakuro1, int x, int y) {
+    private static void testHelpCorrectNumber(String kakuro1, String kakuroSol, int x, int y) {
         Kakuro k = new Kakuro(kakuro1);
+        Kakuro kSol = new Kakuro(kakuroSol);
+        Cell[][] board = k.getBoard();
+        Cell[][] boardSol = kSol.getBoard();
+        if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
+
         CtrlPlay.startGame(k);
         if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda es correcto");
         else System.out.println("El valor de la celda no és correcto");
@@ -89,20 +102,22 @@ public class DriverCtrlPlay {
                     testStartGame(kakuro);
                     break;
                 case 3:
-                    System.out.println("Indique la posición x e 'y' y el valor de la celda que quiere obtener la ayuda y el kakuro");
+                    System.out.println("Indique la posición x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
                     x = readNumber();
                     y = readNumber();
                     String kakuro1 = readKakuro();
+                    String kakuroSol = readKakuro();
                     System.out.println("Se llama a helpMyValue");
-                    testHelpMyValue(kakuro1, x, y);
+                    testHelpMyValue(kakuro1, kakuroSol, x, y);
                     break;
                 case 4:
-                    System.out.println("Indique la posición x e y de la celda que quiere obtener la ayuda y el kakuro");
+                    System.out.println("Indique la posición x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
                     x = readNumber();
                     y = readNumber();
                     kakuro1 = readKakuro();
+                    kakuroSol = readKakuro();
                     System.out.println("Se llama a helpCorrectNumber");
-                    testHelpCorrectNumber(kakuro1, x,y);
+                    testHelpCorrectNumber(kakuro1, kakuroSol, x,y);
                     break;
                 default:
                     System.out.println("El número introducido es incorrecto");
