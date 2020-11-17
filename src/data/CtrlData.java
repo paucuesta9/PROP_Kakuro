@@ -64,9 +64,8 @@ public class CtrlData {
             }
             return content.toString();
         } catch (IOException e) {
-            e.printStackTrace();
+            return "-1";
         }
-        return null;
     }
 
     /** @brief Guarda un kakuro en fichero
@@ -82,7 +81,7 @@ public class CtrlData {
             file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn));
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
-            } catch (IOException ioException) {
+        } catch (IOException ioException) {
             ioException.printStackTrace();
         }
     }

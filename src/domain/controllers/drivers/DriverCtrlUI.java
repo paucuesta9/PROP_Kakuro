@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 /** @brief Clase DriverCtrlUI que comprueba la correctividad de las funciones del controlador UI
  */
-
+/*
 public class DriverCtrlUI {
     private static Scanner reader = new Scanner(System.in);
     private static void testCreadora() {
@@ -103,3 +103,6 @@ public class DriverCtrlUI {
     }
 
 }
+
+
+ */
