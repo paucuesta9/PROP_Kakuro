@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente DriverCell.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   &#160;<span id="projectnumber">version 1 20-nov-2020</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_59e154daa71ab644ff60a4d6c4d01bbf.html">domain</a></li><li class="navelem"><a class="el" href="dir_874f1d58d81119d8e801f467e4acdf0e.html">controllers</a></li><li class="navelem"><a class="el" href="dir_2f583d242307de489798ce7def29dd9c.html">drivers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">DriverCell.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_driver_cell_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>domain.controllers.drivers;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> <a class="code" href="namespacedomain.html">domain</a>.<a class="code" href="namespacedomain_1_1classes.html">classes</a>.<a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> java.util.Scanner;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html">   16</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html">DriverCell</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">   17</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> Scanner <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">reader</a> = <span class="keyword">new</span> Scanner(System.in);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aca0ab5b69a36c63aa9e338ca623e6398">   23</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aca0ab5b69a36c63aa9e338ca623e6398">testCreadora</a>() {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a> cell = <span class="keyword">new</span> <a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha creado la celda&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">   31</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">testIsWhite</a>() {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a> cell = <span class="keyword">new</span> <a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        Boolean result = cell.<a class="code" href="classdomain_1_1classes_1_1_cell.html#a7982cd500b04ddc6d282e53d8b7fb354">isWhite</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (result) System.out.println(<span class="stringliteral">&quot;La celda es blanca&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;La celda no es blanca&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">   42</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">testSetValue</a>() {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a> cell = <span class="keyword">new</span> <a class="code" href="classdomain_1_1classes_1_1_cell.html">Cell</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Boolean result = cell.<a class="code" href="classdomain_1_1classes_1_1_cell.html#ab6d78b474aeb403b214da18f4ff31a4a">setValue</a>(0);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (result) System.out.println(<span class="stringliteral">&quot;La celda es blanca y se ha modificado el valor&quot;</span>);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;La celda no es blanca&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a49e549729028078f1570172550785294">   53</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a49e549729028078f1570172550785294">main</a>(String[] args) {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        System.out.println(<span class="stringliteral">&quot;Opciones: \n 1. Creadora \n 2. isWhite \n 3. setValue \n 4. Salir&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">int</span> value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">readNumber</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">while</span> (value != 4) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordflow">switch</span> (value) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a la Creadora&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aca0ab5b69a36c63aa9e338ca623e6398">testCreadora</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a isWhite&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">testIsWhite</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setValue&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">testSetValue</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    System.out.println(<span class="stringliteral">&quot;El número no es correcto&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            System.out.println(<span class="stringliteral">&quot;\nOpciones: \n 1. Creadora \n 2. isWhite \n 3. setValue \n 4. Salir&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">readNumber</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        System.exit(0);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">   84</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">readNumber</a>() {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">int</span> number = 0;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        number = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">reader</a>.nextInt();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> number;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_a2b4e0b8c7067198a1397e242f959e85b"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">domain.controllers.drivers.DriverCell.testSetValue</a></div><div class="ttdeci">static void testSetValue()</div><div class="ttdoc">Test del setter de value.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00042">DriverCell.java:42</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_cell_html_a7982cd500b04ddc6d282e53d8b7fb354"><div class="ttname"><a href="classdomain_1_1classes_1_1_cell.html#a7982cd500b04ddc6d282e53d8b7fb354">domain.classes.Cell.isWhite</a></div><div class="ttdeci">boolean isWhite()</div><div class="ttdoc">Comprobadora del tipo de celda.</div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00024">Cell.java:24</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_a622b462ebaa319eb77195a3228ee4378"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">domain.controllers.drivers.DriverCell.reader</a></div><div class="ttdeci">static Scanner reader</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00017">DriverCell.java:17</a></div></div>
+<div class="ttc" id="anamespacedomain_1_1classes_html"><div class="ttname"><a href="namespacedomain_1_1classes.html">domain.classes</a></div><div class="ttdef"><b>Definition:</b> <a href="_black_cell_8java_source.html#l00001">BlackCell.java:1</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_aca0ab5b69a36c63aa9e338ca623e6398"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aca0ab5b69a36c63aa9e338ca623e6398">domain.controllers.drivers.DriverCell.testCreadora</a></div><div class="ttdeci">static void testCreadora()</div><div class="ttdoc">Test de la creadora.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00023">DriverCell.java:23</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_cell_html_ab6d78b474aeb403b214da18f4ff31a4a"><div class="ttname"><a href="classdomain_1_1classes_1_1_cell.html#ab6d78b474aeb403b214da18f4ff31a4a">domain.classes.Cell.setValue</a></div><div class="ttdeci">boolean setValue(int value)</div><div class="ttdoc">Setter de value.</div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00033">Cell.java:33</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_ae30f33063d6db985fbc8a2ef424a2839"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">domain.controllers.drivers.DriverCell.testIsWhite</a></div><div class="ttdeci">static void testIsWhite()</div><div class="ttdoc">Test que comprueba si la celda es blanca.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00031">DriverCell.java:31</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_cell_html"><div class="ttname"><a href="classdomain_1_1classes_1_1_cell.html">domain.classes.Cell</a></div><div class="ttdoc">Clase Cell que contiene los métodos necesarios para cualquier tipo de Celda.</div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00010">Cell.java:10</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_ac83f60264cb181c3b8d9a1265d376ef0"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">domain.controllers.drivers.DriverCell.readNumber</a></div><div class="ttdeci">static int readNumber()</div><div class="ttdoc">Lee un numero de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00084">DriverCell.java:84</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_a49e549729028078f1570172550785294"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a49e549729028078f1570172550785294">domain.controllers.drivers.DriverCell.main</a></div><div class="ttdeci">static void main(String[] args)</div><div class="ttdoc">Función principal.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00053">DriverCell.java:53</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html">domain.controllers.drivers.DriverCell</a></div><div class="ttdoc">Clase DriverCell que comprueba la correctividad de las funciones de la clase Cell.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00016">DriverCell.java:16</a></div></div>
+<div class="ttc" id="anamespacedomain_html"><div class="ttname"><a href="namespacedomain.html">domain</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

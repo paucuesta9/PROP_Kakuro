@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente CtrlData.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   &#160;<span id="projectnumber">version 1 20-nov-2020</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c1be8d27e7f84178e95f152701110b19.html">data</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CtrlData.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ctrl_data_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacedata.html">    1</a></span>&#160;<span class="keyword">package </span>data;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.io.*;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.util.Random;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html">   14</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classdata_1_1_ctrl_data.html">CtrlData</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e">   18</a></span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <a class="code" href="classdata_1_1_ctrl_data.html">CtrlData</a> <a class="code" href="classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e">ctrlData</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#acdb1596f6f67770535452853ee0ace67">   25</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <a class="code" href="classdata_1_1_ctrl_data.html">CtrlData</a> <a class="code" href="classdata_1_1_ctrl_data.html#acdb1596f6f67770535452853ee0ace67">getInstance</a>() {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e">ctrlData</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e">ctrlData</a> = <span class="keyword">new</span> <a class="code" href="classdata_1_1_ctrl_data.html#ad531e4834fc183b445e925a493cdeb3a">CtrlData</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e">ctrlData</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#ad531e4834fc183b445e925a493cdeb3a">   34</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classdata_1_1_ctrl_data.html#ad531e4834fc183b445e925a493cdeb3a">CtrlData</a>() {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#a81eb64d33003810c4e2ffc0cb9dab7f2">   45</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classdata_1_1_ctrl_data.html#a81eb64d33003810c4e2ffc0cb9dab7f2">searchKakuro</a> (<span class="keywordtype">int</span> difficulty, <span class="keywordtype">int</span> kakuroSizeRow, <span class="keywordtype">int</span> kakuroSizeColumn) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        Random random = <span class="keyword">new</span> Random();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> numFiles = <a class="code" href="classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9">getNumberOfFiles</a>(difficulty, kakuroSizeRow, kakuroSizeColumn);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (numFiles == -1) <span class="keywordflow">return</span> <span class="stringliteral">&quot;-1&quot;</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525">getKakuro</a>(<span class="stringliteral">&quot;data/diff&quot;</span> + difficulty + <span class="stringliteral">&quot;/&quot;</span> + kakuroSizeRow + <span class="stringliteral">&quot;_&quot;</span> + kakuroSizeColumn + <span class="stringliteral">&quot;/&quot;</span> + random.nextInt(numFiles) + <span class="stringliteral">&quot;.txt&quot;</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525">   57</a></span>&#160;    <span class="keyword">public</span> String <a class="code" href="classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525">getKakuro</a>(String filePath) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            File file = <span class="keyword">new</span> File(filePath);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            FileReader fr = <span class="keyword">new</span> FileReader(file);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            BufferedReader br = <span class="keyword">new</span> BufferedReader(fr);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            String line = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordflow">while</span> ((line = br.readLine()) != <span class="keyword">null</span>) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                content.append(line).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordflow">return</span> content.toString();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;-1&quot;</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#a5865e605a958d76364fcefc50e4380ba">   80</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classdata_1_1_ctrl_data.html#a5865e605a958d76364fcefc50e4380ba">saveKakuro</a>(String content, <span class="keywordtype">int</span> diff, <span class="keywordtype">int</span> sizeRow, <span class="keywordtype">int</span> sizeColumn) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        FileWriter file = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            file = <span class="keyword">new</span> FileWriter(<span class="stringliteral">&quot;data/diff&quot;</span> + diff + <span class="stringliteral">&quot;/&quot;</span> + sizeRow + <span class="stringliteral">&quot;_&quot;</span> + sizeColumn + <span class="stringliteral">&quot;/&quot;</span> + <a class="code" href="classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9">getNumberOfFiles</a>(diff, sizeRow, sizeColumn) + <span class="stringliteral">&quot;.txt&quot;</span>);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            PrintWriter pw = <span class="keyword">new</span> PrintWriter(file);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            pw.print(content);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            pw.close();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        } <span class="keywordflow">catch</span> (IOException ioException) {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            ioException.printStackTrace();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9">  100</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9">getNumberOfFiles</a>(<span class="keywordtype">int</span> diff, <span class="keywordtype">int</span> sizeRow, <span class="keywordtype">int</span> sizeColumn) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            File folder = <span class="keyword">new</span> File(<span class="stringliteral">&quot;data/diff&quot;</span> + diff + <span class="stringliteral">&quot;/&quot;</span> + sizeRow + <span class="stringliteral">&quot;_&quot;</span> + sizeColumn);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            File[] listFiles = folder.listFiles();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> listFiles.length;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        } <span class="keywordflow">catch</span> (NullPointerException e) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_a5865e605a958d76364fcefc50e4380ba"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#a5865e605a958d76364fcefc50e4380ba">data.CtrlData.saveKakuro</a></div><div class="ttdeci">void saveKakuro(String content, int diff, int sizeRow, int sizeColumn)</div><div class="ttdoc">Guarda un kakuro en fichero.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00080">CtrlData.java:80</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_a0e1fe3fea7dce1dbf77b922efa22c525"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525">data.CtrlData.getKakuro</a></div><div class="ttdeci">String getKakuro(String filePath)</div><div class="ttdoc">Busca un kakuro en fichero a partir de una ruta relativa.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00057">CtrlData.java:57</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_acdb1596f6f67770535452853ee0ace67"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#acdb1596f6f67770535452853ee0ace67">data.CtrlData.getInstance</a></div><div class="ttdeci">static CtrlData getInstance()</div><div class="ttdoc">Obtiene la instancia del CtrlData.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00025">CtrlData.java:25</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html"><div class="ttname"><a href="classdata_1_1_ctrl_data.html">data.CtrlData</a></div><div class="ttdoc">Clase CtrlData para obtener y guardar datos en nuestra base de datos (ficheros)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00014">CtrlData.java:14</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_a81eb64d33003810c4e2ffc0cb9dab7f2"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#a81eb64d33003810c4e2ffc0cb9dab7f2">data.CtrlData.searchKakuro</a></div><div class="ttdeci">String searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn)</div><div class="ttdoc">Busca un kakuro en fichero.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00045">CtrlData.java:45</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_a03331d5269d4d35a33b534cd934605e9"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9">data.CtrlData.getNumberOfFiles</a></div><div class="ttdeci">int getNumberOfFiles(int diff, int sizeRow, int sizeColumn)</div><div class="ttdoc">Mira cuántos ficheros tienen una dificultad y tamaño en concreto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00100">CtrlData.java:100</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_a5f2fb5f6bfa941398e0d5cd30a542c1e"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e">data.CtrlData.ctrlData</a></div><div class="ttdeci">static CtrlData ctrlData</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00018">CtrlData.java:18</a></div></div>
+<div class="ttc" id="aclassdata_1_1_ctrl_data_html_ad531e4834fc183b445e925a493cdeb3a"><div class="ttname"><a href="classdata_1_1_ctrl_data.html#ad531e4834fc183b445e925a493cdeb3a">data.CtrlData.CtrlData</a></div><div class="ttdeci">CtrlData()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_data_8java_source.html#l00034">CtrlData.java:34</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

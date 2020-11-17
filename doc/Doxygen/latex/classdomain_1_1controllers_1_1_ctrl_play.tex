@@ -1,0 +1,182 @@
+\hypertarget{classdomain_1_1controllers_1_1_ctrl_play}{}\doxysection{Referencia de la Clase domain.\+controllers.\+Ctrl\+Play}
+\label{classdomain_1_1controllers_1_1_ctrl_play}\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play}{Ctrl\+Play}} que contiene los atributos y metodos para la funcionalidad de jugar.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39a61d1023541ec24fe07aa12adeaa41}{Ctrl\+Play}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9d66408386bacf495bb9c78ac529799b}{start\+Game}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} new\+Kakuro)
+\begin{DoxyCompactList}\small\item\em Empieza una partida. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a6556ede4ec7f0d1e8e617ffe46b887b9}{help\+My\+Value}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Ayuda para el valor del usuario. \end{DoxyCompactList}\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a5f0c3b1a74d4a71dac54936a4e1aace8}{help\+Correct\+Number}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Ayuda para el valor correcto de una celda blanca. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play}{Ctrl\+Play}} que contiene los atributos y metodos para la funcionalidad de jugar. 
+
+Definición en la línea 12 del archivo Ctrl\+Play.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a39a61d1023541ec24fe07aa12adeaa41}\label{classdomain_1_1controllers_1_1_ctrl_play_a39a61d1023541ec24fe07aa12adeaa41}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!CtrlPlay@{CtrlPlay}}
+\index{CtrlPlay@{CtrlPlay}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{CtrlPlay()}{CtrlPlay()}}
+{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Play.\+Ctrl\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+
+
+Definición en la línea 21 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                       \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a9d66408386bacf495bb9c78ac529799b}\label{classdomain_1_1controllers_1_1_ctrl_play_a9d66408386bacf495bb9c78ac529799b}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!startGame@{startGame}}
+\index{startGame@{startGame}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Play.\+start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{new\+Kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Empieza una partida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em new\+Kakuro} & representa el kakuro nuevo que se jugará \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 29 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                                    \{}
+\DoxyCodeLine{30         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}} = newKakuro;}
+\DoxyCodeLine{31         CtrlResolve.setKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}});}
+\DoxyCodeLine{32     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a6556ede4ec7f0d1e8e617ffe46b887b9}\label{classdomain_1_1controllers_1_1_ctrl_play_a6556ede4ec7f0d1e8e617ffe46b887b9}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!helpMyValue@{helpMyValue}}
+\index{helpMyValue@{helpMyValue}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{helpMyValue()}{helpMyValue()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Play.\+help\+My\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ayuda para el valor del usuario. 
+
+Se activa la ayuda que comprueba si el valor que el usuario ha puesto es correcto 
+\begin{DoxyParams}{Parámetros}
+{\em x} & representa el número de fila del tablero \\
+\hline
+{\em y} & representa el número de columna del tablero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+1 si el valor que el usuario ha colocado en la posición del tablero \mbox{[}x\mbox{]}\mbox{[}y\mbox{]} es correcto, 
+
+0 si es incorrecto, 
+
+-\/1 si la casilla \mbox{[}x\mbox{]}\mbox{[}y\mbox{]} es negra, 
+
+-\/2 si no se ha colocado un valor 
+\end{DoxyReturn}
+
+
+Definición en la línea 44 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{44                                                 \{}
+\DoxyCodeLine{45         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y).\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{46             \textcolor{keywordtype}{int} value = ((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getValue();}
+\DoxyCodeLine{47             \textcolor{keywordflow}{if} (value == 0) \textcolor{keywordflow}{return} -\/2;}
+\DoxyCodeLine{48             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getCorrectValue() == value) ? 1 : 0;}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{51     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a5f0c3b1a74d4a71dac54936a4e1aace8}\label{classdomain_1_1controllers_1_1_ctrl_play_a5f0c3b1a74d4a71dac54936a4e1aace8}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!helpCorrectNumber@{helpCorrectNumber}}
+\index{helpCorrectNumber@{helpCorrectNumber}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{helpCorrectNumber()}{helpCorrectNumber()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Play.\+help\+Correct\+Number (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ayuda para el valor correcto de una celda blanca. 
+
+Se la activa la ayuda que coloca el valor correcto de una celda blanca 
+\begin{DoxyParams}{Parámetros}
+{\em x} & representa el número de fila del tablero \\
+\hline
+{\em y} & representa el número de columna del tablero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+cierto si es una celda blanca y falso si es una celda negra 
+\end{DoxyReturn}
+
+
+Definición en la línea 60 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{60                                                           \{}
+\DoxyCodeLine{61         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y).\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{62             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, ((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getCorrectValue());}
+\DoxyCodeLine{63             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{66     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}\label{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!kakuro@{kakuro}}
+\index{kakuro@{kakuro}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{kakuro}{kakuro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+controllers.\+Ctrl\+Play.\+kakuro\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+kakuro instancia del kakuro con el que se trabaja en este momento 
+
+Definición en la línea 16 del archivo Ctrl\+Play.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_play_8java}{Ctrl\+Play.\+java}}\end{DoxyCompactItemize}

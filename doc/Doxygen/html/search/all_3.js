@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['classes_42',['classes',['../namespacedomain_1_1classes.html',1,'domain']]],
+  ['controllers_43',['controllers',['../namespacedomain_1_1controllers.html',1,'domain']]],
+  ['data_44',['data',['../namespacedata.html',1,'data'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#a658fd1f9e0a35d96176f644cf4eb7a6a',1,'domain.controllers.CtrlDomain.data()']]],
+  ['deletedstartedgame_45',['deletedStartedGame',['../classdomain_1_1classes_1_1_player.html#a791569774ecd300636f08c18687d3530',1,'domain::classes::Player']]],
+  ['dfs_46',['DFS',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9',1,'domain::controllers::CtrlGenerate']]],
+  ['difficulty_47',['difficulty',['../classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6',1,'domain::classes::Kakuro']]],
+  ['domain_48',['domain',['../namespacedomain.html',1,'']]],
+  ['driverblackcell_49',['DriverBlackCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell.html',1,'domain::controllers::drivers']]],
+  ['driverblackcell_2ejava_50',['DriverBlackCell.java',['../_driver_black_cell_8java.html',1,'']]],
+  ['drivercell_51',['DriverCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html',1,'domain::controllers::drivers']]],
+  ['drivercell_2ejava_52',['DriverCell.java',['../_driver_cell_8java.html',1,'']]],
+  ['driverctrldata_53',['DriverCtrlData',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html',1,'domain::controllers::drivers']]],
+  ['driverctrldata_2ejava_54',['DriverCtrlData.java',['../_driver_ctrl_data_8java.html',1,'']]],
+  ['driverctrldomain_55',['DriverCtrlDomain',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html',1,'domain::controllers::drivers']]],
+  ['driverctrldomain_2ejava_56',['DriverCtrlDomain.java',['../_driver_ctrl_domain_8java.html',1,'']]],
+  ['driverctrlplay_57',['DriverCtrlPlay',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play.html',1,'domain::controllers::drivers']]],
+  ['driverctrlplay_2ejava_58',['DriverCtrlPlay.java',['../_driver_ctrl_play_8java.html',1,'']]],
+  ['driverctrlui_2ejava_59',['DriverCtrlUI.java',['../_driver_ctrl_u_i_8java.html',1,'']]],
+  ['driverkakuro_60',['DriverKakuro',['../classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html',1,'domain::controllers::drivers']]],
+  ['driverkakuro_2ejava_61',['DriverKakuro.java',['../_driver_kakuro_8java.html',1,'']]],
+  ['drivers_62',['drivers',['../namespacedomain_1_1controllers_1_1drivers.html',1,'domain::controllers']]],
+  ['driverwhitecell_63',['DriverWhiteCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_white_cell.html',1,'domain::controllers::drivers']]],
+  ['driverwhitecell_2ejava_64',['DriverWhiteCell.java',['../_driver_white_cell_8java.html',1,'']]]
+];

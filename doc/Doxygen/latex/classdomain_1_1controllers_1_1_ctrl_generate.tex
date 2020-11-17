@@ -1,0 +1,872 @@
+\hypertarget{classdomain_1_1controllers_1_1_ctrl_generate}{}\doxysection{Referencia de la Clase domain.\+controllers.\+Ctrl\+Generate}
+\label{classdomain_1_1controllers_1_1_ctrl_generate}\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play}{Ctrl\+Play}} que contiene los atributos y metodos para la funcionalidad de generar.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_af2f56c72f09d2678ed09109342617516}{Ctrl\+Generate}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a5075c57aa28afb8c56d7f338c90be8b5}{set\+Kakuro}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} kakuro)
+\begin{DoxyCompactList}\small\item\em Setter de Kakuro. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a9fa37d0c588aa825858b7bb13760b90a}{count\+White\+CellsV}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int i, int j)
+\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_aa37236c0c6fb03f3c1bd5168f01f0135}{count\+White\+CellsH}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int i, int j)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a2fa7013aadecb0f0f5aed647db63c275}{values\+Used\+Row}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int i, int j, int\mbox{[}$\,$\mbox{]} pos\+Values)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a3152eb4a6b8b3f527f6cc9595d18c8f5}{values\+Used\+Col}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int i, int j, int\mbox{[}$\,$\mbox{]} pos\+Values)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_ac9f0b31c334e2b84aff353cf2bfebce7}{row\+Sums}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_add76e6b3bd19f095e97796a54606592a}{col\+Sums}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_ade6dc672f923cde289ca485230ba6a37}{nine\+Cells\+Row}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_af49942ac7f3ec029c81ee1a2b1d85efd}{nine\+Cells\+Col}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a2a82dc3f054329477a4d9b154494da61}{compute\+Pos\+Sums\+Rec}} (int arr\mbox{[}$\,$\mbox{]}, int index, int num, int reduced\+Num, int lim, int pos\+Sums\mbox{[}$\,$\mbox{]}, int no)
+\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a6555f3c07f3f655afdd9a300b350bf66}{compute\+Pos\+Sums}} (int x, int n, int no)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a8a9de855871b17a218e7c22fbd9d60b5}{compute\+Pos\+Sums\+Rec2}} (int arr\mbox{[}$\,$\mbox{]}, int index, int num, int reduced\+Num, int lim, int pos\+Sums\mbox{[}$\,$\mbox{]}, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int no)
+\item 
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a71d3780af998c008c8a1c8c023ff62c8}{compute\+Pos\+Sums2}} (int x, int n, int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int no)
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a4e7ef7cea3387c992404fc1880c2fa9b}{intersection3}} (int a\mbox{[}$\,$\mbox{]}, int b\mbox{[}$\,$\mbox{]})
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a2a59ab6a6bb18fa9c624abcb472dfb2c}{intersection2}} (int a\mbox{[}$\,$\mbox{]}, int b\mbox{[}$\,$\mbox{]})
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a541d0345ac54f1163d2f59509eedbdc2}{is\+Unique}} (int\mbox{[}$\,$\mbox{]} a)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_aba16c4741423bdb887ce724aaa518ead}{random\+Cells}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_ac8449dd02cefb9887cff36e5db517db7}{check\+Board}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{D\+FS}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} aux\+Board)
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a78d38f5c07c5c77590801e459d08052e}{connex\+Board}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a40a582c179cc9fbadc5ee5b112939cd4}{generate}} (int size)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a4137891fb8eadbd91cb9ddfec1c8e8d6}{first\+Col\+Row}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_af9faa1fcd8f2b603755babc4d98d1c89}{current\+Kakuro}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play}{Ctrl\+Play}} que contiene los atributos y metodos para la funcionalidad de generar. 
+
+Definición en la línea 14 del archivo Ctrl\+Generate.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_af2f56c72f09d2678ed09109342617516}\label{classdomain_1_1controllers_1_1_ctrl_generate_af2f56c72f09d2678ed09109342617516}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!CtrlGenerate@{CtrlGenerate}}
+\index{CtrlGenerate@{CtrlGenerate}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{CtrlGenerate()}{CtrlGenerate()}}
+{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Generate.\+Ctrl\+Generate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. 
+
+
+
+Definición en la línea 24 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                           \{}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a5075c57aa28afb8c56d7f338c90be8b5}\label{classdomain_1_1controllers_1_1_ctrl_generate_a5075c57aa28afb8c56d7f338c90be8b5}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!setKakuro@{setKakuro}}
+\index{setKakuro@{setKakuro}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{setKakuro()}{setKakuro()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+set\+Kakuro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Setter de Kakuro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em kakuro} & instància de Kakuro \\
+\hline
+\end{DoxyParams}
+Settea un Kakuro al controlador para poder trabajar con él 
+
+Definición en la línea 33 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                                 \{}
+\DoxyCodeLine{34         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_af9faa1fcd8f2b603755babc4d98d1c89}{currentKakuro}} = kakuro;}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a9fa37d0c588aa825858b7bb13760b90a}\label{classdomain_1_1controllers_1_1_ctrl_generate_a9fa37d0c588aa825858b7bb13760b90a}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!countWhiteCellsV@{countWhiteCellsV}}
+\index{countWhiteCellsV@{countWhiteCellsV}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{countWhiteCellsV()}{countWhiteCellsV()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Generate.\+count\+White\+CellsV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 37 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                                      \{}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{39         \textcolor{keywordflow}{return} 1 + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a9fa37d0c588aa825858b7bb13760b90a}{countWhiteCellsV}}(board, i -\/ 1, j);}
+\DoxyCodeLine{40     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_aa37236c0c6fb03f3c1bd5168f01f0135}\label{classdomain_1_1controllers_1_1_ctrl_generate_aa37236c0c6fb03f3c1bd5168f01f0135}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!countWhiteCellsH@{countWhiteCellsH}}
+\index{countWhiteCellsH@{countWhiteCellsH}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{countWhiteCellsH()}{countWhiteCellsH()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Generate.\+count\+White\+CellsH (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 42 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{42                                                                      \{}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{44         \textcolor{keywordflow}{return} 1 + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_aa37236c0c6fb03f3c1bd5168f01f0135}{countWhiteCellsH}}(board, i, j -\/ 1);}
+\DoxyCodeLine{45     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a2fa7013aadecb0f0f5aed647db63c275}\label{classdomain_1_1controllers_1_1_ctrl_generate_a2fa7013aadecb0f0f5aed647db63c275}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!valuesUsedRow@{valuesUsedRow}}
+\index{valuesUsedRow@{valuesUsedRow}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{valuesUsedRow()}{valuesUsedRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+values\+Used\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 48 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                                                                     \{}
+\DoxyCodeLine{49         \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{50             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{51         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{52             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a2fa7013aadecb0f0f5aed647db63c275}{valuesUsedRow}}(board, i, j -\/ 1, posValues);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54             WhiteCell w = (WhiteCell) board[i][j];}
+\DoxyCodeLine{55             posValues[w.getCorrectValue()] = 1;}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a3152eb4a6b8b3f527f6cc9595d18c8f5}\label{classdomain_1_1controllers_1_1_ctrl_generate_a3152eb4a6b8b3f527f6cc9595d18c8f5}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!valuesUsedCol@{valuesUsedCol}}
+\index{valuesUsedCol@{valuesUsedCol}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{valuesUsedCol()}{valuesUsedCol()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+values\+Used\+Col (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 59 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                                                                     \{}
+\DoxyCodeLine{60         \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{61             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{62         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{63             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a3152eb4a6b8b3f527f6cc9595d18c8f5}{valuesUsedCol}}(board, i -\/ 1, j, posValues);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65             WhiteCell w = (WhiteCell) board[i][j];}
+\DoxyCodeLine{66             posValues[w.getCorrectValue()] = 1;}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_ac9f0b31c334e2b84aff353cf2bfebce7}\label{classdomain_1_1controllers_1_1_ctrl_generate_ac9f0b31c334e2b84aff353cf2bfebce7}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!rowSums@{rowSums}}
+\index{rowSums@{rowSums}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{rowSums()}{rowSums()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+row\+Sums (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 70 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70                                                \{}
+\DoxyCodeLine{71         \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{72         \textcolor{keywordtype}{int} lastCol = -\/1; \textcolor{comment}{//last col that has a blackCell}}
+\DoxyCodeLine{73         \textcolor{keywordtype}{int} lastRow = -\/1;}
+\DoxyCodeLine{74         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{75             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{76                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{77                     \textcolor{keywordflow}{if} (sum != 0) \{}
+\DoxyCodeLine{78                         BlackCell b = (BlackCell) board[lastRow][lastCol];}
+\DoxyCodeLine{79                         b.setRow(sum);}
+\DoxyCodeLine{80                     \}}
+\DoxyCodeLine{81                     sum = 0;}
+\DoxyCodeLine{82                     lastCol = j;}
+\DoxyCodeLine{83                     lastRow = i;}
+\DoxyCodeLine{84                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{85                     WhiteCell w = (WhiteCell) board[i][j];}
+\DoxyCodeLine{86                     sum += w.getCorrectValue();}
+\DoxyCodeLine{87                 \}}
+\DoxyCodeLine{88             \}}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90         \textcolor{keywordflow}{if} (sum != 0) \{}
+\DoxyCodeLine{91             BlackCell b = (BlackCell) board[lastRow][lastCol];}
+\DoxyCodeLine{92             b.setRow(sum);}
+\DoxyCodeLine{93         \}}
+\DoxyCodeLine{94     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_add76e6b3bd19f095e97796a54606592a}\label{classdomain_1_1controllers_1_1_ctrl_generate_add76e6b3bd19f095e97796a54606592a}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!colSums@{colSums}}
+\index{colSums@{colSums}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{colSums()}{colSums()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+col\+Sums (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 96 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96                                                \{}
+\DoxyCodeLine{97         \textcolor{keywordtype}{int} sum = 0;}
+\DoxyCodeLine{98         \textcolor{keywordtype}{int} lastCol = -\/1; \textcolor{comment}{//last col that has a blackCell}}
+\DoxyCodeLine{99         \textcolor{keywordtype}{int} lastRow = -\/1;}
+\DoxyCodeLine{100         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{101             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{102                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{103                     \textcolor{keywordflow}{if} (sum != 0) \{}
+\DoxyCodeLine{104                         BlackCell b = (BlackCell) board[lastRow][lastCol];}
+\DoxyCodeLine{105                         b.setColumn(sum);}
+\DoxyCodeLine{106                     \}}
+\DoxyCodeLine{107                     sum = 0;}
+\DoxyCodeLine{108                     lastCol = j;}
+\DoxyCodeLine{109                     lastRow = i;}
+\DoxyCodeLine{110                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{111                     WhiteCell w = (WhiteCell) board[i][j];}
+\DoxyCodeLine{112                     sum += w.getCorrectValue();}
+\DoxyCodeLine{113                 \}}
+\DoxyCodeLine{114             \}}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116         \textcolor{keywordflow}{if} (sum != 0) \{}
+\DoxyCodeLine{117             BlackCell b = (BlackCell) board[lastRow][lastCol];}
+\DoxyCodeLine{118             b.setColumn(sum);}
+\DoxyCodeLine{119         \}}
+\DoxyCodeLine{120     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_ade6dc672f923cde289ca485230ba6a37}\label{classdomain_1_1controllers_1_1_ctrl_generate_ade6dc672f923cde289ca485230ba6a37}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!nineCellsRow@{nineCellsRow}}
+\index{nineCellsRow@{nineCellsRow}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{nineCellsRow()}{nineCellsRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+nine\+Cells\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 122 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122                                                                          \{ \textcolor{comment}{//horizontal}}
+\DoxyCodeLine{123         \textcolor{keywordtype}{int} lastC = 0;}
+\DoxyCodeLine{124         \textcolor{keywordtype}{int} lastR = 0;}
+\DoxyCodeLine{125         \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{126         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{127             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{128                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{129                     \textcolor{keywordflow}{if} (count != 0) \{}
+\DoxyCodeLine{130                         \textcolor{keywordflow}{if} (count == 9) \{}
+\DoxyCodeLine{131                             BlackCell b = (BlackCell) board[lastR][lastC];}
+\DoxyCodeLine{132                             \textcolor{comment}{// b.setRow(45);}}
+\DoxyCodeLine{133                             tempBoard[lastR][lastC][1] = 9;}
+\DoxyCodeLine{134                         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{135                             tempBoard[lastR][lastC][1] = count;}
+\DoxyCodeLine{136                         \}}
+\DoxyCodeLine{137                     \}}
+\DoxyCodeLine{138                     count = 0;}
+\DoxyCodeLine{139                     lastC = j;}
+\DoxyCodeLine{140                     lastR = i;}
+\DoxyCodeLine{141                 \} \textcolor{keywordflow}{else} ++count;}
+\DoxyCodeLine{142             \}}
+\DoxyCodeLine{143         \}}
+\DoxyCodeLine{144         \textcolor{keywordflow}{if} (count == 9) \{}
+\DoxyCodeLine{145             BlackCell b = (BlackCell) board[lastR][lastC];}
+\DoxyCodeLine{146             b.setRow(45);}
+\DoxyCodeLine{147             tempBoard[lastR][lastC][1] = 9;}
+\DoxyCodeLine{148         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{149             tempBoard[lastR][lastC][1] = count;}
+\DoxyCodeLine{150         \}}
+\DoxyCodeLine{151     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_af49942ac7f3ec029c81ee1a2b1d85efd}\label{classdomain_1_1controllers_1_1_ctrl_generate_af49942ac7f3ec029c81ee1a2b1d85efd}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!nineCellsCol@{nineCellsCol}}
+\index{nineCellsCol@{nineCellsCol}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{nineCellsCol()}{nineCellsCol()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+nine\+Cells\+Col (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 153 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{153                                                                          \{ \textcolor{comment}{//vertical}}
+\DoxyCodeLine{154         \textcolor{keywordtype}{int} lastC = 0;}
+\DoxyCodeLine{155         \textcolor{keywordtype}{int} lastR = 0;}
+\DoxyCodeLine{156         \textcolor{keywordtype}{int} count = 0;}
+\DoxyCodeLine{157         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{158             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{159                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{160                     \textcolor{keywordflow}{if} (count != 0) \{}
+\DoxyCodeLine{161                         \textcolor{keywordflow}{if} (count == 9) \{}
+\DoxyCodeLine{162                             BlackCell b = (BlackCell) board[lastR][lastC];}
+\DoxyCodeLine{163                             \textcolor{comment}{// b.setColumn(45);}}
+\DoxyCodeLine{164                             tempBoard[lastR][lastC][0] = 9;}
+\DoxyCodeLine{165                         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{166                             tempBoard[lastR][lastC][0] = count;}
+\DoxyCodeLine{167                         \}}
+\DoxyCodeLine{168                     \}}
+\DoxyCodeLine{169                     count = 0;}
+\DoxyCodeLine{170                     lastC = j;}
+\DoxyCodeLine{171                     lastR = i;}
+\DoxyCodeLine{172                 \} \textcolor{keywordflow}{else} ++count;}
+\DoxyCodeLine{173             \}}
+\DoxyCodeLine{174         \}}
+\DoxyCodeLine{175         \textcolor{keywordflow}{if} (count != 0) \{}
+\DoxyCodeLine{176             \textcolor{keywordflow}{if} (count == 9) \{}
+\DoxyCodeLine{177                 BlackCell b = (BlackCell) board[lastR][lastC];}
+\DoxyCodeLine{178                 b.setColumn(45);}
+\DoxyCodeLine{179                 tempBoard[lastR][lastC][0] = 9;}
+\DoxyCodeLine{180             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{181                 tempBoard[lastR][lastC][0] = count;}
+\DoxyCodeLine{182             \}}
+\DoxyCodeLine{183         \}}
+\DoxyCodeLine{184     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a2a82dc3f054329477a4d9b154494da61}\label{classdomain_1_1controllers_1_1_ctrl_generate_a2a82dc3f054329477a4d9b154494da61}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!computePosSumsRec@{computePosSumsRec}}
+\index{computePosSumsRec@{computePosSumsRec}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{computePosSumsRec()}{computePosSumsRec()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+compute\+Pos\+Sums\+Rec (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{int}]{num,  }\item[{int}]{reduced\+Num,  }\item[{int}]{lim,  }\item[{int}]{pos\+Sums\mbox{[}$\,$\mbox{]},  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 186 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186                                                                                                                         \{}
+\DoxyCodeLine{187         \textcolor{keywordflow}{if} (reducedNum < 0 || index > lim)}
+\DoxyCodeLine{188             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190         \textcolor{keywordflow}{if} (reducedNum == 0 \&\& index == lim) \{}
+\DoxyCodeLine{191             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < index; i++)}
+\DoxyCodeLine{192                 posSums[arr[i] -\/ 1] = 1;}
+\DoxyCodeLine{193             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{194         \}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196         \textcolor{keywordtype}{int} prev = (index == 0) ? 0 : arr[index -\/ 1];}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{198         \textcolor{keywordflow}{if} (prev == 9 || index >= lim) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = prev + 1; k <= 9; k++) \{}
+\DoxyCodeLine{201             \textcolor{keywordflow}{if} (k != no) \{}
+\DoxyCodeLine{202                 arr[index] = k;}
+\DoxyCodeLine{203                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a2a82dc3f054329477a4d9b154494da61}{computePosSumsRec}}(arr, index + 1, num, reducedNum -\/ k, lim, posSums, no);}
+\DoxyCodeLine{204             \}}
+\DoxyCodeLine{205         \}}
+\DoxyCodeLine{206     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a6555f3c07f3f655afdd9a300b350bf66}\label{classdomain_1_1controllers_1_1_ctrl_generate_a6555f3c07f3f655afdd9a300b350bf66}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!computePosSums@{computePosSums}}
+\index{computePosSums@{computePosSums}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{computePosSums()}{computePosSums()}}
+{\footnotesize\ttfamily static int \mbox{[}$\,$\mbox{]} domain.\+controllers.\+Ctrl\+Generate.\+compute\+Pos\+Sums (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{n,  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 208 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{208                                                              \{ \textcolor{comment}{//calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.}}
+\DoxyCodeLine{209         \textcolor{keywordtype}{int}[] posSums = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[9];}
+\DoxyCodeLine{210         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) posSums[i] = 0;}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212         \textcolor{keywordtype}{int}[] arr = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[n];}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a2a82dc3f054329477a4d9b154494da61}{computePosSumsRec}}(arr, 0, x -\/ no, x -\/ no, n, posSums, no);}
+\DoxyCodeLine{215         \textcolor{keywordflow}{return} posSums;}
+\DoxyCodeLine{216     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a8a9de855871b17a218e7c22fbd9d60b5}\label{classdomain_1_1controllers_1_1_ctrl_generate_a8a9de855871b17a218e7c22fbd9d60b5}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!computePosSumsRec2@{computePosSumsRec2}}
+\index{computePosSumsRec2@{computePosSumsRec2}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{computePosSumsRec2()}{computePosSumsRec2()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+compute\+Pos\+Sums\+Rec2 (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{int}]{num,  }\item[{int}]{reduced\+Num,  }\item[{int}]{lim,  }\item[{int}]{pos\+Sums\mbox{[}$\,$\mbox{]},  }\item[{int}]{a1,  }\item[{int}]{a2,  }\item[{int}]{a3,  }\item[{int}]{a4,  }\item[{int}]{a5,  }\item[{int}]{a6,  }\item[{int}]{a7,  }\item[{int}]{a8,  }\item[{int}]{a9,  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 218 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{218                                                                                                                                                                                                  \{}
+\DoxyCodeLine{219         \textcolor{keywordflow}{if} (reducedNum < 0 || index > lim)}
+\DoxyCodeLine{220             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222         \textcolor{keywordflow}{if} (reducedNum == 0 \&\& index == lim) \{}
+\DoxyCodeLine{223             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < index; i++)}
+\DoxyCodeLine{224                 posSums[arr[i] -\/ 1] = 1;}
+\DoxyCodeLine{225             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{226         \}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228         \textcolor{keywordtype}{int} prev = (index == 0) ? 0 : arr[index -\/ 1];}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230         \textcolor{keywordflow}{if} (prev == 9 || index >= lim) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{232         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = prev + 1; k <= 9; k++) \{}
+\DoxyCodeLine{233             \textcolor{keywordflow}{if} (k != a1 \&\& k != a2 \&\& k != a3 \&\& k != a4 \&\& k != a5 \&\& k != a6 \&\& k != a7 \&\& k != a8 \&\& k != a9 \&\& k != no) \{}
+\DoxyCodeLine{234                 arr[index] = k;}
+\DoxyCodeLine{235                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a8a9de855871b17a218e7c22fbd9d60b5}{computePosSumsRec2}}(arr, index + 1, num, reducedNum -\/ k, lim, posSums, a1, a2, a3, a4, a5, a6, a7, a8, a9, no);}
+\DoxyCodeLine{236             \}}
+\DoxyCodeLine{237         \}}
+\DoxyCodeLine{238     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a71d3780af998c008c8a1c8c023ff62c8}\label{classdomain_1_1controllers_1_1_ctrl_generate_a71d3780af998c008c8a1c8c023ff62c8}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!computePosSums2@{computePosSums2}}
+\index{computePosSums2@{computePosSums2}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{computePosSums2()}{computePosSums2()}}
+{\footnotesize\ttfamily static int \mbox{[}$\,$\mbox{]} domain.\+controllers.\+Ctrl\+Generate.\+compute\+Pos\+Sums2 (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{n,  }\item[{int}]{a1,  }\item[{int}]{a2,  }\item[{int}]{a3,  }\item[{int}]{a4,  }\item[{int}]{a5,  }\item[{int}]{a6,  }\item[{int}]{a7,  }\item[{int}]{a8,  }\item[{int}]{a9,  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 240 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{240                                                                                                                                       \{ \textcolor{comment}{//calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.}}
+\DoxyCodeLine{241         \textcolor{keywordtype}{int}[] posSums = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[9];}
+\DoxyCodeLine{242         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) posSums[i] = 0;}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244         \textcolor{keywordtype}{int}[] arr = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[n];}
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a8a9de855871b17a218e7c22fbd9d60b5}{computePosSumsRec2}}(arr, 0, x -\/ no, x -\/ no, n, posSums, a1, a2, a3, a4, a5, a6, a7, a8, a9, no);}
+\DoxyCodeLine{247         \textcolor{keywordflow}{return} posSums;}
+\DoxyCodeLine{248     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a4e7ef7cea3387c992404fc1880c2fa9b}\label{classdomain_1_1controllers_1_1_ctrl_generate_a4e7ef7cea3387c992404fc1880c2fa9b}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!intersection3@{intersection3}}
+\index{intersection3@{intersection3}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{intersection3()}{intersection3()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Generate.\+intersection3 (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{b\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 924 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{924                                                            \{ \textcolor{comment}{//modificamos el 2. //aqui NO estamos seguro que b[] aka temboard[][][] ya ha sido tratado.}}
+\DoxyCodeLine{925         \textcolor{keywordtype}{boolean} allZero = \textcolor{keyword}{true};}
+\DoxyCodeLine{926         \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{927         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) \{}
+\DoxyCodeLine{928             \textcolor{keywordflow}{if} (b[i] == 1) allZero = \textcolor{keyword}{false};}
+\DoxyCodeLine{929         \}}
+\DoxyCodeLine{930 }
+\DoxyCodeLine{931         \textcolor{keywordflow}{if} (allZero) \{}
+\DoxyCodeLine{932             found = \textcolor{keyword}{true};}
+\DoxyCodeLine{933             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) b[i] = a[i];}
+\DoxyCodeLine{934         \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{935             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) \{}
+\DoxyCodeLine{936                 \textcolor{keywordflow}{if} (a[i] == b[i] \&\& a[i] == 1) found = \textcolor{keyword}{true};}
+\DoxyCodeLine{937             \}}
+\DoxyCodeLine{938             \textcolor{keywordflow}{if} (found) \{}
+\DoxyCodeLine{939                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) \{}
+\DoxyCodeLine{940                     \textcolor{keywordflow}{if} (a[i] == b[i] \&\& a[i] == 1) ;}
+\DoxyCodeLine{941                     \textcolor{keywordflow}{else} b[i] = 0;}
+\DoxyCodeLine{942                 \}}
+\DoxyCodeLine{943             \}}
+\DoxyCodeLine{944         \}}
+\DoxyCodeLine{945         \textcolor{keywordflow}{return} found;}
+\DoxyCodeLine{946     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a2a59ab6a6bb18fa9c624abcb472dfb2c}\label{classdomain_1_1controllers_1_1_ctrl_generate_a2a59ab6a6bb18fa9c624abcb472dfb2c}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!intersection2@{intersection2}}
+\index{intersection2@{intersection2}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{intersection2()}{intersection2()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Generate.\+intersection2 (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{b\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 948 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{948                                                            \{ \textcolor{comment}{//modificamos el 2. //aqui estamos seguro que b[] aka temboard[][][] ya ha sido tratado.}}
+\DoxyCodeLine{949         \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{950         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) \{}
+\DoxyCodeLine{951             \textcolor{keywordflow}{if} (a[i] == b[i] \&\& a[i] == 1) found = \textcolor{keyword}{true};}
+\DoxyCodeLine{952         \}}
+\DoxyCodeLine{953         \textcolor{keywordflow}{if} (found) \{}
+\DoxyCodeLine{954             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i) \{}
+\DoxyCodeLine{955                 \textcolor{keywordflow}{if} (a[i] == b[i] \&\& a[i] == 1) ;}
+\DoxyCodeLine{956                 \textcolor{keywordflow}{else} b[i] = 0;}
+\DoxyCodeLine{957             \}}
+\DoxyCodeLine{958         \}}
+\DoxyCodeLine{959         \textcolor{keywordflow}{return} found;}
+\DoxyCodeLine{960     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a541d0345ac54f1163d2f59509eedbdc2}\label{classdomain_1_1controllers_1_1_ctrl_generate_a541d0345ac54f1163d2f59509eedbdc2}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!isUnique@{isUnique}}
+\index{isUnique@{isUnique}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{isUnique()}{isUnique()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Generate.\+is\+Unique (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 962 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{962                                              \{ \textcolor{comment}{//a tiene mida 9}}
+\DoxyCodeLine{963         \textcolor{keywordtype}{int} b = 0;}
+\DoxyCodeLine{964         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < 9; ++i)}
+\DoxyCodeLine{965             \textcolor{keywordflow}{if} (a[i] == 1) ++b;}
+\DoxyCodeLine{966 }
+\DoxyCodeLine{967         \textcolor{keywordflow}{return} (b == 1);}
+\DoxyCodeLine{968     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_aba16c4741423bdb887ce724aaa518ead}\label{classdomain_1_1controllers_1_1_ctrl_generate_aba16c4741423bdb887ce724aaa518ead}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!randomCells@{randomCells}}
+\index{randomCells@{randomCells}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{randomCells()}{randomCells()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+random\+Cells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 1188 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1188                                                    \{}
+\DoxyCodeLine{1189         \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{1190         \textcolor{keywordtype}{int} size = board.length;}
+\DoxyCodeLine{1191         \textcolor{keywordflow}{while}( i <= size/2 ) \{}
+\DoxyCodeLine{1192             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 1; j < size; ++j) \{}
+\DoxyCodeLine{1193                 \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a9fa37d0c588aa825858b7bb13760b90a}{countWhiteCellsV}}(board,i-\/1,j);}
+\DoxyCodeLine{1194                 \textcolor{keywordtype}{int} m = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_aa37236c0c6fb03f3c1bd5168f01f0135}{countWhiteCellsH}}(board,i,j-\/1);}
+\DoxyCodeLine{1195                 \textcolor{keywordflow}{if}(j == size-\/1 \&\& m == 0) \{}
+\DoxyCodeLine{1196                     board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1197                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1198                 \}}
+\DoxyCodeLine{1199                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(i == size/2 \&\& n >= 5) \{}
+\DoxyCodeLine{1200                     board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1201                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1202                 \}}
+\DoxyCodeLine{1203                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( n == 1 \&\& m == 9 ) \{}
+\DoxyCodeLine{1204                     board[i-\/1][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1205                     board[size-\/i-\/1][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1206                     board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1207                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1208                 \}}
+\DoxyCodeLine{1209                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( n == 9 \&\& m == 1 ) \{}
+\DoxyCodeLine{1210                     board[i][j-\/1] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1211                     board[size-\/i][size-\/j-\/1] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1212                     board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1213                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1214                 \}}
+\DoxyCodeLine{1215                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(n == 1 || m == 1) \{ \textcolor{comment}{//esta casilla esta forzada a ser blanca}}
+\DoxyCodeLine{1216                     board[i][j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1217                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1218                 \}}
+\DoxyCodeLine{1219                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( n == 9 || m == 9) \{ \textcolor{comment}{//esta casilla esta forzada a ser negra}}
+\DoxyCodeLine{1220                     board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1221                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1222                 \}}
+\DoxyCodeLine{1223                 \textcolor{keywordflow}{else} \{ \textcolor{comment}{//random}}
+\DoxyCodeLine{1224                     \textcolor{keywordtype}{int} random = (int) (Math.random()*10); \textcolor{comment}{//generamos un numero aleatorio}}
+\DoxyCodeLine{1225                     \textcolor{keywordflow}{if}( random <= 5) \{}
+\DoxyCodeLine{1226                         board[i][j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1227                         board[size-\/i][size-\/j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1228                     \}}
+\DoxyCodeLine{1229                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1230                         board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1231                         board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1232                     \}}
+\DoxyCodeLine{1233                 \}}
+\DoxyCodeLine{1234             \}}
+\DoxyCodeLine{1235             ++i;}
+\DoxyCodeLine{1236         \}}
+\DoxyCodeLine{1237     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_ac8449dd02cefb9887cff36e5db517db7}\label{classdomain_1_1controllers_1_1_ctrl_generate_ac8449dd02cefb9887cff36e5db517db7}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!checkBoard@{checkBoard}}
+\index{checkBoard@{checkBoard}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{checkBoard()}{checkBoard()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+check\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 1239 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1239                                                   \{}
+\DoxyCodeLine{1240         \textcolor{keywordtype}{int} size = board.length;}
+\DoxyCodeLine{1241         \textcolor{keywordtype}{boolean} canvi = \textcolor{keyword}{true};}
+\DoxyCodeLine{1242         \textcolor{keywordflow}{while}(canvi) \{ \textcolor{comment}{//mientas hagamos cambios tenemos que comprovar que el tablero esta bien}}
+\DoxyCodeLine{1243             canvi = \textcolor{keyword}{false};}
+\DoxyCodeLine{1244             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 1; r < size;++r)\{}
+\DoxyCodeLine{1245                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} c = 1; c < size; ++c) \{}
+\DoxyCodeLine{1246                     \textcolor{keywordflow}{if}(!board[r][c].isWhite()) \{}
+\DoxyCodeLine{1247                         \textcolor{keywordflow}{if}(r >= 2) \{}
+\DoxyCodeLine{1248                             \textcolor{keywordflow}{if}(board[r-\/1][c].isWhite() \&\& !board[r-\/2][c].isWhite())\{}
+\DoxyCodeLine{1249                                 board[r-\/1][c] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1250                                 canvi = \textcolor{keyword}{true};}
+\DoxyCodeLine{1251                             \}}
+\DoxyCodeLine{1252                         \}}
+\DoxyCodeLine{1253                         \textcolor{keywordflow}{if}(c >= 2) \{}
+\DoxyCodeLine{1254                             \textcolor{keywordflow}{if}(board[r][c-\/1].isWhite() \&\& !board[r][c-\/2].isWhite())\{}
+\DoxyCodeLine{1255                                 board[r][c-\/1] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1256                                 canvi = \textcolor{keyword}{true};}
+\DoxyCodeLine{1257                             \}}
+\DoxyCodeLine{1258                         \}}
+\DoxyCodeLine{1259                         \textcolor{keywordflow}{if}(r < size-\/2) \{}
+\DoxyCodeLine{1260                             \textcolor{keywordflow}{if}(board[r+1][c].isWhite() \&\& !board[r+2][c].isWhite())\{}
+\DoxyCodeLine{1261                                 board[r+1][c] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1262                                 canvi = \textcolor{keyword}{true};}
+\DoxyCodeLine{1263                             \}}
+\DoxyCodeLine{1264                         \}}
+\DoxyCodeLine{1265                         \textcolor{keywordflow}{if}(c < size-\/2) \{}
+\DoxyCodeLine{1266                             \textcolor{keywordflow}{if}(board[r][c+1].isWhite() \&\& !board[r][c+2].isWhite())\{}
+\DoxyCodeLine{1267                                 board[r][c+1] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1268                                 canvi = \textcolor{keyword}{true};}
+\DoxyCodeLine{1269                             \}}
+\DoxyCodeLine{1270                         \}}
+\DoxyCodeLine{1271                         \textcolor{keywordflow}{if}(c == size-\/2) \{}
+\DoxyCodeLine{1272                             \textcolor{keywordflow}{if}(board[r][c+1].isWhite()) \{}
+\DoxyCodeLine{1273                                 board[r][c+1] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1274                             \}}
+\DoxyCodeLine{1275                         \}}
+\DoxyCodeLine{1276                     \}}
+\DoxyCodeLine{1277                 \}}
+\DoxyCodeLine{1278             \}}
+\DoxyCodeLine{1279         \}}
+\DoxyCodeLine{1280     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}\label{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!DFS@{DFS}}
+\index{DFS@{DFS}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{DFS()}{DFS()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Generate.\+D\+FS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{aux\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 1282 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1282                                                                        \{}
+\DoxyCodeLine{1283         \textcolor{keywordflow}{if}( i >= board.length || i < 0 || j >= board[0].length || j<0) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1284         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!board[i][j].isWhite()) \{}
+\DoxyCodeLine{1285             auxBoard[i][j] = 1; \textcolor{comment}{//la marcamos como visitada}}
+\DoxyCodeLine{1286             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1287         \}}
+\DoxyCodeLine{1288         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(auxBoard[i][j] == 1) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{1289         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1290             auxBoard[i][j]=1;}
+\DoxyCodeLine{1291             \textcolor{keywordflow}{return} 1 + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i+1,j,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j+1,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i-\/1,j,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j-\/1,auxBoard);}
+\DoxyCodeLine{1292         \}}
+\DoxyCodeLine{1293     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a78d38f5c07c5c77590801e459d08052e}\label{classdomain_1_1controllers_1_1_ctrl_generate_a78d38f5c07c5c77590801e459d08052e}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!connexBoard@{connexBoard}}
+\index{connexBoard@{connexBoard}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{connexBoard()}{connexBoard()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Generate.\+connex\+Board (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 1295 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1295                                                       \{}
+\DoxyCodeLine{1296         \textcolor{keywordtype}{int} size = board.length;}
+\DoxyCodeLine{1297         \textcolor{keywordtype}{int} nDFS = 0;}
+\DoxyCodeLine{1298         \textcolor{keywordtype}{int} nWhite = 0;}
+\DoxyCodeLine{1299         \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{1300         \textcolor{keywordtype}{int} [][] auxBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[size][size];}
+\DoxyCodeLine{1301         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i ) \{}
+\DoxyCodeLine{1302             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size;++j) \{}
+\DoxyCodeLine{1303                 auxBoard[i][j] = 0;}
+\DoxyCodeLine{1304             \}}
+\DoxyCodeLine{1305         \}}
+\DoxyCodeLine{1306         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i ) \{}
+\DoxyCodeLine{1307             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size;++j) \{}
+\DoxyCodeLine{1308                 \textcolor{keywordflow}{if}(board[i][j].isWhite())\{}
+\DoxyCodeLine{1309                     nWhite+=1;}
+\DoxyCodeLine{1310                     \textcolor{keywordflow}{if}(!found ) \{}
+\DoxyCodeLine{1311                         nDFS = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j,auxBoard);}
+\DoxyCodeLine{1312                         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{1313                     \}}
+\DoxyCodeLine{1314                 \}}
+\DoxyCodeLine{1315 }
+\DoxyCodeLine{1316             \}}
+\DoxyCodeLine{1317         \}}
+\DoxyCodeLine{1318         \textcolor{keywordflow}{if}(nWhite == nDFS) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{1319         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{1320     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a40a582c179cc9fbadc5ee5b112939cd4}\label{classdomain_1_1controllers_1_1_ctrl_generate_a40a582c179cc9fbadc5ee5b112939cd4}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!generate@{generate}}
+\index{generate@{generate}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+controllers.\+Ctrl\+Generate.\+generate (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 1323 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1323                                             \{}
+\DoxyCodeLine{1324         \textcolor{keywordtype}{boolean} repeat = \textcolor{keyword}{true};}
+\DoxyCodeLine{1325         \textcolor{keywordflow}{while}(repeat) \{}
+\DoxyCodeLine{1326             repeat = \textcolor{keyword}{false};}
+\DoxyCodeLine{1327             Cell [][] board = \textcolor{keyword}{new} Cell [size][size];}
+\DoxyCodeLine{1328             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i)\{ \textcolor{comment}{//la primera fila y la primera columna tienen que ser negras}}
+\DoxyCodeLine{1329                 board[0][i] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1330                 board[i][0] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1331             \}}
+\DoxyCodeLine{1332             System.out.println(\textcolor{stringliteral}{"{}Empezamos nuevo tablero"{}});}
+\DoxyCodeLine{1333             \textcolor{comment}{//Construimos el tablero}}
+\DoxyCodeLine{1334             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a4137891fb8eadbd91cb9ddfec1c8e8d6}{firstColRow}}(board);}
+\DoxyCodeLine{1335             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_aba16c4741423bdb887ce724aaa518ead}{randomCells}}(board);}
+\DoxyCodeLine{1336             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_ac8449dd02cefb9887cff36e5db517db7}{checkBoard}}(board);}
+\DoxyCodeLine{1337             \textcolor{comment}{//falta mirar que sigui connex}}
+\DoxyCodeLine{1338             \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a78d38f5c07c5c77590801e459d08052e}{connexBoard}}(board))\{}
+\DoxyCodeLine{1339                 repeat = \textcolor{keyword}{true};}
+\DoxyCodeLine{1340             \}}
+\DoxyCodeLine{1341             System.out.println(\textcolor{stringliteral}{"{}Tablero creado"{}});}
+\DoxyCodeLine{1342 }
+\DoxyCodeLine{1343             printBoard(board);}
+\DoxyCodeLine{1344             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_af9faa1fcd8f2b603755babc4d98d1c89}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(\textcolor{stringliteral}{"{}0"{}},0,board);}
+\DoxyCodeLine{1345             \textcolor{keywordflow}{if}(!repeat \&\& fillBoard(board)) \{}
+\DoxyCodeLine{1346                 System.out.println(\textcolor{stringliteral}{"{}Kakuro with unique solution found"{}});}
+\DoxyCodeLine{1347             \}}
+\DoxyCodeLine{1348             \textcolor{keywordflow}{else} repeat = \textcolor{keyword}{true};}
+\DoxyCodeLine{1349         \}}
+\DoxyCodeLine{1350         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_af9faa1fcd8f2b603755babc4d98d1c89}{currentKakuro}};}
+\DoxyCodeLine{1351     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a4137891fb8eadbd91cb9ddfec1c8e8d6}\label{classdomain_1_1controllers_1_1_ctrl_generate_a4137891fb8eadbd91cb9ddfec1c8e8d6}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!firstColRow@{firstColRow}}
+\index{firstColRow@{firstColRow}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{firstColRow()}{firstColRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Generate.\+first\+Col\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 1353 del archivo Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1353                                                    \{}
+\DoxyCodeLine{1354         \textcolor{keywordtype}{int} size = board.length;}
+\DoxyCodeLine{1355         \textcolor{keywordtype}{int} i = 1;}
+\DoxyCodeLine{1356         \textcolor{keywordtype}{int} cont = 0; \textcolor{comment}{//cuenta cuantas casillas blancas hay seguidas}}
+\DoxyCodeLine{1357         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j =1; j < size; ++j) \{}
+\DoxyCodeLine{1358             \textcolor{keywordflow}{if}( j == size -\/1 \&\& !board[i][j-\/1].isWhite()) \{}
+\DoxyCodeLine{1359                 board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1360                 board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1361             \}}
+\DoxyCodeLine{1362             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(cont == 1) \{ \textcolor{comment}{//tiene que ser si o si blanca, sino tendriamos una casilla sola -\/-\/> imposible}}
+\DoxyCodeLine{1363                 board[i][j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1364                 board[size-\/i][size-\/j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1365                 ++cont;}
+\DoxyCodeLine{1366             \}}
+\DoxyCodeLine{1367             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(cont == 9 ) \{}
+\DoxyCodeLine{1368                 board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1369                 board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1370                 cont = 0;}
+\DoxyCodeLine{1371             \}}
+\DoxyCodeLine{1372             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1373                 \textcolor{keywordtype}{int} random = (int) (Math.random()*10); \textcolor{comment}{//generamos un numero aleatorio}}
+\DoxyCodeLine{1374                 \textcolor{keywordflow}{if}( random <= 5) \{}
+\DoxyCodeLine{1375                     board[i][j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1376                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} WhiteCell();}
+\DoxyCodeLine{1377                     ++cont;}
+\DoxyCodeLine{1378                 \}}
+\DoxyCodeLine{1379                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{1380                     cont = 0;}
+\DoxyCodeLine{1381                     board[i][j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1382                     board[size-\/i][size-\/j] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{1383                 \}}
+\DoxyCodeLine{1384             \}}
+\DoxyCodeLine{1385         \}}
+\DoxyCodeLine{1386         ++i;}
+\DoxyCodeLine{1387     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_af9faa1fcd8f2b603755babc4d98d1c89}\label{classdomain_1_1controllers_1_1_ctrl_generate_af9faa1fcd8f2b603755babc4d98d1c89}} 
+\index{domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}!currentKakuro@{currentKakuro}}
+\index{currentKakuro@{currentKakuro}!domain.controllers.CtrlGenerate@{domain.controllers.CtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{currentKakuro}{currentKakuro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+controllers.\+Ctrl\+Generate.\+current\+Kakuro\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Instància del kakuro con el que se trabaja en cada momento 
+
+Definición en la línea 19 del archivo Ctrl\+Generate.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ctrl_generate_8java}{Ctrl\+Generate.\+java}}\end{DoxyCompactItemize}

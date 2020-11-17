@@ -1,0 +1,264 @@
+\hypertarget{classdomain_1_1classes_1_1_game}{}\doxysection{Referencia de la Clase domain.\+classes.\+Game}
+\label{classdomain_1_1classes_1_1_game}\index{domain.classes.Game@{domain.classes.Game}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} que contiene los atributos y metodos de la clase \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}.  
+
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a0200afdd32b101fcb030f0f67c776957}{Game}} ()
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a3b2315381012e4f817aa4eeffddd35ef}{Game}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_game_ac68a9a959095054346fb9a27c8bf8086}{id}}, int time, \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}})
+\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a42d1d29a4e58115a9d8f1ef51070edcb}{get\+Id}} ()
+\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a83375d8c407bce54ff97fd3fd602ece2}{get\+Time\+Sec}} ()
+\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a7230f473ccb181d3f94ff4948a2a1334}{set\+Time\+Sec}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{time\+Sec}})
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_ad05549b617186eef98d2323fe3f87d1d}{get\+Kakuro}} ()
+\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a8ab03f9ceec1f9b6e6a24ccc561b9e4c}{set\+Kakuro}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}})
+\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_game_ae3defab8f9bd154a1fffccb3a8a67b22}{start\+Resume\+Timer}} ()
+\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_game_afac0e18f3e8a762d5f7564a8d0fd24e7}{pause\+Timer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_game_ac68a9a959095054346fb9a27c8bf8086}{id}}
+\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{time\+Sec}}
+\item 
+Timer \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}{timer}}
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} que contiene los atributos y metodos de la clase \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}. 
+
+Definición en la línea 8 del archivo Game.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a0200afdd32b101fcb030f0f67c776957}\label{classdomain_1_1classes_1_1_game_a0200afdd32b101fcb030f0f67c776957}} 
+\index{domain.classes.Game@{domain.classes.Game}!Game@{Game}}
+\index{Game@{Game}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily domain.\+classes.\+Game.\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 14 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{14                   \{}
+\DoxyCodeLine{15         this.\textcolor{keywordtype}{id} = 0; \textcolor{comment}{//TODO: Coger el número de kakuros del usuario y ponerle uno mas.}}
+\DoxyCodeLine{16         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{timeSec}} = 0;}
+\DoxyCodeLine{17         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}{timer}} = \textcolor{keyword}{new} Timer();}
+\DoxyCodeLine{18     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a3b2315381012e4f817aa4eeffddd35ef}\label{classdomain_1_1classes_1_1_game_a3b2315381012e4f817aa4eeffddd35ef}} 
+\index{domain.classes.Game@{domain.classes.Game}!Game@{Game}}
+\index{Game@{Game}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily domain.\+classes.\+Game.\+Game (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{time,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{kakuro }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 20 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{20                                                  \{}
+\DoxyCodeLine{21         this.\textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1classes_1_1_game_ac68a9a959095054346fb9a27c8bf8086}{id}};}
+\DoxyCodeLine{22         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{timeSec}} = time;}
+\DoxyCodeLine{23         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}};}
+\DoxyCodeLine{24         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}{timer}} = \textcolor{keyword}{new} Timer();}
+\DoxyCodeLine{25     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a42d1d29a4e58115a9d8f1ef51070edcb}\label{classdomain_1_1classes_1_1_game_a42d1d29a4e58115a9d8f1ef51070edcb}} 
+\index{domain.classes.Game@{domain.classes.Game}!getId@{getId}}
+\index{getId@{getId}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int domain.\+classes.\+Game.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 27 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27                        \{}
+\DoxyCodeLine{28         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_ac68a9a959095054346fb9a27c8bf8086}{id}};}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a83375d8c407bce54ff97fd3fd602ece2}\label{classdomain_1_1classes_1_1_game_a83375d8c407bce54ff97fd3fd602ece2}} 
+\index{domain.classes.Game@{domain.classes.Game}!getTimeSec@{getTimeSec}}
+\index{getTimeSec@{getTimeSec}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{getTimeSec()}{getTimeSec()}}
+{\footnotesize\ttfamily int domain.\+classes.\+Game.\+get\+Time\+Sec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 31 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31                             \{}
+\DoxyCodeLine{32         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{timeSec}};}
+\DoxyCodeLine{33     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a7230f473ccb181d3f94ff4948a2a1334}\label{classdomain_1_1classes_1_1_game_a7230f473ccb181d3f94ff4948a2a1334}} 
+\index{domain.classes.Game@{domain.classes.Game}!setTimeSec@{setTimeSec}}
+\index{setTimeSec@{setTimeSec}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{setTimeSec()}{setTimeSec()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Game.\+set\+Time\+Sec (\begin{DoxyParamCaption}\item[{int}]{time\+Sec }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 35 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{35                                         \{}
+\DoxyCodeLine{36         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{timeSec}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{timeSec}};}
+\DoxyCodeLine{37     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_ad05549b617186eef98d2323fe3f87d1d}\label{classdomain_1_1classes_1_1_game_ad05549b617186eef98d2323fe3f87d1d}} 
+\index{domain.classes.Game@{domain.classes.Game}!getKakuro@{getKakuro}}
+\index{getKakuro@{getKakuro}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{getKakuro()}{getKakuro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+classes.\+Game.\+get\+Kakuro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 39 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{39                               \{}
+\DoxyCodeLine{40         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}};}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a8ab03f9ceec1f9b6e6a24ccc561b9e4c}\label{classdomain_1_1classes_1_1_game_a8ab03f9ceec1f9b6e6a24ccc561b9e4c}} 
+\index{domain.classes.Game@{domain.classes.Game}!setKakuro@{setKakuro}}
+\index{setKakuro@{setKakuro}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{setKakuro()}{setKakuro()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Game.\+set\+Kakuro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{kakuro }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 43 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{43                                          \{}
+\DoxyCodeLine{44         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}{kakuro}};}
+\DoxyCodeLine{45     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_ae3defab8f9bd154a1fffccb3a8a67b22}\label{classdomain_1_1classes_1_1_game_ae3defab8f9bd154a1fffccb3a8a67b22}} 
+\index{domain.classes.Game@{domain.classes.Game}!startResumeTimer@{startResumeTimer}}
+\index{startResumeTimer@{startResumeTimer}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{startResumeTimer()}{startResumeTimer()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Game.\+start\+Resume\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 47 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                                    \{}
+\DoxyCodeLine{48         TimerTask timerTask = \textcolor{keyword}{new} TimerTask() \{}
+\DoxyCodeLine{49             @Override}
+\DoxyCodeLine{50             \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{}
+\DoxyCodeLine{51                 ++\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}{timeSec}};}
+\DoxyCodeLine{52             \}}
+\DoxyCodeLine{53         \};}
+\DoxyCodeLine{54         \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}{timer}}.scheduleAtFixedRate(timerTask, 0, 1000);}
+\DoxyCodeLine{55     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_afac0e18f3e8a762d5f7564a8d0fd24e7}\label{classdomain_1_1classes_1_1_game_afac0e18f3e8a762d5f7564a8d0fd24e7}} 
+\index{domain.classes.Game@{domain.classes.Game}!pauseTimer@{pauseTimer}}
+\index{pauseTimer@{pauseTimer}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{pauseTimer()}{pauseTimer()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Game.\+pause\+Timer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 57 del archivo Game.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                              \{}
+\DoxyCodeLine{58         \mbox{\hyperlink{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}{timer}}.cancel();}
+\DoxyCodeLine{59     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_ac68a9a959095054346fb9a27c8bf8086}\label{classdomain_1_1classes_1_1_game_ac68a9a959095054346fb9a27c8bf8086}} 
+\index{domain.classes.Game@{domain.classes.Game}!id@{id}}
+\index{id@{id}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int domain.\+classes.\+Game.\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 9 del archivo Game.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}\label{classdomain_1_1classes_1_1_game_a914d608f7f6d97463dad2229bbc0fb1b}} 
+\index{domain.classes.Game@{domain.classes.Game}!timeSec@{timeSec}}
+\index{timeSec@{timeSec}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{timeSec}{timeSec}}
+{\footnotesize\ttfamily int domain.\+classes.\+Game.\+time\+Sec\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 10 del archivo Game.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}\label{classdomain_1_1classes_1_1_game_a2ece3cfef5c960e989e893559f5b6db0}} 
+\index{domain.classes.Game@{domain.classes.Game}!timer@{timer}}
+\index{timer@{timer}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{timer}{timer}}
+{\footnotesize\ttfamily Timer domain.\+classes.\+Game.\+timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 11 del archivo Game.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}\label{classdomain_1_1classes_1_1_game_a1491a45ace6dffa90453e33f2012c927}} 
+\index{domain.classes.Game@{domain.classes.Game}!kakuro@{kakuro}}
+\index{kakuro@{kakuro}!domain.classes.Game@{domain.classes.Game}}
+\doxysubsubsection{\texorpdfstring{kakuro}{kakuro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+classes.\+Game.\+kakuro\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 12 del archivo Game.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_game_8java}{Game.\+java}}\end{DoxyCompactItemize}

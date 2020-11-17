@@ -1,0 +1,290 @@
+\hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell}{}\doxysection{Referencia de la Clase domain.\+controllers.\+drivers.\+Driver\+Black\+Cell}
+\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell}\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell}{Driver\+Black\+Cell}} que comprueba la correctividad de las funciones de la clase Black\+Cell.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a257bfc4e4e796cda36eacf86d979f0f7}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Función principal. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{read\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Lee un numero de consola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a088fcf852730970770a148c6ade56a70}{test\+Creadora\+Sin\+Valor}} ()
+\begin{DoxyCompactList}\small\item\em Test de la creadora sin valor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a72cd55ae7e43e393ff76feac45e8b02f}{test\+Creadora\+Con\+Valor}} (int row, int column)
+\begin{DoxyCompactList}\small\item\em Test de la creadora con valor. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a0286fed4cccc04f3f2bde43ebc7bad73}{test\+Get\+Row}} (int row)
+\begin{DoxyCompactList}\small\item\em Test del Getter de row. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a935c070ae27cb5459db1bf96e38aae6c}{test\+Get\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Test del Getter de column. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a35dcd069a5376fc850d5d62d92a854c1}{test\+Set\+Row}} (int row)
+\begin{DoxyCompactList}\small\item\em Test del Setter de row. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a900afe30b3ef860c210f300a89d46b82}{test\+Set\+Column}} (int column)
+\begin{DoxyCompactList}\small\item\em Test del Setter de column. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Scanner \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_aa52da59c7588ec98c61aadd4aaff6e69}{reader}} = new Scanner(System.\+in)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell}{Driver\+Black\+Cell}} que comprueba la correctividad de las funciones de la clase Black\+Cell. 
+
+Definición en la línea 16 del archivo Driver\+Black\+Cell.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a088fcf852730970770a148c6ade56a70}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a088fcf852730970770a148c6ade56a70}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!testCreadoraSinValor@{testCreadoraSinValor}}
+\index{testCreadoraSinValor@{testCreadoraSinValor}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{testCreadoraSinValor()}{testCreadoraSinValor()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+test\+Creadora\+Sin\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de la creadora sin valor. 
+
+Comprueba si se crea correctamente una celda negra sin valor 
+
+Definición en la línea 23 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                                \{}
+\DoxyCodeLine{24         BlackCell bc = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{25         System.out.println(\textcolor{stringliteral}{"{}Se ha creado la celda negra sin valores"{}});}
+\DoxyCodeLine{26     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a72cd55ae7e43e393ff76feac45e8b02f}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a72cd55ae7e43e393ff76feac45e8b02f}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!testCreadoraConValor@{testCreadoraConValor}}
+\index{testCreadoraConValor@{testCreadoraConValor}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{testCreadoraConValor()}{testCreadoraConValor()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+test\+Creadora\+Con\+Valor (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de la creadora con valor. 
+
+Comprueba si se crea correctamente una celda negra con valor 
+
+Definición en la línea 32 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                                                   \{}
+\DoxyCodeLine{33         BlackCell bc = \textcolor{keyword}{new} BlackCell(column, row);}
+\DoxyCodeLine{34         System.out.println(\textcolor{stringliteral}{"{}Se ha creado la celda negra con los valores"{}});}
+\DoxyCodeLine{35     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a0286fed4cccc04f3f2bde43ebc7bad73}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a0286fed4cccc04f3f2bde43ebc7bad73}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!testGetRow@{testGetRow}}
+\index{testGetRow@{testGetRow}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{testGetRow()}{testGetRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+test\+Get\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test del Getter de row. 
+
+Comprueba si se hace correctamente el getter de row 
+
+Definición en la línea 41 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41                                             \{}
+\DoxyCodeLine{42         BlackCell bc = \textcolor{keyword}{new} BlackCell(0, row);}
+\DoxyCodeLine{43         System.out.println(\textcolor{stringliteral}{"{}Row = "{}} + bc.getRow());}
+\DoxyCodeLine{44     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a935c070ae27cb5459db1bf96e38aae6c}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a935c070ae27cb5459db1bf96e38aae6c}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!testGetColumn@{testGetColumn}}
+\index{testGetColumn@{testGetColumn}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{testGetColumn()}{testGetColumn()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+test\+Get\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test del Getter de column. 
+
+Comprueba si se hace correctamente el getter de column 
+
+Definición en la línea 50 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{50                                                   \{}
+\DoxyCodeLine{51         BlackCell bc = \textcolor{keyword}{new} BlackCell(column, 0);}
+\DoxyCodeLine{52         System.out.println(\textcolor{stringliteral}{"{}Column = "{}} + bc.getColumn());}
+\DoxyCodeLine{53     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a35dcd069a5376fc850d5d62d92a854c1}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a35dcd069a5376fc850d5d62d92a854c1}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!testSetRow@{testSetRow}}
+\index{testSetRow@{testSetRow}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{testSetRow()}{testSetRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+test\+Set\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test del Setter de row. 
+
+Comprueba si se hace correctamente el setter de row 
+
+Definición en la línea 59 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                             \{}
+\DoxyCodeLine{60         BlackCell bc = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{61         bc.setRow(row);}
+\DoxyCodeLine{62         System.out.println(\textcolor{stringliteral}{"{}Row = "{}} + bc.getRow());}
+\DoxyCodeLine{63     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a900afe30b3ef860c210f300a89d46b82}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a900afe30b3ef860c210f300a89d46b82}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!testSetColumn@{testSetColumn}}
+\index{testSetColumn@{testSetColumn}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{testSetColumn()}{testSetColumn()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+test\+Set\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test del Setter de column. 
+
+Comprueba si se hace correctamente el setter de column 
+
+Definición en la línea 69 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{69                                                   \{}
+\DoxyCodeLine{70         BlackCell bc = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{71         bc.setColumn(column);}
+\DoxyCodeLine{72         System.out.println(\textcolor{stringliteral}{"{}Column = "{}} + bc.getColumn());}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a257bfc4e4e796cda36eacf86d979f0f7}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a257bfc4e4e796cda36eacf86d979f0f7}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!main@{main}}
+\index{main@{main}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función principal. 
+
+Indica las opciones que hay para testear 
+
+Definición en la línea 79 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                            \{}
+\DoxyCodeLine{80         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora sin valor \(\backslash\)n 2. Creadora con valor \(\backslash\)n 3. Getter de row \(\backslash\)n 4. Getter de column \(\backslash\)n 5. Setter de row \(\backslash\)n 6. Setter de column \(\backslash\)n 7. Salir"{}});}
+\DoxyCodeLine{81         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{82         \textcolor{keywordflow}{while} (value != 7) \{}
+\DoxyCodeLine{83             \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{84             \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{86                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora sin valores"{}});}
+\DoxyCodeLine{87                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a088fcf852730970770a148c6ade56a70}{testCreadoraSinValor}}();}
+\DoxyCodeLine{88                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{89                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{90                     System.out.println(\textcolor{stringliteral}{"{}Indique la suma de fila y la suma de columna"{}});}
+\DoxyCodeLine{91                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{92                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{93                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora con valores"{}});}
+\DoxyCodeLine{94                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a72cd55ae7e43e393ff76feac45e8b02f}{testCreadoraConValor}}(x, y);}
+\DoxyCodeLine{95                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{96                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{97                     System.out.println(\textcolor{stringliteral}{"{}Indique la suma de fila"{}});}
+\DoxyCodeLine{98                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{99                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getRow"{}});}
+\DoxyCodeLine{100                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a0286fed4cccc04f3f2bde43ebc7bad73}{testGetRow}}(x);}
+\DoxyCodeLine{101                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{102                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{103                     System.out.println(\textcolor{stringliteral}{"{}Indique la suma de columna"{}});}
+\DoxyCodeLine{104                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{105                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getColumn"{}});}
+\DoxyCodeLine{106                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a935c070ae27cb5459db1bf96e38aae6c}{testGetColumn}}(x);}
+\DoxyCodeLine{107                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{108                 \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{109                     System.out.println(\textcolor{stringliteral}{"{}Indique la suma de fila"{}});}
+\DoxyCodeLine{110                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{111                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setRow"{}});}
+\DoxyCodeLine{112                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a35dcd069a5376fc850d5d62d92a854c1}{testSetRow}}(x);}
+\DoxyCodeLine{113                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{114                 \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{115                     System.out.println(\textcolor{stringliteral}{"{}Indique la suma de columna"{}});}
+\DoxyCodeLine{116                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{117                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setColumn"{}});}
+\DoxyCodeLine{118                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_a900afe30b3ef860c210f300a89d46b82}{testSetColumn}}(x);}
+\DoxyCodeLine{119                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{120                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{121                     System.out.println(\textcolor{stringliteral}{"{}El número no es correcto"{}});}
+\DoxyCodeLine{122                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{123             \}}
+\DoxyCodeLine{124             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nOpciones: \(\backslash\)n 1. Creadora sin valor \(\backslash\)n 2. Creadora con valor \(\backslash\)n 3. Getter de row \(\backslash\)n 4. Getter de column \(\backslash\)n 5. Setter de row \(\backslash\)n 6. Setter de column \(\backslash\)n 7. Salir"{}});}
+\DoxyCodeLine{125             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}{readNumber}}();}
+\DoxyCodeLine{126         \}}
+\DoxyCodeLine{127         System.exit(0);}
+\DoxyCodeLine{128     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_ad89a7c238fdcc585b8b5ccc15b36c5e9}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!readNumber@{readNumber}}
+\index{readNumber@{readNumber}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{readNumber()}{readNumber()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+read\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lee un numero de consola. 
+
+\begin{DoxyReturn}{Devuelve}
+el número leído 
+\end{DoxyReturn}
+
+
+Definición en la línea 134 del archivo Driver\+Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                                    \{}
+\DoxyCodeLine{135         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{136         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_aa52da59c7588ec98c61aadd4aaff6e69}{reader}}.nextInt();}
+\DoxyCodeLine{137         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{138     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_aa52da59c7588ec98c61aadd4aaff6e69}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell_aa52da59c7588ec98c61aadd4aaff6e69}} 
+\index{domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}!reader@{reader}}
+\index{reader@{reader}!domain.controllers.drivers.DriverBlackCell@{domain.controllers.drivers.DriverBlackCell}}
+\doxysubsubsection{\texorpdfstring{reader}{reader}}
+{\footnotesize\ttfamily Scanner domain.\+controllers.\+drivers.\+Driver\+Black\+Cell.\+reader = new Scanner(System.\+in)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 17 del archivo Driver\+Black\+Cell.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_black_cell_8java}{Driver\+Black\+Cell.\+java}}\end{DoxyCompactItemize}
