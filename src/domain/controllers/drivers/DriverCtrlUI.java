@@ -14,7 +14,7 @@ import java.util.Scanner;
 /** @brief Clase DriverCtrlUI que comprueba la correctividad de las funciones del controlador UI
  */
 
-public class DriverCtrlUI {
+/*public class DriverCtrlUI {
     private static Scanner reader = new Scanner(System.in);
     private static void testCreadora() {
         CtrlUI ctrlUI = new CtrlUI();
@@ -85,3 +85,4 @@ public class DriverCtrlUI {
         return number;
     }
 }
+*/

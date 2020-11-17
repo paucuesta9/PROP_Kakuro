@@ -1,6 +1,18 @@
 package domain.controllers.drivers;
 
+import domain.classes.Kakuro;
+import domain.controllers.CtrlPlay;
+
 import java.util.Scanner;
+
+
+/** @file DriverCtrlPlay.java
+ @brief Clase  <em>DriverCtrlPlay</em>.
+ @author Pol Vallespí Soro
+ */
+
+/** @brief Clase DriverCtrlDomain que comprueba la correctividad de las funciones del controlador CtrlDomain
+ */
 
 public class DriverCtrlDomain {
     private static Scanner reader = new Scanner(System.in);
@@ -15,20 +27,47 @@ public class DriverCtrlDomain {
             "F28,?,?,?,?,?,?,?,*\n" +
             "F6,?,?,*,*,F8,?,?,*";
 
+
+    /** @brief Test de la creadora
+     *
+     * Comprueba si se crea correctamente
+     */
     private static void testCreadora() {
 
     }
-
+    /** @brief Test de la función startNewGame
+     *
+     * Comprueba si la función hace correctamente la función de buscar un kakuro de la dificultad y tamaño indicado
+     * y si inicia correctamente la partida
+     */
     private static void testStartNewGame() {
-
+        System.out.println("Indique la dificultad del kakuro: ");
+        int difficulty = readNumber();
+        System.out.println("Indique el tamaño del kakuro:");
+        int kakuroSize = readNumber();
     }
 
+    /**
+     * @brief Test de la función isFinished
+     *
+     * Necesita un kakuro y un entero f que nos indicará si el kakuro que hemos entrado esta acabado o no
+     */
     private static void testIsFinished() {
-
+        System.out.println("Escribe un kakuro válido:");
+        String kakuroText = readKakuro();
+        System.out.println("Indica si el kakuro esta terminado (1 si esta tarminado, 0 si no lo esta):");
+        int f = readNumber();
+        Kakuro kakuro = new Kakuro(kakuroText);
+        if((kakuro.isFinished() && f == 1) || (!kakuro.isFinished() && f == 0 )) System.out.println("Resultado correcto");
+        else System.out.println("No funciona correctamente");
     }
 
+    /**
+     * @brief Test de la función checkValidity
+     *
+     */
     private static void testCheckValidity() {
-
+        //necesitamos un
     }
 
     private static void testHelpMyValue() {
@@ -75,7 +114,7 @@ public class DriverCtrlDomain {
     }
 
     private static void testGetKakuro() {
-        
+        ///per fer el test obtenir un kakuro i printejar-lo
     }
 
     private static void testSaveKakuro() {

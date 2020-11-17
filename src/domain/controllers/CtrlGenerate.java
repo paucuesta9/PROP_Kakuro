@@ -1,8 +1,16 @@
-package domain;
+package domain.controllers;
 
 /** @file CtrlGenerate.java
  @brief Clase <em>CtrlGenerate</em>.
  */
+
+
+
+import domain.classes.BlackCell;
+import domain.classes.Cell;
+import domain.classes.Kakuro;
+import domain.classes.WhiteCell;
+import domain.controllers.CtrlValidate;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,7 +48,7 @@ public class CtrlGenerate {
      * @param j
      * @return número de celdas blancas seguidas en vertical
      */
-    public static int countWhiteCellsV(Cell[][] board,int i,int j) {
+    public static int countWhiteCellsV(Cell[][] board, int i, int j) {
         if( !board[i][j].isWhite()) return 0;
         return 1+countWhiteCellsV(board,i-1,j);
     }
@@ -271,7 +279,7 @@ public class CtrlGenerate {
             printBoard(board);
             Cell[][] sol = copyBoard(board);
             clearBoard(sol);
-            currentKakuro = new Kakuro("0",0, board.length, board.length, sol);
+            currentKakuro = new Kakuro("0",0, sol);
             CtrlValidate.setKakuro(currentKakuro);
             int[] vec = {0,0,0,0,0,0,0,0,0,0};
             int[] res = new int[1];
@@ -551,8 +559,6 @@ public class CtrlGenerate {
         return false;
     }
 
-
-
     /**
      *
      * @param size
@@ -581,7 +587,7 @@ public class CtrlGenerate {
             }
             System.out.println("Tablero creado");
 
-            currentKakuro = new Kakuro("0",0,size,size,board);
+            currentKakuro = new Kakuro("0",0,board);
             if(!repeat ) fillBoard(board);
             //if(!repeat && fillBoard(board)) System.out.println("Kakuro with unique solution found");
             //else repeat = true;
