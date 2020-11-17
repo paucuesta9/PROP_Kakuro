@@ -4,6 +4,7 @@ import domain.classes.BlackCell;
 import domain.classes.Cell;
 import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
+import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
@@ -182,16 +183,16 @@ public class DriverKakuro {
 
     }
 
-    private static void testCheckRowValidity() {
-
+    private static void testCheckRowValidity(int x, int y, int value, String kakuro) {
+        Kakuro k = new Kakuro(kakuro);
+        if (k.checkRowValidity(x,y-1,value,0,-1,y)) System.out.println("El valor introducido cumple las condiciones de la fila");
+        else System.out.println("El valor introducido no cumple las condiciones de la fila");
     }
 
-    private static void testCheckColumnValidity() {
-
-    }
-
-    private static void testCheckValidity() {
-
+    private static void testCheckColumnValidity(int x, int y, int value, String kakuro) {
+        Kakuro k = new Kakuro(kakuro);
+        if (k.checkColumnValidity(x-1,y,value,0,-1,x)) System.out.println("El valor introducido cumple las condiciones de la columna");
+        else System.out.println("El valor introducido no cumple las condiciones de la columna");
     }
 
     private static void testIsFinished(String kakuro1, String kakuroFinished) {
@@ -286,16 +287,24 @@ public class DriverKakuro {
                     testCheckColumn();
                     break;
                 case 15:
+                    System.out.println("Introduzca la posición x e y de la celda, el valor a poner en esa celda y el kakuro a jugar");
+                    x = readNumber();
+                    y = readNumber();
+                    value = readNumber();
+                    String kakuro = readKakuro();
                     System.out.println("Se llama a checkRowValidity");
-                    testCheckRowValidity();
+                    testCheckRowValidity(x,y,value,kakuro);
                     break;
                 case 16:
-                    testCheckColumnValidity();
+                    System.out.println("Introduzca la posición x e y de la celda, el valor a poner en esa celda y el kakuro a jugar");
+                    x = readNumber();
+                    y = readNumber();
+                    value = readNumber();
+                    kakuro = readKakuro();
+                    System.out.println("Se llama a checkColumnValidity");
+                    testCheckColumnValidity(x,y,value,kakuro);
                     break;
                 case 17:
-                    testCheckValidity();
-                    break;
-                case 18:
                     System.out.println("Indique un Kakuro en el formato correcto (esté en la fase de juego que se quiera y el mismo kakuro resuelto");
 
                     String kakuro1 = readKakuro();
@@ -304,10 +313,13 @@ public class DriverKakuro {
                     System.out.println("Se llama a isFinished");
                     testIsFinished(kakuro1, kakuroFinished);
                     break;
+                default:
+                    System.out.println("El número introducido es incorrecto");
+                    break;
             }
             System.out.println("Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter id \n 7. Getter difficulty" +
                     "\n 8. Setter difficulty \n 9. Getter rowSize \n 10. Getter columnSize \n 11. Getter board \n 12. Getter cell \n 13. Setter value en celda blanca \n 14. Check column \n 15. Mirar validez de fila \n 16. Mirar validez de la columna" +
-                    "\n 17. Mirar la validez a partir de la colocación de una celda \n 18. Mirar si se ha terminado \n 19. Salir");
+                    "\n 17. Mirar si se ha terminado \n 18. Salir");
             value = readNumber();
         }
         System.exit(0);

@@ -1,0 +1,97 @@
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Se llama a la creadora sin valor
+Se ha creado una celda blanca sin valor
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Indique el valor de la celda
+Se llama a la creadora con valor
+Se ha creado una celda blanca con valor
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Indique el valor de la celda
+Se llama a getValue
+Value = 4
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Indique el valor de la celda
+Se llama a setValue
+Value = 6
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Se llama a getCorrectValue
+Correct value = 0
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Indique el valor de la celda
+Se llama a setCorrectValue
+Correct value = 3
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir
+Se llama a isWhite
+La celda es blanca
+
+Opciones: 
+ 1. Creadora sin valor 
+ 2. Creadora con valor 
+ 3. Getter de value 
+ 4. Setter de value 
+ 5. Getter de CorrectValue 
+ 6. Setter de CorrectValue 
+ 7. Comprobar si es una celda blanca 
+ 8. Salir

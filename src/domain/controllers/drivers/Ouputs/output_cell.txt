@@ -1,0 +1,29 @@
+Opciones: 
+ 1. Creadora 
+ 2. isWhite 
+ 3. setValue 
+ 4. Salir
+Se llama a la Creadora
+Se ha creado la celda
+
+Opciones: 
+ 1. Creadora 
+ 2. isWhite 
+ 3. setValue 
+ 4. Salir
+Se llama a isWhite
+La celda no es blanca
+
+Opciones: 
+ 1. Creadora 
+ 2. isWhite 
+ 3. setValue 
+ 4. Salir
+Se llama a setValue
+La celda no es blanca
+
+Opciones: 
+ 1. Creadora 
+ 2. isWhite 
+ 3. setValue 
+ 4. Salir

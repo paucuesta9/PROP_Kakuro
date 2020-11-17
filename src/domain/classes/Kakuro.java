@@ -1,11 +1,9 @@
 package domain.classes;/* Alvaro Armada Ruiz */
 
-
 /** @file Kakuro.java
  @brief Clase  <em>Kakuro</em>.
  @author Alvaro Armada Ruiz
  */
-
 
 /** @brief Clase Kakuro que contiene los atributos y metodos de un tablero
  */
@@ -286,10 +284,10 @@ public class Kakuro {
      * @param posy representa el número de columna de la celda blanca a la que se le ha añadido un valor
      * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
      */
-    private boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy) {
+    public boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
-                sum -= value;
+                //sum -= value;
                 return total >= sum || total == 0;
             }
             else {
@@ -304,7 +302,8 @@ public class Kakuro {
                 WhiteCell w = (WhiteCell) board[r][c];
                 if (w.getValue() == value && c != posy) return false;
                 sum += w.getValue();
-                return checkRowValidity(r, c + 1, value, sum, total, posy);
+                if (c+1 < board.length) return checkRowValidity(r, c + 1, value, sum, total, posy);
+                else return total >= sum || total == 0;
             }
         }
     }
@@ -320,10 +319,10 @@ public class Kakuro {
      * @param posx representa el número de fila de la celda blanca a la que se le ha añadido un valor
      * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
      */
-    private boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx) {
+    public boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
-                sum -= value;
+                //sum -= value;
                 return total >= sum || total == 0;
             }
             else {
@@ -338,7 +337,8 @@ public class Kakuro {
                 WhiteCell w = (WhiteCell)  board[r][c];
                 if (w.getValue() == value && r != posx) return false;
                 sum += w.getValue();
-                return checkColumnValidity(r+1, c, value, sum, total, posx);
+                if (r+1 < board.length) return checkColumnValidity(r+1, c, value, sum, total, posx);
+                else return total >= sum || total == 0;
             }
         }
     }
@@ -352,7 +352,7 @@ public class Kakuro {
      * @return devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas
      */
     public boolean checkValidity(int x, int y, int value) {
-        return checkRowValidity(x, y-1, value, value, -1, y) && checkColumnValidity(x, y, value, value, -1, x);
+        return checkRowValidity(x, y-1, value, 0, -1, y) && checkColumnValidity(x-1, y, value, 0, -1, x);
     }
 
     /** @brief Comprueba si se ha rellenado el tablero entero y correctamente

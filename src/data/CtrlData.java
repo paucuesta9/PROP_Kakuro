@@ -38,12 +38,13 @@ public class CtrlData {
     /** @brief Busca un kakuro en fichero
      *
      * @param difficulty representa la dificultad del kakuro buscado
-     * @param kakuroSize representa el tamaño del kakuro buscado
+     * @param kakuroSizeRow representa el tamaño de filas del kakuro buscado
+     * @param kakuroSizeColumn representa el tamaño de columnas del kakuro buscado
      * @return un kakuro con la dificultad y el tamaño deseado en formato String
      */
-    public String searchKakuro (int difficulty, int kakuroSize) {
+    public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
         Random random = new Random();
-        return getKakuro("data/diff" + difficulty + "/" + kakuroSize + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSize)) + ".txt");
+        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn)) + ".txt");
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa
@@ -63,24 +64,24 @@ public class CtrlData {
             }
             return content.toString();
         } catch (IOException e) {
-            e.printStackTrace();
+            return "-1";
         }
-        return null;
     }
 
     /** @brief Guarda un kakuro en fichero
      *
      * @param content representa el contenido del kakuro
      * @param diff representa la dificultad del kakuro
-     * @param size representa el tamaño del kakuro
+     * @param sizeRow representa el tamaño de filas del kakuro
+     * @param sizeColumn representa el tamaño de columnas del kakuro
      */
-    public void saveKakuro(String content, int diff, int size) {
+    public void saveKakuro(String content, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
         try {
-            file = new FileWriter("data/diff" + diff + "/" + size + "/" + getNumberOfFiles(diff, size));
+            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn));
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
-            } catch (IOException ioException) {
+        } catch (IOException ioException) {
             ioException.printStackTrace();
         }
     }
@@ -89,11 +90,12 @@ public class CtrlData {
      *
      * Busca cuantos ficheros hay con dificultad=diff y tamaño=size
      * @param diff representa la dificultad de un kakuro
-     * @param size representa el tamaño de un kakuro
+     * @param sizeRow representa el tamaño de filas de un kakuro
+     * @param sizeColumn representa el tamaño de columnas del kakuro
      * @return la cantidad de ficheros que cumplen las condiciones
      */
-    public int getNumberOfFiles(int diff, int size) {
-        File folder = new File("data/diff" + diff + "/" + size);
+    public int getNumberOfFiles(int diff, int sizeRow, int sizeColumn) {
+        File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
         File[] listFiles = folder.listFiles();
         return listFiles.length;
     }

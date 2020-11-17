@@ -87,32 +87,32 @@ public class DriverBlackCell {
                     testCreadoraSinValor();
                     break;
                 case 2:
-                    System.out.println("Indique la suma de fila y la suma de columna o escriba -1 para usar fichero");
+                    System.out.println("Indique la suma de fila y la suma de columna");
                     x = readNumber();
                     y = readNumber();
                     System.out.println("Se llama a la creadora con valores");
                     testCreadoraConValor(x, y);
                     break;
                 case 3:
-                    System.out.println("Indique la suma de fila o escriba -1 para usar fichero");
+                    System.out.println("Indique la suma de fila");
                     x = readNumber();
                     System.out.println("Se llama a getRow");
                     testGetRow(x);
                     break;
                 case 4:
-                    System.out.println("Indique la suma de columna o escriba -1 para usar fichero");
+                    System.out.println("Indique la suma de columna");
                     x = readNumber();
                     System.out.println("Se llama a getColumn");
                     testGetColumn(x);
                     break;
                 case 5:
-                    System.out.println("Indique la suma de fila o escriba -1 para usar fichero");
+                    System.out.println("Indique la suma de fila");
                     x = readNumber();
                     System.out.println("Se llama a setRow");
                     testSetRow(x);
                     break;
                 case 6:
-                    System.out.println("Indique la suma de columna o escriba -1 para usar fichero");
+                    System.out.println("Indique la suma de columna");
                     x = readNumber();
                     System.out.println("Se llama a setColumn");
                     testSetColumn(x);

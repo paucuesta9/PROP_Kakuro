@@ -40,11 +40,15 @@ public class CtrlDomain {
      * Se busca un tablero que cumpla las condiciones y llama al CtrlPlay para iniciar la partida
      *
      * @param difficulty dificultad del tablero, entre 1 y 3
-     * @param kakuroSize tamaño del tablero
+     * @param kakuroSizeRow número de filas del tablero
+     * @param kakuroSizeColumn número de columnas del tablero
+     *
      */
-    public void startNewGame(int difficulty, int kakuroSize) {
-        searchKakuro(difficulty, kakuroSize);
-        CtrlPlay.startGame(currentKakuro);
+    public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
+        if (searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn))
+            CtrlPlay.startGame(currentKakuro);
+        else
+            currentKakuro = CtrlGenerate.generate(kakuroSizeRow);
         //currentGame = new Game(0,0, currentKakuro);
         //currentGame.startResumeTimer();
     }
@@ -186,10 +190,16 @@ public class CtrlDomain {
      * Busca un kakuro que coincida con las condiciones de dificultad y tamaño
      *
      * @param difficulty Dificultad del Kakuro
-     * @param kakuroSize Tamaño del tablero
+     * @param kakuroSizeRow tamaño de filas del tablero
+     * @param kakuroSizeColumn tamaño de columnas del tablero
      */
-    public void searchKakuro(int difficulty, int kakuroSize) {
-        this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSize));
+    public boolean searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn ) {
+        String kakuro = data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
+        if (kakuro != "-1")
+            this.currentKakuro = new Kakuro(kakuro);
+        else
+            return false;
+        return true;
     }
 
     /** @brief Getter de Kakuro
@@ -198,8 +208,13 @@ public class CtrlDomain {
      *
      * @param filePath Ruta relativa al fichero con el Kakuro que se busca
      */
-    public void getKakuro(String filePath) {
-        this.currentKakuro = new Kakuro(data.getKakuro(/*"../" + */ filePath));
+    public boolean getKakuro(String filePath) {
+        String kakuro = data.getKakuro(/*"../" + */ filePath);
+        if (kakuro != "-1")
+            this.currentKakuro = new Kakuro(kakuro);
+        else
+            return false;
+        return true;
     }
 
     /** @brief Getter de partidas empezadas por el usuario actual
@@ -214,7 +229,7 @@ public class CtrlDomain {
      *
      */
     public void saveKakuro() {
-        data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize());
+        data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
     }
 
     /** @brief Comprobadora de coordenadas

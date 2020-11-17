@@ -64,7 +64,10 @@ public class CtrlUI {
             case 2:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea validar");
                 kakuro = readLine();
-                cd.getKakuro("data/" + kakuro + ".txt");
+                while (!cd.getKakuro("data/" + kakuro + ".txt")) {
+                    System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
+                    kakuro = readLine();
+                }
                 //cd.difficulty();
                 if (cd.validate()) {
                     System.out.println("El Kakuro es correcto");
@@ -76,7 +79,10 @@ public class CtrlUI {
             case 3:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea resolver");
                 kakuro = readLine();
-                cd.getKakuro("data/" + kakuro + ".txt");
+                while (!cd.getKakuro("data/" + kakuro + ".txt")) {
+                    System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
+                    kakuro = readLine();
+                }
                 cd.resolve();
                 writeCorrectKakuroInTerminal();
                 menu();
@@ -108,16 +114,18 @@ public class CtrlUI {
      * Se crea/carga una partida y se juega
      */
     public void play() {
-        System.out.println("1. Empezar nueva partida");
+        //System.out.println("1. Empezar nueva partida");
         //System.out.println("2. Cargar partida empezada");
-        int choice = readNumber();
-        if (choice == 1) {
+        //int choice = readNumber();
+        //if (choice == 1) {
             System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
             int difficulty = readNumber();
-            System.out.print("Escoge tamaño N (NxN): ");
-            int kakuroSize = readNumber();
-            cd.startNewGame(difficulty, kakuroSize);
-        }
+            System.out.print("Escoge tamaño N M (NxM): ");
+            int kakuroSizeRow = readNumber();
+            int kakuroSizeColumn = readNumber();
+            cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn);
+
+       // }
 //        else if (choice == 2) {
 //            ArrayList<Integer> startedGames= cd.getStartedGames();
 //            for (int i = 0; i < startedGames.size(); ++i) {
@@ -138,9 +146,9 @@ public class CtrlUI {
             System.out.println("");
             int x = readNumber();
             if (x == -1) {
-                System.out.println("¿Desea guardar la partida? Si (1), No (0)");
-                int save = readNumber();
-                if (save == 1) saveGame();
+               // System.out.println("¿Desea guardar la partida? Si (1), No (0)");
+                //int save = readNumber();
+                //if (save == 1) saveGame();
                 menu();
             }
             if (x == -2) {
@@ -174,12 +182,12 @@ public class CtrlUI {
         menu();
     }
 
-    /** @brief Guardar una partida
-     *
-     */
-    public void saveGame() {
-        //TODO: Hacer la funcion entera de guardar partida
-    }
+//    /** @brief Guardar una partida
+//     *
+//     */
+////    public void saveGame() {
+////        //TODO: Hacer la funcion entera de guardar partida
+////    }
 
     /** @brief Ayudas
      *
