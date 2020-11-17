@@ -77,8 +77,8 @@ public class DriverCtrlPlay {
         if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
 
         CtrlPlay.startGame(k);
-        if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda es correcto");
-        else System.out.println("El valor de la celda no és correcto");
+        if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda se ha cambiado correctamente");
+        else System.out.println("No es una celda blanca");
     }
 
     /** @brief Función principal
@@ -102,7 +102,7 @@ public class DriverCtrlPlay {
                     testStartGame(kakuro);
                     break;
                 case 3:
-                    System.out.println("Indique la posición x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
+                    System.out.println("Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
                     x = readNumber();
                     y = readNumber();
                     String kakuro1 = readKakuro();
@@ -111,7 +111,7 @@ public class DriverCtrlPlay {
                     testHelpMyValue(kakuro1, kakuroSol, x, y);
                     break;
                 case 4:
-                    System.out.println("Indique la posición x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
+                    System.out.println("Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
                     x = readNumber();
                     y = readNumber();
                     kakuro1 = readKakuro();
@@ -120,10 +120,10 @@ public class DriverCtrlPlay {
                     testHelpCorrectNumber(kakuro1, kakuroSol, x,y);
                     break;
                 default:
-                    System.out.println("El número introducido es incorrecto");
+                    System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Ayuda para el valor del usuario \n 4. Ayuda para el valor correcto de una celda blanca \n 5. Salir");
+            System.out.println("\nOpciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Ayuda para el valor del usuario \n 4. Ayuda para el valor correcto de una celda blanca \n 5. Salir");
             value = readNumber();
         }
         System.exit(0);
@@ -135,7 +135,11 @@ public class DriverCtrlPlay {
      */
     public static String readKakuro() {
         StringBuilder content = new StringBuilder();
-        while (reader.hasNext())
+        String[] valuesSize = reader.next().split(",");
+        int row = Integer.parseInt(valuesSize[0]);
+        int column = Integer.parseInt(valuesSize[1]);
+        content.append((row) + "," + (column) + "\n");
+        for (int i = 0; i < row; ++i)
             content.append(reader.next()).append("\n");
         return content.toString();
     }

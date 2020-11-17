@@ -282,28 +282,34 @@ public class Kakuro {
      * @param sum representa la suma total de los valores de las celdas blancas de la fila
      * @param total representa el valor máximo que puede tener la suma de las celdas blancas de la fila
      * @param posy representa el número de columna de la celda blanca a la que se le ha añadido un valor
+     * @param all representa si todas las casillas de la fila ya tienen un valor
      * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
      */
-    public boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy) {
+    public boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy, boolean all) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
                 //sum -= value;
-                return total >= sum || total == 0;
+                if (all) return total == sum || total == 0;
+                else return total >= sum || total == 0;
             }
             else {
                 BlackCell b = (BlackCell) board[r][c];
                 total = b.getRow();
-                return checkRowValidity(r, c + 1, value, sum, total, posy);
+                return checkRowValidity(r, c + 1, value, sum, total, posy, all);
             }
         }
         else {
-            if (total == -1) return checkRowValidity(r, c - 1, value, sum, total, posy);
+            if (total == -1 && c-1 >= 0) return checkRowValidity(r, c - 1, value, sum, total, posy, all);
             else {
                 WhiteCell w = (WhiteCell) board[r][c];
                 if (w.getValue() == value && c != posy) return false;
+                if (w.getValue() == 0) all = false;
                 sum += w.getValue();
-                if (c+1 < board.length) return checkRowValidity(r, c + 1, value, sum, total, posy);
-                else return total >= sum || total == 0;
+                if (c+1 < board[0].length) return checkRowValidity(r, c + 1, value, sum, total, posy, all);
+                else {
+                    if (all) return total == sum || total == 0;
+                    else return total >= sum || total == 0;
+                }
             }
         }
     }
@@ -317,28 +323,34 @@ public class Kakuro {
      * @param sum representa la suma total de los valores de las celdas blancas de la columna
      * @param total representa el valor máximo que puede tener la suma de las celdas blancas de la columna
      * @param posx representa el número de fila de la celda blanca a la que se le ha añadido un valor
+     * @param all representa si todas las casillas de la columna ya tienen un valor
      * @return devuelve cierto si se cumplen las condiciones y falso si no se cumplen
      */
-    public boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx) {
+    public boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx, boolean all) {
         if (!board[r][c].isWhite()) {
             if (total != -1) {
                 //sum -= value;
-                return total >= sum || total == 0;
+                if (all) return total == sum || total == 0;
+                else return total >= sum || total == 0;
             }
             else {
                 BlackCell b = (BlackCell) board[r][c];
                 total = b.getColumn();
-                return checkColumnValidity(r+1, c, value, sum, total, posx);
+                return checkColumnValidity(r+1, c, value, sum, total, posx, all);
             }
         }
         else {
-            if (total == -1) return checkColumnValidity(r -1, c, value, sum, total, posx);
+            if (total == -1 && r-1 >= 0) return checkColumnValidity(r -1, c, value, sum, total, posx, all);
             else {
                 WhiteCell w = (WhiteCell)  board[r][c];
                 if (w.getValue() == value && r != posx) return false;
+                if (w.getValue() == 0) all = false;
                 sum += w.getValue();
-                if (r+1 < board.length) return checkColumnValidity(r+1, c, value, sum, total, posx);
-                else return total >= sum || total == 0;
+                if (r+1 < board.length) return checkColumnValidity(r+1, c, value, sum, total, posx, all);
+                else {
+                    if (all) return total == sum || total == 0;
+                    else return total >= sum || total == 0;
+                }
             }
         }
     }
@@ -352,7 +364,7 @@ public class Kakuro {
      * @return devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas
      */
     public boolean checkValidity(int x, int y, int value) {
-        return checkRowValidity(x, y-1, value, 0, -1, y) && checkColumnValidity(x-1, y, value, 0, -1, x);
+        return checkRowValidity(x, y-1, value, 0, -1, y, true) && checkColumnValidity(x-1, y, value, 0, -1, x, true);
     }
 
     /** @brief Comprueba si se ha rellenado el tablero entero y correctamente

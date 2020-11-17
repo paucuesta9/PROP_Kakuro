@@ -44,7 +44,9 @@ public class CtrlData {
      */
     public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
         Random random = new Random();
-        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn)) + ".txt");
+        int numFiles = getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn);
+        if (numFiles == -1) return "-1";
+        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(numFiles) + ".txt");
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa
@@ -78,9 +80,10 @@ public class CtrlData {
     public void saveKakuro(String content, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
         try {
-            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn));
+            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn) + ".txt");
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
+            pw.close();
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
@@ -95,9 +98,13 @@ public class CtrlData {
      * @return la cantidad de ficheros que cumplen las condiciones
      */
     public int getNumberOfFiles(int diff, int sizeRow, int sizeColumn) {
-        File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
-        File[] listFiles = folder.listFiles();
-        return listFiles.length;
+        try {
+            File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
+            File[] listFiles = folder.listFiles();
+            return listFiles.length;
+        } catch (NullPointerException e) {
+            return -1;
+        }
     }
 
 }
