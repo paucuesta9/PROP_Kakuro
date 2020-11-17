@@ -3,7 +3,6 @@ package domain.controllers.drivers;
 import domain.classes.Kakuro;
 import domain.controllers.CtrlPlay;
 
-
 import java.util.Scanner;
 
 /** @file DriverCtrlPlay.java
@@ -90,7 +89,7 @@ public class DriverCtrlPlay {
                     testStartGame(kakuro);
                     break;
                 case 3:
-                    System.out.println("Indique la posición x e 'y' y el valor de la celda que quiere obtener la ayuda");
+                    System.out.println("Indique la posición x e 'y' y el valor de la celda que quiere obtener la ayuda y el kakuro");
                     x = readNumber();
                     y = readNumber();
                     String kakuro1 = readKakuro();
@@ -98,7 +97,7 @@ public class DriverCtrlPlay {
                     testHelpMyValue(kakuro1, x, y);
                     break;
                 case 4:
-                    System.out.println("Indique la posición x e y de la celda que quiere obtener la ayuda");
+                    System.out.println("Indique la posición x e y de la celda que quiere obtener la ayuda y el kakuro");
                     x = readNumber();
                     y = readNumber();
                     kakuro1 = readKakuro();

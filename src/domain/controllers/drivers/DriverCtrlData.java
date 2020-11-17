@@ -42,6 +42,7 @@ public class DriverCtrlData {
     private static void testSearchKakuro(int diff, int kakuroSize) {
         CtrlData ctrlData = new CtrlData();
         String kakuro = ctrlData.searchKakuro(diff, kakuroSize);
+        System.out.println(kakuro);
     }
 
     /** @brief Test de la función GetKakuro

@@ -5,7 +5,6 @@ package domain.controllers.drivers;
  @author Judith Almoño Gómez
  */
 
-
 import domain.classes.Kakuro;
 import presentation.CtrlUI;
 
@@ -25,17 +24,38 @@ public class DriverCtrlUI {
 
     }
 
-    private static void testCheckCoord(String kakuro, int x, int y) {
-        CtrlUI ctrlUI = new CtrlUI();
-        Kakuro k = new Kakuro(kakuro);
-        ctrlUI.checkCoord(x,y);
+    private static void testMenu() {
+
+    }
+
+    private static void testPlay() {
+
+    }
+
+    private static void testHelp() {
+
+    }
+
+    private static void testReadNumber() {
+
+    }
+
+    private static void testReadLine() {
+
+    }
+
+    private static void testWriteKakuroInTerminal() {
+
+    }
+
+    private static void testWriteCorrectKakuroInTerminal() {
 
     }
 
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Run \n 3. Menú \n 4. Play \n 5. Ayudas \n 6. Comprobadora de coordenadas \n 7. Lectura de un número por terminal \n 8. Lectura de una linea por terminal \n 9. Escritura de kakuro por terminal \n 10. Escritura del kakuro correcto por terminal \n 11. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Run \n 3. Menú \n 4. Play \n 5. Ayudas \n 6. Lectura de un número por terminal \n 7. Lectura de una linea por terminal \n 8. Escritura de kakuro por terminal \n 9. Escritura del kakuro correcto por terminal \n 10. Salir");
         int value = readNumber();
-        while (value != 11) {
+        while (value != 10) {
             int x, y;
             switch (value) {
                 case 1:
@@ -55,25 +75,22 @@ public class DriverCtrlUI {
                     testHelp();
                     break;
                 case 6:
-                    testCheckCoord();
-                    break;
-                case 7:
                     testReadNumber();
                     break;
-                case 8:
+                case 7:
                     testReadLine();
                     break;
-                case 9:
+                case 8:
                     testWriteKakuroInTerminal();
                     break;
-                case 10:
+                case 9:
                     testWriteCorrectKakuroInTerminal();
                     break;
                 default:
                     System.out.println("El número introducido es incorrecto");
                     break;
             }
-            System.out.println("Opciones: \n 1. Creadora \n 2. Run \n 3. Menú \n 4. Play \n 5. Ayudas \n 6. Comprobadora de coordenadas \n 7. Lectura de un número por terminal \n 8. Lectura de una linea por terminal \n 9. Escritura de kakuro por terminal \n 10. Escritura del kakuro correcto por terminal \n 11. Salir");
+            System.out.println("Opciones: \n 1. Creadora \n 2. Run \n 3. Menú \n 4. Play \n 5. Ayudas \n 6. Lectura de un número por terminal \n 7. Lectura de una linea por terminal \n 8. Escritura de kakuro por terminal \n 9. Escritura del kakuro correcto por terminal \n 10. Salir");
             value = readNumber();
         }
         System.exit(0);
