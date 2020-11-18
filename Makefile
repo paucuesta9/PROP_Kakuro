@@ -77,4 +77,4 @@ run_junit:
 	cd bin && java domain.controllers.junits.KakuroTest
 
 clean:
-	rm -rf bin/domain
+	rm -rf bin

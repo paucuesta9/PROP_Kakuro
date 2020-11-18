@@ -96,9 +96,9 @@ Métodos privados estáticos</h2></td></tr>
 <tr class="memitem:ae30f33063d6db985fbc8a2ef424a2839"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">testIsWhite</a> ()</td></tr>
 <tr class="memdesc:ae30f33063d6db985fbc8a2ef424a2839"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test que comprueba si la celda es blanca.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">Más...</a><br /></td></tr>
 <tr class="separator:ae30f33063d6db985fbc8a2ef424a2839"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b4e0b8c7067198a1397e242f959e85b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">testSetValue</a> ()</td></tr>
-<tr class="memdesc:a2b4e0b8c7067198a1397e242f959e85b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test del setter de value.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">Más...</a><br /></td></tr>
-<tr class="separator:a2b4e0b8c7067198a1397e242f959e85b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae887f5b25fe1e4ca7b7cf3c858dfae8"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aae887f5b25fe1e4ca7b7cf3c858dfae8">testSetValue</a> (int value)</td></tr>
+<tr class="memdesc:aae887f5b25fe1e4ca7b7cf3c858dfae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test del setter de value.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aae887f5b25fe1e4ca7b7cf3c858dfae8">Más...</a><br /></td></tr>
+<tr class="separator:aae887f5b25fe1e4ca7b7cf3c858dfae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Atributos privados estáticos</h2></td></tr>
@@ -179,8 +179,8 @@ Atributos privados estáticos</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a2b4e0b8c7067198a1397e242f959e85b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b4e0b8c7067198a1397e242f959e85b">&#9670;&nbsp;</a></span>testSetValue()</h2>
+<a id="aae887f5b25fe1e4ca7b7cf3c858dfae8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae887f5b25fe1e4ca7b7cf3c858dfae8">&#9670;&nbsp;</a></span>testSetValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -191,7 +191,8 @@ Atributos privados estáticos</h2></td></tr>
         <tr>
           <td class="memname">static void domain.controllers.drivers.DriverCell.testSetValue </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -206,9 +207,9 @@ Atributos privados estáticos</h2></td></tr>
 <p>Comprueba si se hace correctamente el setter de value </p>
 
 <p class="definition">Definición en la línea <a class="el" href="_driver_cell_8java_source.html#l00042">42</a> del archivo <a class="el" href="_driver_cell_8java_source.html">DriverCell.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                       {</div>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                                {</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        Cell cell = <span class="keyword">new</span> Cell();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Boolean result = cell.setValue(0);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        Boolean result = cell.setValue(value);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (result) System.out.println(<span class="stringliteral">&quot;La celda es blanca y se ha modificado el valor&quot;</span>);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;La celda no es blanca&quot;</span>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
@@ -258,17 +259,18 @@ Atributos privados estáticos</h2></td></tr>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">break</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">case</span> 3:</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setValue&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">testSetValue</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    System.out.println(<span class="stringliteral">&quot;El número no es correcto&quot;</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            System.out.println(<span class="stringliteral">&quot;\nOpciones: \n 1. Creadora \n 2. isWhite \n 3. setValue \n 4. Salir&quot;</span>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">readNumber</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        System.exit(0);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">readNumber</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aae887f5b25fe1e4ca7b7cf3c858dfae8">testSetValue</a>(value);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    System.out.println(<span class="stringliteral">&quot;El número no es correcto&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            System.out.println(<span class="stringliteral">&quot;\nOpciones: \n 1. Creadora \n 2. isWhite \n 3. setValue \n 4. Salir&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">readNumber</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        System.exit(0);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -298,12 +300,12 @@ Atributos privados estáticos</h2></td></tr>
 <p>Lee un numero de consola. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>el número leído </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_cell_8java_source.html#l00084">84</a> del archivo <a class="el" href="_driver_cell_8java_source.html">DriverCell.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                   {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">int</span> number = 0;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        number = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">reader</a>.nextInt();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> number;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_cell_8java_source.html#l00085">85</a> del archivo <a class="el" href="_driver_cell_8java_source.html">DriverCell.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                   {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">int</span> number = 0;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        number = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">reader</a>.nextInt();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">return</span> number;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -336,11 +338,11 @@ Atributos privados estáticos</h2></td></tr>
 <li><a class="el" href="_driver_cell_8java_source.html">DriverCell.java</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_a2b4e0b8c7067198a1397e242f959e85b"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a2b4e0b8c7067198a1397e242f959e85b">domain.controllers.drivers.DriverCell.testSetValue</a></div><div class="ttdeci">static void testSetValue()</div><div class="ttdoc">Test del setter de value.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00042">DriverCell.java:42</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_aae887f5b25fe1e4ca7b7cf3c858dfae8"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aae887f5b25fe1e4ca7b7cf3c858dfae8">domain.controllers.drivers.DriverCell.testSetValue</a></div><div class="ttdeci">static void testSetValue(int value)</div><div class="ttdoc">Test del setter de value.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00042">DriverCell.java:42</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_a622b462ebaa319eb77195a3228ee4378"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">domain.controllers.drivers.DriverCell.reader</a></div><div class="ttdeci">static Scanner reader</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00017">DriverCell.java:17</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_aca0ab5b69a36c63aa9e338ca623e6398"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#aca0ab5b69a36c63aa9e338ca623e6398">domain.controllers.drivers.DriverCell.testCreadora</a></div><div class="ttdeci">static void testCreadora()</div><div class="ttdoc">Test de la creadora.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00023">DriverCell.java:23</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_ae30f33063d6db985fbc8a2ef424a2839"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ae30f33063d6db985fbc8a2ef424a2839">domain.controllers.drivers.DriverCell.testIsWhite</a></div><div class="ttdeci">static void testIsWhite()</div><div class="ttdoc">Test que comprueba si la celda es blanca.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00031">DriverCell.java:31</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_ac83f60264cb181c3b8d9a1265d376ef0"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">domain.controllers.drivers.DriverCell.readNumber</a></div><div class="ttdeci">static int readNumber()</div><div class="ttdoc">Lee un numero de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00084">DriverCell.java:84</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_cell_html_ac83f60264cb181c3b8d9a1265d376ef0"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">domain.controllers.drivers.DriverCell.readNumber</a></div><div class="ttdeci">static int readNumber()</div><div class="ttdoc">Lee un numero de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_cell_8java_source.html#l00085">DriverCell.java:85</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
