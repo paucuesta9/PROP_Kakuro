@@ -44,7 +44,13 @@ public class CtrlData {
      */
     public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException {
         Random random = new Random();
-        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn)) + ".txt");
+        int numFile;
+        try {
+            numFile = getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn);
+        } catch (NullPointerException e) {
+            throw new IOException();
+        }
+        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(numFile) + ".txt");
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa
@@ -91,14 +97,10 @@ public class CtrlData {
      * @param sizeColumn representa el tamaño de columnas del kakuro
      * @return la cantidad de ficheros que cumplen las condiciones
      */
-    public int getNumberOfFiles(int diff, int sizeRow, int sizeColumn) {
-        try {
-            File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
-            File[] listFiles = folder.listFiles();
-            return listFiles.length;
-        } catch (NullPointerException e) {
-            return -1;
-        }
+    public int getNumberOfFiles(int diff, int sizeRow, int sizeColumn) throws NullPointerException {
+        File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
+        File[] listFiles = folder.listFiles();
+        return listFiles.length;
     }
 
 }

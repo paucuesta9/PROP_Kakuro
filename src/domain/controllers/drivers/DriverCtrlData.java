@@ -25,15 +25,6 @@ public class DriverCtrlData {
         System.out.println("Se ha obtenido la instancia deseada");
     }
 
-    /** @brief Test de la creadora
-     *
-     * Comprueba si se crea correctamente
-     */
-    private static void testCreadora() {
-        CtrlData ctrlData = new CtrlData();
-        System.out.println("Se ha creado");
-    }
-
     /**@brief Test de la función SearchKakuro
      *
      * Comprueba que la función searchKakuro se ejecute correctamente
@@ -46,28 +37,26 @@ public class DriverCtrlData {
         String kakuro = null;
         try {
             kakuro = ctrlData.searchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
+            System.out.println(kakuro);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("No se ha encontrado un Kakuro que cumpla las condiciones");
         }
-        System.out.println(kakuro);
     }
 
     /** @brief Test de la función GetKakuro
      *
      * Comprueba que la función getKakuro se ejecute correctamente
      * @param filePath representa la ruta donde se encuentra el kakuro
-     * @param kakuroProbar representa el kakuro buscado
      */
-    private static void testGetKakuro(String filePath, String kakuroProbar) {
+    private static void testGetKakuro(String filePath) {
         CtrlData ctrlData = new CtrlData();
         String kakuro = null;
         try {
             kakuro = ctrlData.getKakuro("data/" + filePath + ".txt");
+            System.out.println("Este es el kakuro que se encuentra en la ruta: " + filePath + "\n" + kakuro + "\n");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("No se ha podido obtener un kakuro con esta ruta");
         }
-        System.out.println("Este es el kakuro que se encuentra en la ruta: " + filePath + "\n" + kakuro + "\n");
-        System.out.println("Este es el kakuro esperado: \n" + kakuroProbar + "\n");
     }
 
     /**@brief Test de la función SaveKakuro
@@ -90,13 +79,15 @@ public class DriverCtrlData {
      * @param diff representa la dificultad del kakuro
      * @param sizeRow representa el tamaño de filas del kakuro
      * @param sizeColumn representa el tamaño de columnas del kakuro
-     * @param num representa la cantidad de kakuros que hay con dificultad = diff y tamaño = size
      */
-    private static void testGetNumberOfFiles(int diff, int sizeRow, int sizeColumn, int num) {
+    private static void testGetNumberOfFiles(int diff, int sizeRow, int sizeColumn) {
         CtrlData ctrlData = new CtrlData();
-        int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);
-        if (result == num) System.out.println("Se ha obtenido el número esperado");
-        else System.out.println("No se ha obtenido el número esperado");
+        try {
+            int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);
+            System.out.println("Hay " + result + " kakuro(s) con esta dificultad y tamaño");
+        } catch (NullPointerException e) {
+            System.out.println("No hay ningún kakuro con estas condiciones");
+        }
     }
 
     /** @brief Función principal
@@ -104,19 +95,15 @@ public class DriverCtrlData {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. GetInstance \n 2. Creadora \n 3. Buscador de kakuros \n 4. Getter de kakuros \n 5. Guardar kakuros \n 6. Contador de kakuros en una carpeta \n 7. Salir ");
+        System.out.println("\n Opciones: \n 1. GetInstance \n 2. Buscador de kakuros \n 3. Getter de kakuros \n 4. Guardar kakuros \n 5. Contador de kakuros en una carpeta \n 6. Salir ");
         int value = readNumber();
-        while (value != 7) {
+        while (value != 6) {
             switch(value) {
                 case 1:
                     System.out.println("Se llama a GetInstance");
                     testGetInstance();
                     break;
                 case 2:
-                    System.out.println("Se llama a la creadora");
-                    testCreadora();
-                    break;
-                case 3:
                     System.out.println("Introduzca la dificultad, el tamaño del kakuro (NxM)");
                     int diff = readNumber();
                     int kakuroSizeRow = readNumber();
@@ -124,14 +111,13 @@ public class DriverCtrlData {
                     System.out.println("Se llama a searchKakuro");
                     testSearchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
                     break;
-                case 4:
-                    System.out.println("Introduzca el filePath del kakuro y el kakuro en el formato correcto");
+                case 3:
+                    System.out.println("Introduzca el filePath del kakuro");
                     String filePath = readLine();
-                    String kakuroProbar = readKakuro();
                     System.out.println("Se llama a getKakuro");
-                    testGetKakuro(filePath, kakuroProbar);
+                    testGetKakuro(filePath);
                     break;
-                case 5:
+                case 4:
                     System.out.println("Introduzca el kakuro a guardar, la dificultad y el tamaño del kakuro (NxM)");
                     String kakuro = readKakuro();
                     diff = readNumber();
@@ -140,20 +126,19 @@ public class DriverCtrlData {
                     System.out.println("Se llama saveKakuro");
                     testSaveKakuro(kakuro, diff, sizeRow, sizeColumn);
                     break;
-                case 6:
-                    System.out.println("Introduzca la dificultad y el tamaño del kakuro (NxM) y la cantidad de kakuros que hay con esas características");
+                case 5:
+                    System.out.println("Introduzca la dificultad y el tamaño del kakuro (NxM)");
                     diff = readNumber();
                     sizeRow = readNumber();
                     sizeColumn = readNumber();
-                    int num = readNumber();
                     System.out.println("Se llama a getNumberOfFiles");
-                    testGetNumberOfFiles(diff, sizeRow, sizeColumn, num);
+                    testGetNumberOfFiles(diff, sizeRow, sizeColumn);
                     break;
                 default:
                     System.out.println("El número introducido es incorrecto");
                     break;
             }
-            System.out.println("\n Opciones: \n 1. GetInstance \n 2. Creadora \n 3. Buscador de kakuros \n 4. Getter de kakuros \n 5. Guardar kakuros \n 6. Contador de kakuros en una carpeta \n 7. Salir ");
+            System.out.println("\n Opciones: \n 1. GetInstance \n 2. Buscador de kakuros \n 3. Getter de kakuros \n 4. Guardar kakuros \n 5. Contador de kakuros en una carpeta \n 6. Salir ");
             value = readNumber();
         }
         System.exit(0);
