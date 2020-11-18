@@ -23,55 +23,55 @@ run_driver_WhiteCell_man:
 	cd bin && java domain.controllers.drivers.DriverWhiteCell
 
 run_driver_WhiteCell_auto:
-	cd bin && java domain.controllers.drivers.DriverWhiteCell < ../src/domain/controllers/drivers/Inputs/input_WhiteCell.txt
+	cd bin && java domain.controllers.drivers.DriverWhiteCell < ../data/juegos_prueba/Inputs/input_WhiteCell.txt
 
 run_driver_BlackCell_man:
 	cd bin && java domain.controllers.drivers.DriverBlackCell
 
 run_driver_BlackCell_auto:
-	cd bin && java domain.controllers.drivers.DriverBlackCell < ../src/domain/controllers/drivers/Inputs/input_BlackCell.txt
+	cd bin && java domain.controllers.drivers.DriverBlackCell < ../data/juegos_prueba/Inputs/input_BlackCell.txt
 
 run_driver_Cell_man:
 	cd bin && java domain.controllers.drivers.DriverCell
 
 run_driver_Cell_auto:
-	cd bin && java domain.controllers.drivers.DriverCell < ../src/domain/controllers/drivers/Inputs/input_Cell.txt
+	cd bin && java domain.controllers.drivers.DriverCell < ../data/juegos_prueba/Inputs/input_Cell.txt
 
 run_driver_Kakuro_man:
 	cd bin && java domain.controllers.drivers.DriverKakuro
 
 run_driver_Kakuro_auto:
-	cd bin && java domain.controllers.drivers.DriverKakuro < ../src/domain/controllers/drivers/Inputs/input_Kakuro.txt
+	cd bin && java domain.controllers.drivers.DriverKakuro < ../data/juegos_prueba/Inputs/input_Kakuro.txt
 
 run_driver_CtrlDomain_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlDomain
 
 run_driver_CtrlDomain_auto:
-	cd bin && java domain.controllers.drivers.DriverCtrlDomain < ../src/domain/controllers/drivers/Inputs/input_CtrlDomain.txt
+	cd bin && java domain.controllers.drivers.DriverCtrlDomain < ../data/juegos_prueba/Inputs/input_CtrlDomain.txt
 
 run_driver_CtrlGenerate_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlGenerate
 
 run_driver_CtrlGenerate_auto:
-	cd bin && java domain.controllers.drivers.DriverCtrlGenerate < ../src/domain/controllers/drivers/Inputs/input_CtrlGenerate.txt
+	cd bin && java domain.controllers.drivers.DriverCtrlGenerate < ../data/juegos_prueba/Inputs/input_CtrlGenerate.txt
 
 run_driver_CtrlPlay_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlPlay
 
 run_driver_CtrlPlay_auto:
-	cd bin && java domain.controllers.drivers.DriverCtrlPlay < ../src/domain/controllers/drivers/Inputs/input_CtrlPlay.txt
+	cd bin && java domain.controllers.drivers.DriverCtrlPlay < ../data/juegos_prueba/Inputs/input_CtrlPlay.txt
 
 run_driver_CtrlResolve_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlResolve
 
 run_driver_CtrlResolve_auto:
-	cd bin && java domain.controllers.drivers.DriverCtrlResolve < ../src/domain/controllers/drivers/Inputs/input_CtrlResolve.txt
+	cd bin && java domain.controllers.drivers.DriverCtrlResolve < ../data/juegos_prueba/Inputs/input_CtrlResolve.txt
 
 run_driver_CtrlValidate_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlValidate
 
 run_driver_CtrlValidate_auto:
-	cd bin && java domain.controllers.drivers.DriverCtrlValidate < ../src/domain/controllers/drivers/Inputs/input_CtrlValidate.txt
+	cd bin && java domain.controllers.drivers.DriverCtrlValidate < ../data/juegos_prueba/Inputs/input_CtrlValidate.txt
 
 run_junit:
 	cd bin && java domain.controllers.junits.KakuroTest
