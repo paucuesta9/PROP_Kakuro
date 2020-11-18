@@ -42,11 +42,9 @@ public class CtrlData {
      * @param kakuroSizeColumn representa el tamaño de columnas del kakuro buscado
      * @return un kakuro con la dificultad y el tamaño deseado en formato String
      */
-    public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
+    public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException {
         Random random = new Random();
-        int numFiles = getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn);
-        if (numFiles == -1) return "-1";
-        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(numFiles) + ".txt");
+        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn)) + ".txt");
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa
@@ -54,20 +52,16 @@ public class CtrlData {
      * @param filePath representa una ruta relativa
      * @return el kakuro que se encuentra en la ruta relativa en formato String
      */
-    public String getKakuro(String filePath) {
-        try {
-            StringBuilder content = new StringBuilder();
-            File file = new File(filePath);
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                content.append(line).append("\n");
-            }
-            return content.toString();
-        } catch (IOException e) {
-            return "-1";
+    public String getKakuro(String filePath) throws IOException {
+        StringBuilder content = new StringBuilder();
+        File file = new File(filePath);
+        FileReader fr = new FileReader(file);
+        BufferedReader br = new BufferedReader(fr);
+        String line = null;
+        while ((line = br.readLine()) != null) {
+            content.append(line).append("\n");
         }
+        return content.toString();
     }
 
     /** @brief Guarda un kakuro en fichero

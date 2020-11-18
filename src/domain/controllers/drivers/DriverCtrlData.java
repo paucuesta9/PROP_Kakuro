@@ -2,6 +2,7 @@ package domain.controllers.drivers;
 
 import data.CtrlData;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /** @file DriverCtrlData.java
@@ -42,7 +43,12 @@ public class DriverCtrlData {
      */
     private static void testSearchKakuro(int diff, int kakuroSizeRow, int kakuroSizeColumn) {
         CtrlData ctrlData = new CtrlData();
-        String kakuro = ctrlData.searchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
+        String kakuro = null;
+        try {
+            kakuro = ctrlData.searchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(kakuro);
     }
 
@@ -54,7 +60,12 @@ public class DriverCtrlData {
      */
     private static void testGetKakuro(String filePath, String kakuroProbar) {
         CtrlData ctrlData = new CtrlData();
-        String kakuro = ctrlData.getKakuro("data/" + filePath + ".txt");
+        String kakuro = null;
+        try {
+            kakuro = ctrlData.getKakuro("data/" + filePath + ".txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Este es el kakuro que se encuentra en la ruta: " + filePath + "\n" + kakuro + "\n");
         System.out.println("Este es el kakuro esperado: \n" + kakuroProbar + "\n");
     }

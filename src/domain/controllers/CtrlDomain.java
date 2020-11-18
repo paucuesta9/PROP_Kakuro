@@ -3,6 +3,7 @@ package domain.controllers;
 import data.CtrlData;
 import domain.classes.*;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /** @file CtrlDomain.java
@@ -45,10 +46,12 @@ public class CtrlDomain {
      *
      */
     public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
-        if (searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn))
-            CtrlPlay.startGame(currentKakuro);
-        else
+        try {
+            searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
+        } catch (IOException e) {
             currentKakuro = CtrlGenerate.generate(kakuroSizeRow);
+        }
+        CtrlPlay.startGame(currentKakuro);
         //currentGame = new Game(0,0, currentKakuro);
         //currentGame.startResumeTimer();
     }
@@ -193,13 +196,8 @@ public class CtrlDomain {
      * @param kakuroSizeRow tamaño de filas del tablero
      * @param kakuroSizeColumn tamaño de columnas del tablero
      */
-    public boolean searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn ) {
-        String kakuro = data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
-        if (kakuro != "-1")
-            this.currentKakuro = new Kakuro(kakuro);
-        else
-            return false;
-        return true;
+    public void searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn ) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+        this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn));
     }
 
     /** @brief Getter de Kakuro
@@ -208,13 +206,8 @@ public class CtrlDomain {
      *
      * @param filePath Ruta relativa al fichero con el Kakuro que se busca
      */
-    public boolean getKakuro(String filePath) {
-        String kakuro = data.getKakuro(/*"../" + */ filePath);
-        if (kakuro != "-1")
-            this.currentKakuro = new Kakuro(kakuro);
-        else
-            return false;
-        return true;
+    public void getKakuro(String filePath) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+        this.currentKakuro = new Kakuro(data.getKakuro(/*"../" + */ filePath));
     }
 
     /** @brief Getter de partidas empezadas por el usuario actual
