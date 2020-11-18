@@ -197,7 +197,7 @@ public class CtrlDomain {
      * @param kakuroSizeRow tamaño de filas del tablero
      * @param kakuroSizeColumn tamaño de columnas del tablero
      */
-    public void searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn ) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+    public void searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException, IndexOutOfBoundsException, NumberFormatException {
         this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn));
     }
 

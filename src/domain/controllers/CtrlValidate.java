@@ -19,7 +19,6 @@ public class CtrlValidate {
     /** @brief Creadora por defecto
      *
      */
-
     public CtrlValidate() {}
 
     /** @brief Setter de Kakuro
@@ -28,7 +27,6 @@ public class CtrlValidate {
      *
      * @param currentKakuro instància de Kakuro
      */
-
     public static void setKakuro(Kakuro currentKakuro) {
         kakuro = currentKakuro;
     }
@@ -43,7 +41,6 @@ public class CtrlValidate {
      * @param no indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.
      *
      */
-
     public static void computePosSumsRec(int arr[], int index, int reducedNum, int lim, int posSums[], int no) {
         if (reducedNum < 0 || index > lim)
             return;
@@ -75,7 +72,6 @@ public class CtrlValidate {
      *
      * @return un array de 9 posiciones en el que dado un valor x, un número de casillas y un valor de no, deja un 1 en las posiciones de los números que aparezcan en las combinacione y un 0 para aquellos que no
      */
-
     public static int [] computePosSums(int x, int n, int no) { //calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.
         int [] posSums = new int[9];
         for(int i=0; i<9; ++i) posSums[i] = 0;
@@ -85,6 +81,7 @@ public class CtrlValidate {
         computePosSumsRec(arr, 0, x-no, n, posSums, no);
         return posSums;
     }
+
     /**@Brief Encuentra casillas con un valor fijado por columna o fila
      *
      * @param tempBoard es un tablero auxiliar donde cada posicion consta de 9 números (-1, 0 o 1). -1 indica negra o no tratado aún, 0 indica valor no posible y 1 indica valor posible. Ejemplo = 1 0 1 0 0 0 0 0 1, valores posibles: 1, 3, 9.
@@ -148,7 +145,6 @@ public class CtrlValidate {
      * @return true si solo hay un 1,
      * @return false si no hay 1 o hay mas de un 1
      */
-
     public static boolean isUnique(int [] a) { //a tiene mida 9
         int b = 0;
         for(int i=0; i<9; ++i)
@@ -165,8 +161,6 @@ public class CtrlValidate {
      *
      * @return número de casillas nuevas con valor único
      */
-
-
     public static int checkForNewUniques(int [][][] tempBoard) {
         Cell[][] board = kakuro.getBoard();
         int changed = 0;
@@ -258,8 +252,6 @@ public class CtrlValidate {
     /** @brief Asigna dificultad a un kakuro
      * Asigna dificultad 1 si es un kakuro fácil, 2 si es mediano o 3 si es difícil
      */
-
-
     public static void setDifficulty() {
         //System.out.println("uwu1");
         int maxRunLength = 0;
@@ -484,7 +476,6 @@ public class CtrlValidate {
      *
      * @return retorna cuantos 1 hay en a
      */
-
     public static double howManyNumbers(int [] a) {
         double b = 0;
         for (int i=0; i<9; ++i) {
@@ -501,7 +492,6 @@ public class CtrlValidate {
      * @param vec vector de 10 posiciones donde vec[i] es 1 si hemos puesto i en la fila, 0 si no.
      * @param res guarda cuantas soluciones hemos encontrado hasta el momento
      */
-
     public static void validate(int r, int c, int sum, int [] vec, int [] res) {
         if (res[0]==2) return;
         if( r == kakuro.getRowSize() ) { res[0]++; } //hemos llegado al final, la solucion es correcta

@@ -48,6 +48,7 @@ public class CtrlGenerate {
         if (!board[i][j].isWhite()) return 0;
         return 1 + countWhiteCellsV(board, i - 1, j);
     }
+
     /**@brief función para saber el número de celdas blancas situadas en la misma run horizontal y antes que una celda dada.
      *
      * @param board representa un tablero con celdas blancas y negras
@@ -98,6 +99,7 @@ public class CtrlGenerate {
             tempBoard[lastR][lastC][1] = count;
         }
     }
+
     /**@brief función que cuenta el número de celdas blancas de cada run horizontal
      *
      * @param board representa un tablero con celdas blancas y negras
@@ -735,7 +737,6 @@ public class CtrlGenerate {
         return currentKakuro;
     }
 
-
     /**@brief función que genera la primera y la última fila del talbero de manera que simétrico
      *
      * @param board representa un tablero con celdas sin especificar
@@ -780,7 +781,6 @@ public class CtrlGenerate {
         }
         ++i;
     }
-
 
     /**@brief función que rellena el tablero con celdas blancas y negras evitando runs superiores a 9 y de forma que sea simétrico
      *
@@ -847,7 +847,6 @@ public class CtrlGenerate {
      *
      * Mientras el tablero contenga alguna casilla blanca solitária hará los cambios que hagan falta.
      */
-
     public static void checkBoard(Cell[][] board) {
         int size = board.length;
         boolean canvi = true;
@@ -945,4 +944,3 @@ public class CtrlGenerate {
         return false;
     }
 }
-
