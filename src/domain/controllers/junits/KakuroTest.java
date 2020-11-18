@@ -29,7 +29,7 @@ public class KakuroTest {
             "*,C13F9,?,?,?,C4,C6F23,?,?,?\n" +
             "F13,?,?,F36,?,?,?,?,?,?\n" +
             "F5,?,?,*,F9,?,?,?,*,*\n";
-    public static final String KAKURO_MAL = "12,10\n" +
+    public static final String KAKURO_MAL_INDEX = "13,10\n" +
             "*,*,1,C34,C4,C11,*,*,C12,C15\n" +
             "*,C15,C21F20,?,?,?,C6,F7,?,?\n" +
             "F21,?,?,?,?,?,?,C12F12,?,?\n" +
@@ -42,6 +42,20 @@ public class KakuroTest {
             "*,C13F9,?,?,?,C4,C6F23,?,?,?\n" +
             "F13,?,?,F36,?,?,?,?,?,?\n" +
             "F5,?,?,*,F9,?,?,?,*,*\n";
+
+    public static final String KAKURO_MAL_CHAR = "12,10\n" +
+            "*,*,1,C34,C4,C11,*,*,C12,C15\n" +
+            "*,C15,C21F20,?,?,?,C6,F7,?,?\n" +
+            "F21,?,?,?,?,?,?,C12F12,?,?\n" +
+            "F17,?,?,?,*,C16F19,?,?,?,*\n" +
+            "*,C23F10,?,?,C10F6,?,?,?,C24,C23\n" +
+            "F34,?,?,?,?,?,C11,F16,?,?\n" +
+            "F15,?,?,F13,?,?,?,C34F9,?,?\n" +
+            "F9,?,?,C9,C23F16,?,?,?,?,?\n" +
+            "*,*,C7F21,?,?,?,F9,?,?,C16\n" +
+            "*,C13F9,?,?,?,C4,C6F23,?,?,?\n" +
+            "F13,?,?,F36,?,?,?,?,?,?\n" +
+            "F5,?,?,#,F9,?,?,?,*,*\n";
 
     public static final String KAKURO_SMALL = "5,5\n" +
             "*,C16,C8,*,*\n"+
@@ -92,13 +106,14 @@ public class KakuroTest {
      * Comprueba que se genera una excpeción si se introduce un Kakuro en formato String no válido
      */
 
-    @Test
-    public void testKakuroInvalid() {
-        try {
-            new Kakuro(KAKURO_MAL);
-            fail("Exception was expected");
-        } catch (Exception e) {
-        }
+    @Test (expected=IndexOutOfBoundsException.class)
+    public void testKakuroInvalidIndex() {
+            new Kakuro(KAKURO_MAL_INDEX);
+    }
+
+    @Test (expected=NumberFormatException.class)
+    public void testKakuroInvalidCharacter() {
+        new Kakuro(KAKURO_MAL_CHAR);
     }
 
     /** @brief Test de kakuro a string
