@@ -115,7 +115,6 @@ public class CtrlValidate {
                 }
 
                 if (uniqueTemp == 1) {
-                    System.out.println("Unique i:"+i+" j:"+(j+x));
                     ++unique;
                 }
             }
@@ -135,7 +134,6 @@ public class CtrlValidate {
                 }
 
                 if (uniqueTemp == 1) {
-                    System.out.println("Unique i:"+(i+x)+" j:"+(j));
                     ++unique;
                 }
             }
