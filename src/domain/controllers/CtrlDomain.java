@@ -50,7 +50,7 @@ public class CtrlDomain {
         try {
             searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
         } catch (IOException e) {
-            currentKakuro = CtrlGenerate.generate(kakuroSizeRow);
+            currentKakuro = CtrlGenerate.generate(kakuroSizeRow,difficulty);
         }
         CtrlPlay.startGame(currentKakuro);
         //currentGame = new Game(0,0, currentKakuro);
@@ -137,8 +137,8 @@ public class CtrlDomain {
     /** @brief Se genera un Kakuro
      *
      */
-    public void generate(int size) {
-        currentKakuro = CtrlGenerate.generate(size);
+    public void generate(int size, int dif) {
+        currentKakuro = CtrlGenerate.generate(size,dif);
     }
 
     /* GETTERS AND SETTERS (CLASSES) */
@@ -234,6 +234,6 @@ public class CtrlDomain {
      * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
      */
     public boolean checkCoord(int x, int y) {
-        return (x < getRowSize() || x >= 0 || y < getColumnSize() || y >= 0);
+        return (x < getRowSize() && x >= 0 && y < getColumnSize() && y >= 0);
     }
 }

@@ -35,7 +35,7 @@ public class DriverCtrlResolve {
         System.out.println("Indique un kakuro para realizar el test: ");
         String kakuroText = readKakuro();
         Kakuro kakuro = new Kakuro(kakuroText);
-        System.out.println("¿Tiene solución?(1 si, 0 no)");
+        System.out.println("Tiene solucion?(1 si, 0 no)");
         int r = readNumber();
         CtrlResolve.setKakuro(kakuro);
         int fila = 0;
@@ -48,7 +48,7 @@ public class DriverCtrlResolve {
                 String s = kakuro.correctToString();
                 System.out.print(s);
             }
-            else System.out.println("No se ha encontrado solución");
+            else System.out.println("No se ha encontrado solucion");
             System.out.println("Test correcto");
         }
         else System.out.println("Test incorrecto");
@@ -66,16 +66,17 @@ public class DriverCtrlResolve {
             switch(value) {
                 case 1:
                     System.out.println();
-                    System.out.println("Se llama a la cradora");
+                    System.out.println("Se llama a la creadora");
                     testCreadora();
                     break;
                 case 2:
                     System.out.println();
+                    System.out.println("Se llama a resolver");
                     testResolve();
                     break;
                 default:
                     System.out.println();
-                    System.out.println("El número introduciodo es incorrecto");
+                    System.out.println("El numero introduciodo es incorrecto");
                     break;
 
             }
