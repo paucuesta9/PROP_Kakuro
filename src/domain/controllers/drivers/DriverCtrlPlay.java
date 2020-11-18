@@ -19,15 +19,6 @@ import java.util.Scanner;
 public class DriverCtrlPlay {
     private static Scanner reader = new Scanner((System.in));
 
-    /** @brief Test de la creadora
-     *
-     * Comprueba si se crea correctamente
-     */
-    private static void testCreadora() {
-        CtrlPlay ctrlPlay = new CtrlPlay();
-        System.out.println("Se ha creado");
-    }
-
     /** @brief Test del startGame
      *
      * Comprueba que la función startGame se ejecute correctamente
@@ -86,22 +77,18 @@ public class DriverCtrlPlay {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Ayuda para el valor del usuario \n 4. Ayuda para el valor correcto de una celda blanca \n 5. Salir");
+        System.out.println("Opciones: \n1. Empezar una partida \n 2. Ayuda para el valor del usuario \n 3. Ayuda para el valor correcto de una celda blanca \n 4. Salir");
         int value = readNumber();
-        while (value != 5) {
+        while (value != 4) {
             int x, y;
             switch (value) {
                 case 1:
-                    System.out.println("Se llama a la creadora");
-                    testCreadora();
-                    break;
-                case 2:
                     System.out.println("Indique un Kakuro en el formato correcto");
                     String kakuro = readKakuro();
                     System.out.println("Se llama a startGame");
                     testStartGame(kakuro);
                     break;
-                case 3:
+                case 2:
                     System.out.println("Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
                     x = readNumber();
                     y = readNumber();
@@ -110,7 +97,7 @@ public class DriverCtrlPlay {
                     System.out.println("Se llama a helpMyValue");
                     testHelpMyValue(kakuro1, kakuroSol, x, y);
                     break;
-                case 4:
+                case 3:
                     System.out.println("Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
                     x = readNumber();
                     y = readNumber();
@@ -123,7 +110,7 @@ public class DriverCtrlPlay {
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("\nOpciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Ayuda para el valor del usuario \n 4. Ayuda para el valor correcto de una celda blanca \n 5. Salir");
+            System.out.println("\nOpciones: \n1. Empezar una partida \n 2. Ayuda para el valor del usuario \n 3. Ayuda para el valor correcto de una celda blanca \n 4. Salir");
             value = readNumber();
         }
         System.exit(0);

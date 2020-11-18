@@ -4,20 +4,18 @@ Opciones:
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar la validez a partir de la colocacion de una celda 
- 18. Mirar si se ha terminado 
- 19. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a la Creadora 1
 El Kakuro se ha creado
 
@@ -27,19 +25,18 @@ El Kakuro se ha creado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique un Kakuro en el formato correcto
 Se llama a la creadora 2
 El Kakuro se ha creado
@@ -50,19 +47,40 @@ El Kakuro se ha creado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Indique un Kakuro en el formato correcto
+Se llama a la creadora 2
+El kakuro contiene alguna o varias casillas con un formato incorrecto
+
+ Opciones: 
+ 1. Creadora con valores 
+ 2. Creadora a partir de String 
+ 3. Convertir Kakuro a String 
+ 4. Convertir Kakuro correcto a String 
+ 5. Setter de row 
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a convertir Kakuro a String
 9,9
 *,*,C19,C12,*,*,*,C7,C10
@@ -82,19 +100,18 @@ F6,?,?,*,*,F8,?,?,*
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a convertir Kakuro correcto a String
 9,9
 *,*,C19,C12,*,*,*,C7,C10
@@ -114,19 +131,18 @@ F6,4,2,*,*,F8,3,5,*
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a getId
 ID: null
 
@@ -136,19 +152,18 @@ ID: null
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca una dificultad
 Se llama a getDifficulty
 Difficulty: 3
@@ -159,19 +174,18 @@ Difficulty: 3
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique una dificultad
 Se llama a setDifficulty 
 Se ha actualizado el valor difficulty
@@ -182,19 +196,18 @@ Se ha actualizado el valor difficulty
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique una dificultad
 Se llama a setDifficulty 
 Se ha actualizado el valor difficulty
@@ -205,19 +218,18 @@ Se ha actualizado el valor difficulty
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique una dificultad
 Se llama a setDifficulty 
 Se ha actualizado el valor difficulty
@@ -228,19 +240,18 @@ Se ha actualizado el valor difficulty
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a getRowSize
 RowSize: 9
 
@@ -250,19 +261,18 @@ RowSize: 9
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a getColumnSize
 ColumnSize: 9
 
@@ -272,19 +282,18 @@ ColumnSize: 9
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Se llama a getBoard
 Se ha obtenido el tablero y se imprime: 
 *,*,C19,C12,*,*,*,C7,C10
@@ -303,19 +312,18 @@ F6,?,?,*,*,F8,?,?,*
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique la posicion x e y de la celda que quiere obtener (0 < x, y < 10)
 Se llama a getCell
 Se ha obtenido la celda buscada
@@ -326,19 +334,18 @@ Se ha obtenido la celda buscada
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique la posicion x e y de la celda que quiere colocar (0 < x, y < 10) y el valor
 Se llama a setValue
 La celda en la posicion x e y es negra y por lo tanto no se ha actualizado
@@ -349,19 +356,18 @@ La celda en la posicion x e y es negra y por lo tanto no se ha actualizado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique la posicion x e y de la celda que quiere colocar (0 < x, y < 10) y el valor
 Se llama a setValue
 La celda en la posicion x e y es blanca y se ha actualizado correctamente
@@ -372,19 +378,27 @@ La celda en la posicion x e y es blanca y se ha actualizado correctamente
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Se llama a checkColumn
+Introduce un kakuro para realizar el test:
+Introduce el kakuro solucionado para realizar el test:
+Indica la fila de la casilla para hacer el test:
+Indica la columna de la casilla para hacer el test:
+Indica el valor a comprobar:
+¿Es la ultima celda de la run vertical?
+¿El valor deberia ser correcto?
+Solucion correcta
 
  Opciones: 
  1. Creadora con valores 
@@ -392,19 +406,102 @@ La celda en la posicion x e y es blanca y se ha actualizado correctamente
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Se llama a checkColumn
+Introduce un kakuro para realizar el test:
+Introduce el kakuro solucionado para realizar el test:
+Indica la fila de la casilla para hacer el test:
+Indica la columna de la casilla para hacer el test:
+Indica el valor a comprobar:
+¿Es la ultima celda de la run vertical?
+¿El valor deberia ser correcto?
+Solucion correcta
+
+ Opciones: 
+ 1. Creadora con valores 
+ 2. Creadora a partir de String 
+ 3. Convertir Kakuro a String 
+ 4. Convertir Kakuro correcto a String 
+ 5. Setter de row 
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Se llama a checkColumn
+Introduce un kakuro para realizar el test:
+Introduce el kakuro solucionado para realizar el test:
+Indica la fila de la casilla para hacer el test:
+Indica la columna de la casilla para hacer el test:
+Indica el valor a comprobar:
+¿Es la ultima celda de la run vertical?
+¿El valor deberia ser correcto?
+Solucion incorrecta
+
+ Opciones: 
+ 1. Creadora con valores 
+ 2. Creadora a partir de String 
+ 3. Convertir Kakuro a String 
+ 4. Convertir Kakuro correcto a String 
+ 5. Setter de row 
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Se llama a checkColumn
+Introduce un kakuro para realizar el test:
+Introduce el kakuro solucionado para realizar el test:
+Indica la fila de la casilla para hacer el test:
+Indica la columna de la casilla para hacer el test:
+Indica el valor a comprobar:
+¿Es la ultima celda de la run vertical?
+¿El valor deberia ser correcto?
+Solucion correcta
+
+ Opciones: 
+ 1. Creadora con valores 
+ 2. Creadora a partir de String 
+ 3. Convertir Kakuro a String 
+ 4. Convertir Kakuro correcto a String 
+ 5. Setter de row 
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
 Se llama a checkRowValidity
 El valor introducido no cumple las condiciones de la fila
@@ -415,19 +512,18 @@ El valor introducido no cumple las condiciones de la fila
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
 Se llama a checkRowValidity
 El valor introducido cumple las condiciones de la fila
@@ -438,19 +534,18 @@ El valor introducido cumple las condiciones de la fila
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
 Se llama a checkRowValidity
 El valor introducido no cumple las condiciones de la fila
@@ -461,19 +556,62 @@ El valor introducido no cumple las condiciones de la fila
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
+Se llama a checkRowValidity
+El valor introducido cumple las condiciones de la fila
+
+ Opciones: 
+ 1. Creadora con valores 
+ 2. Creadora a partir de String 
+ 3. Convertir Kakuro a String 
+ 4. Convertir Kakuro correcto a String 
+ 5. Setter de row 
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
+Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
+Se llama a checkColumnValidity
+El valor introducido no cumple las condiciones de la columna
+
+ Opciones: 
+ 1. Creadora con valores 
+ 2. Creadora a partir de String 
+ 3. Convertir Kakuro a String 
+ 4. Convertir Kakuro correcto a String 
+ 5. Setter de row 
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
 Se llama a checkColumnValidity
 El valor introducido cumple las condiciones de la columna
@@ -484,19 +622,18 @@ El valor introducido cumple las condiciones de la columna
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
 Se llama a checkColumnValidity
 El valor introducido no cumple las condiciones de la columna
@@ -507,22 +644,21 @@ El valor introducido no cumple las condiciones de la columna
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar
 Se llama a checkColumnValidity
-El valor introducido no cumple las condiciones de la columna
+El valor introducido cumple las condiciones de la columna
 
  Opciones: 
  1. Creadora con valores 
@@ -530,19 +666,18 @@ El valor introducido no cumple las condiciones de la columna
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto
 Se llama a isFinished
 El kakuro aun no se ha terminado
@@ -553,19 +688,18 @@ El kakuro aun no se ha terminado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto
 Se llama a isFinished
 El kakuro aun no se ha terminado
@@ -576,19 +710,18 @@ El kakuro aun no se ha terminado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto
 Se llama a isFinished
 El kakuro se ha terminado
@@ -599,19 +732,18 @@ El kakuro se ha terminado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir
 Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto
 Se llama a isFinished
 El kakuro aun no se ha terminado
@@ -622,16 +754,15 @@ El kakuro aun no se ha terminado
  3. Convertir Kakuro a String 
  4. Convertir Kakuro correcto a String 
  5. Setter de row 
- 6. Getter id 
- 7. Getter difficulty
- 8. Setter difficulty 
- 9. Getter rowSize 
- 10. Getter columnSize 
- 11. Getter board 
- 12. Getter cell 
- 13. Setter value en celda blanca 
- 14. Check column 
- 15. Mirar validez de fila 
- 16. Mirar validez de la columna
- 17. Mirar si se ha terminado 
- 18. Salir
+ 6. Getter difficulty
+ 7. Setter difficulty 
+ 8. Getter rowSize 
+ 9. Getter columnSize 
+ 10. Getter board 
+ 11. Getter cell 
+ 12. Setter value en celda blanca 
+ 13. Check column 
+ 14. Mirar validez de fila 
+ 15. Mirar validez de la columna
+ 16. Mirar si se ha terminado 
+ 17. Salir

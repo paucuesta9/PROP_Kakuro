@@ -35,8 +35,15 @@ public class DriverKakuro {
     }
 
     private static void testCreadora2(String kakuroText) {
-        Kakuro k = new Kakuro(kakuroText);
-        System.out.println("El Kakuro se ha creado");
+        try {
+            Kakuro k = new Kakuro(kakuroText);
+            System.out.println("El Kakuro se ha creado");
+        }catch (IndexOutOfBoundsException e) {
+            System.out.println("El tamaño indicado del Kakuro no corresponde con el tamaño real");
+        } catch (NumberFormatException e) {
+            System.out.println("El kakuro contiene alguna o varias casillas con un formato incorrecto");
+        }
+
     }
 
     private static void testToString() {
@@ -99,11 +106,11 @@ public class DriverKakuro {
         System.out.println("ID: " + k.getId());
     }
 
-    private static void testSetId(int id) {
-        Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
-        // k.setId(String.valueOf(id));
-        System.out.println("Se ha actualizado el valor del id");
-    }
+//    private static void testSetId(int id) {
+//        Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
+//        // k.setId(String.valueOf(id));
+//        System.out.println("Se ha actualizado el valor del id");
+//    }
 
     private static void testGetDifficulty(int diff) {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
@@ -166,7 +173,31 @@ public class DriverKakuro {
     }
 
     private static void testCheckColumn() {
+        System.out.println("Introduce un kakuro para realizar el test:");
+        String kakuro1 = readKakuro();
+        System.out.println("Introduce el kakuro solucionado para realizar el test:");
+        String kakuroSol = readKakuro();
+        System.out.println("Indica la fila de la casilla para hacer el test:");
+        int f = readNumber();
+        System.out.println("Indica la columna de la casilla para hacer el test:");
+        int c = readNumber();
+        System.out.println("Indica el valor a comprobar:");
+        int n = readNumber();
+        System.out.println("¿Es la ultima celda de la run vertical?");
+        int end = readNumber();
+        System.out.println("¿El valor deberia ser correcto?");
+        int s = readNumber();
 
+        boolean b = false;
+        if(end == 1) b = true;
+        Kakuro k = new Kakuro(kakuro1);
+        Kakuro kSol = new Kakuro(kakuroSol);
+        Cell[][] board = k.getBoard();
+        Cell[][] boardSol = kSol.getBoard();
+        if (board[f][c].isWhite()) ((WhiteCell) board[f][c]).setCorrectValue(((WhiteCell)boardSol[f][c]).getValue());
+        boolean r = k.checkColumn(f,c,n,b,n);
+        if((r && s == 1) || (!r && s == 0)) System.out.println("Solucion correcta");
+        else System.out.println("Solucion incorrecta");
     }
 
     private static void testCheckRowValidity(int x, int y, int value, String kakuro) {
@@ -199,11 +230,11 @@ public class DriverKakuro {
     }
 
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter id \n 7. Getter difficulty" +
-                "\n 8. Setter difficulty \n 9. Getter rowSize \n 10. Getter columnSize \n 11. Getter board \n 12. Getter cell \n 13. Setter value en celda blanca \n 14. Check column \n 15. Mirar validez de fila \n 16. Mirar validez de la columna" +
-                "\n 17. Mirar la validez a partir de la colocacion de una celda \n 18. Mirar si se ha terminado \n 19. Salir");
+        System.out.println("Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty" +
+                "\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna" +
+                "\n 16. Mirar si se ha terminado \n 17. Salir");
         int value = readNumber();
-        while (value != 18) {
+        while (value != 17) {
             int x, y;
             switch (value) {
                 case 1:
@@ -229,43 +260,37 @@ public class DriverKakuro {
                     testGetId();
                     break;
                 case 6:
-                    System.out.println("Indique un identificador");
-                    int id = readNumber();
-                    System.out.println("Se llama a setId con el valor que ha introducido");
-                    testSetId(id);
-                    break;
-                case 7:
                     System.out.println("Introduzca una dificultad");
                     int diff = readNumber();
                     System.out.println("Se llama a getDifficulty");
                     testGetDifficulty(diff);
                     break;
-                case 8:
+                case 7:
                     System.out.println("Indique una dificultad");
                     int difficulty = readNumber();
                     System.out.println("Se llama a setDifficulty ");
                     testSetDifficulty(difficulty);
                     break;
-                case 9:
+                case 8:
                     System.out.println("Se llama a getRowSize");
                     testGetRowSize();
                     break;
-                case 10:
+                case 9:
                     System.out.println("Se llama a getColumnSize");
                     testGetColumnSize();
                     break;
-                case 11:
+                case 10:
                     System.out.println("Se llama a getBoard");
                     testGetBoard();
                     break;
-                case 12:
+                case 11:
                     System.out.println("Indique la posicion x e y de la celda que quiere obtener (0 < x, y < 10)");
                     x = readNumber();
                     y = readNumber();
                     System.out.println("Se llama a getCell");
                     testGetCell(x, y);
                     break;
-                case 13:
+                case 12:
                     System.out.println("Indique la posicion x e y de la celda que quiere colocar (0 < x, y < 10) y el valor");
                     x = readNumber();
                     y = readNumber();
@@ -273,10 +298,11 @@ public class DriverKakuro {
                     System.out.println("Se llama a setValue");
                     testSetValue(x, y, value);
                     break;
-                case 14:
+                case 13:
+                    System.out.println("Se llama a checkColumn");
                     testCheckColumn();
                     break;
-                case 15:
+                case 14:
                     System.out.println("Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar");
                     x = readNumber();
                     y = readNumber();
@@ -285,7 +311,7 @@ public class DriverKakuro {
                     System.out.println("Se llama a checkRowValidity");
                     testCheckRowValidity(x,y,value,kakuro);
                     break;
-                case 16:
+                case 15:
                     System.out.println("Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar");
                     x = readNumber();
                     y = readNumber();
@@ -294,7 +320,7 @@ public class DriverKakuro {
                     System.out.println("Se llama a checkColumnValidity");
                     testCheckColumnValidity(x,y,value,kakuro);
                     break;
-                case 17:
+                case 16:
                     System.out.println("Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto");
 
                     String kakuro1 = readKakuro();
@@ -307,9 +333,9 @@ public class DriverKakuro {
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("\n Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter id \n 7. Getter difficulty" +
-                    "\n 8. Setter difficulty \n 9. Getter rowSize \n 10. Getter columnSize \n 11. Getter board \n 12. Getter cell \n 13. Setter value en celda blanca \n 14. Check column \n 15. Mirar validez de fila \n 16. Mirar validez de la columna" +
-                    "\n 17. Mirar si se ha terminado \n 18. Salir");
+            System.out.println("\n Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty" +
+                    "\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna" +
+                    "\n 16. Mirar si se ha terminado \n 17. Salir");
             value = readNumber();
         }
         System.exit(0);

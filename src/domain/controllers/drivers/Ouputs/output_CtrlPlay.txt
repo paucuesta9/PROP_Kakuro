@@ -1,115 +1,95 @@
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
-Se llama a la creadora
-Se ha creado
-
-Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique un Kakuro en el formato correcto
 Se llama a startGame
 Se ha empezado una partida
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpMyValue
 La celda no tiene un valor asignado
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpMyValue
 La celda no es blanca
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpMyValue
 La celda no es blanca
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpMyValue
 El valor es correcto
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpMyValue
 El valor no es correcto
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpCorrectNumber
 El valor de la celda se ha cambiado correctamente
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpCorrectNumber
 No es una celda blanca
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpCorrectNumber
 No es una celda blanca
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
 Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
 Se llama a helpCorrectNumber
 El valor de la celda se ha cambiado correctamente
 
 Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Ayuda para el valor del usuario 
- 4. Ayuda para el valor correcto de una celda blanca 
- 5. Salir
+1. Empezar una partida 
+ 2. Ayuda para el valor del usuario 
+ 3. Ayuda para el valor correcto de una celda blanca 
+ 4. Salir
