@@ -22,7 +22,7 @@ run_driver_Cell_man:
 	cd bin && java domain.controllers.drivers.DriverCell
 
 run_driver_Cell_auto:
-	cd bin && java domain.controllers.drivers.DriverCell < ../src/domain/controllers/drivers/inputs/input_Cell.txt
+	cd bin && java domain.controllers.drivers.DriverCell < ../src/domain/controllers/drivers/Inputs/input_Cell.txt
 
 clean:
 	rm -rf bin/domain
