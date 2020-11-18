@@ -45,4 +45,5 @@ OTROS
     Todos:
         - Casos de uso
         - Diagrama de clases
+	- Descripción Juegos de Prueba
 
