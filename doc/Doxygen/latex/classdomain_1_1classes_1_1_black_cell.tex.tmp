@@ -1,0 +1,227 @@
+\hypertarget{classdomain_1_1classes_1_1_black_cell}{}\doxysection{Referencia de la Clase domain.\+classes.\+Black\+Cell}
+\label{classdomain_1_1classes_1_1_black_cell}\index{domain.classes.BlackCell@{domain.classes.BlackCell}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{Black\+Cell}} que identifica y contiene los atributos necesarios de una celda negra.  
+
+
+
+
+Diagrama de herencias de domain.\+classes.\+Black\+Cell
+% FIG 0
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ad27d0c4968e9037a8cf5a406ab399498}{Black\+Cell}} ()
+\begin{DoxyCompactList}\small\item\em Creadora de celda negra sin valores. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a60ea32d3b734fe848c498299df382a32}{Black\+Cell}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}}, int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}})
+\begin{DoxyCompactList}\small\item\em Creadora de celda negra con valores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{get\+Column}} ()
+\begin{DoxyCompactList}\small\item\em Getter del atributo vertical. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{get\+Row}} ()
+\begin{DoxyCompactList}\small\item\em Getter del atributo row. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ab393badca07631e5216408b1ae8c76f0}{set\+Column}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}})
+\begin{DoxyCompactList}\small\item\em Setter del atributo column. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_afb50b491b5f6b2b8c5159b1bbaf9e824}{set\+Row}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}})
+\begin{DoxyCompactList}\small\item\em Setter del atributo row. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}}
+\item 
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{Black\+Cell}} que identifica y contiene los atributos necesarios de una celda negra. 
+
+Definición en la línea 10 del archivo Black\+Cell.\+java.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_ad27d0c4968e9037a8cf5a406ab399498}\label{classdomain_1_1classes_1_1_black_cell_ad27d0c4968e9037a8cf5a406ab399498}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!BlackCell@{BlackCell}}
+\index{BlackCell@{BlackCell}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{BlackCell()}{BlackCell()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily domain.\+classes.\+Black\+Cell.\+Black\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora de celda negra sin valores. 
+
+Se ejecuta automáticamente al declarar una celda negra sin valores. 
+
+Definición en la línea 25 del archivo Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{25                        \{}
+\DoxyCodeLine{26         super();}
+\DoxyCodeLine{27         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}} = 0;}
+\DoxyCodeLine{28         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}} = 0;}
+\DoxyCodeLine{29     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_a60ea32d3b734fe848c498299df382a32}\label{classdomain_1_1classes_1_1_black_cell_a60ea32d3b734fe848c498299df382a32}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!BlackCell@{BlackCell}}
+\index{BlackCell@{BlackCell}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{BlackCell()}{BlackCell()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily domain.\+classes.\+Black\+Cell.\+Black\+Cell (\begin{DoxyParamCaption}\item[{int}]{column,  }\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Creadora de celda negra con valores. 
+
+Se ejecuta automáticamente al declarar una celda negra con valores. 
+\begin{DoxyParams}{Parámetros}
+{\em column} & representa el valor de la suma de la columna \\
+\hline
+{\em row} & representa el valor de la suma de la fila \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 37 del archivo Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                           \{}
+\DoxyCodeLine{38         super();}
+\DoxyCodeLine{39         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}};}
+\DoxyCodeLine{40         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}};}
+\DoxyCodeLine{41     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}\label{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!getColumn@{getColumn}}
+\index{getColumn@{getColumn}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{getColumn()}{getColumn()}}
+{\footnotesize\ttfamily int domain.\+classes.\+Black\+Cell.\+get\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del atributo vertical. 
+
+\begin{DoxyReturn}{Devuelve}
+el valor del atributo column 
+\end{DoxyReturn}
+
+
+Definición en la línea 47 del archivo Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47                            \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}};}
+\DoxyCodeLine{49     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}\label{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!getRow@{getRow}}
+\index{getRow@{getRow}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{getRow()}{getRow()}}
+{\footnotesize\ttfamily int domain.\+classes.\+Black\+Cell.\+get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter del atributo row. 
+
+\begin{DoxyReturn}{Devuelve}
+el valor del atributo row 
+\end{DoxyReturn}
+
+
+Definición en la línea 55 del archivo Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55                         \{}
+\DoxyCodeLine{56         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}};}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_ab393badca07631e5216408b1ae8c76f0}\label{classdomain_1_1classes_1_1_black_cell_ab393badca07631e5216408b1ae8c76f0}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!setColumn@{setColumn}}
+\index{setColumn@{setColumn}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{setColumn()}{setColumn()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Black\+Cell.\+set\+Column (\begin{DoxyParamCaption}\item[{int}]{column }\end{DoxyParamCaption})}
+
+
+
+Setter del atributo column. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em column} & representa el valor de la suma de la columna \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 63 del archivo Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                       \{}
+\DoxyCodeLine{64         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}{column}};}
+\DoxyCodeLine{65     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_afb50b491b5f6b2b8c5159b1bbaf9e824}\label{classdomain_1_1classes_1_1_black_cell_afb50b491b5f6b2b8c5159b1bbaf9e824}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!setRow@{setRow}}
+\index{setRow@{setRow}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{setRow()}{setRow()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Black\+Cell.\+set\+Row (\begin{DoxyParamCaption}\item[{int}]{row }\end{DoxyParamCaption})}
+
+
+
+Setter del atributo row. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em row} & representa el valor de la suma de la fila \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 71 del archivo Black\+Cell.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{71                                 \{}
+\DoxyCodeLine{72         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}{row}};}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}\label{classdomain_1_1classes_1_1_black_cell_ac147a7f866244fe5d8fc74944745ce63}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!column@{column}}
+\index{column@{column}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{column}{column}}
+{\footnotesize\ttfamily int domain.\+classes.\+Black\+Cell.\+column\hspace{0.3cm}{\ttfamily [private]}}
+
+column es el valor de la suma de la columna 
+
+Definición en la línea 14 del archivo Black\+Cell.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}\label{classdomain_1_1classes_1_1_black_cell_aba4335b13cc26463cb770752637319bc}} 
+\index{domain.classes.BlackCell@{domain.classes.BlackCell}!row@{row}}
+\index{row@{row}!domain.classes.BlackCell@{domain.classes.BlackCell}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily int domain.\+classes.\+Black\+Cell.\+row\hspace{0.3cm}{\ttfamily [private]}}
+
+row es el valor de la suma de la fila 
+
+Definición en la línea 19 del archivo Black\+Cell.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_black_cell_8java}{Black\+Cell.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.20"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Kakuro: Fichero Fuente Game.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Kakuro
+   &#160;<span id="projectnumber">version 1 20-nov-2020</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.20 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_59e154daa71ab644ff60a4d6c4d01bbf.html">domain</a></li><li class="navelem"><a class="el" href="dir_9b2219022fbdec5d0f4f4fac5bde3be2.html">classes</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Game.java</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_game_8java.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">package </span>domain.classes;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> java.util.Timer;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> java.util.TimerTask;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html">    8</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classdomain_1_1classes_1_1_game.html">Game</a> {</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#ac68a9a959095054346fb9a27c8bf8086">    9</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#ac68a9a959095054346fb9a27c8bf8086">id</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">   10</a></span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">timeSec</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a2ece3cfef5c960e989e893559f5b6db0">   11</a></span>&#160;    <span class="keyword">private</span> Timer <a class="code" href="classdomain_1_1classes_1_1_game.html#a2ece3cfef5c960e989e893559f5b6db0">timer</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">   12</a></span>&#160;    <span class="keyword">private</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html">Kakuro</a> <a class="code" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">kakuro</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a0200afdd32b101fcb030f0f67c776957">   14</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a0200afdd32b101fcb030f0f67c776957">Game</a>() {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        this.<span class="keywordtype">id</span> = 0; <span class="comment">//TODO: Coger el número de kakuros del usuario y ponerle uno mas.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        this.timeSec = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        this.timer = <span class="keyword">new</span> Timer();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a3b2315381012e4f817aa4eeffddd35ef">   20</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a3b2315381012e4f817aa4eeffddd35ef">Game</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> time, <a class="code" href="classdomain_1_1classes_1_1_kakuro.html">Kakuro</a> <a class="code" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">kakuro</a>) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        this.<span class="keywordtype">id</span> = <a class="code" href="classdomain_1_1classes_1_1_game.html#ac68a9a959095054346fb9a27c8bf8086">id</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        this.timeSec = time;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        this.kakuro = <a class="code" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">kakuro</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        this.timer = <span class="keyword">new</span> Timer();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a42d1d29a4e58115a9d8f1ef51070edcb">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a42d1d29a4e58115a9d8f1ef51070edcb">getId</a>() {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#ac68a9a959095054346fb9a27c8bf8086">id</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a83375d8c407bce54ff97fd3fd602ece2">   31</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a83375d8c407bce54ff97fd3fd602ece2">getTimeSec</a>() {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">timeSec</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a7230f473ccb181d3f94ff4948a2a1334">   35</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a7230f473ccb181d3f94ff4948a2a1334">setTimeSec</a>(<span class="keywordtype">int</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">timeSec</a>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        this.timeSec = <a class="code" href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">timeSec</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#ad05549b617186eef98d2323fe3f87d1d">   39</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html">Kakuro</a> <a class="code" href="classdomain_1_1classes_1_1_game.html#ad05549b617186eef98d2323fe3f87d1d">getKakuro</a>() {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">kakuro</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#a8ab03f9ceec1f9b6e6a24ccc561b9e4c">   43</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#a8ab03f9ceec1f9b6e6a24ccc561b9e4c">setKakuro</a>(<a class="code" href="classdomain_1_1classes_1_1_kakuro.html">Kakuro</a> <a class="code" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">kakuro</a>) {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        this.kakuro = <a class="code" href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">kakuro</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#ae3defab8f9bd154a1fffccb3a8a67b22">   47</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#ae3defab8f9bd154a1fffccb3a8a67b22">startResumeTimer</a>() {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        TimerTask timerTask = <span class="keyword">new</span> TimerTask() {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            @Override</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">void</span> run() {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                ++<a class="code" href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">timeSec</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_game.html#a2ece3cfef5c960e989e893559f5b6db0">timer</a>.scheduleAtFixedRate(timerTask, 0, 1000);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classdomain_1_1classes_1_1_game.html#afac0e18f3e8a762d5f7564a8d0fd24e7">   57</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classdomain_1_1classes_1_1_game.html#afac0e18f3e8a762d5f7564a8d0fd24e7">pauseTimer</a>() {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_game.html#a2ece3cfef5c960e989e893559f5b6db0">timer</a>.cancel();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a914d608f7f6d97463dad2229bbc0fb1b"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a914d608f7f6d97463dad2229bbc0fb1b">domain.classes.Game.timeSec</a></div><div class="ttdeci">int timeSec</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00010">Game.java:10</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html">domain.classes.Kakuro</a></div><div class="ttdoc">Clase Kakuro que contiene los atributos y metodos de un tablero.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00010">Kakuro.java:10</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a2ece3cfef5c960e989e893559f5b6db0"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a2ece3cfef5c960e989e893559f5b6db0">domain.classes.Game.timer</a></div><div class="ttdeci">Timer timer</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00011">Game.java:11</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a0200afdd32b101fcb030f0f67c776957"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a0200afdd32b101fcb030f0f67c776957">domain.classes.Game.Game</a></div><div class="ttdeci">Game()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00014">Game.java:14</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a83375d8c407bce54ff97fd3fd602ece2"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a83375d8c407bce54ff97fd3fd602ece2">domain.classes.Game.getTimeSec</a></div><div class="ttdeci">int getTimeSec()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00031">Game.java:31</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a7230f473ccb181d3f94ff4948a2a1334"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a7230f473ccb181d3f94ff4948a2a1334">domain.classes.Game.setTimeSec</a></div><div class="ttdeci">void setTimeSec(int timeSec)</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00035">Game.java:35</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html">domain.classes.Game</a></div><div class="ttdoc">Clase Game que contiene los atributos y metodos de la clase Game.</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00008">Game.java:8</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a1491a45ace6dffa90453e33f2012c927"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a1491a45ace6dffa90453e33f2012c927">domain.classes.Game.kakuro</a></div><div class="ttdeci">Kakuro kakuro</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00012">Game.java:12</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_ac68a9a959095054346fb9a27c8bf8086"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#ac68a9a959095054346fb9a27c8bf8086">domain.classes.Game.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00009">Game.java:9</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a3b2315381012e4f817aa4eeffddd35ef"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a3b2315381012e4f817aa4eeffddd35ef">domain.classes.Game.Game</a></div><div class="ttdeci">Game(int id, int time, Kakuro kakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00020">Game.java:20</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_ad05549b617186eef98d2323fe3f87d1d"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#ad05549b617186eef98d2323fe3f87d1d">domain.classes.Game.getKakuro</a></div><div class="ttdeci">Kakuro getKakuro()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00039">Game.java:39</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_afac0e18f3e8a762d5f7564a8d0fd24e7"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#afac0e18f3e8a762d5f7564a8d0fd24e7">domain.classes.Game.pauseTimer</a></div><div class="ttdeci">void pauseTimer()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00057">Game.java:57</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_ae3defab8f9bd154a1fffccb3a8a67b22"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#ae3defab8f9bd154a1fffccb3a8a67b22">domain.classes.Game.startResumeTimer</a></div><div class="ttdeci">void startResumeTimer()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00047">Game.java:47</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a42d1d29a4e58115a9d8f1ef51070edcb"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a42d1d29a4e58115a9d8f1ef51070edcb">domain.classes.Game.getId</a></div><div class="ttdeci">int getId()</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00027">Game.java:27</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_game_html_a8ab03f9ceec1f9b6e6a24ccc561b9e4c"><div class="ttname"><a href="classdomain_1_1classes_1_1_game.html#a8ab03f9ceec1f9b6e6a24ccc561b9e4c">domain.classes.Game.setKakuro</a></div><div class="ttdeci">void setKakuro(Kakuro kakuro)</div><div class="ttdef"><b>Definition:</b> <a href="_game_8java_source.html#l00043">Game.java:43</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+</small></address>
+</body>
+</html>

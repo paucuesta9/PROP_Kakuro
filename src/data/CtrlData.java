@@ -42,7 +42,7 @@ public class CtrlData {
      * @param kakuroSizeColumn representa el tamaño de columnas del kakuro buscado
      * @return un kakuro con la dificultad y el tamaño deseado en formato String
      */
-    public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
+    public String searchKakuro (int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException {
         Random random = new Random();
         return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(getNumberOfFiles(difficulty, kakuroSizeRow, kakuroSizeColumn)) + ".txt");
     }
@@ -52,20 +52,16 @@ public class CtrlData {
      * @param filePath representa una ruta relativa
      * @return el kakuro que se encuentra en la ruta relativa en formato String
      */
-    public String getKakuro(String filePath) {
-        try {
-            StringBuilder content = new StringBuilder();
-            File file = new File(filePath);
-            FileReader fr = new FileReader(file);
-            BufferedReader br = new BufferedReader(fr);
-            String line = null;
-            while ((line = br.readLine()) != null) {
-                content.append(line).append("\n");
-            }
-            return content.toString();
-        } catch (IOException e) {
-            return "-1";
+    public String getKakuro(String filePath) throws IOException {
+        StringBuilder content = new StringBuilder();
+        File file = new File(filePath);
+        FileReader fr = new FileReader(file);
+        BufferedReader br = new BufferedReader(fr);
+        String line = null;
+        while ((line = br.readLine()) != null) {
+            content.append(line).append("\n");
         }
+        return content.toString();
     }
 
     /** @brief Guarda un kakuro en fichero
@@ -78,9 +74,10 @@ public class CtrlData {
     public void saveKakuro(String content, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
         try {
-            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn));
+            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn) + ".txt");
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
+            pw.close();
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
@@ -95,9 +92,13 @@ public class CtrlData {
      * @return la cantidad de ficheros que cumplen las condiciones
      */
     public int getNumberOfFiles(int diff, int sizeRow, int sizeColumn) {
-        File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
-        File[] listFiles = folder.listFiles();
-        return listFiles.length;
+        try {
+            File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
+            File[] listFiles = folder.listFiles();
+            return listFiles.length;
+        } catch (NullPointerException e) {
+            return -1;
+        }
     }
 
 }

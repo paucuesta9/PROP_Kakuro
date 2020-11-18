@@ -2,6 +2,7 @@ package domain.controllers.drivers;
 
 import data.CtrlData;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /** @file DriverCtrlData.java
@@ -42,7 +43,12 @@ public class DriverCtrlData {
      */
     private static void testSearchKakuro(int diff, int kakuroSizeRow, int kakuroSizeColumn) {
         CtrlData ctrlData = new CtrlData();
-        String kakuro = ctrlData.searchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
+        String kakuro = null;
+        try {
+            kakuro = ctrlData.searchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println(kakuro);
     }
 
@@ -54,9 +60,14 @@ public class DriverCtrlData {
      */
     private static void testGetKakuro(String filePath, String kakuroProbar) {
         CtrlData ctrlData = new CtrlData();
-        String kakuro = ctrlData.getKakuro(filePath);
-        if (kakuro.equals(kakuroProbar)) System.out.println("El kakuro obtenido no es el esperado");
-        else System.out.println("El kakuro obtenido no es el esperado");
+        String kakuro = null;
+        try {
+            kakuro = ctrlData.getKakuro("data/" + filePath + ".txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Este es el kakuro que se encuentra en la ruta: " + filePath + "\n" + kakuro + "\n");
+        System.out.println("Este es el kakuro esperado: \n" + kakuroProbar + "\n");
     }
 
     /**@brief Test de la función SaveKakuro
@@ -93,7 +104,7 @@ public class DriverCtrlData {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1.GetInstance \n 2. Creadora \n 3.Buscador de kakuros \n 4. Getter de kakuros \n 5. Guardar kakuros \n 6. Contador de kakuros en una carpeta \n 7. Salir ");
+        System.out.println("Opciones: \n 1. GetInstance \n 2. Creadora \n 3. Buscador de kakuros \n 4. Getter de kakuros \n 5. Guardar kakuros \n 6. Contador de kakuros en una carpeta \n 7. Salir ");
         int value = readNumber();
         while (value != 7) {
             switch(value) {
@@ -114,7 +125,7 @@ public class DriverCtrlData {
                     testSearchKakuro(diff, kakuroSizeRow, kakuroSizeColumn);
                     break;
                 case 4:
-                    System.out.println("Introduzca el filePath del kakuro  y el kakuro en el formato correcto");
+                    System.out.println("Introduzca el filePath del kakuro y el kakuro en el formato correcto");
                     String filePath = readLine();
                     String kakuroProbar = readKakuro();
                     System.out.println("Se llama a getKakuro");
@@ -142,7 +153,7 @@ public class DriverCtrlData {
                     System.out.println("El número introducido es incorrecto");
                     break;
             }
-            System.out.println("Opciones: \n 1.GetInstance \n 2. Creadora \n 3.Buscador de kakuros \n 4. Getter de kakuros \n 5. Guardar kakuros \n 6. Contador de kakuros en una carpeta \n 7. Salir ");
+            System.out.println("\n Opciones: \n 1. GetInstance \n 2. Creadora \n 3. Buscador de kakuros \n 4. Getter de kakuros \n 5. Guardar kakuros \n 6. Contador de kakuros en una carpeta \n 7. Salir ");
             value = readNumber();
         }
         System.exit(0);
@@ -155,7 +166,11 @@ public class DriverCtrlData {
      */
     public static String readKakuro() {
         StringBuilder content = new StringBuilder();
-        while (reader.hasNext())
+        String[] valuesSize = reader.next().split(",");
+        int row = Integer.parseInt(valuesSize[0]);
+        int column = Integer.parseInt(valuesSize[1]);
+        content.append((row) + "," + (column) + "\n");
+        for (int i = 0; i < row; ++i)
             content.append(reader.next()).append("\n");
         return content.toString();
     }
@@ -175,6 +190,6 @@ public class DriverCtrlData {
      * @return la línea leída
      */
     public static String readLine() {
-        return reader.nextLine();
+        return reader.next();
     }
 }

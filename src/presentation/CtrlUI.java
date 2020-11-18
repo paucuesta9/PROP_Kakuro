@@ -2,6 +2,7 @@ package presentation;
 
 import domain.controllers.CtrlDomain;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -64,9 +65,22 @@ public class CtrlUI {
             case 2:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea validar");
                 kakuro = readLine();
-                while (!cd.getKakuro("data/" + kakuro + ".txt")) {
-                    System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
-                    kakuro = readLine();
+                while (true) {
+                    try {
+                        cd.getKakuro("data/" + kakuro + ".txt");
+                        break;
+                    } catch (IOException e) {
+                        System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
+                        kakuro = readLine();
+                        continue;
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("El tamaño indicado del Kakuro no corresponde con el tamaño real");
+                        kakuro = readLine();
+                        continue;
+                    } catch (NumberFormatException e) {
+                        System.out.println("El kakuro contiene alguna o varias casillas con un formato incorrecto");
+                        continue;
+                    }
                 }
                 //cd.difficulty();
                 if (cd.validate()) {
@@ -79,9 +93,22 @@ public class CtrlUI {
             case 3:
                 System.out.println("Indique el Kakuro dentro de la carpeta data que desea resolver");
                 kakuro = readLine();
-                while (!cd.getKakuro("data/" + kakuro + ".txt")) {
-                    System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
-                    kakuro = readLine();
+                while (true) {
+                    try {
+                        cd.getKakuro("data/" + kakuro + ".txt");
+                        break;
+                    } catch (IOException e) {
+                        System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
+                        kakuro = readLine();
+                        continue;
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("El tamaño indicado del Kakuro no corresponde con el tamaño real");
+                        kakuro = readLine();
+                        continue;
+                    } catch (NumberFormatException e) {
+                        System.out.println("El kakuro contiene alguna o varias casillas con un formato incorrecto");
+                        continue;
+                    }
                 }
                 cd.resolve();
                 writeCorrectKakuroInTerminal();
@@ -125,7 +152,8 @@ public class CtrlUI {
             int kakuroSizeColumn = readNumber();
             cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn);
 
-       // }
+
+        // }
 //        else if (choice == 2) {
 //            ArrayList<Integer> startedGames= cd.getStartedGames();
 //            for (int i = 0; i < startedGames.size(); ++i) {

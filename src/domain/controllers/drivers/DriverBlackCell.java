@@ -68,7 +68,7 @@ public class DriverBlackCell {
      */
     private static void testSetColumn(int column) {
         BlackCell bc = new BlackCell();
-        bc.setRow(column);
+        bc.setColumn(column);
         System.out.println("Column = " + bc.getColumn());
     }
 
@@ -121,7 +121,7 @@ public class DriverBlackCell {
                     System.out.println("El número no es correcto");
                     break;
             }
-            System.out.println("\nOpciones: \n 1. Creadora sin valor \n 2. Creadora con valores \n 3. Obtener tamaño fila \n 4. Obtener tamaño columna \n 5. Introducir tamaño fila \n 6. Introducir tamaño columna \n 7. Salir");
+            System.out.println("\nOpciones: \n 1. Creadora sin valor \n 2. Creadora con valor \n 3. Getter de row \n 4. Getter de column \n 5. Setter de row \n 6. Setter de column \n 7. Salir");
             value = readNumber();
         }
         System.exit(0);

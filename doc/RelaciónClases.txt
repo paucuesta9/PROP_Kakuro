@@ -1,0 +1,48 @@
+LISTA CLASES IMPLEMENTADAS
+
+CLASES
+Pol:
+    - CtrlResolve
+    - Cell
+    - CtrlGenerate
+Alvaro:
+    - CtrlValidate
+    - Kakuro
+    - CtlrGenerate
+Pau:
+    - WhiteCell
+    - CtrlData
+    - CtrlDomain
+Judith:
+    - BlackCell
+    - CtrlPlay
+    - CtrlUI
+
+DRIVERS
+Pol:
+    - DriverCtrlResolve
+    - DriverCtrlGenerate
+    - DriverCtrlDomain
+Alvaro:
+    - DriverCtrlValidate
+Pau:
+    - DriverBlackCell
+    - DriverCell
+    - DriverKakuro
+Judith:
+    - DriverWhiteCell
+    - DriverCtrlPlay
+    - DriverCtrlData
+
+OTROS
+    Pau:
+        - Makefile
+    Judith:
+        - Manual del Usuario
+        - Manual de Drivers
+    Alvaro:
+        - JUnit
+    Todos:
+        - Casos de uso
+        - Diagrama de clases
+
