@@ -19,7 +19,7 @@ static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ce
 \begin{DoxyCompactList}\small\item\em Test de la creadora. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_ae30f33063d6db985fbc8a2ef424a2839}{test\+Is\+White}} ()
 \begin{DoxyCompactList}\small\item\em Test que comprueba si la celda es blanca. \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_a2b4e0b8c7067198a1397e242f959e85b}{test\+Set\+Value}} ()
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_aae887f5b25fe1e4ca7b7cf3c858dfae8}{test\+Set\+Value}} (int value)
 \begin{DoxyCompactList}\small\item\em Test del setter de value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
@@ -82,11 +82,11 @@ Definición en la línea 31 del archivo Driver\+Cell.\+java.
 \DoxyCodeLine{36     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_a2b4e0b8c7067198a1397e242f959e85b}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_a2b4e0b8c7067198a1397e242f959e85b}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_aae887f5b25fe1e4ca7b7cf3c858dfae8}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_aae887f5b25fe1e4ca7b7cf3c858dfae8}} 
 \index{domain.controllers.drivers.DriverCell@{domain.controllers.drivers.DriverCell}!testSetValue@{testSetValue}}
 \index{testSetValue@{testSetValue}!domain.controllers.drivers.DriverCell@{domain.controllers.drivers.DriverCell}}
 \doxysubsubsection{\texorpdfstring{testSetValue()}{testSetValue()}}
-{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Cell.\+test\+Set\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Cell.\+test\+Set\+Value (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -98,9 +98,9 @@ Definición en la línea 42 del archivo Driver\+Cell.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{42                                        \{}
+\DoxyCodeLine{42                                                 \{}
 \DoxyCodeLine{43         Cell cell = \textcolor{keyword}{new} Cell();}
-\DoxyCodeLine{44         Boolean result = cell.setValue(0);}
+\DoxyCodeLine{44         Boolean result = cell.setValue(value);}
 \DoxyCodeLine{45         \textcolor{keywordflow}{if} (result) System.out.println(\textcolor{stringliteral}{"{}La celda es blanca y se ha modificado el valor"{}});}
 \DoxyCodeLine{46         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}La celda no es blanca"{}});}
 \DoxyCodeLine{47     \}}
@@ -137,17 +137,18 @@ Definición en la línea 53 del archivo Driver\+Cell.\+java.
 \DoxyCodeLine{65                     \textcolor{keywordflow}{break};}
 \DoxyCodeLine{66                 \textcolor{keywordflow}{case} 3:}
 \DoxyCodeLine{67                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setValue"{}});}
-\DoxyCodeLine{68                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_a2b4e0b8c7067198a1397e242f959e85b}{testSetValue}}();}
-\DoxyCodeLine{69                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{70                 \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{71                     System.out.println(\textcolor{stringliteral}{"{}El número no es correcto"{}});}
-\DoxyCodeLine{72                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{73             \}}
-\DoxyCodeLine{74             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nOpciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. isWhite \(\backslash\)n 3. setValue \(\backslash\)n 4. Salir"{}});}
-\DoxyCodeLine{75             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_ac83f60264cb181c3b8d9a1265d376ef0}{readNumber}}();}
-\DoxyCodeLine{76         \}}
-\DoxyCodeLine{77         System.exit(0);}
-\DoxyCodeLine{78     \}}
+\DoxyCodeLine{68                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_ac83f60264cb181c3b8d9a1265d376ef0}{readNumber}}();}
+\DoxyCodeLine{69                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_aae887f5b25fe1e4ca7b7cf3c858dfae8}{testSetValue}}(value);}
+\DoxyCodeLine{70                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{71                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{72                     System.out.println(\textcolor{stringliteral}{"{}El número no es correcto"{}});}
+\DoxyCodeLine{73                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{74             \}}
+\DoxyCodeLine{75             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nOpciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. isWhite \(\backslash\)n 3. setValue \(\backslash\)n 4. Salir"{}});}
+\DoxyCodeLine{76             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_ac83f60264cb181c3b8d9a1265d376ef0}{readNumber}}();}
+\DoxyCodeLine{77         \}}
+\DoxyCodeLine{78         System.exit(0);}
+\DoxyCodeLine{79     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_ac83f60264cb181c3b8d9a1265d376ef0}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_ac83f60264cb181c3b8d9a1265d376ef0}} 
@@ -165,15 +166,15 @@ el número leído
 \end{DoxyReturn}
 
 
-Definición en la línea 84 del archivo Driver\+Cell.\+java.
+Definición en la línea 85 del archivo Driver\+Cell.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{84                                    \{}
-\DoxyCodeLine{85         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{86         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_a622b462ebaa319eb77195a3228ee4378}{reader}}.nextInt();}
-\DoxyCodeLine{87         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{88     \}}
+\DoxyCodeLine{85                                    \{}
+\DoxyCodeLine{86         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{87         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_cell_a622b462ebaa319eb77195a3228ee4378}{reader}}.nextInt();}
+\DoxyCodeLine{88         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{89     \}}
 
 \end{DoxyCode}
 

@@ -10,13 +10,13 @@ Clase \mbox{\hyperlink{classdata_1_1_ctrl_data}{Ctrl\+Data}} para obtener y guar
 \item 
 \mbox{\hyperlink{classdata_1_1_ctrl_data_ad531e4834fc183b445e925a493cdeb3a}{Ctrl\+Data}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
-String \mbox{\hyperlink{classdata_1_1_ctrl_data_a81eb64d33003810c4e2ffc0cb9dab7f2}{search\+Kakuro}} (int difficulty, int kakuro\+Size\+Row, int kakuro\+Size\+Column)
+String \mbox{\hyperlink{classdata_1_1_ctrl_data_a81eb64d33003810c4e2ffc0cb9dab7f2}{search\+Kakuro}} (int difficulty, int kakuro\+Size\+Row, int kakuro\+Size\+Column)  throws I\+O\+Exception 
 \begin{DoxyCompactList}\small\item\em Busca un kakuro en fichero. \end{DoxyCompactList}\item 
-String \mbox{\hyperlink{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}{get\+Kakuro}} (String file\+Path)
+String \mbox{\hyperlink{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}{get\+Kakuro}} (String file\+Path)  throws I\+O\+Exception 
 \begin{DoxyCompactList}\small\item\em Busca un kakuro en fichero a partir de una ruta relativa. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdata_1_1_ctrl_data_a5865e605a958d76364fcefc50e4380ba}{save\+Kakuro}} (String content, int diff, int size\+Row, int size\+Column)
 \begin{DoxyCompactList}\small\item\em Guarda un kakuro en fichero. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{get\+Number\+Of\+Files}} (int diff, int size\+Row, int size\+Column)
+int \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{get\+Number\+Of\+Files}} (int diff, int size\+Row, int size\+Column)  throws Null\+Pointer\+Exception 
 \begin{DoxyCompactList}\small\item\em Mira cuántos ficheros tienen una dificultad y tamaño en concreto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos públicos estáticos}
 \begin{DoxyCompactItemize}
@@ -92,7 +92,7 @@ Definición en la línea 25 del archivo Ctrl\+Data.\+java.
 \index{data.CtrlData@{data.CtrlData}!searchKakuro@{searchKakuro}}
 \index{searchKakuro@{searchKakuro}!data.CtrlData@{data.CtrlData}}
 \doxysubsubsection{\texorpdfstring{searchKakuro()}{searchKakuro()}}
-{\footnotesize\ttfamily String data.\+Ctrl\+Data.\+search\+Kakuro (\begin{DoxyParamCaption}\item[{int}]{difficulty,  }\item[{int}]{kakuro\+Size\+Row,  }\item[{int}]{kakuro\+Size\+Column }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily String data.\+Ctrl\+Data.\+search\+Kakuro (\begin{DoxyParamCaption}\item[{int}]{difficulty,  }\item[{int}]{kakuro\+Size\+Row,  }\item[{int}]{kakuro\+Size\+Column }\end{DoxyParamCaption}) throws I\+O\+Exception}
 
 
 
@@ -116,19 +116,23 @@ Definición en la línea 45 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{45                                                                                          \{}
+\DoxyCodeLine{45                                                                                                             \{}
 \DoxyCodeLine{46         Random random = \textcolor{keyword}{new} Random();}
-\DoxyCodeLine{47         \textcolor{keywordtype}{int} numFiles = \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{getNumberOfFiles}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
-\DoxyCodeLine{48         \textcolor{keywordflow}{if} (numFiles == -\/1) \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}-\/1"{}};}
-\DoxyCodeLine{49         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}{getKakuro}}(\textcolor{stringliteral}{"{}data/diff"{}} + difficulty + \textcolor{stringliteral}{"{}/"{}} + kakuroSizeRow + \textcolor{stringliteral}{"{}\_"{}} + kakuroSizeColumn + \textcolor{stringliteral}{"{}/"{}} + random.nextInt(numFiles) + \textcolor{stringliteral}{"{}.txt"{}});}
-\DoxyCodeLine{50     \}}
+\DoxyCodeLine{47         \textcolor{keywordtype}{int} numFile;}
+\DoxyCodeLine{48         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{49             numFile = \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{getNumberOfFiles}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
+\DoxyCodeLine{50         \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
+\DoxyCodeLine{51             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} IOException();}
+\DoxyCodeLine{52         \}}
+\DoxyCodeLine{53         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}{getKakuro}}(\textcolor{stringliteral}{"{}data/diff"{}} + difficulty + \textcolor{stringliteral}{"{}/"{}} + kakuroSizeRow + \textcolor{stringliteral}{"{}\_"{}} + kakuroSizeColumn + \textcolor{stringliteral}{"{}/"{}} + random.nextInt(numFile) + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{54     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}\label{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}} 
 \index{data.CtrlData@{data.CtrlData}!getKakuro@{getKakuro}}
 \index{getKakuro@{getKakuro}!data.CtrlData@{data.CtrlData}}
 \doxysubsubsection{\texorpdfstring{getKakuro()}{getKakuro()}}
-{\footnotesize\ttfamily String data.\+Ctrl\+Data.\+get\+Kakuro (\begin{DoxyParamCaption}\item[{String}]{file\+Path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily String data.\+Ctrl\+Data.\+get\+Kakuro (\begin{DoxyParamCaption}\item[{String}]{file\+Path }\end{DoxyParamCaption}) throws I\+O\+Exception}
 
 
 
@@ -144,24 +148,20 @@ el kakuro que se encuentra en la ruta relativa en formato String
 \end{DoxyReturn}
 
 
-Definición en la línea 57 del archivo Ctrl\+Data.\+java.
+Definición en la línea 61 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{57                                              \{}
-\DoxyCodeLine{58         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{59             StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{60             File file = \textcolor{keyword}{new} File(filePath);}
-\DoxyCodeLine{61             FileReader fr = \textcolor{keyword}{new} FileReader(file);}
-\DoxyCodeLine{62             BufferedReader br = \textcolor{keyword}{new} BufferedReader(fr);}
-\DoxyCodeLine{63             String line = \textcolor{keyword}{null};}
-\DoxyCodeLine{64             \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{65                 content.append(line).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{66             \}}
-\DoxyCodeLine{67             \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{68         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{69             \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}-\/1"{}};}
-\DoxyCodeLine{70         \}}
+\DoxyCodeLine{61                                                                 \{}
+\DoxyCodeLine{62         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{63         File file = \textcolor{keyword}{new} File(filePath);}
+\DoxyCodeLine{64         FileReader fr = \textcolor{keyword}{new} FileReader(file);}
+\DoxyCodeLine{65         BufferedReader br = \textcolor{keyword}{new} BufferedReader(fr);}
+\DoxyCodeLine{66         String line = \textcolor{keyword}{null};}
+\DoxyCodeLine{67         \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
+\DoxyCodeLine{68             content.append(line).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{69         \}}
+\DoxyCodeLine{70         \textcolor{keywordflow}{return} content.toString();}
 \DoxyCodeLine{71     \}}
 
 \end{DoxyCode}
@@ -209,7 +209,7 @@ Definición en la línea 80 del archivo Ctrl\+Data.\+java.
 \index{data.CtrlData@{data.CtrlData}!getNumberOfFiles@{getNumberOfFiles}}
 \index{getNumberOfFiles@{getNumberOfFiles}!data.CtrlData@{data.CtrlData}}
 \doxysubsubsection{\texorpdfstring{getNumberOfFiles()}{getNumberOfFiles()}}
-{\footnotesize\ttfamily int data.\+Ctrl\+Data.\+get\+Number\+Of\+Files (\begin{DoxyParamCaption}\item[{int}]{diff,  }\item[{int}]{size\+Row,  }\item[{int}]{size\+Column }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int data.\+Ctrl\+Data.\+get\+Number\+Of\+Files (\begin{DoxyParamCaption}\item[{int}]{diff,  }\item[{int}]{size\+Row,  }\item[{int}]{size\+Column }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
 
 
 
@@ -233,15 +233,11 @@ Definición en la línea 100 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{100                                                                        \{}
-\DoxyCodeLine{101         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{102             File folder = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}data/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn);}
-\DoxyCodeLine{103             File[] listFiles = folder.listFiles();}
-\DoxyCodeLine{104             \textcolor{keywordflow}{return} listFiles.length;}
-\DoxyCodeLine{105         \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
-\DoxyCodeLine{106             \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{107         \}}
-\DoxyCodeLine{108     \}}
+\DoxyCodeLine{100                                                                                                    \{}
+\DoxyCodeLine{101         File folder = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}data/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn);}
+\DoxyCodeLine{102         File[] listFiles = folder.listFiles();}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} listFiles.length;}
+\DoxyCodeLine{104     \}}
 
 \end{DoxyCode}
 

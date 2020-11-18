@@ -17,8 +17,6 @@ static int \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctr
 \doxysubsection*{Métodos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a32b46a0b69be2346dbb92c5df6ab1e11}{test\+Creadora}} ()
-\begin{DoxyCompactList}\small\item\em Test de la creadora. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5a98c099a96b8120570aff8a07f58ecb}{test\+Start\+Game}} (String kakuro\+Text)
 \begin{DoxyCompactList}\small\item\em Test del start\+Game. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_aa7a7bdd87c4f85ebb6f6f4575c42c9fa}{test\+Help\+My\+Value}} (String kakuro1, String kakuro\+Sol, int x, int y)
@@ -40,28 +38,6 @@ Definición en la línea 19 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a32b46a0b69be2346dbb92c5df6ab1e11}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a32b46a0b69be2346dbb92c5df6ab1e11}} 
-\index{domain.controllers.drivers.DriverCtrlPlay@{domain.controllers.drivers.DriverCtrlPlay}!testCreadora@{testCreadora}}
-\index{testCreadora@{testCreadora}!domain.controllers.drivers.DriverCtrlPlay@{domain.controllers.drivers.DriverCtrlPlay}}
-\doxysubsubsection{\texorpdfstring{testCreadora()}{testCreadora()}}
-{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Play.\+test\+Creadora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-
-
-Test de la creadora. 
-
-Comprueba si se crea correctamente 
-
-Definición en la línea 26 del archivo Driver\+Ctrl\+Play.\+java.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{26                                        \{}
-\DoxyCodeLine{27         CtrlPlay ctrlPlay = \textcolor{keyword}{new} CtrlPlay();}
-\DoxyCodeLine{28         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
-\DoxyCodeLine{29     \}}
-
-\end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5a98c099a96b8120570aff8a07f58ecb}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5a98c099a96b8120570aff8a07f58ecb}} 
 \index{domain.controllers.drivers.DriverCtrlPlay@{domain.controllers.drivers.DriverCtrlPlay}!testStartGame@{testStartGame}}
 \index{testStartGame@{testStartGame}!domain.controllers.drivers.DriverCtrlPlay@{domain.controllers.drivers.DriverCtrlPlay}}
@@ -79,15 +55,15 @@ Comprueba que la función start\+Game se ejecute correctamente
 \end{DoxyParams}
 
 
-Definición en la línea 36 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 27 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{36                                                          \{}
-\DoxyCodeLine{37         Kakuro kakuro = \textcolor{keyword}{new} Kakuro(kakuroText);}
-\DoxyCodeLine{38         CtrlPlay.startGame(kakuro);}
-\DoxyCodeLine{39         System.out.println(\textcolor{stringliteral}{"{}Se ha empezado una partida"{}});}
-\DoxyCodeLine{40     \}}
+\DoxyCodeLine{27                                                          \{}
+\DoxyCodeLine{28         Kakuro kakuro = \textcolor{keyword}{new} Kakuro(kakuroText);}
+\DoxyCodeLine{29         CtrlPlay.startGame(kakuro);}
+\DoxyCodeLine{30         System.out.println(\textcolor{stringliteral}{"{}Se ha empezado una partida"{}});}
+\DoxyCodeLine{31     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_aa7a7bdd87c4f85ebb6f6f4575c42c9fa}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_aa7a7bdd87c4f85ebb6f6f4575c42c9fa}} 
@@ -113,24 +89,24 @@ Comprueba que la función help\+My\+Value se ejecute correctamente
 \end{DoxyParams}
 
 
-Definición en la línea 50 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 41 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{50                                                                                         \{}
-\DoxyCodeLine{51         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
-\DoxyCodeLine{52         Kakuro kSol = \textcolor{keyword}{new} Kakuro(kakuroSol);}
-\DoxyCodeLine{53         Cell[][] board = k.getBoard();}
-\DoxyCodeLine{54         Cell[][] boardSol = kSol.getBoard();}
-\DoxyCodeLine{55         \textcolor{keywordflow}{if} (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());}
-\DoxyCodeLine{56         CtrlPlay.startGame(k);}
-\DoxyCodeLine{57 }
-\DoxyCodeLine{58         \textcolor{keywordtype}{int} result = CtrlPlay.helpMyValue(x,y);}
-\DoxyCodeLine{59         \textcolor{keywordflow}{if} (result == -\/2) System.out.println(\textcolor{stringliteral}{"{}La celda no tiene un valor asignado"{}});}
-\DoxyCodeLine{60         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == -\/1) System.out.println(\textcolor{stringliteral}{"{}La celda no es blanca"{}});}
-\DoxyCodeLine{61         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 0) System.out.println(\textcolor{stringliteral}{"{}El valor no es correcto"{}});}
-\DoxyCodeLine{62         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 1) System.out.println(\textcolor{stringliteral}{"{}El valor es correcto"{}});}
-\DoxyCodeLine{63     \}}
+\DoxyCodeLine{41                                                                                         \{}
+\DoxyCodeLine{42         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
+\DoxyCodeLine{43         Kakuro kSol = \textcolor{keyword}{new} Kakuro(kakuroSol);}
+\DoxyCodeLine{44         Cell[][] board = k.getBoard();}
+\DoxyCodeLine{45         Cell[][] boardSol = kSol.getBoard();}
+\DoxyCodeLine{46         \textcolor{keywordflow}{if} (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());}
+\DoxyCodeLine{47         CtrlPlay.startGame(k);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{keywordtype}{int} result = CtrlPlay.helpMyValue(x,y);}
+\DoxyCodeLine{50         \textcolor{keywordflow}{if} (result == -\/2) System.out.println(\textcolor{stringliteral}{"{}La celda no tiene un valor asignado"{}});}
+\DoxyCodeLine{51         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == -\/1) System.out.println(\textcolor{stringliteral}{"{}La celda no es blanca"{}});}
+\DoxyCodeLine{52         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 0) System.out.println(\textcolor{stringliteral}{"{}El valor no es correcto"{}});}
+\DoxyCodeLine{53         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 1) System.out.println(\textcolor{stringliteral}{"{}El valor es correcto"{}});}
+\DoxyCodeLine{54     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_afbcd6dcd811b5970a5a31d3179c76671}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_afbcd6dcd811b5970a5a31d3179c76671}} 
@@ -154,21 +130,21 @@ Comprueba que la función help\+Correct\+Number se ejecute correctamente
 \end{DoxyParams}
 
 
-Definición en la línea 72 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 63 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{72                                                                                               \{}
-\DoxyCodeLine{73         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
-\DoxyCodeLine{74         Kakuro kSol = \textcolor{keyword}{new} Kakuro(kakuroSol);}
-\DoxyCodeLine{75         Cell[][] board = k.getBoard();}
-\DoxyCodeLine{76         Cell[][] boardSol = kSol.getBoard();}
-\DoxyCodeLine{77         \textcolor{keywordflow}{if} (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());}
-\DoxyCodeLine{78 }
-\DoxyCodeLine{79         CtrlPlay.startGame(k);}
-\DoxyCodeLine{80         \textcolor{keywordflow}{if} (CtrlPlay.helpCorrectNumber(x,y)) System.out.println(\textcolor{stringliteral}{"{}El valor de la celda se ha cambiado correctamente"{}});}
-\DoxyCodeLine{81         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No es una celda blanca"{}});}
-\DoxyCodeLine{82     \}}
+\DoxyCodeLine{63                                                                                               \{}
+\DoxyCodeLine{64         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
+\DoxyCodeLine{65         Kakuro kSol = \textcolor{keyword}{new} Kakuro(kakuroSol);}
+\DoxyCodeLine{66         Cell[][] board = k.getBoard();}
+\DoxyCodeLine{67         Cell[][] boardSol = kSol.getBoard();}
+\DoxyCodeLine{68         \textcolor{keywordflow}{if} (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         CtrlPlay.startGame(k);}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (CtrlPlay.helpCorrectNumber(x,y)) System.out.println(\textcolor{stringliteral}{"{}El valor de la celda se ha cambiado correctamente"{}});}
+\DoxyCodeLine{72         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No es una celda blanca"{}});}
+\DoxyCodeLine{73     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_af375f8d73a94a050b8bdc7089784c2a1}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_af375f8d73a94a050b8bdc7089784c2a1}} 
@@ -183,53 +159,49 @@ Función principal.
 
 Indica las opciones que hay para testear 
 
-Definición en la línea 88 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 79 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{88                                            \{}
-\DoxyCodeLine{89         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Empezar una partida \(\backslash\)n 3. Ayuda para el valor del usuario \(\backslash\)n 4. Ayuda para el valor correcto de una celda blanca \(\backslash\)n 5. Salir"{}});}
-\DoxyCodeLine{90         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{91         \textcolor{keywordflow}{while} (value != 5) \{}
-\DoxyCodeLine{92             \textcolor{keywordtype}{int} x, y;}
-\DoxyCodeLine{93             \textcolor{keywordflow}{switch} (value) \{}
-\DoxyCodeLine{94                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{95                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora"{}});}
-\DoxyCodeLine{96                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a32b46a0b69be2346dbb92c5df6ab1e11}{testCreadora}}();}
-\DoxyCodeLine{97                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{98                 \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{99                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto"{}});}
-\DoxyCodeLine{100                     String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
-\DoxyCodeLine{101                     System.out.println(\textcolor{stringliteral}{"{}Se llama a startGame"{}});}
-\DoxyCodeLine{102                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5a98c099a96b8120570aff8a07f58ecb}{testStartGame}}(kakuro);}
-\DoxyCodeLine{103                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{104                 \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{105                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto"{}});}
-\DoxyCodeLine{106                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{107                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{108                     String kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
-\DoxyCodeLine{109                     String kakuroSol = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
-\DoxyCodeLine{110                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpMyValue"{}});}
-\DoxyCodeLine{111                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_aa7a7bdd87c4f85ebb6f6f4575c42c9fa}{testHelpMyValue}}(kakuro1, kakuroSol, x, y);}
-\DoxyCodeLine{112                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{113                 \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{114                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto"{}});}
-\DoxyCodeLine{115                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{116                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{117                     kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
-\DoxyCodeLine{118                     kakuroSol = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
-\DoxyCodeLine{119                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpCorrectNumber"{}});}
-\DoxyCodeLine{120                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_afbcd6dcd811b5970a5a31d3179c76671}{testHelpCorrectNumber}}(kakuro1, kakuroSol, x,y);}
-\DoxyCodeLine{121                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{122                 \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{123                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
-\DoxyCodeLine{124                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{125             \}}
-\DoxyCodeLine{126             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nOpciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Empezar una partida \(\backslash\)n 3. Ayuda para el valor del usuario \(\backslash\)n 4. Ayuda para el valor correcto de una celda blanca \(\backslash\)n 5. Salir"{}});}
-\DoxyCodeLine{127             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{128         \}}
-\DoxyCodeLine{129         System.exit(0);}
-\DoxyCodeLine{130     \}}
+\DoxyCodeLine{79                                            \{}
+\DoxyCodeLine{80         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n1. Empezar una partida \(\backslash\)n 2. Ayuda para el valor del usuario \(\backslash\)n 3. Ayuda para el valor correcto de una celda blanca \(\backslash\)n 4. Salir"{}});}
+\DoxyCodeLine{81         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{82         \textcolor{keywordflow}{while} (value != 4) \{}
+\DoxyCodeLine{83             \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{84             \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{86                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto"{}});}
+\DoxyCodeLine{87                     String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
+\DoxyCodeLine{88                     System.out.println(\textcolor{stringliteral}{"{}Se llama a startGame"{}});}
+\DoxyCodeLine{89                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5a98c099a96b8120570aff8a07f58ecb}{testStartGame}}(kakuro);}
+\DoxyCodeLine{90                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{91                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{92                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto"{}});}
+\DoxyCodeLine{93                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{94                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{95                     String kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
+\DoxyCodeLine{96                     String kakuroSol = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
+\DoxyCodeLine{97                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpMyValue"{}});}
+\DoxyCodeLine{98                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_aa7a7bdd87c4f85ebb6f6f4575c42c9fa}{testHelpMyValue}}(kakuro1, kakuroSol, x, y);}
+\DoxyCodeLine{99                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{100                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{101                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto"{}});}
+\DoxyCodeLine{102                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{103                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{104                     kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
+\DoxyCodeLine{105                     kakuroSol = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}{readKakuro}}();}
+\DoxyCodeLine{106                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpCorrectNumber"{}});}
+\DoxyCodeLine{107                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_afbcd6dcd811b5970a5a31d3179c76671}{testHelpCorrectNumber}}(kakuro1, kakuroSol, x,y);}
+\DoxyCodeLine{108                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{109                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{110                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
+\DoxyCodeLine{111                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{112             \}}
+\DoxyCodeLine{113             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)nOpciones: \(\backslash\)n1. Empezar una partida \(\backslash\)n 2. Ayuda para el valor del usuario \(\backslash\)n 3. Ayuda para el valor correcto de una celda blanca \(\backslash\)n 4. Salir"{}});}
+\DoxyCodeLine{114             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116         System.exit(0);}
+\DoxyCodeLine{117     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}} 
@@ -247,20 +219,20 @@ el kakuro leído
 \end{DoxyReturn}
 
 
-Definición en la línea 136 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 123 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{136                                       \{}
-\DoxyCodeLine{137         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{138         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{139         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
-\DoxyCodeLine{140         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
-\DoxyCodeLine{141         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{142         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
-\DoxyCodeLine{143             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{144         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{145     \}}
+\DoxyCodeLine{123                                       \{}
+\DoxyCodeLine{124         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{125         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{126         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{127         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{128         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{129         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{130             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{131         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{132     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}} 
@@ -278,15 +250,15 @@ el número leído
 \end{DoxyReturn}
 
 
-Definición en la línea 151 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 138 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{151                                    \{}
-\DoxyCodeLine{152         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{153         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.nextInt();}
-\DoxyCodeLine{154         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{155     \}}
+\DoxyCodeLine{138                                    \{}
+\DoxyCodeLine{139         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{140         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.nextInt();}
+\DoxyCodeLine{141         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{142     \}}
 
 \end{DoxyCode}
 

@@ -216,14 +216,14 @@ Atributos privados estáticos</h2></td></tr>
 <p>Resuelve un Kakuro. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td></td></tr>
-    <tr><td class="paramname">c</td><td></td></tr>
-    <tr><td class="paramname">sum</td><td></td></tr>
-    <tr><td class="paramname">vec</td><td></td></tr>
+    <tr><td class="paramname">r</td><td>fila que estamos tratando </td></tr>
+    <tr><td class="paramname">c</td><td>columna que estamos tratando </td></tr>
+    <tr><td class="paramname">sum</td><td>valor que tenemos que sumer en la run horizontal </td></tr>
+    <tr><td class="paramname">vec</td><td>vector de 10 posiciones donde vec[i] = 1 si hemos puesto i en la run horizontal, 0 si no. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd></dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si se encuentra una solución, false si no </dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_ctrl_resolve_8java_source.html#l00044">44</a> del archivo <a class="el" href="_ctrl_resolve_8java_source.html">CtrlResolve.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                                                     {</div>
@@ -301,9 +301,9 @@ Atributos privados estáticos</h2></td></tr>
 <li><a class="el" href="_ctrl_resolve_8java_source.html">CtrlResolve.java</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a4f1f99e018cd02fcc5f2ed09fb98b774"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a4f1f99e018cd02fcc5f2ed09fb98b774">domain.classes.Kakuro.getBoard</a></div><div class="ttdeci">Cell[][] getBoard()</div><div class="ttdoc">Setter del tamaño de columna.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00219">Kakuro.java:219</a></div></div>
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a707e08a057dcf5667451719a4190ecbd"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">domain.classes.Kakuro.checkColumn</a></div><div class="ttdeci">boolean checkColumn(int r, int c, int i, boolean f, int sum)</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00261">Kakuro.java:261</a></div></div>
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a87c0714fffa9bd9e8688cb592d1563cf"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a87c0714fffa9bd9e8688cb592d1563cf">domain.classes.Kakuro.getColumnSize</a></div><div class="ttdeci">int getColumnSize()</div><div class="ttdoc">Setter del tamaño de fila.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00203">Kakuro.java:203</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a4f1f99e018cd02fcc5f2ed09fb98b774"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a4f1f99e018cd02fcc5f2ed09fb98b774">domain.classes.Kakuro.getBoard</a></div><div class="ttdeci">Cell[][] getBoard()</div><div class="ttdoc">Getter del tablero.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00219">Kakuro.java:219</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a707e08a057dcf5667451719a4190ecbd"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">domain.classes.Kakuro.checkColumn</a></div><div class="ttdeci">boolean checkColumn(int r, int c, int i, boolean f, int sum)</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00262">Kakuro.java:262</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a87c0714fffa9bd9e8688cb592d1563cf"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a87c0714fffa9bd9e8688cb592d1563cf">domain.classes.Kakuro.getColumnSize</a></div><div class="ttdeci">int getColumnSize()</div><div class="ttdoc">Getter del tamaño de columna.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00203">Kakuro.java:203</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_resolve_html_aa9592e02827ee874f2ff338df5e81bbd"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_resolve.html#aa9592e02827ee874f2ff338df5e81bbd">domain.controllers.CtrlResolve.resolve</a></div><div class="ttdeci">static boolean resolve(int r, int c, int sum, int[] vec)</div><div class="ttdoc">Resuelve un Kakuro.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_resolve_8java_source.html#l00044">CtrlResolve.java:44</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_resolve_html_a8ed1708d14b918c81435011a480fb8c7"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_resolve.html#a8ed1708d14b918c81435011a480fb8c7">domain.controllers.CtrlResolve.kakuro</a></div><div class="ttdeci">static Kakuro kakuro</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_resolve_8java_source.html#l00019">CtrlResolve.java:19</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_ae1c8dd6d7ef629a6ab63947c7ea17d4d"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#ae1c8dd6d7ef629a6ab63947c7ea17d4d">domain.classes.Kakuro.getRowSize</a></div><div class="ttdeci">int getRowSize()</div><div class="ttdoc">Getter del tamaño de fila.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00187">Kakuro.java:187</a></div></div>
