@@ -39,6 +39,9 @@ OTROS
         - Makefile
     Judith:
         - Manual del Usuario
+        - Manual de Drivers
+    Alvaro:
+        - JUnit
     Todos:
         - Casos de uso
         - Diagrama de clases
