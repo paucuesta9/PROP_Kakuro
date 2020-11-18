@@ -39,9 +39,9 @@ public class DriverCell {
      *
      * Comprueba si se hace correctamente el setter de value
      */
-    private static void testSetValue() {
+    private static void testSetValue(int value) {
         Cell cell = new Cell();
-        Boolean result = cell.setValue(0);
+        Boolean result = cell.setValue(value);
         if (result) System.out.println("La celda es blanca y se ha modificado el valor");
         else System.out.println("La celda no es blanca");
     }
@@ -65,7 +65,8 @@ public class DriverCell {
                     break;
                 case 3:
                     System.out.println("Se llama a setValue");
-                    testSetValue();
+                    value = readNumber();
+                    testSetValue(value);
                     break;
                 default:
                     System.out.println("El número no es correcto");
