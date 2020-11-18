@@ -14,33 +14,40 @@ import java.lang.Math;
  */
 public class CtrlValidate {
 
+    /**
+     * kakuro instancia del kakuro con el que se trabaja en este momento
+     */
+
     private static Kakuro kakuro;
 
     /** @brief Creadora por defecto
      *
      */
+
     public CtrlValidate() {}
 
     /** @brief Setter de Kakuro
      *
      * Settea un Kakuro al controlador para poder trabajar con él
      *
-     * @param currentKakuro instància de Kakuro
+     * @param currentKakuro instáncia de Kakuro
      */
+
     public static void setKakuro(Kakuro currentKakuro) {
         kakuro = currentKakuro;
     }
 
-    /**@Brief Función recursiva que calcula los numeros que aparecen en las combinaciones para sumar un determinado numero con un determinado numero de casillas
+    /**@Brief Función recursiva que calcula los numeros que aparecen en las combinaciones para sumar un determinado número con un determinado número de casillas
      *
      * @param arr array en el que guardamos los números de una combinación para intentar llegar hasta el número objetivo
-     * @param index apunta al último que hemos añadido a la suma para llegar al número objetivo
+     * @param index apunta al último número que hemos añadido a la suma para llegar al número objetivo
      * @param reducedNum inicializado al número objetivo, en cada iteración se le resta el número añadido a la suma para llegar al número objetivo
      * @param lim numero de casillas que tenemos disponibles para colocar números
-     * @param posSums es el array en el que se guardan al final los numeros que aparecen en las combinacions para llegar al número objetivo
+     * @param posSums es el array en el que se guardan al final los números que aparecen en las combinacions para llegar al número objetivo
      * @param no indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.
      *
      */
+
     public static void computePosSumsRec(int arr[], int index, int reducedNum, int lim, int posSums[], int no) {
         if (reducedNum < 0 || index > lim)
             return;
@@ -63,15 +70,16 @@ public class CtrlValidate {
         }
     }
 
-    /**@Brief Calcula los numeros que aparecen en las combinaciones para sumar un determinado numero con un determinado numero de casillas
+    /**@Brief Calcula los números que aparecen en las combinaciones para sumar un determinado número con un determinado número de casillas
      *
      * @param x es el número del cual queremos saber las combinaciones de números que suman hasta él con un número determinado de casillas
      * @param n es el número determinado de casillas
      * @param no indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.
      *
      *
-     * @return un array de 9 posiciones en el que dado un valor x, un número de casillas y un valor de no, deja un 1 en las posiciones de los números que aparezcan en las combinacione y un 0 para aquellos que no
+     * @return un array de 9 posiciones en el que dado un valor x, un número de casillas y un valor de no, deja un 1 en las posiciones de los números que aparezcan en las combinaciones y un 0 para aquellos que no
      */
+
     public static int [] computePosSums(int x, int n, int no) { //calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.
         int [] posSums = new int[9];
         for(int i=0; i<9; ++i) posSums[i] = 0;
@@ -82,23 +90,22 @@ public class CtrlValidate {
         return posSums;
     }
 
-    /**@Brief Encuentra casillas con un valor fijado por columna o fila
+    /**@Brief Encuentra casillas con un valor único por columna o fila
      *
      * @param tempBoard es un tablero auxiliar donde cada posicion consta de 9 números (-1, 0 o 1). -1 indica negra o no tratado aún, 0 indica valor no posible y 1 indica valor posible. Ejemplo = 1 0 1 0 0 0 0 0 1, valores posibles: 1, 3, 9.
-     * @param posSums es un array donde siguiendo el mismo razonamiento de tempBoard para 0 y 1 indica que valores aparecen en las combinaciones para sumar el valor de la casilla negra i, j con length casillas.
+     * @param posSums es un array donde siguiendo el mismo razonamiento de tempBoard para 0 y 1, indica que valores aparecen en las combinaciones para sumar el valor de la casilla negra i, j con length casillas.
      * @param num indica como de larga es la fila o columna de blancas que sigue a la casilla negra i, j.
      * @param row 1 si trataremos la fila, 0 si trataremos la columna de la casilla negra i, j.
      * @param i posición i de la casilla negra
      * @param j posición j de la casilla negra
      *
      * Dado el tablero, los números que pueden sumar el valor, la casilla, si se trata por fila o columna y cuantas casillas blancas hay, se encuentran las casillas que tienen valor único y se actualiza el tablero
-     * @return numero de casillas únicas nuevas que se han encontrado
+     * @return número de casillas únicas nuevas que se han encontrado
      */
     public static int validatePosSums(int [][][] tempBoard, int [] posSums, int num, int row, int i, int j) {
         int unique = 0;
         if(row == 1) {
             for(int x=1; x<=num; ++x) {
-                // if(i==4 && j+x==9) System.out.println("aAASDASDHJKLASHDJK");
                 int uniqueTemp = 0;
                 if(tempBoard[i][j+x][0]==-1)
                     for(int y=0; y<9; ++y)
@@ -131,6 +138,7 @@ public class CtrlValidate {
                 }
 
                 if (uniqueTemp == 1) {
+                    System.out.println("Unique i:"+(i+x)+" j:"+(j));
                     ++unique;
                 }
             }
@@ -145,6 +153,7 @@ public class CtrlValidate {
      * @return true si solo hay un 1,
      * @return false si no hay 1 o hay mas de un 1
      */
+
     public static boolean isUnique(int [] a) { //a tiene mida 9
         int b = 0;
         for(int i=0; i<9; ++i)
@@ -161,6 +170,8 @@ public class CtrlValidate {
      *
      * @return número de casillas nuevas con valor único
      */
+
+
     public static int checkForNewUniques(int [][][] tempBoard) {
         Cell[][] board = kakuro.getBoard();
         int changed = 0;
@@ -252,6 +263,8 @@ public class CtrlValidate {
     /** @brief Asigna dificultad a un kakuro
      * Asigna dificultad 1 si es un kakuro fácil, 2 si es mediano o 3 si es difícil
      */
+
+
     public static void setDifficulty() {
         //System.out.println("uwu1");
         int maxRunLength = 0;
@@ -476,6 +489,7 @@ public class CtrlValidate {
      *
      * @return retorna cuantos 1 hay en a
      */
+
     public static double howManyNumbers(int [] a) {
         double b = 0;
         for (int i=0; i<9; ++i) {
@@ -488,10 +502,11 @@ public class CtrlValidate {
      *
      * @param r fila que estamos tratando
      * @param c columna que estamos tratando
-     * @param sum suma de los números que llevamos en la fila desde la ultima casilla negra pasada
+     * @param sum valor que tiene que sumar la fila que estamos tratando
      * @param vec vector de 10 posiciones donde vec[i] es 1 si hemos puesto i en la fila, 0 si no.
      * @param res guarda cuantas soluciones hemos encontrado hasta el momento
      */
+
     public static void validate(int r, int c, int sum, int [] vec, int [] res) {
         if (res[0]==2) return;
         if( r == kakuro.getRowSize() ) { res[0]++; } //hemos llegado al final, la solucion es correcta

@@ -42,9 +42,9 @@ public class DriverCtrlValidate {
         res[0] = 0;
         CtrlValidate.validate(0,0,0,vec,res);
         if (res[0] != 1)
-            System.out.println("El kakuro no es válido");
+            System.out.println("El kakuro no es valido");
         else
-            System.out.println("El kakuro es válido");
+            System.out.println("El kakuro es valido");
     }
 
 
@@ -66,8 +66,8 @@ public class DriverCtrlValidate {
      * Comprueba si retorna cierto si en el array a hay solamente un 1, y falso de cualquier otra manera.
      */
     private static void testIsUnique(int a[]) { //a tiene mida 9
-        if (CtrlValidate.isUnique(a)) System.out.println("Hay exactamente un 1 entre los números introducidos");
-        else System.out.println("No hay 1's entre los números introducidos o bien hay más de un 1");
+        if (CtrlValidate.isUnique(a)) System.out.println("Hay exactamente un 1 entre los numeros introducidos");
+        else System.out.println("No hay 1's entre los numeros introducidos o bien hay mas de un 1");
     }
 
     /**@Brief Test de la función setDifficulty
@@ -83,8 +83,8 @@ public class DriverCtrlValidate {
         String s;
         if (kakuro.getDifficulty()==1) s = "facil";
         else if (kakuro.getDifficulty()==2) s = "media";
-        else s = "difícil";
-        System.out.println("El kakuro és de dificultad "+s);
+        else s = "dificil";
+        System.out.println("El kakuro es de dificultad "+s);
     }
 
     /**@Brief Test de la función validatePosSums
@@ -93,7 +93,7 @@ public class DriverCtrlValidate {
      * @param tempBoard es un tablero auxiliar donde cada posicion consta de 9 números (-1, 0 o 1). -1 indica negra o no tratado aún, 0 indica valor no posible y 1 indica valor posible. Ejemplo = 1 0 1 0 0 0 0 0 1, valores posibles: 1, 3, 9.
      * @param posCombs es un array donde siguiendo el mismo razonamiento de tempBoard para 0 y 1 indica que valores aparecen en las combinaciones para sumar el valor de la casilla negra i, j con length casillas.
      * @param length indica como de larga es la fila o columna de blancas que sigue a la casilla negra i, j.
-     * @param row 1 si trateremos la fila, 0 si trateremos la columna de la casilla negra i, j.
+     * @param row 1 si trataremos la fila, 0 si trataremos la columna de la casilla negra i, j.
      * @param i posición i de la casilla negra
      * @param j posición j de la casilla negra
      *
@@ -101,7 +101,7 @@ public class DriverCtrlValidate {
      */
     private static void testValidatePosSums(int [][][] tempBoard, int [] posCombs, int length, int row, int i, int j) {
         int unique = CtrlValidate.validatePosSums(tempBoard, posCombs, length, row, i, j);
-        System.out.println("Ha encontrado "+unique+" casillas con valor único y de esta manera se ha actualizado el talbero:");
+        System.out.println("Ha encontrado "+unique+" casillas con valor unico y de esta manera se ha actualizado el tablero:");
         for (i=0; i< tempBoard.length; ++i) {
             for(j=0; j< tempBoard[0].length; ++j) {
                 for(int z=0; z<9; ++z) {
@@ -126,9 +126,9 @@ public class DriverCtrlValidate {
         int [] a;
         if (no == 0) a = CtrlValidate.computePosSums(x,n,no);
         else a = CtrlValidate.computePosSums(x,n-1,no);
-        if (no==0) System.out.println("Estos son los valores que que tienen una combinación para sumar "+x+" en "+n+" casillas");
-        else System.out.println("Estos son los valores que que tienen una combinación para sumar "+x+" en "+n+" casillas sabiendo que tenemos fijo el número "+no);
-        System.out.println("Un 1 en la posición 0 indica que 0+1, es decir 1 aparece en la combinación, 0 que no aparece");
+        if (no==0) System.out.println("Estos son los valores que que tienen una combinacion para sumar "+x+" en "+n+" casillas");
+        else System.out.println("Estos son los valores que que tienen una combinacion para sumar "+x+" en "+n+" casillas sabiendo que tenemos fijo el numero "+no);
+        System.out.println("Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece");
         for (int i=0; i<9; ++i) System.out.print(a[i]+" ");
         System.out.print("\n");
 
@@ -140,14 +140,14 @@ public class DriverCtrlValidate {
      * @param tempBoard es un tablero auxiliar donde cada posicion consta de 9 números (-1, 0 o 1). -1 indica negra o no tratado aún, 0 indica valor no posible y 1 indica valor posible. Ejemplo = 1 0 1 0 0 0 0 0 1, valores posibles: 1, 3, 9.
      * @param kakuroText representa un kakuro hecho por el usuario
      *
-     * Comprueba si dado el tablero y asignado el kakuro, encuentra aquellas casillas con valor único trivial, es decir, aquellas que toda su fila o columna ya tienen un valor asignado expecto ella.
+     * Comprueba si dado el tablero y asignado el kakuro, encuentra aquellas casillas con valor único trivial, es decir, aquellas que toda su fila o columna ya tienen un valor asignado excepto ella y modifica el tablero auxiliar acorde.
      */
 
     private static void testCheckForNewUniques(int [][][] tempBoard, String kakuroText) {
         Kakuro kakuro = new Kakuro(kakuroText);
         CtrlValidate.setKakuro(kakuro);
         int unique = CtrlValidate.checkForNewUniques(tempBoard);
-        System.out.println("Ha encontrado "+unique+" casillas con valor único y de esta manera se ha actualizado el talbero:");
+        System.out.println("Ha encontrado "+unique+" casillas con valor unico y de esta manera se ha actualizado el tablero:");
         for (int i=0; i<tempBoard.length; ++i) {
             for(int j=0; j< tempBoard[0].length; ++j) {
                 for(int z=0; z<9; ++z) {
@@ -202,10 +202,10 @@ public class DriverCtrlValidate {
                     testHowManyNumbers(aa);
                     break;
                 case 6:
-                    System.out.println("Introduce tamaño de tablero N x M");
+                    System.out.println("Introduce tamano de tablero N x M");
                     int n = readNumber(); int m = readNumber();
                     int [][][] tempBoard= new int [n][m][9];
-                    System.out.println("Introduce un tablero de la siguiente manera: \n Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, \n si todo son ceros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles ");
+                    System.out.println("Introduce un tablero de la siguiente manera: \nNueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles");
                     for (int i=0; i<n; ++i) {
                         for(int j=0; j<m; ++j) {
                             for(int z=0; z<9; ++z) {
@@ -213,27 +213,27 @@ public class DriverCtrlValidate {
                             }
                         }
                     }
-                    System.out.println("Introduce para que casilla negra(i, j) quieres encontrar valores únicos");
+                    System.out.println("Introduce para que casilla negra(i, j) quieres encontrar valores unicos");
                     int i = readNumber(); int j =readNumber();
-                    System.out.println("Introduce un 1 para comprobar la fila o un 0 para comprobar la columna, y también que valor de suma tiene la casilla negra, y como de larga es la fila o la columna");
+                    System.out.println("Introduce un 1 para comprobar la fila o un 0 para comprobar la columna, y tambien que valor de suma tiene la casilla negra, y como de larga es la fila o la columna");
                     int row = readNumber(); int valuee = readNumber(); int length = readNumber();
                     int [] posCombs = CtrlValidate.computePosSums(valuee, length,0);
                     System.out.println("Se llama a validatePosSums");
                     testValidatePosSums(tempBoard, posCombs, length, row, i, j);
                     break;
                 case 7:
-                    System.out.println("Introduce un entero y un número de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un número fijo, 0 si no.\n ");
+                    System.out.println("Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.\n ");
                     int e = readNumber(); int c = readNumber(); int no = readNumber();
                     System.out.println("Se llama a computePosSums");
                     testComputePosSums(e, c, no);
                     break;
                 case 8:
-                    System.out.println("Indique el kakuro para mirar cuantas casillas con valor único trivial se pueden encontrar");
+                    System.out.println("Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar");
                     kakuro = readKakuro();
-                    System.out.println("Introduce tamaño de tablero N x M");
+                    System.out.println("Introduce tamano de tablero N x M");
                     int nn = readNumber(); int mm = readNumber();
                     int [][][] tempBoardd= new int [nn][mm][9];
-                    System.out.println("Introduce un tablero de la siguiente manera: \n Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, \n si todo son ceros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles ");
+                    System.out.println("Introduce un tablero de la siguiente manera: \nNueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles");
                     for (int ii=0; ii<nn; ++ii) {
                         for(int jj=0; jj<mm; ++jj) {
                             for(int zz=0; zz<9; ++zz) {
@@ -249,6 +249,7 @@ public class DriverCtrlValidate {
                     break;
 
             }
+            System.out.print("\n");
             System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 9. Salir");
             value = readNumber();
         }
