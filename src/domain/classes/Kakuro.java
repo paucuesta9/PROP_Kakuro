@@ -156,10 +156,10 @@ public class Kakuro {
         return id;
     }
 
-    /** @brief Setter del indentificador
-     *
-     * @param id Identificador del Kakuro
-     */
+//    /** @brief Setter del indentificador
+//     *
+//     * @param id Identificador del Kakuro
+//     */
 //    public void setId(String id) {
 //        this.id = id;
 //    }
@@ -188,10 +188,10 @@ public class Kakuro {
         return rowSize;
     }
 
-    /** @brief Setter del tamaño de fila
-     *
-     * @param rowSize Tamaño de fila, entero
-     */
+//    /** @brief Setter del tamaño de fila
+//     *
+//     * @param rowSize Tamaño de fila, entero
+//     */
 //    public void setRowSize(int rowSize) {
 //        this.rowSize = rowSize;
 //    }
@@ -204,10 +204,10 @@ public class Kakuro {
         return columnSize;
     }
 
-    /** @brief Setter del tamaño de columna
-     *
-     * @param columnSize Tamaño de columna, entero
-     */
+//    /** @brief Setter del tamaño de columna
+//     *
+//     * @param columnSize Tamaño de columna, entero
+//     */
 //    public void setColumnSize(int columnSize) {
 //        this.columnSize = columnSize;
 //    }
@@ -230,10 +230,10 @@ public class Kakuro {
         return board[x][y];
     }
 
-    /** @brief Setter del tablero
-     *
-     * @param board Matriz de Celdas
-     */
+//    /** @brief Setter del tablero
+//     *
+//     * @param board Matriz de Celdas
+//     */
 //    public void setBoard(Cell[][] board) {
 //        this.board = board;
 //    }

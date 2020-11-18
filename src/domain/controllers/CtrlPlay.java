@@ -2,6 +2,7 @@ package domain.controllers;
 
 /** @file CtrlPlay.java
  @brief Clase  <em>CtrlPlay</em>.
+ @author Judith Almoño Gómez
  */
 
 import domain.classes.Kakuro;

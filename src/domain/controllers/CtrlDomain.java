@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 /** @file CtrlDomain.java
  @brief Clase  <em>CtrlDomain</em>.
+ @author Pau Cuesta Arcos
  */
 
 
@@ -56,10 +57,10 @@ public class CtrlDomain {
         //currentGame.startResumeTimer();
     }
 
-    /** @brief
-     *
-     * @param game
-     */
+//    /** @brief
+//     *
+//     * @param game
+//     */
 //    public void setGame(int game) {
 //        //TODO: Leer game
 //    }
@@ -210,10 +211,10 @@ public class CtrlDomain {
         this.currentKakuro = new Kakuro(data.getKakuro(/*"../" + */ filePath));
     }
 
-    /** @brief Getter de partidas empezadas por el usuario actual
-     *
-     * @return Devuelve una lista de Strings con los identificadores de las partidas que tiene empezadas el usuario
-     */
+//    /** @brief Getter de partidas empezadas por el usuario actual
+//     *
+//     * @return Devuelve una lista de Strings con los identificadores de las partidas que tiene empezadas el usuario
+//     */
 //    public ArrayList<Integer> getStartedGames() {
 //        return currentPlayer.getStartedGames();
 //    }

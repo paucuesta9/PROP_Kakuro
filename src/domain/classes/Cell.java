@@ -2,6 +2,7 @@ package domain.classes;
 
 /** @file Cell.java
  @brief Clase  <em>Cell</em>.
+ @author Pol Vallespí Soro
  */
 
 

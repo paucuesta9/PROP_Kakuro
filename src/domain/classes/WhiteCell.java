@@ -5,6 +5,7 @@ import java.util.List;
 
 /** @file WhiteCell.java
  @brief Clase  <em>WhiteCell</em>.
+ @author Pau Cuesta Arcos
  */
 
 /** @brief Clase WhiteCell que identifica y contiene los atributos necesarios de una celda blanca

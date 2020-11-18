@@ -2,6 +2,7 @@ package domain.classes;
 
 /** @file BlackCell.java
  @brief Clase  <em>BlackCell</em>.
+ @author Judith Almoño Gómez
  */
 
 
