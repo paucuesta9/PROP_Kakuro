@@ -35,11 +35,11 @@ public class CtrlResolve {
 
     /** @brief Resuelve un Kakuro
      *
-     * @param r
-     * @param c
-     * @param sum
-     * @param vec
-     * @return
+     * @param r fila que estamos tratando
+     * @param c columna que estamos tratando
+     * @param sum valor que tenemos que sumer en la run horizontal
+     * @param vec vector de 10 posiciones donde vec[i] = 1 si hemos puesto i en la run horizontal, 0 si no.
+     * @return true si se encuentra una solución, false si no
      */
     public static boolean resolve(int r, int c, int sum, int [] vec) {
         if( r == kakuro.getRowSize() ) { return true; } //hemos llegado al final, la solucion es correcta

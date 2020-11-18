@@ -6,8 +6,8 @@ import domain.controllers.CtrlPlay;
 import java.util.Scanner;
 
 
-/** @file DriverCtrlPlay.java
- @brief Clase  <em>DriverCtrlPlay</em>.
+/** @file DriverCtrlDomain.java
+ @brief Clase  <em>DriverCtrlDomain</em>.
  @author Pol Vallespí Soro
  */
 

@@ -27,53 +27,83 @@ public class DriverCtrlResolve {
 
     /**@Brief Test de la función resolve
      * Comprueva que la función resolve se ejecuta correctamente y da el resultado esperado
-     * @param kakuroText representa un kakuro hecho por el usuario
+     *
      *
      * Queremos ver que si un kakuro tiene solución esta función la encuentra. En caso de no tener solución, nos informa de ello.
      */
-    private  static void testResolve(String kakuroText) {
+    private  static void testResolve() {
+        System.out.println("Indique un kakuro para realizar el test: ");
+        String kakuroText = readKakuro();
         Kakuro kakuro = new Kakuro(kakuroText);
+        System.out.println("¿Tiene solución?(1 si, 0 no)");
+        int r = readNumber();
         CtrlResolve.setKakuro(kakuro);
         int fila = 0;
         int columna = 0;
         int suma = 0;
         int [] vec = new int[] {0,0,0,0,0,0,0,0,0,0};
-        if(!CtrlResolve.resolve(fila,columna,suma,vec)) {
-            System.out.println("El kakuro no tiene solución");
+        boolean b = CtrlResolve.resolve(fila,columna,suma,vec);
+        if((!b && r == 0) ||(b && r == 1)){
+            if(b) {
+                String s = kakuro.correctToString();
+                System.out.print(s);
+            }
+            else System.out.println("No se ha encontrado solución");
+            System.out.println("Test correcto");
         }
+        else System.out.println("Test incorrecto");
     }
+
+    /**@brief función main del driver CtrlResolve
+     * @param args
+     *
+     * Nos permite escoger el test que queremos realizar
+     */
     public static void main(String[] args) {
         System.out.println("Opciones: \n 1. Creadora \n 2. Resolver \n 3. Salir");
         int value = readNumber();
         while(value != 3) {
-            int x,y;
             switch(value) {
                 case 1:
+                    System.out.println();
                     System.out.println("Se llama a la cradora");
                     testCreadora();
                     break;
                 case 2:
-                    System.out.println("Indique el kakuro a solucionar");
-                    String kakuro = readKakuro();
-                    System.out.println("Se llama a resolver");
-                    testResolve(kakuro);
+                    System.out.println();
+                    testResolve();
                     break;
                 default:
+                    System.out.println();
                     System.out.println("El número introduciodo es incorrecto");
                     break;
 
             }
-
+            System.out.println();
+            System.out.println("Opciones: \n 1. Creadora \n 2. Resolver \n 3. Salir");
+            value = readNumber();
         }
     }
 
+    /**@brief función que nos permite leer un kakuro en formato string
+     *
+     * @return kakuro en formato string
+     */
     public static String readKakuro() {
         StringBuilder content = new StringBuilder();
-        while (reader.hasNext())
+        String[] valuesSize = reader.next().split(",");
+        int row = Integer.parseInt(valuesSize[0]);
+        int column = Integer.parseInt(valuesSize[1]);
+        content.append((row) + "," + (column) + "\n");
+        for (int i = 0; i < row; ++i)
             content.append(reader.next()).append("\n");
         return content.toString();
     }
 
+    /**@brief función que nos permite leer un entero del terminal o un fichero
+     *
+     * @return el entero leido
+     */
     public static int readNumber() {
         int number = 0;
         number = reader.nextInt();
