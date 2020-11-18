@@ -48,6 +48,7 @@ public class CtrlGenerate {
         if (!board[i][j].isWhite()) return 0;
         return 1 + countWhiteCellsV(board, i - 1, j);
     }
+
     /**@brief función para saber el número de celdas blancas situadas en la misma run horizontal y antes que una celda dada.
      *
      * @param board representa un tablero con celdas blancas y negras
@@ -98,6 +99,7 @@ public class CtrlGenerate {
             tempBoard[lastR][lastC][1] = count;
         }
     }
+
     /**@brief función que cuenta el número de celdas blancas de cada run horizontal
      *
      * @param board representa un tablero con celdas blancas y negras
@@ -309,9 +311,8 @@ public class CtrlGenerate {
         else if (!board[i][j].isWhite()) return fillBoardAux2(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
         WhiteCell w = (WhiteCell) board[i][j];
         if (w.getCorrectValue() != 0) {
-
             return fillBoardAux2(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
-        }//aqui soy blanca y ya me han fijado un valor
+        }
         else if (allZero(tempBoard, i, j)) {
             return fillBoardAux2(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
         }
@@ -364,20 +365,17 @@ public class CtrlGenerate {
                     }
                     f = 1;
                     while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
-                        // System.out.println("2");
                         allOk = intersection2(prueba2, tempBoard[i][j - f]);
                         ++f;
                     }
                     f = 1;
                     int prueba [] = computePosSums(tempBoard[lastCol][j][2], nV-1, v+1);
                     while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
-                        // System.out.println("3");
                         allOk = intersection2(prueba, tempBoard[i + f][j]);
                         ++f;
                     }
                     f = 1;
                     while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
-                        // System.out.println("4");
                         allOk = intersection2(prueba, tempBoard[i - f][j]);
                         ++f;
                     }
@@ -430,25 +428,21 @@ public class CtrlGenerate {
 
                     int f = 1;
                     while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
-                        // System.out.println("1");
                         allOk = intersection2(prueba2, tempBoard[i][j + f]);
                         ++f;
                     }
                     f = 1;
                     while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
-                        // System.out.println("2");
                         allOk = intersection2(prueba2, tempBoard[i][j - f]);
                         ++f;
                     }
                     f = 1;
                     while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
-                        // System.out.println("3");
                         allOk = intersection3(prueba, tempBoard[i + f][j]);
                         ++f;
                     }
                     f = 1;
                     while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
-                        // System.out.println("4");
                         allOk = intersection3(prueba, tempBoard[i - f][j]);
                         ++f;
                     }
@@ -588,8 +582,6 @@ public class CtrlGenerate {
                         int[] valuesV = computePosSums(posComb[nV][y], nV, 0);
                         int value = intersection(valuesH, valuesV);
                         if (value != -1) {
-
-
                             tempBoard[i][j][value] = 1;
                             tempBoard[lastCol][j][2] = posComb[nV][y];
                             tempBoard[i][lastRow][3] = posComb[nH][x];
@@ -692,11 +684,9 @@ public class CtrlGenerate {
         int[] res = new int[1];
         CtrlValidate.validate(0,0,0,vec,res);
         if(res[0] == 1 && ans) {
-            System.out.println("kakuro único generado");
             return true;
         }
         else {
-            System.out.println("Sad :c");
             return false;
         }
     }
@@ -719,11 +709,12 @@ public class CtrlGenerate {
     /**@brief función principal de CtrlGenerate
      *
      * @param size tamaño del tablero a generar
+     * @param dif indica el porcenatge de celdas blancas
      * @return un kakuro con solución única
      *
      * Esta función generará tableros mientras no sean válidos o no puedan tener solución única
      */
-    public static Kakuro generate(int size) {
+    public static Kakuro generate(int size,int dif) {
         boolean repeat = true;
         while(repeat) {
             repeat = false;
@@ -732,30 +723,26 @@ public class CtrlGenerate {
                 board[0][i] = new BlackCell();
                 board[i][0] = new BlackCell();
             }
-            System.out.println("Empezamos nuevo tablero");
-            firstColRow(board);
-            randomCells(board);
+            firstColRow(board,dif);
+            randomCells(board,dif);
             checkBoard(board);
             if(!connexBoard(board)){
                 repeat = true;
             }
-            System.out.println("Tablero creado");
-
-            //printBoard(board);
             currentKakuro = new Kakuro("0",0,board);
-            if(!repeat && fillBoard(board)) {
-                System.out.println("Kakuro with unique solution found");
-            }
+            if(!repeat && fillBoard(board)) { }
             else repeat = true;
         }
+        CtrlValidate.setDifficulty();
         return currentKakuro;
     }
 
     /**@brief función que genera la primera y la última fila del talbero de manera que simétrico
      *
      * @param board representa un tablero con celdas sin especificar
+     * @param dif indica el porcentage de casillas blancas
      */
-    public static void firstColRow(Cell[][] board) {
+    public static void firstColRow(Cell[][] board,int dif) {
         int size = board.length;
         int i = 1;
         int cont = 0;
@@ -775,8 +762,12 @@ public class CtrlGenerate {
                 cont = 0;
             }
             else {
-                int random = (int) (Math.random()*10);
-                if( random <= 5) {
+                int random = (int) (Math.random()*100);
+                int x = 0;
+                if( dif == 1) x = 55;
+                else if( dif == 2) x = 60;
+                else x = 65;
+                if( random <= x) {
                     board[i][j] = new WhiteCell();
                     board[size-i][size-j] = new WhiteCell();
                     ++cont;
@@ -794,8 +785,9 @@ public class CtrlGenerate {
     /**@brief función que rellena el tablero con celdas blancas y negras evitando runs superiores a 9 y de forma que sea simétrico
      *
      * @param board representa un tablero con celdas sin especificar
+     * @param dif indica el porcentage de casillas blancas
      */
-    public static void randomCells(Cell[][] board) {
+    public static void randomCells(Cell[][] board,int dif) {
         int i = 1;
         int size = board.length;
         while( i <= size/2 ) {
@@ -830,17 +822,19 @@ public class CtrlGenerate {
                     board[i][j] = new BlackCell();
                     board[size-i][size-j] = new BlackCell();
                 }
-                else { //random
-                        //int random = (int) (Math.random() * 10); //generamos un numero aleatorio
-                        Random rand = new Random();
-                        if (rand.nextInt(11) <= 2) {
-                            board[i][j] = new WhiteCell();
-                            board[size - i][size - j] = new WhiteCell();
-                        } else {
-                            board[i][j] = new BlackCell();
-                            board[size - i][size - j] = new BlackCell();
-                        }
-
+                else {
+                    int x = 0;
+                    if( dif == 1) x = 55;
+                    else if( dif == 2) x = 60;
+                    else x = 65;
+                    Random rand = new Random();
+                    if (rand.nextInt(101) <= x) {
+                        board[i][j] = new WhiteCell();
+                        board[size - i][size - j] = new WhiteCell();
+                    } else {
+                        board[i][j] = new BlackCell();
+                        board[size - i][size - j] = new BlackCell();
+                    }
                 }
             }
             ++i;
@@ -853,7 +847,6 @@ public class CtrlGenerate {
      *
      * Mientras el tablero contenga alguna casilla blanca solitária hará los cambios que hagan falta.
      */
-
     public static void checkBoard(Cell[][] board) {
         int size = board.length;
         boolean canvi = true;
@@ -889,6 +882,7 @@ public class CtrlGenerate {
                         if(c == size-2) {
                             if(board[r][c+1].isWhite()) {
                                 board[r][c+1] = new BlackCell();
+                                canvi = true;
                             }
                         }
                     }
@@ -950,4 +944,3 @@ public class CtrlGenerate {
         return false;
     }
 }
-

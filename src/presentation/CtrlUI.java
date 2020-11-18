@@ -115,13 +115,23 @@ public class CtrlUI {
                 menu();
                 break;
             case 4:
-                System.out.print("Indique la dimension n (NxN) del Kakuro que desea generar: ");
+                System.out.print("Indique la dimension n (NxN) del Kakuro que desea generar (n >= 3): ");
                 int size = readNumber();
+                while (size < 3) {
+                    System.out.println("El valor que ha introducido no es correcto, tiene que ser mayor o igual a 3");
+                    System.out.print("Indique la dimension n (NxN) del Kakuro que desea generar (n >= 3): ");
+                    size = readNumber();
+                }
                 System.out.println("");
                 System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
                 int diff = readNumber();
+                while (diff < 1 || diff > 3) {
+                    System.out.println("El valor que ha introducido no es correcto");
+                    System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
+                    diff = readNumber();
+                }
                 System.out.println("");
-                cd.generate(size);
+                cd.generate(size,diff);
                 writeKakuroInTerminal();
                 menu();
                 break;
@@ -147,6 +157,11 @@ public class CtrlUI {
         //if (choice == 1) {
             System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
             int difficulty = readNumber();
+            while (difficulty < 1 || difficulty > 3) {
+                System.out.println("El valor que ha introducido no es correcto");
+                System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
+                difficulty = readNumber();
+            }
             System.out.print("Escoge tamaño N M (NxM): ");
             int kakuroSizeRow = readNumber();
             int kakuroSizeColumn = readNumber();
@@ -258,7 +273,8 @@ public class CtrlUI {
         else if (help == 2) {
             if (!cd.helpCorrectNumber(x, y)) {
                 System.out.println("Las coordenadas que ha introducido son de una casilla negra");
-            }
+            } else
+                System.out.println("Se ha colocado el valor correcto en la casilla indicada");
         }
         else {
             System.out.println("El número que ha introducido no es correcto");

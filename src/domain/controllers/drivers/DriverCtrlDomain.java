@@ -1,8 +1,10 @@
 package domain.controllers.drivers;
 
 import domain.classes.Kakuro;
+import domain.controllers.CtrlDomain;
 import domain.controllers.CtrlPlay;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 
@@ -33,7 +35,6 @@ public class DriverCtrlDomain {
      * Comprueba si se crea correctamente
      */
     private static void testCreadora() {
-
     }
     /** @brief Test de la función startNewGame
      *
@@ -43,147 +44,64 @@ public class DriverCtrlDomain {
     private static void testStartNewGame() {
         System.out.println("Indique la dificultad del kakuro: ");
         int difficulty = readNumber();
-        System.out.println("Indique el tamaño del kakuro:");
-        int kakuroSize = readNumber();
+        System.out.println("Indique el numero de filas del kakuro:");
+        int kakuroRows = readNumber();
+        System.out.println("Indique el numero de columnas del kakuro:");
+        int kakuroCols = readNumber();
+        CtrlDomain cd = new CtrlDomain();
+        cd.startNewGame(difficulty,kakuroRows,kakuroCols);
+        System.out.println("Se ha creado la partida correctamente");
     }
 
-    /**
-     * @brief Test de la función isFinished
-     *
-     * Necesita un kakuro y un entero f que nos indicará si el kakuro que hemos entrado esta acabado o no
-     */
-    private static void testIsFinished() {
-        System.out.println("Escribe un kakuro válido:");
-        String kakuroText = readKakuro();
-        System.out.println("Indica si el kakuro esta terminado (1 si esta tarminado, 0 si no lo esta):");
-        int f = readNumber();
-        Kakuro kakuro = new Kakuro(kakuroText);
-        if((kakuro.isFinished() && f == 1) || (!kakuro.isFinished() && f == 0 )) System.out.println("Resultado correcto");
-        else System.out.println("No funciona correctamente");
-    }
+    private static void testCheckCoord() {
+        System.out.println("Introduce la ruta de un kakuro para hacer el test: ");
+        String s = reader.next();
+        System.out.println("Introduce una fila: ");
+        int fila = readNumber();
+        System.out.println("Introduce una columna: ");
+        int columna = readNumber();
+        System.out.println("Son corrctas estas coordenadas?(0 no, 1 si)");
+        int r = readNumber();
 
-    /**
-     * @brief Test de la función checkValidity
-     *
-     */
-    private static void testCheckValidity() {
-        //necesitamos un
-    }
-
-    private static void testHelpMyValue() {
-
-    }
-
-    private static void testHelpMyCorrectNumber() {
-        
-    }
-
-    private static void testValidate() {
-
-    }
-
-    private static void testResolve() {
-        
-    }
-
-    private static void testGenerate() {
-
-    }
-
-    private static void testKakuroSetValue() {
-
-    }
-
-    private static void testGetRowSize() {
-        
-    }
-
-    private static void testGetColumnSize() {
-
-    }
-
-    private static void testGetKakuroToString() {
-        
-    }
-
-    private static void testGetCorrectKakuroToString() {
-    }
-
-    private static void testSearchKakuro() {
-
-    }
-
-    private static void testGetKakuro() {
-        ///per fer el test obtenir un kakuro i printejar-lo
-    }
-
-    private static void testSaveKakuro() {
+        CtrlDomain cd = new CtrlDomain();
+        try {
+            cd.getKakuro("data/"+s+".txt");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        boolean b = cd.checkCoord(fila,columna);
+        if((b && r == 1) || (!b && r == 0)) System.out.print("Solucion correcta");
+        else System.out.println("Solucion incorrecta");
     }
 
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Empezar partida \n 3. Mirar si ha acabado \n 4. Mirar la validez de columna y fila a partir de una celda i un valor \n 5. Solicitar ayuda, mirar si mi valor es correcto \n 6. Solicitar ayuda, colocar valor correcto" +
-                "\n 7. Validar Kakuro \n 8. Resolver Kakuro \n 9. Generar Kakuro \n 10. Asignar valor a celda blanca \n 11. Obtener tamaño de fila \n 12. Obtener tamaño de columna \n 13. Obtener Kakuro en formato String \n 14. Obtener el Kakuro resuleto en formato String " +
-                "\n 15. Buscar un Kakuro de dificultad y tamaño especificados \n 16. Obtener Kakuro a partir de ruta \n 17. Guardar Kakuro");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Salir");
         int value = readNumber();
-        while (value != 19) {
+        while (value != 4) {
             int x, y;
             switch (value) {
                 case 1:
+                    System.out.println();
                     System.out.println("Se llama a la Creadora");
                     testCreadora();
                     break;
                 case 2:
+                    System.out.println();
+                    System.out.println("Se llama a start new game");
                     testStartNewGame();
                     break;
                 case 3:
-                    testIsFinished();
+                    System.out.println();
+                    System.out.println("Se llama a checkCoord");
+                    testCheckCoord();
                     break;
-                case 4:
-                    testCheckValidity();
-                    break;
-                case 5:
-                    testHelpMyValue();
-                    break;
-                case 6:
-                    testHelpMyCorrectNumber();
-                    break;
-                case 7:
-                    testValidate();
-                    break;
-                case 8:
-                    testResolve();
-                    break;
-                case 9:
-                    testGenerate();
-                    break;
-                case 10:
-                    testKakuroSetValue();
-                    break;
-                case 11:
-                    testGetRowSize();
-                    break;
-                case 12:
-                    testGetColumnSize();
-                    break;
-                case 13:
-                    testGetKakuroToString();
-                    break;
-                case 14:
-                    testGetCorrectKakuroToString();
-                    break;
-                case 15:
-                    testSearchKakuro();
-                    break;
-                case 16:
-                    testGetKakuro();
-                    break;
-                case 17:
-                    testSaveKakuro();
+                default:
+                    System.out.println();
+                    System.out.println("Valor incorrecto");
                     break;
             }
-            System.out.println("Opciones: \n 1. Creadora \n 2. Empezar partida \n 3. Mirar si ha acabado \n 4. Mirar la validez de columna y fila a partir de una celda i un valor \n 5. Solicitar ayuda, mirar si mi valor es correcto \n 6. Solicitar ayuda, colocar valor correcto" +
-                    "\n 7. Validar Kakuro \n 8. Resolver Kakuro \n 9. Generar Kakuro \n 10. Asignar valor a celda blanca \n 11. Obtener tamaño de fila \n 12. Obtener tamaño de columna \n 13. Obtener Kakuro en formato String \n 14. Obtener el Kakuro resuleto en formato String " +
-                    "\n 15. Buscar un Kakuro de dificultad y tamaño especificados \n 16. Obtener Kakuro a partir de ruta \n 17. Guardar Kakuro");
+            System.out.println();
+            System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Salir");
             value = readNumber();
         }
         System.exit(0);
@@ -191,7 +109,11 @@ public class DriverCtrlDomain {
 
     public static String readKakuro() {
         StringBuilder content = new StringBuilder();
-        while (reader.hasNext())
+        String[] valuesSize = reader.next().split(",");
+        int row = Integer.parseInt(valuesSize[0]);
+        int column = Integer.parseInt(valuesSize[1]);
+        content.append((row) + "," + (column) + "\n");
+        for (int i = 0; i < row; ++i)
             content.append(reader.next()).append("\n");
         return content.toString();
     }

@@ -1,0 +1,73 @@
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
+
+Se llama a la Creadora
+
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
+
+Se llama a start new game
+Indique la dificultad del kakuro: 
+Indique el numero de filas del kakuro:
+Indique el numero de columnas del kakuro:
+Se ha creado la partida correctamente
+
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
+
+Se llama a start new game
+Indique la dificultad del kakuro: 
+Indique el numero de filas del kakuro:
+Indique el numero de columnas del kakuro:
+Se ha creado la partida correctamente
+
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
+
+Se llama a checkCoord
+Introduce la ruta de un kakuro para hacer el test: 
+Introduce una fila: 
+Introduce una columna: 
+Son corrctas estas coordenadas?(0 no, 1 si)
+Solucion correcta
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
+
+Se llama a checkCoord
+Introduce la ruta de un kakuro para hacer el test: 
+Introduce una fila: 
+Introduce una columna: 
+Son corrctas estas coordenadas?(0 no, 1 si)
+Solucion correcta
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
+
+Se llama a checkCoord
+Introduce la ruta de un kakuro para hacer el test: 
+Introduce una fila: 
+Introduce una columna: 
+Son corrctas estas coordenadas?(0 no, 1 si)
+Solucion correcta
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas
+ 4. Salir
