@@ -676,7 +676,6 @@ public class CtrlGenerate {
         nineCellsRow(board, tempBoard);
         nineCellsCol(board, tempBoard);
         int whites = howManyWhites(board);
-        System.out.println(whites);
         boolean ans = fillBoardAux(board, 0, 0, posComb, tempBoard, whites, 0);
             for (int x = 0; x < board.length; ++x) {
                     for (int y = 0; y < board[0].length; ++y) {

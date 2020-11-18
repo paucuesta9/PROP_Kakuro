@@ -137,8 +137,8 @@ public class CtrlDomain {
     /** @brief Se genera un Kakuro
      *
      */
-    public void generate(int size) {
-        currentKakuro = CtrlGenerate.generate(size);
+    public static void generate(int size) {
+        CtrlGenerate.generate(size);
     }
 
     /* GETTERS AND SETTERS (CLASSES) */
