@@ -22,7 +22,13 @@ run_driver_Cell_man:
 	cd bin && java domain.controllers.drivers.DriverCell
 
 run_driver_Cell_auto:
-	cd bin && java domain.controllers.drivers.DriverCell < ../data/drivers/inputs/input_Cell.txt
+	cd bin && java domain.controllers.drivers.DriverCell < ../src/domain/controllers/drivers/Inputs/input_Cell.txt
+
+run_driver_Kakuro_man:
+	cd bin && java domain.controllers.drivers.DriverKakuro
+
+run_driver_Kakuro_auto:
+	cd bin && java domain.controllers.drivers.DriverKakuro < ../src/domain/controllers/drivers/Inputs/input_Kakuro.txt
 
 run_driver_BlackCell_man:
 	cd bin && java domain.controllers.drivers.DriverBlackCell
