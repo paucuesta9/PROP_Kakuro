@@ -392,7 +392,6 @@ La celda en la posicion x e y es blanca y se ha actualizado correctamente
  17. Salir
 Se llama a checkColumn
 Introduce un kakuro para realizar el test:
-Introduce el kakuro solucionado para realizar el test:
 Indica la fila de la casilla para hacer el test:
 Indica la columna de la casilla para hacer el test:
 Indica el valor a comprobar:
@@ -420,7 +419,6 @@ Solucion correcta
  17. Salir
 Se llama a checkColumn
 Introduce un kakuro para realizar el test:
-Introduce el kakuro solucionado para realizar el test:
 Indica la fila de la casilla para hacer el test:
 Indica la columna de la casilla para hacer el test:
 Indica el valor a comprobar:
@@ -448,13 +446,12 @@ Solucion correcta
  17. Salir
 Se llama a checkColumn
 Introduce un kakuro para realizar el test:
-Introduce el kakuro solucionado para realizar el test:
 Indica la fila de la casilla para hacer el test:
 Indica la columna de la casilla para hacer el test:
 Indica el valor a comprobar:
 ¿Es la ultima celda de la run vertical?
 ¿El valor deberia ser correcto?
-Solucion incorrecta
+Solucion correcta
 
  Opciones: 
  1. Creadora con valores 
@@ -476,7 +473,6 @@ Solucion incorrecta
  17. Salir
 Se llama a checkColumn
 Introduce un kakuro para realizar el test:
-Introduce el kakuro solucionado para realizar el test:
 Indica la fila de la casilla para hacer el test:
 Indica la columna de la casilla para hacer el test:
 Indica el valor a comprobar:

@@ -175,8 +175,6 @@ public class DriverKakuro {
     private static void testCheckColumn() {
         System.out.println("Introduce un kakuro para realizar el test:");
         String kakuro1 = readKakuro();
-        System.out.println("Introduce el kakuro solucionado para realizar el test:");
-        String kakuroSol = readKakuro();
         System.out.println("Indica la fila de la casilla para hacer el test:");
         int f = readNumber();
         System.out.println("Indica la columna de la casilla para hacer el test:");
@@ -187,14 +185,15 @@ public class DriverKakuro {
         int end = readNumber();
         System.out.println("¿El valor deberia ser correcto?");
         int s = readNumber();
-
         boolean b = false;
         if(end == 1) b = true;
         Kakuro k = new Kakuro(kakuro1);
-        Kakuro kSol = new Kakuro(kakuroSol);
         Cell[][] board = k.getBoard();
-        Cell[][] boardSol = kSol.getBoard();
-        if (board[f][c].isWhite()) ((WhiteCell) board[f][c]).setCorrectValue(((WhiteCell)boardSol[f][c]).getValue());
+        for (int i = 0; i < board.length; ++i) {
+            for (int j = 0; j < board[0].length; ++j) {
+                if (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell) board[i][j]).getValue());
+            }
+        }
         boolean r = k.checkColumn(f,c,n,b,n);
         if((r && s == 1) || (!r && s == 0)) System.out.println("Solucion correcta");
         else System.out.println("Solucion incorrecta");
