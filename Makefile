@@ -58,13 +58,13 @@ run_driver_CtrlGenerate_auto:
 run_driver_CtrlPlay_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlPlay
 
-run_driver_CtrlGenerate_auto:
+run_driver_CtrlPlay_auto:
 	cd bin && java domain.controllers.drivers.DriverCtrlPlay < ../src/domain/controllers/drivers/Inputs/input_CtrlPlay.txt
 
 run_driver_CtrlResolve_man:
 	cd bin && java domain.controllers.drivers.DriverCtrlResolve
 
-run_driver_CtrlGenerate_auto:
+run_driver_CtrlResolve_auto:
 	cd bin && java domain.controllers.drivers.DriverCtrlResolve < ../src/domain/controllers/drivers/Inputs/input_CtrlResolve.txt
 
 run_driver_CtrlValidate_man:
