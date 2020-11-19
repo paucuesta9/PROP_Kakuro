@@ -175,6 +175,6 @@ public class DriverCtrlData {
      * @return la línea leída
      */
     public static String readLine() {
-        return reader.next();
+        return reader.next().trim();
     }
 }

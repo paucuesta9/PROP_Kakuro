@@ -311,7 +311,7 @@ public class CtrlUI {
      * @return la linea introducida por la terminal
      */
     public String readLine() {
-        return reader.nextLine();
+        return reader.nextLine().trim();
     }
 
     /** @brief Escritura del Kakuro por terminal

@@ -48,6 +48,7 @@ public class DriverCtrlGenerate {
         int r = CtrlGenerate.countWhiteCellsV(currentKakuro.getBoard(), fila-1,columna);
         System.out.println(r);
     }
+
     /**
      * @brief Test de la función countWhiteCellsH
      *
@@ -66,6 +67,7 @@ public class DriverCtrlGenerate {
         int r = CtrlGenerate.countWhiteCellsH(currentKakuro.getBoard(), fila,columna-1);
         System.out.println(r);
     }
+
     /**
      * @brief Test de la función nineCellsRow
      *
@@ -95,6 +97,7 @@ public class DriverCtrlGenerate {
         }
         System.out.println("Se ha imprimido un tablero por pantalla indicando el valor de cada run en verftical");
     }
+
     /**
      * @brief Test de la función nineCellsCol
      *
@@ -269,7 +272,6 @@ public class DriverCtrlGenerate {
         else System.out.println("O no hay 1s o no son unicos");
     }
 
-
     /**@brief Test de la función fillBoard
      * Comprueba si la función filBoard crea un kakuro único dado un tablero sin sumas
      */
@@ -325,6 +327,7 @@ public class DriverCtrlGenerate {
         CtrlGenerate.firstColRow(board,d);
         System.out.println("Se ha generado la primera y ultima fila del tablero");
     }
+
     /**@brief Test de la función firstColRow
      * Comprueba que la función firstColRow genera correctamente las casillas de la primera fila y columna
      */
@@ -533,6 +536,7 @@ public class DriverCtrlGenerate {
             content.append(reader.next()).append("\n");
         return content.toString();
     }
+
     /**@brief función que nos permite leer un entero del terminal o un fichero
      *
      * @return el entero leido
