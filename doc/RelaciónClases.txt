@@ -42,6 +42,9 @@ OTROS
         - Manual de Drivers
     Alvaro:
         - JUnit
+        - Descripción de algoritmos y estructuras de datos
+    Pol:
+        - Descripción de algoritmos y estructuras de datos
     Todos:
         - Casos de uso
         - Diagrama de clases
