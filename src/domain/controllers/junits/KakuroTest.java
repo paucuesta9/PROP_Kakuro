@@ -8,10 +8,10 @@ import static org.junit.Assert.*;
 
 /** @file KakuroTest.java
  @brief Clase  <em>JUnit Kakuro</em>.
- @author Alvaro Armada Ruiz
  */
 
 /** @brief Clase KakuroTest que comprueba la correctividad de las funciones de la clase Kakuro
+ * @author Alvaro Armada Ruiz
  */
 
 public class KakuroTest {

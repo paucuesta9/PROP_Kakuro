@@ -2,10 +2,10 @@ package domain.classes;/* Alvaro Armada Ruiz */
 
 /** @file Kakuro.java
  @brief Clase  <em>Kakuro</em>.
- @author Alvaro Armada Ruiz
  */
 
 /** @brief Clase Kakuro que contiene los atributos y metodos de un tablero
+ * @author Alvaro Armada Ruiz
  */
 public class Kakuro {
 
@@ -249,15 +249,15 @@ public class Kakuro {
         return board[x][y].setValue(value);
     }
 
-    /**@brief Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero
+    /** @brief Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero
      *
      * @param r representa el número de fila del tablero
      * @param c representa el número de columna del tablero
      * @param i representa el valor añadido a la celda blanca
      * @param f indica si la casilla con la que se ha hecho la primera casilla es la última de la run vertical
      * @param sum suma de los valores ya visitados de la run vertical
-     * @return true si, f es false y la suma de todas las casillas es inferior a lo que debería sumar la run, si f es true si la suma es igual a lo que deberia
-     * sumar. False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente
+     * @return true si, f es false y la suma de todas las casillas es inferior a lo que debería sumar la run, si f es true si la suma es igual a lo que deberia sumar.
+     * @return False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente
      */
     public boolean checkColumn(int r, int c, int i, boolean f, int sum) {
         if(!board[r][c].isWhite()) {

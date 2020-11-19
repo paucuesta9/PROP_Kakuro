@@ -11,6 +11,7 @@ import domain.classes.WhiteCell;
 import java.lang.Math;
 
 /** @brief Clase CtrlValidate que contiene los atributos y metodos para la funcionalidad de validar
+ * @author Alvaro Armada Ruiz
  */
 public class CtrlValidate {
 

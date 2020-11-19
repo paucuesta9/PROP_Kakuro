@@ -2,7 +2,6 @@ package domain.controllers.drivers;
 
 /** @file DriverCtrlValidate.java
  @brief Clase  <em>DriverCtrlValidate</em>.
- @author Alvaro Armada Ruiz
  */
 
 import domain.classes.Kakuro;
@@ -11,7 +10,8 @@ import domain.controllers.CtrlValidate;
 import javax.swing.*;
 import java.util.Scanner;
 
-/** @brief Clase DriverCtrlResolve que comprueba la correctividad de las funciones del controlador Validate
+/** @brief Clase DriverCtrlValidate que comprueba la correctividad de las funciones del controlador CtrlValidate
+ * @author Alvaro Armada Ruiz
  */
 
 public class DriverCtrlValidate {

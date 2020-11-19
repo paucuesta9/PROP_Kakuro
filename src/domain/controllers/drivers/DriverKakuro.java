@@ -4,10 +4,16 @@ import domain.classes.BlackCell;
 import domain.classes.Cell;
 import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
-import org.w3c.dom.ls.LSOutput;
 
 import java.util.*;
 
+/** @file DriverKakuro.java
+ @brief Clase  <em>DriverKakuro</em>.
+ */
+
+/** @brief Clase DriverKakuro que comprueba la correctividad de las funciones de la clase Kakuro
+ * @author Pau Cuesta Arcos
+ */
 public class DriverKakuro {
     private static Scanner reader = new Scanner(System.in);
     public static final String KAKURO_TEXT_ENUNCIADO = "9,9\n" +
@@ -21,6 +27,10 @@ public class DriverKakuro {
             "F28,?,?,?,?,?,?,?,*\n" +
             "F6,?,?,*,*,F8,?,?,*";
 
+    /** @brief Test de la creadora a partir de todos los atributos
+     *
+     * Comprueba si se crea correctamente un kakuro a partir de un identificador, una dificultad y un tablero
+     */
     private static void testCreadora1() {
         Cell[][] board = new Cell[10][10];
         for (int i = 0; i < 10; ++i) {
@@ -34,6 +44,12 @@ public class DriverKakuro {
         System.out.println("El Kakuro se ha creado");
     }
 
+    /** @brief Test de la creadora String
+     *
+     * Comprueba si se crea correctamente un Kakuro a partir de un String
+     *
+     * @param kakuroText String del Kakuro que se desea crear
+     */
     private static void testCreadora2(String kakuroText) {
         try {
             Kakuro k = new Kakuro(kakuroText);
@@ -46,11 +62,21 @@ public class DriverKakuro {
 
     }
 
+    /** @brief Test de conversor de Kakuro a String
+     *
+     * Comprueba si se convierte a String un Kakuro de forma correcta
+     *
+     */
     private static void testToString() {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         System.out.println(k.toString());
     }
 
+    /** @brief Test de conversor de Kakuro correcto a String
+     *
+     * Comprueba si se convierte a String un Kakuro con los valores correctos de forma correcta
+     *
+     */
     private static void testCorrectToString() {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         Cell[][] board = k.getBoard();
@@ -101,39 +127,65 @@ public class DriverKakuro {
         System.out.println(k.correctToString());
     }
 
+    /** @brief Test de getter de identificador
+     *
+     * Comprueba si se obtiene el identificador de forma correcta
+     *
+     */
     private static void testGetId() {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         System.out.println("ID: " + k.getId());
     }
 
-//    private static void testSetId(int id) {
-//        Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
-//        // k.setId(String.valueOf(id));
-//        System.out.println("Se ha actualizado el valor del id");
-//    }
-
+    /** @brief Test de getter de dificultad
+     *
+     * Comprueba si se obtiene la dificultad de forma correcta
+     *
+     * @param diff dificultad que se va a querer obtener
+     */
     private static void testGetDifficulty(int diff) {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         k.setDifficulty(diff);
         System.out.println("Difficulty: " + k.getDifficulty());
     }
 
+    /** @brief Test de setter de dificultad
+     *
+     * Comprueba si se coloca la dificultad de forma correcta
+     *
+     * @param difficulty dificultad a colocar
+     */
     private static void testSetDifficulty(int difficulty) {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         k.setDifficulty(difficulty);
         System.out.println("Se ha actualizado el valor difficulty");
     }
 
+    /** @brief Test de getter de tamaño de filas
+     *
+     * Comprueba si se obtiene el tamaño de filas correctamente
+     *
+     */
     private static void testGetRowSize() {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         System.out.println("RowSize: " + k.getRowSize());
     }
 
+    /** @brief Test de getter de tamaño de columnas
+     *
+     * Comprueba si se obtiene correctamente el tamaño de columnas
+     *
+     */
     private static void testGetColumnSize() {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         System.out.println("ColumnSize: " + k.getColumnSize());
     }
 
+    /** @brief Test de getter de tablero
+     *
+     * Comprueba si se obtiene el tablero correctamente
+     *
+     */
     private static void testGetBoard() {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         Cell[][] board = k.getBoard();
@@ -159,12 +211,25 @@ public class DriverKakuro {
         }
     }
 
+    /** @brief  Test de getter de Celda
+     *
+     * @param x posición x de la celda
+     * @param y posición y de la celda
+     */
     private static void testGetCell(int x, int y) {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         k.getCell(x,y);
         System.out.println("Se ha obtenido la celda buscada");
     }
 
+    /** @brief Test de colocar valor en celda
+     *
+     * Comprueba si se coloca el valor en una celda blanca correctamente
+     *
+     * @param x posición x de la celda
+     * @param y posición y de la celda
+     * @param value valor que se quiere colocar en la celda
+     */
     private static void testSetValue(int x, int y, int value) {
         Kakuro k = new Kakuro(KAKURO_TEXT_ENUNCIADO);
         Boolean set = k.setValue(x, y, value);
@@ -172,6 +237,11 @@ public class DriverKakuro {
         else System.out.println("La celda en la posicion x e y es negra y por lo tanto no se ha actualizado");
     }
 
+    /** @brief Test de checkColumn
+     *
+     * Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero
+     *
+     */
     private static void testCheckColumn() {
         System.out.println("Introduce un kakuro para realizar el test:");
         String kakuro1 = readKakuro();
@@ -199,6 +269,15 @@ public class DriverKakuro {
         else System.out.println("Solucion incorrecta");
     }
 
+    /** @brief Test de CheckRowValidity
+     *
+     * Comprueba si se está haciendo correctamente la verificación de que el valor es correcto en la fila
+     *
+     * @param x posicion x de la celda
+     * @param y posición y de la celda
+     * @param value valor que se ha introducido
+     * @param kakuro String del kakuro que se está jugando
+     */
     private static void testCheckRowValidity(int x, int y, int value, String kakuro) {
         Kakuro k = new Kakuro(kakuro);
         k.setValue(x,y,value);
@@ -206,6 +285,15 @@ public class DriverKakuro {
         else System.out.println("El valor introducido no cumple las condiciones de la fila");
     }
 
+    /** @brief Test de CheckColumnValidity
+     *
+     * Comprueba si se está haciendo correctamente la verificación de que el valor es correcto en la columna
+     *
+     * @param x posicion x de la celda
+     * @param y posición y de la celda
+     * @param value valor que se ha introducido
+     * @param kakuro String del kakuro que se está jugando
+     */
     private static void testCheckColumnValidity(int x, int y, int value, String kakuro) {
         Kakuro k = new Kakuro(kakuro);
         k.setValue(x,y,value);
@@ -213,6 +301,13 @@ public class DriverKakuro {
         else System.out.println("El valor introducido no cumple las condiciones de la columna");
     }
 
+    /** @brief Test de si se ha acabado la partida
+     *
+     * Comprueba si se ha verificado que se ha acabado la partida de forma correcta
+     *
+     * @param kakuro1 kakuro que se quiere comprobat
+     * @param kakuroFinished el mismo kakuro pero resuleto para ver si se ha terminado
+     */
     private static void testIsFinished(String kakuro1, String kakuroFinished) {
         Kakuro k = new Kakuro(kakuro1);
         Kakuro kFin = new Kakuro(kakuroFinished);
@@ -228,6 +323,10 @@ public class DriverKakuro {
         else System.out.println("El kakuro aun no se ha terminado");
     }
 
+    /** @brief Función principal
+     *
+     * Indica las opciones que hay para testear
+     */
     public static void main(String[] args) {
         System.out.println("Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty" +
                 "\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna" +
@@ -340,6 +439,10 @@ public class DriverKakuro {
         System.exit(0);
     }
 
+    /** @brief Lee un kakuro de consola
+     *
+     * @return el kakuro leído
+     */
     public static String readKakuro() {
         StringBuilder content = new StringBuilder();
         String[] valuesSize = reader.next().split(",");
@@ -351,6 +454,10 @@ public class DriverKakuro {
         return content.toString();
     }
 
+    /** @brief Lee un numero de consola
+     *
+     * @return el número leído
+     */
     public static int readNumber() {
         int number = 0;
         number = reader.nextInt();

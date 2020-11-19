@@ -2,7 +2,6 @@ package domain.controllers;
 
 /** @file CtrlGenerate.java
  @brief Clase <em>CtrlGenerate</em>.
- @Author Pol Vallespí Soro y Alvaro Armada Ruiz
  */
 
 import domain.classes.BlackCell;
@@ -13,6 +12,7 @@ import domain.classes.WhiteCell;
 import java.util.Random;
 
 /** @brief Clase CtrlGenerate que contiene los atributos y metodos para la funcionalidad de generar
+ * @author Pol Vallespí Soro y Alvaro Armada Ruiz
  */
 public class CtrlGenerate {
     /**

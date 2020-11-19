@@ -10,10 +10,10 @@ import java.util.Scanner;
 
 /** @file DriverCtrlDomain.java
  @brief Clase  <em>DriverCtrlDomain</em>.
- @author Pol Vallespí Soro
  */
 
 /** @brief Clase DriverCtrlDomain que comprueba la correctividad de las funciones del controlador CtrlDomain
+ * @author Pol Vallespí Soro
  */
 
 public class DriverCtrlDomain {

@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 /** @file DriverCell.java
  @brief Clase  <em>DriverCell</em>.
- @author Pau Cuesta Arcos
  */
 
 
 /** @brief Clase DriverCell que comprueba la correctividad de las funciones de la clase Cell
+ * @author Pau Cuesta Arcos
  */
 
 public class DriverCell {

@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 /** @file DriverCtrlGenerate.java
  @brief Clase  <em>DriverCtrlGenerate</em>.
- @author Pol Vallespí Soro
  */
 
 /** @brief Clase DriverCtrlGenerate que comprueba la correctividad de las funciones del controlador CtrlGenerate
+ * @author Pol Vallespí Soro
  */
 public class DriverCtrlGenerate {
     private static Scanner reader = new Scanner(System.in);

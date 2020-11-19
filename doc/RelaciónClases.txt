@@ -13,6 +13,7 @@ Pau:
     - WhiteCell
     - CtrlData
     - CtrlDomain
+    - Main
 Judith:
     - BlackCell
     - CtrlPlay

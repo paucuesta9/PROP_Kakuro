@@ -70,6 +70,11 @@ static \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyper
 \doxysubsection{Descripción detallada}
 Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate}{Ctrl\+Generate}} que contiene los atributos y metodos para la funcionalidad de generar. 
 
+\begin{DoxyAuthor}{Autor}
+Pol Vallespí Soro y Alvaro Armada Ruiz 
+\end{DoxyAuthor}
+
+
 Definición en la línea 17 del archivo Ctrl\+Generate.\+java.
 
 
@@ -1275,11 +1280,11 @@ Definición en la línea 790 del archivo Ctrl\+Generate.\+java.
 \DoxyCodeLine{824                 \}}
 \DoxyCodeLine{825                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{826                     \textcolor{keywordtype}{int} x = 0;}
-\DoxyCodeLine{827                     \textcolor{keywordflow}{if}( dif == 1) x = 55;}
-\DoxyCodeLine{828                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( dif == 2) x = 60;}
-\DoxyCodeLine{829                     \textcolor{keywordflow}{else} x = 65;}
+\DoxyCodeLine{827                     \textcolor{keywordflow}{if}( dif == 1) x = 30;}
+\DoxyCodeLine{828                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( dif == 2) x = 50;}
+\DoxyCodeLine{829                     \textcolor{keywordflow}{else} x = 60;}
 \DoxyCodeLine{830                     Random rand = \textcolor{keyword}{new} Random();}
-\DoxyCodeLine{831                     \textcolor{keywordflow}{if} (rand.nextInt(101) <= x) \{}
+\DoxyCodeLine{831                     \textcolor{keywordflow}{if} (rand.nextInt(101) <= x ) \{}
 \DoxyCodeLine{832                         board[i][j] = \textcolor{keyword}{new} WhiteCell();}
 \DoxyCodeLine{833                         board[size -\/ i][size -\/ j] = \textcolor{keyword}{new} WhiteCell();}
 \DoxyCodeLine{834                     \} \textcolor{keywordflow}{else} \{}
@@ -1352,11 +1357,17 @@ Definición en la línea 850 del archivo Ctrl\+Generate.\+java.
 \DoxyCodeLine{885                                 canvi = \textcolor{keyword}{true};}
 \DoxyCodeLine{886                             \}}
 \DoxyCodeLine{887                         \}}
-\DoxyCodeLine{888                     \}}
-\DoxyCodeLine{889                 \}}
-\DoxyCodeLine{890             \}}
-\DoxyCodeLine{891         \}}
-\DoxyCodeLine{892     \}}
+\DoxyCodeLine{888                         \textcolor{keywordflow}{if}(r == size-\/2) \{}
+\DoxyCodeLine{889                             \textcolor{keywordflow}{if}(board[r+1][c].isWhite()) \{}
+\DoxyCodeLine{890                                 board[r+1][c] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{891                                 canvi = \textcolor{keyword}{true};}
+\DoxyCodeLine{892                             \}}
+\DoxyCodeLine{893                         \}}
+\DoxyCodeLine{894                     \}}
+\DoxyCodeLine{895                 \}}
+\DoxyCodeLine{896             \}}
+\DoxyCodeLine{897         \}}
+\DoxyCodeLine{898     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}\label{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}} 
@@ -1385,22 +1396,22 @@ número de casillas blancas conectadas a la celda dada
 \end{DoxyReturn}
 
 
-Definición en la línea 902 del archivo Ctrl\+Generate.\+java.
+Definición en la línea 908 del archivo Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{902                                                                        \{}
-\DoxyCodeLine{903         \textcolor{keywordflow}{if}( i >= board.length || i < 0 || j >= board[0].length || j<0) \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{904         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!board[i][j].isWhite()) \{}
-\DoxyCodeLine{905             auxBoard[i][j] = 1; \textcolor{comment}{//la marcamos como visitada}}
-\DoxyCodeLine{906             \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{907         \}}
-\DoxyCodeLine{908         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(auxBoard[i][j] == 1) \textcolor{keywordflow}{return} 0;}
-\DoxyCodeLine{909         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{910             auxBoard[i][j]=1;}
-\DoxyCodeLine{911             \textcolor{keywordflow}{return} 1 + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i+1,j,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j+1,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i-\/1,j,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j-\/1,auxBoard);}
-\DoxyCodeLine{912         \}}
-\DoxyCodeLine{913     \}}
+\DoxyCodeLine{908                                                                        \{}
+\DoxyCodeLine{909         \textcolor{keywordflow}{if}( i >= board.length || i < 0 || j >= board[0].length || j<0) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{910         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!board[i][j].isWhite()) \{}
+\DoxyCodeLine{911             auxBoard[i][j] = 1; \textcolor{comment}{//la marcamos como visitada}}
+\DoxyCodeLine{912             \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{913         \}}
+\DoxyCodeLine{914         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(auxBoard[i][j] == 1) \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{915         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{916             auxBoard[i][j]=1;}
+\DoxyCodeLine{917             \textcolor{keywordflow}{return} 1 + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i+1,j,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j+1,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i-\/1,j,auxBoard)+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j-\/1,auxBoard);}
+\DoxyCodeLine{918         \}}
+\DoxyCodeLine{919     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_generate_a78d38f5c07c5c77590801e459d08052e}\label{classdomain_1_1controllers_1_1_ctrl_generate_a78d38f5c07c5c77590801e459d08052e}} 
@@ -1423,36 +1434,36 @@ true si es conexo, false si no lo es
 \end{DoxyReturn}
 
 
-Definición en la línea 920 del archivo Ctrl\+Generate.\+java.
+Definición en la línea 926 del archivo Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{920                                                       \{}
-\DoxyCodeLine{921         \textcolor{keywordtype}{int} size = board.length;}
-\DoxyCodeLine{922         \textcolor{keywordtype}{int} nDFS = 0;}
-\DoxyCodeLine{923         \textcolor{keywordtype}{int} nWhite = 0;}
-\DoxyCodeLine{924         \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
-\DoxyCodeLine{925         \textcolor{keywordtype}{int} [][] auxBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[size][size];}
-\DoxyCodeLine{926         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i ) \{}
-\DoxyCodeLine{927             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size;++j) \{}
-\DoxyCodeLine{928                 auxBoard[i][j] = 0;}
-\DoxyCodeLine{929             \}}
-\DoxyCodeLine{930         \}}
-\DoxyCodeLine{931         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i ) \{}
-\DoxyCodeLine{932             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size;++j) \{}
-\DoxyCodeLine{933                 \textcolor{keywordflow}{if}(board[i][j].isWhite())\{}
-\DoxyCodeLine{934                     nWhite+=1;}
-\DoxyCodeLine{935                     \textcolor{keywordflow}{if}(!found ) \{}
-\DoxyCodeLine{936                         nDFS = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j,auxBoard);}
-\DoxyCodeLine{937                         found = \textcolor{keyword}{true};}
-\DoxyCodeLine{938                     \}}
-\DoxyCodeLine{939                 \}}
-\DoxyCodeLine{940 }
-\DoxyCodeLine{941             \}}
-\DoxyCodeLine{942         \}}
-\DoxyCodeLine{943         \textcolor{keywordflow}{if}(nWhite == nDFS) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{944         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{945     \}}
+\DoxyCodeLine{926                                                       \{}
+\DoxyCodeLine{927         \textcolor{keywordtype}{int} size = board.length;}
+\DoxyCodeLine{928         \textcolor{keywordtype}{int} nDFS = 0;}
+\DoxyCodeLine{929         \textcolor{keywordtype}{int} nWhite = 0;}
+\DoxyCodeLine{930         \textcolor{keywordtype}{boolean} found = \textcolor{keyword}{false};}
+\DoxyCodeLine{931         \textcolor{keywordtype}{int} [][] auxBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[size][size];}
+\DoxyCodeLine{932         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i ) \{}
+\DoxyCodeLine{933             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size;++j) \{}
+\DoxyCodeLine{934                 auxBoard[i][j] = 0;}
+\DoxyCodeLine{935             \}}
+\DoxyCodeLine{936         \}}
+\DoxyCodeLine{937         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < size; ++i ) \{}
+\DoxyCodeLine{938             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size;++j) \{}
+\DoxyCodeLine{939                 \textcolor{keywordflow}{if}(board[i][j].isWhite())\{}
+\DoxyCodeLine{940                     nWhite+=1;}
+\DoxyCodeLine{941                     \textcolor{keywordflow}{if}(!found ) \{}
+\DoxyCodeLine{942                         nDFS = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_generate_a0f5fd0dc320710be3846602c942478b9}{DFS}}(board,i,j,auxBoard);}
+\DoxyCodeLine{943                         found = \textcolor{keyword}{true};}
+\DoxyCodeLine{944                     \}}
+\DoxyCodeLine{945                 \}}
+\DoxyCodeLine{946 }
+\DoxyCodeLine{947             \}}
+\DoxyCodeLine{948         \}}
+\DoxyCodeLine{949         \textcolor{keywordflow}{if}(nWhite == nDFS) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{950         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{951     \}}
 
 \end{DoxyCode}
 

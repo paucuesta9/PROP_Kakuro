@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 /** @file CtrlDomain.java
  @brief Clase  <em>CtrlDomain</em>.
- @author Pau Cuesta Arcos
  */
 
 
 /** @brief Clase CtrlDomain que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ * @author Pau Cuesta Arcos
  */
 public class CtrlDomain {
 

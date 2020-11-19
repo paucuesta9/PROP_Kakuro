@@ -33,7 +33,7 @@ int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb59
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{set\+Value}} (int x, int y, int value)
 \begin{DoxyCompactList}\small\item\em Setter de un valor en una celda de tipo blanca. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{check\+Column}} (int r, int c, int i, boolean f, int sum)
-\item 
+\begin{DoxyCompactList}\small\item\em Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{check\+Row\+Validity}} (int r, int c, int value, int sum, int total, int posy, boolean all)
 \begin{DoxyCompactList}\small\item\em Comprueba la validez de la fila. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{check\+Column\+Validity}} (int r, int c, int value, int sum, int total, int posx, boolean all)
@@ -59,6 +59,11 @@ int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a15b207f751a534b85dba19d1
 
 \doxysubsection{Descripción detallada}
 Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} que contiene los atributos y metodos de un tablero. 
+
+\begin{DoxyAuthor}{Autor}
+Alvaro Armada Ruiz 
+\end{DoxyAuthor}
+
 
 Definición en la línea 10 del archivo Kakuro.\+java.
 
@@ -473,6 +478,10 @@ Definición en la línea 248 del archivo Kakuro.\+java.
 {\footnotesize\ttfamily boolean domain.\+classes.\+Kakuro.\+check\+Column (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{int}]{i,  }\item[{boolean}]{f,  }\item[{int}]{sum }\end{DoxyParamCaption})}
 
 
+
+Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero. 
+
+
 \begin{DoxyParams}{Parámetros}
 {\em r} & representa el número de fila del tablero \\
 \hline
@@ -486,7 +495,9 @@ Definición en la línea 248 del archivo Kakuro.\+java.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Devuelve}
-true si, f es false y la suma de todas las casillas es inferior a lo que debería sumar la run, si f es true si la suma es igual a lo que deberia sumar. False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente 
+true si, f es false y la suma de todas las casillas es inferior a lo que debería sumar la run, si f es true si la suma es igual a lo que deberia sumar. 
+
+False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente 
 \end{DoxyReturn}
 
 

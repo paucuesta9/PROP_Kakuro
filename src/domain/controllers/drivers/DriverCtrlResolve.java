@@ -2,7 +2,6 @@ package domain.controllers.drivers;
 
 /** @file DriverCtrlResolve.java
  * @brief Clase <em>DriverCtrlResolve</em>.
- * @author Pol Vallespí Soro
  */
 
 
@@ -11,7 +10,8 @@ import domain.controllers.CtrlResolve;
 
 import java.util.Scanner;
 
-/** @brief Clase DriverCtrlResolve que comprueba la correctividad de las funciones del controlador Resolve
+/** @brief Clase DriverCtrlResolve que comprueba la correctividad de las funciones del controlador CtrlResolve
+ * @author Pol Vallespí Soro
  */
 public class DriverCtrlResolve {
 

@@ -117,6 +117,7 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:a58370a7d8e7bdab2d8fe176588698086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setter de un valor en una celda de tipo blanca.  <a href="classdomain_1_1classes_1_1_kakuro.html#a58370a7d8e7bdab2d8fe176588698086">Más...</a><br /></td></tr>
 <tr class="separator:a58370a7d8e7bdab2d8fe176588698086"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a707e08a057dcf5667451719a4190ecbd"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">checkColumn</a> (int r, int c, int i, boolean f, int sum)</td></tr>
+<tr class="memdesc:a707e08a057dcf5667451719a4190ecbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero.  <a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">Más...</a><br /></td></tr>
 <tr class="separator:a707e08a057dcf5667451719a4190ecbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a451ba114c66bdb50f8652d55d4c8d6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a> (int r, int c, int value, int sum, int total, int posy, boolean all)</td></tr>
 <tr class="memdesc:a1a451ba114c66bdb50f8652d55d4c8d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba la validez de la fila.  <a href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">Más...</a><br /></td></tr>
@@ -146,6 +147,7 @@ Atributos privados</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Clase <a class="el" href="classdomain_1_1classes_1_1_kakuro.html" title="Clase Kakuro que contiene los atributos y metodos de un tablero.">Kakuro</a> que contiene los atributos y metodos de un tablero. </p>
+<dl class="section author"><dt>Autor</dt><dd>Alvaro Armada Ruiz </dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00010">10</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
@@ -652,6 +654,8 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero. </p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">r</td><td>representa el número de fila del tablero </td></tr>
@@ -662,7 +666,9 @@ Atributos privados</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Devuelve</dt><dd>true si, f es false y la suma de todas las casillas es inferior a lo que debería sumar la run, si f es true si la suma es igual a lo que deberia sumar. False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente </dd></dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si, f es false y la suma de todas las casillas es inferior a lo que debería sumar la run, si f es true si la suma es igual a lo que deberia sumar. </dd>
+<dd>
+False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente </dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00262">262</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
 <div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                                                        {</div>
@@ -1101,7 +1107,7 @@ Atributos privados</h2></td></tr>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_ac04999a69528c86ca7262f9496a21bca"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">domain.classes.Kakuro.rowSize</a></div><div class="ttdeci">int rowSize</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00023">Kakuro.java:23</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a513e4e80c50d688b4b8003be040b15a6"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">domain.classes.Kakuro.difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00019">Kakuro.java:19</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_cell_html_ab6d78b474aeb403b214da18f4ff31a4a"><div class="ttname"><a href="classdomain_1_1classes_1_1_cell.html#ab6d78b474aeb403b214da18f4ff31a4a">domain.classes.Cell.setValue</a></div><div class="ttdeci">boolean setValue(int value)</div><div class="ttdoc">Setter de value.</div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00034">Cell.java:34</a></div></div>
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a707e08a057dcf5667451719a4190ecbd"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">domain.classes.Kakuro.checkColumn</a></div><div class="ttdeci">boolean checkColumn(int r, int c, int i, boolean f, int sum)</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00262">Kakuro.java:262</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a707e08a057dcf5667451719a4190ecbd"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">domain.classes.Kakuro.checkColumn</a></div><div class="ttdeci">boolean checkColumn(int r, int c, int i, boolean f, int sum)</div><div class="ttdoc">Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del table...</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00262">Kakuro.java:262</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a1a451ba114c66bdb50f8652d55d4c8d6"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">domain.classes.Kakuro.checkRowValidity</a></div><div class="ttdeci">boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy, boolean all)</div><div class="ttdoc">Comprueba la validez de la fila.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00289">Kakuro.java:289</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a15b207f751a534b85dba19d1c36211ef"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">domain.classes.Kakuro.columnSize</a></div><div class="ttdeci">int columnSize</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00027">Kakuro.java:27</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a1d758ebb7a0fb3be842daef16c498e4a"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a1d758ebb7a0fb3be842daef16c498e4a">domain.classes.Kakuro.id</a></div><div class="ttdeci">String id</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00015">Kakuro.java:15</a></div></div>

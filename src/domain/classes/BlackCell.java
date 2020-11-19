@@ -2,11 +2,11 @@ package domain.classes;
 
 /** @file BlackCell.java
  @brief Clase  <em>BlackCell</em>.
- @author Judith Almoño Gómez
  */
 
 
 /** @brief Clase BlackCell que identifica y contiene los atributos necesarios de una celda negra
+ * @author Judith Almoño Gómez
  */
 public class BlackCell extends Cell{
     /**

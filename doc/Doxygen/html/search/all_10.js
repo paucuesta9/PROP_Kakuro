@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['validate_240',['validate',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a9f1e10a0ea84bf53bf417392e3193d96',1,'domain.controllers.CtrlDomain.validate()'],['../classdomain_1_1controllers_1_1_ctrl_validate.html#ae54d7f9447256860979d02bde1b1338f',1,'domain.controllers.CtrlValidate.validate()']]],
-  ['validatepossums_241',['validatePosSums',['../classdomain_1_1controllers_1_1_ctrl_validate.html#a518f5a8bfbeef1ad7d84f80a79a31a69',1,'domain::controllers::CtrlValidate']]],
-  ['value_242',['value',['../classdomain_1_1classes_1_1_white_cell.html#a887f2146a2f0d7ce3ee2c378e5e0139a',1,'domain::classes::WhiteCell']]]
+  ['whitecell_219',['WhiteCell',['../classdomain_1_1classes_1_1_white_cell.html',1,'domain.classes.WhiteCell'],['../classdomain_1_1classes_1_1_white_cell.html#a4cc36b394e466e987f6f71907324cdbe',1,'domain.classes.WhiteCell.WhiteCell()'],['../classdomain_1_1classes_1_1_white_cell.html#a9a2bf5e8125be286ef385af7090d6fe0',1,'domain.classes.WhiteCell.WhiteCell(int value)']]],
+  ['whitecell_2ejava_220',['WhiteCell.java',['../_white_cell_8java.html',1,'']]],
+  ['writecorrectkakurointerminal_221',['writeCorrectKakuroInTerminal',['../classpresentation_1_1_ctrl_u_i.html#a190c5a8afe581fff2484589fd1ca2fb8',1,'presentation::CtrlUI']]],
+  ['writekakurointerminal_222',['writeKakuroInTerminal',['../classpresentation_1_1_ctrl_u_i.html#a4fedb5accf52ae5645668ef0c5b7bfe1',1,'presentation::CtrlUI']]]
 ];
