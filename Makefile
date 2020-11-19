@@ -83,4 +83,4 @@ run_junit:
 	java -cp $(CLPTH) org.junit.runner.JUnitCore domain.controllers.junits.KakuroTest
 
 clean:
-	rm -rf bin
+	rm -rf bin Kakuro.java
