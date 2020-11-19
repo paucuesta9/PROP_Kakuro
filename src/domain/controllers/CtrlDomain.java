@@ -50,6 +50,7 @@ public class CtrlDomain {
         try {
             searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
         } catch (IOException e) {
+            System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno...");
             currentKakuro = CtrlGenerate.generate(kakuroSizeRow,difficulty);
         }
         CtrlPlay.startGame(currentKakuro);
