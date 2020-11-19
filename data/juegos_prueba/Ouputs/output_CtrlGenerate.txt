@@ -49,8 +49,7 @@ Introduce un kakuro para hacer el test:
 Hay que tener en cuenta que no se puede introducir como posicion una casilla situada a la primera fila o columna
 Introduce el numero de fila de la casilla a testear:
 Introduce el numero de columna de la casilla a testear:
-introduce el numero de casillas blancas que deberiamos obtener:
-Solucion correcta
+0
 
 Opciones: 
  1. setKakuro 
@@ -78,8 +77,7 @@ Introduce un kakuro para hacer el test:
 Hay que tener en cuenta que no se puede introducir como posicion una casilla situada a la primera fila o columna
 Introduce el numero de fila de la casilla a testear:
 Introduce el numero de columna de la casilla a testear:
-introduce el numero de casillas blancas que deberiamos obtener:
-Solucion correcta
+7
 
 Opciones: 
  1. setKakuro 
@@ -108,8 +106,7 @@ Introduce un kakuro para hacer el test:
 Hay que tener en cuenta que no se puede introducir como posicion una casilla situada a la primera fila o columna
 Introduce el numero de fila de la casilla a testear:
 Introduce el numero de columna de la casilla a testear:
-Introduce el numero de casillas blancas que deberiamos obtener:
-Solucion correcta
+0
 
 Opciones: 
  1. setKakuro 
@@ -138,8 +135,7 @@ Introduce un kakuro para hacer el test:
 Hay que tener en cuenta que no se puede introducir como posicion una casilla situada a la primera fila o columna
 Introduce el numero de fila de la casilla a testear:
 Introduce el numero de columna de la casilla a testear:
-Introduce el numero de casillas blancas que deberiamos obtener:
-Solucion correcta
+7
 
 Opciones: 
  1. setKakuro 
@@ -360,8 +356,7 @@ Opciones:
 
 Se llama a AllZero
 Introduce un vector de 9 valores
-Todos los valores son 0? (1 si, 0 no)
-Solucion correcta
+Todos los valores son 0
 
 Opciones: 
  1. setKakuro 
@@ -386,8 +381,7 @@ Opciones:
 
 Se llama a AllZero
 Introduce un vector de 9 valores
-Todos los valores son 0? (1 si, 0 no)
-Solucion correcta
+No todos los valores son 0
 
 Opciones: 
  1. setKakuro 
@@ -413,8 +407,7 @@ Opciones:
 Se llama a Intersection3
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+True -> o todos los elementos del segundo vector son 0 o tienen algun 1 en alguna posicion en comun
 
 Opciones: 
  1. setKakuro 
@@ -440,8 +433,7 @@ Opciones:
 Se llama a Intersection3
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+True -> o todos los elementos del segundo vector son 0 o tienen algun 1 en alguna posicion en comun
 
 Opciones: 
  1. setKakuro 
@@ -467,8 +459,7 @@ Opciones:
 Se llama a Intersection3
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+False
 
 Opciones: 
  1. setKakuro 
@@ -494,8 +485,7 @@ Opciones:
 Se llama a Intersection2
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+Tienen algun 1 en alguna posicion en comun
 
 Opciones: 
  1. setKakuro 
@@ -521,8 +511,7 @@ Opciones:
 Se llama a Intersection2
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+No tienen ningun 1 en alguna posicion en comun
 
 Opciones: 
  1. setKakuro 
@@ -548,8 +537,7 @@ Opciones:
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+Tienen un unico 1 en comun, en la posicion: 0
 
 Opciones: 
  1. setKakuro 
@@ -575,8 +563,7 @@ Opciones:
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+O no tienen 1s en comun o tienen mas de uno
 
 Opciones: 
  1. setKakuro 
@@ -602,8 +589,7 @@ Opciones:
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+O no tienen 1s en comun o tienen mas de uno
 
 Opciones: 
  1. setKakuro 
@@ -629,8 +615,7 @@ Opciones:
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
 Introduce otro vector de 9 elementos, que pueden ser 0 o 1
-Que nos deberia devolver?
-Solucion correcta
+O no tienen 1s en comun o tienen mas de uno
 
 Opciones: 
  1. setKakuro 
@@ -656,8 +641,7 @@ Opciones:
 Se llama a isUnique
 Esta funcion comprueba si en un vector solo hay un numero disponible (vec[i]= 1)
 Introduce 9 valores 0 o 1:
-Hay un solo numero disponible? (0 no, 1 si)
-Solucion correcta
+Hay un unico 1 en el vector
 
 Opciones: 
  1. setKakuro 
@@ -683,8 +667,7 @@ Opciones:
 Se llama a isUnique
 Esta funcion comprueba si en un vector solo hay un numero disponible (vec[i]= 1)
 Introduce 9 valores 0 o 1:
-Hay un solo numero disponible? (0 no, 1 si)
-Solucion correcta
+O no hay 1s o no son unicos
 
 Opciones: 
  1. setKakuro 
@@ -710,8 +693,7 @@ Opciones:
 Se llama a isUnique
 Esta funcion comprueba si en un vector solo hay un numero disponible (vec[i]= 1)
 Introduce 9 valores 0 o 1:
-Hay un solo numero disponible? (0 no, 1 si)
-Solucion correcta
+O no hay 1s o no son unicos
 
 Opciones: 
  1. setKakuro 
@@ -762,8 +744,7 @@ Opciones:
 
 Se llama a howManyWhites
 Indica un kakuro para hacer el test:
-Indica el numero de casillas blancas del kakuro:
-Solucion correcta
+El kakuro tiene 44 celdas blancas
 
 Opciones: 
  1. setKakuro 
@@ -788,8 +769,7 @@ Opciones:
 
 Se llama a howManyWhites
 Indica un kakuro para hacer el test:
-Indica el numero de casillas blancas del kakuro:
-Solucion correcta
+El kakuro tiene 0 celdas blancas
 
 Opciones: 
  1. setKakuro 
@@ -816,12 +796,12 @@ Se llama a generate
 Indica el tamano de tablero deseado: 
 Indica la dificultad deseada: 
 6,6
-*,*,*,*,C11,C23
-*,*,C13,C11F9,?,?
-*,C21F28,?,?,?,?
-F17,?,?,?,?,?
-F14,?,?,?,?,*
-F11,?,?,*,*,*
+*,*,C28,C31,*,*
+*,F16,?,?,C12,C8
+*,C16F29,?,?,?,?
+F18,?,?,?,?,?
+F27,?,?,?,?,*
+*,*,F5,?,?,*
 
 Se ha generado un kakuro del tamano deseado con solucion unica
 
@@ -903,14 +883,14 @@ Introduce el tamano del tablero (nxn):
 Introduce la dificultad: 
 9,9
 *,*,*,*,*,*,*,*,*
-*,?,?,?,?,?,*,?,?
-*,?,?,?,?,?,*,?,?
 *,*,?,?,*,?,?,?,?
-*,?,?,*,?,?,?,*,*
-*,*,*,?,?,?,*,?,?
+*,?,?,?,*,?,?,?,?
+*,?,?,*,*,*,?,?,*
+*,*,*,*,*,*,?,?,?
+*,?,?,?,*,*,*,*,*
+*,*,?,?,*,*,*,?,?
+*,?,?,?,?,*,?,?,?
 *,?,?,?,?,*,?,?,*
-*,?,?,*,?,?,?,?,?
-*,?,?,*,?,?,?,?,?
 
 Se ha generado un tablero del tamano deseado con casillas blancas y negras
 
@@ -986,7 +966,7 @@ F3,?,?,C20,C11F20,?,?,?,?
 F17,?,?,?,?,C8,F6,?,?
 *,C11,C7F13,?,?,?,C4F10,?,?
 F28,?,?,?,?,?,*,*,*
-F6,?,?,*,*,F8,?,?,*
+F6,?,?,*,*,F8,*,*,*
 
 El kakuro no contiene casillas blancas solitarias
 
@@ -1024,7 +1004,7 @@ F3,?,?,C20,C11F20,?,?,?,?
 F17,?,?,?,?,C8,F6,?,?
 *,C11,C7F13,?,?,?,C4F10,?,?
 F28,*,*,?,?,?,?,?,*
-F6,?,?,*,*,F8,?,?,*
+F6,*,*,*,*,F8,?,?,*
 
 El kakuro no contiene casillas blancas solitarias
 
@@ -1129,8 +1109,7 @@ Se llama a DFS
 Escribe un kakuro para realizar el test:
 Fila de una casilla blanca: 
 Columna de una casilla blanca: 
-Numero de celdas conectadas a esta casilla blanca:
-Solucion correcta
+Se pueden alcanzar 44 celdas blancas desde la celda dada
 
 Opciones: 
  1. setKakuro 
@@ -1157,8 +1136,7 @@ Se llama a DFS
 Escribe un kakuro para realizar el test:
 Fila de una casilla blanca: 
 Columna de una casilla blanca: 
-Numero de celdas conectadas a esta casilla blanca:
-Solucion correcta
+Se pueden alcanzar 0 celdas blancas desde la celda dada
 
 Opciones: 
  1. setKakuro 
@@ -1183,8 +1161,7 @@ Opciones:
 
 Se llama a connexBoard
 Escribe un kakuro para realizar el test
-El kakuro es conexo? (1 si lo es, 0 si no lo es):
-Solucion correcta
+El tablero es conexo
 
 Opciones: 
  1. setKakuro 
@@ -1209,8 +1186,7 @@ Opciones:
 
 Se llama a connexBoard
 Escribe un kakuro para realizar el test
-El kakuro es conexo? (1 si lo es, 0 si no lo es):
-Solucion correcta
+El tablero no es conexo
 
 Opciones: 
  1. setKakuro 
@@ -1235,8 +1211,7 @@ Opciones:
 
 Se llama a connexBoard
 Escribe un kakuro para realizar el test
-El kakuro es conexo? (1 si lo es, 0 si no lo es):
-Solucion correcta
+El tablero es conexo
 
 Opciones: 
  1. setKakuro 

@@ -824,11 +824,11 @@ public class CtrlGenerate {
                 }
                 else {
                     int x = 0;
-                    if( dif == 1) x = 55;
-                    else if( dif == 2) x = 60;
-                    else x = 65;
+                    if( dif == 1) x = 30;
+                    else if( dif == 2) x = 50;
+                    else x = 60;
                     Random rand = new Random();
-                    if (rand.nextInt(101) <= x) {
+                    if (rand.nextInt(101) <= x ) {
                         board[i][j] = new WhiteCell();
                         board[size - i][size - j] = new WhiteCell();
                     } else {
@@ -882,6 +882,12 @@ public class CtrlGenerate {
                         if(c == size-2) {
                             if(board[r][c+1].isWhite()) {
                                 board[r][c+1] = new BlackCell();
+                                canvi = true;
+                            }
+                        }
+                        if(r == size-2) {
+                            if(board[r+1][c].isWhite()) {
+                                board[r+1][c] = new BlackCell();
                                 canvi = true;
                             }
                         }
