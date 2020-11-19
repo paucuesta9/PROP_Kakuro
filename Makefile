@@ -3,7 +3,7 @@ CONTROLADORES = src/domain/controllers
 VISTA = src/presentation
 DATA = src/data
 DRIVERS = src/domain/controllers/drivers
-JUNIT = src/domain/controllers/junit
+JUNIT = src/domain/controllers/junits
 
 default: class
 
