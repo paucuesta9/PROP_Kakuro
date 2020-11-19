@@ -52,7 +52,10 @@ public class DriverCtrlDomain {
         cd.startNewGame(difficulty,kakuroRows,kakuroCols);
         System.out.println("Se ha creado la partida correctamente");
     }
-
+    /** @brief Test de la función checkCoord
+     *
+     * Comprueba si la función checkBoard detecta correctamente cuando unas coordenadas pertenecen al tablero y cuando no
+     */
     private static void testCheckCoord() {
         System.out.println("Introduce la ruta de un kakuro para hacer el test: ");
         String s = reader.next();
@@ -60,8 +63,6 @@ public class DriverCtrlDomain {
         int fila = readNumber();
         System.out.println("Introduce una columna: ");
         int columna = readNumber();
-        System.out.println("Son corrctas estas coordenadas?(0 no, 1 si)");
-        int r = readNumber();
 
         CtrlDomain cd = new CtrlDomain();
         try {
@@ -70,10 +71,14 @@ public class DriverCtrlDomain {
             e.printStackTrace();
         }
         boolean b = cd.checkCoord(fila,columna);
-        if((b && r == 1) || (!b && r == 0)) System.out.print("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if(b) System.out.println("Coordenadas correctas");
+        else System.out.println("Coordenadas incorrectas");
     }
 
+    /**@brief función main del driver CtrlDomain
+     *
+     * Nos permite escoger el test que queremos realizar
+     */
     public static void main(String[] args) {
         System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Salir");
         int value = readNumber();
@@ -107,6 +112,10 @@ public class DriverCtrlDomain {
         System.exit(0);
     }
 
+    /**@brief función que nos permite leer un kakuro en formato string
+     *
+     * @return kakuro en formato string
+     */
     public static String readKakuro() {
         StringBuilder content = new StringBuilder();
         String[] valuesSize = reader.next().split(",");
@@ -117,7 +126,10 @@ public class DriverCtrlDomain {
             content.append(reader.next()).append("\n");
         return content.toString();
     }
-
+    /**@brief función que nos permite leer un entero del terminal o un fichero
+     *
+     * @return el entero leido
+     */
     public static int readNumber() {
         int number = 0;
         number = reader.nextInt();

@@ -35,27 +35,22 @@ public class DriverCtrlResolve {
         System.out.println("Indique un kakuro para realizar el test: ");
         String kakuroText = readKakuro();
         Kakuro kakuro = new Kakuro(kakuroText);
-        System.out.println("Tiene solucion?(1 si, 0 no)");
-        int r = readNumber();
         CtrlResolve.setKakuro(kakuro);
         int fila = 0;
         int columna = 0;
         int suma = 0;
         int [] vec = new int[] {0,0,0,0,0,0,0,0,0,0};
         boolean b = CtrlResolve.resolve(fila,columna,suma,vec);
-        if((!b && r == 0) ||(b && r == 1)){
-            if(b) {
-                String s = kakuro.correctToString();
-                System.out.print(s);
-            }
-            else System.out.println("No se ha encontrado solucion");
-            System.out.println("Test correcto");
+
+        if(b) {
+            System.out.println("Se ha encontrado la siguiente solucion: ");
+            String s = kakuro.correctToString();
+            System.out.print(s);
         }
-        else System.out.println("Test incorrecto");
+        else System.out.println("No se ha encontrado solucion");
     }
 
     /**@brief función main del driver CtrlResolve
-     * @param args
      *
      * Nos permite escoger el test que queremos realizar
      */

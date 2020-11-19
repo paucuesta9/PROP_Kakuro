@@ -40,8 +40,8 @@ Se llama a checkCoord
 Introduce la ruta de un kakuro para hacer el test: 
 Introduce una fila: 
 Introduce una columna: 
-Son corrctas estas coordenadas?(0 no, 1 si)
-Solucion correcta
+Coordenadas incorrectas
+
 Opciones: 
  1. Creadora 
  2. Empezar una partida 
@@ -52,8 +52,8 @@ Se llama a checkCoord
 Introduce la ruta de un kakuro para hacer el test: 
 Introduce una fila: 
 Introduce una columna: 
-Son corrctas estas coordenadas?(0 no, 1 si)
-Solucion correcta
+Coordenadas incorrectas
+
 Opciones: 
  1. Creadora 
  2. Empezar una partida 
@@ -64,8 +64,8 @@ Se llama a checkCoord
 Introduce la ruta de un kakuro para hacer el test: 
 Introduce una fila: 
 Introduce una columna: 
-Son corrctas estas coordenadas?(0 no, 1 si)
-Solucion correcta
+Coordenadas correctas
+
 Opciones: 
  1. Creadora 
  2. Empezar una partida 

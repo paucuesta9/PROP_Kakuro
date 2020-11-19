@@ -13,7 +13,7 @@ Opciones:
 
 Se llama a resolver
 Indique un kakuro para realizar el test: 
-Tiene solucion?(1 si, 0 no)
+Se ha encontrado la siguiente solucion: 
 9,9
 *,*,C19,C12,*,*,*,C7,C10
 *,F14,5,9,C4,C11,C17F4,1,3
@@ -24,7 +24,6 @@ F17,1,3,9,4,C8,F6,1,5
 *,C11,C7F13,7,1,5,C4F10,8,2
 F28,7,5,4,6,3,1,2,*
 F6,4,2,*,*,F8,3,5,*
-Test correcto
 
 Opciones: 
  1. Creadora 
@@ -33,9 +32,7 @@ Opciones:
 
 Se llama a resolver
 Indique un kakuro para realizar el test: 
-Tiene solucion?(1 si, 0 no)
 No se ha encontrado solucion
-Test correcto
 
 Opciones: 
  1. Creadora 
