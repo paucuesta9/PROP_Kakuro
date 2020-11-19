@@ -2,13 +2,13 @@ package domain.controllers;
 
 /** @file CtrlPlay.java
  @brief Clase  <em>CtrlPlay</em>.
- @author Judith Almoño Gómez
  */
 
 import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
 
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar
+ * @author Judith Almoño Gómez
  */
 public class CtrlPlay {
     /**

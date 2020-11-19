@@ -11,10 +11,10 @@ import java.util.Scanner;
 
 /** @file DriverCtrlGenerate.java
  @brief Clase  <em>DriverCtrlGenerate</em>.
- @author Pol Vallespí Soro
  */
 
 /** @brief Clase DriverCtrlGenerate que comprueba la correctividad de las funciones del controlador CtrlGenerate
+ * @author Pol Vallespí Soro
  */
 public class DriverCtrlGenerate {
     private static Scanner reader = new Scanner(System.in);
@@ -44,12 +44,9 @@ public class DriverCtrlGenerate {
         int fila = readNumber();
         System.out.println("Introduce el numero de columna de la casilla a testear:");
         int columna = readNumber();
-        System.out.println("introduce el numero de casillas blancas que deberiamos obtener:");
-        int sol = readNumber();
         currentKakuro = new Kakuro(kakuroString);
         int r = CtrlGenerate.countWhiteCellsV(currentKakuro.getBoard(), fila-1,columna);
-        if(sol == r) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        System.out.println(r);
     }
     /**
      * @brief Test de la función countWhiteCellsH
@@ -65,12 +62,9 @@ public class DriverCtrlGenerate {
         int fila = readNumber();
         System.out.println("Introduce el numero de columna de la casilla a testear:");
         int columna = readNumber();
-        System.out.println("Introduce el numero de casillas blancas que deberiamos obtener:");
-        int sol = readNumber();
         currentKakuro = new Kakuro(kakuroString);
         int r = CtrlGenerate.countWhiteCellsH(currentKakuro.getBoard(), fila,columna-1);
-        if(sol == r) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        System.out.println(r);
     }
     /**
      * @brief Test de la función nineCellsRow
@@ -172,12 +166,10 @@ public class DriverCtrlGenerate {
             tempBoard[0][0][i] = n;
             ++i;
         }
-
-        System.out.println("Todos los valores son 0? (1 si, 0 no)");
-        int n = readNumber();
         boolean r = CtrlGenerate.allZero(tempBoard,0,0);
-        if((r && n==1 ) || (!r && n == 0)) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if( r ) System.out.println("Todos los valores son 0");
+        else System.out.println("No todos los valores son 0");
+
     }
 
     /**@brief Test de la función intersection3
@@ -200,11 +192,9 @@ public class DriverCtrlGenerate {
             vec2[i] = n;
             ++i;
         }
-        System.out.println("Que nos deberia devolver?");
-        int n = readNumber();
         boolean b = CtrlGenerate.intersection3(vec1,vec2);
-        if((b && n==1)||(!b && n == 0)) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if( b ) System.out.println("True -> o todos los elementos del segundo vector son 0 o tienen algun 1 en alguna posicion en comun");
+        else System.out.println("False");
     }
 
     /**@brief Test de la función intersection2
@@ -227,11 +217,9 @@ public class DriverCtrlGenerate {
             vec2[i] = n;
             ++i;
         }
-        System.out.println("Que nos deberia devolver?");
-        int n = readNumber();
         boolean b = CtrlGenerate.intersection2(vec1,vec2);
-        if((b && n==1)||(!b && n == 0)) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if( b ) System.out.println("Tienen algun 1 en alguna posicion en comun");
+        else System.out.println("No tienen ningun 1 en alguna posicion en comun");
     }
 
     /**@brief Test de la función intersection
@@ -254,11 +242,13 @@ public class DriverCtrlGenerate {
             vec2[i] = n;
             ++i;
         }
-        System.out.println("Que nos deberia devolver?");
-        int n = readNumber();
         int r = CtrlGenerate.intersection(vec1,vec2);
-        if(n == r) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if( r != -1) {
+            System.out.print("Tienen un unico 1 en comun, en la posicion: ");
+            System.out.println(r);
+        }
+        else System.out.println("O no tienen 1s en comun o tienen mas de uno");
+
     }
 
     /**@brief Test de la función isUnique
@@ -274,18 +264,11 @@ public class DriverCtrlGenerate {
             vec[i] = n;
             ++i;
         }
-        System.out.println("Hay un solo numero disponible? (0 no, 1 si)");
-        int n = readNumber();
         boolean b = CtrlGenerate.isUnique(vec);
-        if((b && n == 1 ) || (!b && n != 1) ) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if( b ) System.out.println("Hay un unico 1 en el vector");
+        else System.out.println("O no hay 1s o no son unicos");
     }
 
-    /*private static void testFillBoardAux2() {
-    }
-
-    private static void testFillBoardAux() {
-    }*/
 
     /**@brief Test de la función fillBoard
      * Comprueba si la función filBoard crea un kakuro único dado un tablero sin sumas
@@ -306,12 +289,11 @@ public class DriverCtrlGenerate {
     private static void testHowManyWhites() {
         System.out.println("Indica un kakuro para hacer el test:");
         String kakuroString = readKakuro();
-        System.out.println("Indica el numero de casillas blancas del kakuro:");
-        int n = readNumber();
         currentKakuro = new Kakuro(kakuroString);
         int r = CtrlGenerate.howManyWhites(currentKakuro.getBoard());
-        if( r == n) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        System.out.print("El kakuro tiene ");
+        System.out.print(r);
+        System.out.println(" celdas blancas");
     }
 
     /**@brief Test de la función Generate
@@ -387,8 +369,6 @@ public class DriverCtrlGenerate {
         int r = readNumber();
         System.out.println("Columna de una casilla blanca: ");
         int c = readNumber();
-        System.out.println("Numero de celdas conectadas a esta casilla blanca:");
-        int n = readNumber();
 
         currentKakuro = new Kakuro(kakuroString);
         int[][] board = new int[currentKakuro.getColumnSize()][currentKakuro.getRowSize()];
@@ -398,8 +378,9 @@ public class DriverCtrlGenerate {
             }
         }
         int res = CtrlGenerate.DFS(currentKakuro.getBoard(),r,c,board );
-        if(res == n) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        System.out.print("Se pueden alcanzar ");
+        System.out.print(res);
+        System.out.println(" celdas blancas desde la celda dada");
     }
 
     /**@brief Test de la función connexBoard
@@ -408,12 +389,10 @@ public class DriverCtrlGenerate {
     private static void testConnexBoard() {
         System.out.println("Escribe un kakuro para realizar el test");
         String kakuroString = readKakuro();
-        System.out.println("El kakuro es conexo? (1 si lo es, 0 si no lo es):");
-        int c = readNumber();
         currentKakuro = new Kakuro(kakuroString);
         boolean b = CtrlGenerate.connexBoard(currentKakuro.getBoard());
-        if( (b && c == 1) || (!b && c == 0) ) System.out.println("Solucion correcta");
-        else System.out.println("Solucion incorrecta");
+        if(b) System.out.println("El tablero es conexo");
+        else System.out.println("El tablero no es conexo");
     }
 
     /**@brief función main del driver CtrlGenerate

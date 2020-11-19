@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 /** @file DriverBlackCell.java
  @brief Clase  <em>DriverBlackCell</em>.
- @author Pau Cuesta Arcos
  */
 
 
 /** @brief Clase DriverBlackCell que comprueba la correctividad de las funciones de la clase BlackCell
+ * @author Pau Cuesta Arcos
  */
 
 public class DriverBlackCell {

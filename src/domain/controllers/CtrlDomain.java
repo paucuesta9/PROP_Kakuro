@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 /** @file CtrlDomain.java
  @brief Clase  <em>CtrlDomain</em>.
- @author Pau Cuesta Arcos
  */
 
 
 /** @brief Clase CtrlDomain que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ * @author Pau Cuesta Arcos
  */
 public class CtrlDomain {
 
@@ -50,6 +50,7 @@ public class CtrlDomain {
         try {
             searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
         } catch (IOException e) {
+            System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno...");
             currentKakuro = CtrlGenerate.generate(kakuroSizeRow,difficulty);
         }
         CtrlPlay.startGame(currentKakuro);

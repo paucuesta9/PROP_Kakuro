@@ -7,10 +7,10 @@ import java.util.Scanner;
 
 /** @file DriverCtrlData.java
  @brief Clase  <em>DriverCtrlData</em>.
- @author Judith Almoño Gómez
  */
 
-/** @brief Clase DriverCtrlData que comprueba la correctividad de las funciones del controlador Data
+/** @brief Clase DriverCtrlData que comprueba la correctividad de las funciones del controlador CtrlData
+ * @author Judith Almoño Gómez
  */
 
 public class DriverCtrlData {

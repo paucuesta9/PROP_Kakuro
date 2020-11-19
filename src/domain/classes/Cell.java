@@ -1,12 +1,12 @@
 package domain.classes;
 
 /** @file Cell.java
- @brief Clase  <em>Cell</em>.
- @author Pol Vallespí Soro
+ * @brief Clase  <em>Cell</em>.
  */
 
 
 /** @brief Clase Cell que contiene los métodos necesarios para cualquier tipo de Celda
+ * @author Pol Vallespí Soro
  */
 public class Cell {
 

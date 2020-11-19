@@ -6,11 +6,11 @@ import java.util.Scanner;
 
 /** @file DriverWhiteCell.java
  @brief Clase  <em>DriverWhiteCell</em>.
- @author Judith Almoño Gómez
  */
 
 
 /** @brief Clase DriverWhiteCell que comprueba la correctividad de las funciones de la clase WhiteCell
+ * @author Judith Almoño Gómez
  */
 
 public class DriverWhiteCell {

@@ -10,6 +10,7 @@ import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
 
 /** @brief Clase CtrlResolve que contiene los atributos y metodos para la funcionalidad de resolver
+ * @author Pol Vallespí Soro
  */
 public class CtrlResolve {
 

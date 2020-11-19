@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 /** @file DriverCtrlPlay.java
  @brief Clase  <em>DriverCtrlPlay</em>.
- @author Judith Almoño Gómez
  */
 
 
-/** @brief Clase DriverCtrlPlay que comprueba la correctividad de las funciones del controlador Play
+/** @brief Clase DriverCtrlPlay que comprueba la correctividad de las funciones del controlador CtrlPlay
+ * @author Judith Almoño Gómez
  */
 
 public class DriverCtrlPlay {

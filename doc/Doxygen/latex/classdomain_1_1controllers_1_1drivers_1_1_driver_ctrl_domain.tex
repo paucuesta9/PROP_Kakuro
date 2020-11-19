@@ -9,11 +9,11 @@ Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_dom
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a089b76d9688e348e58f6e6b4e428f34d}{main}} (String\mbox{[}$\,$\mbox{]} args)
-\item 
+\begin{DoxyCompactList}\small\item\em función main del driver \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \end{DoxyCompactList}\item 
 static String \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a6d0229654d581c2c693c6aaccabae13d}{read\+Kakuro}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em función que nos permite leer un kakuro en formato string \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{read\+Number}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em función que nos permite leer un entero del terminal o un fichero \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,7 +27,7 @@ static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ct
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a2b3bc339fdab458a6158f61399ee2484}{test\+Start\+New\+Game}} ()
 \begin{DoxyCompactList}\small\item\em Test de la función start\+New\+Game. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a0cc6178c2483e27d946f13ad5a54ca2d}{test\+Check\+Coord}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Test de la función check\+Coord. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,6 +37,11 @@ static Scanner \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver
 
 \doxysubsection{Descripción detallada}
 Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain}{Driver\+Ctrl\+Domain}} que comprueba la correctividad de las funciones del controlador \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}}. 
+
+\begin{DoxyAuthor}{Autor}
+Pol Vallespí Soro 
+\end{DoxyAuthor}
+
 
 Definición en la línea 19 del archivo Driver\+Ctrl\+Domain.\+java.
 
@@ -100,30 +105,32 @@ Definición en la línea 44 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 
-Definición en la línea 56 del archivo Driver\+Ctrl\+Domain.\+java.
+Test de la función check\+Coord. 
+
+Comprueba si la función check\+Board detecta correctamente cuando unas coordenadas pertenecen al tablero y cuando no 
+
+Definición en la línea 59 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56                                          \{}
-\DoxyCodeLine{57         System.out.println(\textcolor{stringliteral}{"{}Introduce la ruta de un kakuro para hacer el test: "{}});}
-\DoxyCodeLine{58         String s = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.next();}
-\DoxyCodeLine{59         System.out.println(\textcolor{stringliteral}{"{}Introduce una fila: "{}});}
-\DoxyCodeLine{60         \textcolor{keywordtype}{int} fila = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
-\DoxyCodeLine{61         System.out.println(\textcolor{stringliteral}{"{}Introduce una columna: "{}});}
-\DoxyCodeLine{62         \textcolor{keywordtype}{int} columna = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
-\DoxyCodeLine{63         System.out.println(\textcolor{stringliteral}{"{}Son corrctas estas coordenadas?(0 no, 1 si)"{}});}
-\DoxyCodeLine{64         \textcolor{keywordtype}{int} r = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66         CtrlDomain cd = \textcolor{keyword}{new} CtrlDomain();}
-\DoxyCodeLine{67         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{68             cd.getKakuro(\textcolor{stringliteral}{"{}data/"{}}+s+\textcolor{stringliteral}{"{}.txt"{}});}
-\DoxyCodeLine{69         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{70             e.printStackTrace();}
-\DoxyCodeLine{71         \}}
-\DoxyCodeLine{72         \textcolor{keywordtype}{boolean} b = cd.checkCoord(fila,columna);}
-\DoxyCodeLine{73         \textcolor{keywordflow}{if}((b \&\& r == 1) || (!b \&\& r == 0)) System.out.print(\textcolor{stringliteral}{"{}Solucion correcta"{}});}
-\DoxyCodeLine{74         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Solucion incorrecta"{}});}
-\DoxyCodeLine{75     \}}
+\DoxyCodeLine{59                                          \{}
+\DoxyCodeLine{60         System.out.println(\textcolor{stringliteral}{"{}Introduce la ruta de un kakuro para hacer el test: "{}});}
+\DoxyCodeLine{61         String s = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.next();}
+\DoxyCodeLine{62         System.out.println(\textcolor{stringliteral}{"{}Introduce una fila: "{}});}
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} fila = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
+\DoxyCodeLine{64         System.out.println(\textcolor{stringliteral}{"{}Introduce una columna: "{}});}
+\DoxyCodeLine{65         \textcolor{keywordtype}{int} columna = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         CtrlDomain cd = \textcolor{keyword}{new} CtrlDomain();}
+\DoxyCodeLine{68         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{69             cd.getKakuro(\textcolor{stringliteral}{"{}data/"{}}+s+\textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{70         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{71             e.printStackTrace();}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordtype}{boolean} b = cd.checkCoord(fila,columna);}
+\DoxyCodeLine{74         \textcolor{keywordflow}{if}(b) System.out.println(\textcolor{stringliteral}{"{}Coordenadas correctas"{}});}
+\DoxyCodeLine{75         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Coordenadas incorrectas"{}});}
+\DoxyCodeLine{76     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a089b76d9688e348e58f6e6b4e428f34d}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a089b76d9688e348e58f6e6b4e428f34d}} 
@@ -134,42 +141,46 @@ Definición en la línea 56 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 
-Definición en la línea 77 del archivo Driver\+Ctrl\+Domain.\+java.
+función main del driver \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} 
+
+Nos permite escoger el test que queremos realizar 
+
+Definición en la línea 82 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{77                                            \{}
-\DoxyCodeLine{78         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Empezar una partida \(\backslash\)n 3. Comprobar que las coordenadas son correctas\(\backslash\)n 4. Salir"{}});}
-\DoxyCodeLine{79         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
-\DoxyCodeLine{80         \textcolor{keywordflow}{while} (value != 4) \{}
-\DoxyCodeLine{81             \textcolor{keywordtype}{int} x, y;}
-\DoxyCodeLine{82             \textcolor{keywordflow}{switch} (value) \{}
-\DoxyCodeLine{83                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{84                     System.out.println();}
-\DoxyCodeLine{85                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la Creadora"{}});}
-\DoxyCodeLine{86                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a1eadbb262f830ff5203709da804e477a}{testCreadora}}();}
-\DoxyCodeLine{87                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{88                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{82                                            \{}
+\DoxyCodeLine{83         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Empezar una partida \(\backslash\)n 3. Comprobar que las coordenadas son correctas\(\backslash\)n 4. Salir"{}});}
+\DoxyCodeLine{84         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
+\DoxyCodeLine{85         \textcolor{keywordflow}{while} (value != 4) \{}
+\DoxyCodeLine{86             \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{87             \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{88                 \textcolor{keywordflow}{case} 1:}
 \DoxyCodeLine{89                     System.out.println();}
-\DoxyCodeLine{90                     System.out.println(\textcolor{stringliteral}{"{}Se llama a start new game"{}});}
-\DoxyCodeLine{91                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a2b3bc339fdab458a6158f61399ee2484}{testStartNewGame}}();}
+\DoxyCodeLine{90                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la Creadora"{}});}
+\DoxyCodeLine{91                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a1eadbb262f830ff5203709da804e477a}{testCreadora}}();}
 \DoxyCodeLine{92                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{93                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{93                 \textcolor{keywordflow}{case} 2:}
 \DoxyCodeLine{94                     System.out.println();}
-\DoxyCodeLine{95                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkCoord"{}});}
-\DoxyCodeLine{96                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a0cc6178c2483e27d946f13ad5a54ca2d}{testCheckCoord}}();}
+\DoxyCodeLine{95                     System.out.println(\textcolor{stringliteral}{"{}Se llama a start new game"{}});}
+\DoxyCodeLine{96                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a2b3bc339fdab458a6158f61399ee2484}{testStartNewGame}}();}
 \DoxyCodeLine{97                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{98                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{98                 \textcolor{keywordflow}{case} 3:}
 \DoxyCodeLine{99                     System.out.println();}
-\DoxyCodeLine{100                     System.out.println(\textcolor{stringliteral}{"{}Valor incorrecto"{}});}
-\DoxyCodeLine{101                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{102             \}}
-\DoxyCodeLine{103             System.out.println();}
-\DoxyCodeLine{104             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Empezar una partida \(\backslash\)n 3. Comprobar que las coordenadas son correctas\(\backslash\)n 4. Salir"{}});}
-\DoxyCodeLine{105             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
-\DoxyCodeLine{106         \}}
-\DoxyCodeLine{107         System.exit(0);}
-\DoxyCodeLine{108     \}}
+\DoxyCodeLine{100                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkCoord"{}});}
+\DoxyCodeLine{101                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a0cc6178c2483e27d946f13ad5a54ca2d}{testCheckCoord}}();}
+\DoxyCodeLine{102                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{103                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{104                     System.out.println();}
+\DoxyCodeLine{105                     System.out.println(\textcolor{stringliteral}{"{}Valor incorrecto"{}});}
+\DoxyCodeLine{106                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{107             \}}
+\DoxyCodeLine{108             System.out.println();}
+\DoxyCodeLine{109             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Empezar una partida \(\backslash\)n 3. Comprobar que las coordenadas son correctas\(\backslash\)n 4. Salir"{}});}
+\DoxyCodeLine{110             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}{readNumber}}();}
+\DoxyCodeLine{111         \}}
+\DoxyCodeLine{112         System.exit(0);}
+\DoxyCodeLine{113     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a6d0229654d581c2c693c6aaccabae13d}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a6d0229654d581c2c693c6aaccabae13d}} 
@@ -180,20 +191,27 @@ Definición en la línea 77 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 
-Definición en la línea 110 del archivo Driver\+Ctrl\+Domain.\+java.
+función que nos permite leer un kakuro en formato string 
+
+\begin{DoxyReturn}{Devuelve}
+kakuro en formato string 
+\end{DoxyReturn}
+
+
+Definición en la línea 119 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{110                                       \{}
-\DoxyCodeLine{111         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{112         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{113         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
-\DoxyCodeLine{114         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
-\DoxyCodeLine{115         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{116         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
-\DoxyCodeLine{117             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{118         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{119     \}}
+\DoxyCodeLine{119                                       \{}
+\DoxyCodeLine{120         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{121         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{122         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{123         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{124         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{125         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{126             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{127         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{128     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a8c0f65a68b1814e29727325121b399a9}} 
@@ -204,15 +222,22 @@ Definición en la línea 110 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 
-Definición en la línea 121 del archivo Driver\+Ctrl\+Domain.\+java.
+función que nos permite leer un entero del terminal o un fichero 
+
+\begin{DoxyReturn}{Devuelve}
+el entero leido 
+\end{DoxyReturn}
+
+
+Definición en la línea 133 del archivo Driver\+Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{121                                    \{}
-\DoxyCodeLine{122         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{123         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.nextInt();}
-\DoxyCodeLine{124         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{125     \}}
+\DoxyCodeLine{133                                    \{}
+\DoxyCodeLine{134         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{135         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain_a988d74c4a5156a552c80c0c96e609725}{reader}}.nextInt();}
+\DoxyCodeLine{136         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{137     \}}
 
 \end{DoxyCode}
 

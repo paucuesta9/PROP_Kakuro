@@ -165,6 +165,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Clase <a class="el" href="classdomain_1_1controllers_1_1_ctrl_generate.html" title="Clase CtrlGenerate que contiene los atributos y metodos para la funcionalidad de generar.">CtrlGenerate</a> que contiene los atributos y metodos para la funcionalidad de generar. </p>
+<dl class="section author"><dt>Autor</dt><dd>Pol Vallespí Soro y Alvaro Armada Ruiz </dd></dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_ctrl_generate_8java_source.html#l00017">17</a> del archivo <a class="el" href="_ctrl_generate_8java_source.html">CtrlGenerate.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
@@ -1827,11 +1828,11 @@ Atributos privados estáticos</h2></td></tr>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                }</div>
 <div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                    <span class="keywordtype">int</span> x = 0;</div>
-<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    <span class="keywordflow">if</span>( dif == 1) x = 55;</div>
-<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( dif == 2) x = 60;</div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                    <span class="keywordflow">else</span> x = 65;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    <span class="keywordflow">if</span>( dif == 1) x = 30;</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span>( dif == 2) x = 50;</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                    <span class="keywordflow">else</span> x = 60;</div>
 <div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;                    Random rand = <span class="keyword">new</span> Random();</div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                    <span class="keywordflow">if</span> (rand.nextInt(101) &lt;= x) {</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;                    <span class="keywordflow">if</span> (rand.nextInt(101) &lt;= x ) {</div>
 <div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;                        board[i][j] = <span class="keyword">new</span> WhiteCell();</div>
 <div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;                        board[size - i][size - j] = <span class="keyword">new</span> WhiteCell();</div>
 <div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;                    } <span class="keywordflow">else</span> {</div>
@@ -1918,11 +1919,17 @@ Atributos privados estáticos</h2></td></tr>
 <div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;                                canvi = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;                            }</div>
 <div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;                        }</div>
-<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;                    }</div>
-<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;                }</div>
-<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;            }</div>
-<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;        }</div>
-<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    }</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;                        <span class="keywordflow">if</span>(r == size-2) {</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;                            <span class="keywordflow">if</span>(board[r+1][c].isWhite()) {</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;                                board[r+1][c] = <span class="keyword">new</span> BlackCell();</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160;                                canvi = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;                            }</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;                        }</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;                    }</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;                }</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;            }</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;        }</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1984,19 +1991,19 @@ Atributos privados estáticos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>número de casillas blancas conectadas a la celda dada </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_generate_8java_source.html#l00902">902</a> del archivo <a class="el" href="_ctrl_generate_8java_source.html">CtrlGenerate.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00902"></a><span class="lineno">  902</span>&#160;                                                                       {</div>
-<div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        <span class="keywordflow">if</span>( i &gt;= board.length || i &lt; 0 || j &gt;= board[0].length || j&lt;0) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!board[i][j].isWhite()) {</div>
-<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;            auxBoard[i][j] = 1; <span class="comment">//la marcamos como visitada</span></div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        }</div>
-<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(auxBoard[i][j] == 1) <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            auxBoard[i][j]=1;</div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            <span class="keywordflow">return</span> 1 + <a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i+1,j,auxBoard)+<a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i,j+1,auxBoard)+<a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i-1,j,auxBoard)+<a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i,j-1,auxBoard);</div>
-<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        }</div>
-<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_generate_8java_source.html#l00908">908</a> del archivo <a class="el" href="_ctrl_generate_8java_source.html">CtrlGenerate.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;                                                                       {</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keywordflow">if</span>( i &gt;= board.length || i &lt; 0 || j &gt;= board[0].length || j&lt;0) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!board[i][j].isWhite()) {</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            auxBoard[i][j] = 1; <span class="comment">//la marcamos como visitada</span></div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;        }</div>
+<div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>(auxBoard[i][j] == 1) <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;            auxBoard[i][j]=1;</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;            <span class="keywordflow">return</span> 1 + <a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i+1,j,auxBoard)+<a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i,j+1,auxBoard)+<a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i-1,j,auxBoard)+<a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i,j-1,auxBoard);</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        }</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2033,33 +2040,33 @@ Atributos privados estáticos</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>true si es conexo, false si no lo es </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_generate_8java_source.html#l00920">920</a> del archivo <a class="el" href="_ctrl_generate_8java_source.html">CtrlGenerate.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;                                                      {</div>
-<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;        <span class="keywordtype">int</span> size = board.length;</div>
-<div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160;        <span class="keywordtype">int</span> nDFS = 0;</div>
-<div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;        <span class="keywordtype">int</span> nWhite = 0;</div>
-<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;        <span class="keywordtype">boolean</span> found = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        <span class="keywordtype">int</span> [][] auxBoard = <span class="keyword">new</span> <span class="keywordtype">int</span>[size][size];</div>
-<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; ++i ) {</div>
-<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; size;++j) {</div>
-<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;                auxBoard[i][j] = 0;</div>
-<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;            }</div>
-<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        }</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; ++i ) {</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; size;++j) {</div>
-<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;                <span class="keywordflow">if</span>(board[i][j].isWhite()){</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;                    nWhite+=1;</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;                    <span class="keywordflow">if</span>(!found ) {</div>
-<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                        nDFS = <a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i,j,auxBoard);</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                        found = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;                    }</div>
-<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;                }</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160; </div>
-<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;            }</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;        }</div>
-<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;        <span class="keywordflow">if</span>(nWhite == nDFS) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_generate_8java_source.html#l00926">926</a> del archivo <a class="el" href="_ctrl_generate_8java_source.html">CtrlGenerate.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;                                                      {</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keywordtype">int</span> size = board.length;</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;        <span class="keywordtype">int</span> nDFS = 0;</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;        <span class="keywordtype">int</span> nWhite = 0;</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        <span class="keywordtype">boolean</span> found = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;        <span class="keywordtype">int</span> [][] auxBoard = <span class="keyword">new</span> <span class="keywordtype">int</span>[size][size];</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; ++i ) {</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; size;++j) {</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;                auxBoard[i][j] = 0;</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;            }</div>
+<div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;        }</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; size; ++i ) {</div>
+<div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; size;++j) {</div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;                <span class="keywordflow">if</span>(board[i][j].isWhite()){</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;                    nWhite+=1;</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                    <span class="keywordflow">if</span>(!found ) {</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                        nDFS = <a class="code" href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">DFS</a>(board,i,j,auxBoard);</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;                        found = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;                    }</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;                }</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160; </div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;            }</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        }</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        <span class="keywordflow">if</span>(nWhite == nDFS) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -2094,8 +2101,8 @@ Atributos privados estáticos</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a72b9030a69b4d6f3d63e5fa17421945c"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a72b9030a69b4d6f3d63e5fa17421945c">domain.controllers.CtrlGenerate.fillBoardAux</a></div><div class="ttdeci">static boolean fillBoardAux(Cell[][] board, int i, int j, int[][] posComb, int[][][] tempBoard, int totalWhites, int whites)</div><div class="ttdoc">funcion para buscar una combinación inicial con un valor único</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00546">CtrlGenerate.java:546</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a78d38f5c07c5c77590801e459d08052e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a78d38f5c07c5c77590801e459d08052e">domain.controllers.CtrlGenerate.connexBoard</a></div><div class="ttdeci">static boolean connexBoard(Cell[][] board)</div><div class="ttdoc">función que nos comprueba si el tablero es conexo, es decir, si no hay dos kakuros más pequeños en un...</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00920">CtrlGenerate.java:920</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a0f5fd0dc320710be3846602c942478b9"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">domain.controllers.CtrlGenerate.DFS</a></div><div class="ttdeci">static int DFS(Cell[][] board, int i, int j, int[][] auxBoard)</div><div class="ttdoc">función que nos indica cuantas celdas blancas estan conectadas a una celda blanca dada</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00902">CtrlGenerate.java:902</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a78d38f5c07c5c77590801e459d08052e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a78d38f5c07c5c77590801e459d08052e">domain.controllers.CtrlGenerate.connexBoard</a></div><div class="ttdeci">static boolean connexBoard(Cell[][] board)</div><div class="ttdoc">función que nos comprueba si el tablero es conexo, es decir, si no hay dos kakuros más pequeños en un...</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00926">CtrlGenerate.java:926</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a0f5fd0dc320710be3846602c942478b9"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9">domain.controllers.CtrlGenerate.DFS</a></div><div class="ttdeci">static int DFS(Cell[][] board, int i, int j, int[][] auxBoard)</div><div class="ttdoc">función que nos indica cuantas celdas blancas estan conectadas a una celda blanca dada</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00908">CtrlGenerate.java:908</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_ac8449dd02cefb9887cff36e5db517db7"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#ac8449dd02cefb9887cff36e5db517db7">domain.controllers.CtrlGenerate.checkBoard</a></div><div class="ttdeci">static void checkBoard(Cell[][] board)</div><div class="ttdoc">función que comprueba que no hay celdas blancas solas</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00850">CtrlGenerate.java:850</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a9e4f9172e63fcdc43c9681435d146d89"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a9e4f9172e63fcdc43c9681435d146d89">domain.controllers.CtrlGenerate.firstColRow</a></div><div class="ttdeci">static void firstColRow(Cell[][] board, int dif)</div><div class="ttdoc">función que genera la primera y la última fila del talbero de manera que simétrico</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00745">CtrlGenerate.java:745</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_generate_html_a6b8061cc5988f76fad39b98634615e65"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_generate.html#a6b8061cc5988f76fad39b98634615e65">domain.controllers.CtrlGenerate.allZero</a></div><div class="ttdeci">static boolean allZero(int[][][] tempBoard, int i, int j)</div><div class="ttdoc">función para saber si todos los valores posibles de una celda son 0.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_generate_8java_source.html#l00198">CtrlGenerate.java:198</a></div></div>

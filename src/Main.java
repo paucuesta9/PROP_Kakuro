@@ -12,6 +12,7 @@ En este proyecto de desarrolla una aplicación para jugar, resolver, validar y g
  */
 
 /** @brief Clase Main que lanza el juego
+ * @author Pau Cuesta Arcos
  */
 public class Main {
 
