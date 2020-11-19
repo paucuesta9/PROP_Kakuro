@@ -249,7 +249,7 @@ public class Kakuro {
         return board[x][y].setValue(value);
     }
 
-    /**
+    /**@brief Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero
      *
      * @param r representa el número de fila del tablero
      * @param c representa el número de columna del tablero
