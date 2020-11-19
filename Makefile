@@ -8,7 +8,7 @@ JUNIT = src/domain/controllers/junits
 default: class
 
 class:
-	javac -d bin -sourcepath src src/Main.java $(CLASSES)/*.java $(CONTROLADORES)/*.java $(VISTA)/*.java $(DATA)/*.java $(DRIVERS)/*.java
+	javac -d bin -sourcepath src src/Main.java $(CLASSES)/*.java $(CONTROLADORES)/*.java $(VISTA)/*.java $(DATA)/*.java $(DRIVERS)/*.java $(JUNIT)/*.java -cp lib/junit-4.12.jar
 
 jar:
 	jar -cvfm Kakuro.jar MANIFEST.MF -C bin/ .
@@ -74,7 +74,7 @@ run_driver_CtrlValidate_auto:
 	java -cp bin domain.controllers.drivers.DriverCtrlValidate < data/juegos_prueba/Inputs/input_CtrlValidate.txt
 
 run_junit:
-	java -cp bin domain.controllers.junits.KakuroTest
+	java -cp bin:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore domain.controllers.junits.KakuroTest
 
 clean:
 	rm -rf bin
