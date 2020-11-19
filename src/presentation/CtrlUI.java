@@ -123,7 +123,7 @@ public class CtrlUI {
                     size = readNumber();
                 }
                 System.out.println("");
-                System.out.print("Indique la dificultad: Fácil (1), Medio (2), Dificil (3): ");
+                System.out.print("Indique la dificultad (En relación a número de casillas blancas, una vez generado se calculará la dificultad con todos los parámetros): Fácil (1), Medio (2), Dificil (3): ");
                 int diff = readNumber();
                 while (diff < 1 || diff > 3) {
                     System.out.println("El valor que ha introducido no es correcto");
@@ -133,6 +133,9 @@ public class CtrlUI {
                 System.out.println("");
                 cd.generate(size,diff);
                 writeKakuroInTerminal();
+                System.out.print("¿Desea guardar el kakuro generado? Escriba 1 para guardar, 0 para no guardar: ");
+                int option = readNumber();
+                if (option == 1) cd.saveKakuro();
                 menu();
                 break;
             case 5:

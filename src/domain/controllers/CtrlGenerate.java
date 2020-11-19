@@ -734,6 +734,7 @@ public class CtrlGenerate {
             else repeat = true;
         }
         CtrlValidate.setDifficulty();
+        System.out.println("Finalmente, la dificultad es " + currentKakuro.getDifficulty());
         return currentKakuro;
     }
 

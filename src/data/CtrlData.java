@@ -80,7 +80,15 @@ public class CtrlData {
     public void saveKakuro(String content, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
         try {
-            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + getNumberOfFiles(diff, sizeRow, sizeColumn) + ".txt");
+            int number;
+            try {
+                number = getNumberOfFiles(diff, sizeRow, sizeColumn);
+            } catch (NullPointerException e) {
+                number = 0;
+                File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
+                folder.mkdir();
+            }
+            file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + number + ".txt");
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
             pw.close();
