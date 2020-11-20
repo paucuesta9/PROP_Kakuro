@@ -50,8 +50,10 @@ public class CtrlDomain {
         try {
             searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
         } catch (IOException e) {
-            System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno...");
+            System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)");
             currentKakuro = CtrlGenerate.generate(kakuroSizeRow,difficulty);
+            System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
+            resolve();
             currentKakuro.setId(saveKakuro());
         }
         CtrlPlay.startGame(currentKakuro);
@@ -155,6 +157,7 @@ public class CtrlDomain {
      */
     public void generate(int size, int dif) {
         currentKakuro = CtrlGenerate.generate(size,dif);
+        System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
     }
 
     /* GETTERS AND SETTERS (CLASSES) */
