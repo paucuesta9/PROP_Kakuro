@@ -220,12 +220,22 @@ public class CtrlDomain {
 
     /** @brief Getter de Kakuro
      *
-     * Se obtiene un Kakuro y se asigna al currentKakuro a partir de una ruta relativa
+     * Se obtiene un Kakuro y lo asigna a correctKakuro
+     *
+     * @param filePath Ruta relativa al fichero con el Kakuro que se busca
+     */
+    public void getKakuroAndAssign(String filePath) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+        this.currentKakuro = new Kakuro(data.getKakuro(filePath));
+    }
+
+    /** @brief Getter de Kakuro
+     *
+     * Se obtiene un Kakuro
      *
      * @param filePath Ruta relativa al fichero con el Kakuro que se busca
      */
     public String getKakuro(String filePath) throws IOException, IndexOutOfBoundsException, NumberFormatException {
-        return data.getKakuro(/*"../" + */ filePath);
+        return data.getKakuro(filePath);
     }
 
 //    /** @brief Getter de partidas empezadas por el usuario actual

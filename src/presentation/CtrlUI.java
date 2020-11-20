@@ -67,7 +67,7 @@ public class CtrlUI {
                 kakuro = readLine();
                 while (true) {
                     try {
-                        cd.getKakuro("data/kakuros_usuario/" + kakuro + ".txt");
+                        cd.getKakuroAndAssign("data/kakuros_usuario/" + kakuro + ".txt");
                         break;
                     } catch (IOException e) {
                         System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
@@ -99,7 +99,7 @@ public class CtrlUI {
                 kakuro = readLine();
                 while (true) {
                     try {
-                        cd.getKakuro("data/" + kakuro + ".txt");
+                        cd.getKakuroAndAssign("data/" + kakuro + ".txt");
                         break;
                     } catch (IOException e) {
                         System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
