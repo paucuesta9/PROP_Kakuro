@@ -67,9 +67,9 @@ public class DriverCtrlData {
      * @param sizeRow representa el tamaño de filas del kakuro
      * @param sizeColumn representa el tamaño de columnas del kakuro
      */
-    private static void testSaveKakuro(String kakuro, int diff, int sizeRow, int sizeColumn) {
+    private static void testSaveKakuro(String kakuro, String kakuroSol, int diff, int sizeRow, int sizeColumn) {
         CtrlData ctrlData = new CtrlData();
-        ctrlData.saveKakuro(kakuro, diff, sizeRow, sizeColumn);
+        ctrlData.saveKakuro(kakuro, kakuroSol, diff, sizeRow, sizeColumn);
         System.out.println("Se ha generado un fichero con el kakuro guardado");
     }
 
@@ -118,13 +118,14 @@ public class DriverCtrlData {
                     testGetKakuro(filePath);
                     break;
                 case 4:
-                    System.out.println("Introduzca el kakuro a guardar, la dificultad y el tamaño del kakuro (NxM)");
+                    System.out.println("Introduzca el kakuro a guardar, su solución, la dificultad y el tamaño del kakuro (NxM)");
                     String kakuro = readKakuro();
+                    String kakuroSol = readKakuro();
                     diff = readNumber();
                     int sizeRow = readNumber();
                     int sizeColumn = readNumber();
                     System.out.println("Se llama saveKakuro");
-                    testSaveKakuro(kakuro, diff, sizeRow, sizeColumn);
+                    testSaveKakuro(kakuro, kakuroSol, diff, sizeRow, sizeColumn);
                     break;
                 case 5:
                     System.out.println("Introduzca la dificultad y el tamaño del kakuro (NxM)");

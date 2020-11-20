@@ -224,7 +224,7 @@ public class CtrlDomain {
      *
      */
     public void saveKakuro() {
-        data.saveKakuro(currentKakuro.toString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
+        data.saveKakuro(currentKakuro.toString(), currentKakuro.correctToString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
     }
 
     /** @brief Comprobadora de coordenadas

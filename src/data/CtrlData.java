@@ -77,7 +77,7 @@ public class CtrlData {
      * @param sizeRow representa el tamaño de filas del kakuro
      * @param sizeColumn representa el tamaño de columnas del kakuro
      */
-    public void saveKakuro(String content, int diff, int sizeRow, int sizeColumn) {
+    public void saveKakuro(String content, String solucion, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
         try {
             int number;
@@ -88,10 +88,21 @@ public class CtrlData {
                 File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
                 folder.mkdir();
             }
+            if (solucion != null) {
+                File folderSol = new File("data/solutions/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
+                folderSol.mkdir();
+            }
             file = new FileWriter("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + number + ".txt");
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
             pw.close();
+            if (solucion != null) {
+                file = new FileWriter("data/solutions/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + number + ".txt");
+                PrintWriter pwSol = new PrintWriter(file);
+                pwSol.print(solucion);
+                pwSol.close();
+            }
+
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
