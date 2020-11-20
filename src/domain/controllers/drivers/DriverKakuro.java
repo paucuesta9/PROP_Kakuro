@@ -475,9 +475,9 @@ public class DriverKakuro {
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("\n Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty" +
-                    "\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna" +
-                    "\n 16. Mirar si se ha terminado \n 17. Salir");
+            System.out.println("Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Getter de id \n 6. Setter de id \n 7. Getter difficulty" +
+                    "\n 8. Setter difficulty \n 9. Getter rowSize \n 10. Getter columnSize \n 11. Getter board \n 12. Getter cell \n 13. Setter value en celda blanca \n 14. Check column \n 15. Mirar validez de fila \n 16. Mirar validez de la columna" +
+                    "\n 17. Mirar si se ha terminado \n 18. Mirar si ha puesto valores correctos \n 19. Salir");
             value = readNumber();
         }
         System.exit(0);
