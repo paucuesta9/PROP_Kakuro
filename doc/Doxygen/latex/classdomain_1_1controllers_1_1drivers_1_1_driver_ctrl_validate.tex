@@ -1,0 +1,484 @@
+\hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate}{}\doxysection{Referencia de la Clase domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate}
+\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate}\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate}{Driver\+Ctrl\+Validate}} que comprueba la correctividad de las funciones del controlador \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate}{Ctrl\+Validate}}.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa82c70ecc2f415715d4d150a2524eeef}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Función principal. \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4d3957e9e4bda96da9d148aaa0309623}{read\+Kakuro}} ()
+\begin{DoxyCompactList}\small\item\em Lee un kakuro de consola. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{read\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Lee un numero de consola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac7ea9ece6fe41f3cf87dbd90a3df1b6f}{test\+Creadora}} ()
+\begin{DoxyCompactList}\small\item\em Test de la creadora. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a77ab8d5fe916ecb73acaef9bda90bccc}{test\+Validate}} (String kakuro\+Text)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4868c48031161ea7fd424998d4a5e55f}{test\+How\+Many\+Numbers}} (int a\mbox{[}$\,$\mbox{]})
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa594cf207cd02f592eb64c3f803b9e7d}{test\+Is\+Unique}} (int a\mbox{[}$\,$\mbox{]})
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a0bd968730ab119919690b8b64ac7a5ab}{test\+Set\+Difficulty}} (String kakuro\+Text)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac4f4befeaf41c09736a72eb2b451737a}{test\+Validate\+Pos\+Sums}} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, int\mbox{[}$\,$\mbox{]} pos\+Combs, int length, int row, int i, int j)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a34e886ce09fc83969824a7e01dc0a419}{test\+Compute\+Pos\+Sums}} (int x, int n, int no)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_acb46a699af90ec65ea388cebf3413560}{test\+Check\+For\+New\+Uniques}} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, String kakuro\+Text)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Scanner \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_af5ff7f60a87a3469e67721ad8c4baa65}{reader}} = new Scanner((System.\+in))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate}{Driver\+Ctrl\+Validate}} que comprueba la correctividad de las funciones del controlador \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate}{Ctrl\+Validate}}. 
+
+\begin{DoxyAuthor}{Autor}
+Alvaro Armada Ruiz 
+\end{DoxyAuthor}
+
+
+Definición en la línea 17 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac7ea9ece6fe41f3cf87dbd90a3df1b6f}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac7ea9ece6fe41f3cf87dbd90a3df1b6f}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testCreadora@{testCreadora}}
+\index{testCreadora@{testCreadora}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testCreadora()}{testCreadora()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Creadora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de la creadora. 
+
+Comprueba si se crea correctamente 
+
+Definición en la línea 24 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                        \{}
+\DoxyCodeLine{25         CtrlValidate ctrlValidate = \textcolor{keyword}{new} CtrlValidate();}
+\DoxyCodeLine{26         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
+\DoxyCodeLine{27     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a77ab8d5fe916ecb73acaef9bda90bccc}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a77ab8d5fe916ecb73acaef9bda90bccc}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testValidate@{testValidate}}
+\index{testValidate@{testValidate}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testValidate()}{testValidate()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Validate (\begin{DoxyParamCaption}\item[{String}]{kakuro\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función validate Comprueva que la función validate se ejecuta correctamente y da el resultado esperado 
+\begin{DoxyParams}{Parámetros}
+{\em kakuro\+Text} & representa un kakuro hecho por el usuario\\
+\hline
+\end{DoxyParams}
+Queremos ver que si un kakuro es válido, es decir, tiene solución única. Esta función comprueba si no tiene solución, tiene una, o tiene más de una. 
+
+Definición en la línea 37 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{37                                                          \{}
+\DoxyCodeLine{38         Kakuro kakuro = \textcolor{keyword}{new} Kakuro(kakuroText);}
+\DoxyCodeLine{39         CtrlValidate.setKakuro(kakuro);}
+\DoxyCodeLine{40         \textcolor{keywordtype}{int} [] vec = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[] \{0,0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} res[] = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [1];}
+\DoxyCodeLine{42         res[0] = 0;}
+\DoxyCodeLine{43         CtrlValidate.validate(0,0,0,vec,res);}
+\DoxyCodeLine{44         \textcolor{keywordflow}{if} (res[0] != 1)}
+\DoxyCodeLine{45             System.out.println(\textcolor{stringliteral}{"{}El kakuro no es valido"{}});}
+\DoxyCodeLine{46         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{47             System.out.println(\textcolor{stringliteral}{"{}El kakuro es valido"{}});}
+\DoxyCodeLine{48     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4868c48031161ea7fd424998d4a5e55f}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4868c48031161ea7fd424998d4a5e55f}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testHowManyNumbers@{testHowManyNumbers}}
+\index{testHowManyNumbers@{testHowManyNumbers}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testHowManyNumbers()}{testHowManyNumbers()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+How\+Many\+Numbers (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función how\+Many\+Numbers Comprueva que la función how\+Many\+Numbers se ejecuta correctamente y da el resultado esperado 
+\begin{DoxyParams}{Parámetros}
+{\em a} & es un array de enteros de medida 9 donde cada número es un 0 o un 1\\
+\hline
+\end{DoxyParams}
+Comprueba si cuenta de forma adecuada el número de 1 en el array a. 
+
+Definición en la línea 57 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                                      \{}
+\DoxyCodeLine{58         \textcolor{keywordtype}{double} c = CtrlValidate.howManyNumbers(a);}
+\DoxyCodeLine{59         System.out.println(\textcolor{stringliteral}{"{}El array tiene "{}}+c+\textcolor{stringliteral}{"{} unos."{}});}
+\DoxyCodeLine{60     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa594cf207cd02f592eb64c3f803b9e7d}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa594cf207cd02f592eb64c3f803b9e7d}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testIsUnique@{testIsUnique}}
+\index{testIsUnique@{testIsUnique}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testIsUnique()}{testIsUnique()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Is\+Unique (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función is\+Unique Comprueva que la función is\+Unique se ejecuta correctamente y da el resultado esperado 
+\begin{DoxyParams}{Parámetros}
+{\em a} & es un array de enteros de medida 9 donde cada número es un 0 o un 1\\
+\hline
+\end{DoxyParams}
+Comprueba si retorna cierto si en el array a hay solamente un 1, y falso de cualquier otra manera. 
+
+Definición en la línea 68 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{68                                               \{ \textcolor{comment}{//a tiene mida 9}}
+\DoxyCodeLine{69         \textcolor{keywordflow}{if} (CtrlValidate.isUnique(a)) System.out.println(\textcolor{stringliteral}{"{}Hay exactamente un 1 entre los numeros introducidos"{}});}
+\DoxyCodeLine{70         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No hay 1's entre los numeros introducidos o bien hay mas de un 1"{}});}
+\DoxyCodeLine{71     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a0bd968730ab119919690b8b64ac7a5ab}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a0bd968730ab119919690b8b64ac7a5ab}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testSetDifficulty@{testSetDifficulty}}
+\index{testSetDifficulty@{testSetDifficulty}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testSetDifficulty()}{testSetDifficulty()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Set\+Difficulty (\begin{DoxyParamCaption}\item[{String}]{kakuro\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función set\+Difficulty Comprueva que la función set\+Difficulty se ejecuta correctamente y da el resultado esperado 
+\begin{DoxyParams}{Parámetros}
+{\em kakuro\+Text} & representa un kakuro hecho por el usuario\\
+\hline
+\end{DoxyParams}
+Comprueba si asigna la dificultad correspondiente al kakuro introducido por el usuario 
+
+Definición en la línea 79 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                                              \{}
+\DoxyCodeLine{80         Kakuro kakuro = \textcolor{keyword}{new} Kakuro(kakuroText);}
+\DoxyCodeLine{81         CtrlValidate.setKakuro(kakuro);}
+\DoxyCodeLine{82         CtrlValidate.setDifficulty();}
+\DoxyCodeLine{83         String s;}
+\DoxyCodeLine{84         \textcolor{keywordflow}{if} (kakuro.getDifficulty()==1) s = \textcolor{stringliteral}{"{}facil"{}};}
+\DoxyCodeLine{85         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (kakuro.getDifficulty()==2) s = \textcolor{stringliteral}{"{}media"{}};}
+\DoxyCodeLine{86         \textcolor{keywordflow}{else} s = \textcolor{stringliteral}{"{}dificil"{}};}
+\DoxyCodeLine{87         System.out.println(\textcolor{stringliteral}{"{}El kakuro es de dificultad "{}}+s);}
+\DoxyCodeLine{88     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac4f4befeaf41c09736a72eb2b451737a}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac4f4befeaf41c09736a72eb2b451737a}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testValidatePosSums@{testValidatePosSums}}
+\index{testValidatePosSums@{testValidatePosSums}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testValidatePosSums()}{testValidatePosSums()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Validate\+Pos\+Sums (\begin{DoxyParamCaption}\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Combs,  }\item[{int}]{length,  }\item[{int}]{row,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función validate\+Pos\+Sums Comprueva que la función validate\+Pos\+Sums se ejecuta correctamente y da el resultado esperado
+
+
+\begin{DoxyParams}{Parámetros}
+{\em temp\+Board} & es un tablero auxiliar donde cada posicion consta de 9 números (-\/1, 0 o 1). -\/1 indica negra o no tratado aún, 0 indica valor no posible y 1 indica valor posible. Ejemplo = 1 0 1 0 0 0 0 0 1, valores posibles\+: 1, 3, 9. \\
+\hline
+{\em pos\+Combs} & es un array donde siguiendo el mismo razonamiento de temp\+Board para 0 y 1 indica que valores aparecen en las combinaciones para sumar el valor de la casilla negra i, j con length casillas. \\
+\hline
+{\em length} & indica como de larga es la fila o columna de blancas que sigue a la casilla negra i, j. \\
+\hline
+{\em row} & 1 si trataremos la fila, 0 si trataremos la columna de la casilla negra i, j. \\
+\hline
+{\em i} & posición i de la casilla negra \\
+\hline
+{\em j} & posición j de la casilla negra\\
+\hline
+\end{DoxyParams}
+Comprueba si, dado el tablero, los números que pueden sumar el valor, la casilla, si se trata por fila o columna y cuantas casillas blancas hay, se encuentran las casillas que tienen valor único y como se actualiza el tablero 
+
+Definición en la línea 102 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                                                                                       \{}
+\DoxyCodeLine{103         \textcolor{keywordtype}{int} unique = CtrlValidate.validatePosSums(tempBoard, posCombs, length, row, i, j);}
+\DoxyCodeLine{104         System.out.println(\textcolor{stringliteral}{"{}Ha encontrado "{}}+unique+\textcolor{stringliteral}{"{} casillas con valor unico y de esta manera se ha actualizado el tablero:"{}});}
+\DoxyCodeLine{105         \textcolor{keywordflow}{for} (i=0; i< tempBoard.length; ++i) \{}
+\DoxyCodeLine{106             \textcolor{keywordflow}{for}(j=0; j< tempBoard[0].length; ++j) \{}
+\DoxyCodeLine{107                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} z=0; z<9; ++z) \{}
+\DoxyCodeLine{108                     System.out.print(tempBoard[i][j][z]);}
+\DoxyCodeLine{109                 \}}
+\DoxyCodeLine{110                 System.out.print(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{111             \}}
+\DoxyCodeLine{112             System.out.println();}
+\DoxyCodeLine{113         \}}
+\DoxyCodeLine{114     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a34e886ce09fc83969824a7e01dc0a419}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a34e886ce09fc83969824a7e01dc0a419}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testComputePosSums@{testComputePosSums}}
+\index{testComputePosSums@{testComputePosSums}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testComputePosSums()}{testComputePosSums()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Compute\+Pos\+Sums (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{n,  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función compute\+Pos\+Sums Comprueva que la función compute\+Pos\+Sums se ejecuta correctamente y da el resultado esperado
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & es el número del cual queremos saber las combinaciones de números que suman hasta él con un número determinado de casillas \\
+\hline
+{\em n} & es el número determinado de casillas \\
+\hline
+{\em no} & indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.\\
+\hline
+\end{DoxyParams}
+Comprueba si dado un valor x, un número de casillas y un valor de no, deja en un array de 9 posiciones un 1 para los números que aparezcan en las combinacione y un 0 para aquellos que no 
+
+Definición en la línea 125 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                                                                  \{}
+\DoxyCodeLine{126         \textcolor{keywordtype}{int} [] a;}
+\DoxyCodeLine{127         \textcolor{keywordflow}{if} (no == 0) a = CtrlValidate.computePosSums(x,n,no);}
+\DoxyCodeLine{128         \textcolor{keywordflow}{else} a = CtrlValidate.computePosSums(x,n-\/1,no);}
+\DoxyCodeLine{129         \textcolor{keywordflow}{if} (no==0) System.out.println(\textcolor{stringliteral}{"{}Estos son los valores que que tienen una combinacion para sumar "{}}+x+\textcolor{stringliteral}{"{} en "{}}+n+\textcolor{stringliteral}{"{} casillas"{}});}
+\DoxyCodeLine{130         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Estos son los valores que que tienen una combinacion para sumar "{}}+x+\textcolor{stringliteral}{"{} en "{}}+n+\textcolor{stringliteral}{"{} casillas sabiendo que tenemos fijo el numero "{}}+no);}
+\DoxyCodeLine{131         System.out.println(\textcolor{stringliteral}{"{}Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece"{}});}
+\DoxyCodeLine{132         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) System.out.print(a[i]+\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{133         System.out.print(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_acb46a699af90ec65ea388cebf3413560}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_acb46a699af90ec65ea388cebf3413560}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!testCheckForNewUniques@{testCheckForNewUniques}}
+\index{testCheckForNewUniques@{testCheckForNewUniques}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{testCheckForNewUniques()}{testCheckForNewUniques()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+test\+Check\+For\+New\+Uniques (\begin{DoxyParamCaption}\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{String}]{kakuro\+Text }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función check\+For\+New\+Uniques Comprueva que la función check\+For\+New\+Uniques se ejecuta correctamente y da el resultado esperado
+
+
+\begin{DoxyParams}{Parámetros}
+{\em temp\+Board} & es un tablero auxiliar donde cada posicion consta de 9 números (-\/1, 0 o 1). -\/1 indica negra o no tratado aún, 0 indica valor no posible y 1 indica valor posible. Ejemplo = 1 0 1 0 0 0 0 0 1, valores posibles\+: 1, 3, 9. \\
+\hline
+{\em kakuro\+Text} & representa un kakuro hecho por el usuario\\
+\hline
+\end{DoxyParams}
+Comprueba si dado el tablero y asignado el kakuro, encuentra aquellas casillas con valor único trivial, es decir, aquellas que toda su fila o columna ya tienen un valor asignado excepto ella y modifica el tablero auxiliar acorde. 
+
+Definición en la línea 146 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{146                                                                                         \{}
+\DoxyCodeLine{147         Kakuro kakuro = \textcolor{keyword}{new} Kakuro(kakuroText);}
+\DoxyCodeLine{148         CtrlValidate.setKakuro(kakuro);}
+\DoxyCodeLine{149         \textcolor{keywordtype}{int} unique = CtrlValidate.checkForNewUniques(tempBoard);}
+\DoxyCodeLine{150         System.out.println(\textcolor{stringliteral}{"{}Ha encontrado "{}}+unique+\textcolor{stringliteral}{"{} casillas con valor unico y de esta manera se ha actualizado el tablero:"{}});}
+\DoxyCodeLine{151         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<tempBoard.length; ++i) \{}
+\DoxyCodeLine{152             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< tempBoard[0].length; ++j) \{}
+\DoxyCodeLine{153                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} z=0; z<9; ++z) \{}
+\DoxyCodeLine{154                     System.out.print(tempBoard[i][j][z]);}
+\DoxyCodeLine{155                 \}}
+\DoxyCodeLine{156                 System.out.print(\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{157             \}}
+\DoxyCodeLine{158             System.out.println();}
+\DoxyCodeLine{159         \}}
+\DoxyCodeLine{160     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa82c70ecc2f415715d4d150a2524eeef}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa82c70ecc2f415715d4d150a2524eeef}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!main@{main}}
+\index{main@{main}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Función principal. 
+
+Indica las opciones que hay para testear 
+
+Definición en la línea 167 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167                                            \{}
+\DoxyCodeLine{168         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Validar \(\backslash\)n 3. Dificultad \(\backslash\)n 4. isUnique \(\backslash\)n 5. howManyNumbers \(\backslash\)n 6. validatePosSums \(\backslash\)n 7. computePosSums \(\backslash\)n 8. checkForNewUniques \(\backslash\)n 9. Salir"{}});}
+\DoxyCodeLine{169         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{170         String kakuro;}
+\DoxyCodeLine{171         \textcolor{keywordflow}{while}(value != 9) \{}
+\DoxyCodeLine{172             \textcolor{keywordtype}{int} x,y;}
+\DoxyCodeLine{173             \textcolor{keywordflow}{switch}(value) \{}
+\DoxyCodeLine{174                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{175                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora"{}});}
+\DoxyCodeLine{176                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac7ea9ece6fe41f3cf87dbd90a3df1b6f}{testCreadora}}();}
+\DoxyCodeLine{177                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{178                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{179                     System.out.println(\textcolor{stringliteral}{"{}Indique el kakuro a validar"{}});}
+\DoxyCodeLine{180                     kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4d3957e9e4bda96da9d148aaa0309623}{readKakuro}}();}
+\DoxyCodeLine{181                     System.out.println(\textcolor{stringliteral}{"{}Se llama a validar"{}});}
+\DoxyCodeLine{182                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a77ab8d5fe916ecb73acaef9bda90bccc}{testValidate}}(kakuro);}
+\DoxyCodeLine{183                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{184                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{185                     System.out.println(\textcolor{stringliteral}{"{}Indique el kakuro para mirar su dificultad"{}});}
+\DoxyCodeLine{186                     kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4d3957e9e4bda96da9d148aaa0309623}{readKakuro}}();}
+\DoxyCodeLine{187                     System.out.println(\textcolor{stringliteral}{"{}Se llama a dificultad"{}});}
+\DoxyCodeLine{188                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a0bd968730ab119919690b8b64ac7a5ab}{testSetDifficulty}}(kakuro);}
+\DoxyCodeLine{189                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{190                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{191                     System.out.println(\textcolor{stringliteral}{"{}Introduce 9 enteros entre 0 y 1"{}});}
+\DoxyCodeLine{192                     \textcolor{keywordtype}{int} a [] = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [9];}
+\DoxyCodeLine{193                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) a[i] = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{194                     System.out.println(\textcolor{stringliteral}{"{}Se llama a isUnique"{}});}
+\DoxyCodeLine{195                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_aa594cf207cd02f592eb64c3f803b9e7d}{testIsUnique}}(a);}
+\DoxyCodeLine{196                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{197                 \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{198                     System.out.println(\textcolor{stringliteral}{"{}Introduce 9 enteros entre 0 y 1"{}});}
+\DoxyCodeLine{199                     \textcolor{keywordtype}{int} aa [] = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [9];}
+\DoxyCodeLine{200                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) aa[i] = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{201                     System.out.println(\textcolor{stringliteral}{"{}Se llama a howManyNumbers"{}});}
+\DoxyCodeLine{202                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4868c48031161ea7fd424998d4a5e55f}{testHowManyNumbers}}(aa);}
+\DoxyCodeLine{203                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{204                 \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{205                     System.out.println(\textcolor{stringliteral}{"{}Introduce tamano de tablero N x M"{}});}
+\DoxyCodeLine{206                     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} m = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{207                     \textcolor{keywordtype}{int} [][][] tempBoard= \textcolor{keyword}{new} \textcolor{keywordtype}{int} [n][m][9];}
+\DoxyCodeLine{208                     System.out.println(\textcolor{stringliteral}{"{}Introduce un tablero de la siguiente manera: \(\backslash\)nNueve -\/1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles"{}});}
+\DoxyCodeLine{209                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<n; ++i) \{}
+\DoxyCodeLine{210                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<m; ++j) \{}
+\DoxyCodeLine{211                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} z=0; z<9; ++z) \{}
+\DoxyCodeLine{212                                 tempBoard[i][j][z] = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{213                             \}}
+\DoxyCodeLine{214                         \}}
+\DoxyCodeLine{215                     \}}
+\DoxyCodeLine{216                     System.out.println(\textcolor{stringliteral}{"{}Introduce para que casilla negra(i, j) quieres encontrar valores unicos"{}});}
+\DoxyCodeLine{217                     \textcolor{keywordtype}{int} i = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} j =\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{218                     System.out.println(\textcolor{stringliteral}{"{}Introduce un 1 para comprobar la fila o un 0 para comprobar la columna, y tambien que valor de suma tiene la casilla negra, y como de larga es la fila o la columna"{}});}
+\DoxyCodeLine{219                     \textcolor{keywordtype}{int} row = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} valuee = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} length = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{220                     \textcolor{keywordtype}{int} [] posCombs = CtrlValidate.computePosSums(valuee, length,0);}
+\DoxyCodeLine{221                     System.out.println(\textcolor{stringliteral}{"{}Se llama a validatePosSums"{}});}
+\DoxyCodeLine{222                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_ac4f4befeaf41c09736a72eb2b451737a}{testValidatePosSums}}(tempBoard, posCombs, length, row, i, j);}
+\DoxyCodeLine{223                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{224                 \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{225                     System.out.println(\textcolor{stringliteral}{"{}Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.\(\backslash\)n "{}});}
+\DoxyCodeLine{226                     \textcolor{keywordtype}{int} e = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} no = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{227                     System.out.println(\textcolor{stringliteral}{"{}Se llama a computePosSums"{}});}
+\DoxyCodeLine{228                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a34e886ce09fc83969824a7e01dc0a419}{testComputePosSums}}(e, c, no);}
+\DoxyCodeLine{229                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{230                 \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{231                     System.out.println(\textcolor{stringliteral}{"{}Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar"{}});}
+\DoxyCodeLine{232                     kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4d3957e9e4bda96da9d148aaa0309623}{readKakuro}}();}
+\DoxyCodeLine{233                     System.out.println(\textcolor{stringliteral}{"{}Introduce tamano de tablero N x M"{}});}
+\DoxyCodeLine{234                     \textcolor{keywordtype}{int} nn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}(); \textcolor{keywordtype}{int} mm = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{235                     \textcolor{keywordtype}{int} [][][] tempBoardd= \textcolor{keyword}{new} \textcolor{keywordtype}{int} [nn][mm][9];}
+\DoxyCodeLine{236                     System.out.println(\textcolor{stringliteral}{"{}Introduce un tablero de la siguiente manera: \(\backslash\)nNueve -\/1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles"{}});}
+\DoxyCodeLine{237                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<nn; ++ii) \{}
+\DoxyCodeLine{238                         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} jj=0; jj<mm; ++jj) \{}
+\DoxyCodeLine{239                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} zz=0; zz<9; ++zz) \{}
+\DoxyCodeLine{240                                 tempBoardd[ii][jj][zz] = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{241                             \}}
+\DoxyCodeLine{242                         \}}
+\DoxyCodeLine{243                     \}}
+\DoxyCodeLine{244                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkForNewUniques"{}});}
+\DoxyCodeLine{245                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_acb46a699af90ec65ea388cebf3413560}{testCheckForNewUniques}}(tempBoardd, kakuro);}
+\DoxyCodeLine{246                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{247                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{248                     System.out.println(\textcolor{stringliteral}{"{}El número introduciodo es incorrecto"{}});}
+\DoxyCodeLine{249                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{250 }
+\DoxyCodeLine{251             \}}
+\DoxyCodeLine{252             System.out.print(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{253             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Validar \(\backslash\)n 3. Dificultad \(\backslash\)n 4. isUnique \(\backslash\)n 5. howManyNumbers \(\backslash\)n 6. validatePosSums \(\backslash\)n 7. computePosSums \(\backslash\)n 8. checkForNewUniques \(\backslash\)n 9. Salir"{}});}
+\DoxyCodeLine{254             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}{readNumber}}();}
+\DoxyCodeLine{255         \}}
+\DoxyCodeLine{256     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4d3957e9e4bda96da9d148aaa0309623}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_a4d3957e9e4bda96da9d148aaa0309623}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!readKakuro@{readKakuro}}
+\index{readKakuro@{readKakuro}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{readKakuro()}{readKakuro()}}
+{\footnotesize\ttfamily static String domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+read\+Kakuro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lee un kakuro de consola. 
+
+\begin{DoxyReturn}{Devuelve}
+el kakuro leído 
+\end{DoxyReturn}
+
+
+Definición en la línea 262 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{262                                       \{}
+\DoxyCodeLine{263         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{264         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_af5ff7f60a87a3469e67721ad8c4baa65}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{265         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{266         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{267         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{268         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{269             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_af5ff7f60a87a3469e67721ad8c4baa65}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{270         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{271     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_abfc72945b73009e07d5d22fd81881974}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!readNumber@{readNumber}}
+\index{readNumber@{readNumber}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{readNumber()}{readNumber()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+read\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lee un numero de consola. 
+
+\begin{DoxyReturn}{Devuelve}
+el número leído 
+\end{DoxyReturn}
+
+
+Definición en la línea 279 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{279                                    \{}
+\DoxyCodeLine{280         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{281         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_af5ff7f60a87a3469e67721ad8c4baa65}{reader}}.nextInt();}
+\DoxyCodeLine{282         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{283     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_af5ff7f60a87a3469e67721ad8c4baa65}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate_af5ff7f60a87a3469e67721ad8c4baa65}} 
+\index{domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}!reader@{reader}}
+\index{reader@{reader}!domain.controllers.drivers.DriverCtrlValidate@{domain.controllers.drivers.DriverCtrlValidate}}
+\doxysubsubsection{\texorpdfstring{reader}{reader}}
+{\footnotesize\ttfamily Scanner domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Validate.\+reader = new Scanner((System.\+in))\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 18 del archivo Driver\+Ctrl\+Validate.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_ctrl_validate_8java}{Driver\+Ctrl\+Validate.\+java}}\end{DoxyCompactItemize}

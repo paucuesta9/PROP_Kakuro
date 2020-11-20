@@ -1,0 +1,218 @@
+\hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve}{}\doxysection{Referencia de la Clase domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve}
+\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve}\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve}{Driver\+Ctrl\+Resolve}} que comprueba la correctividad de las funciones del controlador \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve}{Ctrl\+Resolve}}.  
+
+
+\doxysubsection*{Métodos públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a8b7eea99e6193b99b8be7813c195e0aa}{main}} (String\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em función main del driver \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve}{Ctrl\+Resolve}} \end{DoxyCompactList}\item 
+static String \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ad6bd754b3222fc04825597d8c8bd0916}{read\+Kakuro}} ()
+\begin{DoxyCompactList}\small\item\em función que nos permite leer un kakuro en formato string \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_aef217495b41035b537ac5ee605bf36a8}{read\+Number}} ()
+\begin{DoxyCompactList}\small\item\em función que nos permite leer un entero del terminal o un fichero \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a90d418a7c4fc3ebf305436fcc2f1536c}{test\+Creadora}} ()
+\begin{DoxyCompactList}\small\item\em Test de la creadora. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ac7cf6876ab74df1b7768921f41de7dac}{test\+Resolve}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static Scanner \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a4b8a67e05cca41e93b8fb6afc2b815f3}{reader}} = new Scanner((System.\+in))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve}{Driver\+Ctrl\+Resolve}} que comprueba la correctividad de las funciones del controlador \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve}{Ctrl\+Resolve}}. 
+
+\begin{DoxyAuthor}{Autor}
+Pol Vallespí Soro 
+\end{DoxyAuthor}
+
+
+Definición en la línea 16 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a90d418a7c4fc3ebf305436fcc2f1536c}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a90d418a7c4fc3ebf305436fcc2f1536c}} 
+\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}!testCreadora@{testCreadora}}
+\index{testCreadora@{testCreadora}!domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+\doxysubsubsection{\texorpdfstring{testCreadora()}{testCreadora()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve.\+test\+Creadora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de la creadora. 
+
+Comprueba si se crea correctamente 
+
+Definición en la línea 23 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23                                        \{}
+\DoxyCodeLine{24         CtrlResolve ctrlResolve = \textcolor{keyword}{new} CtrlResolve();}
+\DoxyCodeLine{25         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
+\DoxyCodeLine{26     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ac7cf6876ab74df1b7768921f41de7dac}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ac7cf6876ab74df1b7768921f41de7dac}} 
+\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}!testResolve@{testResolve}}
+\index{testResolve@{testResolve}!domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+\doxysubsubsection{\texorpdfstring{testResolve()}{testResolve()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve.\+test\+Resolve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+@\+Brief Test de la función resolve Comprueva que la función resolve se ejecuta correctamente y da el resultado esperado
+
+Queremos ver que si un kakuro tiene solución esta función la encuentra. En caso de no tener solución, nos informa de ello. 
+
+Definición en la línea 34 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                        \{}
+\DoxyCodeLine{35         System.out.println(\textcolor{stringliteral}{"{}Indique un kakuro para realizar el test: "{}});}
+\DoxyCodeLine{36         String kakuroText = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ad6bd754b3222fc04825597d8c8bd0916}{readKakuro}}();}
+\DoxyCodeLine{37         Kakuro kakuro = \textcolor{keyword}{new} Kakuro(kakuroText);}
+\DoxyCodeLine{38         CtrlResolve.setKakuro(kakuro);}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} fila = 0;}
+\DoxyCodeLine{40         \textcolor{keywordtype}{int} columna = 0;}
+\DoxyCodeLine{41         \textcolor{keywordtype}{int} suma = 0;}
+\DoxyCodeLine{42         \textcolor{keywordtype}{int} [] vec = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[] \{0,0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{43         \textcolor{keywordtype}{boolean} b = CtrlResolve.resolve(fila,columna,suma,vec);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \textcolor{keywordflow}{if}(b) \{}
+\DoxyCodeLine{46             System.out.println(\textcolor{stringliteral}{"{}Se ha encontrado la siguiente solucion: "{}});}
+\DoxyCodeLine{47             String s = kakuro.correctToString();}
+\DoxyCodeLine{48             System.out.print(s);}
+\DoxyCodeLine{49         \}}
+\DoxyCodeLine{50         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado solucion"{}});}
+\DoxyCodeLine{51     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a8b7eea99e6193b99b8be7813c195e0aa}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a8b7eea99e6193b99b8be7813c195e0aa}} 
+\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}!main@{main}}
+\index{main@{main}!domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+función main del driver \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve}{Ctrl\+Resolve}} 
+
+Nos permite escoger el test que queremos realizar 
+
+Definición en la línea 57 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{57                                            \{}
+\DoxyCodeLine{58         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Resolver \(\backslash\)n 3. Salir"{}});}
+\DoxyCodeLine{59         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_aef217495b41035b537ac5ee605bf36a8}{readNumber}}();}
+\DoxyCodeLine{60         \textcolor{keywordflow}{while}(value != 3) \{}
+\DoxyCodeLine{61             \textcolor{keywordflow}{switch}(value) \{}
+\DoxyCodeLine{62                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{63                     System.out.println();}
+\DoxyCodeLine{64                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora"{}});}
+\DoxyCodeLine{65                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a90d418a7c4fc3ebf305436fcc2f1536c}{testCreadora}}();}
+\DoxyCodeLine{66                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{67                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{68                     System.out.println();}
+\DoxyCodeLine{69                     System.out.println(\textcolor{stringliteral}{"{}Se llama a resolver"{}});}
+\DoxyCodeLine{70                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ac7cf6876ab74df1b7768921f41de7dac}{testResolve}}();}
+\DoxyCodeLine{71                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{72                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{73                     System.out.println();}
+\DoxyCodeLine{74                     System.out.println(\textcolor{stringliteral}{"{}El numero introduciodo es incorrecto"{}});}
+\DoxyCodeLine{75                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77             \}}
+\DoxyCodeLine{78             System.out.println();}
+\DoxyCodeLine{79             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora \(\backslash\)n 2. Resolver \(\backslash\)n 3. Salir"{}});}
+\DoxyCodeLine{80             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_aef217495b41035b537ac5ee605bf36a8}{readNumber}}();}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ad6bd754b3222fc04825597d8c8bd0916}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_ad6bd754b3222fc04825597d8c8bd0916}} 
+\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}!readKakuro@{readKakuro}}
+\index{readKakuro@{readKakuro}!domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+\doxysubsubsection{\texorpdfstring{readKakuro()}{readKakuro()}}
+{\footnotesize\ttfamily static String domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve.\+read\+Kakuro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+función que nos permite leer un kakuro en formato string 
+
+\begin{DoxyReturn}{Devuelve}
+kakuro en formato string 
+\end{DoxyReturn}
+
+
+Definición en la línea 88 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{88                                       \{}
+\DoxyCodeLine{89         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{90         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a4b8a67e05cca41e93b8fb6afc2b815f3}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{91         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{92         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{93         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{94         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{95             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a4b8a67e05cca41e93b8fb6afc2b815f3}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{97     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_aef217495b41035b537ac5ee605bf36a8}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_aef217495b41035b537ac5ee605bf36a8}} 
+\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}!readNumber@{readNumber}}
+\index{readNumber@{readNumber}!domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+\doxysubsubsection{\texorpdfstring{readNumber()}{readNumber()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve.\+read\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+función que nos permite leer un entero del terminal o un fichero 
+
+\begin{DoxyReturn}{Devuelve}
+el entero leido 
+\end{DoxyReturn}
+
+
+Definición en la línea 103 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103                                    \{}
+\DoxyCodeLine{104         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{105         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a4b8a67e05cca41e93b8fb6afc2b815f3}{reader}}.nextInt();}
+\DoxyCodeLine{106         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{107     \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a4b8a67e05cca41e93b8fb6afc2b815f3}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve_a4b8a67e05cca41e93b8fb6afc2b815f3}} 
+\index{domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}!reader@{reader}}
+\index{reader@{reader}!domain.controllers.drivers.DriverCtrlResolve@{domain.controllers.drivers.DriverCtrlResolve}}
+\doxysubsubsection{\texorpdfstring{reader}{reader}}
+{\footnotesize\ttfamily Scanner domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Resolve.\+reader = new Scanner((System.\+in))\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 18 del archivo Driver\+Ctrl\+Resolve.\+java.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_driver_ctrl_resolve_8java}{Driver\+Ctrl\+Resolve.\+java}}\end{DoxyCompactItemize}
