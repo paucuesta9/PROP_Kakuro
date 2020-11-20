@@ -249,7 +249,7 @@ public class Kakuro {
         return board[x][y].setValue(value);
     }
 
-    /** @brief Setter de los corrects drivers
+    /** @brief Setter de los corrects values
      *
      * @param sol kakuro con las soluciones
      */
