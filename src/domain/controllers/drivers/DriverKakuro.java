@@ -262,9 +262,9 @@ public class DriverKakuro {
         int c = readNumber();
         System.out.println("Indica el valor a comprobar:");
         int n = readNumber();
-        System.out.println("¿Es la ultima celda de la run vertical?");
+        System.out.println("Es la ultima celda de la run vertical?");
         int end = readNumber();
-        System.out.println("¿El valor deberia ser correcto?");
+        System.out.println("El valor deberia ser correcto?");
         int s = readNumber();
         boolean b = false;
         if(end == 1) b = true;
