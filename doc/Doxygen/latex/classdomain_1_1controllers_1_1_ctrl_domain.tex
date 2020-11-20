@@ -12,6 +12,8 @@ Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa555fb39b271967854f96d01c96a1561}{start\+New\+Game}} (int difficulty, int kakuro\+Size\+Row, int kakuro\+Size\+Column)
 \begin{DoxyCompactList}\small\item\em Inicia una nueva partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa15586c935ac8ce74e4a68bc18152673}{set\+Correct\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correct\+Value de la correspondiente celda blanca. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}{is\+Finished}} ()
 \begin{DoxyCompactList}\small\item\em Se mira si el usuario ha completado el tablero. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}{check\+Validity}} (int x, int y, int value)
@@ -46,11 +48,6 @@ int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a4
 \begin{DoxyCompactList}\small\item\em Guarda un Kakuro en un fichero. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a87ae170731aa3d70092adf14e7d79857}{check\+Coord}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Comprobadora de coordenadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Métodos privados}
-\begin{DoxyCompactItemize}
-\item 
-void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa15586c935ac8ce74e4a68bc18152673}{set\+Correct\+Values}} ()
-\begin{DoxyCompactList}\small\item\em Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correct\+Value de la correspondiente celda blanca. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -128,22 +125,24 @@ Definición en la línea 49 del archivo Ctrl\+Domain.\+java.
 \DoxyCodeLine{50         \textcolor{keywordflow}{try} \{}
 \DoxyCodeLine{51             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a97a7e0054d7b4172c82f8d2c87313280}{searchKakuro}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
 \DoxyCodeLine{52         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{53             System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado ningun kakuro con estas características, se está generando uno..."{}});}
+\DoxyCodeLine{53             System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)"{}});}
 \DoxyCodeLine{54             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = CtrlGenerate.generate(kakuroSizeRow,difficulty);}
-\DoxyCodeLine{55             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}{saveKakuro}}());}
-\DoxyCodeLine{56         \}}
-\DoxyCodeLine{57         CtrlPlay.startGame(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}});}
-\DoxyCodeLine{58         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa15586c935ac8ce74e4a68bc18152673}{setCorrectValues}}();}
-\DoxyCodeLine{59         \textcolor{comment}{//currentGame = new Game(0,0, currentKakuro);}}
-\DoxyCodeLine{60         \textcolor{comment}{//currentGame.startResumeTimer();}}
-\DoxyCodeLine{61     \}}
+\DoxyCodeLine{55             System.out.println(\textcolor{stringliteral}{"{}Finalmente la dificultad es de "{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}());}
+\DoxyCodeLine{56             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
+\DoxyCodeLine{57             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}{saveKakuro}}());}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         CtrlPlay.startGame(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}});}
+\DoxyCodeLine{60         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa15586c935ac8ce74e4a68bc18152673}{setCorrectValues}}();}
+\DoxyCodeLine{61         \textcolor{comment}{//currentGame = new Game(0,0, currentKakuro);}}
+\DoxyCodeLine{62         \textcolor{comment}{//currentGame.startResumeTimer();}}
+\DoxyCodeLine{63     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_aa15586c935ac8ce74e4a68bc18152673}\label{classdomain_1_1controllers_1_1_ctrl_domain_aa15586c935ac8ce74e4a68bc18152673}} 
 \index{domain.controllers.CtrlDomain@{domain.controllers.CtrlDomain}!setCorrectValues@{setCorrectValues}}
 \index{setCorrectValues@{setCorrectValues}!domain.controllers.CtrlDomain@{domain.controllers.CtrlDomain}}
 \doxysubsubsection{\texorpdfstring{setCorrectValues()}{setCorrectValues()}}
-{\footnotesize\ttfamily void domain.\+controllers.\+Ctrl\+Domain.\+set\+Correct\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void domain.\+controllers.\+Ctrl\+Domain.\+set\+Correct\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
@@ -151,18 +150,18 @@ Busca la solución del kakuro actual y escribe el valor correcto de cada celda b
 
 
 
-Definición en la línea 66 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 68 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{66                                     \{}
-\DoxyCodeLine{67         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{68             \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} sol = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(\textcolor{stringliteral}{"{}data/solutions/diff"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() + \textcolor{stringliteral}{"{}\_"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}() + \textcolor{stringliteral}{"{}.txt"{}}));}
-\DoxyCodeLine{69             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}{setCorrectValues}}(sol);}
-\DoxyCodeLine{70         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{71             e.printStackTrace();}
-\DoxyCodeLine{72         \}}
-\DoxyCodeLine{73     \}}
+\DoxyCodeLine{68                                    \{}
+\DoxyCodeLine{69         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{70             \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} sol = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(\textcolor{stringliteral}{"{}data/solutions/diff"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() + \textcolor{stringliteral}{"{}\_"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}() + \textcolor{stringliteral}{"{}.txt"{}}));}
+\DoxyCodeLine{71             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}{setCorrectValues}}(sol);}
+\DoxyCodeLine{72         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{73             e.printStackTrace();}
+\DoxyCodeLine{74         \}}
+\DoxyCodeLine{75     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}\label{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}} 
@@ -180,13 +179,13 @@ cierto si el usuario ha colocado todos los valores de las celdas y son correctos
 \end{DoxyReturn}
 
 
-Definición en la línea 87 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 89 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{87                                 \{}
-\DoxyCodeLine{88         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c8c024bed669cb0807263fd040888c}{isFinished}}();}
-\DoxyCodeLine{89     \}}
+\DoxyCodeLine{89                                 \{}
+\DoxyCodeLine{90         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c8c024bed669cb0807263fd040888c}{isFinished}}();}
+\DoxyCodeLine{91     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}\label{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}} 
@@ -213,13 +212,13 @@ devuelve cierto si se cumplen las condiciones tanto en la fila como en la column
 \end{DoxyReturn}
 
 
-Definición en la línea 99 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 101 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{99                                                           \{}
-\DoxyCodeLine{100         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6b2a225e6f17a124600ba85002d27cc6}{checkValidity}}(x, y, value);}
-\DoxyCodeLine{101     \}}
+\DoxyCodeLine{101                                                           \{}
+\DoxyCodeLine{102         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6b2a225e6f17a124600ba85002d27cc6}{checkValidity}}(x, y, value);}
+\DoxyCodeLine{103     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_ac571b44b2ea9370ad8dc99cbb51c2672}\label{classdomain_1_1controllers_1_1_ctrl_domain_ac571b44b2ea9370ad8dc99cbb51c2672}} 
@@ -250,13 +249,13 @@ Se activa la ayuda que mira si el valor que el usuario ha puesto es correcto.
 \end{DoxyReturn}
 
 
-Definición en la línea 112 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 114 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{112                                          \{}
-\DoxyCodeLine{113         \textcolor{keywordflow}{return} CtrlPlay.helpMyValue(x, y);}
-\DoxyCodeLine{114     \}}
+\DoxyCodeLine{114                                          \{}
+\DoxyCodeLine{115         \textcolor{keywordflow}{return} CtrlPlay.helpMyValue(x, y);}
+\DoxyCodeLine{116     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a29785e3d8f7975fec97544606c3b3773}\label{classdomain_1_1controllers_1_1_ctrl_domain_a29785e3d8f7975fec97544606c3b3773}} 
@@ -281,13 +280,13 @@ Devuelve cierto si la posición \mbox{[}x\mbox{]}\mbox{[}y\mbox{]} es una celda 
 \end{DoxyReturn}
 
 
-Definición en la línea 122 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 124 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{122                                                    \{}
-\DoxyCodeLine{123         \textcolor{keywordflow}{return} CtrlPlay.helpCorrectNumber(x, y);}
-\DoxyCodeLine{124     \}}
+\DoxyCodeLine{124                                                    \{}
+\DoxyCodeLine{125         \textcolor{keywordflow}{return} CtrlPlay.helpCorrectNumber(x, y);}
+\DoxyCodeLine{126     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a9f1e10a0ea84bf53bf417392e3193d96}\label{classdomain_1_1controllers_1_1_ctrl_domain_a9f1e10a0ea84bf53bf417392e3193d96}} 
@@ -305,20 +304,20 @@ Devuelve cierto si el Kakuro es correcto, en caso contrario, devuelve falso
 \end{DoxyReturn}
 
 
-Definición en la línea 131 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 133 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{131                               \{}
-\DoxyCodeLine{132         \textcolor{keywordtype}{int} [] res = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[1];}
-\DoxyCodeLine{133         res[0] = 0;}
-\DoxyCodeLine{134         \textcolor{keywordtype}{int} [] vec = \{0,0,0,0,0,0,0,0,0,0\};}
-\DoxyCodeLine{135         CtrlValidate.setKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}});}
-\DoxyCodeLine{136         CtrlValidate.validate(0,0, 0, vec, res);}
-\DoxyCodeLine{137         CtrlValidate.setDifficulty();}
-\DoxyCodeLine{138         \textcolor{keywordflow}{if} (res[0]!=1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{139         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{140     \}}
+\DoxyCodeLine{133                               \{}
+\DoxyCodeLine{134         \textcolor{keywordtype}{int} [] res = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[1];}
+\DoxyCodeLine{135         res[0] = 0;}
+\DoxyCodeLine{136         \textcolor{keywordtype}{int} [] vec = \{0,0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{137         CtrlValidate.setKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}});}
+\DoxyCodeLine{138         CtrlValidate.validate(0,0, 0, vec, res);}
+\DoxyCodeLine{139         CtrlValidate.setDifficulty();}
+\DoxyCodeLine{140         \textcolor{keywordflow}{if} (res[0]!=1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{141         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{142     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}\label{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}} 
@@ -333,15 +332,15 @@ Se resuelve un Kakuro.
 
 
 
-Definición en la línea 146 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 148 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{146                           \{}
-\DoxyCodeLine{147         \textcolor{keywordtype}{int} [] vec = \{0,0,0,0,0,0,0,0,0,0\};}
-\DoxyCodeLine{148         CtrlResolve.setKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}});}
-\DoxyCodeLine{149         CtrlResolve.resolve(0,0, 0, vec);}
-\DoxyCodeLine{150     \}}
+\DoxyCodeLine{148                           \{}
+\DoxyCodeLine{149         \textcolor{keywordtype}{int} [] vec = \{0,0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{150         CtrlResolve.setKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}});}
+\DoxyCodeLine{151         CtrlResolve.resolve(0,0, 0, vec);}
+\DoxyCodeLine{152     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_af03fb518579bbc53d0a328e13cc4bb77}\label{classdomain_1_1controllers_1_1_ctrl_domain_af03fb518579bbc53d0a328e13cc4bb77}} 
@@ -356,13 +355,14 @@ Se genera un Kakuro.
 
 
 
-Definición en la línea 156 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 158 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{156                                             \{}
-\DoxyCodeLine{157         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = CtrlGenerate.generate(size,dif);}
-\DoxyCodeLine{158     \}}
+\DoxyCodeLine{158                                             \{}
+\DoxyCodeLine{159         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = CtrlGenerate.generate(size,dif);}
+\DoxyCodeLine{160         System.out.println(\textcolor{stringliteral}{"{}Finalmente la dificultad es de "{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}());}
+\DoxyCodeLine{161     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_aade2f964f7f12976d9a3bbb642c140c9}\label{classdomain_1_1controllers_1_1_ctrl_domain_aade2f964f7f12976d9a3bbb642c140c9}} 
@@ -391,13 +391,13 @@ Devuelve cierto si la celda es blanco, en caso contrario, devuelve falso
 \end{DoxyReturn}
 
 
-Definición en la línea 170 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 173 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{170                                                            \{}
-\DoxyCodeLine{171         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, value);}
-\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173                                                            \{}
+\DoxyCodeLine{174         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, value);}
+\DoxyCodeLine{175     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_aefb56e0e0d754e8a400ee0c49c72b00b}\label{classdomain_1_1controllers_1_1_ctrl_domain_aefb56e0e0d754e8a400ee0c49c72b00b}} 
@@ -415,13 +415,13 @@ Devuelve un entero con el tamaño de fila del tablero
 \end{DoxyReturn}
 
 
-Definición en la línea 178 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 181 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{178                             \{}
-\DoxyCodeLine{179         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}();}
-\DoxyCodeLine{180     \}}
+\DoxyCodeLine{181                             \{}
+\DoxyCodeLine{182         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}();}
+\DoxyCodeLine{183     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a5b9f1375bb3b76814abfb09a225dbd24}\label{classdomain_1_1controllers_1_1_ctrl_domain_a5b9f1375bb3b76814abfb09a225dbd24}} 
@@ -439,13 +439,13 @@ Devuelve un entero con el tamaño de columna del tablero
 \end{DoxyReturn}
 
 
-Definición en la línea 186 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 189 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{186                                \{}
-\DoxyCodeLine{187         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}();}
-\DoxyCodeLine{188     \}}
+\DoxyCodeLine{189                                \{}
+\DoxyCodeLine{190         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}();}
+\DoxyCodeLine{191     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_ad6f12d4830c90bf5f3e3b0e9696eaf0e}\label{classdomain_1_1controllers_1_1_ctrl_domain_ad6f12d4830c90bf5f3e3b0e9696eaf0e}} 
@@ -463,13 +463,13 @@ Devuelve un String con el kakuro en formato para fichero o para printear en cons
 \end{DoxyReturn}
 
 
-Definición en la línea 194 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 197 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{194                                       \{}
-\DoxyCodeLine{195         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}();}
-\DoxyCodeLine{196     \}}
+\DoxyCodeLine{197                                       \{}
+\DoxyCodeLine{198         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}();}
+\DoxyCodeLine{199     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a84a0345c9576dafd89f020650b4054ef}\label{classdomain_1_1controllers_1_1_ctrl_domain_a84a0345c9576dafd89f020650b4054ef}} 
@@ -487,13 +487,13 @@ Devuelve un String con el kakuro correcto (resuelto) en formato para fichero o p
 \end{DoxyReturn}
 
 
-Definición en la línea 202 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 205 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{202                                              \{}
-\DoxyCodeLine{203         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_af304c7d5e807192506cfaaa7e49eced9}{correctToString}}();}
-\DoxyCodeLine{204     \}}
+\DoxyCodeLine{205                                              \{}
+\DoxyCodeLine{206         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_af304c7d5e807192506cfaaa7e49eced9}{correctToString}}();}
+\DoxyCodeLine{207     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a97a7e0054d7b4172c82f8d2c87313280}\label{classdomain_1_1controllers_1_1_ctrl_domain_a97a7e0054d7b4172c82f8d2c87313280}} 
@@ -517,17 +517,17 @@ Busca un kakuro que coincida con las condiciones de dificultad y tamaño
 \end{DoxyParams}
 
 
-Definición en la línea 216 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 219 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{216                                                                                                                                                            \{}
-\DoxyCodeLine{217         String kakuro = \mbox{\hyperlink{namespacedata}{data}}.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);}
-\DoxyCodeLine{218         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = Character.getNumericValue(kakuro.charAt(0));}
-\DoxyCodeLine{219         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}(kakuro.substring(2));}
-\DoxyCodeLine{220         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{221         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(difficulty);}
-\DoxyCodeLine{222     \}}
+\DoxyCodeLine{219                                                                                                                                                            \{}
+\DoxyCodeLine{220         String kakuro = \mbox{\hyperlink{namespacedata}{data}}.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);}
+\DoxyCodeLine{221         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = Character.getNumericValue(kakuro.charAt(0));}
+\DoxyCodeLine{222         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}(kakuro.substring(2));}
+\DoxyCodeLine{223         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{224         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(difficulty);}
+\DoxyCodeLine{225     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a968805b76373ae5cd79eddd9a792d4eb}\label{classdomain_1_1controllers_1_1_ctrl_domain_a968805b76373ae5cd79eddd9a792d4eb}} 
@@ -549,13 +549,13 @@ Se obtiene un Kakuro y lo asigna a correct\+Kakuro
 \end{DoxyParams}
 
 
-Definición en la línea 230 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 233 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{230                                                                                                                          \{}
-\DoxyCodeLine{231         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}(\mbox{\hyperlink{namespacedata}{data}}.getKakuro(filePath));}
-\DoxyCodeLine{232     \}}
+\DoxyCodeLine{233                                                                                                                          \{}
+\DoxyCodeLine{234         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}(\mbox{\hyperlink{namespacedata}{data}}.getKakuro(filePath));}
+\DoxyCodeLine{235     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}\label{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}} 
@@ -577,13 +577,13 @@ Se obtiene un Kakuro
 \end{DoxyParams}
 
 
-Definición en la línea 240 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 243 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{240                                                                                                                   \{}
-\DoxyCodeLine{241         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacedata}{data}}.getKakuro(filePath);}
-\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243                                                                                                                   \{}
+\DoxyCodeLine{244         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacedata}{data}}.getKakuro(filePath);}
+\DoxyCodeLine{245     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}\label{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}} 
@@ -598,13 +598,13 @@ Guarda un Kakuro en un fichero.
 
 
 
-Definición en la línea 255 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 258 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{255                             \{}
-\DoxyCodeLine{256         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacedata}{data}}.saveKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_af304c7d5e807192506cfaaa7e49eced9}{correctToString}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}());}
-\DoxyCodeLine{257     \}}
+\DoxyCodeLine{258                             \{}
+\DoxyCodeLine{259         \textcolor{keywordflow}{return} \mbox{\hyperlink{namespacedata}{data}}.saveKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_af304c7d5e807192506cfaaa7e49eced9}{correctToString}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a713d44b607c5e68922dc34571876d802}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}());}
+\DoxyCodeLine{260     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_domain_a87ae170731aa3d70092adf14e7d79857}\label{classdomain_1_1controllers_1_1_ctrl_domain_a87ae170731aa3d70092adf14e7d79857}} 
@@ -629,13 +629,13 @@ cierto si las coordenadas son correctas y falso si las coordenadas no lo son
 \end{DoxyReturn}
 
 
-Definición en la línea 266 del archivo Ctrl\+Domain.\+java.
+Definición en la línea 269 del archivo Ctrl\+Domain.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{266                                             \{}
-\DoxyCodeLine{267         \textcolor{keywordflow}{return} (x < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aefb56e0e0d754e8a400ee0c49c72b00b}{getRowSize}}() \&\& x >= 0 \&\& y < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5b9f1375bb3b76814abfb09a225dbd24}{getColumnSize}}() \&\& y >= 0);}
-\DoxyCodeLine{268     \}}
+\DoxyCodeLine{269                                             \{}
+\DoxyCodeLine{270         \textcolor{keywordflow}{return} (x < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aefb56e0e0d754e8a400ee0c49c72b00b}{getRowSize}}() \&\& x >= 0 \&\& y < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5b9f1375bb3b76814abfb09a225dbd24}{getColumnSize}}() \&\& y >= 0);}
+\DoxyCodeLine{271     \}}
 
 \end{DoxyCode}
 

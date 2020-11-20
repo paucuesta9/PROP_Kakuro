@@ -79,6 +79,12 @@ run_driver_CtrlValidate_man:
 run_driver_CtrlValidate_auto:
 	java -cp $(CLPTH) domain.controllers.drivers.DriverCtrlValidate < data/juegos_prueba/Inputs/input_CtrlValidate.txt
 
+run_driver_CtrlData_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverCtrlData
+
+run_driver_CtrlData_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverCtrlData < data/juegos_prueba/Inputs/input_CtrlData.txt
+
 run_junit:
 	java -cp $(CLPTH) org.junit.runner.JUnitCore domain.controllers.junits.KakuroTest
 
