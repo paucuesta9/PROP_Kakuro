@@ -442,4 +442,18 @@ public class KakuroTest {
         assertFalse("Expected false", k.isFinished());
     }
 
+
+    /** @brief Test de comprobar si se han copiado los valores correctos al kakuro indicado
+     *
+     * Comprueba que la función asigna los valores correctos del kakuro correspondiente cuando se le pasa el mismo kakuro pero solucionado
+     */
+    @Test
+    public void testSetCorrectValues() {
+        Kakuro k = new Kakuro(KAKURO_SMALL);
+        Kakuro kFin = new Kakuro(KAKURO_SMALL_SOLVED);
+        k.setCorrectValues(kFin);
+
+        assertEquals("Expected true", KAKURO_SMALL_SOLVED, k.correctToString());
+    }
+
 }
