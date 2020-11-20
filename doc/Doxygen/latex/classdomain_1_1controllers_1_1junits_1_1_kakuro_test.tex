@@ -47,7 +47,9 @@ void \mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_a7dc6
 void \mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_a4f0fbe3c246890494efba37280b1f7db}{test\+Is\+Finished\+Finish\+Incorrect}} ()
 \begin{DoxyCompactList}\small\item\em Test de comprobar si hemos terminado de rellenar el kakuro. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_aee069a81181f054f284fc050d0417ef4}{test\+Is\+Finished\+Not\+Finished}} ()
-\begin{DoxyCompactList}\small\item\em Test de comprobar si hemos terminado de rellenar el kakuro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Test de comprobar si hemos terminado de rellenar el kakuro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_ab42bb3637c997293dac4ae0b892321e4}{test\+Set\+Correct\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Test de comprobar si se han copiado los valores correctos al kakuro indicado. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -95,7 +97,7 @@ Definición en la línea 81 del archivo Kakuro\+Test.\+java.
 \DoxyCodeLine{81                               \{}
 \DoxyCodeLine{82         Cell[][] c = \textcolor{keyword}{new} Cell[1][1];}
 \DoxyCodeLine{83         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{84             \textcolor{keyword}{new} Kakuro(\textcolor{stringliteral}{"{}0"{}}, 0, c);}
+\DoxyCodeLine{84             \textcolor{keyword}{new} Kakuro(0, 0, c);}
 \DoxyCodeLine{85         \} \textcolor{keywordflow}{catch} (Exception e) \{}
 \DoxyCodeLine{86             fail(e.getMessage());}
 \DoxyCodeLine{87         \}}
@@ -681,6 +683,31 @@ Definición en la línea 414 del archivo Kakuro\+Test.\+java.
 \DoxyCodeLine{441 }
 \DoxyCodeLine{442         assertFalse(\textcolor{stringliteral}{"{}Expected false"{}}, k.isFinished());}
 \DoxyCodeLine{443     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_ab42bb3637c997293dac4ae0b892321e4}\label{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_ab42bb3637c997293dac4ae0b892321e4}} 
+\index{domain.controllers.junits.KakuroTest@{domain.controllers.junits.KakuroTest}!testSetCorrectValues@{testSetCorrectValues}}
+\index{testSetCorrectValues@{testSetCorrectValues}!domain.controllers.junits.KakuroTest@{domain.controllers.junits.KakuroTest}}
+\doxysubsubsection{\texorpdfstring{testSetCorrectValues()}{testSetCorrectValues()}}
+{\footnotesize\ttfamily void domain.\+controllers.\+junits.\+Kakuro\+Test.\+test\+Set\+Correct\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Test de comprobar si se han copiado los valores correctos al kakuro indicado. 
+
+Comprueba que la función asigna los valores correctos del kakuro correspondiente cuando se le pasa el mismo kakuro pero solucionado 
+
+Definición en la línea 451 del archivo Kakuro\+Test.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{451                                        \{}
+\DoxyCodeLine{452         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_aaf6854c15752887cb378886f94a0db86}{KAKURO\_SMALL}});}
+\DoxyCodeLine{453         Kakuro kFin = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_a4e712aada975a9cf3240fd82c994cbfa}{KAKURO\_SMALL\_SOLVED}});}
+\DoxyCodeLine{454         k.setCorrectValues(kFin);}
+\DoxyCodeLine{455 }
+\DoxyCodeLine{456         assertEquals(\textcolor{stringliteral}{"{}Expected true"{}}, \mbox{\hyperlink{classdomain_1_1controllers_1_1junits_1_1_kakuro_test_a4e712aada975a9cf3240fd82c994cbfa}{KAKURO\_SMALL\_SOLVED}}, k.correctToString());}
+\DoxyCodeLine{457     \}}
 
 \end{DoxyCode}
 

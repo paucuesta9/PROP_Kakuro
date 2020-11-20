@@ -114,6 +114,9 @@ Métodos privados estáticos</h2></td></tr>
 <tr class="memitem:ae4851cdf57a18d3c35edab5b53164a72"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae4851cdf57a18d3c35edab5b53164a72">testGetId</a> ()</td></tr>
 <tr class="memdesc:ae4851cdf57a18d3c35edab5b53164a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de getter de identificador.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae4851cdf57a18d3c35edab5b53164a72">Más...</a><br /></td></tr>
 <tr class="separator:ae4851cdf57a18d3c35edab5b53164a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cf3ec8c3e123c080296bc940078af55"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a4cf3ec8c3e123c080296bc940078af55">testSetId</a> (int id)</td></tr>
+<tr class="memdesc:a4cf3ec8c3e123c080296bc940078af55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de setter de identificador.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a4cf3ec8c3e123c080296bc940078af55">Más...</a><br /></td></tr>
+<tr class="separator:a4cf3ec8c3e123c080296bc940078af55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0874d0dec94f9b4cc35a1f4da8df43c3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a0874d0dec94f9b4cc35a1f4da8df43c3">testGetDifficulty</a> (int diff)</td></tr>
 <tr class="memdesc:a0874d0dec94f9b4cc35a1f4da8df43c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de getter de dificultad.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a0874d0dec94f9b4cc35a1f4da8df43c3">Más...</a><br /></td></tr>
 <tr class="separator:a0874d0dec94f9b4cc35a1f4da8df43c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +150,9 @@ Métodos privados estáticos</h2></td></tr>
 <tr class="memitem:a792d86dc5c20cbc0d57b92c6b740c0de"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a792d86dc5c20cbc0d57b92c6b740c0de">testIsFinished</a> (String kakuro1, String kakuroFinished)</td></tr>
 <tr class="memdesc:a792d86dc5c20cbc0d57b92c6b740c0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de si se ha acabado la partida.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a792d86dc5c20cbc0d57b92c6b740c0de">Más...</a><br /></td></tr>
 <tr class="separator:a792d86dc5c20cbc0d57b92c6b740c0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8055afd529cfbc78803b9923bc4ad3fd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8055afd529cfbc78803b9923bc4ad3fd">testSetCorrectValues</a> (String kakuro, String kakuroFinished)</td></tr>
+<tr class="memdesc:a8055afd529cfbc78803b9923bc4ad3fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de settear los valores correctos al kakuro.  <a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8055afd529cfbc78803b9923bc4ad3fd">Más...</a><br /></td></tr>
+<tr class="separator:a8055afd529cfbc78803b9923bc4ad3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Atributos privados estáticos</h2></td></tr>
@@ -195,7 +201,7 @@ Atributos privados estáticos</h2></td></tr>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">else</span> board[i][j] = <span class="keyword">new</span> BlackCell();</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<span class="stringliteral">&quot;0&quot;</span>, 1, board);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(0, 1, board);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        System.out.println(<span class="stringliteral">&quot;El Kakuro se ha creado&quot;</span>);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 </div><!-- fragment -->
@@ -396,6 +402,42 @@ Atributos privados estáticos</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
+<a id="a4cf3ec8c3e123c080296bc940078af55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cf3ec8c3e123c080296bc940078af55">&#9670;&nbsp;</a></span>testSetId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void domain.controllers.drivers.DriverKakuro.testSetId </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test de setter de identificador. </p>
+<p>Comprueba si se settea el identificador de forma correcta </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00145">145</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                          {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        k.setId(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha actualizado el valor id&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <a id="a0874d0dec94f9b4cc35a1f4da8df43c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0874d0dec94f9b4cc35a1f4da8df43c3">&#9670;&nbsp;</a></span>testGetDifficulty()</h2>
 
@@ -429,12 +471,12 @@ Atributos privados estáticos</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00146">146</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                                    {</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        k.setDifficulty(diff);</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        System.out.println(<span class="stringliteral">&quot;Difficulty: &quot;</span> + k.getDifficulty());</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00157">157</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                                    {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        k.setDifficulty(diff);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        System.out.println(<span class="stringliteral">&quot;Difficulty: &quot;</span> + k.getDifficulty());</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -471,12 +513,12 @@ Atributos privados estáticos</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00158">158</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                                                          {</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        k.setDifficulty(difficulty);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha actualizado el valor difficulty&quot;</span>);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00169">169</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                                          {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        k.setDifficulty(difficulty);</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha actualizado el valor difficulty&quot;</span>);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -506,11 +548,11 @@ Atributos privados estáticos</h2></td></tr>
 <p>Test de getter de tamaño de filas. </p>
 <p>Comprueba si se obtiene el tamaño de filas correctamente </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00169">169</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                         {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        System.out.println(<span class="stringliteral">&quot;RowSize: &quot;</span> + k.getRowSize());</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00180">180</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                                         {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        System.out.println(<span class="stringliteral">&quot;RowSize: &quot;</span> + k.getRowSize());</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -540,11 +582,11 @@ Atributos privados estáticos</h2></td></tr>
 <p>Test de getter de tamaño de columnas. </p>
 <p>Comprueba si se obtiene correctamente el tamaño de columnas </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00179">179</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                            {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        System.out.println(<span class="stringliteral">&quot;ColumnSize: &quot;</span> + k.getColumnSize());</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00190">190</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                                            {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        System.out.println(<span class="stringliteral">&quot;ColumnSize: &quot;</span> + k.getColumnSize());</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -574,31 +616,31 @@ Atributos privados estáticos</h2></td></tr>
 <p>Test de getter de tablero. </p>
 <p>Comprueba si se obtiene el tablero correctamente </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00189">189</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                                       {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        Cell[][] board = k.getBoard();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha obtenido el tablero y se imprime: &quot;</span>);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.length; ++i) {</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; board[0].length; ++j) {</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="keywordflow">if</span> (board[i][j].isWhite()) {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    WhiteCell w = (WhiteCell) board[i][j];</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    <span class="keywordflow">if</span> (w.getValue() != 0) System.out.print(w.getValue());</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                    <span class="keywordflow">else</span> System.out.print(<span class="stringliteral">&quot;?&quot;</span>);</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                }</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    BlackCell bc = (BlackCell) board[i][j];</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() == 0 &amp;&amp; bc.getRow() == 0) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                        System.out.print(<span class="stringliteral">&quot;*&quot;</span>);</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    }</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() != 0) System.out.print(<span class="stringliteral">&quot;C&quot;</span> + bc.getColumn());</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                    <span class="keywordflow">if</span> (bc.getRow() != 0) System.out.print(<span class="stringliteral">&quot;F&quot;</span> + bc.getRow());</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                }</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                <span class="keywordflow">if</span> (j != board[0].length - 1) System.out.print(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        }</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00200">200</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                       {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        Cell[][] board = k.getBoard();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha obtenido el tablero y se imprime: &quot;</span>);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.length; ++i) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; board[0].length; ++j) {</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                <span class="keywordflow">if</span> (board[i][j].isWhite()) {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                    WhiteCell w = (WhiteCell) board[i][j];</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    <span class="keywordflow">if</span> (w.getValue() != 0) System.out.print(w.getValue());</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    <span class="keywordflow">else</span> System.out.print(<span class="stringliteral">&quot;?&quot;</span>);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                    BlackCell bc = (BlackCell) board[i][j];</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() == 0 &amp;&amp; bc.getRow() == 0) {</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                        System.out.print(<span class="stringliteral">&quot;*&quot;</span>);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() != 0) System.out.print(<span class="stringliteral">&quot;C&quot;</span> + bc.getColumn());</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    <span class="keywordflow">if</span> (bc.getRow() != 0) System.out.print(<span class="stringliteral">&quot;F&quot;</span> + bc.getRow());</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordflow">if</span> (j != board[0].length - 1) System.out.print(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            System.out.println(<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -645,12 +687,12 @@ Atributos privados estáticos</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00219">219</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                                  {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        k.getCell(x,y);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha obtenido la celda buscada&quot;</span>);</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00230">230</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                                                  {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        k.getCell(x,y);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se ha obtenido la celda buscada&quot;</span>);</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -705,13 +747,13 @@ Atributos privados estáticos</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00233">233</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                                              {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        Boolean <span class="keyword">set</span> = k.setValue(x, y, value);</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">set</span>) System.out.println(<span class="stringliteral">&quot;La celda en la posicion x e y es blanca y se ha actualizado correctamente&quot;</span>);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;La celda en la posicion x e y es negra y por lo tanto no se ha actualizado&quot;</span>);</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00244">244</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                                                              {</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">KAKURO_TEXT_ENUNCIADO</a>);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        Boolean <span class="keyword">set</span> = k.setValue(x, y, value);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keywordflow">if</span> (<span class="keyword">set</span>) System.out.println(<span class="stringliteral">&quot;La celda en la posicion x e y es blanca y se ha actualizado correctamente&quot;</span>);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;La celda en la posicion x e y es negra y por lo tanto no se ha actualizado&quot;</span>);</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -741,33 +783,33 @@ Atributos privados estáticos</h2></td></tr>
 <p>Test de checkColumn. </p>
 <p>Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00245">245</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                          {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        System.out.println(<span class="stringliteral">&quot;Introduce un kakuro para realizar el test:&quot;</span>);</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        String kakuro1 = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        System.out.println(<span class="stringliteral">&quot;Indica la fila de la casilla para hacer el test:&quot;</span>);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">int</span> f = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        System.out.println(<span class="stringliteral">&quot;Indica la columna de la casilla para hacer el test:&quot;</span>);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordtype">int</span> c = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        System.out.println(<span class="stringliteral">&quot;Indica el valor a comprobar:&quot;</span>);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordtype">int</span> n = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        System.out.println(<span class="stringliteral">&quot;¿Es la ultima celda de la run vertical?&quot;</span>);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordtype">int</span> end = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        System.out.println(<span class="stringliteral">&quot;¿El valor deberia ser correcto?&quot;</span>);</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordtype">int</span> s = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordtype">boolean</span> b = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <span class="keywordflow">if</span>(end == 1) b = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro1);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        Cell[][] board = k.getBoard();</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.length; ++i) {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; board[0].length; ++j) {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">if</span> (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell) board[i][j]).getValue());</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordtype">boolean</span> r = k.checkColumn(f,c,n,b,n);</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordflow">if</span>((r &amp;&amp; s == 1) || (!r &amp;&amp; s == 0)) System.out.println(<span class="stringliteral">&quot;Solucion correcta&quot;</span>);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;Solucion incorrecta&quot;</span>);</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00256">256</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                                          {</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        System.out.println(<span class="stringliteral">&quot;Introduce un kakuro para realizar el test:&quot;</span>);</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        String kakuro1 = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        System.out.println(<span class="stringliteral">&quot;Indica la fila de la casilla para hacer el test:&quot;</span>);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordtype">int</span> f = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        System.out.println(<span class="stringliteral">&quot;Indica la columna de la casilla para hacer el test:&quot;</span>);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordtype">int</span> c = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        System.out.println(<span class="stringliteral">&quot;Indica el valor a comprobar:&quot;</span>);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordtype">int</span> n = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        System.out.println(<span class="stringliteral">&quot;¿Es la ultima celda de la run vertical?&quot;</span>);</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordtype">int</span> end = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        System.out.println(<span class="stringliteral">&quot;¿El valor deberia ser correcto?&quot;</span>);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keywordtype">int</span> s = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordtype">boolean</span> b = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">if</span>(end == 1) b = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro1);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        Cell[][] board = k.getBoard();</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.length; ++i) {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; board[0].length; ++j) {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                <span class="keywordflow">if</span> (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell) board[i][j]).getValue());</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            }</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        }</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordtype">boolean</span> r = k.checkColumn(f,c,n,b,n);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">if</span>((r &amp;&amp; s == 1) || (!r &amp;&amp; s == 0)) System.out.println(<span class="stringliteral">&quot;Solucion correcta&quot;</span>);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;Solucion incorrecta&quot;</span>);</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -829,13 +871,13 @@ Atributos privados estáticos</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00281">281</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                                                                     {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro);</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        k.setValue(x,y,value);</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">if</span> (k.checkRowValidity(x, y-1, value, 0, -1, y, <span class="keyword">true</span>)) System.out.println(<span class="stringliteral">&quot;El valor introducido cumple las condiciones de la fila&quot;</span>);</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;El valor introducido no cumple las condiciones de la fila&quot;</span>);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00292">292</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                                                                                     {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        k.setValue(x,y,value);</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">if</span> (k.checkRowValidity(x, y-1, value, 0, -1, y, <span class="keyword">true</span>)) System.out.println(<span class="stringliteral">&quot;El valor introducido cumple las condiciones de la fila&quot;</span>);</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;El valor introducido no cumple las condiciones de la fila&quot;</span>);</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -897,13 +939,13 @@ Atributos privados estáticos</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00297">297</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                                                                                        {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        k.setValue(x,y,value);</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">if</span> (k.checkColumnValidity(x-1,y,value,0,-1,x,<span class="keyword">true</span>)) System.out.println(<span class="stringliteral">&quot;El valor introducido cumple las condiciones de la columna&quot;</span>);</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;El valor introducido no cumple las condiciones de la columna&quot;</span>);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00308">308</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                                                                        {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        k.setValue(x,y,value);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">if</span> (k.checkColumnValidity(x-1,y,value,0,-1,x,<span class="keyword">true</span>)) System.out.println(<span class="stringliteral">&quot;El valor introducido cumple las condiciones de la columna&quot;</span>);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;El valor introducido no cumple las condiciones de la columna&quot;</span>);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -945,27 +987,85 @@ Atributos privados estáticos</h2></td></tr>
 <p>Comprueba si se ha verificado que se ha acabado la partida de forma correcta</p>
 <dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">kakuro1</td><td>kakuro que se quiere comprobat </td></tr>
+    <tr><td class="paramname">kakuro1</td><td>kakuro que se quiere comprobar </td></tr>
     <tr><td class="paramname">kakuroFinished</td><td>el mismo kakuro pero resuleto para ver si se ha terminado </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00311">311</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                                                                              {</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro1);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        Kakuro kFin = <span class="keyword">new</span> Kakuro(kakuroFinished);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        Cell[][] board = k.getBoard();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        Cell[][] boardFinished = kFin.getBoard();</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.length; ++i) {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; board[0].length; ++j) {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">if</span> (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell)boardFinished[i][j]).getValue());</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;            }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        Boolean finished = k.isFinished();</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">if</span> (finished) System.out.println(<span class="stringliteral">&quot;El kakuro se ha terminado&quot;</span>);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;El kakuro aun no se ha terminado&quot;</span>);</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00322">322</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                                                                              {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro1);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        Kakuro kFin = <span class="keyword">new</span> Kakuro(kakuroFinished);</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        Cell[][] board = k.getBoard();</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        Cell[][] boardFinished = kFin.getBoard();</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; board.length; ++i) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; board[0].length; ++j) {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                <span class="keywordflow">if</span> (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell)boardFinished[i][j]).getValue());</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        Boolean finished = k.isFinished();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keywordflow">if</span> (finished) System.out.println(<span class="stringliteral">&quot;El kakuro se ha terminado&quot;</span>);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordflow">else</span> System.out.println(<span class="stringliteral">&quot;El kakuro aun no se ha terminado&quot;</span>);</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8055afd529cfbc78803b9923bc4ad3fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8055afd529cfbc78803b9923bc4ad3fd">&#9670;&nbsp;</a></span>testSetCorrectValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void domain.controllers.drivers.DriverKakuro.testSetCorrectValues </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>kakuro</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>kakuroFinished</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test de settear los valores correctos al kakuro. </p>
+<p>Comprueba si se han copiado los valores correctos al kakuro indicado</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kakuro</td><td>kakuro que se quiere comprobar </td></tr>
+    <tr><td class="paramname">kakuroFinished</td><td>el mismo kakuro pero resuelto para copiar los valores correctos </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00344">344</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                                                                                   {</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(kakuro);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        Kakuro kFin = <span class="keyword">new</span> Kakuro(kakuroFinished);</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        k.setCorrectValues(kFin);</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        System.out.println(<span class="stringliteral">&quot;Se imprime el kakuro con las soluciones&quot;</span>);</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        String sol = k.correctToString();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        System.out.println(sol);</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -996,118 +1096,133 @@ Atributos privados estáticos</h2></td></tr>
 <p>Función principal. </p>
 <p>Indica las opciones que hay para testear </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00330">330</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                                           {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        System.out.println(<span class="stringliteral">&quot;Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty&quot;</span> +</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="stringliteral">&quot;\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna&quot;</span> +</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="stringliteral">&quot;\n 16. Mirar si se ha terminado \n 17. Salir&quot;</span>);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        <span class="keywordtype">int</span> value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <span class="keywordflow">while</span> (value != 17) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordtype">int</span> x, y;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">switch</span> (value) {</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a la Creadora 1&quot;</span>);</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a12928470433f95134a9c3005f37686aa">testCreadora1</a>();</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique un Kakuro en el formato correcto&quot;</span>);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                    String kakuroText = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a la creadora 2&quot;</span>);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9348591d957ef8ca66ee9d424c049cad">testCreadora2</a>(kakuroText);</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="keywordflow">case</span> 3:</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a convertir Kakuro a String&quot;</span>);</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8527008e9c80604f639246640c508d60">testToString</a>();</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">case</span> 4:</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a convertir Kakuro correcto a String&quot;</span>);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7622cbdbc6ad9d34ac293c466b15267a">testCorrectToString</a>();</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                <span class="keywordflow">case</span> 5:</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getId&quot;</span>);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae4851cdf57a18d3c35edab5b53164a72">testGetId</a>();</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <span class="keywordflow">case</span> 6:</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca una dificultad&quot;</span>);</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                    <span class="keywordtype">int</span> diff = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getDifficulty&quot;</span>);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a0874d0dec94f9b4cc35a1f4da8df43c3">testGetDifficulty</a>(diff);</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="keywordflow">case</span> 7:</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique una dificultad&quot;</span>);</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    <span class="keywordtype">int</span> difficulty = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setDifficulty &quot;</span>);</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af16d00867b9452d45ae22ae3e6401fd5">testSetDifficulty</a>(difficulty);</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                <span class="keywordflow">case</span> 8:</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getRowSize&quot;</span>);</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af197b32ea0c57a59665ef5f7f1261ebb">testGetRowSize</a>();</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                <span class="keywordflow">case</span> 9:</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getColumnSize&quot;</span>);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a723f7a3e055e4f6e5ad7cde22c6b3923">testGetColumnSize</a>();</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                <span class="keywordflow">case</span> 10:</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getBoard&quot;</span>);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af4c470db661c52c78bd7b31da9334cde">testGetBoard</a>();</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                <span class="keywordflow">case</span> 11:</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique la posicion x e y de la celda que quiere obtener (0 &lt; x, y &lt; 10)&quot;</span>);</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getCell&quot;</span>);</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ad64186a9326c5a4afb85a053576780c9">testGetCell</a>(x, y);</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <span class="keywordflow">case</span> 12:</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique la posicion x e y de la celda que quiere colocar (0 &lt; x, y &lt; 10) y el valor&quot;</span>);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setValue&quot;</span>);</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#aa85c7592a25548f94e11b6ab5eba72db">testSetValue</a>(x, y, value);</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                <span class="keywordflow">case</span> 13:</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a checkColumn&quot;</span>);</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#afa6b2889ed2e21472ed4675d927bbf21">testCheckColumn</a>();</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                <span class="keywordflow">case</span> 14:</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar&quot;</span>);</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                    String kakuro = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a checkRowValidity&quot;</span>);</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a67c157de0e11f075ce7d7ee3311b6e11">testCheckRowValidity</a>(x,y,value,kakuro);</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                <span class="keywordflow">case</span> 15:</div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar&quot;</span>);</div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                    kakuro = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a checkColumnValidity&quot;</span>);</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a37520fe3df8d7aa1f4a04a04703ef13f">testCheckColumnValidity</a>(x,y,value,kakuro);</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                <span class="keywordflow">case</span> 16:</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto&quot;</span>);</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                    String kakuro1 = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                    String kakuroFinished = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a isFinished&quot;</span>);</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a792d86dc5c20cbc0d57b92c6b740c0de">testIsFinished</a>(kakuro1, kakuroFinished);</div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                    System.out.println(<span class="stringliteral">&quot;El numero introducido es incorrecto&quot;</span>);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            }</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            System.out.println(<span class="stringliteral">&quot;\n Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty&quot;</span> +</div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                    <span class="stringliteral">&quot;\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna&quot;</span> +</div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                    <span class="stringliteral">&quot;\n 16. Mirar si se ha terminado \n 17. Salir&quot;</span>);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        }</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;        System.exit(0);</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00359">359</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                                           {</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        System.out.println(<span class="stringliteral">&quot;Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Getter de id \n 6. Setter de id \n 7. Getter difficulty&quot;</span> +</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="stringliteral">&quot;\n 8. Setter difficulty \n 9. Getter rowSize \n 10. Getter columnSize \n 11. Getter board \n 12. Getter cell \n 13. Setter value en celda blanca \n 14. Check column \n 15. Mirar validez de fila \n 16. Mirar validez de la columna&quot;</span> +</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                <span class="stringliteral">&quot;\n 17. Mirar si se ha terminado \n 18. Mirar si ha puesto valores correctos \n 19. Salir&quot;</span>);</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordtype">int</span> value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">while</span> (value != 19) {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            <span class="keywordtype">int</span> x, y;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">switch</span> (value) {</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a la Creadora 1&quot;</span>);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a12928470433f95134a9c3005f37686aa">testCreadora1</a>();</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique un Kakuro en el formato correcto&quot;</span>);</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    String kakuroText = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a la creadora 2&quot;</span>);</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9348591d957ef8ca66ee9d424c049cad">testCreadora2</a>(kakuroText);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                <span class="keywordflow">case</span> 3:</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a convertir Kakuro a String&quot;</span>);</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8527008e9c80604f639246640c508d60">testToString</a>();</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                <span class="keywordflow">case</span> 4:</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a convertir Kakuro correcto a String&quot;</span>);</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7622cbdbc6ad9d34ac293c466b15267a">testCorrectToString</a>();</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                <span class="keywordflow">case</span> 5:</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getId&quot;</span>);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae4851cdf57a18d3c35edab5b53164a72">testGetId</a>();</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;                <span class="keywordflow">case</span> 6:</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca un id&quot;</span>);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                    <span class="keywordtype">int</span> <span class="keywordtype">id</span> = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setId&quot;</span>);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a4cf3ec8c3e123c080296bc940078af55">testSetId</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <span class="keywordflow">case</span> 7:</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca una dificultad&quot;</span>);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                    <span class="keywordtype">int</span> diff = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getDifficulty&quot;</span>);</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a0874d0dec94f9b4cc35a1f4da8df43c3">testGetDifficulty</a>(diff);</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;                <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique una dificultad&quot;</span>);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                    <span class="keywordtype">int</span> difficulty = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setDifficulty &quot;</span>);</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af16d00867b9452d45ae22ae3e6401fd5">testSetDifficulty</a>(difficulty);</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                <span class="keywordflow">case</span> 9:</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getRowSize&quot;</span>);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af197b32ea0c57a59665ef5f7f1261ebb">testGetRowSize</a>();</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                <span class="keywordflow">case</span> 10:</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getColumnSize&quot;</span>);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a723f7a3e055e4f6e5ad7cde22c6b3923">testGetColumnSize</a>();</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;                <span class="keywordflow">case</span> 11:</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getBoard&quot;</span>);</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af4c470db661c52c78bd7b31da9334cde">testGetBoard</a>();</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                <span class="keywordflow">case</span> 12:</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique la posicion x e y de la celda que quiere obtener (0 &lt; x, y &lt; 10)&quot;</span>);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a getCell&quot;</span>);</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ad64186a9326c5a4afb85a053576780c9">testGetCell</a>(x, y);</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;                <span class="keywordflow">case</span> 13:</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique la posicion x e y de la celda que quiere colocar (0 &lt; x, y &lt; 10) y el valor&quot;</span>);</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a setValue&quot;</span>);</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#aa85c7592a25548f94e11b6ab5eba72db">testSetValue</a>(x, y, value);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;                <span class="keywordflow">case</span> 14:</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a checkColumn&quot;</span>);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#afa6b2889ed2e21472ed4675d927bbf21">testCheckColumn</a>();</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                <span class="keywordflow">case</span> 15:</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar&quot;</span>);</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;                    String kakuro = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a checkRowValidity&quot;</span>);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a67c157de0e11f075ce7d7ee3311b6e11">testCheckRowValidity</a>(x,y,value,kakuro);</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                <span class="keywordflow">case</span> 16:</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar&quot;</span>);</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                    x = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                    y = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                    value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;                    kakuro = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a checkColumnValidity&quot;</span>);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a37520fe3df8d7aa1f4a04a04703ef13f">testCheckColumnValidity</a>(x,y,value,kakuro);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;                <span class="keywordflow">case</span> 17:</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto&quot;</span>);</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160; </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;                    String kakuro1 = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;                    String kakuroFinished = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160; </div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a isFinished&quot;</span>);</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a792d86dc5c20cbc0d57b92c6b740c0de">testIsFinished</a>(kakuro1, kakuroFinished);</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                <span class="keywordflow">case</span> 18:</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Indique un Kakuro en el formato correcto y el mismo kakuro resuelto&quot;</span>);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                    String kakuro2 = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                    String kakuro2Finished = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">readKakuro</a>();</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;                    System.out.println(<span class="stringliteral">&quot;Se llama a isFinished&quot;</span>);</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;                    <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8055afd529cfbc78803b9923bc4ad3fd">testSetCorrectValues</a>(kakuro2, kakuro2Finished);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    System.out.println(<span class="stringliteral">&quot;El numero introducido es incorrecto&quot;</span>);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            }</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            System.out.println(<span class="stringliteral">&quot;\n Opciones: \n 1. Creadora con valores \n 2. Creadora a partir de String \n 3. Convertir Kakuro a String \n 4. Convertir Kakuro correcto a String \n 5. Setter de row \n 6. Getter difficulty&quot;</span> +</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    <span class="stringliteral">&quot;\n 7. Setter difficulty \n 8. Getter rowSize \n 9. Getter columnSize \n 10. Getter board \n 11. Getter cell \n 12. Setter value en celda blanca \n 13. Check column \n 14. Mirar validez de fila \n 15. Mirar validez de la columna&quot;</span> +</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    <span class="stringliteral">&quot;\n 16. Mirar si se ha terminado \n 17. Salir&quot;</span>);</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;            value = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">readNumber</a>();</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;        }</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;        System.exit(0);</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1137,17 +1252,17 @@ Atributos privados estáticos</h2></td></tr>
 <p>Lee un kakuro de consola. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>el kakuro leído </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00446">446</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                                      {</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;        String[] valuesSize = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">reader</a>.next().split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;        <span class="keywordtype">int</span> row = Integer.parseInt(valuesSize[0]);</div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;        <span class="keywordtype">int</span> column = Integer.parseInt(valuesSize[1]);</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;        content.append((row) + <span class="stringliteral">&quot;,&quot;</span> + (column) + <span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; row; ++i)</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;            content.append(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">reader</a>.next()).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        <span class="keywordflow">return</span> content.toString();</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00490">490</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                                      {</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        String[] valuesSize = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">reader</a>.next().split(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <span class="keywordtype">int</span> row = Integer.parseInt(valuesSize[0]);</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="keywordtype">int</span> column = Integer.parseInt(valuesSize[1]);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        content.append((row) + <span class="stringliteral">&quot;,&quot;</span> + (column) + <span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; row; ++i)</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            content.append(<a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">reader</a>.next()).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="keywordflow">return</span> content.toString();</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1177,12 +1292,12 @@ Atributos privados estáticos</h2></td></tr>
 <p>Lee un numero de consola. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>el número leído </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00461">461</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                                   {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordtype">int</span> number = 0;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        number = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">reader</a>.nextInt();</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        <span class="keywordflow">return</span> number;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_driver_kakuro_8java_source.html#l00505">505</a> del archivo <a class="el" href="_driver_kakuro_8java_source.html">DriverKakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                                   {</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        <span class="keywordtype">int</span> number = 0;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        number = <a class="code" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">reader</a>.nextInt();</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">return</span> number;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1250,24 +1365,26 @@ Atributos privados estáticos</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a7622cbdbc6ad9d34ac293c466b15267a"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7622cbdbc6ad9d34ac293c466b15267a">domain.controllers.drivers.DriverKakuro.testCorrectToString</a></div><div class="ttdeci">static void testCorrectToString()</div><div class="ttdoc">Test de conversor de Kakuro correcto a String.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00080">DriverKakuro.java:80</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_afa6b2889ed2e21472ed4675d927bbf21"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#afa6b2889ed2e21472ed4675d927bbf21">domain.controllers.drivers.DriverKakuro.testCheckColumn</a></div><div class="ttdeci">static void testCheckColumn()</div><div class="ttdoc">Test de checkColumn.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00245">DriverKakuro.java:245</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_af16d00867b9452d45ae22ae3e6401fd5"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af16d00867b9452d45ae22ae3e6401fd5">domain.controllers.drivers.DriverKakuro.testSetDifficulty</a></div><div class="ttdeci">static void testSetDifficulty(int difficulty)</div><div class="ttdoc">Test de setter de dificultad.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00158">DriverKakuro.java:158</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_ad64186a9326c5a4afb85a053576780c9"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ad64186a9326c5a4afb85a053576780c9">domain.controllers.drivers.DriverKakuro.testGetCell</a></div><div class="ttdeci">static void testGetCell(int x, int y)</div><div class="ttdoc">Test de getter de Celda.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00219">DriverKakuro.java:219</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a792d86dc5c20cbc0d57b92c6b740c0de"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a792d86dc5c20cbc0d57b92c6b740c0de">domain.controllers.drivers.DriverKakuro.testIsFinished</a></div><div class="ttdeci">static void testIsFinished(String kakuro1, String kakuroFinished)</div><div class="ttdoc">Test de si se ha acabado la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00311">DriverKakuro.java:311</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_afa6b2889ed2e21472ed4675d927bbf21"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#afa6b2889ed2e21472ed4675d927bbf21">domain.controllers.drivers.DriverKakuro.testCheckColumn</a></div><div class="ttdeci">static void testCheckColumn()</div><div class="ttdoc">Test de checkColumn.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00256">DriverKakuro.java:256</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a4cf3ec8c3e123c080296bc940078af55"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a4cf3ec8c3e123c080296bc940078af55">domain.controllers.drivers.DriverKakuro.testSetId</a></div><div class="ttdeci">static void testSetId(int id)</div><div class="ttdoc">Test de setter de identificador.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00145">DriverKakuro.java:145</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_af16d00867b9452d45ae22ae3e6401fd5"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af16d00867b9452d45ae22ae3e6401fd5">domain.controllers.drivers.DriverKakuro.testSetDifficulty</a></div><div class="ttdeci">static void testSetDifficulty(int difficulty)</div><div class="ttdoc">Test de setter de dificultad.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00169">DriverKakuro.java:169</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a8055afd529cfbc78803b9923bc4ad3fd"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8055afd529cfbc78803b9923bc4ad3fd">domain.controllers.drivers.DriverKakuro.testSetCorrectValues</a></div><div class="ttdeci">static void testSetCorrectValues(String kakuro, String kakuroFinished)</div><div class="ttdoc">Test de settear los valores correctos al kakuro.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00344">DriverKakuro.java:344</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_ad64186a9326c5a4afb85a053576780c9"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ad64186a9326c5a4afb85a053576780c9">domain.controllers.drivers.DriverKakuro.testGetCell</a></div><div class="ttdeci">static void testGetCell(int x, int y)</div><div class="ttdoc">Test de getter de Celda.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00230">DriverKakuro.java:230</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a792d86dc5c20cbc0d57b92c6b740c0de"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a792d86dc5c20cbc0d57b92c6b740c0de">domain.controllers.drivers.DriverKakuro.testIsFinished</a></div><div class="ttdeci">static void testIsFinished(String kakuro1, String kakuroFinished)</div><div class="ttdoc">Test de si se ha acabado la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00322">DriverKakuro.java:322</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a9497efdfb2f144d46528bd1b32e15d86"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">domain.controllers.drivers.DriverKakuro.reader</a></div><div class="ttdeci">static Scanner reader</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00018">DriverKakuro.java:18</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a67c157de0e11f075ce7d7ee3311b6e11"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a67c157de0e11f075ce7d7ee3311b6e11">domain.controllers.drivers.DriverKakuro.testCheckRowValidity</a></div><div class="ttdeci">static void testCheckRowValidity(int x, int y, int value, String kakuro)</div><div class="ttdoc">Test de CheckRowValidity.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00281">DriverKakuro.java:281</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_af197b32ea0c57a59665ef5f7f1261ebb"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af197b32ea0c57a59665ef5f7f1261ebb">domain.controllers.drivers.DriverKakuro.testGetRowSize</a></div><div class="ttdeci">static void testGetRowSize()</div><div class="ttdoc">Test de getter de tamaño de filas.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00169">DriverKakuro.java:169</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_af4c470db661c52c78bd7b31da9334cde"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af4c470db661c52c78bd7b31da9334cde">domain.controllers.drivers.DriverKakuro.testGetBoard</a></div><div class="ttdeci">static void testGetBoard()</div><div class="ttdoc">Test de getter de tablero.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00189">DriverKakuro.java:189</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a67c157de0e11f075ce7d7ee3311b6e11"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a67c157de0e11f075ce7d7ee3311b6e11">domain.controllers.drivers.DriverKakuro.testCheckRowValidity</a></div><div class="ttdeci">static void testCheckRowValidity(int x, int y, int value, String kakuro)</div><div class="ttdoc">Test de CheckRowValidity.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00292">DriverKakuro.java:292</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_af197b32ea0c57a59665ef5f7f1261ebb"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af197b32ea0c57a59665ef5f7f1261ebb">domain.controllers.drivers.DriverKakuro.testGetRowSize</a></div><div class="ttdeci">static void testGetRowSize()</div><div class="ttdoc">Test de getter de tamaño de filas.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00180">DriverKakuro.java:180</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_af4c470db661c52c78bd7b31da9334cde"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#af4c470db661c52c78bd7b31da9334cde">domain.controllers.drivers.DriverKakuro.testGetBoard</a></div><div class="ttdeci">static void testGetBoard()</div><div class="ttdoc">Test de getter de tablero.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00200">DriverKakuro.java:200</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a31742309b2c280b4a55f35bfdd756a1c"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c">domain.controllers.drivers.DriverKakuro.KAKURO_TEXT_ENUNCIADO</a></div><div class="ttdeci">static final String KAKURO_TEXT_ENUNCIADO</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00019">DriverKakuro.java:19</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a12928470433f95134a9c3005f37686aa"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a12928470433f95134a9c3005f37686aa">domain.controllers.drivers.DriverKakuro.testCreadora1</a></div><div class="ttdeci">static void testCreadora1()</div><div class="ttdoc">Test de la creadora a partir de todos los atributos.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00034">DriverKakuro.java:34</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_ae1c57298458724404ade22ed20b7ba8d"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">domain.controllers.drivers.DriverKakuro.readNumber</a></div><div class="ttdeci">static int readNumber()</div><div class="ttdoc">Lee un numero de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00461">DriverKakuro.java:461</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_ae1c57298458724404ade22ed20b7ba8d"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">domain.controllers.drivers.DriverKakuro.readNumber</a></div><div class="ttdeci">static int readNumber()</div><div class="ttdoc">Lee un numero de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00505">DriverKakuro.java:505</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a8527008e9c80604f639246640c508d60"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a8527008e9c80604f639246640c508d60">domain.controllers.drivers.DriverKakuro.testToString</a></div><div class="ttdeci">static void testToString()</div><div class="ttdoc">Test de conversor de Kakuro a String.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00070">DriverKakuro.java:70</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a723f7a3e055e4f6e5ad7cde22c6b3923"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a723f7a3e055e4f6e5ad7cde22c6b3923">domain.controllers.drivers.DriverKakuro.testGetColumnSize</a></div><div class="ttdeci">static void testGetColumnSize()</div><div class="ttdoc">Test de getter de tamaño de columnas.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00179">DriverKakuro.java:179</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a723f7a3e055e4f6e5ad7cde22c6b3923"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a723f7a3e055e4f6e5ad7cde22c6b3923">domain.controllers.drivers.DriverKakuro.testGetColumnSize</a></div><div class="ttdeci">static void testGetColumnSize()</div><div class="ttdoc">Test de getter de tamaño de columnas.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00190">DriverKakuro.java:190</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a9348591d957ef8ca66ee9d424c049cad"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9348591d957ef8ca66ee9d424c049cad">domain.controllers.drivers.DriverKakuro.testCreadora2</a></div><div class="ttdeci">static void testCreadora2(String kakuroText)</div><div class="ttdoc">Test de la creadora String.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00053">DriverKakuro.java:53</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a37520fe3df8d7aa1f4a04a04703ef13f"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a37520fe3df8d7aa1f4a04a04703ef13f">domain.controllers.drivers.DriverKakuro.testCheckColumnValidity</a></div><div class="ttdeci">static void testCheckColumnValidity(int x, int y, int value, String kakuro)</div><div class="ttdoc">Test de CheckColumnValidity.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00297">DriverKakuro.java:297</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a7098c62eee8cccf4984a351304e01c34"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">domain.controllers.drivers.DriverKakuro.readKakuro</a></div><div class="ttdeci">static String readKakuro()</div><div class="ttdoc">Lee un kakuro de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00446">DriverKakuro.java:446</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a0874d0dec94f9b4cc35a1f4da8df43c3"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a0874d0dec94f9b4cc35a1f4da8df43c3">domain.controllers.drivers.DriverKakuro.testGetDifficulty</a></div><div class="ttdeci">static void testGetDifficulty(int diff)</div><div class="ttdoc">Test de getter de dificultad.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00146">DriverKakuro.java:146</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_aa85c7592a25548f94e11b6ab5eba72db"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#aa85c7592a25548f94e11b6ab5eba72db">domain.controllers.drivers.DriverKakuro.testSetValue</a></div><div class="ttdeci">static void testSetValue(int x, int y, int value)</div><div class="ttdoc">Test de colocar valor en celda.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00233">DriverKakuro.java:233</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a37520fe3df8d7aa1f4a04a04703ef13f"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a37520fe3df8d7aa1f4a04a04703ef13f">domain.controllers.drivers.DriverKakuro.testCheckColumnValidity</a></div><div class="ttdeci">static void testCheckColumnValidity(int x, int y, int value, String kakuro)</div><div class="ttdoc">Test de CheckColumnValidity.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00308">DriverKakuro.java:308</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a7098c62eee8cccf4984a351304e01c34"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a7098c62eee8cccf4984a351304e01c34">domain.controllers.drivers.DriverKakuro.readKakuro</a></div><div class="ttdeci">static String readKakuro()</div><div class="ttdoc">Lee un kakuro de consola.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00490">DriverKakuro.java:490</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_a0874d0dec94f9b4cc35a1f4da8df43c3"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a0874d0dec94f9b4cc35a1f4da8df43c3">domain.controllers.drivers.DriverKakuro.testGetDifficulty</a></div><div class="ttdeci">static void testGetDifficulty(int diff)</div><div class="ttdoc">Test de getter de dificultad.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00157">DriverKakuro.java:157</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_aa85c7592a25548f94e11b6ab5eba72db"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#aa85c7592a25548f94e11b6ab5eba72db">domain.controllers.drivers.DriverKakuro.testSetValue</a></div><div class="ttdeci">static void testSetValue(int x, int y, int value)</div><div class="ttdoc">Test de colocar valor en celda.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00244">DriverKakuro.java:244</a></div></div>
 <div class="ttc" id="aclassdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_html_ae4851cdf57a18d3c35edab5b53164a72"><div class="ttname"><a href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae4851cdf57a18d3c35edab5b53164a72">domain.controllers.drivers.DriverKakuro.testGetId</a></div><div class="ttdeci">static void testGetId()</div><div class="ttdoc">Test de getter de identificador.</div><div class="ttdef"><b>Definition:</b> <a href="_driver_kakuro_8java_source.html#l00135">DriverKakuro.java:135</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

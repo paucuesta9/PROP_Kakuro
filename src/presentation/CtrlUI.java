@@ -178,6 +178,12 @@ public class CtrlUI {
             System.out.print("Escoge tamaño N M (NxM): ");
             int kakuroSizeRow = readNumber();
             int kakuroSizeColumn = readNumber();
+            while (kakuroSizeRow < 3 || kakuroSizeColumn < 3) {
+                System.out.println("Los tamaños deben ser de mínimo 3");
+                System.out.print("Escoge tamaño N M (NxM): ");
+                kakuroSizeRow = readNumber();
+                kakuroSizeColumn = readNumber();
+            }
             cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn);
 
 

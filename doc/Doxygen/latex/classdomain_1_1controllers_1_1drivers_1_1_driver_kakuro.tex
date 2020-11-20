@@ -32,6 +32,8 @@ static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ka
 \begin{DoxyCompactList}\small\item\em Test de conversor de Kakuro correcto a String. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae4851cdf57a18d3c35edab5b53164a72}{test\+Get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Test de getter de identificador. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a4cf3ec8c3e123c080296bc940078af55}{test\+Set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Test de setter de identificador. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a0874d0dec94f9b4cc35a1f4da8df43c3}{test\+Get\+Difficulty}} (int diff)
 \begin{DoxyCompactList}\small\item\em Test de getter de dificultad. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af16d00867b9452d45ae22ae3e6401fd5}{test\+Set\+Difficulty}} (int difficulty)
@@ -53,7 +55,9 @@ static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ka
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a37520fe3df8d7aa1f4a04a04703ef13f}{test\+Check\+Column\+Validity}} (int x, int y, int value, String kakuro)
 \begin{DoxyCompactList}\small\item\em Test de Check\+Column\+Validity. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a792d86dc5c20cbc0d57b92c6b740c0de}{test\+Is\+Finished}} (String kakuro1, String kakuro\+Finished)
-\begin{DoxyCompactList}\small\item\em Test de si se ha acabado la partida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Test de si se ha acabado la partida. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a8055afd529cfbc78803b9923bc4ad3fd}{test\+Set\+Correct\+Values}} (String kakuro, String kakuro\+Finished)
+\begin{DoxyCompactList}\small\item\em Test de settear los valores correctos al kakuro. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -99,7 +103,7 @@ Definición en la línea 34 del archivo Driver\+Kakuro.\+java.
 \DoxyCodeLine{40                 \textcolor{keywordflow}{else} board[i][j] = \textcolor{keyword}{new} BlackCell();}
 \DoxyCodeLine{41             \}}
 \DoxyCodeLine{42         \}}
-\DoxyCodeLine{43         Kakuro k = \textcolor{keyword}{new} Kakuro(\textcolor{stringliteral}{"{}0"{}}, 1, board);}
+\DoxyCodeLine{43         Kakuro k = \textcolor{keyword}{new} Kakuro(0, 1, board);}
 \DoxyCodeLine{44         System.out.println(\textcolor{stringliteral}{"{}El Kakuro se ha creado"{}});}
 \DoxyCodeLine{45     \}}
 
@@ -251,6 +255,29 @@ Definición en la línea 135 del archivo Driver\+Kakuro.\+java.
 \DoxyCodeLine{138     \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a4cf3ec8c3e123c080296bc940078af55}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a4cf3ec8c3e123c080296bc940078af55}} 
+\index{domain.controllers.drivers.DriverKakuro@{domain.controllers.drivers.DriverKakuro}!testSetId@{testSetId}}
+\index{testSetId@{testSetId}!domain.controllers.drivers.DriverKakuro@{domain.controllers.drivers.DriverKakuro}}
+\doxysubsubsection{\texorpdfstring{testSetId()}{testSetId()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Kakuro.\+test\+Set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de setter de identificador. 
+
+Comprueba si se settea el identificador de forma correcta 
+
+Definición en la línea 145 del archivo Driver\+Kakuro.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{145                                           \{}
+\DoxyCodeLine{146         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{147         k.setId(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{148         System.out.println(\textcolor{stringliteral}{"{}Se ha actualizado el valor id"{}});}
+\DoxyCodeLine{149     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a0874d0dec94f9b4cc35a1f4da8df43c3}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a0874d0dec94f9b4cc35a1f4da8df43c3}} 
 \index{domain.controllers.drivers.DriverKakuro@{domain.controllers.drivers.DriverKakuro}!testGetDifficulty@{testGetDifficulty}}
 \index{testGetDifficulty@{testGetDifficulty}!domain.controllers.drivers.DriverKakuro@{domain.controllers.drivers.DriverKakuro}}
@@ -270,15 +297,15 @@ Comprueba si se obtiene la dificultad de forma correcta
 \end{DoxyParams}
 
 
-Definición en la línea 146 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 157 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{146                                                     \{}
-\DoxyCodeLine{147         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{148         k.setDifficulty(diff);}
-\DoxyCodeLine{149         System.out.println(\textcolor{stringliteral}{"{}Difficulty: "{}} + k.getDifficulty());}
-\DoxyCodeLine{150     \}}
+\DoxyCodeLine{157                                                     \{}
+\DoxyCodeLine{158         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{159         k.setDifficulty(diff);}
+\DoxyCodeLine{160         System.out.println(\textcolor{stringliteral}{"{}Difficulty: "{}} + k.getDifficulty());}
+\DoxyCodeLine{161     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af16d00867b9452d45ae22ae3e6401fd5}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af16d00867b9452d45ae22ae3e6401fd5}} 
@@ -300,15 +327,15 @@ Comprueba si se coloca la dificultad de forma correcta
 \end{DoxyParams}
 
 
-Definición en la línea 158 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 169 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{158                                                           \{}
-\DoxyCodeLine{159         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{160         k.setDifficulty(difficulty);}
-\DoxyCodeLine{161         System.out.println(\textcolor{stringliteral}{"{}Se ha actualizado el valor difficulty"{}});}
-\DoxyCodeLine{162     \}}
+\DoxyCodeLine{169                                                           \{}
+\DoxyCodeLine{170         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{171         k.setDifficulty(difficulty);}
+\DoxyCodeLine{172         System.out.println(\textcolor{stringliteral}{"{}Se ha actualizado el valor difficulty"{}});}
+\DoxyCodeLine{173     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af197b32ea0c57a59665ef5f7f1261ebb}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af197b32ea0c57a59665ef5f7f1261ebb}} 
@@ -323,14 +350,14 @@ Test de getter de tamaño de filas.
 
 Comprueba si se obtiene el tamaño de filas correctamente 
 
-Definición en la línea 169 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 180 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{169                                          \{}
-\DoxyCodeLine{170         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{171         System.out.println(\textcolor{stringliteral}{"{}RowSize: "{}} + k.getRowSize());}
-\DoxyCodeLine{172     \}}
+\DoxyCodeLine{180                                          \{}
+\DoxyCodeLine{181         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{182         System.out.println(\textcolor{stringliteral}{"{}RowSize: "{}} + k.getRowSize());}
+\DoxyCodeLine{183     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a723f7a3e055e4f6e5ad7cde22c6b3923}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a723f7a3e055e4f6e5ad7cde22c6b3923}} 
@@ -345,14 +372,14 @@ Test de getter de tamaño de columnas.
 
 Comprueba si se obtiene correctamente el tamaño de columnas 
 
-Definición en la línea 179 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 190 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{179                                             \{}
-\DoxyCodeLine{180         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{181         System.out.println(\textcolor{stringliteral}{"{}ColumnSize: "{}} + k.getColumnSize());}
-\DoxyCodeLine{182     \}}
+\DoxyCodeLine{190                                             \{}
+\DoxyCodeLine{191         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{192         System.out.println(\textcolor{stringliteral}{"{}ColumnSize: "{}} + k.getColumnSize());}
+\DoxyCodeLine{193     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af4c470db661c52c78bd7b31da9334cde}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af4c470db661c52c78bd7b31da9334cde}} 
@@ -367,34 +394,34 @@ Test de getter de tablero.
 
 Comprueba si se obtiene el tablero correctamente 
 
-Definición en la línea 189 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 200 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{189                                        \{}
-\DoxyCodeLine{190         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{191         Cell[][] board = k.getBoard();}
-\DoxyCodeLine{192         System.out.println(\textcolor{stringliteral}{"{}Se ha obtenido el tablero y se imprime: "{}});}
-\DoxyCodeLine{193         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
-\DoxyCodeLine{194             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
-\DoxyCodeLine{195                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) \{}
-\DoxyCodeLine{196                     WhiteCell w = (WhiteCell) board[i][j];}
-\DoxyCodeLine{197                     \textcolor{keywordflow}{if} (w.getValue() != 0) System.out.print(w.getValue());}
-\DoxyCodeLine{198                     \textcolor{keywordflow}{else} System.out.print(\textcolor{stringliteral}{"{}?"{}});}
-\DoxyCodeLine{199                 \}}
-\DoxyCodeLine{200                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{201                     BlackCell bc = (BlackCell) board[i][j];}
-\DoxyCodeLine{202                     \textcolor{keywordflow}{if} (bc.getColumn() == 0 \&\& bc.getRow() == 0) \{}
-\DoxyCodeLine{203                         System.out.print(\textcolor{stringliteral}{"{}*"{}});}
-\DoxyCodeLine{204                     \}}
-\DoxyCodeLine{205                     \textcolor{keywordflow}{if} (bc.getColumn() != 0) System.out.print(\textcolor{stringliteral}{"{}C"{}} + bc.getColumn());}
-\DoxyCodeLine{206                     \textcolor{keywordflow}{if} (bc.getRow() != 0) System.out.print(\textcolor{stringliteral}{"{}F"{}} + bc.getRow());}
-\DoxyCodeLine{207                 \}}
-\DoxyCodeLine{208                 \textcolor{keywordflow}{if} (j != board[0].length -\/ 1) System.out.print(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{209             \}}
-\DoxyCodeLine{210             System.out.println(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{211         \}}
-\DoxyCodeLine{212     \}}
+\DoxyCodeLine{200                                        \{}
+\DoxyCodeLine{201         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{202         Cell[][] board = k.getBoard();}
+\DoxyCodeLine{203         System.out.println(\textcolor{stringliteral}{"{}Se ha obtenido el tablero y se imprime: "{}});}
+\DoxyCodeLine{204         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{205             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{206                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) \{}
+\DoxyCodeLine{207                     WhiteCell w = (WhiteCell) board[i][j];}
+\DoxyCodeLine{208                     \textcolor{keywordflow}{if} (w.getValue() != 0) System.out.print(w.getValue());}
+\DoxyCodeLine{209                     \textcolor{keywordflow}{else} System.out.print(\textcolor{stringliteral}{"{}?"{}});}
+\DoxyCodeLine{210                 \}}
+\DoxyCodeLine{211                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{212                     BlackCell bc = (BlackCell) board[i][j];}
+\DoxyCodeLine{213                     \textcolor{keywordflow}{if} (bc.getColumn() == 0 \&\& bc.getRow() == 0) \{}
+\DoxyCodeLine{214                         System.out.print(\textcolor{stringliteral}{"{}*"{}});}
+\DoxyCodeLine{215                     \}}
+\DoxyCodeLine{216                     \textcolor{keywordflow}{if} (bc.getColumn() != 0) System.out.print(\textcolor{stringliteral}{"{}C"{}} + bc.getColumn());}
+\DoxyCodeLine{217                     \textcolor{keywordflow}{if} (bc.getRow() != 0) System.out.print(\textcolor{stringliteral}{"{}F"{}} + bc.getRow());}
+\DoxyCodeLine{218                 \}}
+\DoxyCodeLine{219                 \textcolor{keywordflow}{if} (j != board[0].length -\/ 1) System.out.print(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{220             \}}
+\DoxyCodeLine{221             System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{222         \}}
+\DoxyCodeLine{223     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ad64186a9326c5a4afb85a053576780c9}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ad64186a9326c5a4afb85a053576780c9}} 
@@ -416,15 +443,15 @@ Test de getter de Celda.
 \end{DoxyParams}
 
 
-Definición en la línea 219 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 230 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{219                                                   \{}
-\DoxyCodeLine{220         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{221         k.getCell(x,y);}
-\DoxyCodeLine{222         System.out.println(\textcolor{stringliteral}{"{}Se ha obtenido la celda buscada"{}});}
-\DoxyCodeLine{223     \}}
+\DoxyCodeLine{230                                                   \{}
+\DoxyCodeLine{231         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{232         k.getCell(x,y);}
+\DoxyCodeLine{233         System.out.println(\textcolor{stringliteral}{"{}Se ha obtenido la celda buscada"{}});}
+\DoxyCodeLine{234     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_aa85c7592a25548f94e11b6ab5eba72db}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_aa85c7592a25548f94e11b6ab5eba72db}} 
@@ -450,16 +477,16 @@ Comprueba si se coloca el valor en una celda blanca correctamente
 \end{DoxyParams}
 
 
-Definición en la línea 233 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 244 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{233                                                               \{}
-\DoxyCodeLine{234         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
-\DoxyCodeLine{235         Boolean \textcolor{keyword}{set} = k.setValue(x, y, value);}
-\DoxyCodeLine{236         \textcolor{keywordflow}{if} (\textcolor{keyword}{set}) System.out.println(\textcolor{stringliteral}{"{}La celda en la posicion x e y es blanca y se ha actualizado correctamente"{}});}
-\DoxyCodeLine{237         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}La celda en la posicion x e y es negra y por lo tanto no se ha actualizado"{}});}
-\DoxyCodeLine{238     \}}
+\DoxyCodeLine{244                                                               \{}
+\DoxyCodeLine{245         Kakuro k = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a31742309b2c280b4a55f35bfdd756a1c}{KAKURO\_TEXT\_ENUNCIADO}});}
+\DoxyCodeLine{246         Boolean \textcolor{keyword}{set} = k.setValue(x, y, value);}
+\DoxyCodeLine{247         \textcolor{keywordflow}{if} (\textcolor{keyword}{set}) System.out.println(\textcolor{stringliteral}{"{}La celda en la posicion x e y es blanca y se ha actualizado correctamente"{}});}
+\DoxyCodeLine{248         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}La celda en la posicion x e y es negra y por lo tanto no se ha actualizado"{}});}
+\DoxyCodeLine{249     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_afa6b2889ed2e21472ed4675d927bbf21}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_afa6b2889ed2e21472ed4675d927bbf21}} 
@@ -474,36 +501,36 @@ Test de check\+Column.
 
 Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero 
 
-Definición en la línea 245 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 256 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{245                                           \{}
-\DoxyCodeLine{246         System.out.println(\textcolor{stringliteral}{"{}Introduce un kakuro para realizar el test:"{}});}
-\DoxyCodeLine{247         String kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
-\DoxyCodeLine{248         System.out.println(\textcolor{stringliteral}{"{}Indica la fila de la casilla para hacer el test:"{}});}
-\DoxyCodeLine{249         \textcolor{keywordtype}{int} f = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{250         System.out.println(\textcolor{stringliteral}{"{}Indica la columna de la casilla para hacer el test:"{}});}
-\DoxyCodeLine{251         \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{252         System.out.println(\textcolor{stringliteral}{"{}Indica el valor a comprobar:"{}});}
-\DoxyCodeLine{253         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{254         System.out.println(\textcolor{stringliteral}{"{}¿Es la ultima celda de la run vertical?"{}});}
-\DoxyCodeLine{255         \textcolor{keywordtype}{int} end = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{256         System.out.println(\textcolor{stringliteral}{"{}¿El valor deberia ser correcto?"{}});}
-\DoxyCodeLine{257         \textcolor{keywordtype}{int} s = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{258         \textcolor{keywordtype}{boolean} b = \textcolor{keyword}{false};}
-\DoxyCodeLine{259         \textcolor{keywordflow}{if}(end == 1) b = \textcolor{keyword}{true};}
-\DoxyCodeLine{260         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
-\DoxyCodeLine{261         Cell[][] board = k.getBoard();}
-\DoxyCodeLine{262         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
-\DoxyCodeLine{263             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
-\DoxyCodeLine{264                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell) board[i][j]).getValue());}
-\DoxyCodeLine{265             \}}
-\DoxyCodeLine{266         \}}
-\DoxyCodeLine{267         \textcolor{keywordtype}{boolean} r = k.checkColumn(f,c,n,b,n);}
-\DoxyCodeLine{268         \textcolor{keywordflow}{if}((r \&\& s == 1) || (!r \&\& s == 0)) System.out.println(\textcolor{stringliteral}{"{}Solucion correcta"{}});}
-\DoxyCodeLine{269         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Solucion incorrecta"{}});}
-\DoxyCodeLine{270     \}}
+\DoxyCodeLine{256                                           \{}
+\DoxyCodeLine{257         System.out.println(\textcolor{stringliteral}{"{}Introduce un kakuro para realizar el test:"{}});}
+\DoxyCodeLine{258         String kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{259         System.out.println(\textcolor{stringliteral}{"{}Indica la fila de la casilla para hacer el test:"{}});}
+\DoxyCodeLine{260         \textcolor{keywordtype}{int} f = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{261         System.out.println(\textcolor{stringliteral}{"{}Indica la columna de la casilla para hacer el test:"{}});}
+\DoxyCodeLine{262         \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{263         System.out.println(\textcolor{stringliteral}{"{}Indica el valor a comprobar:"{}});}
+\DoxyCodeLine{264         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{265         System.out.println(\textcolor{stringliteral}{"{}¿Es la ultima celda de la run vertical?"{}});}
+\DoxyCodeLine{266         \textcolor{keywordtype}{int} end = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{267         System.out.println(\textcolor{stringliteral}{"{}¿El valor deberia ser correcto?"{}});}
+\DoxyCodeLine{268         \textcolor{keywordtype}{int} s = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{269         \textcolor{keywordtype}{boolean} b = \textcolor{keyword}{false};}
+\DoxyCodeLine{270         \textcolor{keywordflow}{if}(end == 1) b = \textcolor{keyword}{true};}
+\DoxyCodeLine{271         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
+\DoxyCodeLine{272         Cell[][] board = k.getBoard();}
+\DoxyCodeLine{273         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{274             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{275                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell) board[i][j]).getValue());}
+\DoxyCodeLine{276             \}}
+\DoxyCodeLine{277         \}}
+\DoxyCodeLine{278         \textcolor{keywordtype}{boolean} r = k.checkColumn(f,c,n,b,n);}
+\DoxyCodeLine{279         \textcolor{keywordflow}{if}((r \&\& s == 1) || (!r \&\& s == 0)) System.out.println(\textcolor{stringliteral}{"{}Solucion correcta"{}});}
+\DoxyCodeLine{280         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Solucion incorrecta"{}});}
+\DoxyCodeLine{281     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a67c157de0e11f075ce7d7ee3311b6e11}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a67c157de0e11f075ce7d7ee3311b6e11}} 
@@ -531,16 +558,16 @@ Comprueba si se está haciendo correctamente la verificación de que el valor es
 \end{DoxyParams}
 
 
-Definición en la línea 281 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 292 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{281                                                                                      \{}
-\DoxyCodeLine{282         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro);}
-\DoxyCodeLine{283         k.setValue(x,y,value);}
-\DoxyCodeLine{284         \textcolor{keywordflow}{if} (k.checkRowValidity(x, y-\/1, value, 0, -\/1, y, \textcolor{keyword}{true})) System.out.println(\textcolor{stringliteral}{"{}El valor introducido cumple las condiciones de la fila"{}});}
-\DoxyCodeLine{285         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El valor introducido no cumple las condiciones de la fila"{}});}
-\DoxyCodeLine{286     \}}
+\DoxyCodeLine{292                                                                                      \{}
+\DoxyCodeLine{293         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro);}
+\DoxyCodeLine{294         k.setValue(x,y,value);}
+\DoxyCodeLine{295         \textcolor{keywordflow}{if} (k.checkRowValidity(x, y-\/1, value, 0, -\/1, y, \textcolor{keyword}{true})) System.out.println(\textcolor{stringliteral}{"{}El valor introducido cumple las condiciones de la fila"{}});}
+\DoxyCodeLine{296         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El valor introducido no cumple las condiciones de la fila"{}});}
+\DoxyCodeLine{297     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a37520fe3df8d7aa1f4a04a04703ef13f}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a37520fe3df8d7aa1f4a04a04703ef13f}} 
@@ -568,16 +595,16 @@ Comprueba si se está haciendo correctamente la verificación de que el valor es
 \end{DoxyParams}
 
 
-Definición en la línea 297 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 308 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{297                                                                                         \{}
-\DoxyCodeLine{298         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro);}
-\DoxyCodeLine{299         k.setValue(x,y,value);}
-\DoxyCodeLine{300         \textcolor{keywordflow}{if} (k.checkColumnValidity(x-\/1,y,value,0,-\/1,x,\textcolor{keyword}{true})) System.out.println(\textcolor{stringliteral}{"{}El valor introducido cumple las condiciones de la columna"{}});}
-\DoxyCodeLine{301         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El valor introducido no cumple las condiciones de la columna"{}});}
-\DoxyCodeLine{302     \}}
+\DoxyCodeLine{308                                                                                         \{}
+\DoxyCodeLine{309         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro);}
+\DoxyCodeLine{310         k.setValue(x,y,value);}
+\DoxyCodeLine{311         \textcolor{keywordflow}{if} (k.checkColumnValidity(x-\/1,y,value,0,-\/1,x,\textcolor{keyword}{true})) System.out.println(\textcolor{stringliteral}{"{}El valor introducido cumple las condiciones de la columna"{}});}
+\DoxyCodeLine{312         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El valor introducido no cumple las condiciones de la columna"{}});}
+\DoxyCodeLine{313     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a792d86dc5c20cbc0d57b92c6b740c0de}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a792d86dc5c20cbc0d57b92c6b740c0de}} 
@@ -594,31 +621,68 @@ Comprueba si se ha verificado que se ha acabado la partida de forma correcta
 
 
 \begin{DoxyParams}{Parámetros}
-{\em kakuro1} & kakuro que se quiere comprobat \\
+{\em kakuro1} & kakuro que se quiere comprobar \\
 \hline
 {\em kakuro\+Finished} & el mismo kakuro pero resuleto para ver si se ha terminado \\
 \hline
 \end{DoxyParams}
 
 
-Definición en la línea 311 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 322 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{311                                                                               \{}
-\DoxyCodeLine{312         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
-\DoxyCodeLine{313         Kakuro kFin = \textcolor{keyword}{new} Kakuro(kakuroFinished);}
-\DoxyCodeLine{314         Cell[][] board = k.getBoard();}
-\DoxyCodeLine{315         Cell[][] boardFinished = kFin.getBoard();}
-\DoxyCodeLine{316         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
-\DoxyCodeLine{317             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
-\DoxyCodeLine{318                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell)boardFinished[i][j]).getValue());}
-\DoxyCodeLine{319             \}}
-\DoxyCodeLine{320         \}}
-\DoxyCodeLine{321         Boolean finished = k.isFinished();}
-\DoxyCodeLine{322         \textcolor{keywordflow}{if} (finished) System.out.println(\textcolor{stringliteral}{"{}El kakuro se ha terminado"{}});}
-\DoxyCodeLine{323         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El kakuro aun no se ha terminado"{}});}
-\DoxyCodeLine{324     \}}
+\DoxyCodeLine{322                                                                               \{}
+\DoxyCodeLine{323         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro1);}
+\DoxyCodeLine{324         Kakuro kFin = \textcolor{keyword}{new} Kakuro(kakuroFinished);}
+\DoxyCodeLine{325         Cell[][] board = k.getBoard();}
+\DoxyCodeLine{326         Cell[][] boardFinished = kFin.getBoard();}
+\DoxyCodeLine{327         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < board.length; ++i) \{}
+\DoxyCodeLine{328             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < board[0].length; ++j) \{}
+\DoxyCodeLine{329                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell)boardFinished[i][j]).getValue());}
+\DoxyCodeLine{330             \}}
+\DoxyCodeLine{331         \}}
+\DoxyCodeLine{332         Boolean finished = k.isFinished();}
+\DoxyCodeLine{333         \textcolor{keywordflow}{if} (finished) System.out.println(\textcolor{stringliteral}{"{}El kakuro se ha terminado"{}});}
+\DoxyCodeLine{334         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El kakuro aun no se ha terminado"{}});}
+\DoxyCodeLine{335     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a8055afd529cfbc78803b9923bc4ad3fd}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a8055afd529cfbc78803b9923bc4ad3fd}} 
+\index{domain.controllers.drivers.DriverKakuro@{domain.controllers.drivers.DriverKakuro}!testSetCorrectValues@{testSetCorrectValues}}
+\index{testSetCorrectValues@{testSetCorrectValues}!domain.controllers.drivers.DriverKakuro@{domain.controllers.drivers.DriverKakuro}}
+\doxysubsubsection{\texorpdfstring{testSetCorrectValues()}{testSetCorrectValues()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Kakuro.\+test\+Set\+Correct\+Values (\begin{DoxyParamCaption}\item[{String}]{kakuro,  }\item[{String}]{kakuro\+Finished }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de settear los valores correctos al kakuro. 
+
+Comprueba si se han copiado los valores correctos al kakuro indicado
+
+
+\begin{DoxyParams}{Parámetros}
+{\em kakuro} & kakuro que se quiere comprobar \\
+\hline
+{\em kakuro\+Finished} & el mismo kakuro pero resuelto para copiar los valores correctos \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 344 del archivo Driver\+Kakuro.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{344                                                                                    \{}
+\DoxyCodeLine{345         Kakuro k = \textcolor{keyword}{new} Kakuro(kakuro);}
+\DoxyCodeLine{346         Kakuro kFin = \textcolor{keyword}{new} Kakuro(kakuroFinished);}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348         k.setCorrectValues(kFin);}
+\DoxyCodeLine{349 }
+\DoxyCodeLine{350         System.out.println(\textcolor{stringliteral}{"{}Se imprime el kakuro con las soluciones"{}});}
+\DoxyCodeLine{351         String sol = k.correctToString();}
+\DoxyCodeLine{352         System.out.println(sol);}
+\DoxyCodeLine{353     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae25fd8707fe62ce906c73c092b3b93bb}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae25fd8707fe62ce906c73c092b3b93bb}} 
@@ -633,121 +697,136 @@ Función principal.
 
 Indica las opciones que hay para testear 
 
-Definición en la línea 330 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 359 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{330                                            \{}
-\DoxyCodeLine{331         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora con valores \(\backslash\)n 2. Creadora a partir de String \(\backslash\)n 3. Convertir Kakuro a String \(\backslash\)n 4. Convertir Kakuro correcto a String \(\backslash\)n 5. Setter de row \(\backslash\)n 6. Getter difficulty"{}} +}
-\DoxyCodeLine{332                 \textcolor{stringliteral}{"{}\(\backslash\)n 7. Setter difficulty \(\backslash\)n 8. Getter rowSize \(\backslash\)n 9. Getter columnSize \(\backslash\)n 10. Getter board \(\backslash\)n 11. Getter cell \(\backslash\)n 12. Setter value en celda blanca \(\backslash\)n 13. Check column \(\backslash\)n 14. Mirar validez de fila \(\backslash\)n 15. Mirar validez de la columna"{}} +}
-\DoxyCodeLine{333                 \textcolor{stringliteral}{"{}\(\backslash\)n 16. Mirar si se ha terminado \(\backslash\)n 17. Salir"{}});}
-\DoxyCodeLine{334         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{335         \textcolor{keywordflow}{while} (value != 17) \{}
-\DoxyCodeLine{336             \textcolor{keywordtype}{int} x, y;}
-\DoxyCodeLine{337             \textcolor{keywordflow}{switch} (value) \{}
-\DoxyCodeLine{338                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{339                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la Creadora 1"{}});}
-\DoxyCodeLine{340                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a12928470433f95134a9c3005f37686aa}{testCreadora1}}();}
-\DoxyCodeLine{341                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{342                 \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{343                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto"{}});}
-\DoxyCodeLine{344                     String kakuroText = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
-\DoxyCodeLine{345                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora 2"{}});}
-\DoxyCodeLine{346                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9348591d957ef8ca66ee9d424c049cad}{testCreadora2}}(kakuroText);}
-\DoxyCodeLine{347                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{348                 \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{349                     System.out.println(\textcolor{stringliteral}{"{}Se llama a convertir Kakuro a String"{}});}
-\DoxyCodeLine{350                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a8527008e9c80604f639246640c508d60}{testToString}}();}
-\DoxyCodeLine{351                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{352                 \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{353                     System.out.println(\textcolor{stringliteral}{"{}Se llama a convertir Kakuro correcto a String"{}});}
-\DoxyCodeLine{354                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7622cbdbc6ad9d34ac293c466b15267a}{testCorrectToString}}();}
-\DoxyCodeLine{355                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{356                 \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{357                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getId"{}});}
-\DoxyCodeLine{358                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae4851cdf57a18d3c35edab5b53164a72}{testGetId}}();}
-\DoxyCodeLine{359                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{360                 \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{361                     System.out.println(\textcolor{stringliteral}{"{}Introduzca una dificultad"{}});}
-\DoxyCodeLine{362                     \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{363                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getDifficulty"{}});}
-\DoxyCodeLine{364                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a0874d0dec94f9b4cc35a1f4da8df43c3}{testGetDifficulty}}(diff);}
-\DoxyCodeLine{365                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{366                 \textcolor{keywordflow}{case} 7:}
-\DoxyCodeLine{367                     System.out.println(\textcolor{stringliteral}{"{}Indique una dificultad"{}});}
-\DoxyCodeLine{368                     \textcolor{keywordtype}{int} difficulty = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{369                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setDifficulty "{}});}
-\DoxyCodeLine{370                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af16d00867b9452d45ae22ae3e6401fd5}{testSetDifficulty}}(difficulty);}
-\DoxyCodeLine{371                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{372                 \textcolor{keywordflow}{case} 8:}
-\DoxyCodeLine{373                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getRowSize"{}});}
-\DoxyCodeLine{374                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af197b32ea0c57a59665ef5f7f1261ebb}{testGetRowSize}}();}
-\DoxyCodeLine{375                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{376                 \textcolor{keywordflow}{case} 9:}
-\DoxyCodeLine{377                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getColumnSize"{}});}
-\DoxyCodeLine{378                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a723f7a3e055e4f6e5ad7cde22c6b3923}{testGetColumnSize}}();}
-\DoxyCodeLine{379                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{380                 \textcolor{keywordflow}{case} 10:}
-\DoxyCodeLine{381                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getBoard"{}});}
-\DoxyCodeLine{382                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af4c470db661c52c78bd7b31da9334cde}{testGetBoard}}();}
-\DoxyCodeLine{383                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{384                 \textcolor{keywordflow}{case} 11:}
-\DoxyCodeLine{385                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e y de la celda que quiere obtener (0 < x, y < 10)"{}});}
-\DoxyCodeLine{386                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{387                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{388                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getCell"{}});}
-\DoxyCodeLine{389                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ad64186a9326c5a4afb85a053576780c9}{testGetCell}}(x, y);}
-\DoxyCodeLine{390                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{391                 \textcolor{keywordflow}{case} 12:}
-\DoxyCodeLine{392                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e y de la celda que quiere colocar (0 < x, y < 10) y el valor"{}});}
-\DoxyCodeLine{393                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{394                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{395                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{396                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setValue"{}});}
-\DoxyCodeLine{397                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_aa85c7592a25548f94e11b6ab5eba72db}{testSetValue}}(x, y, value);}
-\DoxyCodeLine{398                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{399                 \textcolor{keywordflow}{case} 13:}
-\DoxyCodeLine{400                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkColumn"{}});}
-\DoxyCodeLine{401                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_afa6b2889ed2e21472ed4675d927bbf21}{testCheckColumn}}();}
-\DoxyCodeLine{402                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{403                 \textcolor{keywordflow}{case} 14:}
-\DoxyCodeLine{404                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar"{}});}
-\DoxyCodeLine{405                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{406                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{407                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{408                     String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
-\DoxyCodeLine{409                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkRowValidity"{}});}
-\DoxyCodeLine{410                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a67c157de0e11f075ce7d7ee3311b6e11}{testCheckRowValidity}}(x,y,value,kakuro);}
-\DoxyCodeLine{411                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{412                 \textcolor{keywordflow}{case} 15:}
-\DoxyCodeLine{413                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar"{}});}
-\DoxyCodeLine{414                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{415                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{416                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{417                     kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
-\DoxyCodeLine{418                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkColumnValidity"{}});}
-\DoxyCodeLine{419                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a37520fe3df8d7aa1f4a04a04703ef13f}{testCheckColumnValidity}}(x,y,value,kakuro);}
-\DoxyCodeLine{420                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{421                 \textcolor{keywordflow}{case} 16:}
-\DoxyCodeLine{422                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto"{}});}
-\DoxyCodeLine{423 }
-\DoxyCodeLine{424                     String kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
-\DoxyCodeLine{425                     String kakuroFinished = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
-\DoxyCodeLine{426 }
-\DoxyCodeLine{427                     System.out.println(\textcolor{stringliteral}{"{}Se llama a isFinished"{}});}
-\DoxyCodeLine{428                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a792d86dc5c20cbc0d57b92c6b740c0de}{testIsFinished}}(kakuro1, kakuroFinished);}
-\DoxyCodeLine{429                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{430                 \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{431                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
-\DoxyCodeLine{432                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{433             \}}
-\DoxyCodeLine{434             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n Opciones: \(\backslash\)n 1. Creadora con valores \(\backslash\)n 2. Creadora a partir de String \(\backslash\)n 3. Convertir Kakuro a String \(\backslash\)n 4. Convertir Kakuro correcto a String \(\backslash\)n 5. Setter de row \(\backslash\)n 6. Getter difficulty"{}} +}
-\DoxyCodeLine{435                     \textcolor{stringliteral}{"{}\(\backslash\)n 7. Setter difficulty \(\backslash\)n 8. Getter rowSize \(\backslash\)n 9. Getter columnSize \(\backslash\)n 10. Getter board \(\backslash\)n 11. Getter cell \(\backslash\)n 12. Setter value en celda blanca \(\backslash\)n 13. Check column \(\backslash\)n 14. Mirar validez de fila \(\backslash\)n 15. Mirar validez de la columna"{}} +}
-\DoxyCodeLine{436                     \textcolor{stringliteral}{"{}\(\backslash\)n 16. Mirar si se ha terminado \(\backslash\)n 17. Salir"{}});}
-\DoxyCodeLine{437             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
-\DoxyCodeLine{438         \}}
-\DoxyCodeLine{439         System.exit(0);}
-\DoxyCodeLine{440     \}}
+\DoxyCodeLine{359                                            \{}
+\DoxyCodeLine{360         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. Creadora con valores \(\backslash\)n 2. Creadora a partir de String \(\backslash\)n 3. Convertir Kakuro a String \(\backslash\)n 4. Convertir Kakuro correcto a String \(\backslash\)n 5. Getter de id \(\backslash\)n 6. Setter de id \(\backslash\)n 7. Getter difficulty"{}} +}
+\DoxyCodeLine{361                 \textcolor{stringliteral}{"{}\(\backslash\)n 8. Setter difficulty \(\backslash\)n 9. Getter rowSize \(\backslash\)n 10. Getter columnSize \(\backslash\)n 11. Getter board \(\backslash\)n 12. Getter cell \(\backslash\)n 13. Setter value en celda blanca \(\backslash\)n 14. Check column \(\backslash\)n 15. Mirar validez de fila \(\backslash\)n 16. Mirar validez de la columna"{}} +}
+\DoxyCodeLine{362                 \textcolor{stringliteral}{"{}\(\backslash\)n 17. Mirar si se ha terminado \(\backslash\)n 18. Mirar si ha puesto valores correctos \(\backslash\)n 19. Salir"{}});}
+\DoxyCodeLine{363         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{364         \textcolor{keywordflow}{while} (value != 19) \{}
+\DoxyCodeLine{365             \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{366             \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{367                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{368                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la Creadora 1"{}});}
+\DoxyCodeLine{369                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a12928470433f95134a9c3005f37686aa}{testCreadora1}}();}
+\DoxyCodeLine{370                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{371                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{372                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto"{}});}
+\DoxyCodeLine{373                     String kakuroText = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{374                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la creadora 2"{}});}
+\DoxyCodeLine{375                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9348591d957ef8ca66ee9d424c049cad}{testCreadora2}}(kakuroText);}
+\DoxyCodeLine{376                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{377                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{378                     System.out.println(\textcolor{stringliteral}{"{}Se llama a convertir Kakuro a String"{}});}
+\DoxyCodeLine{379                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a8527008e9c80604f639246640c508d60}{testToString}}();}
+\DoxyCodeLine{380                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{381                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{382                     System.out.println(\textcolor{stringliteral}{"{}Se llama a convertir Kakuro correcto a String"{}});}
+\DoxyCodeLine{383                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7622cbdbc6ad9d34ac293c466b15267a}{testCorrectToString}}();}
+\DoxyCodeLine{384                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{385                 \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{386                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getId"{}});}
+\DoxyCodeLine{387                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae4851cdf57a18d3c35edab5b53164a72}{testGetId}}();}
+\DoxyCodeLine{388                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{389                 \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{390                     System.out.println(\textcolor{stringliteral}{"{}Introduzca un id"{}});}
+\DoxyCodeLine{391                     \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{392                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setId"{}});}
+\DoxyCodeLine{393                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a4cf3ec8c3e123c080296bc940078af55}{testSetId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{394                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{395                 \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{396                     System.out.println(\textcolor{stringliteral}{"{}Introduzca una dificultad"{}});}
+\DoxyCodeLine{397                     \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{398                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getDifficulty"{}});}
+\DoxyCodeLine{399                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a0874d0dec94f9b4cc35a1f4da8df43c3}{testGetDifficulty}}(diff);}
+\DoxyCodeLine{400                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{401                 \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{402                     System.out.println(\textcolor{stringliteral}{"{}Indique una dificultad"{}});}
+\DoxyCodeLine{403                     \textcolor{keywordtype}{int} difficulty = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{404                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setDifficulty "{}});}
+\DoxyCodeLine{405                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af16d00867b9452d45ae22ae3e6401fd5}{testSetDifficulty}}(difficulty);}
+\DoxyCodeLine{406                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{407                 \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{408                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getRowSize"{}});}
+\DoxyCodeLine{409                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af197b32ea0c57a59665ef5f7f1261ebb}{testGetRowSize}}();}
+\DoxyCodeLine{410                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{411                 \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{412                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getColumnSize"{}});}
+\DoxyCodeLine{413                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a723f7a3e055e4f6e5ad7cde22c6b3923}{testGetColumnSize}}();}
+\DoxyCodeLine{414                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{415                 \textcolor{keywordflow}{case} 11:}
+\DoxyCodeLine{416                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getBoard"{}});}
+\DoxyCodeLine{417                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_af4c470db661c52c78bd7b31da9334cde}{testGetBoard}}();}
+\DoxyCodeLine{418                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{419                 \textcolor{keywordflow}{case} 12:}
+\DoxyCodeLine{420                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e y de la celda que quiere obtener (0 < x, y < 10)"{}});}
+\DoxyCodeLine{421                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{422                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{423                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getCell"{}});}
+\DoxyCodeLine{424                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ad64186a9326c5a4afb85a053576780c9}{testGetCell}}(x, y);}
+\DoxyCodeLine{425                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{426                 \textcolor{keywordflow}{case} 13:}
+\DoxyCodeLine{427                     System.out.println(\textcolor{stringliteral}{"{}Indique la posicion x e y de la celda que quiere colocar (0 < x, y < 10) y el valor"{}});}
+\DoxyCodeLine{428                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{429                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{430                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{431                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setValue"{}});}
+\DoxyCodeLine{432                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_aa85c7592a25548f94e11b6ab5eba72db}{testSetValue}}(x, y, value);}
+\DoxyCodeLine{433                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{434                 \textcolor{keywordflow}{case} 14:}
+\DoxyCodeLine{435                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkColumn"{}});}
+\DoxyCodeLine{436                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_afa6b2889ed2e21472ed4675d927bbf21}{testCheckColumn}}();}
+\DoxyCodeLine{437                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{438                 \textcolor{keywordflow}{case} 15:}
+\DoxyCodeLine{439                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar"{}});}
+\DoxyCodeLine{440                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{441                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{442                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{443                     String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{444                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkRowValidity"{}});}
+\DoxyCodeLine{445                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a67c157de0e11f075ce7d7ee3311b6e11}{testCheckRowValidity}}(x,y,value,kakuro);}
+\DoxyCodeLine{446                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{447                 \textcolor{keywordflow}{case} 16:}
+\DoxyCodeLine{448                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la posicion x e y de la celda, el valor a poner en esa celda y el kakuro a jugar"{}});}
+\DoxyCodeLine{449                     x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{450                     y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{451                     value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{452                     kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{453                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkColumnValidity"{}});}
+\DoxyCodeLine{454                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a37520fe3df8d7aa1f4a04a04703ef13f}{testCheckColumnValidity}}(x,y,value,kakuro);}
+\DoxyCodeLine{455                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{456                 \textcolor{keywordflow}{case} 17:}
+\DoxyCodeLine{457                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto (este en la fase de juego que se quiera y el mismo kakuro resuelto"{}});}
+\DoxyCodeLine{458 }
+\DoxyCodeLine{459                     String kakuro1 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{460                     String kakuroFinished = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{461 }
+\DoxyCodeLine{462                     System.out.println(\textcolor{stringliteral}{"{}Se llama a isFinished"{}});}
+\DoxyCodeLine{463                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a792d86dc5c20cbc0d57b92c6b740c0de}{testIsFinished}}(kakuro1, kakuroFinished);}
+\DoxyCodeLine{464                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{465                 \textcolor{keywordflow}{case} 18:}
+\DoxyCodeLine{466                     System.out.println(\textcolor{stringliteral}{"{}Indique un Kakuro en el formato correcto y el mismo kakuro resuelto"{}});}
+\DoxyCodeLine{467 }
+\DoxyCodeLine{468                     String kakuro2 = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{469                     String kakuro2Finished = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}{readKakuro}}();}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{471                     System.out.println(\textcolor{stringliteral}{"{}Se llama a isFinished"{}});}
+\DoxyCodeLine{472                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a8055afd529cfbc78803b9923bc4ad3fd}{testSetCorrectValues}}(kakuro2, kakuro2Finished);}
+\DoxyCodeLine{473                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{474                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{475                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
+\DoxyCodeLine{476                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{477             \}}
+\DoxyCodeLine{478             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n Opciones: \(\backslash\)n 1. Creadora con valores \(\backslash\)n 2. Creadora a partir de String \(\backslash\)n 3. Convertir Kakuro a String \(\backslash\)n 4. Convertir Kakuro correcto a String \(\backslash\)n 5. Setter de row \(\backslash\)n 6. Getter difficulty"{}} +}
+\DoxyCodeLine{479                     \textcolor{stringliteral}{"{}\(\backslash\)n 7. Setter difficulty \(\backslash\)n 8. Getter rowSize \(\backslash\)n 9. Getter columnSize \(\backslash\)n 10. Getter board \(\backslash\)n 11. Getter cell \(\backslash\)n 12. Setter value en celda blanca \(\backslash\)n 13. Check column \(\backslash\)n 14. Mirar validez de fila \(\backslash\)n 15. Mirar validez de la columna"{}} +}
+\DoxyCodeLine{480                     \textcolor{stringliteral}{"{}\(\backslash\)n 16. Mirar si se ha terminado \(\backslash\)n 17. Salir"{}});}
+\DoxyCodeLine{481             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}{readNumber}}();}
+\DoxyCodeLine{482         \}}
+\DoxyCodeLine{483         System.exit(0);}
+\DoxyCodeLine{484     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a7098c62eee8cccf4984a351304e01c34}} 
@@ -765,20 +844,20 @@ el kakuro leído
 \end{DoxyReturn}
 
 
-Definición en la línea 446 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 490 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{446                                       \{}
-\DoxyCodeLine{447         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{448         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9497efdfb2f144d46528bd1b32e15d86}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{449         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
-\DoxyCodeLine{450         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
-\DoxyCodeLine{451         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{452         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
-\DoxyCodeLine{453             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9497efdfb2f144d46528bd1b32e15d86}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{454         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{455     \}}
+\DoxyCodeLine{490                                       \{}
+\DoxyCodeLine{491         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{492         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9497efdfb2f144d46528bd1b32e15d86}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{493         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{494         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{495         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{496         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{497             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9497efdfb2f144d46528bd1b32e15d86}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{498         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{499     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_ae1c57298458724404ade22ed20b7ba8d}} 
@@ -796,15 +875,15 @@ el número leído
 \end{DoxyReturn}
 
 
-Definición en la línea 461 del archivo Driver\+Kakuro.\+java.
+Definición en la línea 505 del archivo Driver\+Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{461                                    \{}
-\DoxyCodeLine{462         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{463         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9497efdfb2f144d46528bd1b32e15d86}{reader}}.nextInt();}
-\DoxyCodeLine{464         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{465     \}}
+\DoxyCodeLine{505                                    \{}
+\DoxyCodeLine{506         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{507         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro_a9497efdfb2f144d46528bd1b32e15d86}{reader}}.nextInt();}
+\DoxyCodeLine{508         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{509     \}}
 
 \end{DoxyCode}
 

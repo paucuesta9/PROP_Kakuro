@@ -26,7 +26,7 @@ var searchData=
   ['correctvalue_27',['correctValue',['../classdomain_1_1classes_1_1_white_cell.html#aedf31a0ac722329a220626ec73001420',1,'domain::classes::WhiteCell']]],
   ['countwhitecellsh_28',['countWhiteCellsH',['../classdomain_1_1controllers_1_1_ctrl_generate.html#aa37236c0c6fb03f3c1bd5168f01f0135',1,'domain::controllers::CtrlGenerate']]],
   ['countwhitecellsv_29',['countWhiteCellsV',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a9fa37d0c588aa825858b7bb13760b90a',1,'domain::controllers::CtrlGenerate']]],
-  ['ctrldata_30',['CtrlData',['../classdata_1_1_ctrl_data.html',1,'data.CtrlData'],['../classdata_1_1_ctrl_data.html#ad531e4834fc183b445e925a493cdeb3a',1,'data.CtrlData.CtrlData()'],['../classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e',1,'data.CtrlData.ctrlData()']]],
+  ['ctrldata_30',['CtrlData',['../classdata_1_1_ctrl_data.html',1,'data.CtrlData'],['../classdata_1_1_ctrl_data.html#a5f2fb5f6bfa941398e0d5cd30a542c1e',1,'data.CtrlData.ctrlData()'],['../classdata_1_1_ctrl_data.html#ad531e4834fc183b445e925a493cdeb3a',1,'data.CtrlData.CtrlData()']]],
   ['ctrldata_2ejava_31',['CtrlData.java',['../_ctrl_data_8java.html',1,'']]],
   ['ctrldomain_32',['CtrlDomain',['../classdomain_1_1controllers_1_1_ctrl_domain.html',1,'domain.controllers.CtrlDomain'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#a8d6943f4b1427c2f78d6e4e01430d8f7',1,'domain.controllers.CtrlDomain.CtrlDomain()']]],
   ['ctrldomain_2ejava_33',['CtrlDomain.java',['../_ctrl_domain_8java.html',1,'']]],

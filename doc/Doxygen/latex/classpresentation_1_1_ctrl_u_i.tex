@@ -124,11 +124,11 @@ Definición en la línea 50 del archivo Ctrl\+U\+I.\+java.
 \DoxyCodeLine{63                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a44c82744a9fa87856db8b1c9d89c49ae}{play}}();}
 \DoxyCodeLine{64                 \textcolor{keywordflow}{break};}
 \DoxyCodeLine{65             \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{66                 System.out.println(\textcolor{stringliteral}{"{}Indique el Kakuro dentro de la carpeta data que desea validar"{}});}
+\DoxyCodeLine{66                 System.out.println(\textcolor{stringliteral}{"{}Indique el Kakuro dentro de la carpeta kakuros\_usuario que desea validar"{}});}
 \DoxyCodeLine{67                 kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
 \DoxyCodeLine{68                 \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
 \DoxyCodeLine{69                     \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{70                         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a526b8658cc135852424b6d5ad539e4a9}{getKakuro}}(\textcolor{stringliteral}{"{}data/"{}} + kakuro + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{70                         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a968805b76373ae5cd79eddd9a792d4eb}{getKakuroAndAssign}}(\textcolor{stringliteral}{"{}data/kakuros\_usuario/"{}} + kakuro + \textcolor{stringliteral}{"{}.txt"{}});}
 \DoxyCodeLine{71                         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{72                     \} \textcolor{keywordflow}{catch} (IOException e) \{}
 \DoxyCodeLine{73                         System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo"{}});}
@@ -146,66 +146,79 @@ Definición en la línea 50 del archivo Ctrl\+U\+I.\+java.
 \DoxyCodeLine{85                 \textcolor{comment}{//cd.difficulty();}}
 \DoxyCodeLine{86                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a9f1e10a0ea84bf53bf417392e3193d96}{validate}}()) \{}
 \DoxyCodeLine{87                     System.out.println(\textcolor{stringliteral}{"{}El Kakuro es correcto"{}});}
-\DoxyCodeLine{88                 \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{89                     System.out.println(\textcolor{stringliteral}{"{}El Kakuro no es correcto"{}});}
-\DoxyCodeLine{90                 \}}
-\DoxyCodeLine{91                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
-\DoxyCodeLine{92                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{93             \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{94                 System.out.println(\textcolor{stringliteral}{"{}Indique el Kakuro dentro de la carpeta data que desea resolver"{}});}
-\DoxyCodeLine{95                 kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
-\DoxyCodeLine{96                 \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
-\DoxyCodeLine{97                     \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{98                         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a526b8658cc135852424b6d5ad539e4a9}{getKakuro}}(\textcolor{stringliteral}{"{}data/"{}} + kakuro + \textcolor{stringliteral}{"{}.txt"{}});}
-\DoxyCodeLine{99                         \textcolor{keywordflow}{break};}
-\DoxyCodeLine{100                     \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{101                         System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo"{}});}
-\DoxyCodeLine{102                         kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
-\DoxyCodeLine{103                         \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{104                     \} \textcolor{keywordflow}{catch} (IndexOutOfBoundsException e) \{}
-\DoxyCodeLine{105                         System.out.println(\textcolor{stringliteral}{"{}El tamaño indicado del Kakuro no corresponde con el tamaño real"{}});}
-\DoxyCodeLine{106                         kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
-\DoxyCodeLine{107                         \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{108                     \} \textcolor{keywordflow}{catch} (NumberFormatException e) \{}
-\DoxyCodeLine{109                         System.out.println(\textcolor{stringliteral}{"{}El kakuro contiene alguna o varias casillas con un formato incorrecto"{}});}
+\DoxyCodeLine{88                     System.out.print(\textcolor{stringliteral}{"{}¿Desea guardar el kakuro validado? Escriba 1 para guardar, 0 para no guardar: "{}});}
+\DoxyCodeLine{89                     \textcolor{keywordtype}{int} option = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{90                     \textcolor{keywordflow}{if} (option == 1) \{}
+\DoxyCodeLine{91                         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
+\DoxyCodeLine{92                         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}{saveKakuro}}();}
+\DoxyCodeLine{93                     \}}
+\DoxyCodeLine{94                 \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{95                     System.out.println(\textcolor{stringliteral}{"{}El Kakuro no es correcto"{}});}
+\DoxyCodeLine{96                 \}}
+\DoxyCodeLine{97                 System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{98                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
+\DoxyCodeLine{99                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{100             \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{101                 System.out.println(\textcolor{stringliteral}{"{}Indique el Kakuro dentro de la carpeta data que desea resolver"{}});}
+\DoxyCodeLine{102                 kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
+\DoxyCodeLine{103                 \textcolor{keywordflow}{while} (\textcolor{keyword}{true}) \{}
+\DoxyCodeLine{104                     \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{105                         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a968805b76373ae5cd79eddd9a792d4eb}{getKakuroAndAssign}}(\textcolor{stringliteral}{"{}data/"{}} + kakuro + \textcolor{stringliteral}{"{}.txt"{}});}
+\DoxyCodeLine{106                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{107                     \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{108                         System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo"{}});}
+\DoxyCodeLine{109                         kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
 \DoxyCodeLine{110                         \textcolor{keywordflow}{continue};}
-\DoxyCodeLine{111                     \}}
-\DoxyCodeLine{112                 \}}
-\DoxyCodeLine{113                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
-\DoxyCodeLine{114                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a190c5a8afe581fff2484589fd1ca2fb8}{writeCorrectKakuroInTerminal}}();}
-\DoxyCodeLine{115                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
-\DoxyCodeLine{116                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{117             \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{118                 System.out.print(\textcolor{stringliteral}{"{}Indique la dimension n (NxN) del Kakuro que desea generar (n >= 3): "{}});}
-\DoxyCodeLine{119                 \textcolor{keywordtype}{int} size = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{120                 \textcolor{keywordflow}{while} (size < 3) \{}
-\DoxyCodeLine{121                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido no es correcto, tiene que ser mayor o igual a 3"{}});}
-\DoxyCodeLine{122                     System.out.print(\textcolor{stringliteral}{"{}Indique la dimension n (NxN) del Kakuro que desea generar (n >= 3): "{}});}
-\DoxyCodeLine{123                     size = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{124                 \}}
-\DoxyCodeLine{125                 System.out.println(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{126                 System.out.print(\textcolor{stringliteral}{"{}Indique la dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
-\DoxyCodeLine{127                 \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{128                 \textcolor{keywordflow}{while} (diff < 1 || diff > 3) \{}
-\DoxyCodeLine{129                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido no es correcto"{}});}
-\DoxyCodeLine{130                     System.out.print(\textcolor{stringliteral}{"{}Indique la dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
-\DoxyCodeLine{131                     diff = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{132                 \}}
-\DoxyCodeLine{133                 System.out.println(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{134                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_af03fb518579bbc53d0a328e13cc4bb77}{generate}}(size,diff);}
-\DoxyCodeLine{135                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}{writeKakuroInTerminal}}();}
-\DoxyCodeLine{136                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
-\DoxyCodeLine{137                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{138             \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{139                 System.exit(0);}
-\DoxyCodeLine{140                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{141             \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{142                 System.out.println(\textcolor{stringliteral}{"{}El número introducido es incorrecto"{}});}
-\DoxyCodeLine{143                 System.out.println(\textcolor{stringliteral}{"{}Debe introducir un número entre 1 y 4"{}});}
-\DoxyCodeLine{144                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
-\DoxyCodeLine{145                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{146         \}}
-\DoxyCodeLine{147     \}}
+\DoxyCodeLine{111                     \} \textcolor{keywordflow}{catch} (IndexOutOfBoundsException e) \{}
+\DoxyCodeLine{112                         System.out.println(\textcolor{stringliteral}{"{}El tamaño indicado del Kakuro no corresponde con el tamaño real"{}});}
+\DoxyCodeLine{113                         kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}{readLine}}();}
+\DoxyCodeLine{114                         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{115                     \} \textcolor{keywordflow}{catch} (NumberFormatException e) \{}
+\DoxyCodeLine{116                         System.out.println(\textcolor{stringliteral}{"{}El kakuro contiene alguna o varias casillas con un formato incorrecto"{}});}
+\DoxyCodeLine{117                         \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{118                     \}}
+\DoxyCodeLine{119                 \}}
+\DoxyCodeLine{120                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
+\DoxyCodeLine{121                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a190c5a8afe581fff2484589fd1ca2fb8}{writeCorrectKakuroInTerminal}}();}
+\DoxyCodeLine{122                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
+\DoxyCodeLine{123                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{124             \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{125                 System.out.print(\textcolor{stringliteral}{"{}Indique la dimension n (NxN) del Kakuro que desea generar (n >= 3): "{}});}
+\DoxyCodeLine{126                 \textcolor{keywordtype}{int} size = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{127                 \textcolor{keywordflow}{while} (size < 3) \{}
+\DoxyCodeLine{128                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido no es correcto, tiene que ser mayor o igual a 3"{}});}
+\DoxyCodeLine{129                     System.out.print(\textcolor{stringliteral}{"{}Indique la dimension n (NxN) del Kakuro que desea generar (n >= 3): "{}});}
+\DoxyCodeLine{130                     size = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{131                 \}}
+\DoxyCodeLine{132                 System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{133                 System.out.print(\textcolor{stringliteral}{"{}Indique la dificultad (En relación a número de casillas blancas, una vez generado se calculará la dificultad con todos los parámetros): Fácil (1), Medio (2), Dificil (3): "{}});}
+\DoxyCodeLine{134                 \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{135                 \textcolor{keywordflow}{while} (diff < 1 || diff > 3) \{}
+\DoxyCodeLine{136                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido no es correcto"{}});}
+\DoxyCodeLine{137                     System.out.print(\textcolor{stringliteral}{"{}Indique la dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
+\DoxyCodeLine{138                     diff = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{139                 \}}
+\DoxyCodeLine{140                 System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{141                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_af03fb518579bbc53d0a328e13cc4bb77}{generate}}(size,diff);}
+\DoxyCodeLine{142                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}{writeKakuroInTerminal}}();}
+\DoxyCodeLine{143                 System.out.print(\textcolor{stringliteral}{"{}¿Desea guardar el kakuro generado? Escriba 1 para guardar, 0 para no guardar: "{}});}
+\DoxyCodeLine{144                 \textcolor{keywordtype}{int} option = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{145                 \textcolor{keywordflow}{if} (option == 1) \{}
+\DoxyCodeLine{146                     \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
+\DoxyCodeLine{147                     \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}{saveKakuro}}();}
+\DoxyCodeLine{148                 \}}
+\DoxyCodeLine{149                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
+\DoxyCodeLine{150                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{151             \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{152                 System.exit(0);}
+\DoxyCodeLine{153                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{154             \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{155                 System.out.println(\textcolor{stringliteral}{"{}El número introducido es incorrecto"{}});}
+\DoxyCodeLine{156                 System.out.println(\textcolor{stringliteral}{"{}Debe introducir un número entre 1 y 4"{}});}
+\DoxyCodeLine{157                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
+\DoxyCodeLine{158                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{159         \}}
+\DoxyCodeLine{160     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a44c82744a9fa87856db8b1c9d89c49ae}\label{classpresentation_1_1_ctrl_u_i_a44c82744a9fa87856db8b1c9d89c49ae}} 
@@ -220,84 +233,90 @@ Opcion de jugar del menu.
 
 Se crea/carga una partida y se juega 
 
-Definición en la línea 153 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 166 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{153                        \{}
-\DoxyCodeLine{154         \textcolor{comment}{//System.out.println("{}1. Empezar nueva partida"{});}}
-\DoxyCodeLine{155         \textcolor{comment}{//System.out.println("{}2. Cargar partida empezada"{});}}
-\DoxyCodeLine{156         \textcolor{comment}{//int choice = readNumber();}}
-\DoxyCodeLine{157         \textcolor{comment}{//if (choice == 1) \{}}
-\DoxyCodeLine{158             System.out.print(\textcolor{stringliteral}{"{}Escoge dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
-\DoxyCodeLine{159             \textcolor{keywordtype}{int} difficulty = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{160             \textcolor{keywordflow}{while} (difficulty < 1 || difficulty > 3) \{}
-\DoxyCodeLine{161                 System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido no es correcto"{}});}
-\DoxyCodeLine{162                 System.out.print(\textcolor{stringliteral}{"{}Escoge dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
-\DoxyCodeLine{163                 difficulty = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{164             \}}
-\DoxyCodeLine{165             System.out.print(\textcolor{stringliteral}{"{}Escoge tamaño N M (NxM): "{}});}
-\DoxyCodeLine{166             \textcolor{keywordtype}{int} kakuroSizeRow = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{167             \textcolor{keywordtype}{int} kakuroSizeColumn = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{168             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa555fb39b271967854f96d01c96a1561}{startNewGame}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
-\DoxyCodeLine{169 }
-\DoxyCodeLine{170 }
-\DoxyCodeLine{171         \textcolor{comment}{// \}}}
-\DoxyCodeLine{172 \textcolor{comment}{//        else if (choice == 2) \{}}
-\DoxyCodeLine{173 \textcolor{comment}{//            ArrayList<Integer> startedGames= cd.getStartedGames();}}
-\DoxyCodeLine{174 \textcolor{comment}{//            for (int i = 0; i < startedGames.size(); ++i) \{}}
-\DoxyCodeLine{175 \textcolor{comment}{//                System.out.println(i + "{}: "{} + startedGames.get(i));}}
-\DoxyCodeLine{176 \textcolor{comment}{//            \}}}
-\DoxyCodeLine{177 \textcolor{comment}{//            System.out.println("{}Escoja la partida que desea retomar"{});}}
-\DoxyCodeLine{178 \textcolor{comment}{//            int game = readNumber();}}
-\DoxyCodeLine{179 \textcolor{comment}{//            cd.setGame(startedGames.get(game));}}
-\DoxyCodeLine{180 \textcolor{comment}{//        \}}}
-\DoxyCodeLine{181         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
-\DoxyCodeLine{182         System.out.println(\textcolor{stringliteral}{"{} -\/-\/ INSTRUCCIONES JUGAR -\/-\/"{}});}
-\DoxyCodeLine{183         System.out.println(\textcolor{stringliteral}{"{}Para colocar un número debe colocar la posición x e y seguido del valor de la casilla."{}});}
-\DoxyCodeLine{184         System.out.println(\textcolor{stringliteral}{"{}Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9"{}});}
-\DoxyCodeLine{185         System.out.println(\textcolor{stringliteral}{"{}Si desea una ayuda escriba -\/2"{}});}
-\DoxyCodeLine{186         System.out.println(\textcolor{stringliteral}{"{}Para salir escriba -\/1"{}});}
-\DoxyCodeLine{187         \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}{isFinished}}()) \{}
-\DoxyCodeLine{188             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}{writeKakuroInTerminal}}();}
-\DoxyCodeLine{189             System.out.println(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{190             \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{191             \textcolor{keywordflow}{if} (x == -\/1) \{}
-\DoxyCodeLine{192                \textcolor{comment}{// System.out.println("{}¿Desea guardar la partida? Si (1), No (0)"{});}}
-\DoxyCodeLine{193                 \textcolor{comment}{//int save = readNumber();}}
-\DoxyCodeLine{194                 \textcolor{comment}{//if (save == 1) saveGame();}}
-\DoxyCodeLine{195                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
-\DoxyCodeLine{196             \}}
-\DoxyCodeLine{197             \textcolor{keywordflow}{if} (x == -\/2) \{}
-\DoxyCodeLine{198                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}}();}
-\DoxyCodeLine{199                 System.out.println(\textcolor{stringliteral}{"{} -\/-\/ INSTRUCCIONES JUGAR -\/-\/"{}});}
-\DoxyCodeLine{200                 System.out.println(\textcolor{stringliteral}{"{}Para colocar un número debe colocar la posición x e y seguido del valor de la casilla."{}});}
-\DoxyCodeLine{201                 System.out.println(\textcolor{stringliteral}{"{}Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9"{}});}
-\DoxyCodeLine{202                 System.out.println(\textcolor{stringliteral}{"{}Si desea una ayuda escriba -\/2"{}});}
-\DoxyCodeLine{203                 System.out.println(\textcolor{stringliteral}{"{}Para salir escriba -\/1"{}});}
-\DoxyCodeLine{204             \} \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{205                 \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{206                 \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ac156e0e807b178399afeb4c51841fea5}{checkCoord}}(x, y)) \{}
-\DoxyCodeLine{207                     x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{208                     y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{209                 \}}
-\DoxyCodeLine{210                 \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{211                 \textcolor{keywordflow}{while} (value <= 0 || value >= 10) \{}
-\DoxyCodeLine{212                     System.out.println(\textcolor{stringliteral}{"{}Introduzca un valor entre 1 y 9"{}});}
-\DoxyCodeLine{213                     value = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{214                 \}}
-\DoxyCodeLine{215                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aade2f964f7f12976d9a3bbb642c140c9}{kakuroSetValue}}(x, y, value)) \{}
-\DoxyCodeLine{216                     System.out.println(\textcolor{stringliteral}{"{}Posición de casilla incorrecto. Por favor, introduzca una posición de una casilla blanca"{}});}
-\DoxyCodeLine{217                 \}}
-\DoxyCodeLine{218                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}{checkValidity}}(x, y, value)) \{}
-\DoxyCodeLine{219                     System.out.println(\textcolor{stringliteral}{"{}Valor de la casilla incorrecto. Por favor, introduzca un valor correcto"{}});}
-\DoxyCodeLine{220                 \}}
-\DoxyCodeLine{221             \}}
-\DoxyCodeLine{222             System.out.println(\textcolor{stringliteral}{"{}"{}});}
-\DoxyCodeLine{223         \}}
-\DoxyCodeLine{224         System.out.println(\textcolor{stringliteral}{"{}Felicidades! Has completado el Kakuro"{}});}
-\DoxyCodeLine{225         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
-\DoxyCodeLine{226     \}}
+\DoxyCodeLine{166                        \{}
+\DoxyCodeLine{167         \textcolor{comment}{//System.out.println("{}1. Empezar nueva partida"{});}}
+\DoxyCodeLine{168         \textcolor{comment}{//System.out.println("{}2. Cargar partida empezada"{});}}
+\DoxyCodeLine{169         \textcolor{comment}{//int choice = readNumber();}}
+\DoxyCodeLine{170         \textcolor{comment}{//if (choice == 1) \{}}
+\DoxyCodeLine{171             System.out.print(\textcolor{stringliteral}{"{}Escoge dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
+\DoxyCodeLine{172             \textcolor{keywordtype}{int} difficulty = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{173             \textcolor{keywordflow}{while} (difficulty < 1 || difficulty > 3) \{}
+\DoxyCodeLine{174                 System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido no es correcto"{}});}
+\DoxyCodeLine{175                 System.out.print(\textcolor{stringliteral}{"{}Escoge dificultad: Fácil (1), Medio (2), Dificil (3): "{}});}
+\DoxyCodeLine{176                 difficulty = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{177             \}}
+\DoxyCodeLine{178             System.out.print(\textcolor{stringliteral}{"{}Escoge tamaño N M (NxM): "{}});}
+\DoxyCodeLine{179             \textcolor{keywordtype}{int} kakuroSizeRow = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{180             \textcolor{keywordtype}{int} kakuroSizeColumn = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{181             \textcolor{keywordflow}{while} (kakuroSizeRow < 3 || kakuroSizeColumn < 3) \{}
+\DoxyCodeLine{182                 System.out.println(\textcolor{stringliteral}{"{}Los tamaños deben ser de mínimo 3"{}});}
+\DoxyCodeLine{183                 System.out.print(\textcolor{stringliteral}{"{}Escoge tamaño N M (NxM): "{}});}
+\DoxyCodeLine{184                 kakuroSizeRow = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{185                 kakuroSizeColumn = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{186             \}}
+\DoxyCodeLine{187             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa555fb39b271967854f96d01c96a1561}{startNewGame}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190         \textcolor{comment}{// \}}}
+\DoxyCodeLine{191 \textcolor{comment}{//        else if (choice == 2) \{}}
+\DoxyCodeLine{192 \textcolor{comment}{//            ArrayList<Integer> startedGames= cd.getStartedGames();}}
+\DoxyCodeLine{193 \textcolor{comment}{//            for (int i = 0; i < startedGames.size(); ++i) \{}}
+\DoxyCodeLine{194 \textcolor{comment}{//                System.out.println(i + "{}: "{} + startedGames.get(i));}}
+\DoxyCodeLine{195 \textcolor{comment}{//            \}}}
+\DoxyCodeLine{196 \textcolor{comment}{//            System.out.println("{}Escoja la partida que desea retomar"{});}}
+\DoxyCodeLine{197 \textcolor{comment}{//            int game = readNumber();}}
+\DoxyCodeLine{198 \textcolor{comment}{//            cd.setGame(startedGames.get(game));}}
+\DoxyCodeLine{199 \textcolor{comment}{//        \}}}
+\DoxyCodeLine{200         \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}{isFinished}}()) \{}
+\DoxyCodeLine{201             System.out.println(\textcolor{stringliteral}{"{} -\/-\/ INSTRUCCIONES JUGAR -\/-\/"{}});}
+\DoxyCodeLine{202             System.out.println(\textcolor{stringliteral}{"{}Para colocar un número debe colocar la posición x e y seguido del valor de la casilla."{}});}
+\DoxyCodeLine{203             System.out.println(\textcolor{stringliteral}{"{}Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9"{}});}
+\DoxyCodeLine{204             System.out.println(\textcolor{stringliteral}{"{}Si desea una ayuda escriba -\/2"{}});}
+\DoxyCodeLine{205             System.out.println(\textcolor{stringliteral}{"{}Para salir escriba -\/1"{}});}
+\DoxyCodeLine{206             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}{writeKakuroInTerminal}}();}
+\DoxyCodeLine{207             System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{208             \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{209             \textcolor{keywordflow}{if} (x == -\/1) \{}
+\DoxyCodeLine{210                \textcolor{comment}{// System.out.println("{}¿Desea guardar la partida? Si (1), No (0)"{});}}
+\DoxyCodeLine{211                 \textcolor{comment}{//int save = readNumber();}}
+\DoxyCodeLine{212                 \textcolor{comment}{//if (save == 1) saveGame();}}
+\DoxyCodeLine{213                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
+\DoxyCodeLine{214             \}}
+\DoxyCodeLine{215             \textcolor{keywordflow}{if} (x == -\/2) \{}
+\DoxyCodeLine{216                 \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}}();}
+\DoxyCodeLine{217                 System.out.println(\textcolor{stringliteral}{"{} -\/-\/ INSTRUCCIONES JUGAR -\/-\/"{}});}
+\DoxyCodeLine{218                 System.out.println(\textcolor{stringliteral}{"{}Para colocar un número debe colocar la posición x e y seguido del valor de la casilla."{}});}
+\DoxyCodeLine{219                 System.out.println(\textcolor{stringliteral}{"{}Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9"{}});}
+\DoxyCodeLine{220                 System.out.println(\textcolor{stringliteral}{"{}Si desea una ayuda escriba -\/2"{}});}
+\DoxyCodeLine{221                 System.out.println(\textcolor{stringliteral}{"{}Para salir escriba -\/1"{}});}
+\DoxyCodeLine{222             \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{223                 \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{224                 \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ac156e0e807b178399afeb4c51841fea5}{checkCoord}}(x, y)) \{}
+\DoxyCodeLine{225                     x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{226                     y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{227                 \}}
+\DoxyCodeLine{228                 \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{229                 \textcolor{keywordflow}{while} (value <= 0 || value >= 10) \{}
+\DoxyCodeLine{230                     System.out.println(\textcolor{stringliteral}{"{}Introduzca un valor entre 1 y 9"{}});}
+\DoxyCodeLine{231                     value = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{232                 \}}
+\DoxyCodeLine{233                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aade2f964f7f12976d9a3bbb642c140c9}{kakuroSetValue}}(x, y, value)) \{}
+\DoxyCodeLine{234                     System.out.println(\textcolor{stringliteral}{"{}Posición de casilla incorrecto. Por favor, introduzca una posición de una casilla blanca"{}});}
+\DoxyCodeLine{235                 \}}
+\DoxyCodeLine{236                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}{checkValidity}}(x, y, value)) \{}
+\DoxyCodeLine{237                     System.out.println(\textcolor{stringliteral}{"{}Valor de la casilla incorrecto. Por favor, introduzca un valor correcto"{}});}
+\DoxyCodeLine{238                 \}}
+\DoxyCodeLine{239             \}}
+\DoxyCodeLine{240             System.out.println(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{241         \}}
+\DoxyCodeLine{242         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}{writeKakuroInTerminal}}();}
+\DoxyCodeLine{243         System.out.println(\textcolor{stringliteral}{"{}Felicidades! Has completado el Kakuro\(\backslash\)n"{}});}
+\DoxyCodeLine{244         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a749a0434050b70aa288506b882e63a5a}{menu}}();}
+\DoxyCodeLine{245     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}\label{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}} 
@@ -316,53 +335,53 @@ Ofrece dos tipos de ayudas al usuario\+:
 \item Le introduce el valor correcto de la celda blanca que el usuario pide 
 \end{DoxyItemize}
 
-Definición en la línea 241 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 260 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{241                        \{}
-\DoxyCodeLine{242         System.out.println(\textcolor{stringliteral}{"{} -\/-\/ INSTRUCCIONES AYUDA -\/-\/"{}});}
-\DoxyCodeLine{243         System.out.println(\textcolor{stringliteral}{"{}1. Comprobar valor: Comprobar si un valor que ha introducido es correcto"{}});}
-\DoxyCodeLine{244         System.out.println(\textcolor{stringliteral}{"{}2. Obtener valor: Obtener el valor correcto de una casilla"{}});}
-\DoxyCodeLine{245         \textcolor{keywordtype}{int} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}} = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{246         System.out.println(\textcolor{stringliteral}{"{}Introduzca la posición x e y de la casilla para la que quiere la ayuda"{}});}
-\DoxyCodeLine{247         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{248         \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{249         \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ac156e0e807b178399afeb4c51841fea5}{checkCoord}}(x, y)) \{}
-\DoxyCodeLine{250             System.out.println(\textcolor{stringliteral}{"{}Introduzca valores correctos para x e y"{}});}
-\DoxyCodeLine{251             System.out.println(\textcolor{stringliteral}{"{}La variable x tiene que ir entre 0 y "{}} + \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aefb56e0e0d754e8a400ee0c49c72b00b}{getRowSize}}());}
-\DoxyCodeLine{252             System.out.println(\textcolor{stringliteral}{"{}La variable y tiene que ir entre 0 y "{}} + \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5b9f1375bb3b76814abfb09a225dbd24}{getColumnSize}}());}
-\DoxyCodeLine{253             x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{254             y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
-\DoxyCodeLine{255         \}}
-\DoxyCodeLine{256         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}} == 1) \{}
-\DoxyCodeLine{257             \textcolor{keywordtype}{int} helpReply = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac571b44b2ea9370ad8dc99cbb51c2672}{helpMyValue}}(x, y);}
-\DoxyCodeLine{258             \textcolor{keywordflow}{switch} (helpReply) \{}
-\DoxyCodeLine{259                 \textcolor{keywordflow}{case} -\/2:}
-\DoxyCodeLine{260                     System.out.println(\textcolor{stringliteral}{"{}Aún no ha introducido valor en la casilla"{}});}
-\DoxyCodeLine{261                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{262                 \textcolor{keywordflow}{case} -\/1:}
-\DoxyCodeLine{263                     System.out.println(\textcolor{stringliteral}{"{}Las coordenadas que ha introducido son de una casilla negra"{}});}
-\DoxyCodeLine{264                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{265                 \textcolor{keywordflow}{case} 0:}
-\DoxyCodeLine{266                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido es incorrecto"{}});}
-\DoxyCodeLine{267                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{268                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{269                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido es correcto"{}});}
-\DoxyCodeLine{270                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{271             \}}
-\DoxyCodeLine{272         \}}
-\DoxyCodeLine{273         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}} == 2) \{}
-\DoxyCodeLine{274             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a29785e3d8f7975fec97544606c3b3773}{helpCorrectNumber}}(x, y)) \{}
-\DoxyCodeLine{275                 System.out.println(\textcolor{stringliteral}{"{}Las coordenadas que ha introducido son de una casilla negra"{}});}
-\DoxyCodeLine{276             \} \textcolor{keywordflow}{else}}
-\DoxyCodeLine{277                 System.out.println(\textcolor{stringliteral}{"{}Se ha colocado el valor correcto en la casilla indicada"{}});}
-\DoxyCodeLine{278         \}}
-\DoxyCodeLine{279         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{280             System.out.println(\textcolor{stringliteral}{"{}El número que ha introducido no es correcto"{}});}
-\DoxyCodeLine{281             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}}();}
-\DoxyCodeLine{282         \}}
-\DoxyCodeLine{283     \}}
+\DoxyCodeLine{260                        \{}
+\DoxyCodeLine{261         System.out.println(\textcolor{stringliteral}{"{} -\/-\/ INSTRUCCIONES AYUDA -\/-\/"{}});}
+\DoxyCodeLine{262         System.out.println(\textcolor{stringliteral}{"{}1. Comprobar valor: Comprobar si un valor que ha introducido es correcto"{}});}
+\DoxyCodeLine{263         System.out.println(\textcolor{stringliteral}{"{}2. Obtener valor: Obtener el valor correcto de una casilla"{}});}
+\DoxyCodeLine{264         \textcolor{keywordtype}{int} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}} = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{265         System.out.println(\textcolor{stringliteral}{"{}Introduzca la posición x e y de la casilla para la que quiere la ayuda"{}});}
+\DoxyCodeLine{266         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{267         \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{268         \textcolor{keywordflow}{while} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ac156e0e807b178399afeb4c51841fea5}{checkCoord}}(x, y)) \{}
+\DoxyCodeLine{269             System.out.println(\textcolor{stringliteral}{"{}Introduzca valores correctos para x e y"{}});}
+\DoxyCodeLine{270             System.out.println(\textcolor{stringliteral}{"{}La variable x tiene que ir entre 0 y "{}} + \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aefb56e0e0d754e8a400ee0c49c72b00b}{getRowSize}}());}
+\DoxyCodeLine{271             System.out.println(\textcolor{stringliteral}{"{}La variable y tiene que ir entre 0 y "{}} + \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5b9f1375bb3b76814abfb09a225dbd24}{getColumnSize}}());}
+\DoxyCodeLine{272             x = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{273             y = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}{readNumber}}();}
+\DoxyCodeLine{274         \}}
+\DoxyCodeLine{275         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}} == 1) \{}
+\DoxyCodeLine{276             \textcolor{keywordtype}{int} helpReply = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac571b44b2ea9370ad8dc99cbb51c2672}{helpMyValue}}(x, y);}
+\DoxyCodeLine{277             \textcolor{keywordflow}{switch} (helpReply) \{}
+\DoxyCodeLine{278                 \textcolor{keywordflow}{case} -\/2:}
+\DoxyCodeLine{279                     System.out.println(\textcolor{stringliteral}{"{}Aún no ha introducido valor en la casilla"{}});}
+\DoxyCodeLine{280                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{281                 \textcolor{keywordflow}{case} -\/1:}
+\DoxyCodeLine{282                     System.out.println(\textcolor{stringliteral}{"{}Las coordenadas que ha introducido son de una casilla negra"{}});}
+\DoxyCodeLine{283                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{284                 \textcolor{keywordflow}{case} 0:}
+\DoxyCodeLine{285                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido es incorrecto"{}});}
+\DoxyCodeLine{286                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{287                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{288                     System.out.println(\textcolor{stringliteral}{"{}El valor que ha introducido es correcto"{}});}
+\DoxyCodeLine{289                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{290             \}}
+\DoxyCodeLine{291         \}}
+\DoxyCodeLine{292         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}} == 2) \{}
+\DoxyCodeLine{293             \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a29785e3d8f7975fec97544606c3b3773}{helpCorrectNumber}}(x, y)) \{}
+\DoxyCodeLine{294                 System.out.println(\textcolor{stringliteral}{"{}Las coordenadas que ha introducido son de una casilla negra"{}});}
+\DoxyCodeLine{295             \} \textcolor{keywordflow}{else}}
+\DoxyCodeLine{296                 System.out.println(\textcolor{stringliteral}{"{}Se ha colocado el valor correcto en la casilla indicada"{}});}
+\DoxyCodeLine{297         \}}
+\DoxyCodeLine{298         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{299             System.out.println(\textcolor{stringliteral}{"{}El número que ha introducido no es correcto"{}});}
+\DoxyCodeLine{300             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a671b857cb4b762add84beca6c58c1ce5}{help}}();}
+\DoxyCodeLine{301         \}}
+\DoxyCodeLine{302     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ac156e0e807b178399afeb4c51841fea5}\label{classpresentation_1_1_ctrl_u_i_ac156e0e807b178399afeb4c51841fea5}} 
@@ -387,13 +406,13 @@ cierto si las coordenadas son correctas y falso si las coordenadas no lo son
 \end{DoxyReturn}
 
 
-Definición en la línea 292 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 311 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{292                                             \{}
-\DoxyCodeLine{293         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a87ae170731aa3d70092adf14e7d79857}{checkCoord}}(x,y);}
-\DoxyCodeLine{294     \}}
+\DoxyCodeLine{311                                             \{}
+\DoxyCodeLine{312         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a87ae170731aa3d70092adf14e7d79857}{checkCoord}}(x,y);}
+\DoxyCodeLine{313     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}\label{classpresentation_1_1_ctrl_u_i_a788646b757229e013cedf037d4fdee82}} 
@@ -411,15 +430,15 @@ el número introducido por la terminal
 \end{DoxyReturn}
 
 
-Definición en la línea 300 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 319 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{300                             \{}
-\DoxyCodeLine{301         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{302         number = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a91c1a196e1d53661bd964daca33ab0b9}{reader}}.nextInt();}
-\DoxyCodeLine{303         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{304     \}}
+\DoxyCodeLine{319                             \{}
+\DoxyCodeLine{320         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{321         number = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a91c1a196e1d53661bd964daca33ab0b9}{reader}}.nextInt();}
+\DoxyCodeLine{322         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{323     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}\label{classpresentation_1_1_ctrl_u_i_ad3b85499e69ebc491ba0acbdf2f1e679}} 
@@ -437,13 +456,13 @@ la linea introducida por la terminal
 \end{DoxyReturn}
 
 
-Definición en la línea 310 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 329 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{310                              \{}
-\DoxyCodeLine{311         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a91c1a196e1d53661bd964daca33ab0b9}{reader}}.nextLine();}
-\DoxyCodeLine{312     \}}
+\DoxyCodeLine{329                              \{}
+\DoxyCodeLine{330         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a91c1a196e1d53661bd964daca33ab0b9}{reader}}.nextLine().trim();}
+\DoxyCodeLine{331     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}\label{classpresentation_1_1_ctrl_u_i_a4fedb5accf52ae5645668ef0c5b7bfe1}} 
@@ -458,13 +477,13 @@ Escritura del Kakuro por terminal.
 
 Escribe el Kakuro con los valores que tiene en ese momento por la terminal 
 
-Definición en la línea 318 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 337 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{318                                         \{}
-\DoxyCodeLine{319         System.out.println(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad6f12d4830c90bf5f3e3b0e9696eaf0e}{getKakuroToString}}());}
-\DoxyCodeLine{320     \}}
+\DoxyCodeLine{337                                         \{}
+\DoxyCodeLine{338         System.out.println(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad6f12d4830c90bf5f3e3b0e9696eaf0e}{getKakuroToString}}());}
+\DoxyCodeLine{339     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a190c5a8afe581fff2484589fd1ca2fb8}\label{classpresentation_1_1_ctrl_u_i_a190c5a8afe581fff2484589fd1ca2fb8}} 
@@ -479,13 +498,13 @@ Escritura Kakuro correcto por terminal.
 
 Escribe la solución del Kakuro por la terminal 
 
-Definición en la línea 326 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 345 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{326                                                \{}
-\DoxyCodeLine{327         System.out.println(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a84a0345c9576dafd89f020650b4054ef}{getCorrectKakuroToString}}());}
-\DoxyCodeLine{328     \}}
+\DoxyCodeLine{345                                                \{}
+\DoxyCodeLine{346         System.out.println(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a84a0345c9576dafd89f020650b4054ef}{getCorrectKakuroToString}}());}
+\DoxyCodeLine{347     \}}
 
 \end{DoxyCode}
 
