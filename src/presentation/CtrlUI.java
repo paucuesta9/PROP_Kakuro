@@ -63,11 +63,11 @@ public class CtrlUI {
                 play();
                 break;
             case 2:
-                System.out.println("Indique el Kakuro dentro de la carpeta data que desea validar");
+                System.out.println("Indique el Kakuro dentro de la carpeta kakuros_usuario que desea validar");
                 kakuro = readLine();
                 while (true) {
                     try {
-                        cd.getKakuro("data/" + kakuro + ".txt");
+                        cd.getKakuro("data/kakuros_usuario/" + kakuro + ".txt");
                         break;
                     } catch (IOException e) {
                         System.out.println("No se ha encontrado el kakuro, por favor revise la ruta e introduzcala de nuevo");
@@ -85,9 +85,13 @@ public class CtrlUI {
                 //cd.difficulty();
                 if (cd.validate()) {
                     System.out.println("El Kakuro es correcto");
+                    System.out.print("¿Desea guardar el kakuro validado? Escriba 1 para guardar, 0 para no guardar: ");
+                    int option = readNumber();
+                    if (option == 1) cd.saveKakuro();
                 } else {
                     System.out.println("El Kakuro no es correcto");
                 }
+                System.out.println("");
                 menu();
                 break;
             case 3:
@@ -135,7 +139,10 @@ public class CtrlUI {
                 writeKakuroInTerminal();
                 System.out.print("¿Desea guardar el kakuro generado? Escriba 1 para guardar, 0 para no guardar: ");
                 int option = readNumber();
-                if (option == 1) cd.saveKakuro();
+                if (option == 1) {
+                    cd.resolve();
+                    cd.saveKakuro();
+                }
                 menu();
                 break;
             case 5:
@@ -181,13 +188,12 @@ public class CtrlUI {
 //            int game = readNumber();
 //            cd.setGame(startedGames.get(game));
 //        }
-        cd.resolve();
-        System.out.println(" -- INSTRUCCIONES JUGAR --");
-        System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
-        System.out.println("Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9");
-        System.out.println("Si desea una ayuda escriba -2");
-        System.out.println("Para salir escriba -1");
         while (!cd.isFinished()) {
+            System.out.println(" -- INSTRUCCIONES JUGAR --");
+            System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
+            System.out.println("Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9");
+            System.out.println("Si desea una ayuda escriba -2");
+            System.out.println("Para salir escriba -1");
             writeKakuroInTerminal();
             System.out.println("");
             int x = readNumber();
@@ -224,7 +230,8 @@ public class CtrlUI {
             }
             System.out.println("");
         }
-        System.out.println("Felicidades! Has completado el Kakuro");
+        writeKakuroInTerminal();
+        System.out.println("Felicidades! Has completado el Kakuro\n");
         menu();
     }
 

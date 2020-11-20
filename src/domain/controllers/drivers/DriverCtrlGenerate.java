@@ -341,7 +341,7 @@ public class DriverCtrlGenerate {
             board[0][i] = new BlackCell();
             board[i][0] = new BlackCell();
         }
-        currentKakuro = new Kakuro("0",0,board);
+        currentKakuro = new Kakuro(0,0,board);
         CtrlGenerate.firstColRow(currentKakuro.getBoard(),d); //Es necessario para evitar que pete
         CtrlGenerate.randomCells(currentKakuro.getBoard(),d);
         System.out.println(currentKakuro.toString());

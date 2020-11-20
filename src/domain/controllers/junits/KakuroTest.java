@@ -81,7 +81,7 @@ public class KakuroTest {
     public void KakuroBoard() {
         Cell[][] c = new Cell[1][1];
         try {
-            new Kakuro("0", 0, c);
+            new Kakuro(0, 0, c);
         } catch (Exception e) {
             fail(e.getMessage());
         }

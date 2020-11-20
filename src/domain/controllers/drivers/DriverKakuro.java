@@ -40,7 +40,7 @@ public class DriverKakuro {
                 else board[i][j] = new BlackCell();
             }
         }
-        Kakuro k = new Kakuro("0", 1, board);
+        Kakuro k = new Kakuro(0, 1, board);
         System.out.println("El Kakuro se ha creado");
     }
 

@@ -52,10 +52,21 @@ public class CtrlDomain {
         } catch (IOException e) {
             System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno...");
             currentKakuro = CtrlGenerate.generate(kakuroSizeRow,difficulty);
+            currentKakuro.setId(saveKakuro());
         }
         CtrlPlay.startGame(currentKakuro);
+        setCorrectValues();
         //currentGame = new Game(0,0, currentKakuro);
         //currentGame.startResumeTimer();
+    }
+
+    private void setCorrectValues() {
+        try {
+            Kakuro sol = new Kakuro(getKakuro("data/solutions/diff" + currentKakuro.getDifficulty() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + currentKakuro.getId() + ".txt"));
+            currentKakuro.setCorrectValues(sol);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 //    /** @brief
@@ -120,6 +131,7 @@ public class CtrlDomain {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         CtrlValidate.setKakuro(currentKakuro);
         CtrlValidate.validate(0,0, 0, vec, res);
+        CtrlValidate.setDifficulty();
         if (res[0]!=1) return false;
         else return true;
     }
@@ -199,7 +211,11 @@ public class CtrlDomain {
      * @param kakuroSizeColumn tamaño de columnas del tablero
      */
     public void searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException, IndexOutOfBoundsException, NumberFormatException {
-        this.currentKakuro = new Kakuro(data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn));
+        String kakuro = data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
+        int id = Character.getNumericValue(kakuro.charAt(0));
+        this.currentKakuro = new Kakuro(kakuro.substring(2));
+        currentKakuro.setId(id);
+        currentKakuro.setDifficulty(difficulty);
     }
 
     /** @brief Getter de Kakuro
@@ -208,8 +224,8 @@ public class CtrlDomain {
      *
      * @param filePath Ruta relativa al fichero con el Kakuro que se busca
      */
-    public void getKakuro(String filePath) throws IOException, IndexOutOfBoundsException, NumberFormatException {
-        this.currentKakuro = new Kakuro(data.getKakuro(/*"../" + */ filePath));
+    public String getKakuro(String filePath) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+        return data.getKakuro(/*"../" + */ filePath);
     }
 
 //    /** @brief Getter de partidas empezadas por el usuario actual
@@ -223,8 +239,8 @@ public class CtrlDomain {
     /** @brief Guarda un Kakuro en un fichero
      *
      */
-    public void saveKakuro() {
-        data.saveKakuro(currentKakuro.toString(), currentKakuro.correctToString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
+    public int saveKakuro() {
+        return data.saveKakuro(currentKakuro.toString(), currentKakuro.correctToString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
     }
 
     /** @brief Comprobadora de coordenadas

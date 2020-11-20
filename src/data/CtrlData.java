@@ -50,7 +50,11 @@ public class CtrlData {
         } catch (NullPointerException e) {
             throw new IOException();
         }
-        return getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + random.nextInt(numFile) + ".txt");
+        int id = random.nextInt(numFile);
+        StringBuilder content = new StringBuilder();
+        content.append(id).append("\n");
+        content.append(getKakuro("data/diff" + difficulty + "/" + kakuroSizeRow + "_" + kakuroSizeColumn + "/" + id + ".txt"));
+        return content.toString();
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa
@@ -73,11 +77,12 @@ public class CtrlData {
     /** @brief Guarda un kakuro en fichero
      *
      * @param content representa el contenido del kakuro
+     * @param solution representa el kakuro resuelto
      * @param diff representa la dificultad del kakuro
      * @param sizeRow representa el tamaño de filas del kakuro
      * @param sizeColumn representa el tamaño de columnas del kakuro
      */
-    public void saveKakuro(String content, String solucion, int diff, int sizeRow, int sizeColumn) {
+    public int saveKakuro(String content, String solution, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
         try {
             int number;
@@ -88,7 +93,7 @@ public class CtrlData {
                 File folder = new File("data/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
                 folder.mkdir();
             }
-            if (solucion != null) {
+            if (solution != null) {
                 File folderSol = new File("data/solutions/diff" + diff + "/" + sizeRow + "_" + sizeColumn);
                 folderSol.mkdir();
             }
@@ -96,16 +101,17 @@ public class CtrlData {
             PrintWriter pw = new PrintWriter(file);
             pw.print(content);
             pw.close();
-            if (solucion != null) {
+            if (solution != null) {
                 file = new FileWriter("data/solutions/diff" + diff + "/" + sizeRow + "_" + sizeColumn + "/" + number + ".txt");
                 PrintWriter pwSol = new PrintWriter(file);
-                pwSol.print(solucion);
+                pwSol.print(solution);
                 pwSol.close();
             }
-
+            return number;
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
+        return -1;
     }
 
     /** @brief Mira cuántos ficheros tienen una dificultad y tamaño en concreto

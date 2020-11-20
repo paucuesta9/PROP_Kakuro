@@ -63,6 +63,7 @@ public class DriverCtrlData {
      *
      * Comprueba que la función saveKakuro se ejecute correctamente
      * @param kakuro representa el kakuro a guardar
+     * @param kakuroSol representa el kakuro resuelto a guardar
      * @param diff representa la dificultad del kakuro
      * @param sizeRow representa el tamaño de filas del kakuro
      * @param sizeColumn representa el tamaño de columnas del kakuro

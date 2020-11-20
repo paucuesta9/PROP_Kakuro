@@ -12,7 +12,7 @@ public class Kakuro {
     /**
      * Es el identificador del Kakuro
      */
-    private String id;
+    private int id;
     /**
      * Es la dificultad del Kakuro, va de 1 a 3
      */
@@ -38,7 +38,7 @@ public class Kakuro {
      * @param difficulty Es la dificultad del Kakuro
      * @param board Es el tablero del Kakuro
      */
-    public Kakuro(String id, int difficulty, Cell[][] board) {
+    public Kakuro(int id, int difficulty, Cell[][] board) {
         this.id = id;
         this.difficulty = difficulty;
         this.rowSize = board.length;
@@ -150,19 +150,19 @@ public class Kakuro {
 
     /** @brief Getter del Identificador
      *
-     * @return String con el identificador
+     * @return Int con el identificador
      */
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-//    /** @brief Setter del indentificador
-//     *
-//     * @param id Identificador del Kakuro
-//     */
-//    public void setId(String id) {
-//        this.id = id;
-//    }
+    /** @brief Setter del indentificador
+     *
+     * @param id Identificador del Kakuro
+     */
+    public void setId(int id) {
+        this.id = id;
+    }
 
     /** @brief Getter de la dificultad
      *
@@ -210,8 +210,8 @@ public class Kakuro {
 //     */
 //    public void setColumnSize(int columnSize) {
 //        this.columnSize = columnSize;
-//    }
 
+//    }
     /** @brief Getter del tablero
      *
      * @return una matriz de celdas, es decir el tablero del kakuro
@@ -236,8 +236,8 @@ public class Kakuro {
 //     */
 //    public void setBoard(Cell[][] board) {
 //        this.board = board;
-//    }
 
+//    }
     /** @brief Setter de un valor en una celda de tipo blanca
      *
      * @param x Posición de fila de la celda
@@ -247,6 +247,19 @@ public class Kakuro {
      */
     public boolean setValue(int x, int y, int value) {
         return board[x][y].setValue(value);
+    }
+
+    /** @brief Setter de los corrects drivers
+     *
+     * @param sol kakuro con las soluciones
+     */
+    public void setCorrectValues(Kakuro sol) {
+        for (int i = 0; i < rowSize; ++i) {
+            for (int j = 0; j < columnSize; ++j)
+                if (board[i][j].isWhite()) {
+                    ((WhiteCell) board[i][j]).setCorrectValue(((WhiteCell) sol.getCell(i, j)).getValue());
+                }
+        }
     }
 
     /** @brief Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero

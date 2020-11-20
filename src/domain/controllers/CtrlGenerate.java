@@ -678,7 +678,7 @@ public class CtrlGenerate {
                         }
                     }
                 }
-        currentKakuro = new Kakuro("0",0, board);
+        currentKakuro = new Kakuro(0,0, board);
         CtrlValidate.setKakuro(currentKakuro);
         int[] vec = {0,0,0,0,0,0,0,0,0,0};
         int[] res = new int[1];
@@ -729,7 +729,7 @@ public class CtrlGenerate {
             if(!connexBoard(board)){
                 repeat = true;
             }
-            currentKakuro = new Kakuro("0",0,board);
+            currentKakuro = new Kakuro(0,0,board);
             if(!repeat && fillBoard(board)) { }
             else repeat = true;
         }
