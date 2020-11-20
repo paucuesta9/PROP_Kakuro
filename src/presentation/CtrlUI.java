@@ -87,7 +87,10 @@ public class CtrlUI {
                     System.out.println("El Kakuro es correcto");
                     System.out.print("¿Desea guardar el kakuro validado? Escriba 1 para guardar, 0 para no guardar: ");
                     int option = readNumber();
-                    if (option == 1) cd.saveKakuro();
+                    if (option == 1) {
+                        cd.resolve();
+                        cd.saveKakuro();
+                    }
                 } else {
                     System.out.println("El Kakuro no es correcto");
                 }

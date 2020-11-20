@@ -60,6 +60,9 @@ public class CtrlDomain {
         //currentGame.startResumeTimer();
     }
 
+    /** @brief Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correctValue de la correspondiente celda blanca
+     *
+     */
     private void setCorrectValues() {
         try {
             Kakuro sol = new Kakuro(getKakuro("data/solutions/diff" + currentKakuro.getDifficulty() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + currentKakuro.getId() + ".txt"));
