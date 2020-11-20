@@ -8,12 +8,13 @@ var searchData=
   ['getcorrectkakurotostring_82',['getCorrectKakuroToString',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a84a0345c9576dafd89f020650b4054ef',1,'domain::controllers::CtrlDomain']]],
   ['getcorrectvalue_83',['getCorrectValue',['../classdomain_1_1classes_1_1_white_cell.html#a5e3d8b5dd5d6c43eb64fd342b161ec0b',1,'domain::classes::WhiteCell']]],
   ['getdifficulty_84',['getDifficulty',['../classdomain_1_1classes_1_1_kakuro.html#a6f933f429d9120f821c11e2dc579ba80',1,'domain::classes::Kakuro']]],
-  ['getid_85',['getId',['../classdomain_1_1classes_1_1_kakuro.html#a117216defdbfbe62ede3195bcc2f0ee4',1,'domain::classes::Kakuro']]],
+  ['getid_85',['getId',['../classdomain_1_1classes_1_1_kakuro.html#a9dcb9389798b4458bf271cc838fb3e36',1,'domain::classes::Kakuro']]],
   ['getinstance_86',['getInstance',['../classdata_1_1_ctrl_data.html#acdb1596f6f67770535452853ee0ace67',1,'data::CtrlData']]],
-  ['getkakuro_87',['getKakuro',['../classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525',1,'data.CtrlData.getKakuro()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#a526b8658cc135852424b6d5ad539e4a9',1,'domain.controllers.CtrlDomain.getKakuro()']]],
-  ['getkakurotostring_88',['getKakuroToString',['../classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e',1,'domain::controllers::CtrlDomain']]],
-  ['getnumberoffiles_89',['getNumberOfFiles',['../classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9',1,'data::CtrlData']]],
-  ['getrow_90',['getRow',['../classdomain_1_1classes_1_1_black_cell.html#a5103f85151cb2c303daec21bbde5debf',1,'domain::classes::BlackCell']]],
-  ['getrowsize_91',['getRowSize',['../classdomain_1_1classes_1_1_kakuro.html#ae1c8dd6d7ef629a6ab63947c7ea17d4d',1,'domain.classes.Kakuro.getRowSize()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#aefb56e0e0d754e8a400ee0c49c72b00b',1,'domain.controllers.CtrlDomain.getRowSize()']]],
-  ['getvalue_92',['getValue',['../classdomain_1_1classes_1_1_white_cell.html#a52502d3d15abb511c1f610ecf80953e0',1,'domain::classes::WhiteCell']]]
+  ['getkakuro_87',['getKakuro',['../classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525',1,'data.CtrlData.getKakuro()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#a995aae7fccd5b3683d811e2df26dae5b',1,'domain.controllers.CtrlDomain.getKakuro()']]],
+  ['getkakuroandassign_88',['getKakuroAndAssign',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a968805b76373ae5cd79eddd9a792d4eb',1,'domain::controllers::CtrlDomain']]],
+  ['getkakurotostring_89',['getKakuroToString',['../classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e',1,'domain::controllers::CtrlDomain']]],
+  ['getnumberoffiles_90',['getNumberOfFiles',['../classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9',1,'data::CtrlData']]],
+  ['getrow_91',['getRow',['../classdomain_1_1classes_1_1_black_cell.html#a5103f85151cb2c303daec21bbde5debf',1,'domain::classes::BlackCell']]],
+  ['getrowsize_92',['getRowSize',['../classdomain_1_1classes_1_1_kakuro.html#ae1c8dd6d7ef629a6ab63947c7ea17d4d',1,'domain.classes.Kakuro.getRowSize()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#aefb56e0e0d754e8a400ee0c49c72b00b',1,'domain.controllers.CtrlDomain.getRowSize()']]],
+  ['getvalue_93',['getValue',['../classdomain_1_1classes_1_1_white_cell.html#a52502d3d15abb511c1f610ecf80953e0',1,'domain::classes::WhiteCell']]]
 ];

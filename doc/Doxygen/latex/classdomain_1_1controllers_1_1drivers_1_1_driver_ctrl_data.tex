@@ -25,7 +25,7 @@ static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ct
 \begin{DoxyCompactList}\small\item\em Test de la función Search\+Kakuro. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a365cac465710090fa111feccb5a2f41f}{test\+Get\+Kakuro}} (String file\+Path)
 \begin{DoxyCompactList}\small\item\em Test de la función Get\+Kakuro. \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a095a3ee72c20beefbf443e73cfe6ddab}{test\+Save\+Kakuro}} (String kakuro, int diff, int size\+Row, int size\+Column)
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_aac24c51d3f43c95fab1ed1a12337d34b}{test\+Save\+Kakuro}} (String kakuro, String kakuro\+Sol, int diff, int size\+Row, int size\+Column)
 \begin{DoxyCompactList}\small\item\em Test de la función Save\+Kakuro. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adb829780ff99374fbbfc6a67b8af9da0}{test\+Get\+Number\+Of\+Files}} (int diff, int size\+Row, int size\+Column)
 \begin{DoxyCompactList}\small\item\em Test de la función Get\+Number\+Of\+Files. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -141,11 +141,11 @@ Definición en la línea 51 del archivo Driver\+Ctrl\+Data.\+java.
 \DoxyCodeLine{60     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a095a3ee72c20beefbf443e73cfe6ddab}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a095a3ee72c20beefbf443e73cfe6ddab}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_aac24c51d3f43c95fab1ed1a12337d34b}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_aac24c51d3f43c95fab1ed1a12337d34b}} 
 \index{domain.controllers.drivers.DriverCtrlData@{domain.controllers.drivers.DriverCtrlData}!testSaveKakuro@{testSaveKakuro}}
 \index{testSaveKakuro@{testSaveKakuro}!domain.controllers.drivers.DriverCtrlData@{domain.controllers.drivers.DriverCtrlData}}
 \doxysubsubsection{\texorpdfstring{testSaveKakuro()}{testSaveKakuro()}}
-{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Data.\+test\+Save\+Kakuro (\begin{DoxyParamCaption}\item[{String}]{kakuro,  }\item[{int}]{diff,  }\item[{int}]{size\+Row,  }\item[{int}]{size\+Column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Data.\+test\+Save\+Kakuro (\begin{DoxyParamCaption}\item[{String}]{kakuro,  }\item[{String}]{kakuro\+Sol,  }\item[{int}]{diff,  }\item[{int}]{size\+Row,  }\item[{int}]{size\+Column }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
 
 
@@ -154,6 +154,8 @@ Test de la función Save\+Kakuro.
 Comprueba que la función save\+Kakuro se ejecute correctamente 
 \begin{DoxyParams}{Parámetros}
 {\em kakuro} & representa el kakuro a guardar \\
+\hline
+{\em kakuro\+Sol} & representa el kakuro resuelto a guardar \\
 \hline
 {\em diff} & representa la dificultad del kakuro \\
 \hline
@@ -164,15 +166,15 @@ Comprueba que la función save\+Kakuro se ejecute correctamente
 \end{DoxyParams}
 
 
-Definición en la línea 70 del archivo Driver\+Ctrl\+Data.\+java.
+Definición en la línea 71 del archivo Driver\+Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{70                                                                                              \{}
-\DoxyCodeLine{71         CtrlData ctrlData = \textcolor{keyword}{new} CtrlData();}
-\DoxyCodeLine{72         ctrlData.saveKakuro(kakuro, diff, sizeRow, sizeColumn);}
-\DoxyCodeLine{73         System.out.println(\textcolor{stringliteral}{"{}Se ha generado un fichero con el kakuro guardado"{}});}
-\DoxyCodeLine{74     \}}
+\DoxyCodeLine{71                                                                                                                \{}
+\DoxyCodeLine{72         CtrlData ctrlData = \textcolor{keyword}{new} CtrlData();}
+\DoxyCodeLine{73         ctrlData.saveKakuro(kakuro, kakuroSol, diff, sizeRow, sizeColumn);}
+\DoxyCodeLine{74         System.out.println(\textcolor{stringliteral}{"{}Se ha generado un fichero con el kakuro guardado"{}});}
+\DoxyCodeLine{75     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adb829780ff99374fbbfc6a67b8af9da0}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adb829780ff99374fbbfc6a67b8af9da0}} 
@@ -196,19 +198,19 @@ Comprueba que la función get\+Number\+Of\+Files se ejecute correctamente
 \end{DoxyParams}
 
 
-Definición en la línea 83 del archivo Driver\+Ctrl\+Data.\+java.
+Definición en la línea 84 del archivo Driver\+Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{83                                                                                     \{}
-\DoxyCodeLine{84         CtrlData ctrlData = \textcolor{keyword}{new} CtrlData();}
-\DoxyCodeLine{85         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{86             \textcolor{keywordtype}{int} result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);}
-\DoxyCodeLine{87             System.out.println(\textcolor{stringliteral}{"{}Hay "{}} + result + \textcolor{stringliteral}{"{} kakuro(s) con esta dificultad y tamaño"{}});}
-\DoxyCodeLine{88         \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
-\DoxyCodeLine{89             System.out.println(\textcolor{stringliteral}{"{}No hay ningún kakuro con estas condiciones"{}});}
-\DoxyCodeLine{90         \}}
-\DoxyCodeLine{91     \}}
+\DoxyCodeLine{84                                                                                     \{}
+\DoxyCodeLine{85         CtrlData ctrlData = \textcolor{keyword}{new} CtrlData();}
+\DoxyCodeLine{86         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{87             \textcolor{keywordtype}{int} result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);}
+\DoxyCodeLine{88             System.out.println(\textcolor{stringliteral}{"{}Hay "{}} + result + \textcolor{stringliteral}{"{} kakuro(s) con esta dificultad y tamaño"{}});}
+\DoxyCodeLine{89         \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
+\DoxyCodeLine{90             System.out.println(\textcolor{stringliteral}{"{}No hay ningún kakuro con estas condiciones"{}});}
+\DoxyCodeLine{91         \}}
+\DoxyCodeLine{92     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ae52a43b441da3bba478b56a602d6a919}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ae52a43b441da3bba478b56a602d6a919}} 
@@ -223,60 +225,61 @@ Función principal.
 
 Indica las opciones que hay para testear 
 
-Definición en la línea 97 del archivo Driver\+Ctrl\+Data.\+java.
+Definición en la línea 98 del archivo Driver\+Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{97                                            \{}
-\DoxyCodeLine{98         System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n Opciones: \(\backslash\)n 1. GetInstance \(\backslash\)n 2. Buscador de kakuros \(\backslash\)n 3. Getter de kakuros \(\backslash\)n 4. Guardar kakuros \(\backslash\)n 5. Contador de kakuros en una carpeta \(\backslash\)n 6. Salir "{}});}
-\DoxyCodeLine{99         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{100         \textcolor{keywordflow}{while} (value != 6) \{}
-\DoxyCodeLine{101             \textcolor{keywordflow}{switch}(value) \{}
-\DoxyCodeLine{102                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{103                     System.out.println(\textcolor{stringliteral}{"{}Se llama a GetInstance"{}});}
-\DoxyCodeLine{104                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_aa5d264a23bb215360665bb0d26bf21c9}{testGetInstance}}();}
-\DoxyCodeLine{105                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{106                 \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{107                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la dificultad, el tamaño del kakuro (NxM)"{}});}
-\DoxyCodeLine{108                     \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{109                     \textcolor{keywordtype}{int} kakuroSizeRow = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{110                     \textcolor{keywordtype}{int} kakuroSizeColumn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{111                     System.out.println(\textcolor{stringliteral}{"{}Se llama a searchKakuro"{}});}
-\DoxyCodeLine{112                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a01a58bd1cc11811a5b86df11df68b341}{testSearchKakuro}}(diff, kakuroSizeRow, kakuroSizeColumn);}
-\DoxyCodeLine{113                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{114                 \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{115                     System.out.println(\textcolor{stringliteral}{"{}Introduzca el filePath del kakuro"{}});}
-\DoxyCodeLine{116                     String filePath = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adee8dd8f4453931e40c499e1610309af}{readLine}}();}
-\DoxyCodeLine{117                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getKakuro"{}});}
-\DoxyCodeLine{118                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a365cac465710090fa111feccb5a2f41f}{testGetKakuro}}(filePath);}
-\DoxyCodeLine{119                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{120                 \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{121                     System.out.println(\textcolor{stringliteral}{"{}Introduzca el kakuro a guardar, la dificultad y el tamaño del kakuro (NxM)"{}});}
-\DoxyCodeLine{122                     String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_abd6a4a25db515d69ba975828fac19e25}{readKakuro}}();}
-\DoxyCodeLine{123                     diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{124                     \textcolor{keywordtype}{int} sizeRow = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{125                     \textcolor{keywordtype}{int} sizeColumn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{126                     System.out.println(\textcolor{stringliteral}{"{}Se llama saveKakuro"{}});}
-\DoxyCodeLine{127                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a095a3ee72c20beefbf443e73cfe6ddab}{testSaveKakuro}}(kakuro, diff, sizeRow, sizeColumn);}
-\DoxyCodeLine{128                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{129                 \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{130                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la dificultad y el tamaño del kakuro (NxM)"{}});}
-\DoxyCodeLine{131                     diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{132                     sizeRow = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{133                     sizeColumn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{134                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getNumberOfFiles"{}});}
-\DoxyCodeLine{135                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adb829780ff99374fbbfc6a67b8af9da0}{testGetNumberOfFiles}}(diff, sizeRow, sizeColumn);}
-\DoxyCodeLine{136                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{137                 \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{138                     System.out.println(\textcolor{stringliteral}{"{}El número introducido es incorrecto"{}});}
-\DoxyCodeLine{139                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{140             \}}
-\DoxyCodeLine{141             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n Opciones: \(\backslash\)n 1. GetInstance \(\backslash\)n 2. Buscador de kakuros \(\backslash\)n 3. Getter de kakuros \(\backslash\)n 4. Guardar kakuros \(\backslash\)n 5. Contador de kakuros en una carpeta \(\backslash\)n 6. Salir "{}});}
-\DoxyCodeLine{142             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
-\DoxyCodeLine{143         \}}
-\DoxyCodeLine{144         System.exit(0);}
-\DoxyCodeLine{145 }
-\DoxyCodeLine{146     \}}
+\DoxyCodeLine{98                                            \{}
+\DoxyCodeLine{99         System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n Opciones: \(\backslash\)n 1. GetInstance \(\backslash\)n 2. Buscador de kakuros \(\backslash\)n 3. Getter de kakuros \(\backslash\)n 4. Guardar kakuros \(\backslash\)n 5. Contador de kakuros en una carpeta \(\backslash\)n 6. Salir "{}});}
+\DoxyCodeLine{100         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{101         \textcolor{keywordflow}{while} (value != 6) \{}
+\DoxyCodeLine{102             \textcolor{keywordflow}{switch}(value) \{}
+\DoxyCodeLine{103                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{104                     System.out.println(\textcolor{stringliteral}{"{}Se llama a GetInstance"{}});}
+\DoxyCodeLine{105                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_aa5d264a23bb215360665bb0d26bf21c9}{testGetInstance}}();}
+\DoxyCodeLine{106                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{107                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{108                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la dificultad, el tamaño del kakuro (NxM)"{}});}
+\DoxyCodeLine{109                     \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{110                     \textcolor{keywordtype}{int} kakuroSizeRow = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{111                     \textcolor{keywordtype}{int} kakuroSizeColumn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{112                     System.out.println(\textcolor{stringliteral}{"{}Se llama a searchKakuro"{}});}
+\DoxyCodeLine{113                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a01a58bd1cc11811a5b86df11df68b341}{testSearchKakuro}}(diff, kakuroSizeRow, kakuroSizeColumn);}
+\DoxyCodeLine{114                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{115                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{116                     System.out.println(\textcolor{stringliteral}{"{}Introduzca el filePath del kakuro"{}});}
+\DoxyCodeLine{117                     String filePath = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adee8dd8f4453931e40c499e1610309af}{readLine}}();}
+\DoxyCodeLine{118                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getKakuro"{}});}
+\DoxyCodeLine{119                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a365cac465710090fa111feccb5a2f41f}{testGetKakuro}}(filePath);}
+\DoxyCodeLine{120                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{121                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{122                     System.out.println(\textcolor{stringliteral}{"{}Introduzca el kakuro a guardar, su solución, la dificultad y el tamaño del kakuro (NxM)"{}});}
+\DoxyCodeLine{123                     String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_abd6a4a25db515d69ba975828fac19e25}{readKakuro}}();}
+\DoxyCodeLine{124                     String kakuroSol = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_abd6a4a25db515d69ba975828fac19e25}{readKakuro}}();}
+\DoxyCodeLine{125                     diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{126                     \textcolor{keywordtype}{int} sizeRow = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{127                     \textcolor{keywordtype}{int} sizeColumn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{128                     System.out.println(\textcolor{stringliteral}{"{}Se llama saveKakuro"{}});}
+\DoxyCodeLine{129                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_aac24c51d3f43c95fab1ed1a12337d34b}{testSaveKakuro}}(kakuro, kakuroSol, diff, sizeRow, sizeColumn);}
+\DoxyCodeLine{130                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{131                 \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{132                     System.out.println(\textcolor{stringliteral}{"{}Introduzca la dificultad y el tamaño del kakuro (NxM)"{}});}
+\DoxyCodeLine{133                     diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{134                     sizeRow = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{135                     sizeColumn = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{136                     System.out.println(\textcolor{stringliteral}{"{}Se llama a getNumberOfFiles"{}});}
+\DoxyCodeLine{137                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adb829780ff99374fbbfc6a67b8af9da0}{testGetNumberOfFiles}}(diff, sizeRow, sizeColumn);}
+\DoxyCodeLine{138                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{139                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{140                     System.out.println(\textcolor{stringliteral}{"{}El número introducido es incorrecto"{}});}
+\DoxyCodeLine{141                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{142             \}}
+\DoxyCodeLine{143             System.out.println(\textcolor{stringliteral}{"{}\(\backslash\)n Opciones: \(\backslash\)n 1. GetInstance \(\backslash\)n 2. Buscador de kakuros \(\backslash\)n 3. Getter de kakuros \(\backslash\)n 4. Guardar kakuros \(\backslash\)n 5. Contador de kakuros en una carpeta \(\backslash\)n 6. Salir "{}});}
+\DoxyCodeLine{144             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}{readNumber}}();}
+\DoxyCodeLine{145         \}}
+\DoxyCodeLine{146         System.exit(0);}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_abd6a4a25db515d69ba975828fac19e25}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_abd6a4a25db515d69ba975828fac19e25}} 
@@ -294,20 +297,20 @@ el kakuro leído
 \end{DoxyReturn}
 
 
-Definición en la línea 152 del archivo Driver\+Ctrl\+Data.\+java.
+Definición en la línea 154 del archivo Driver\+Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{152                                       \{}
-\DoxyCodeLine{153         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{154         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{155         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
-\DoxyCodeLine{156         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
-\DoxyCodeLine{157         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{158         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
-\DoxyCodeLine{159             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{160         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{161     \}}
+\DoxyCodeLine{154                                       \{}
+\DoxyCodeLine{155         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{156         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{157         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{158         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{159         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{160         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{161             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{162         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{163     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_a7e0e6c9753b7c772e6b9fe62c63e211b}} 
@@ -325,15 +328,15 @@ el número leído
 \end{DoxyReturn}
 
 
-Definición en la línea 167 del archivo Driver\+Ctrl\+Data.\+java.
+Definición en la línea 169 del archivo Driver\+Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{167                                    \{}
-\DoxyCodeLine{168         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{169         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.nextInt();}
-\DoxyCodeLine{170         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{171     \}}
+\DoxyCodeLine{169                                    \{}
+\DoxyCodeLine{170         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{171         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.nextInt();}
+\DoxyCodeLine{172         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{173     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adee8dd8f4453931e40c499e1610309af}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_adee8dd8f4453931e40c499e1610309af}} 
@@ -351,13 +354,13 @@ la línea leída
 \end{DoxyReturn}
 
 
-Definición en la línea 177 del archivo Driver\+Ctrl\+Data.\+java.
+Definición en la línea 179 del archivo Driver\+Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{177                                     \{}
-\DoxyCodeLine{178         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.next();}
-\DoxyCodeLine{179     \}}
+\DoxyCodeLine{179                                     \{}
+\DoxyCodeLine{180         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data_ac27a3df005dc290ecfe77ee9da5d5c37}{reader}}.next().trim();}
+\DoxyCodeLine{181     \}}
 
 \end{DoxyCode}
 

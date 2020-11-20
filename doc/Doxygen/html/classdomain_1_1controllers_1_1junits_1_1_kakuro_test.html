@@ -139,6 +139,9 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:aee069a81181f054f284fc050d0417ef4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#aee069a81181f054f284fc050d0417ef4">testIsFinishedNotFinished</a> ()</td></tr>
 <tr class="memdesc:aee069a81181f054f284fc050d0417ef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de comprobar si hemos terminado de rellenar el kakuro.  <a href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#aee069a81181f054f284fc050d0417ef4">Más...</a><br /></td></tr>
 <tr class="separator:aee069a81181f054f284fc050d0417ef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42bb3637c997293dac4ae0b892321e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#ab42bb3637c997293dac4ae0b892321e4">testSetCorrectValues</a> ()</td></tr>
+<tr class="memdesc:ab42bb3637c997293dac4ae0b892321e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de comprobar si se han copiado los valores correctos al kakuro indicado.  <a href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#ab42bb3637c997293dac4ae0b892321e4">Más...</a><br /></td></tr>
+<tr class="separator:ab42bb3637c997293dac4ae0b892321e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Atributos públicos estáticos</h2></td></tr>
@@ -181,7 +184,7 @@ Atributos públicos estáticos</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                              {</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        Cell[][] c = <span class="keyword">new</span> Cell[1][1];</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keyword">new</span> Kakuro(<span class="stringliteral">&quot;0&quot;</span>, 0, c);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keyword">new</span> Kakuro(0, 0, c);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        } <span class="keywordflow">catch</span> (Exception e) {</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            fail(e.getMessage());</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
@@ -844,6 +847,35 @@ Atributos públicos estáticos</h2></td></tr>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        assertFalse(<span class="stringliteral">&quot;Expected false&quot;</span>, k.isFinished());</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab42bb3637c997293dac4ae0b892321e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42bb3637c997293dac4ae0b892321e4">&#9670;&nbsp;</a></span>testSetCorrectValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void domain.controllers.junits.KakuroTest.testSetCorrectValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test de comprobar si se han copiado los valores correctos al kakuro indicado. </p>
+<p>Comprueba que la función asigna los valores correctos del kakuro correspondiente cuando se le pasa el mismo kakuro pero solucionado </p>
+
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_test_8java_source.html#l00451">451</a> del archivo <a class="el" href="_kakuro_test_8java_source.html">KakuroTest.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;                                       {</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        Kakuro k = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#aaf6854c15752887cb378886f94a0db86">KAKURO_SMALL</a>);</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        Kakuro kFin = <span class="keyword">new</span> Kakuro(<a class="code" href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#a4e712aada975a9cf3240fd82c994cbfa">KAKURO_SMALL_SOLVED</a>);</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        k.setCorrectValues(kFin);</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        assertEquals(<span class="stringliteral">&quot;Expected true&quot;</span>, <a class="code" href="classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#a4e712aada975a9cf3240fd82c994cbfa">KAKURO_SMALL_SOLVED</a>, k.correctToString());</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

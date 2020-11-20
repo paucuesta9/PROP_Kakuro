@@ -8,7 +8,7 @@ Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} que contiene 
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad28de8a600154b6f594e00e4d9a23326}{Kakuro}} (String \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1d758ebb7a0fb3be842daef16c498e4a}{id}}, int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a513e4e80c50d688b4b8003be040b15a6}{difficulty}}, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}})
+\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae23ea3d97fa0401abcb6dd7cf0d4f54e}{Kakuro}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}{id}}, int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a513e4e80c50d688b4b8003be040b15a6}{difficulty}}, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}})
 \begin{DoxyCompactList}\small\item\em Creadora con todos los parámtros. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6ea6319b9b2d3afe0647c66b670bb7a5}{Kakuro}} (String kakuro)
 \begin{DoxyCompactList}\small\item\em Creadora a partir de String. \end{DoxyCompactList}\item 
@@ -16,8 +16,10 @@ String \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8
 \begin{DoxyCompactList}\small\item\em Conversor de \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} a String. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_af304c7d5e807192506cfaaa7e49eced9}{correct\+To\+String}} ()
 \begin{DoxyCompactList}\small\item\em Conversor de \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} a String, valores correctos. \end{DoxyCompactList}\item 
-String \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a117216defdbfbe62ede3195bcc2f0ee4}{get\+Id}} ()
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{get\+Id}} ()
 \begin{DoxyCompactList}\small\item\em Getter del Identificador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{set\+Id}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}{id}})
+\begin{DoxyCompactList}\small\item\em Setter del indentificador. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{get\+Difficulty}} ()
 \begin{DoxyCompactList}\small\item\em Getter de la dificultad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{set\+Difficulty}} (int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a513e4e80c50d688b4b8003be040b15a6}{difficulty}})
@@ -32,6 +34,8 @@ int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb59
 \begin{DoxyCompactList}\small\item\em Getter de celda. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{set\+Value}} (int x, int y, int value)
 \begin{DoxyCompactList}\small\item\em Setter de un valor en una celda de tipo blanca. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}{set\+Correct\+Values}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} sol)
+\begin{DoxyCompactList}\small\item\em Setter de los corrects drivers. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{check\+Column}} (int r, int c, int i, boolean f, int sum)
 \begin{DoxyCompactList}\small\item\em Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del tablero. \end{DoxyCompactList}\item 
 boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{check\+Row\+Validity}} (int r, int c, int value, int sum, int total, int posy, boolean all)
@@ -45,7 +49,7 @@ boolean \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c8c024bed669cb0807
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
-String \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1d758ebb7a0fb3be842daef16c498e4a}{id}}
+int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}{id}}
 \item 
 int \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a513e4e80c50d688b4b8003be040b15a6}{difficulty}}
 \item 
@@ -70,11 +74,11 @@ Definición en la línea 10 del archivo Kakuro.\+java.
 
 
 \doxysubsection{Documentación del constructor y destructor}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_ad28de8a600154b6f594e00e4d9a23326}\label{classdomain_1_1classes_1_1_kakuro_ad28de8a600154b6f594e00e4d9a23326}} 
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_ae23ea3d97fa0401abcb6dd7cf0d4f54e}\label{classdomain_1_1classes_1_1_kakuro_ae23ea3d97fa0401abcb6dd7cf0d4f54e}} 
 \index{domain.classes.Kakuro@{domain.classes.Kakuro}!Kakuro@{Kakuro}}
 \index{Kakuro@{Kakuro}!domain.classes.Kakuro@{domain.classes.Kakuro}}
 \doxysubsubsection{\texorpdfstring{Kakuro()}{Kakuro()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily domain.\+classes.\+Kakuro.\+Kakuro (\begin{DoxyParamCaption}\item[{String}]{id,  }\item[{int}]{difficulty,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily domain.\+classes.\+Kakuro.\+Kakuro (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{int}]{difficulty,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
 
 
 
@@ -97,8 +101,8 @@ Definición en la línea 41 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{41                                                              \{}
-\DoxyCodeLine{42         this.\textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1d758ebb7a0fb3be842daef16c498e4a}{id}};}
+\DoxyCodeLine{41                                                           \{}
+\DoxyCodeLine{42         this.\textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}{id}};}
 \DoxyCodeLine{43         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a513e4e80c50d688b4b8003be040b15a6}{difficulty}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a513e4e80c50d688b4b8003be040b15a6}{difficulty}};}
 \DoxyCodeLine{44         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ac04999a69528c86ca7262f9496a21bca}{rowSize}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}.length;}
 \DoxyCodeLine{45         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a15b207f751a534b85dba19d1c36211ef}{columnSize}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[0].length;}
@@ -261,18 +265,18 @@ Definición en la línea 125 del archivo Kakuro.\+java.
 \DoxyCodeLine{149     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a117216defdbfbe62ede3195bcc2f0ee4}\label{classdomain_1_1classes_1_1_kakuro_a117216defdbfbe62ede3195bcc2f0ee4}} 
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}\label{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}} 
 \index{domain.classes.Kakuro@{domain.classes.Kakuro}!getId@{getId}}
 \index{getId@{getId}!domain.classes.Kakuro@{domain.classes.Kakuro}}
 \doxysubsubsection{\texorpdfstring{getId()}{getId()}}
-{\footnotesize\ttfamily String domain.\+classes.\+Kakuro.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int domain.\+classes.\+Kakuro.\+get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Getter del Identificador. 
 
 \begin{DoxyReturn}{Devuelve}
-String con el identificador 
+Int con el identificador 
 \end{DoxyReturn}
 
 
@@ -280,9 +284,35 @@ Definición en la línea 155 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{155                           \{}
-\DoxyCodeLine{156         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1d758ebb7a0fb3be842daef16c498e4a}{id}};}
+\DoxyCodeLine{155                        \{}
+\DoxyCodeLine{156         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}{id}};}
 \DoxyCodeLine{157     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}\label{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}} 
+\index{domain.classes.Kakuro@{domain.classes.Kakuro}!setId@{setId}}
+\index{setId@{setId}!domain.classes.Kakuro@{domain.classes.Kakuro}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Kakuro.\+set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Setter del indentificador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & Identificador del \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 163 del archivo Kakuro.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{163                               \{}
+\DoxyCodeLine{164         this.\textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}{id}};}
+\DoxyCodeLine{165     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}\label{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}} 
@@ -471,6 +501,37 @@ Definición en la línea 248 del archivo Kakuro.\+java.
 \DoxyCodeLine{250     \}}
 
 \end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}\label{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}} 
+\index{domain.classes.Kakuro@{domain.classes.Kakuro}!setCorrectValues@{setCorrectValues}}
+\index{setCorrectValues@{setCorrectValues}!domain.classes.Kakuro@{domain.classes.Kakuro}}
+\doxysubsubsection{\texorpdfstring{setCorrectValues()}{setCorrectValues()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Kakuro.\+set\+Correct\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{sol }\end{DoxyParamCaption})}
+
+
+
+Setter de los corrects drivers. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em sol} & kakuro con las soluciones \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 256 del archivo Kakuro.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{256                                              \{}
+\DoxyCodeLine{257         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ac04999a69528c86ca7262f9496a21bca}{rowSize}}; ++i) \{}
+\DoxyCodeLine{258             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a15b207f751a534b85dba19d1c36211ef}{columnSize}}; ++j)}
+\DoxyCodeLine{259                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j].isWhite()) \{}
+\DoxyCodeLine{260                     ((WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j]).setCorrectValue(((WhiteCell) sol.getCell(i, j)).getValue());}
+\DoxyCodeLine{261                 \}}
+\DoxyCodeLine{262         \}}
+\DoxyCodeLine{263     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}\label{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}} 
 \index{domain.classes.Kakuro@{domain.classes.Kakuro}!checkColumn@{checkColumn}}
 \index{checkColumn@{checkColumn}!domain.classes.Kakuro@{domain.classes.Kakuro}}
@@ -501,24 +562,24 @@ False si hay valores repetidos o, si f es false y la suma es demasiado grande o,
 \end{DoxyReturn}
 
 
-Definición en la línea 262 del archivo Kakuro.\+java.
+Definición en la línea 275 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{262                                                                         \{}
-\DoxyCodeLine{263         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c].isWhite()) \{}
-\DoxyCodeLine{264             BlackCell b = (BlackCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
-\DoxyCodeLine{265             \textcolor{keywordflow}{if}(f \&\& b.getColumn() == sum) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{266             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!f \&\& b.getColumn() > sum) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{267         \}}
-\DoxyCodeLine{268         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{269             WhiteCell w = (WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
-\DoxyCodeLine{270             \textcolor{keywordflow}{if}( w.getCorrectValue() == i ) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{271             sum += w.getCorrectValue();}
-\DoxyCodeLine{272             \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{checkColumn}}(r-\/1,c,i,f,sum);}
-\DoxyCodeLine{273         \}}
-\DoxyCodeLine{274         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{275     \}}
+\DoxyCodeLine{275                                                                         \{}
+\DoxyCodeLine{276         \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c].isWhite()) \{}
+\DoxyCodeLine{277             BlackCell b = (BlackCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
+\DoxyCodeLine{278             \textcolor{keywordflow}{if}(f \&\& b.getColumn() == sum) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{279             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (!f \&\& b.getColumn() > sum) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{280         \}}
+\DoxyCodeLine{281         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{282             WhiteCell w = (WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
+\DoxyCodeLine{283             \textcolor{keywordflow}{if}( w.getCorrectValue() == i ) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{284             sum += w.getCorrectValue();}
+\DoxyCodeLine{285             \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{checkColumn}}(r-\/1,c,i,f,sum);}
+\DoxyCodeLine{286         \}}
+\DoxyCodeLine{287         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{288     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}\label{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}} 
@@ -553,38 +614,38 @@ devuelve cierto si se cumplen las condiciones y falso si no se cumplen
 \end{DoxyReturn}
 
 
-Definición en la línea 289 del archivo Kakuro.\+java.
+Definición en la línea 302 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{289                                                                                                         \{}
-\DoxyCodeLine{290         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c].isWhite()) \{}
-\DoxyCodeLine{291             \textcolor{keywordflow}{if} (total != -\/1) \{}
-\DoxyCodeLine{292                 \textcolor{comment}{//sum -\/= value;}}
-\DoxyCodeLine{293                 \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
-\DoxyCodeLine{294                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
-\DoxyCodeLine{295             \}}
-\DoxyCodeLine{296             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{297                 BlackCell b = (BlackCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
-\DoxyCodeLine{298                 total = b.getRow();}
-\DoxyCodeLine{299                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(r, c + 1, value, sum, total, posy, all);}
-\DoxyCodeLine{300             \}}
-\DoxyCodeLine{301         \}}
-\DoxyCodeLine{302         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{303             \textcolor{keywordflow}{if} (total == -\/1 \&\& c-\/1 >= 0) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(r, c -\/ 1, value, sum, total, posy, all);}
-\DoxyCodeLine{304             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{305                 WhiteCell w = (WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
-\DoxyCodeLine{306                 \textcolor{keywordflow}{if} (w.getValue() == value \&\& c != posy) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{307                 \textcolor{keywordflow}{if} (w.getValue() == 0) all = \textcolor{keyword}{false};}
-\DoxyCodeLine{308                 sum += w.getValue();}
-\DoxyCodeLine{309                 \textcolor{keywordflow}{if} (c+1 < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[0].length) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(r, c + 1, value, sum, total, posy, all);}
-\DoxyCodeLine{310                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{311                     \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
-\DoxyCodeLine{312                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
-\DoxyCodeLine{313                 \}}
-\DoxyCodeLine{314             \}}
-\DoxyCodeLine{315         \}}
-\DoxyCodeLine{316     \}}
+\DoxyCodeLine{302                                                                                                         \{}
+\DoxyCodeLine{303         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c].isWhite()) \{}
+\DoxyCodeLine{304             \textcolor{keywordflow}{if} (total != -\/1) \{}
+\DoxyCodeLine{305                 \textcolor{comment}{//sum -\/= value;}}
+\DoxyCodeLine{306                 \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
+\DoxyCodeLine{307                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
+\DoxyCodeLine{308             \}}
+\DoxyCodeLine{309             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{310                 BlackCell b = (BlackCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
+\DoxyCodeLine{311                 total = b.getRow();}
+\DoxyCodeLine{312                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(r, c + 1, value, sum, total, posy, all);}
+\DoxyCodeLine{313             \}}
+\DoxyCodeLine{314         \}}
+\DoxyCodeLine{315         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{316             \textcolor{keywordflow}{if} (total == -\/1 \&\& c-\/1 >= 0) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(r, c -\/ 1, value, sum, total, posy, all);}
+\DoxyCodeLine{317             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{318                 WhiteCell w = (WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
+\DoxyCodeLine{319                 \textcolor{keywordflow}{if} (w.getValue() == value \&\& c != posy) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{320                 \textcolor{keywordflow}{if} (w.getValue() == 0) all = \textcolor{keyword}{false};}
+\DoxyCodeLine{321                 sum += w.getValue();}
+\DoxyCodeLine{322                 \textcolor{keywordflow}{if} (c+1 < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[0].length) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(r, c + 1, value, sum, total, posy, all);}
+\DoxyCodeLine{323                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{324                     \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
+\DoxyCodeLine{325                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
+\DoxyCodeLine{326                 \}}
+\DoxyCodeLine{327             \}}
+\DoxyCodeLine{328         \}}
+\DoxyCodeLine{329     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}\label{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}} 
@@ -619,38 +680,38 @@ devuelve cierto si se cumplen las condiciones y falso si no se cumplen
 \end{DoxyReturn}
 
 
-Definición en la línea 330 del archivo Kakuro.\+java.
+Definición en la línea 343 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{330                                                                                                            \{}
-\DoxyCodeLine{331         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c].isWhite()) \{}
-\DoxyCodeLine{332             \textcolor{keywordflow}{if} (total != -\/1) \{}
-\DoxyCodeLine{333                 \textcolor{comment}{//sum -\/= value;}}
-\DoxyCodeLine{334                 \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
-\DoxyCodeLine{335                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
-\DoxyCodeLine{336             \}}
-\DoxyCodeLine{337             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{338                 BlackCell b = (BlackCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
-\DoxyCodeLine{339                 total = b.getColumn();}
-\DoxyCodeLine{340                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(r+1, c, value, sum, total, posx, all);}
-\DoxyCodeLine{341             \}}
-\DoxyCodeLine{342         \}}
-\DoxyCodeLine{343         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{344             \textcolor{keywordflow}{if} (total == -\/1 \&\& r-\/1 >= 0) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(r -\/1, c, value, sum, total, posx, all);}
-\DoxyCodeLine{345             \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{346                 WhiteCell w = (WhiteCell)  \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
-\DoxyCodeLine{347                 \textcolor{keywordflow}{if} (w.getValue() == value \&\& r != posx) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{348                 \textcolor{keywordflow}{if} (w.getValue() == 0) all = \textcolor{keyword}{false};}
-\DoxyCodeLine{349                 sum += w.getValue();}
-\DoxyCodeLine{350                 \textcolor{keywordflow}{if} (r+1 < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}.length) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(r+1, c, value, sum, total, posx, all);}
-\DoxyCodeLine{351                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{352                     \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
-\DoxyCodeLine{353                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
-\DoxyCodeLine{354                 \}}
-\DoxyCodeLine{355             \}}
-\DoxyCodeLine{356         \}}
-\DoxyCodeLine{357     \}}
+\DoxyCodeLine{343                                                                                                            \{}
+\DoxyCodeLine{344         \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c].isWhite()) \{}
+\DoxyCodeLine{345             \textcolor{keywordflow}{if} (total != -\/1) \{}
+\DoxyCodeLine{346                 \textcolor{comment}{//sum -\/= value;}}
+\DoxyCodeLine{347                 \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
+\DoxyCodeLine{348                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
+\DoxyCodeLine{349             \}}
+\DoxyCodeLine{350             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{351                 BlackCell b = (BlackCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
+\DoxyCodeLine{352                 total = b.getColumn();}
+\DoxyCodeLine{353                 \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(r+1, c, value, sum, total, posx, all);}
+\DoxyCodeLine{354             \}}
+\DoxyCodeLine{355         \}}
+\DoxyCodeLine{356         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{357             \textcolor{keywordflow}{if} (total == -\/1 \&\& r-\/1 >= 0) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(r -\/1, c, value, sum, total, posx, all);}
+\DoxyCodeLine{358             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{359                 WhiteCell w = (WhiteCell)  \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[r][c];}
+\DoxyCodeLine{360                 \textcolor{keywordflow}{if} (w.getValue() == value \&\& r != posx) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{361                 \textcolor{keywordflow}{if} (w.getValue() == 0) all = \textcolor{keyword}{false};}
+\DoxyCodeLine{362                 sum += w.getValue();}
+\DoxyCodeLine{363                 \textcolor{keywordflow}{if} (r+1 < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}.length) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(r+1, c, value, sum, total, posx, all);}
+\DoxyCodeLine{364                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{365                     \textcolor{keywordflow}{if} (all) \textcolor{keywordflow}{return} total == sum || total == 0;}
+\DoxyCodeLine{366                     \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} total >= sum || total == 0;}
+\DoxyCodeLine{367                 \}}
+\DoxyCodeLine{368             \}}
+\DoxyCodeLine{369         \}}
+\DoxyCodeLine{370     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a6b2a225e6f17a124600ba85002d27cc6}\label{classdomain_1_1classes_1_1_kakuro_a6b2a225e6f17a124600ba85002d27cc6}} 
@@ -677,13 +738,13 @@ devuelve cierto si se cumplen las condiciones tanto en la fila como en la column
 \end{DoxyReturn}
 
 
-Definición en la línea 367 del archivo Kakuro.\+java.
+Definición en la línea 380 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{367                                                           \{}
-\DoxyCodeLine{368         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(x, y-\/1, value, 0, -\/1, y, \textcolor{keyword}{true}) \&\& \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(x-\/1, y, value, 0, -\/1, x, \textcolor{keyword}{true});}
-\DoxyCodeLine{369     \}}
+\DoxyCodeLine{380                                                           \{}
+\DoxyCodeLine{381         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a1a451ba114c66bdb50f8652d55d4c8d6}{checkRowValidity}}(x, y-\/1, value, 0, -\/1, y, \textcolor{keyword}{true}) \&\& \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_afee68cba6b239db809d3add332ec4ed5}{checkColumnValidity}}(x-\/1, y, value, 0, -\/1, x, \textcolor{keyword}{true});}
+\DoxyCodeLine{382     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a87c8c024bed669cb0807263fd040888c}\label{classdomain_1_1classes_1_1_kakuro_a87c8c024bed669cb0807263fd040888c}} 
@@ -701,28 +762,28 @@ cierto si el usuario ha completado el tablero de forma correcto, en caso que fal
 \end{DoxyReturn}
 
 
-Definición en la línea 375 del archivo Kakuro.\+java.
+Definición en la línea 388 del archivo Kakuro.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{375                                 \{}
-\DoxyCodeLine{376         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ac04999a69528c86ca7262f9496a21bca}{rowSize}}; ++i) \{}
-\DoxyCodeLine{377             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a15b207f751a534b85dba19d1c36211ef}{columnSize}}; ++j) \{}
-\DoxyCodeLine{378                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j].isWhite() \&\& ((WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j]).getValue() != ((WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j]).getCorrectValue()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{379             \}}
-\DoxyCodeLine{380         \}}
-\DoxyCodeLine{381         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{382     \}}
+\DoxyCodeLine{388                                 \{}
+\DoxyCodeLine{389         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ac04999a69528c86ca7262f9496a21bca}{rowSize}}; ++i) \{}
+\DoxyCodeLine{390             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a15b207f751a534b85dba19d1c36211ef}{columnSize}}; ++j) \{}
+\DoxyCodeLine{391                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j].isWhite() \&\& ((WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j]).getValue() != ((WhiteCell) \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ad39f2edb0e3a6eae95dfa01c52ae0243}{board}}[i][j]).getCorrectValue()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{392             \}}
+\DoxyCodeLine{393         \}}
+\DoxyCodeLine{394         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{395     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Documentación de los datos miembro}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_a1d758ebb7a0fb3be842daef16c498e4a}\label{classdomain_1_1classes_1_1_kakuro_a1d758ebb7a0fb3be842daef16c498e4a}} 
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}\label{classdomain_1_1classes_1_1_kakuro_ab02c48d2633c881861bcc730ccbd5844}} 
 \index{domain.classes.Kakuro@{domain.classes.Kakuro}!id@{id}}
 \index{id@{id}!domain.classes.Kakuro@{domain.classes.Kakuro}}
 \doxysubsubsection{\texorpdfstring{id}{id}}
-{\footnotesize\ttfamily String domain.\+classes.\+Kakuro.\+id\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily int domain.\+classes.\+Kakuro.\+id\hspace{0.3cm}{\ttfamily [private]}}
 
 Es el identificador del \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} 
 
