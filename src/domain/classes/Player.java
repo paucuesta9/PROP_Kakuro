@@ -31,6 +31,11 @@ public class Player {
 
     }
 
+    public Player(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
     /**
      * 
      * @param password

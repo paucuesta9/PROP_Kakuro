@@ -17,13 +17,15 @@
       "id": 0,
       "rowSize": 12,
       "columnSize": 12,
-      "difficult": 1
+      "difficult": 1,
+      "time": 129
     },
     {
       "id": 2,
       "rowSize": 12,
       "columnSize": 12,
-      "difficult": 1
+      "difficult": 1,
+      "time": 130
     }
   ]
 }
