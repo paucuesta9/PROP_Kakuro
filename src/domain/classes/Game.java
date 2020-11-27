@@ -18,27 +18,37 @@ public class Game {
     @SerializedName("difficult")
     @Expose
     private int difficult;
+    @SerializedName("time")
+    @Expose
+    private int time;
+    @SerializedName("points")
+    @Expose
+    private int points;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Game() {
     }
 
     /**
-     * 
+     *
      * @param columnSize
      * @param difficult
      * @param id
+     * @param time
      * @param rowSize
+     * @param points
      */
-    public Game(int id, int rowSize, int columnSize, int difficult) {
+    public Game(int id, int rowSize, int columnSize, int difficult, int time, int points) {
         super();
         this.id = id;
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         this.difficult = difficult;
+        this.time = time;
+        this.points = points;
     }
 
     public int getId() {
@@ -73,4 +83,21 @@ public class Game {
         this.difficult = difficult;
     }
 
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
 }
+

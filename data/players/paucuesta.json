@@ -18,14 +18,16 @@
       "rowSize": 12,
       "columnSize": 12,
       "difficult": 1,
-      "time": 129
+      "time": 129,
+      "points": 0
     },
     {
       "id": 2,
       "rowSize": 12,
       "columnSize": 12,
       "difficult": 1,
-      "time": 130
+      "time": 130,
+      "points": 0
     }
   ]
 }
