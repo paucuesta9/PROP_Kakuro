@@ -1,0 +1,29 @@
+{
+  "username": "paucuesta",
+  "password": "1234",
+  "stats": {
+    "finished": 10,
+    "total": 15,
+    "helps": 1,
+    "points": 150,
+    "created": 2,
+    "minTimeEasy": 125,
+    "minTimeMedium": 160,
+    "minTimeDifficult": 200
+  },
+  "currentGame": "0",
+  "savedGames": [
+    {
+      "id": 0,
+      "rowSize": 12,
+      "columnSize": 12,
+      "difficult": 1
+    },
+    {
+      "id": 2,
+      "rowSize": 12,
+      "columnSize": 12,
+      "difficult": 1
+    }
+  ]
+}
