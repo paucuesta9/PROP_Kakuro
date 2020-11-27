@@ -1,8 +1,13 @@
 package domain.controllers;
 
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 import data.CtrlData;
 import domain.classes.*;
+import domain.classes.Exceptions.WrongPasswordException;
+import netscape.javascript.JSObject;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -20,12 +25,13 @@ public class CtrlDomain {
      * Instáncia del cotrolador persistencia
      */
     private CtrlData data;
-    //private Game currentGame;
+    private Game currentGame;
     /**
      * Instància del kakuro con el que se trabaja en cada momento
      */
     private Kakuro currentKakuro;
-    //private Player currentPlayer;
+    private Player currentPlayer;
+    private Gson gson;
 
     /** @brief Creadora por defecto
      *
@@ -33,6 +39,28 @@ public class CtrlDomain {
      */
     public CtrlDomain() {
         data = CtrlData.getInstance();
+        gson = new Gson();
+    }
+
+    public void login(String username, String password) throws FileNotFoundException, WrongPasswordException {
+        JsonReader reader = data.getUser(username);
+        currentPlayer = gson.fromJson(reader, Player.class);
+        if (!password.equals(currentPlayer.getPassword())) {
+            currentPlayer = null;
+            throw new WrongPasswordException();
+        }
+    }
+
+    public void logout() {
+        currentPlayer = null;
+        currentGame = null;
+        currentKakuro = null;
+    }
+
+    public void signUp(String username, String password) {
+        currentPlayer = new Player(username, password);
+        String playerJSON = gson.toJson(currentPlayer);
+        data.saveNewPlayer(username, playerJSON);
     }
 
     // OPTION 1 - PLAY
@@ -56,10 +84,16 @@ public class CtrlDomain {
             resolve();
             currentKakuro.setId(saveKakuro());
         }
+        int id = getGameId();
+        currentGame = new Game(id,  0, 0, id);
+        currentKakuro.setId(id);
+        currentPlayer.setCurrentGame(currentGame.getId());
         CtrlPlay.startGame(currentKakuro);
         setCorrectValues();
-        //currentGame = new Game(0,0, currentKakuro);
-        //currentGame.startResumeTimer();
+    }
+
+    private int getGameId() {
+        return 0;
     }
 
     /** @brief Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correctValue de la correspondiente celda blanca
@@ -74,13 +108,12 @@ public class CtrlDomain {
         }
     }
 
-//    /** @brief
-//     *
-//     * @param game
-//     */
-//    public void setGame(int game) {
-//        //TODO: Leer game
-//    }
+    public void setGame(int game) {
+        JsonReader reader = data.loadGame(currentPlayer.getUsername(), game);
+        currentGame = gson.fromJson(reader, Game.class);
+        currentPlayer.setCurrentGame(game);
+        currentKakuro = currentGame.getKakuro();
+    }
 
     /** @brief Se mira si el usuario ha completado el tablero
      *
@@ -123,6 +156,23 @@ public class CtrlDomain {
      */
     public boolean helpCorrectNumber(int x, int y) {
         return CtrlPlay.helpCorrectNumber(x, y);
+    }
+
+    public void finishGame() {
+        int points = 0;
+        int diff = currentKakuro.getDifficulty();
+        if (diff == 1) points = 10;
+        else if (diff == 2) points = 20;
+        else if (diff == 3) points = 30;
+        points += Integer.max(currentKakuro.getRowSize(), currentKakuro.getColumnSize()) / 2;
+        updatePoints(points);
+        updateStatsPlayer();
+        currentGame = null;
+        currentKakuro = null;
+    }
+
+    private void updateStatsPlayer() {
+        //TODO: Hacer función
     }
 
     // OPTION 2 - CREATE VALIDATE
@@ -206,6 +256,9 @@ public class CtrlDomain {
         return currentKakuro.correctToString();
     }
 
+    public void updatePoints(int points) {
+        currentGame.setPoints(currentGame.getPoints() + points);
+    }
 
     /* READ AND WRITE (FILE) */
     /** @bief Busca un Kakuro
@@ -268,5 +321,14 @@ public class CtrlDomain {
      */
     public boolean checkCoord(int x, int y) {
         return (x < getRowSize() && x >= 0 && y < getColumnSize() && y >= 0);
+    }
+
+    public ArrayList<Integer> getStartedGames() {
+        return data.loadGames(currentPlayer.getUsername());
+    }
+
+    public void saveGame() {
+        String gameJSON = gson.toJson(currentGame);
+        data.saveGame(currentPlayer.getUsername(), gameJSON, currentGame.getId());
     }
 }
