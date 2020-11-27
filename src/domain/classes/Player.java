@@ -21,7 +21,7 @@ public class Player {
     private String currentGame;
     @SerializedName("savedGames")
     @Expose
-    private List<SavedGame> savedGames = null;
+    private List<Game> savedGames = null;
 
     /**
      * No args constructor for use in serialization
@@ -39,7 +39,7 @@ public class Player {
      * @param savedGames
      * @param username
      */
-    public Player(String username, String password, Stats stats, String currentGame, List<SavedGame> savedGames) {
+    public Player(String username, String password, Stats stats, String currentGame, List<Game> savedGames) {
         super();
         this.username = username;
         this.password = password;
@@ -80,11 +80,11 @@ public class Player {
         this.currentGame = currentGame;
     }
 
-    public List<SavedGame> getSavedGames() {
+    public List<Game> getSavedGames() {
         return savedGames;
     }
 
-    public void setSavedGames(List<SavedGame> savedGames) {
+    public void setSavedGames(List<Game> savedGames) {
         this.savedGames = savedGames;
     }
 

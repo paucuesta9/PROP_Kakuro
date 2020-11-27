@@ -4,7 +4,7 @@ package domain.classes;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class SavedGame {
+public class Game {
 
     @SerializedName("id")
     @Expose
@@ -23,7 +23,7 @@ public class SavedGame {
      * No args constructor for use in serialization
      * 
      */
-    public SavedGame() {
+    public Game() {
     }
 
     /**
@@ -33,7 +33,7 @@ public class SavedGame {
      * @param id
      * @param rowSize
      */
-    public SavedGame(int id, int rowSize, int columnSize, int difficult) {
+    public Game(int id, int rowSize, int columnSize, int difficult) {
         super();
         this.id = id;
         this.rowSize = rowSize;
