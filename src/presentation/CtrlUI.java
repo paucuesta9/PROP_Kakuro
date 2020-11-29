@@ -383,4 +383,14 @@ public class CtrlUI {
         System.out.println(cd.getCorrectKakuroToString());
     }
 
+
+    // ****************** NUEVA VERSIÓN ****************** //
+
+    public int getRowSize() {
+        return cd.getRowSize();
+    }
+
+    public int getColumnSize() {
+        return cd.getColumnSize();
+    }
 }
