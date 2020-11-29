@@ -1,5 +1,6 @@
 package presentation;
 
+import com.google.gson.Gson;
 import domain.controllers.CtrlDomain;
 
 import java.io.IOException;
@@ -164,10 +165,10 @@ public class CtrlUI {
      * Se crea/carga una partida y se juega
      */
     public void play() {
-        //System.out.println("1. Empezar nueva partida");
-        //System.out.println("2. Cargar partida empezada");
-        //int choice = readNumber();
-        //if (choice == 1) {
+        System.out.println("1. Empezar nueva partida");
+        System.out.println("2. Cargar partida empezada");
+        int choice = readNumber();
+        if (choice == 1) {
             System.out.print("Escoge dificultad: Fácil (1), Medio (2), Dificil (3): ");
             int difficulty = readNumber();
             while (difficulty < 1 || difficulty > 3) {
@@ -185,18 +186,16 @@ public class CtrlUI {
                 kakuroSizeColumn = readNumber();
             }
             cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn);
-
-
-        // }
-//        else if (choice == 2) {
-//            ArrayList<Integer> startedGames= cd.getStartedGames();
-//            for (int i = 0; i < startedGames.size(); ++i) {
-//                System.out.println(i + ": " + startedGames.get(i));
-//            }
-//            System.out.println("Escoja la partida que desea retomar");
-//            int game = readNumber();
-//            cd.setGame(startedGames.get(game));
-//        }
+        }
+        else if (choice == 2) {
+            ArrayList<Integer> startedGames= cd.getStartedGames();
+            for (int i = 0; i < startedGames.size(); ++i) {
+                System.out.println(i + ": " + startedGames.get(i));
+            }
+            System.out.println("Escoja la partida que desea retomar");
+            int game = readNumber();
+            cd.setGame(startedGames.get(game));
+        }
         while (!cd.isFinished()) {
             System.out.println(" -- INSTRUCCIONES JUGAR --");
             System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
@@ -207,9 +206,9 @@ public class CtrlUI {
             System.out.println("");
             int x = readNumber();
             if (x == -1) {
-               // System.out.println("¿Desea guardar la partida? Si (1), No (0)");
-                //int save = readNumber();
-                //if (save == 1) saveGame();
+                System.out.println("¿Desea guardar la partida? Si (1), No (0)");
+                int save = readNumber();
+                if (save == 1) cd.saveGame();
                 menu();
             }
             if (x == -2) {
@@ -241,15 +240,9 @@ public class CtrlUI {
         }
         writeKakuroInTerminal();
         System.out.println("Felicidades! Has completado el Kakuro\n");
+        cd.finishGame();
         menu();
     }
-
-//    /** @brief Guardar una partida
-//     *
-//     */
-////    public void saveGame() {
-////        //TODO: Hacer la funcion entera de guardar partida
-////    }
 
     /** @brief Ayudas
      *
@@ -283,17 +276,21 @@ public class CtrlUI {
                     break;
                 case 0:
                     System.out.println("El valor que ha introducido es incorrecto");
+                    cd.updatePoints(-1);
                     break;
                 case 1:
                     System.out.println("El valor que ha introducido es correcto");
+                    cd.updatePoints(-1);
                     break;
             }
         }
         else if (help == 2) {
             if (!cd.helpCorrectNumber(x, y)) {
                 System.out.println("Las coordenadas que ha introducido son de una casilla negra");
-            } else
+            } else {
                 System.out.println("Se ha colocado el valor correcto en la casilla indicada");
+                cd.updatePoints(-2);
+            }
         }
         else {
             System.out.println("El número que ha introducido no es correcto");

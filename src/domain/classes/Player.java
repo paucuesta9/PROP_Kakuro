@@ -1,4 +1,3 @@
-
 package domain.classes;
 
 import java.util.List;
@@ -18,17 +17,16 @@ public class Player {
     private Stats stats;
     @SerializedName("currentGame")
     @Expose
-    private String currentGame;
+    private int currentGame;
     @SerializedName("savedGames")
     @Expose
-    private List<Game> savedGames = null;
+    private List<Integer> savedGames = null;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
     public Player() {
-
     }
 
     public Player(String username, String password) {
@@ -37,14 +35,14 @@ public class Player {
     }
 
     /**
-     * 
+     *
      * @param password
      * @param stats
      * @param currentGame
      * @param savedGames
      * @param username
      */
-    public Player(String username, String password, Stats stats, String currentGame, List<Game> savedGames) {
+    public Player(String username, String password, Stats stats, int currentGame, List<Integer> savedGames) {
         super();
         this.username = username;
         this.password = password;
@@ -77,19 +75,19 @@ public class Player {
         this.stats = stats;
     }
 
-    public String getCurrentGame() {
+    public int getCurrentGame() {
         return currentGame;
     }
 
-    public void setCurrentGame(String currentGame) {
+    public void setCurrentGame(int currentGame) {
         this.currentGame = currentGame;
     }
 
-    public List<Game> getSavedGames() {
+    public List<Integer> getSavedGames() {
         return savedGames;
     }
 
-    public void setSavedGames(List<Game> savedGames) {
+    public void setSavedGames(List<Integer> savedGames) {
         this.savedGames = savedGames;
     }
 

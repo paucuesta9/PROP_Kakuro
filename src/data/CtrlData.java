@@ -1,6 +1,10 @@
 package data;
 
+import com.google.gson.stream.JsonReader;
+import domain.classes.Game;
+
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Random;
 
 /** @file CtrlData.java
@@ -128,4 +132,46 @@ public class CtrlData {
         return listFiles.length;
     }
 
+    public JsonReader getUser(String username) throws FileNotFoundException {
+        JsonReader reader = new JsonReader(new FileReader("data/players/" + username + ".json"));
+        return reader;
+    }
+
+    public ArrayList<Integer> loadGames(String username) {
+        return null;
+    }
+
+    public JsonReader loadGame(String username, int game) {
+        JsonReader reader = null;
+        try {
+            reader = new JsonReader(new FileReader("data/players/" + username + "/" + game + ".json"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return reader;
+    }
+
+    public void saveNewPlayer(String username, String playerJSON) {
+        try {
+            FileWriter file = new FileWriter("data/players/" + username + ".json");
+            PrintWriter pwSol = new PrintWriter(file);
+            pwSol.print(playerJSON);
+            pwSol.close();
+            File folderSol = new File("data/players/" + username);
+            folderSol.mkdir();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveGame(String username, String gameJSON, int id) {
+        try {
+            FileWriter file = new FileWriter("data/players/" + username + "/" + id +  ".json");
+            PrintWriter pwSol = new PrintWriter(file);
+            pwSol.print(gameJSON);
+            pwSol.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
