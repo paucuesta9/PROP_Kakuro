@@ -1,14 +1,12 @@
 package presentation;
 
-import domain.classes.WhiteCell;
-
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentAdapter;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 public class Play {
     private JPanel panel1;
@@ -23,6 +21,7 @@ public class Play {
     private JButton help2;
 
     private CtrlUI ctrlUI;
+    private Font fontAwesome, roboto;
 
     private int rowSize, columnSize;
 
@@ -30,20 +29,35 @@ public class Play {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         ctrlUI = new CtrlUI();
-        InputStream is = Play.class.getResourceAsStream("fa-regular.ttf");
-        try {
-            Font font = Font.createFont(Font.TRUETYPE_FONT, is);
-            font = font.deriveFont(Font.PLAIN, 50f);
-            config.setText("\uF013");
-            config.setFont(font);
-        } catch (FontFormatException e) {
-            System.out.println("Salta de aqui");
-            e.printStackTrace();
-        } catch (IOException e) {
-            System.out.println("Salta de allá");
-            e.printStackTrace();
-        }
+        loadFonts();
 
+        pause.setFont(roboto);
+        exit.setFont(roboto);
+        config.setFont(fontAwesome);
+        config.setForeground(Color.BLACK);
+        config.setText("\uF013");
+        config.setForeground(Color.decode("#00204A"));
+        config.setBorder(new EmptyBorder(10,0,0,10));
+        config.setBackground(Color.CYAN);
+
+        pause.setBackground(Color.decode("#1976D2"));
+        pause.setBorderPainted(false);
+        pause.setBorder(new Border() {
+            @Override
+            public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
+                g.drawRoundRect(x, y, width-1, height-1, 50, 50);
+            }
+
+            @Override
+            public Insets getBorderInsets(Component c) {
+                return new Insets(11, 11, 12, 10);
+            }
+
+            @Override
+            public boolean isBorderOpaque() {
+                return true;
+            }
+        });
 
         help1.addActionListener(new ActionListener() {
             @Override
@@ -60,6 +74,38 @@ public class Play {
         });
     }
 
+    private void loadFonts() {
+        BufferedInputStream myStream = null;
+        try {
+            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/fa-solid.ttf"));
+        } catch (FileNotFoundException fileNotFoundException) {
+            fileNotFoundException.printStackTrace();
+        }
+        Font ttfBase = null;
+        try {
+            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
+        } catch (FontFormatException fontFormatException) {
+            fontFormatException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        fontAwesome = ttfBase.deriveFont(Font.PLAIN, 30f);
+
+        try {
+            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/Roboto-Bold.ttf"));
+        } catch (FileNotFoundException fileNotFoundException) {
+            fileNotFoundException.printStackTrace();
+        }
+        try {
+            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
+        } catch (FontFormatException fontFormatException) {
+            fontFormatException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        roboto = ttfBase.deriveFont(Font.PLAIN, 20f);
+    }
+
     private void createUIComponents() {
         KakuroBoard sg = new KakuroBoard(rowSize, columnSize);
         board = new JPanel();
@@ -74,7 +120,8 @@ public class Play {
         JFrame frame = new JFrame("App");
         frame.setContentPane(new Play(12, 10).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,700);
+        frame.setSize(1200,900);
+        frame.setResizable(false);
         frame.setVisible(true);
     }
 }
