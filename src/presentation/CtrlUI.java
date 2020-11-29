@@ -1,8 +1,10 @@
 package presentation;
 
 import com.google.gson.Gson;
+import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlDomain;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -41,6 +43,44 @@ public class CtrlUI {
     public void run () {
         System.out.println("########## BIENVENIDO A KAKURO ##########");
         System.out.println("");
+        System.out.println("¿Quiere iniciar sesión o crear una cuenta? 1. Iniciar sesión, 2. Crear cuenta");
+        int option = readNumber();
+        if (option == 1) {
+            while (true) {
+                System.out.print("Escriba el nombre de usuario: ");
+                String username = readLine();
+                System.out.print("Escriba la contraseña: ");
+                String password = readLine();
+                try {
+                    cd.login(username, password);
+                    System.out.println("Se ha iniciado sesión correctamente");
+                    break;
+                } catch (FileNotFoundException e) {
+                    System.out.println("El usuario no existe");
+                } catch (WrongPasswordException e) {
+                    System.out.println("La contraseña no es correcta");
+                }
+            }
+        } else if (option == 2) {
+            String username, password;
+            while (true) {
+                System.out.print("Escriba el nombre de usuario: ");
+                username = readLine();
+                System.out.print("Escriba la contraseña: ");
+                password = readLine();
+                System.out.print("Confirme la contraseña: ");
+                String passwordRepeat = readLine();
+                if (username.length() < 3) {
+                    System.out.println("El nombre de usuario debe tener como mínimo 3 carácteres");
+                    continue;
+                }
+                if (password.equals(passwordRepeat))
+                    break;
+                else System.out.println("Las contraseñas no coinciden");
+            }
+            cd.signUp(username, password);
+            System.out.println("Se ha registrado correctamente. ¡Disfrute del juego!");
+        }
         menu();
     }
 

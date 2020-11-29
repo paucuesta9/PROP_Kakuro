@@ -19,11 +19,12 @@ public class Game {
     @SerializedName("points")
     @Expose
     private int points;
-    @SerializedName("kakuro")
+    @SerializedName("kakuroId")
     @Expose
     private int kakuroId;
-    private Kakuro kakuro;
     private Timer timer;
+    private Kakuro kakuro;
+
 
     /**
      * No args constructor for use in serialization
@@ -45,7 +46,6 @@ public class Game {
         this.time = time;
         this.points = points;
         this.kakuroId = kakuroId;
-        this.timer = new Timer();
     }
 
     public int getId() {

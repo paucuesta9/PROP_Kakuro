@@ -15,8 +15,6 @@ public class Player {
     @SerializedName("stats")
     @Expose
     private Stats stats;
-    @SerializedName("currentGame")
-    @Expose
     private int currentGame;
     @SerializedName("savedGames")
     @Expose
@@ -38,16 +36,14 @@ public class Player {
      *
      * @param password
      * @param stats
-     * @param currentGame
      * @param savedGames
      * @param username
      */
-    public Player(String username, String password, Stats stats, int currentGame, List<Integer> savedGames) {
+    public Player(String username, String password, Stats stats, List<Integer> savedGames) {
         super();
         this.username = username;
         this.password = password;
         this.stats = stats;
-        this.currentGame = currentGame;
         this.savedGames = savedGames;
     }
 

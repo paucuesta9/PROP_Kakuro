@@ -31,7 +31,7 @@ public class Login {
                 ImageIcon scaledIcon = new ImageIcon(imgScale);
                 label.setIcon(scaledIcon);*/
 
-                ImageIcon icon = new ImageIcon("resources.images/Captura.png"); //se ajusta cuadrado
+                ImageIcon icon = new ImageIcon("src/resources/images/Captura.PNG"); //se ajusta cuadrado
                 Image img = icon.getImage();
                 int w = picLabel.getWidth(); int h = picLabel.getHeight();
                 if (w>h) w = h;
@@ -100,7 +100,7 @@ public class Login {
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-         label = new JLabel(new ImageIcon(new ImageIcon("resources.images/Captura.png").getImage().getScaledInstance(600,600, Image.SCALE_DEFAULT)));
+         label = new JLabel(new ImageIcon(new ImageIcon("src/resources/images/Captura.PNG").getImage().getScaledInstance(600,600, Image.SCALE_DEFAULT)));
          label.requestFocusInWindow();
     }
 
