@@ -15,10 +15,11 @@ public class Play {
     private JPanel board;
     private JPanel menu;
     private JPanel logotipo;
-    private JPanel time;
-    private JLabel config;
     private JButton help1;
     private JButton help2;
+    private JLabel timeLogo;
+    private JLabel time;
+    private JButton config;
 
     private CtrlUI ctrlUI;
     private Font fontAwesome, roboto;
@@ -31,33 +32,49 @@ public class Play {
         ctrlUI = new CtrlUI();
         loadFonts();
 
-        pause.setFont(roboto);
-        exit.setFont(roboto);
         config.setFont(fontAwesome);
-        config.setForeground(Color.BLACK);
-        config.setText("\uF013");
         config.setForeground(Color.decode("#00204A"));
+        config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,10));
-        config.setBackground(Color.CYAN);
 
-        pause.setBackground(Color.decode("#1976D2"));
+        pause.setFont(roboto);
+        pause.setForeground(Color.WHITE);
+        pause.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
         pause.setBorderPainted(false);
-        pause.setBorder(new Border() {
-            @Override
-            public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
-                g.drawRoundRect(x, y, width-1, height-1, 50, 50);
-            }
+        pause.setBackground(null);
+        pause.setHorizontalTextPosition(JButton.CENTER);
+        pause.setVerticalTextPosition(JButton.CENTER);
 
-            @Override
-            public Insets getBorderInsets(Component c) {
-                return new Insets(11, 11, 12, 10);
-            }
+        exit.setFont(roboto);
+        exit.setForeground(Color.WHITE);
+        exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
+        exit.setBorderPainted(false);
+        exit.setBackground(null);
+        exit.setHorizontalTextPosition(JButton.CENTER);
+        exit.setVerticalTextPosition(JButton.CENTER);
 
-            @Override
-            public boolean isBorderOpaque() {
-                return true;
-            }
-        });
+        help1.setFont(fontAwesome.deriveFont(Font.PLAIN, 40f));
+        help1.setForeground(Color.WHITE);
+        help1.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/elipse-azul.png")));
+        help1.setBorderPainted(false);
+        help1.setBackground(null);
+        help1.setHorizontalTextPosition(JButton.CENTER);
+        help1.setVerticalTextPosition(JButton.CENTER);
+
+        help2.setFont(fontAwesome.deriveFont(Font.PLAIN, 40f));
+        help2.setForeground(Color.WHITE);
+        help2.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/elipse-azul.png")));
+        help2.setBorderPainted(false);
+        help2.setBackground(null);
+        help2.setHorizontalTextPosition(JButton.CENTER);
+        help2.setVerticalTextPosition(JButton.CENTER);
+
+        timeLogo.setFont(fontAwesome.deriveFont(Font.PLAIN, 40f));
+        timeLogo.setForeground(Color.decode("#1976D2"));
+
+        time.setFont(roboto.deriveFont(Font.PLAIN, 30f));
+        time.setForeground(Color.decode("#1976D2"));
+
 
         help1.addActionListener(new ActionListener() {
             @Override
