@@ -13,8 +13,8 @@ public class KakuroBoard extends JPanel {
                 c.weightx = 1.0;
                 c.weighty = 1.0;
                 c.fill = GridBagConstraints.BOTH;
-                c.gridx = i;
-                c.gridy = j;
+                c.gridx = j;
+                c.gridy = i;
                 if (i % 2 == 0)
                     add(new KakuroWhiteCell(i, j), c);
                 else
