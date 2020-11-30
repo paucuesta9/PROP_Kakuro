@@ -12,7 +12,7 @@ public class KakuroWhiteCell extends KakuroCell {
         super(x, y, size);
         setLayout(new GridBagLayout());
         jLabel = new JLabel();
-        jLabel.setFont(new Font("Verdana",1,20));
+        jLabel.setFont(new Font("Roboto",1,20*size/50));
         add(jLabel, new GridBagConstraints(
                 0, // gridx
                 0, // gridy

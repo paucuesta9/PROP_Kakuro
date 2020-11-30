@@ -16,7 +16,7 @@ public class KakuroBlackCell extends KakuroCell {
         setLayout(new GridBagLayout());
 
         jLabelRow = new JLabel();
-        jLabelRow.setFont(new Font("Verdana", Font.PLAIN,15));
+        jLabelRow.setFont(new Font("Roboto", Font.PLAIN,15*size/50));
         jLabelRow.setForeground(Color.WHITE);
 
         add(jLabelRow, new GridBagConstraints(
@@ -28,15 +28,15 @@ public class KakuroBlackCell extends KakuroCell {
                 1, // weighty
                 GridBagConstraints.NORTHEAST, // anchor <------------
                 GridBagConstraints.NONE, // fill
-                new Insets(1, // inset top
+                new Insets(size/50, // inset top
                         0, // inset left
                         0, // inset bottom
-                        5), // inset right
+                        5*size/50), // inset right
                 0, // ipadx
                 0));
 
         jLabelColumn = new JLabel();
-        jLabelColumn.setFont(new Font("Verdana", Font.PLAIN,15));
+        jLabelColumn.setFont(new Font("Roboto", Font.PLAIN,15*size/50));
         jLabelColumn.setForeground(Color.WHITE);
         add(jLabelColumn, new GridBagConstraints(
                 0, // gridx
@@ -48,8 +48,8 @@ public class KakuroBlackCell extends KakuroCell {
                 GridBagConstraints.SOUTHWEST, // anchor <------------
                 GridBagConstraints.NONE, // fill
                 new Insets(0, // inset top
-                        5, // inset left
-                        1, // inset bottom
+                        5*size/50, // inset left
+                        size/50, // inset bottom
                         0), // inset right
                 0, // ipadx
                 0));
