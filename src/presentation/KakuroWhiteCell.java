@@ -8,8 +8,8 @@ public class KakuroWhiteCell extends KakuroCell {
     private int value = 0;
     private JLabel jLabel;
 
-    KakuroWhiteCell(int x, int y) {
-        super(x, y);
+    KakuroWhiteCell(int x, int y, int size) {
+        super(x, y, size);
         setLayout(new GridBagLayout());
         jLabel = new JLabel();
         jLabel.setFont(new Font("Verdana",1,20));
@@ -67,26 +67,10 @@ public class KakuroWhiteCell extends KakuroCell {
 
             }
         });
-        addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-        });
     }
 
-    public KakuroWhiteCell(int i, int j, int value) {
-        this(i, j);
+    public KakuroWhiteCell(int i, int j, int value, int size) {
+        this(i, j, size);
         this.value = value;
         if (value != 0) jLabel.setText(String.valueOf(value));
     }

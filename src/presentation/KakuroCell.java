@@ -8,13 +8,13 @@ import java.awt.event.MouseListener;
 public class KakuroCell extends JPanel {
     private int x, y;
 
-    KakuroCell(int x, int y) {
+    KakuroCell(int x, int y, int size) {
         super();
         this.x = x;
         this.y = y;
 
         setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
-        setPreferredSize(new Dimension(50, 50));
+        setPreferredSize(new Dimension(size, size));
     }
 }

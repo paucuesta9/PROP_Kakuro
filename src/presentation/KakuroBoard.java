@@ -15,7 +15,8 @@ public class KakuroBoard extends JPanel {
         String[] valuesSize = values[0].split(",");
         int rowSize = Integer.parseInt(valuesSize[0]);
         int columnSize = Integer.parseInt(valuesSize[1]);
-
+        int size = Math.max(rowSize, columnSize);
+        size = 850 / size;
         GridBagConstraints c = new GridBagConstraints();
         for (int i = 0; i < rowSize; i++) {
             String[] valuesRow = values[i + 1].split(",");
@@ -25,8 +26,8 @@ public class KakuroBoard extends JPanel {
                 c.fill = GridBagConstraints.BOTH;
                 c.gridx = j;
                 c.gridy = i;
-                if (valuesRow[j].equals("*")) add(new KakuroBlackCell(i, j), c);
-                else if (valuesRow[j].equals("?")) add(new KakuroWhiteCell(i, j), c);
+                if (valuesRow[j].equals("*")) add(new KakuroBlackCell(i, j, size), c);
+                else if (valuesRow[j].equals("?")) add(new KakuroWhiteCell(i, j, size), c);
                 else if (valuesRow[j].charAt(0) == 'C' || valuesRow[j].charAt(0) == 'F') {
                     int vertical = 0, horizontal = 0;
                     if (valuesRow[j].charAt(0) == 'C') {
@@ -41,8 +42,8 @@ public class KakuroBoard extends JPanel {
                     } else {
                         horizontal = Integer.parseInt(valuesRow[j].substring(1));
                     }
-                    add(new KakuroBlackCell(i, j, horizontal, vertical), c);
-                } else add(new KakuroWhiteCell(i, j, Integer.parseInt(valuesRow[j])), c);
+                    add(new KakuroBlackCell(i, j, horizontal, vertical, size), c);
+                } else add(new KakuroWhiteCell(i, j, Integer.parseInt(valuesRow[j]), size), c);
             }
         }
     }

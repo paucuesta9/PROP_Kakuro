@@ -10,8 +10,8 @@ public class KakuroBlackCell extends KakuroCell {
     private JLabel jLabelRow;
     private JLabel jLabelColumn;
 
-    KakuroBlackCell(int x, int y) {
-        super(x, y);
+    KakuroBlackCell(int x, int y, int size) {
+        super(x, y, size);
         setBackground(Color.BLACK);
         setLayout(new GridBagLayout());
 
@@ -55,8 +55,8 @@ public class KakuroBlackCell extends KakuroCell {
                 0));
     }
 
-    public KakuroBlackCell(int i, int j, int horizontal, int vertical) {
-        this(i, j);
+    public KakuroBlackCell(int i, int j, int horizontal, int vertical, int size) {
+        this(i, j, size);
         this.row = horizontal;
         this.column = vertical;
         if (row != 0) jLabelRow.setText(String.valueOf(row));
