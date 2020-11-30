@@ -2,6 +2,7 @@ package presentation;
 
 import domain.controllers.CtrlDomain;
 
+import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
@@ -32,7 +33,7 @@ public class Play {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         ctrlUI = CtrlUI.getInstance();
-        ctrlUI.startGame(1, 3, 3);
+        ctrlUI.startGame(1, rowSize, columnSize);
         loadFonts();
 
         String kakuro = ctrlUI.getKakuro();
@@ -109,6 +110,44 @@ public class Play {
             }
         });
 
+        InputStream audioSrc = getClass().getClassLoader().getResourceAsStream("Prueba1.wav");
+        AudioInputStream as1 = null;
+        try {
+            as1 = AudioSystem.getAudioInputStream(audioSrc);
+        } catch (UnsupportedAudioFileException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        AudioFormat af = as1.getFormat();
+        Clip clip1 = null;
+        try {
+            clip1 = AudioSystem.getClip();
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+        DataLine.Info info = new DataLine.Info(Clip.class, af);
+
+        Line line1 = null;
+        try {
+            line1 = AudioSystem.getLine(info);
+        } catch (LineUnavailableException e) {
+            e.printStackTrace();
+        }
+
+        if ( ! line1.isOpen() )
+        {
+            try {
+                clip1.open(as1);
+            } catch (LineUnavailableException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            clip1.loop(Clip.LOOP_CONTINUOUSLY);
+            clip1.start();
+        }
+
     }
 
     private void loadFonts() {
@@ -149,7 +188,7 @@ public class Play {
 
     public static void main(String [] args) {
         JFrame frame = new JFrame("App");
-        frame.setContentPane(new Play(12, 10).panel1);
+        frame.setContentPane(new Play(3, 3).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,900);
         frame.setResizable(false);
