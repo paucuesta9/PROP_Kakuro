@@ -2,10 +2,7 @@ package presentation;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
 public class KakuroWhiteCell extends KakuroCell {
     private int value = 0;
@@ -13,11 +10,24 @@ public class KakuroWhiteCell extends KakuroCell {
 
     KakuroWhiteCell(int x, int y) {
         super(x, y);
+        setLayout(new GridBagLayout());
         jLabel = new JLabel();
         jLabel.setFont(new Font("Verdana",1,20));
-        add(jLabel);
-        jLabel.setHorizontalTextPosition(SwingConstants.CENTER);
-        jLabel.setVerticalTextPosition(SwingConstants.CENTER);
+        add(jLabel, new GridBagConstraints(
+                0, // gridx
+                0, // gridy
+                1, // gridwidth
+                1, // gridheight
+                1, // weightx
+                1, // weighty
+                GridBagConstraints.CENTER, // anchor <------------
+                GridBagConstraints.NONE, // fill
+                new Insets(0, // inset top
+                        0, // inset left
+                        0, // inset bottom
+                        0), // inset right
+                0, // ipadx
+                0));
         setBackground(Color.WHITE);
         setFocusable(true);
         addFocusListener(new FocusListener() {
@@ -54,6 +64,22 @@ public class KakuroWhiteCell extends KakuroCell {
 
             @Override
             public void mouseExited(MouseEvent e) {
+
+            }
+        });
+        addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
 
             }
         });
