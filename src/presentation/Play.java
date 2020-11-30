@@ -32,7 +32,7 @@ public class Play {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         ctrlUI = new CtrlUI();
-        ctrlUI.searchKakuro(1, 12, 10);
+        ctrlUI.searchKakuro(1, 3, 3);
         loadFonts();
 
         String kakuro = ctrlUI.getCorrectKkuro();

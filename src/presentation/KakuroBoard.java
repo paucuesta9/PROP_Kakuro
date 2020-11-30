@@ -16,7 +16,7 @@ public class KakuroBoard extends JPanel {
         int rowSize = Integer.parseInt(valuesSize[0]);
         int columnSize = Integer.parseInt(valuesSize[1]);
         int size = Math.max(rowSize, columnSize);
-        size = 850 / size;
+        size = 800 / size;
         GridBagConstraints c = new GridBagConstraints();
         for (int i = 0; i < rowSize; i++) {
             String[] valuesRow = values[i + 1].split(",");
