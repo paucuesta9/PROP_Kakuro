@@ -32,6 +32,7 @@ public class KakuroWhiteCell extends KakuroCell {
                 0, // ipadx
                 0));
         setBackground(Color.WHITE);
+
         setFocusable(true);
         addFocusListener(new FocusListener() {
             @Override
@@ -95,11 +96,14 @@ public class KakuroWhiteCell extends KakuroCell {
                 if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                 if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                 if (value != 0) {
+                    setBackground(Color.WHITE);
                     setValue(value);
                     ctrlUI.setValue(x,y,value);
                     if (!ctrlUI.checkValidity(x,y,value)) {
                         setBackground(Color.decode("#e53935"));
                     }
+                    boolean isFinished = ctrlUI.isFinished();
+                    if (isFinished) ctrlUI.finishGame();
                 }
             }
         });

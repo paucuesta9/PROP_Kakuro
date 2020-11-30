@@ -58,11 +58,12 @@ public class CtrlPlay {
      * @param y representa el número de columna del tablero
      * @return cierto si es una celda blanca y falso si es una celda negra
      */
-    public static boolean helpCorrectNumber(int x, int y) {
+    public static int helpCorrectNumber(int x, int y) {
         if (kakuro.getCell(x, y).isWhite()) {
-            kakuro.setValue(x, y, ((WhiteCell) kakuro.getCell(x, y)).getCorrectValue());
-            return true;
+            int correctNumber = ((WhiteCell) kakuro.getCell(x, y)).getCorrectValue();
+            kakuro.setValue(x, y, correctNumber);
+            return correctNumber;
         }
-        return false;
+        return 0;
     }
 }

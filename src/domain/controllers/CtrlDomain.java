@@ -153,7 +153,7 @@ public class CtrlDomain {
      * @param y Posición de columna de la celda
      * @return Devuelve cierto si la posición [x][y] es una celda blanca, en caso contrario, devuelve falso
      */
-    public boolean helpCorrectNumber(int x, int y) {
+    public int helpCorrectNumber(int x, int y) {
         return CtrlPlay.helpCorrectNumber(x, y);
     }
 

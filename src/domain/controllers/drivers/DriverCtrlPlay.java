@@ -68,8 +68,8 @@ public class DriverCtrlPlay {
         if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
 
         CtrlPlay.startGame(k);
-        if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda se ha cambiado correctamente");
-        else System.out.println("No es una celda blanca");
+        //if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda se ha cambiado correctamente");
+        //else System.out.println("No es una celda blanca");
     }
 
     /** @brief Función principal

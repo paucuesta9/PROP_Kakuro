@@ -261,7 +261,6 @@ public class CtrlUI {
                 menu();
             }
             if (x == -2) {
-                help();
                 System.out.println(" -- INSTRUCCIONES JUGAR --");
                 System.out.println("Para colocar un número debe colocar la posición x e y seguido del valor de la casilla.");
                 System.out.println("Ejemplo: Si desea colocar un 9 en la casilla (2,6) debe poner: 2 6 9");
@@ -291,60 +290,6 @@ public class CtrlUI {
         System.out.println("Felicidades! Has completado el Kakuro\n");
         cd.finishGame();
         menu();
-    }
-
-    /** @brief Ayudas
-     *
-     * Ofrece dos tipos de ayudas al usuario:
-     *  - Le comprueba si el valor de la celda blanca que ha introducido es correcto o no
-     *  - Le introduce el valor correcto de la celda blanca que el usuario pide
-     */
-    public void help() {
-        System.out.println(" -- INSTRUCCIONES AYUDA --");
-        System.out.println("1. Comprobar valor: Comprobar si un valor que ha introducido es correcto");
-        System.out.println("2. Obtener valor: Obtener el valor correcto de una casilla");
-        int help = readNumber();
-        System.out.println("Introduzca la posición x e y de la casilla para la que quiere la ayuda");
-        int x = readNumber();
-        int y = readNumber();
-        while (!checkCoord(x, y)) {
-            System.out.println("Introduzca valores correctos para x e y");
-            System.out.println("La variable x tiene que ir entre 0 y " + cd.getRowSize());
-            System.out.println("La variable y tiene que ir entre 0 y " + cd.getColumnSize());
-            x = readNumber();
-            y = readNumber();
-        }
-        if (help == 1) {
-            int helpReply = cd.helpMyValue(x, y);
-            switch (helpReply) {
-                case -2:
-                    System.out.println("Aún no ha introducido valor en la casilla");
-                    break;
-                case -1:
-                    System.out.println("Las coordenadas que ha introducido son de una casilla negra");
-                    break;
-                case 0:
-                    System.out.println("El valor que ha introducido es incorrecto");
-                    cd.updatePoints(-1);
-                    break;
-                case 1:
-                    System.out.println("El valor que ha introducido es correcto");
-                    cd.updatePoints(-1);
-                    break;
-            }
-        }
-        else if (help == 2) {
-            if (!cd.helpCorrectNumber(x, y)) {
-                System.out.println("Las coordenadas que ha introducido son de una casilla negra");
-            } else {
-                System.out.println("Se ha colocado el valor correcto en la casilla indicada");
-                cd.updatePoints(-2);
-            }
-        }
-        else {
-            System.out.println("El número que ha introducido no es correcto");
-            help();
-        }
     }
 
     /** @brief Comprobadora de coordenadas
@@ -444,7 +389,20 @@ public class CtrlUI {
         return cd.helpMyValue(x, y);
     }
 
+    public int help2(int x, int y) {
+        return cd.helpCorrectNumber(x,y);
+    }
+
     public void startGame(int i, int i1, int i2) {
         cd.startNewGame(i,i1,i2);
+    }
+
+    public boolean isFinished() {
+        return cd.isFinished();
+    }
+
+    public void finishGame() {
+        cd.finishGame();
+        //TODO: Hacer pantallita final partida
     }
 }

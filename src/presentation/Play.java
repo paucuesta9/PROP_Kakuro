@@ -32,7 +32,7 @@ public class Play {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         ctrlUI = CtrlUI.getInstance();
-        ctrlUI.startGame(1, 12, 10);
+        ctrlUI.startGame(1, 3, 3);
         loadFonts();
 
         String kakuro = ctrlUI.getKakuro();
@@ -82,11 +82,9 @@ public class Play {
         time.setFont(roboto.deriveFont(Font.PLAIN, 30f));
         time.setForeground(Color.decode("#1976D2"));
 
-
         help1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //help1.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/BotonAyudaApretado.png")));
                 int x = ctrlUI.getX();
                 int y = ctrlUI.getY();
                 int result = ctrlUI.help1(x,y);
@@ -98,14 +96,19 @@ public class Play {
                 }
             }
         });
-
         help2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               // help2.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/BotonAyudaApretado.png")));
+                int x = ctrlUI.getX();
+                int y = ctrlUI.getY();
+                int correctNumber = ctrlUI.help2(x,y);
+                KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(x*columnSize+y);
+                w.setValue(correctNumber);
+                w.setBackground(Color.GREEN);
 
             }
         });
+
     }
 
     private void loadFonts() {
