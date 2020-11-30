@@ -1,6 +1,7 @@
 package presentation;
 
 import com.google.gson.Gson;
+import data.CtrlData;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlDomain;
 
@@ -26,6 +27,14 @@ public class CtrlUI {
      * reader es una atributo que sirve para leer de la terminal
      */
     private Scanner reader = new Scanner(System.in);
+    private static CtrlUI ctrlUI;
+    private int x, y;
+
+    public static CtrlUI getInstance() {
+        if (ctrlUI == null)
+            ctrlUI = new CtrlUI();
+        return ctrlUI;
+    }
 
     /** @brief Creadora por defecto
      *
@@ -398,7 +407,7 @@ public class CtrlUI {
         return cd.getKakuroToString();
     }
 
-    public String getCorrectKkuro() {
+    public String getCorrectKakuro() {
         return cd.getCorrectKakuroToString();
     }
 
@@ -408,5 +417,34 @@ public class CtrlUI {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public boolean checkValidity (int x, int y, int value) {
+        return cd.checkValidity(x,y,value);
+    }
+
+    public void setValue(int x, int y, int value) {
+        cd.kakuroSetValue(x,y,value);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public void setXY(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int help1(int x, int y) {
+        return cd.helpMyValue(x, y);
+    }
+
+    public void startGame(int i, int i1, int i2) {
+        cd.startNewGame(i,i1,i2);
     }
 }

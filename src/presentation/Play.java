@@ -31,11 +31,11 @@ public class Play {
     public Play(int rowSize, int columnSize) {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
-        ctrlUI = new CtrlUI();
-        ctrlUI.searchKakuro(1, 12, 10);
+        ctrlUI = CtrlUI.getInstance();
+        ctrlUI.startGame(1, 12, 10);
         loadFonts();
 
-        String kakuro = ctrlUI.getCorrectKkuro();
+        String kakuro = ctrlUI.getKakuro();
         KakuroBoard sg = new KakuroBoard(kakuro);
         board.add(sg);
 
@@ -86,14 +86,24 @@ public class Play {
         help1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlUI.help();
+                //help1.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/BotonAyudaApretado.png")));
+                int x = ctrlUI.getX();
+                int y = ctrlUI.getY();
+                int result = ctrlUI.help1(x,y);
+                if (result != -1) {
+                    KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(x*columnSize+y);
+                    if (result == 1) w.setBackground(Color.GREEN);
+                    else if (result == 0) w.setBackground(Color.RED);
+                    else if (result == -2) w.setBackground(Color.GRAY);
+                }
             }
         });
 
         help2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlUI.help();
+               // help2.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/BotonAyudaApretado.png")));
+
             }
         });
     }

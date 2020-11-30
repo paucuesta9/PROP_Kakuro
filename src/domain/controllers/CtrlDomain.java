@@ -85,8 +85,8 @@ public class CtrlDomain {
             currentKakuro.setId(saveKakuro());
         }
         int id = getGameId();
-        currentGame = new Game(id,  0, 0, id);
-        currentPlayer.setCurrentGame(currentGame.getId());
+       // currentGame = new Game(id,  0, 0, id);
+       // currentPlayer.setCurrentGame(currentGame.getId());
         CtrlPlay.startGame(currentKakuro);
         setCorrectValues();
     }
@@ -274,7 +274,6 @@ public class CtrlDomain {
         this.currentKakuro = new Kakuro(kakuro.substring(2));
         currentKakuro.setId(id);
         currentKakuro.setDifficulty(difficulty);
-        setCorrectValues();
     }
 
     /** @brief Getter de Kakuro
