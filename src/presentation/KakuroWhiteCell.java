@@ -16,6 +16,8 @@ public class KakuroWhiteCell extends KakuroCell {
         jLabel = new JLabel();
         jLabel.setFont(new Font("Verdana",1,20));
         add(jLabel);
+        jLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+        jLabel.setVerticalTextPosition(SwingConstants.CENTER);
         setBackground(Color.WHITE);
         setFocusable(true);
         addFocusListener(new FocusListener() {
@@ -55,6 +57,12 @@ public class KakuroWhiteCell extends KakuroCell {
 
             }
         });
+    }
+
+    public KakuroWhiteCell(int i, int j, int value) {
+        this(i, j);
+        this.value = value;
+        if (value != 0) jLabel.setText(String.valueOf(value));
     }
 
     public int getValue() {

@@ -55,6 +55,14 @@ public class KakuroBlackCell extends KakuroCell {
                 0));
     }
 
+    public KakuroBlackCell(int i, int j, int horizontal, int vertical) {
+        this(i, j);
+        this.row = horizontal;
+        this.column = vertical;
+        if (row != 0) jLabelRow.setText(String.valueOf(row));
+        if (column != 0) jLabelColumn.setText(String.valueOf(column));
+    }
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);

@@ -393,4 +393,20 @@ public class CtrlUI {
     public int getColumnSize() {
         return cd.getColumnSize();
     }
+
+    public String getKakuro() {
+        return cd.getKakuroToString();
+    }
+
+    public String getCorrectKkuro() {
+        return cd.getCorrectKakuroToString();
+    }
+
+    public void searchKakuro(int i, int i1, int i2) {
+        try {
+            cd.searchKakuro(i, i1, i2);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

@@ -274,6 +274,7 @@ public class CtrlDomain {
         this.currentKakuro = new Kakuro(kakuro.substring(2));
         currentKakuro.setId(id);
         currentKakuro.setDifficulty(difficulty);
+        setCorrectValues();
     }
 
     /** @brief Getter de Kakuro

@@ -1,5 +1,7 @@
 package presentation;
 
+import domain.controllers.CtrlDomain;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
@@ -30,7 +32,12 @@ public class Play {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         ctrlUI = new CtrlUI();
+        ctrlUI.searchKakuro(1, 9, 9);
         loadFonts();
+
+        String kakuro = ctrlUI.getCorrectKkuro();
+        KakuroBoard sg = new KakuroBoard(kakuro);
+        board.add(sg);
 
         config.setFont(fontAwesome);
         config.setForeground(Color.decode("#00204A"));
@@ -124,13 +131,7 @@ public class Play {
     }
 
     private void createUIComponents() {
-        KakuroBoard sg = new KakuroBoard(rowSize, columnSize);
         board = new JPanel();
-        board.add(sg);
-        KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(0);
-        w.setValue(2);
-        KakuroBlackCell b = (KakuroBlackCell) sg.getComponent(10);
-        b.setRow(1);
     }
 
     public static void main(String [] args) {
