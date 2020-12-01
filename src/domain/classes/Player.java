@@ -1,5 +1,6 @@
 package domain.classes;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -30,6 +31,8 @@ public class Player {
     public Player(String username, String password) {
         this.username = username;
         this.password = password;
+        this.stats = new Stats();
+        this.savedGames = new ArrayList<Integer>();
     }
 
     /**
