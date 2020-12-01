@@ -6,15 +6,31 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class KakuroCell extends JPanel {
-    private int x, y;
+    private int posX, posY;
 
-    KakuroCell(int x, int y, int size) {
+    KakuroCell(int posX, int posY, int size) {
         super();
-        this.x = x;
-        this.y = y;
+        this.posX = posX;
+        this.posY = posY;
 
         setBorder(BorderFactory.createLineBorder(Color.GRAY));
 
         setPreferredSize(new Dimension(size, size));
+    }
+
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
     }
 }

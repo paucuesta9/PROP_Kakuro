@@ -28,7 +28,6 @@ public class CtrlUI {
      */
     private Scanner reader = new Scanner(System.in);
     private static CtrlUI ctrlUI;
-    private int x, y;
 
     public static CtrlUI getInstance() {
         if (ctrlUI == null)
@@ -370,19 +369,6 @@ public class CtrlUI {
 
     public void setValue(int x, int y, int value) {
         cd.kakuroSetValue(x,y,value);
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setXY(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public int getY() {
-        return y;
     }
 
     public int help1(int x, int y) {
