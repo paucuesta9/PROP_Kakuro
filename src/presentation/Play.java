@@ -229,6 +229,9 @@ public class Play {
                 e.printStackTrace();
             }
             clip1.loop(Clip.LOOP_CONTINUOUSLY);
+            FloatControl gainControl =
+                    (FloatControl) clip1.getControl(FloatControl.Type.MASTER_GAIN);
+            gainControl.setValue(-10.0f);
             clip1.start();
         }
     }
