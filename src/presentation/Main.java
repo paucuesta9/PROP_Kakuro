@@ -17,6 +17,7 @@ public class Main {
     private JButton logoutButton;
     private JButton config;
     private JLabel photo;
+    private JPanel logotipo;
 
     JFrame frame = new JFrame("Main");
 
@@ -146,7 +147,7 @@ public class Main {
     public void drawMain() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,900);
+        frame.setSize(1200,800);
         frame.setResizable(false);
         frame.setVisible(true);
         Utils.center(frame);
@@ -156,7 +157,7 @@ public class Main {
         JFrame frame = new JFrame("Main");
         frame.setContentPane(new Main().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,900);
+        frame.setSize(1200,800);
         frame.setResizable(false);
         frame.setVisible(true);
         Utils.center(frame);

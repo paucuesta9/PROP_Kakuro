@@ -344,7 +344,7 @@ public class Play {
     public void drawPlay() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,900);
+        frame.setSize(1200,800);
         frame.setResizable(false);
         frame.setVisible(true);
         Utils.center(frame);
@@ -357,7 +357,7 @@ public class Play {
         String kakuro = ctrlUI.getKakuro();
         frame.setContentPane(new Play(kakuro).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,900);
+        frame.setSize(1200,800);
         frame.setResizable(false);
         frame.setVisible(true);
         Utils.center(frame);
