@@ -16,7 +16,7 @@ public class Main {
     JFrame frame = new JFrame("Main");
 
     public Main() {
-
+        Utils.loadFonts();
     }
 
     public void drawMain() {
@@ -25,14 +25,6 @@ public class Main {
         frame.setSize(1200,900);
         frame.setResizable(false);
         frame.setVisible(true);
-        center();
-    }
-
-    private void center() {
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        Dimension screenSize = toolkit.getScreenSize();
-        int x = (screenSize.width) / 2 - 600;
-        int y = (screenSize.height) / 2 - 450;
-        frame.setLocation(x, y);
+        Utils.center(frame);
     }
 }

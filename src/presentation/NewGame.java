@@ -29,11 +29,10 @@ public class NewGame {
     private JPanel difficulty;
 
     private static JFrame frame;
-    private Font fontAwesome, roboto;
 
     public NewGame() {
 
-        loadFonts();
+        Utils.loadFonts();
 
         picLabel.addComponentListener(new ComponentAdapter() {
             @Override
@@ -49,12 +48,12 @@ public class NewGame {
             }
         });
 
-        config.setFont(fontAwesome);
+        config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode("#00204A"));
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,10));
 
-        easy.setFont(roboto);
+        easy.setFont(Utils.roboto);
         easy.setForeground(Color.BLACK);
         easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
         easy.setBorderPainted(false);
@@ -62,7 +61,7 @@ public class NewGame {
         easy.setHorizontalTextPosition(JButton.CENTER);
         easy.setVerticalTextPosition(JButton.CENTER);
 
-        medium.setFont(roboto);
+        medium.setFont(Utils.roboto);
         medium.setForeground(Color.BLACK);
         medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
         medium.setBorderPainted(false);
@@ -70,7 +69,7 @@ public class NewGame {
         medium.setHorizontalTextPosition(JButton.CENTER);
         medium.setVerticalTextPosition(JButton.CENTER);
 
-        hard.setFont(roboto);
+        hard.setFont(Utils.roboto);
         hard.setForeground(Color.BLACK);
         hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
         hard.setBorderPainted(false);
@@ -78,7 +77,7 @@ public class NewGame {
         hard.setHorizontalTextPosition(JButton.CENTER);
         hard.setVerticalTextPosition(JButton.CENTER);
 
-        play.setFont(roboto);
+        play.setFont(Utils.roboto);
         play.setForeground(Color.WHITE);
         play.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
         play.setBorderPainted(false);
@@ -86,46 +85,13 @@ public class NewGame {
         play.setHorizontalTextPosition(JButton.CENTER);
         play.setVerticalTextPosition(JButton.CENTER);
 
-        exit.setFont(roboto);
+        exit.setFont(Utils.roboto);
         exit.setForeground(Color.WHITE);
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
         exit.setBorderPainted(false);
         exit.setBackground(null);
         exit.setHorizontalTextPosition(JButton.CENTER);
         exit.setVerticalTextPosition(JButton.CENTER);
-
-
-    }
-    private void loadFonts() {
-        BufferedInputStream myStream = null;
-        try {
-            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/fa-solid.ttf"));
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        }
-        Font ttfBase = null;
-        try {
-            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
-        } catch (FontFormatException fontFormatException) {
-            fontFormatException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
-        fontAwesome = ttfBase.deriveFont(Font.PLAIN, 30f);
-
-        try {
-            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/Roboto-Bold.ttf"));
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        }
-        try {
-            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
-        } catch (FontFormatException fontFormatException) {
-            fontFormatException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
-        roboto = ttfBase.deriveFont(Font.PLAIN, 20f);
     }
 
     private void createUIComponents() {
@@ -141,7 +107,6 @@ public class NewGame {
         frame.setSize(1200,900);
         frame.setResizable(false);
         frame.setVisible(true);
-
     }
 }
 
