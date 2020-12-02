@@ -19,7 +19,7 @@ public class Main {
     private JLabel photo;
     private JPanel logotipo;
 
-    JFrame frame = new JFrame("Main");
+    private JFrame frame = new JFrame("Main");
 
     public Main() {
         Utils.loadFonts();
@@ -93,8 +93,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                Play p = new Play("");
-//                p.drawPlay();
+                AskNewContinue a = new AskNewContinue();
+                a.drawAskNewContinue();
             }
         });
 
