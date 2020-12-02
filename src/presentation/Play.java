@@ -193,7 +193,7 @@ public class Play {
     }
 
     private void setMusic() {
-        InputStream audioSrc = getClass().getClassLoader().getResourceAsStream("MUSICA1.wav");
+        InputStream audioSrc = getClass().getClassLoader().getResourceAsStream("MUSICA2.wav");
         AudioInputStream as1 = null;
         try {
             as1 = AudioSystem.getAudioInputStream(audioSrc);
