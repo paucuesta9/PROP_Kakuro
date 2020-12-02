@@ -30,6 +30,8 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <foreground color="-1"/>
               <text value="Salir"/>
             </properties>

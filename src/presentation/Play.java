@@ -121,7 +121,6 @@ public class Play {
                         int posYAux = posY;
                         while (true) {
                             --posYAux;
-                            System.out.println("1. posX = " + posXAux + " posY = " + posYAux);
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
                             else {
                                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
@@ -131,7 +130,6 @@ public class Play {
                         posYAux = posY;
                         while (true) {
                             ++posYAux;
-                            System.out.println("2. posX = " + posXAux + " posY = " + posYAux);
                             if (posYAux == columnSize) break;
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
                             else {
@@ -142,7 +140,6 @@ public class Play {
                         posYAux = posY;
                         while (true) {
                             --posXAux;
-                            System.out.println("3. posX = " + posXAux + " posY = " + posYAux);
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
                             else {
                                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
@@ -152,7 +149,6 @@ public class Play {
                         posXAux = posX;
                         while (true) {
                             ++posXAux;
-                            System.out.println("4. posX = " + posXAux + " posY = " + posYAux);
                             if (posXAux == rowSize) break;
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
                             else {
@@ -219,7 +215,7 @@ public class Play {
                             cell.setValue(value);
                             ctrlUI.setValue(posX, posY, value);
                             boolean isFinished = ctrlUI.isFinished();
-                            if (isFinished) ctrlUI.finishGame();
+                            if (isFinished) finishGame();
                         }
                     }
                 });
@@ -234,8 +230,8 @@ public class Play {
                     KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                     if (result == 1) w.setBackground(Color.GREEN);
                     else if (result == 0) w.setBackground(Color.decode("#e53935"));
-                    else if (result == -2) w.setBackground(Color.GRAY);
                 }
+
             }
         });
         help2.addActionListener(new ActionListener() {
@@ -283,10 +279,18 @@ public class Play {
         });
     }
 
+    private void finishGame() {
+        stopTimer();
+        ctrlUI.finishGame();
+    }
+
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
-        if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
-            cell.setBackground(Color.decode("#e53935"));
-        } else cell.setBackground(Color.WHITE);
+        if (cell.getBackground() != Color.GREEN) {
+            if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
+                cell.setBackground(Color.decode("#e53935"));
+            } else cell.setBackground(Color.WHITE);
+        }
+
     }
 
     private void startTimer() {
@@ -415,7 +419,7 @@ public class Play {
 
     public static void main(String [] args) {
         frame = new JFrame("Play");
-        frame.setContentPane(new Play(9, 9).panel1);
+        frame.setContentPane(new Play(4, 4).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,900);
         frame.setResizable(false);

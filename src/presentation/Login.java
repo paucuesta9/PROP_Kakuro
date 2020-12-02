@@ -15,6 +15,7 @@ public class Login {
     private JLabel label;
     private JPanel panel2;
     private JPanel picLabel;
+    private JPanel Prueba;
 
     int a = 0;
     boolean mod = false;
