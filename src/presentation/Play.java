@@ -50,7 +50,7 @@ public class Play {
         loadFonts();
         listeners();
         startTimer();
-        setMusic();
+        //setMusic();
 
         config.setFont(fontAwesome);
         config.setForeground(Color.decode("#00204A"));
@@ -108,14 +108,57 @@ public class Play {
                         color = cell.getBackground();
                         value = cell.getValue();
                         cell.setBackground(Color.decode("#64b5f6"));
+                        posX = cell.getPosX();
+                        posY = cell.getPosY();
                     }
 
                     @Override
                     public void focusLost(FocusEvent e) {
                         if (!cell.getBackground().equals(Color.decode("#e53935"))) cell.setBackground(color);
                         if (value != cell.getValue() && color.equals(Color.decode("#e53935"))) cell.setBackground(Color.WHITE);
-                        if (cell.getValue() != 0 && !ctrlUI.checkValidity(posX, posY, cell.getValue())) {
-                            cell.setBackground(Color.decode("#e53935"));
+                        checkValidityCell(cell, posX, posY);
+                        int posXAux = posX;
+                        int posYAux = posY;
+                        while (true) {
+                            --posYAux;
+                            System.out.println("1. posX = " + posXAux + " posY = " + posYAux);
+                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+                            else {
+                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                                checkValidityCell(whiteCell, posXAux, posYAux);
+                            }
+                        }
+                        posYAux = posY;
+                        while (true) {
+                            ++posYAux;
+                            System.out.println("2. posX = " + posXAux + " posY = " + posYAux);
+                            if (posYAux == columnSize) break;
+                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+                            else {
+                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                                checkValidityCell(whiteCell, posXAux, posYAux);
+                            }
+                        }
+                        posYAux = posY;
+                        while (true) {
+                            --posXAux;
+                            System.out.println("3. posX = " + posXAux + " posY = " + posYAux);
+                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+                            else {
+                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                                checkValidityCell(whiteCell, posXAux, posYAux);
+                            }
+                        }
+                        posXAux = posX;
+                        while (true) {
+                            ++posXAux;
+                            System.out.println("4. posX = " + posXAux + " posY = " + posYAux);
+                            if (posXAux == rowSize) break;
+                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+                            else {
+                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                                checkValidityCell(whiteCell, posXAux, posYAux);
+                            }
                         }
                     }
                 });
@@ -123,8 +166,6 @@ public class Play {
                     @Override
                     public void mouseClicked(MouseEvent e) {
                         if (cell.getBackground() != Color.GREEN) {
-                            posX = cell.getPosX();
-                            posY = cell.getPosY();
                             cell.requestFocus();
                         }
                     }
@@ -240,6 +281,12 @@ public class Play {
 
             }
         });
+    }
+
+    private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
+        if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
+            cell.setBackground(Color.decode("#e53935"));
+        } else cell.setBackground(Color.WHITE);
     }
 
     private void startTimer() {
