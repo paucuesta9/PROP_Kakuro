@@ -22,7 +22,6 @@ public class Game {
     @SerializedName("kakuroId")
     @Expose
     private int kakuroId;
-    private Timer timer;
     private Kakuro kakuro;
 
 
