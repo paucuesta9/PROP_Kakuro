@@ -76,8 +76,8 @@ public class AskNewContinue {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                NewGame ng = new NewGame();
-//                ng.drawNewGame();
+                NewGame ng = new NewGame();
+                ng.drawNewGame();
             }
         });
 
@@ -96,8 +96,8 @@ public class AskNewContinue {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);
-        frame.setVisible(true);
         Utils.center(frame);
+        frame.setVisible(true);
     }
 
     public static void main(String [] args) {
@@ -106,8 +106,8 @@ public class AskNewContinue {
         frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMain.setSize(1200,800);
         frameMain.setResizable(false);
-        frameMain.setVisible(true);
         Utils.center(frameMain);
+        frameMain.setVisible(true);
     }
 
     private void createUIComponents() {

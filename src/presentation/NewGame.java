@@ -32,7 +32,7 @@ public class NewGame {
     private JTextField numSize;
     private JLabel difficulty;
 
-    private static JFrame frame;
+    private JFrame frame = new JFrame("New Game");
 
     public NewGame() {
 
@@ -156,12 +156,21 @@ public class NewGame {
     }
 
     public static void main(String [] args) {
-        frame = new JFrame("Play");
+        JFrame frame = new JFrame("New Game");
         frame.setContentPane(new NewGame().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);
+        Utils.center(frame);
+        frame.setVisible(true);
+    }
+
+    public void drawNewGame() {
+        frame.setContentPane(panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1200,800);
+        frame.setResizable(false);
+        Utils.center(frame);
         frame.setVisible(true);
     }
 }
-

@@ -346,8 +346,8 @@ public class Play {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);
-        frame.setVisible(true);
         Utils.center(frame);
+        frame.setVisible(true);
     }
 
     public static void main(String [] args) {
@@ -359,7 +359,7 @@ public class Play {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);
-        frame.setVisible(true);
         Utils.center(frame);
+        frame.setVisible(true);
     }
 }
