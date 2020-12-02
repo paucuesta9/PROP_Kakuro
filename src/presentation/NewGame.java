@@ -2,13 +2,15 @@ package presentation;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.text.NumberFormatter;
 import java.awt.*;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
+import java.awt.event.*;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.NumberFormat;
 
 public class NewGame {
     private JPanel panel1;
@@ -21,12 +23,14 @@ public class NewGame {
     private JButton play;
     private JButton exit;
     private JPanel logotipo;
-    private JPanel textSize;
     private JPanel rowSize;
     private JPanel columnSize;
-    private JTextField numRow;
     private JTextField numColumn;
-    private JPanel difficulty;
+    private JLabel textSize;
+    private JLabel rowSizeText;
+    private JLabel columnSizeText;
+    private JTextField numSize;
+    private JLabel difficulty;
 
     private static JFrame frame;
 
@@ -34,28 +38,34 @@ public class NewGame {
 
         Utils.loadFonts();
 
-        picLabel.addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent e) {
-                ImageIcon icon = new ImageIcon("resources/images/Captura.PNG"); //se ajusta cuadrado
-                Image img = icon.getImage();
-                int w = picLabel.getWidth(); int h = picLabel.getHeight();
-                if (w>h) w = h;
-                else h = w;
-                Image imgScale = img.getScaledInstance(w, h, Image.SCALE_FAST);
-                ImageIcon scaledIcon = new ImageIcon(imgScale);
-                label.setIcon(scaledIcon);
-            }
-        });
-
         config.setFont(Utils.fontAwesome);
-        config.setForeground(Color.decode("#00204A"));
+        config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,10));
+        config.setBorder(new EmptyBorder(10,0,0,20));
+
+        textSize.setFont(Utils.roboto);
+        textSize.setForeground(Color.BLACK);
+
+        rowSizeText.setForeground(Color.BLACK);
+        rowSizeText.setFont(Utils.roboto.deriveFont(18f));
+
+        numSize.setForeground(Color.BLACK);
+        numSize.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        numSize.setFont(Utils.roboto.deriveFont(18f));
+
+        columnSizeText.setForeground(Color.BLACK);
+        columnSizeText.setFont(Utils.roboto.deriveFont(18f));
+
+        numColumn.setForeground(Color.BLACK);
+        numColumn.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        numColumn.setFont(Utils.roboto.deriveFont(18f));
+
+        difficulty.setFont(Utils.roboto);
+        difficulty.setForeground(Color.BLACK);
 
         easy.setFont(Utils.roboto);
-        easy.setForeground(Color.BLACK);
-        easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
+        easy.setForeground(Color.WHITE);
+        easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
         easy.setBorderPainted(false);
         easy.setBackground(null);
         easy.setHorizontalTextPosition(JButton.CENTER);
@@ -71,7 +81,7 @@ public class NewGame {
 
         hard.setFont(Utils.roboto);
         hard.setForeground(Color.BLACK);
-        hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
+        hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
         hard.setBorderPainted(false);
         hard.setBackground(null);
         hard.setHorizontalTextPosition(JButton.CENTER);
@@ -92,11 +102,56 @@ public class NewGame {
         exit.setBackground(null);
         exit.setHorizontalTextPosition(JButton.CENTER);
         exit.setVerticalTextPosition(JButton.CENTER);
+
+        numSize.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                String value = numSize.getText();
+                int l = value.length();
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    numSize.setEditable(true);
+                } else {
+                    numSize.setEditable(false);
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+        numColumn.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                String value = numSize.getText();
+                int l = value.length();
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    numSize.setEditable(true);
+                } else {
+                    numSize.setEditable(false);
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
     }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage().getScaledInstance(600,600, Image.SCALE_DEFAULT)));
+        label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
         label.requestFocusInWindow();
     }
 
@@ -104,7 +159,7 @@ public class NewGame {
         frame = new JFrame("Play");
         frame.setContentPane(new NewGame().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,900);
+        frame.setSize(1200,800);
         frame.setResizable(false);
         frame.setVisible(true);
     }
