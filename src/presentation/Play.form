@@ -56,6 +56,7 @@
               </grid>
             </constraints>
             <properties>
+              <focusPainted value="false"/>
               <foreground color="-1"/>
               <label value="Pausar"/>
               <text value="Pausar"/>
@@ -70,6 +71,7 @@
               </grid>
             </constraints>
             <properties>
+              <focusPainted value="false"/>
               <foreground color="-1"/>
               <text value="Salir"/>
             </properties>
@@ -97,6 +99,7 @@
               </grid>
             </constraints>
             <properties>
+              <focusPainted value="false"/>
               <text value=""/>
             </properties>
           </component>
@@ -109,6 +112,7 @@
               </grid>
             </constraints>
             <properties>
+              <focusPainted value="false"/>
               <text value=""/>
             </properties>
           </component>
@@ -124,7 +128,7 @@
             <constraints>
               <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="50" height="-1"/>
-                <maximum-size width="15" height="40"/>
+                <maximum-size width="50" height="40"/>
               </grid>
             </constraints>
           </hspacer>
@@ -182,6 +186,7 @@
               </grid>
             </constraints>
             <properties>
+              <focusPainted value="false"/>
               <text value=""/>
             </properties>
           </component>

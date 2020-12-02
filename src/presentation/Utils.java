@@ -49,8 +49,8 @@ public class Utils {
         roboto = ttfBase.deriveFont(Font.PLAIN, 20f);
     }
 
-    private void setMusic() {
-        InputStream audioSrc = getClass().getClassLoader().getResourceAsStream("MUSICA2.wav");
+    public static void setMusic() {
+        InputStream audioSrc = Utils.class.getClassLoader().getResourceAsStream("MUSICA2.wav");
         AudioInputStream as1 = null;
         try {
             as1 = AudioSystem.getAudioInputStream(audioSrc);

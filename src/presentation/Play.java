@@ -27,7 +27,7 @@ public class Play {
     private Timer timer;
     private boolean paused = false;
 
-    private static JFrame frame;
+    private JFrame frame = new JFrame("Play");
 
     private int rowSize, columnSize;
     private int posX, posY;
@@ -341,8 +341,17 @@ public class Play {
         board = new JPanel();
     }
 
+    public void drawPlay() {
+        frame.setContentPane(panel1);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1200,900);
+        frame.setResizable(false);
+        frame.setVisible(true);
+        Utils.center(frame);
+    }
+
     public static void main(String [] args) {
-        frame = new JFrame("Play");
+        JFrame frame = new JFrame("Play");
         ctrlUI = CtrlUI.getInstance();
         ctrlUI.startGame(1, 9, 9);
         String kakuro = ctrlUI.getKakuro();
