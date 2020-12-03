@@ -102,8 +102,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                Create create = new Create();
-//                create.drawCreate();
+                Create create = new Create();
+                create.drawCreate();
             }
         });
 

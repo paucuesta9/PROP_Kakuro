@@ -32,8 +32,9 @@
             <properties>
               <borderPainted value="false"/>
               <contentAreaFilled value="false"/>
+              <focusPainted value="false"/>
               <foreground color="-1"/>
-              <text value="Salir"/>
+              <text value="Ok"/>
             </properties>
           </component>
         </children>

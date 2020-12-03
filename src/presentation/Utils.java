@@ -27,6 +27,11 @@ public class Utils {
         button.setVerticalTextPosition(JButton.CENTER);
     }
 
+    public static void showError(String errorText) {
+        Error error = new Error(errorText);
+        error.drawError();
+    }
+
     public static void loadFonts() {
         BufferedInputStream myStream = null;
         try {
