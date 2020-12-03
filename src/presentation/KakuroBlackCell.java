@@ -87,6 +87,6 @@ public class KakuroBlackCell extends KakuroCell {
 
     public void setColumn(int column) {
         this.column = column;
-        jLabelRow.setText(String.valueOf(column));
+        jLabelColumn.setText(String.valueOf(column));
     }
 }

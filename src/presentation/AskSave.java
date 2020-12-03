@@ -12,14 +12,16 @@ public class AskSave {
     private JButton síButton;
     private JButton noButton;
     private JButton volverButton;
-    private JLabel photo;
     private JButton config;
+    private JPanel board;
 
     private JFrame frame = new JFrame("Save");
 
-    public AskSave(String text) {
+    public AskSave(String text, KakuroBoard kBoard) {
         Utils.loadFonts();
         setListeners();
+
+        board.add(kBoard);
         
         question.setFont(Utils.roboto.deriveFont(18f));
         question.setText(text);
@@ -68,7 +70,7 @@ public class AskSave {
         });
     }
 
-    public void drawAskNewContinue() {
+    public void drawAskSave() {
         frame.setContentPane(panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
@@ -79,7 +81,7 @@ public class AskSave {
 
     public static void main(String [] args) {
         JFrame frameMain = new JFrame("Save");
-        frameMain.setContentPane(new AskSave("Pregunta").panel1);
+        frameMain.setContentPane(new AskSave("Pregunta", new KakuroBoard("9,9\n")).panel1);
         frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMain.setSize(1200,800);
         frameMain.setResizable(false);
@@ -88,6 +90,6 @@ public class AskSave {
     }
 
     private void createUIComponents() {
-        photo = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
+        board = new JPanel();
     }
 }
