@@ -36,22 +36,22 @@ public class Create {
         Utils.loadFonts();
         setListeners();
 
-        textSize.setFont(Utils.roboto.deriveFont(16f));
+        textSize.setFont(Utils.roboto.deriveFont(18f));
         textSize.setForeground(Color.BLACK);
 
         rowSizeText.setForeground(Color.BLACK);
-        rowSizeText.setFont(Utils.roboto.deriveFont(16f));
+        rowSizeText.setFont(Utils.roboto.deriveFont(18f));
 
         numRow.setForeground(Color.BLACK);
         numRow.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         numRow.setFont(Utils.roboto.deriveFont(16f));
 
         columnSizeText.setForeground(Color.BLACK);
-        columnSizeText.setFont(Utils.roboto.deriveFont(16f));
+        columnSizeText.setFont(Utils.roboto.deriveFont(18f));
 
         numColumn.setForeground(Color.BLACK);
         numColumn.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
-        numColumn.setFont(Utils.roboto.deriveFont(16f));
+        numColumn.setFont(Utils.roboto.deriveFont(18f));
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -126,19 +126,17 @@ public class Create {
         numRow.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                String value = numRow.getText();
-                int l = value.length();
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
                 if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
                     numRow.setEditable(true);
                 } else {
                     numRow.setEditable(false);
                     Utils.showError("Introduzca solo números");
                 }
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-
             }
 
             @Override
@@ -150,19 +148,17 @@ public class Create {
         numColumn.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
-                String value = numRow.getText();
-                int l = value.length();
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-                    numRow.setEditable(true);
-                } else {
-                    numRow.setEditable(false);
-                    Utils.showError("Introduzca solo números");
-                }
+
             }
 
             @Override
             public void keyPressed(KeyEvent e) {
-
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    numColumn.setEditable(true);
+                } else {
+                    numColumn.setEditable(false);
+                    Utils.showError("Introduzca solo números");
+                }
             }
 
             @Override

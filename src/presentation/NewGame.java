@@ -23,25 +23,30 @@ public class NewGame {
     private JButton play;
     private JButton exit;
     private JPanel logotipo;
-    private JPanel rowSize;
-    private JPanel columnSize;
     private JTextField numColumn;
     private JLabel textSize;
     private JLabel rowSizeText;
     private JLabel columnSizeText;
     private JTextField numSize;
     private JLabel difficulty;
+    private JLabel logo;
 
     private JFrame frame = new JFrame("New Game");
+
+    private int diff = 1;
 
     public NewGame() {
 
         Utils.loadFonts();
+        setListeners();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,20));
+
+        logo.setFont(Utils.roboto.deriveFont(40f));
+        logo.setForeground(Color.decode(Utils.colorDarkBlue));
 
         textSize.setFont(Utils.roboto);
         textSize.setForeground(Color.BLACK);
@@ -63,45 +68,35 @@ public class NewGame {
         difficulty.setFont(Utils.roboto);
         difficulty.setForeground(Color.BLACK);
 
-        easy.setFont(Utils.roboto);
-        easy.setForeground(Color.WHITE);
+        Utils.setButtons(easy);
         easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
-        easy.setBorderPainted(false);
-        easy.setBackground(null);
-        easy.setHorizontalTextPosition(JButton.CENTER);
-        easy.setVerticalTextPosition(JButton.CENTER);
 
-        medium.setFont(Utils.roboto);
+        Utils.setButtons(medium);
         medium.setForeground(Color.BLACK);
         medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
-        medium.setBorderPainted(false);
-        medium.setBackground(null);
-        medium.setHorizontalTextPosition(JButton.CENTER);
-        medium.setVerticalTextPosition(JButton.CENTER);
 
-        hard.setFont(Utils.roboto);
+        Utils.setButtons(hard);
         hard.setForeground(Color.BLACK);
         hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-        hard.setBorderPainted(false);
-        hard.setBackground(null);
-        hard.setHorizontalTextPosition(JButton.CENTER);
-        hard.setVerticalTextPosition(JButton.CENTER);
 
-        play.setFont(Utils.roboto);
-        play.setForeground(Color.WHITE);
+        Utils.setButtons(play);
         play.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
-        play.setBorderPainted(false);
-        play.setBackground(null);
-        play.setHorizontalTextPosition(JButton.CENTER);
-        play.setVerticalTextPosition(JButton.CENTER);
 
-        exit.setFont(Utils.roboto);
-        exit.setForeground(Color.WHITE);
+        Utils.setButtons(exit);
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        exit.setBorderPainted(false);
-        exit.setBackground(null);
-        exit.setHorizontalTextPosition(JButton.CENTER);
-        exit.setVerticalTextPosition(JButton.CENTER);
+
+    }
+
+    private void setListeners() {
+
+        config.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+//                Config c = new Config();
+//                c.drawConfig();
+            }
+        });
 
         numSize.addKeyListener(new KeyListener() {
             @Override
@@ -111,8 +106,6 @@ public class NewGame {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                String value = numSize.getText();
-                int l = value.length();
                 if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
                     numSize.setEditable(true);
                 } else {
@@ -125,6 +118,7 @@ public class NewGame {
 
             }
         });
+
         numColumn.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -133,8 +127,6 @@ public class NewGame {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                String value = numSize.getText();
-                int l = value.length();
                 if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
                     numSize.setEditable(true);
                 } else {
@@ -147,12 +139,77 @@ public class NewGame {
 
             }
         });
+
+        easy.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
+                easy.setForeground(Color.WHITE);
+                medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
+                medium.setForeground(Color.BLACK);
+                hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
+                hard.setForeground(Color.BLACK);
+                diff = 1;
+            }
+        });
+
+        medium.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
+                easy.setForeground(Color.BLACK);
+                medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -4.png")));
+                medium.setForeground(Color.WHITE);
+                hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
+                hard.setForeground(Color.BLACK);
+                diff = 2;
+            }
+        });
+
+        hard.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
+                easy.setForeground(Color.BLACK);
+                medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
+                medium.setForeground(Color.BLACK);
+                hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
+                hard.setForeground(Color.WHITE);
+                diff = 3;
+            }
+        });
+
+        play.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (numSize.getText().isEmpty() || numColumn.getText().isEmpty()) Utils.showError("No se ha indicado alguno de los tamaños solicitados");
+                else {
+                    int rowSize = Integer.parseInt(numSize.getText());
+                    int columnSize = Integer.parseInt(numColumn.getText());
+                    if (rowSize >= 3 && columnSize >= 3) {
+                        CtrlUI ctrlUI = CtrlUI.getInstance();
+                        ctrlUI.startGame(diff, rowSize, columnSize);
+                        String kakuro = ctrlUI.getKakuro();
+                        Play play = new Play(kakuro);
+                        play.drawPlay();
+                    }
+                    else Utils.showError("El tamaño debe ser minimo 3x3");
+                }
+            }
+        });
+
+        exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Main main = new Main();
+                main.drawMain();
+            }
+        });
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
-        label.requestFocusInWindow();
     }
 
     public static void main(String [] args) {

@@ -93,6 +93,8 @@ public class Play {
 
         time.setFont(Utils.roboto.deriveFont(Font.PLAIN, 30f));
         time.setForeground(Color.decode(Utils.colorBlue));
+
+        menu.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.decode(Utils.colorDarkBlue)));
     }
 
     private void listeners() {

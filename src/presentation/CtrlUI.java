@@ -391,4 +391,8 @@ public class CtrlUI {
         cd.finishGame();
         //TODO: Hacer pantallita final partida
     }
+
+    public void getStartedGames() {
+        cd.getStartedGames();
+    }
 }
