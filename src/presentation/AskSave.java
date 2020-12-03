@@ -6,27 +6,28 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AskNewContinue {
+public class AskSave {
     private JPanel panel1;
-    private JLabel photo;
-    private JButton config;
+    private JLabel question;
     private JButton síButton;
     private JButton noButton;
     private JButton volverButton;
-    private JLabel question;
+    private JLabel photo;
+    private JButton config;
 
-    private JFrame frame = new JFrame("New or Continue");
+    private JFrame frame = new JFrame("Save");
 
-    public AskNewContinue() {
+    public AskSave(String text) {
         Utils.loadFonts();
         setListeners();
+        
+        question.setFont(Utils.roboto.deriveFont(18f));
+        question.setText(text);
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,10));
-
-        question.setFont(Utils.roboto.deriveFont(18f));
 
         Utils.setButtons(síButton);
         Utils.setButtons(noButton);
@@ -38,21 +39,13 @@ public class AskNewContinue {
     }
 
     private void setListeners() {
-        config.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-//                Config c = new Config();
-//                c.drawConfig();
-            }
-        });
-
         síButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //TODO Save Kakuro
                 frame.dispose();
-//                LeadGame lg = new LoadGame();
-//                ld.drawLoadGame();
+                Main m = new Main();
+                m.drawMain();
             }
         });
 
@@ -60,8 +53,8 @@ public class AskNewContinue {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                NewGame ng = new NewGame();
-                ng.drawNewGame();
+                Main m = new Main();
+                m.drawMain();
             }
         });
 
@@ -69,8 +62,8 @@ public class AskNewContinue {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                Main main = new Main();
-                main.drawMain();
+                Main m = new Main();
+                m.drawMain();
             }
         });
     }
@@ -85,8 +78,8 @@ public class AskNewContinue {
     }
 
     public static void main(String [] args) {
-        JFrame frameMain = new JFrame("New or Continue");
-        frameMain.setContentPane(new AskNewContinue().panel1);
+        JFrame frameMain = new JFrame("Save");
+        frameMain.setContentPane(new AskSave("Pregunta").panel1);
         frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMain.setSize(1200,800);
         frameMain.setResizable(false);

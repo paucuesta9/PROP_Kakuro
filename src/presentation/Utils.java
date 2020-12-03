@@ -1,6 +1,7 @@
 package presentation;
 
 import javax.sound.sampled.*;
+import javax.swing.*;
 import java.awt.*;
 import java.io.*;
 
@@ -15,6 +16,15 @@ public class Utils {
 
     public Utils() {
 
+    }
+
+    public static void setButtons(JButton button) {
+        button.setFont(Utils.roboto);
+        button.setForeground(Color.WHITE);
+        button.setBorderPainted(false);
+        button.setBackground(null);
+        button.setHorizontalTextPosition(JButton.CENTER);
+        button.setVerticalTextPosition(JButton.CENTER);
     }
 
     public static void loadFonts() {
