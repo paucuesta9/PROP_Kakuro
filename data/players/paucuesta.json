@@ -19,7 +19,8 @@
       "points": 129,
       "kakuroId": 2,
       "rowSize": 13,
-      "columnSize": 13
+      "columnSize": 13,
+      "diff": 1
     },
     {
       "id": 3,
@@ -27,7 +28,8 @@
       "points": 1561,
       "kakuroId": 3,
       "rowSize": 12,
-      "columnSize": 12
+      "columnSize": 12,
+      "diff": 1
     },
     {
       "id": 4,
@@ -35,7 +37,8 @@
       "points": 1681,
       "kakuroId": 4,
       "rowSize": 15,
-      "columnSize": 15
+      "columnSize": 15,
+      "diff": 1
     }
   ],
   "config":
