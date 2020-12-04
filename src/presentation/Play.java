@@ -1,10 +1,12 @@
 package presentation;
 
 import java.util.*;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.*;
 import java.util.Timer;
 
 public class Play {
@@ -19,6 +21,7 @@ public class Play {
     private JLabel timeLogo;
     private JLabel time;
     private JButton config;
+    private JButton resolve;
 
     private static CtrlUI ctrlUI;
     private int gameTime = 0;
@@ -48,8 +51,6 @@ public class Play {
         components = sg.getComponents();
         listeners();
         startTimer();
-        //Utils.setMusic();
-
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -94,6 +95,9 @@ public class Play {
         time.setFont(Utils.roboto.deriveFont(Font.PLAIN, 30f));
         time.setForeground(Color.decode(Utils.colorBlue));
 
+        Utils.setButtons(resolve);
+        resolve.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
+
         menu.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.decode(Utils.colorDarkBlue)));
     }
 
@@ -108,15 +112,15 @@ public class Play {
                     public void focusGained(FocusEvent e) {
                         color = cell.getBackground();
                         value = cell.getValue();
-                        cell.setBackground(Color.decode(Utils.colorSelectedCell));
+                        cell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
                         posX = cell.getPosX();
                         posY = cell.getPosY();
                     }
 
                     @Override
                     public void focusLost(FocusEvent e) {
-                        if (!cell.getBackground().equals(Color.decode(Utils.colorErrorCell))) cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Color.decode(Utils.colorErrorCell))) cell.setBackground(Color.WHITE);
+                        if (!cell.getBackground().equals(Color.decode(Utils.colorRedCell)) && !cell.getBackground().equals(Color.GREEN)) cell.setBackground(color);
+                        if (value != cell.getValue() && color.equals(Color.decode(Utils.colorRedCell))) cell.setBackground(Color.WHITE);
                         checkValidityCell(cell, posX, posY);
                         int posXAux = posX;
                         int posYAux = posY;
@@ -212,11 +216,15 @@ public class Play {
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                         if (value != 0) {
-                            cell.setBackground(Color.decode(Utils.colorSelectedCell));
+                            cell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
                             cell.setValue(value);
                             ctrlUI.setValue(posX, posY, value);
                             boolean isFinished = ctrlUI.isFinished();
-                            if (isFinished) finishGame();
+                            if (isFinished) {
+                                help1.setEnabled(false);
+                                help2.setEnabled(false);
+                                finishGame();
+                            }
                         }
                     }
                 });
@@ -230,7 +238,7 @@ public class Play {
                 if (result != -1) {
                     KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                     if (result == 1) w.setBackground(Color.GREEN);
-                    else if (result == 0) w.setBackground(Color.decode(Utils.colorErrorCell));
+                    else if (result == 0) w.setBackground(Color.decode(Utils.colorRedCell));
                 }
 
             }
@@ -243,6 +251,21 @@ public class Play {
                 w.setValue(correctNumber);
                 w.setBackground(Color.GREEN);
 
+            }
+        });
+
+        resolve.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String kakuroSolved = ctrlUI.getCorrectKakuro();
+                sg = new KakuroBoard(kakuroSolved);
+                board.removeAll();
+                board.add(sg);
+                components = sg.getComponents();
+                board.validate();
+                help1.setEnabled(false);
+                help2.setEnabled(false);
+                stopTimer();
             }
         });
 
@@ -288,7 +311,7 @@ public class Play {
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
         if (cell.getBackground() != Color.GREEN) {
             if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
-                cell.setBackground(Color.decode(Utils.colorErrorCell));
+                cell.setBackground(Color.decode(Utils.colorRedCell));
             } else cell.setBackground(Color.WHITE);
         }
 

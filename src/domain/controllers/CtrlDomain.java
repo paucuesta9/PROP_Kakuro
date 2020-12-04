@@ -85,15 +85,15 @@ public class CtrlDomain {
             resolve();
             currentKakuro.setId(saveKakuro());
         }
-        int id = getGameId();
-       // currentGame = new Game(id,  0, 0, id);
-       // currentPlayer.setCurrentGame(currentGame.getId());
+        //int id = getGameId();
+        //currentGame = new Game(id,  0, 0, id);
+        //currentPlayer.setCurrentGame(currentGame.getId());
         CtrlPlay.startGame(currentKakuro);
         setCorrectValues();
     }
 
     private int getGameId() {
-        return 2;
+        return 5;
     }
 
     /** @brief Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correctValue de la correspondiente celda blanca
