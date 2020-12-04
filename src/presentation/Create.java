@@ -1,7 +1,5 @@
 package presentation;
 
-import domain.classes.Kakuro;
-
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -255,12 +253,12 @@ public class Create {
                     color = cells[finalI].getBackground();
                     posX = ((KakuroCell) cells[finalI]).getPosX();
                     posY = ((KakuroCell) cells[finalI]).getPosY();
-                    cells[finalI].setBackground(Color.decode(Utils.colorBlueSelectedCell));
+                    cells[finalI].setBackground(Color.decode(Utils.colorSelectedCell));
                 }
 
                 @Override
                 public void focusLost(FocusEvent e) {
-                    if (cells[finalI].getBackground().equals(Color.decode(Utils.colorBlueSelectedCell)))
+                    if (cells[finalI].getBackground().equals(Color.decode(Utils.colorSelectedCell)))
                         cells[finalI].setBackground(color);
                 }
             });
@@ -291,7 +289,7 @@ public class Create {
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                         if (value != 0) {
-                            whiteCell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
+                            whiteCell.setBackground(Color.decode(Utils.colorSelectedCell));
                             whiteCell.setValue(value);
                         }
                     }
@@ -324,7 +322,7 @@ public class Create {
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                         if (value != 0) {
-                            blackCell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
+                            blackCell.setBackground(Color.decode(Utils.colorSelectedCell));
                             blackCell.setRow(value);
                         }
                     }

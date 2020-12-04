@@ -51,6 +51,7 @@
               </grid>
             </constraints>
             <properties>
+              <focusable value="false"/>
               <text value="Volver"/>
             </properties>
           </component>
@@ -87,6 +88,7 @@
               <component id="14533" class="javax.swing.JButton" binding="puntos">
                 <constraints border-constraint="West"/>
                 <properties>
+                  <focusable value="false"/>
                   <maximumSize width="120" height="56"/>
                   <minimumSize width="120" height="56"/>
                   <preferredSize width="120" height="56"/>
@@ -96,6 +98,7 @@
               <component id="df226" class="javax.swing.JButton" binding="wins">
                 <constraints border-constraint="Center"/>
                 <properties>
+                  <focusable value="false"/>
                   <horizontalTextPosition value="11"/>
                   <maximumSize width="120" height="56"/>
                   <minimumSize width="120" height="56"/>
@@ -107,6 +110,7 @@
                 <constraints border-constraint="East"/>
                 <properties>
                   <contentAreaFilled value="true"/>
+                  <focusable value="false"/>
                   <maximumSize width="120" height="56"/>
                   <minimumSize width="120" height="56"/>
                   <preferredSize width="120" height="56"/>
@@ -134,6 +138,7 @@
             </constraints>
             <properties>
               <background color="-852481"/>
+              <focusable value="false"/>
               <text value=""/>
             </properties>
           </component>

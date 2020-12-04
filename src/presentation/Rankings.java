@@ -104,7 +104,7 @@ public class Rankings implements ListSelectionListener {
         creadas.setVerticalTextPosition(JButton.CENTER);
 
         text.setFont(roboto);
-        text.setForeground(Color.BLUE);
+        text.setForeground(Color.BLACK);
         text.setBackground(null);
 
 
@@ -213,7 +213,8 @@ public class Rankings implements ListSelectionListener {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Config conf = new Config();
+                conf.drawConfig();
             }
         });
     }

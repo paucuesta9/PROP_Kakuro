@@ -8,11 +8,23 @@ import java.io.*;
 public class Utils {
     public final static String colorBlue = "#1976D2";
     public final static String colorDarkBlue = "#00204A";
-    public final static String colorBlueSelectedCell = "#64b5f6";
-    public final static String colorRedCell = "#E53935";
+    public static String colorSelectedCell = "#64b5f6";
+    public static String colorErrorCell = "#E53935";
+    public static Color colorBlackCell = Color.decode("#000000");
+    public static Color colorWhiteCell = Color.decode("#FFFFFF");
+    public static Color colorNumbersBlackCell = Color.decode("#FFFFFF");
+    public static Color colorNumbersWhiteCell = Color.decode("#000000");
+    public static Color colorCorrectCell = Color.decode("#00FF00");
+    public static Color colorIncorrectCell = Color.decode("#E53935");
+    public static Color colorSelCell = Color.decode("#64b5f6");
+    public static Color colorBorde = Color.decode("#808080");
+
+    public static int volume= -10;
 
     public static Font fontAwesome;
     public static Font roboto;
+
+    private static FloatControl gainControl;
 
     public Utils() {
 
@@ -100,18 +112,23 @@ public class Utils {
                 e.printStackTrace();
             }
             clip1.loop(Clip.LOOP_CONTINUOUSLY);
-            FloatControl gainControl =
+            gainControl =
                     (FloatControl) clip1.getControl(FloatControl.Type.MASTER_GAIN);
-            gainControl.setValue(-10.0f);
+            gainControl.setValue(volume);
             clip1.start();
         }
+    }
+
+    public static void updateVolume(int vol) {
+        gainControl.setValue(vol);
+        volume = vol;
     }
 
     public static void center(Frame frame) {
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screenSize = toolkit.getScreenSize();
-        int x = (screenSize.width) / 2 - 600;
-        int y = (screenSize.height) / 2 - 450;
+        int x = (screenSize.width) / 2 - frame.getWidth()/2;
+        int y = (screenSize.height) / 2 - frame.getHeight()/2;
         frame.setLocation(x, y);
     }
 }
