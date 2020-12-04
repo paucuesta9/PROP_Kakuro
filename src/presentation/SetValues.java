@@ -59,6 +59,72 @@ public class SetValues extends JDialog {
         etRow.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         etColumn.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
 
+        etValue.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    etValue.setEditable(true);
+                } else {
+                    etValue.setEditable(false);
+                    Utils.showError("Escriba solo números");
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
+        etRow.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    etRow.setEditable(true);
+                } else {
+                    etRow.setEditable(false);
+                    Utils.showError("Escriba solo números");
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
+        etColumn.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                    etColumn.setEditable(true);
+                } else {
+                    etColumn.setEditable(false);
+                    Utils.showError("Escriba solo números");
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+
+            }
+        });
+
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -89,19 +155,30 @@ public class SetValues extends JDialog {
 
     private void onOK() {
         if (type == 1) {
-            result = new int[1];
-            result[0] = Integer.valueOf(etValue.getText());
+            if (etValue.getText().isEmpty() || etValue.getText().length() > 1) Utils.showError("El valor debe estar entre 1 y 9");
+            else {
+                dispose();
+                result = new int[1];
+                result[0] = Integer.valueOf(etValue.getText());
+            }
         } else {
-            result = new int[2];
-            result[0] = Integer.valueOf(etRow.getText());
-            result[1] = Integer.valueOf(etColumn.getText());
+            if (etRow.getText().isEmpty() || etRow.getText().length() > 1) Utils.showError("El valor debe estar entre 1 y 9");
+            else if (etColumn.getText().isEmpty() || etColumn.getText().length() > 1) Utils.showError("El valor debe estar entre 1 y 9");
+            else {
+                dispose();
+                result = new int[2];
+                result[0] = Integer.valueOf(etRow.getText());
+                result[1] = Integer.valueOf(etColumn.getText());
+            }
+
         }
-        dispose();
     }
 
     private void onCancel() {
         // add your code here if necessary
         dispose();
+        result = new int[1];
+        result[0] = 0;
     }
 
     public int[] drawSetValues() {

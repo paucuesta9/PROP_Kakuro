@@ -22,6 +22,7 @@ public class AskSave {
         setListeners();
 
         board.add(kBoard);
+        board.validate();
         
         question.setFont(Utils.roboto.deriveFont(18f));
         question.setText(text);

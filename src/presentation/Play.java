@@ -41,6 +41,8 @@ public class Play {
         this.rowSize =  Integer.parseInt(valuesSize[0]);
         this.columnSize = Integer.parseInt(valuesSize[1]);
 
+        ctrlUI = CtrlUI.getInstance();
+
         Utils.loadFonts();
 
         sg = new KakuroBoard(kakuro);
@@ -355,7 +357,7 @@ public class Play {
     public static void main(String [] args) {
         JFrame frame = new JFrame("Play");
         ctrlUI = CtrlUI.getInstance();
-        ctrlUI.startGame(2, 8, 8);
+        ctrlUI.startGame(2, 3, 3);
         String kakuro = ctrlUI.getKakuro();
         frame.setContentPane(new Play(kakuro).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

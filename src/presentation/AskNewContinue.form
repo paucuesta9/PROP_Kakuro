@@ -68,7 +68,7 @@
                   <contentAreaFilled value="false"/>
                   <focusPainted value="false"/>
                   <opaque value="false"/>
-                  <text value="Sí"/>
+                  <text value="Cargar"/>
                 </properties>
               </component>
               <component id="6bc1e" class="javax.swing.JButton" binding="noButton" default-binding="true">
@@ -84,7 +84,7 @@
                   <contentAreaFilled value="false"/>
                   <focusPainted value="false"/>
                   <opaque value="false"/>
-                  <text value="No"/>
+                  <text value="Nueva"/>
                 </properties>
               </component>
             </children>

@@ -80,17 +80,19 @@ public class Create {
                 cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(1);
                 int[] value = setValues.drawSetValues();
-                ((KakuroWhiteCell) cells[pos]).setValue(value[0]);
-                GridBagConstraints c = new GridBagConstraints();
-                c.weightx = 1.0;
-                c.weighty = 1.0;
-                c.fill = GridBagConstraints.BOTH;
-                c.gridx = posY;
-                c.gridy = posX;
-                kBoard.remove(pos);
-                kBoard.add(cells[pos], c, pos);
-                kBoard.validate();
-                board.validate();
+                if (value[0] != 0) {
+                    ((KakuroWhiteCell) cells[pos]).setValue(value[0]);
+                    GridBagConstraints c = new GridBagConstraints();
+                    c.weightx = 1.0;
+                    c.weighty = 1.0;
+                    c.fill = GridBagConstraints.BOTH;
+                    c.gridx = posY;
+                    c.gridy = posX;
+                    kBoard.remove(pos);
+                    kBoard.add(cells[pos], c, pos);
+                    kBoard.validate();
+                    board.validate();
+                }
             }
         });
         popupMenu.add(whiteCellItem);
@@ -104,19 +106,21 @@ public class Create {
                 cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(2);
                 int[] value = setValues.drawSetValues();
-                ((KakuroBlackCell) cells[pos]).setRow(value[0]);
-                ((KakuroBlackCell) cells[pos]).setColumn(value[1]);
-                GridBagConstraints c = new GridBagConstraints();
-                c.weightx = 1.0;
-                c.weighty = 1.0;
-                c.fill = GridBagConstraints.BOTH;
-                c.gridx = posY;
-                c.gridy = posX;
-                kBoard.remove(pos);
-                kBoard.add(cells[pos], c, pos);
-                kBoard.validate();
-                board.validate();
-                listenersCells();
+                if (value[0] != 0) {
+                    ((KakuroBlackCell) cells[pos]).setRow(value[0]);
+                    ((KakuroBlackCell) cells[pos]).setColumn(value[1]);
+                    GridBagConstraints c = new GridBagConstraints();
+                    c.weightx = 1.0;
+                    c.weighty = 1.0;
+                    c.fill = GridBagConstraints.BOTH;
+                    c.gridx = posY;
+                    c.gridy = posX;
+                    kBoard.remove(pos);
+                    kBoard.add(cells[pos], c, pos);
+                    kBoard.validate();
+                    board.validate();
+                    listenersCells();
+                }
             }
         });
         popupMenu.add(blackCellItem);
