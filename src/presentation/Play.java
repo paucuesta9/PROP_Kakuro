@@ -355,7 +355,7 @@ public class Play {
     public static void main(String [] args) {
         JFrame frame = new JFrame("Play");
         ctrlUI = CtrlUI.getInstance();
-        ctrlUI.startGame(1, 9, 9);
+        ctrlUI.startGame(2, 8, 8);
         String kakuro = ctrlUI.getKakuro();
         frame.setContentPane(new Play(kakuro).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

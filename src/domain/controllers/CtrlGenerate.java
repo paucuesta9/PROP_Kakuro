@@ -669,15 +669,15 @@ public class CtrlGenerate {
         nineCellsCol(board, tempBoard);
         int whites = howManyWhites(board);
         boolean ans = fillBoardAux(board, 0, 0, posComb, tempBoard, whites, 0);
-            for (int x = 0; x < board.length; ++x) {
-                    for (int y = 0; y < board[0].length; ++y) {
-                        if (!board[x][y].isWhite()) {
-                            BlackCell w = (BlackCell) board[x][y];
-                            w.setColumn(tempBoard[x][y][2]);
-                            w.setRow(tempBoard[x][y][3]);
-                        }
-                    }
+        for (int x = 0; x < board.length; ++x) {
+            for (int y = 0; y < board[0].length; ++y) {
+                if (!board[x][y].isWhite()) {
+                    BlackCell w = (BlackCell) board[x][y];
+                    w.setColumn(tempBoard[x][y][2]);
+                    w.setRow(tempBoard[x][y][3]);
                 }
+            }
+        }
         currentKakuro = new Kakuro(0,0, board);
         CtrlValidate.setKakuro(currentKakuro);
         int[] vec = {0,0,0,0,0,0,0,0,0,0};
@@ -734,6 +734,7 @@ public class CtrlGenerate {
             else repeat = true;
         }
         CtrlValidate.setDifficulty();
+        System.out.println("Finalmente, la dificultad es " + currentKakuro.getDifficulty());
         return currentKakuro;
     }
 

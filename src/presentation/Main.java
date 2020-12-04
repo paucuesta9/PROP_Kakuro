@@ -131,7 +131,7 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                Ranking ranking = new Ranking();
+//                Rankings ranking = new Rankings();
 //                ranking.drawRanking();
             }
         });

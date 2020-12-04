@@ -1,5 +1,7 @@
 import presentation.CtrlUI;
 
+import java.io.FileNotFoundException;
+
 /**
  * @mainpage Proyecto PROP: Kakuro
 
@@ -18,7 +20,7 @@ public class Main {
 
     /** @brief Función inicial que lanza la interfaz (en este caso por consola)
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         CtrlUI ui = new CtrlUI();
         ui.run();
     }

@@ -10,6 +10,7 @@ import netscape.javascript.JSObject;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /** @file CtrlDomain.java
  @brief Clase  <em>CtrlDomain</em>.
@@ -329,5 +330,11 @@ public class CtrlDomain {
     public void saveGame() {
         String gameJSON = gson.toJson(currentGame);
         data.saveGame(currentPlayer.getUsername(), gameJSON, currentGame.getId());
+    }
+
+    public List<Player> getListOfPlayers(String s) throws FileNotFoundException {
+        Ranking r = new Ranking();
+        List<Player> p = r.getList(s);
+        return p;
     }
 }

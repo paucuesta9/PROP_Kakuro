@@ -132,6 +132,23 @@ public class CtrlData {
         return listFiles.length;
     }
 
+    /** @brief Mira cuántos players hay guardados
+     *
+     * Busca cuantos jugadores se han registrado
+     * @return la cantidad jugadores registrados
+     */
+    public int getNumberOfPlayers() throws NullPointerException {
+        File folder = new File("data/players");
+        File[] listFiles = folder.listFiles();
+        return listFiles.length;
+    }
+
+    public File[] getListOfPlayers() throws NullPointerException {
+        File folder = new File("data/players");
+        File[] listFiles = folder.listFiles();
+        return listFiles;
+    }
+
     public JsonReader getUser(String username) throws FileNotFoundException {
         JsonReader reader = new JsonReader(new FileReader("data/players/" + username + ".json"));
         return reader;

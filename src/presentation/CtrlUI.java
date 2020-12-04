@@ -3,11 +3,13 @@ package presentation;
 import com.google.gson.Gson;
 import data.CtrlData;
 import domain.classes.Exceptions.WrongPasswordException;
+import domain.classes.Player;
 import domain.controllers.CtrlDomain;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /** @file CtrlUI.java
@@ -48,7 +50,8 @@ public class CtrlUI {
      *
      * Se da la bienvenida al usuario y lanza el menu
      */
-    public void run () {
+    ////////////////
+    public void run () throws FileNotFoundException {
         System.out.println("########## BIENVENIDO A KAKURO ##########");
         System.out.println("");
         System.out.println("¿Quiere iniciar sesión o crear una cuenta? 1. Iniciar sesión, 2. Crear cuenta");
@@ -96,7 +99,8 @@ public class CtrlUI {
      *
      * Se da al usuario las diferentes opciones que tiene del juego y se lanza cada una de ellas
      */
-    public void menu () {
+    ////////////////
+    public void menu () throws FileNotFoundException {
         System.out.println("MENÚ:");
         System.out.println("1. Jugar");
         System.out.println("2. Crear/Validar");
@@ -212,7 +216,8 @@ public class CtrlUI {
      *
      * Se crea/carga una partida y se juega
      */
-    public void play() {
+    ////////////////
+    public void play() throws FileNotFoundException {
         System.out.println("1. Empezar nueva partida");
         System.out.println("2. Cargar partida empezada");
         int choice = readNumber();
@@ -394,5 +399,10 @@ public class CtrlUI {
 
     public void getStartedGames() {
         cd.getStartedGames();
+    }
+    //Funcio de prova per agafar un ranking
+    public List<Player> getListOfPlayers(String s) throws FileNotFoundException {
+        List<Player> p = cd.getListOfPlayers(s);
+        return p;
     }
 }
