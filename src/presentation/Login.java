@@ -1,5 +1,6 @@
 package presentation;
 
+import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlDomain;
 
 import javax.imageio.ImageIO;
@@ -9,6 +10,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Login {
@@ -21,7 +23,7 @@ public class Login {
     private JPanel Prueba;
     private JButton config;
 
-    private CtrlDomain ctrlDomain;
+    private CtrlUI ctrlUI;
     private static JFrame frame = new JFrame("Login");
 
     boolean mod = false;
@@ -30,6 +32,7 @@ public class Login {
     public Login() {
         Utils.loadFonts();
         setListeners();
+        ctrlUI = CtrlUI.getInstance();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -97,7 +100,16 @@ public class Login {
             iniciarSesiónButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    try {
+                        ctrlUI.login(usuarioTextField.getText(), contraseñaPasswordField.getPassword());
+                        frame.dispose();
+                        Main main = new Main();
+                        main.drawMain();
+                    } catch (FileNotFoundException fileNotFoundException) {
+                        Utils.showError("Usuario y/o contraseña incorrecta");
+                    } catch (WrongPasswordException wrongPasswordException) {
+                        Utils.showError("Usuario y/o contraseña incorrecta");
+                    }
                 }
             });
     }

@@ -21,7 +21,11 @@ public class Main {
     /** @brief Función inicial que lanza la interfaz (en este caso por consola)
      */
     public static void main(String[] args) throws FileNotFoundException {
-        CtrlUI ui = new CtrlUI();
-        ui.run();
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                CtrlUI ui = new CtrlUI();
+                ui.run();
+            }
+        });
     }
 }

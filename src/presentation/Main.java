@@ -85,9 +85,8 @@ public class Main {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-//                Config config = new Config();
-//                config.drawConfig();
+                Config config = new Config();
+                config.drawConfig();
             }
         });
 
@@ -139,9 +138,8 @@ public class Main {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Login login = new Login();
-//                login.drwarLogin();
+                login.drawLogin();
             }
         });
     }
