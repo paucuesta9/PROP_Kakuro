@@ -141,7 +141,7 @@ public class Utils {
     }
 
     public static void updateVolume(int vol) {
-        //gainControl.setValue(vol);
+        gainControl.setValue(vol);
         volume = vol;
     }
 

@@ -102,6 +102,7 @@ public class Login {
                 public void actionPerformed(ActionEvent e) {
                     try {
                         ctrlUI.login(usuarioTextField.getText(), contraseñaPasswordField.getPassword());
+                        Utils.updateVolume(Utils.volume);
                         frame.dispose();
                         Main main = new Main();
                         main.drawMain();
