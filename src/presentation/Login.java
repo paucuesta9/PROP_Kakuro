@@ -2,6 +2,7 @@ package presentation;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
@@ -14,84 +15,75 @@ public class Login {
     private JButton iniciarSesiónButton;
     private JLabel label;
     private JPanel panel2;
-    private JPanel picLabel;
+    private JPanel logotipo;
     private JPanel Prueba;
+    private JButton config;
 
-    int a = 0;
+    private static JFrame frame = new JFrame("Login");
+
     boolean mod = false;
     boolean mod1 = false;
 
     public Login() {
+        Utils.loadFonts();
+        setListeners();
 
-        picLabel.addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent e) {
-                /*ImageIcon icon = new ImageIcon("C:\\Users\\zatch\\IdeaProjects\\Projecte_Prop\\src\\resources\\images\\Captura.png"); //se ajusta perfecto a la pantalla
-                Image img = icon.getImage();
-                Image imgScale = img.getScaledInstance(picLabel.getWidth(), picLabel.getHeight(), Image.SCALE_FAST);
-                ImageIcon scaledIcon = new ImageIcon(imgScale);
-                label.setIcon(scaledIcon);*/
+        config.setFont(Utils.fontAwesome);
+        config.setForeground(Color.decode(Utils.colorDarkBlue));
+        config.setBackground(null);
+        config.setBorder(new EmptyBorder(10,0,0,20));
 
-                ImageIcon icon = new ImageIcon("resources/images/Captura.PNG"); //se ajusta cuadrado
-                Image img = icon.getImage();
-                int w = picLabel.getWidth(); int h = picLabel.getHeight();
-                if (w>h) w = h;
-                else h = w;
-                Image imgScale = img.getScaledInstance(w, h, Image.SCALE_FAST);
-                ImageIcon scaledIcon = new ImageIcon(imgScale);
-                label.setIcon(scaledIcon);
-            }
-        });
-        usuarioTextField.addFocusListener(new FocusAdapter() {
+        usuarioTextField.setForeground(Color.BLACK);
+        usuarioTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        usuarioTextField.setFont(Utils.roboto.deriveFont(18f));
+
+        contraseñaPasswordField.setForeground(Color.BLACK);
+        contraseñaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        contraseñaPasswordField.setFont(Utils.roboto.deriveFont(18f));
+        contraseñaPasswordField.setEchoChar((char)0);
+
+        iniciarSesiónButton.setFont(Utils.roboto);
+        iniciarSesiónButton.setForeground(Color.WHITE);
+        iniciarSesiónButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
+        iniciarSesiónButton.setBorderPainted(false);
+        iniciarSesiónButton.setBackground(null);
+        iniciarSesiónButton.setHorizontalTextPosition(JButton.CENTER);
+        iniciarSesiónButton.setVerticalTextPosition(JButton.CENTER);
+    }
+    private void setListeners() {
+            usuarioTextField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
-                if (a != 0) {
-                    if (usuarioTextField.getText().equals("Usuario") && !mod) {
-                        usuarioTextField.setFont(new Font("Roboto" ,Font.PLAIN, usuarioTextField.getFont().getSize()));
-                        usuarioTextField.setText("");
-                    }
-                }
-                else {
-                    contraseñaPasswordField.requestFocusInWindow();
+                if (usuarioTextField.getText().equals("Usuario") && !mod) {
+                    usuarioTextField.setText("");
                 }
             }
         });
-        usuarioTextField.addFocusListener(new FocusAdapter() {
+            usuarioTextField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                if (a==0);
-                else if(usuarioTextField.getText().equals("")) {
-                    usuarioTextField.setFont(new Font("Roboto" ,Font.ITALIC, usuarioTextField.getFont().getSize()));
+                if(usuarioTextField.getText().equals("")) {
                     usuarioTextField.setText("Usuario");
                     mod = false;
                 }
                 else mod = true;
             }
         });
-        contraseñaPasswordField.addFocusListener(new FocusAdapter() {
+            contraseñaPasswordField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
-                if (a==0) {
-                    contraseñaPasswordField.setEchoChar((char)0);
-                    iniciarSesiónButton.requestFocusInWindow();
-                }
-                else {
                     contraseñaPasswordField.setEchoChar('•');
-                    if (contraseñaPasswordField.getText().equals("Contraseña")) {
-                        contraseñaPasswordField.setFont(new Font("Roboto" ,Font.PLAIN, contraseñaPasswordField.getFont().getSize()));
+                    if (contraseñaPasswordField.getText().equals("Contraseña") == !mod1) {
                         contraseñaPasswordField.setText("");
                     }
-                }
             }
         });
-        contraseñaPasswordField.addFocusListener(new FocusAdapter() {
+            contraseñaPasswordField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusLost(FocusEvent e) {
-                if (a==0) ++a;
-                else if(contraseñaPasswordField.getText().equals("")) {
-                    contraseñaPasswordField.setFont(new Font("Roboto" ,Font.ITALIC, contraseñaPasswordField.getFont().getSize()));
-                    contraseñaPasswordField.setEchoChar((char)0);
+                if(contraseñaPasswordField.getText().equals("")) {
                     contraseñaPasswordField.setText("Contraseña");
+                    contraseñaPasswordField.setEchoChar((char)0);
                     mod1 = false;
                 }
                 else mod1 = true;
@@ -99,17 +91,29 @@ public class Login {
         });
     }
 
+
     private void createUIComponents() {
         // TODO: place custom component creation code here
-         label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage().getScaledInstance(600,600, Image.SCALE_DEFAULT)));
-         label.requestFocusInWindow();
+        label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
+        label.requestFocusInWindow();
+    }
+
+    public void drawLogin() {
+        frame.setContentPane(panel2);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1200,800);
+        frame.setResizable(false);
+        Utils.center(frame);
+        frame.setVisible(true);
     }
 
     public static void main(String [] args) {
-        JFrame frame = new JFrame("App");
+        frame = new JFrame("Login");
         frame.setContentPane(new Login().panel2);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(800,700);
+        frame.setSize(1200,800);
+        frame.setResizable(false);
+        Utils.center(frame);
         frame.setVisible(true);
     }
 }
