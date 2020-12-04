@@ -1,5 +1,7 @@
 package presentation;
 
+import jdk.jshell.execution.Util;
+
 import java.util.*;
 import javax.sound.sampled.*;
 import javax.swing.*;
@@ -112,15 +114,15 @@ public class Play {
                     public void focusGained(FocusEvent e) {
                         color = cell.getBackground();
                         value = cell.getValue();
-                        cell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
+                        cell.setBackground(Utils.colorSelCell);
                         posX = cell.getPosX();
                         posY = cell.getPosY();
                     }
 
                     @Override
                     public void focusLost(FocusEvent e) {
-                        if (!cell.getBackground().equals(Color.decode(Utils.colorRedCell)) && !cell.getBackground().equals(Color.GREEN)) cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Color.decode(Utils.colorRedCell))) cell.setBackground(Color.WHITE);
+                        if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Color.GREEN)) cell.setBackground(color);
+                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell)) cell.setBackground(Color.WHITE);
                         checkValidityCell(cell, posX, posY);
                         int posXAux = posX;
                         int posYAux = posY;
@@ -216,7 +218,7 @@ public class Play {
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                         if (value != 0) {
-                            cell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
+                            cell.setBackground(Utils.colorSelCell);
                             cell.setValue(value);
                             ctrlUI.setValue(posX, posY, value);
                             boolean isFinished = ctrlUI.isFinished();
@@ -238,7 +240,7 @@ public class Play {
                 if (result != -1) {
                     KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                     if (result == 1) w.setBackground(Color.GREEN);
-                    else if (result == 0) w.setBackground(Color.decode(Utils.colorRedCell));
+                    else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
                 }
 
             }
@@ -311,7 +313,7 @@ public class Play {
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
         if (cell.getBackground() != Color.GREEN) {
             if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
-                cell.setBackground(Color.decode(Utils.colorRedCell));
+                cell.setBackground(Utils.colorIncorrectCell);
             } else cell.setBackground(Color.WHITE);
         }
 
