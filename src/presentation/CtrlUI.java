@@ -408,7 +408,7 @@ public class CtrlUI {
         cd.getStartedGames();
     }
     //Funcio de prova per agafar un ranking
-    public List<Player> getListOfPlayers(String s) throws FileNotFoundException {
+    public List<Player> getListOfPlayers(String s) {
         List<Player> p = cd.getListOfPlayers(s);
         return p;
     }

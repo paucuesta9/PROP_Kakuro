@@ -19,7 +19,7 @@ public class Player {
     private int currentGame;
     @SerializedName("savedGames")
     @Expose
-    private List<Integer> savedGames = null;
+    private List<Game> savedGames = null;
     @SerializedName("config")
     @Expose
     private Config config;
@@ -35,7 +35,7 @@ public class Player {
         this.username = username;
         this.password = password;
         this.stats = new Stats();
-        this.savedGames = new ArrayList<Integer>();
+        this.savedGames = new ArrayList<Game>();
     }
 
     /**
@@ -46,7 +46,7 @@ public class Player {
      * @param config
      * @param username
      */
-    public Player(String username, String password, Stats stats, int currentGame, List<Integer> savedGames, Config config) {
+    public Player(String username, String password, Stats stats, int currentGame, List<Game> savedGames, Config config) {
         super();
         this.username = username;
         this.password = password;
@@ -88,11 +88,11 @@ public class Player {
         this.currentGame = currentGame;
     }
 
-    public List<Integer> getSavedGames() {
+    public List<Game> getSavedGames() {
         return savedGames;
     }
 
-    public void setSavedGames(List<Integer> savedGames) {
+    public void setSavedGames(List<Game> savedGames) {
         this.savedGames = savedGames;
     }
 

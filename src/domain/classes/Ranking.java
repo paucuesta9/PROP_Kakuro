@@ -17,23 +17,14 @@ import java.util.*;
 /** @brief Clase Cell que contiene los métodos necesarios para cualquier tipo de ranking
  * @author Pol Vallespí Soro
  */
-public class Ranking {
+public abstract class Ranking {
     private CtrlData data;
     private String type;
-    private static List<Player> players;
+    protected List<Player> players;
     private Gson gson;
-    /**@brief Constructora de un ranking
-     *
-     * @param type nos indica el tipo de ranking
-     */
-    public Ranking(String type) throws FileNotFoundException {
-        data = CtrlData.getInstance();
-        gson = new Gson();
-        this.type = type;
-        listOfPlayers();
-    }
 
-    public Ranking() throws FileNotFoundException {
+
+    public Ranking() {
         data = CtrlData.getInstance();
         gson = new Gson();
         listOfPlayers();
@@ -47,52 +38,28 @@ public class Ranking {
         return type;
     }
 
-    public void listOfPlayers() throws FileNotFoundException {
+    public void listOfPlayers()  {
         players = new ArrayList<>();
         File[] playersList = data.getListOfPlayers();
         int n = data.getNumberOfPlayers();
         for(int i = 0; i < n; ++i) {
             if(playersList[i].isFile()) {
-                JsonReader reader = new JsonReader(new FileReader(playersList[i]));
+                JsonReader reader = null;
+                try {
+                    reader = new JsonReader(new FileReader(playersList[i]));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
                 players.add(gson.fromJson(reader, Player.class));
-                //System.out.println(players.get(players.size()-1).getUsername());
             }
 
         }
     }
 
+    public abstract void ordena();
 
-    public static void ordenaPerPunts() {
-        Collections.sort(players, new Comparator<Player>() {
-            @Override
-            public int compare(Player o1, Player o2) {
-                return o2.getStats().getPoints() - o1.getStats().getPoints();
-            }
-        });
-    }
-
-    public static void ordenaPerWins() {
-        Collections.sort(players, new Comparator<Player>() {
-            @Override
-            public int compare(Player o1, Player o2) {
-                return o2.getStats().getFinished() - o1.getStats().getFinished();
-            }
-        });
-    }
-
-    public static void ordenaPerCreades() {
-        Collections.sort(players, new Comparator<Player>() {
-            @Override
-            public int compare(Player o1, Player o2) {
-                return o2.getStats().getCreated() - o1.getStats().getCreated();
-            }
-        });
-    }
-
-    public static List<Player> getList(String s) {
-        if( s == "puntos") ordenaPerPunts();
-        else if( s == "wins") ordenaPerWins();
-        else ordenaPerCreades();
+    public List<Player> getList(String s) {
+        ordena();
         return players;
     }
 }

@@ -332,8 +332,11 @@ public class CtrlDomain {
         data.saveGame(currentPlayer.getUsername(), gameJSON, currentGame.getId());
     }
 
-    public List<Player> getListOfPlayers(String s) throws FileNotFoundException {
-        Ranking r = new Ranking();
+    public List<Player> getListOfPlayers(String s) {
+        Ranking r;
+        if(s == "puntos")  r = new PointsRanking();
+        else if( s == "wins") r = new WinsRanking();
+        else  r = new CreatedRanking();
         List<Player> p = r.getList(s);
         return p;
     }

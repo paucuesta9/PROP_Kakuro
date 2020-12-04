@@ -60,7 +60,7 @@ public class Rankings implements ListSelectionListener {
         showTable(t, titles);
 
 
-        //menu
+
         config.setFont(fontAwesome);
         config.setForeground(Color.decode("#00204A"));
         config.setBackground(null);
@@ -119,11 +119,7 @@ public class Rankings implements ListSelectionListener {
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
                 //Construir la tabla con la lista conseguida
                 List<Player> points = new ArrayList<>();
-                try {
-                    points = ctrlUI.getListOfPlayers("puntos");
-                } catch (FileNotFoundException fileNotFoundException) {
-                    fileNotFoundException.printStackTrace();
-                }
+                points = ctrlUI.getListOfPlayers("puntos");
                 int n = points.size();
                 String[][] t = new String[n][3];
                 for(int i = 0; i < n; ++i) {
@@ -150,11 +146,7 @@ public class Rankings implements ListSelectionListener {
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
                 //Construir la tabla con la lista conseguida
                 List<Player> wins = new ArrayList<>();
-                try {
-                    wins = ctrlUI.getListOfPlayers("wins");
-                } catch (FileNotFoundException fileNotFoundException) {
-                    fileNotFoundException.printStackTrace();
-                }
+                wins = ctrlUI.getListOfPlayers("wins");
                 int n = wins.size();
                 String[][] t = new String[n][3];
                 for(int i = 0; i < n; ++i) {
@@ -180,11 +172,7 @@ public class Rankings implements ListSelectionListener {
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
                 //Construir la tabla con la lista conseguida
                 List<Player> created = new ArrayList<>();
-                try {
-                    created = ctrlUI.getListOfPlayers("creadas");
-                } catch (FileNotFoundException fileNotFoundException) {
-                    fileNotFoundException.printStackTrace();
-                }
+                created = ctrlUI.getListOfPlayers("creadas");
                 int n = created.size();
                 String[][] t = new String[n][3];
                 for(int i = 0; i < n; ++i) {

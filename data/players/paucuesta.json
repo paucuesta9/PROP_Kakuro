@@ -42,4 +42,5 @@
     }
   ],
   "config":
-  {"colorBlackCell":"#cc99ff","colorWhiteCell":"#ffffff","colorNumbersBlackCell":"#ffffff","colorNumbersWhiteCell":"#000000","colorCorrectCell":"#00ff00","colorIncorrectCell":"#e53935","colorSelCell":"#99ff99","colorBorde":"#808080","volume":-17}}
+  {"colorBlackCell":"#cc99ff","colorWhiteCell":"#ffffff","colorNumbersBlackCell":"#ffffff","colorNumbersWhiteCell":"#000000","colorCorrectCell":"#00ff00","colorIncorrectCell":"#e53935","colorSelCell":"#99ff99","colorBorde":"#808080","volume":-17}
+}

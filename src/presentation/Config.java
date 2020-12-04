@@ -1,6 +1,7 @@
 package presentation;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
@@ -11,7 +12,6 @@ public class Config {
     private JButton volver;
     private JPanel panel;
     private JPanel configuracion;
-    private JPanel menu;
     private JLabel musicText;
     private JSlider volume;
     private JLabel colors;
@@ -32,11 +32,13 @@ public class Config {
     private JPanel borderPanel;
     private JPanel nBlPanel;
     private JPanel nWhPanel;
+    private JButton mute;
     private JFrame frame = new JFrame("Configuración");
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
-
+    private boolean muted = false;
+    private int vol;
 // logotipo.add(new JColorChooser());
 
     public Config() {
@@ -54,6 +56,7 @@ public class Config {
         volver.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
 
         volume.setValue(Utils.volume);
+
 
         Utils.setButtons(blackCell);
         blackCell.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
@@ -86,6 +89,28 @@ public class Config {
         Utils.setButtons(whiteNum);
         whiteNum.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
         nWhPanel.setBackground(Utils.colorNumbersWhiteCell);
+
+        mute.setFont(Utils.fontAwesome);
+        mute.setForeground(Color.decode("#00204A"));
+        mute.setBackground(null);
+        mute.setText("\uF028");
+
+
+        mute.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                muted = !muted;
+                if(muted) {
+                    mute.setText("\uF6A9");
+                    vol = volume.getValue();
+                    volume.setValue(-25);
+                }
+                else {
+                    mute.setText("\uF028");
+                    volume.setValue(vol);
+                }
+            }
+        });
 
         volver.addActionListener(new ActionListener() {
             @Override
@@ -203,7 +228,7 @@ public class Config {
     public void drawConfig() {
         frame.setContentPane(panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(800,800);
+        frame.setSize(500,650);
         frame.setResizable(false);
         Utils.center(frame);
         frame.setVisible(true);
@@ -213,9 +238,18 @@ public class Config {
         JFrame frame = new JFrame("Configuración");
         frame.setContentPane(new Config().panel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(800,800);
+        frame.setSize(500,650);
         frame.setResizable(false);
         Utils.center(frame);
         frame.setVisible(true);
+    }
+
+    private void createUIComponents() {
+        volume = new JSlider() {
+            @Override
+            public void updateUI() {
+                setUI(new Slider(this));
+            }
+        };
     }
 }

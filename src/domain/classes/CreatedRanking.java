@@ -1,13 +1,25 @@
 package domain.classes;
 
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class CreatedRanking extends Ranking {
-    /**
-     * @param type nos indica el tipo de ranking
-     * @brief Constructora de un ranking
-     */
-    public CreatedRanking(String type) throws FileNotFoundException {
-        super(type);
+
+
+    public CreatedRanking() {
+        super();
     }
+
+    public void ordena() {
+        Collections.sort(players, new Comparator<Player>() {
+            @Override
+            public int compare(Player o1, Player o2) {
+                return o2.getStats().getCreated() - o1.getStats().getCreated();
+            }
+        });
+    }
+
 }

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="presentation.Config">
-  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="516" height="606"/>
+      <xy x="20" y="20" width="516" height="770"/>
     </constraints>
     <properties>
       <background color="-1973532"/>
     </properties>
     <border type="none"/>
     <children>
-      <grid id="7da53" binding="configuracion" layout-manager="GridLayoutManager" row-count="9" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="7da53" binding="configuracion" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
@@ -26,27 +26,15 @@
         <children>
           <component id="60a87" class="javax.swing.JLabel" binding="musicText">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Volumen de la música:"/>
             </properties>
           </component>
-          <component id="143d8" class="javax.swing.JSlider" binding="volume">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <background color="-1973532"/>
-              <maximum value="6"/>
-              <minimum value="-25"/>
-              <value value="-10"/>
-              <valueIsAdjusting value="false"/>
-            </properties>
-          </component>
           <component id="bd4b5" class="javax.swing.JLabel" binding="colors">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Colores:"/>
@@ -55,7 +43,7 @@
           <grid id="29a59" binding="colorPane" layout-manager="GridLayoutManager" row-count="9" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-1973532"/>
@@ -67,19 +55,6 @@
                   <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
                 </constraints>
               </vspacer>
-              <component id="f545b" class="javax.swing.JButton" binding="blackCell">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                    <minimum-size width="252" height="40"/>
-                    <preferred-size width="252" height="40"/>
-                    <maximum-size width="252" height="40"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <focusable value="false"/>
-                  <text value="Celda negra"/>
-                </properties>
-              </component>
               <component id="6cc4d" class="javax.swing.JButton" binding="whiteCell">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -89,6 +64,9 @@
                   </grid>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <text value="Celda blanca"/>
                 </properties>
@@ -102,6 +80,9 @@
                   </grid>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <text value="Celda seleccionada"/>
                 </properties>
@@ -128,6 +109,9 @@
                   </grid>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <text value="Celda correcta"/>
                 </properties>
@@ -141,21 +125,11 @@
                   </grid>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <text value="Celda incorrecta"/>
-                </properties>
-              </component>
-              <component id="eb006" class="javax.swing.JButton" binding="border">
-                <constraints>
-                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                    <minimum-size width="252" height="40"/>
-                    <preferred-size width="252" height="40"/>
-                    <maximum-size width="252" height="40"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <focusable value="false"/>
-                  <text value="Bordes"/>
                 </properties>
               </component>
               <component id="5448b" class="javax.swing.JButton" binding="blackNum">
@@ -167,6 +141,9 @@
                   </grid>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <text value="Núm. celdas negras"/>
                 </properties>
@@ -180,6 +157,9 @@
                   </grid>
                 </constraints>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <text value="Núm. celdas blancas"/>
                 </properties>
@@ -275,34 +255,61 @@
                 <border type="none"/>
                 <children/>
               </grid>
+              <component id="f545b" class="javax.swing.JButton" binding="blackCell">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="252" height="40"/>
+                    <preferred-size width="252" height="40"/>
+                    <maximum-size width="252" height="40"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
+                  <focusable value="false"/>
+                  <text value="Celda negra"/>
+                </properties>
+              </component>
+              <component id="eb006" class="javax.swing.JButton" binding="border">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="252" height="40"/>
+                    <preferred-size width="252" height="40"/>
+                    <maximum-size width="252" height="40"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
+                  <focusable value="false"/>
+                  <text value="Bordes"/>
+                </properties>
+              </component>
             </children>
           </grid>
           <vspacer id="8e00b">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="100"/>
-                <preferred-size width="-1" height="100"/>
-                <maximum-size width="-1" height="100"/>
+              <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="10"/>
+                <preferred-size width="-1" height="10"/>
+                <maximum-size width="-1" height="10"/>
               </grid>
             </constraints>
           </vspacer>
           <vspacer id="d90de">
             <constraints>
-              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
-          <vspacer id="7bc82">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="50"/>
-                <preferred-size width="-1" height="50"/>
-                <maximum-size width="-1" height="50"/>
+              <grid row="9" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="10"/>
+                <preferred-size width="-1" height="10"/>
+                <maximum-size width="-1" height="10"/>
               </grid>
             </constraints>
           </vspacer>
           <vspacer id="5ccca">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="10"/>
                 <preferred-size width="-1" height="10"/>
                 <maximum-size width="-1" height="10"/>
@@ -311,43 +318,67 @@
           </vspacer>
           <vspacer id="630ed">
             <constraints>
-              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="10"/>
                 <preferred-size width="-1" height="10"/>
                 <maximum-size width="-1" height="10"/>
               </grid>
             </constraints>
           </vspacer>
-        </children>
-      </grid>
-      <grid id="c7aae" binding="menu" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-1973532"/>
-        </properties>
-        <border type="none"/>
-        <children>
           <component id="aa700" class="javax.swing.JButton" binding="volver">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <text value="Volver"/>
             </properties>
           </component>
-          <vspacer id="8608d">
+          <grid id="defd4" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-          </vspacer>
-          <vspacer id="c1177">
+            <properties>
+              <background color="-1973532"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="143d8" class="javax.swing.JSlider" binding="volume" custom-create="true">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1973532"/>
+                  <maximum value="6"/>
+                  <minimum value="-25"/>
+                  <value value="-10"/>
+                  <valueIsAdjusting value="false"/>
+                </properties>
+              </component>
+              <component id="de7a1" class="javax.swing.JButton" binding="mute">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <alignmentY value="0.0"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
+                  <focusable value="false"/>
+                  <foreground color="-12145477"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value=""/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <vspacer id="7bc82">
             <constraints>
-              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                 <minimum-size width="-1" height="10"/>
-                <preferred-size width="-1" height="35"/>
+                <preferred-size width="-1" height="10"/>
                 <maximum-size width="-1" height="10"/>
               </grid>
             </constraints>
