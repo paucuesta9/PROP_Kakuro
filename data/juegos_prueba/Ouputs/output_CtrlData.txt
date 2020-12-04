@@ -1,0 +1,239 @@
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Se llama a GetInstance
+Se ha obtenido la instancia deseada
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad, el tamaño del kakuro (NxM)
+Se llama a searchKakuro
+9,9
+*,*,C19,C12,*,*,*,C7,C10
+*,F14,?,?,C4,C11,C17F4,?,?
+*,C7F36,?,?,?,?,?,?,?
+F12,?,?,F10,?,?,?,C25,C14
+F3,?,?,C20,C11F20,?,?,?,?
+F17,?,?,?,?,C8,F6,?,?
+*,C11,C7F13,?,?,?,C4F10,?,?
+F28,?,?,?,?,?,?,?,*
+F6,?,?,*,*,F8,?,?,*
+
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad, el tamaño del kakuro (NxM)
+Se llama a searchKakuro
+12,10
+*,C23,C32,*,*,C14,C8,*,C22,C7
+F16,?,?,*,C28F16,?,?,C10F12,?,?
+F7,?,?,C12F22,?,?,?,?,?,?
+F30,?,?,?,?,*,C41F8,?,?,*
+*,C8F6,?,?,?,C23F13,?,?,C29,C22
+F6,?,?,F21,?,?,?,?,?,?
+F4,?,?,C23F23,?,?,?,F10,?,?
+F38,?,?,?,?,?,?,C10F14,?,?
+*,*,C23F14,?,?,F11,?,?,?,C9
+*,C3F13,?,?,C13,C4F29,?,?,?,?
+F21,?,?,?,?,?,?,F4,?,?
+F9,?,?,F12,?,?,*,F5,?,?
+
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad, el tamaño del kakuro (NxM)
+Se llama a searchKakuro
+12,10
+*,C24,C12,*,C32,C6,*,C11,C41,C7
+F8,?,?,F3,?,?,C9F8,?,?,?
+F16,?,?,C23F38,?,?,?,?,?,?
+F26,?,?,?,?,F7,?,?,?,C29
+*,C12,C41F7,?,?,C12,C28F19,?,?,?
+F38,?,?,?,?,?,?,F15,?,?
+F15,?,?,F12,?,?,?,C21F12,?,?
+F6,?,?,C14F21,?,?,?,?,?,?
+F11,?,?,?,C10,F16,?,?,C8,C23
+*,C6F7,?,?,?,C16F24,?,?,?,?
+F38,?,?,?,?,?,?,F9,?,?
+F6,?,?,?,F15,?,?,F8,?,?
+
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad, el tamaño del kakuro (NxM)
+Se llama a searchKakuro
+No se ha encontrado un Kakuro que cumpla las condiciones
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca el filePath del kakuro
+Se llama a getKakuro
+Este es el kakuro que se encuentra en la ruta: diff1/9_9/0
+9,9
+*,*,C19,C12,*,*,*,C7,C10
+*,F14,?,?,C4,C11,C17F4,?,?
+*,C7F36,?,?,?,?,?,?,?
+F12,?,?,F10,?,?,?,C25,C14
+F3,?,?,C20,C11F20,?,?,?,?
+F17,?,?,?,?,C8,F6,?,?
+*,C11,C7F13,?,?,?,C4F10,?,?
+F28,?,?,?,?,?,?,?,*
+F6,?,?,*,*,F8,?,?,*
+
+
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca el filePath del kakuro
+Se llama a getKakuro
+Este es el kakuro que se encuentra en la ruta: diff2/12_10/0
+12,10
+*,C23,C18,*,C11,C13,*,C33,C15,*
+F8,?,?,F5,?,?,F6,?,?,C16,
+F16,?,?,C16F12,?,?,C11F23,?,?,?
+F29,?,?,?,?,C32F29,?,?,?,?
+*,C7,C23F19,?,?,?,?,?,C7,C23
+F8,?,?,*,C12F30,?,?,?,?,?
+F10,?,?,C34F13,?,?,?,F11,?,?
+F34,?,?,?,?,?,C27,C11F7,?,?
+*,C3,C7F15,?,?,?,?,?,C9,C18
+F17,?,?,?,?,C8F29,?,?,?,?
+F9,?,?,?,F8,?,?,F8,?,?
+*,F8,?,?,F16,?,?,F7,?,?
+
+
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca el filePath del kakuro
+Se llama a getKakuro
+Este es el kakuro que se encuentra en la ruta: diff3/12_10/4
+12,10
+*,C23,C38,C3,C10,*,*,C11,C13,*
+F26,?,?,?,?,C3,F4,?,?,C18
+F15,?,?,?,?,?,C27F11,?,?,?
+F4,?,?,C16,C38F10,?,?,C14F12,?,?
+F29,?,?,?,?,C21F29,?,?,?,?
+F28,?,?,?,?,?,?,?,C22,C38
+F10,?,?,C10F23,?,?,?,C9F4,?,?
+*,C20,C10F34,?,?,?,?,?,?,?
+F11,?,?,?,?,C5F28,?,?,?,?
+F12,?,?,C12F11,?,?,C4,C3F10,?,?
+F21,?,?,?,F16,?,?,?,?,?
+*,F4,?,?,*,F16,?,?,?,?
+
+
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca el filePath del kakuro
+Se llama a getKakuro
+No se ha podido obtener un kakuro con esta ruta
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca el kakuro a guardar, su solución, la dificultad y el tamaño del kakuro (NxM)
+Se llama saveKakuro
+Se ha generado un fichero con el kakuro guardado
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad y el tamaño del kakuro (NxM)
+Se llama a getNumberOfFiles
+Hay 1 kakuro(s) con esta dificultad y tamaño
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad y el tamaño del kakuro (NxM)
+Se llama a getNumberOfFiles
+Hay 11 kakuro(s) con esta dificultad y tamaño
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad y el tamaño del kakuro (NxM)
+Se llama a getNumberOfFiles
+Hay 6 kakuro(s) con esta dificultad y tamaño
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 
+Introduzca la dificultad y el tamaño del kakuro (NxM)
+Se llama a getNumberOfFiles
+No hay ningún kakuro con estas condiciones
+
+ Opciones: 
+ 1. GetInstance 
+ 2. Buscador de kakuros 
+ 3. Getter de kakuros 
+ 4. Guardar kakuros 
+ 5. Contador de kakuros en una carpeta 
+ 6. Salir 

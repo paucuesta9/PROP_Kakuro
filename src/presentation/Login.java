@@ -1,5 +1,7 @@
 package presentation;
 
+import domain.controllers.CtrlDomain;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -19,6 +21,7 @@ public class Login {
     private JPanel Prueba;
     private JButton config;
 
+    private CtrlDomain ctrlDomain;
     private static JFrame frame = new JFrame("Login");
 
     boolean mod = false;
@@ -49,6 +52,7 @@ public class Login {
         iniciarSesiónButton.setBackground(null);
         iniciarSesiónButton.setHorizontalTextPosition(JButton.CENTER);
         iniciarSesiónButton.setVerticalTextPosition(JButton.CENTER);
+
     }
     private void setListeners() {
             usuarioTextField.addFocusListener(new FocusAdapter() {
@@ -89,11 +93,17 @@ public class Login {
                 else mod1 = true;
             }
         });
+
+            iniciarSesiónButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                }
+            });
     }
 
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
         label.requestFocusInWindow();
     }

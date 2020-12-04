@@ -1,5 +1,7 @@
 package presentation;
 
+import domain.controllers.CtrlDomain;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -16,8 +18,8 @@ public class Register {
     private JPanel logotipo;
 
     private static JFrame frame;
+    private CtrlDomain ctrlDomain;
 
-    int a = 0;
     boolean mod = false;
     boolean mod1 = false;
     boolean mod2 = false;
@@ -26,6 +28,8 @@ public class Register {
 
         Utils.loadFonts();
         setListeners();
+
+        ctrlDomain = new CtrlDomain();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -114,14 +118,15 @@ public class Register {
                     } else mod2 = true;
                 }
             });
-            /*clickToLoginButton.addActionListener(new ActionListener() {
+            registrarseButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) ctrlDomain.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
                     frame.dispose();
                     Login m = new Login();
                     m.drawLogin();
                 }
-            });*/
+            });
     }
 
     private void createUIComponents() {

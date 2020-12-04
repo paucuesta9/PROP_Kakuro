@@ -1,0 +1,340 @@
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Se llama a la creadora
+Se ha creado
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro a validar
+Se llama a validar
+El kakuro no es valido
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro a validar
+Se llama a validar
+El kakuro no es valido
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro a validar
+Se llama a validar
+El kakuro no es valido
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro a validar
+Se llama a validar
+El kakuro es valido
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro para mirar su dificultad
+Se llama a dificultad
+El kakuro es de dificultad facil
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro para mirar su dificultad
+Se llama a dificultad
+El kakuro es de dificultad dificil
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro para mirar su dificultad
+Se llama a dificultad
+El kakuro es de dificultad media
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce 9 enteros entre 0 y 1
+Se llama a isUnique
+No hay 1's entre los numeros introducidos o bien hay mas de un 1
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce 9 enteros entre 0 y 1
+Se llama a isUnique
+Hay exactamente un 1 entre los numeros introducidos
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce 9 enteros entre 0 y 1
+Se llama a isUnique
+No hay 1's entre los numeros introducidos o bien hay mas de un 1
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce 9 enteros entre 0 y 1
+Se llama a howManyNumbers
+El array tiene 0.0 unos.
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce 9 enteros entre 0 y 1
+Se llama a howManyNumbers
+El array tiene 3.0 unos.
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce tamano de tablero N x M
+Introduce un tablero de la siguiente manera: 
+Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles
+Introduce para que casilla negra(i, j) quieres encontrar valores unicos
+Introduce un 1 para comprobar la fila o un 0 para comprobar la columna, y tambien que valor de suma tiene la casilla negra, y como de larga es la fila o la columna
+Se llama a validatePosSums
+Ha encontrado 1 casillas con valor unico y de esta manera se ha actualizado el tablero:
+-1-1-1-1-1-1-1-1-1 100000000 110000000 -1-1-1-1-1-1-1-1-1 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce tamano de tablero N x M
+Introduce un tablero de la siguiente manera: 
+Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles
+Introduce para que casilla negra(i, j) quieres encontrar valores unicos
+Introduce un 1 para comprobar la fila o un 0 para comprobar la columna, y tambien que valor de suma tiene la casilla negra, y como de larga es la fila o la columna
+Se llama a validatePosSums
+Ha encontrado 0 casillas con valor unico y de esta manera se ha actualizado el tablero:
+-1-1-1-1-1-1-1-1-1 
+110000000 
+110000000 
+-1-1-1-1-1-1-1-1-1 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
+ 
+Se llama a computePosSums
+Estos son los valores que que tienen una combinacion para sumar 3 en 2 casillas
+Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
+1 1 0 0 0 0 0 0 0 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
+ 
+Se llama a computePosSums
+Estos son los valores que que tienen una combinacion para sumar 28 en 9 casillas
+Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
+0 0 0 0 0 0 0 0 0 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
+ 
+Se llama a computePosSums
+Estos son los valores que que tienen una combinacion para sumar 3 en 2 casillas sabiendo que tenemos fijo el numero 1
+Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
+0 1 0 0 0 0 0 0 0 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
+ 
+Se llama a computePosSums
+Estos son los valores que que tienen una combinacion para sumar 45 en 9 casillas sabiendo que tenemos fijo el numero 8
+Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
+1 1 1 1 1 1 1 0 1 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar
+Introduce tamano de tablero N x M
+Introduce un tablero de la siguiente manera: 
+Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles
+Se llama a checkForNewUniques
+Ha encontrado 2 casillas con valor unico y de esta manera se ha actualizado el tablero:
+-1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 
+-1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 100000000 010000000 
+-1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir
+Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar
+Introduce tamano de tablero N x M
+Introduce un tablero de la siguiente manera: 
+Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles
+Se llama a checkForNewUniques
+Ha encontrado 1 casillas con valor unico y de esta manera se ha actualizado el tablero:
+-1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 
+-1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 100000000 010000000 
+-1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 -1-1-1-1-1-1-1-1-1 000001000 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. Salir

@@ -163,8 +163,8 @@ public class Generate2 {
                 ctrlDomain.resolve();
                 ctrlDomain.saveKakuro();
                 frame.dispose();
-                Generate g = new Generate();
-                g.drawGenerate();
+                Main main = new Main();
+                main.drawMain();
             }
         });
 
@@ -172,8 +172,8 @@ public class Generate2 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                Generate g = new Generate();
-                g.drawGenerate();
+                Main main = new Main();
+                main.drawMain();
             }
         });
 
@@ -181,8 +181,8 @@ public class Generate2 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                Main main = new Main();
-                main.drawMain();
+                Generate g = new Generate();
+                g.drawGenerate();
             }
         });
     }

@@ -1,5 +1,7 @@
 package presentation;
 
+import jdk.jshell.execution.Util;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -58,9 +60,6 @@ public class Generate {
 
         difficulty.setFont(Utils.roboto);
         difficulty.setForeground(Color.BLACK);
-
-        errorValue.setFont(Utils.roboto);   //??
-        errorValue.setForeground(Color.RED); //??
 
         easy.setFont(Utils.roboto);
         easy.setForeground(Color.WHITE);
@@ -185,14 +184,21 @@ public class Generate {
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())!=0 && Integer.parseInt(numColumn.getText())!=0) {
+                if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())>=4 && Integer.parseInt(numColumn.getText())>=4) {
                     generateButton.setText("Cargando...");
-                    errorValue.setText("");
                     frame.dispose();
                     Generate2 g = new Generate2(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
                     g.drawGenerate2();
                 }
-                else errorValue.setText("Valor no válido");
+                else Utils.showError("Tamaño inválido");
+            }
+        });
+        exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Main m = new Main();
+                m.drawMain();
             }
         });
     }
