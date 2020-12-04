@@ -413,12 +413,17 @@ public class CtrlUI {
         return p;
     }
 
-    public void login(String text, char[] password) throws FileNotFoundException, WrongPasswordException {
-        cd.login(text, String.valueOf(password));
+    public void login(String username, char[] password) throws FileNotFoundException, WrongPasswordException {
+        cd.login(username, String.valueOf(password));
         Utils.setConfig(cd.getConfig());
     }
 
     public void setConfigToPlayer(ArrayList<String> config) {
         cd.setConfigToPlayer(config);
+    }
+
+    public void signUp(String username, String password) {
+        cd.signUp(username, String.valueOf(password));
+        Utils.setConfig(cd.getConfig());
     }
 }
