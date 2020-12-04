@@ -1,9 +1,15 @@
 package presentation;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import netscape.javascript.JSObject;
+
 import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.io.*;
+import java.util.ArrayList;
 
 public class Utils {
     public final static String colorBlue = "#1976D2";
@@ -130,5 +136,31 @@ public class Utils {
         int x = (screenSize.width) / 2 - frame.getWidth()/2;
         int y = (screenSize.height) / 2 - frame.getHeight()/2;
         frame.setLocation(x, y);
+    }
+
+    public static void setConfig(ArrayList<String> config) {
+        colorBlackCell = Color.decode(config.get(0));
+        colorWhiteCell = Color.decode(config.get(1));
+        colorNumbersBlackCell = Color.decode(config.get(2));
+        colorNumbersWhiteCell = Color.decode(config.get(3));
+        colorCorrectCell = Color.decode(config.get(4));
+        colorIncorrectCell = Color.decode(config.get(5));
+        colorSelCell = Color.decode(config.get(6));
+        colorBorde = Color.decode(config.get(7));
+        volume = Integer.parseInt(config.get(8));
+    }
+
+    public static ArrayList<String> getConfig() {
+        ArrayList config = new ArrayList();
+        config.add("#"+Integer.toHexString(colorBlackCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorWhiteCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorNumbersBlackCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorNumbersWhiteCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorCorrectCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorIncorrectCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorSelCell.getRGB()).substring(2));
+        config.add("#"+Integer.toHexString(colorBorde.getRGB()).substring(2));
+        config.add(String.valueOf(volume));
+        return config;
     }
 }

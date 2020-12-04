@@ -15,7 +15,7 @@ public class KakuroWhiteCell extends KakuroCell {
         setLayout(new GridBagLayout());
         jLabel = new JLabel();
         jLabel.setFont(new Font("Roboto",1,20*size/50));
-        jLabel.setForeground(Color.BLACK);
+        jLabel.setForeground(Utils.colorNumbersWhiteCell);
         add(jLabel, new GridBagConstraints(
                 0, // gridx
                 0, // gridy
@@ -31,7 +31,7 @@ public class KakuroWhiteCell extends KakuroCell {
                         0), // inset right
                 0, // ipadx
                 0));
-        setBackground(Color.WHITE);
+        setBackground(Utils.colorWhiteCell);
         setFocusable(true);
     }
 

@@ -168,17 +168,34 @@ public class CtrlData {
         return reader;
     }
 
-    public void saveNewPlayer(String username, String playerJSON) {
-        try {
-            FileWriter file = new FileWriter("data/players/" + username + ".json");
-            PrintWriter pwSol = new PrintWriter(file);
-            pwSol.print(playerJSON);
-            pwSol.close();
-            File folderSol = new File("data/players/" + username);
-            folderSol.mkdir();
-        } catch (IOException e) {
-            e.printStackTrace();
+    public void savePlayer(String username, String playerJSON) {
+        boolean exists = existsPlayer(username);
+        if (exists) {
+            try {
+                FileWriter file = new FileWriter("data/players/" + username + ".json");
+                PrintWriter pwSol = new PrintWriter(file);
+                pwSol.print(playerJSON);
+                pwSol.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                FileWriter file = new FileWriter("data/players/" + username + ".json");
+                PrintWriter pwSol = new PrintWriter(file);
+                pwSol.print(playerJSON);
+                pwSol.close();
+                File folderSol = new File("data/players/" + username);
+                folderSol.mkdir();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+    }
+
+    private boolean existsPlayer(String username) {
+        File file = new File("data/players/" + username + ".json");
+        return file.exists();
     }
 
     public void saveGame(String username, String gameJSON, int id) {

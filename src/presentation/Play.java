@@ -59,37 +59,19 @@ public class Play {
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,10));
 
-        pauseResume.setFont(Utils.roboto);
-        pauseResume.setForeground(Color.WHITE);
+        Utils.setButtons(pauseResume);
         pauseResume.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
-        pauseResume.setBorderPainted(false);
-        pauseResume.setBackground(null);
-        pauseResume.setHorizontalTextPosition(JButton.CENTER);
-        pauseResume.setVerticalTextPosition(JButton.CENTER);
 
-        exit.setFont(Utils.roboto);
-        exit.setForeground(Color.WHITE);
+        Utils.setButtons(exit);
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
-        exit.setBorderPainted(false);
-        exit.setBackground(null);
-        exit.setHorizontalTextPosition(JButton.CENTER);
-        exit.setVerticalTextPosition(JButton.CENTER);
 
+        Utils.setButtons(help1);
         help1.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));
-        help1.setForeground(Color.WHITE);
         help1.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/elipse-azul.png")));
-        help1.setBorderPainted(false);
-        help1.setBackground(null);
-        help1.setHorizontalTextPosition(JButton.CENTER);
-        help1.setVerticalTextPosition(JButton.CENTER);
 
+        Utils.setButtons(help2);
         help2.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));
-        help2.setForeground(Color.WHITE);
         help2.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/elipse-azul.png")));
-        help2.setBorderPainted(false);
-        help2.setBackground(null);
-        help2.setHorizontalTextPosition(JButton.CENTER);
-        help2.setVerticalTextPosition(JButton.CENTER);
 
         timeLogo.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));
         timeLogo.setForeground(Color.decode(Utils.colorBlue));
@@ -121,8 +103,8 @@ public class Play {
 
                     @Override
                     public void focusLost(FocusEvent e) {
-                        if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Color.GREEN)) cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell)) cell.setBackground(Color.WHITE);
+                        if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(color);
+                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell)) cell.setBackground(Utils.colorWhiteCell);
                         checkValidityCell(cell, posX, posY);
                         int posXAux = posX;
                         int posYAux = posY;
@@ -168,7 +150,7 @@ public class Play {
                 cell.addMouseListener(new MouseListener() {
                     @Override
                     public void mouseClicked(MouseEvent e) {
-                        if (cell.getBackground() != Color.GREEN) {
+                        if (cell.getBackground() != Utils.colorCorrectCell) {
                             cell.requestFocus();
                         }
                     }
@@ -239,7 +221,7 @@ public class Play {
                 int result = ctrlUI.help1(posX, posY);
                 if (result != -1) {
                     KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
-                    if (result == 1) w.setBackground(Color.GREEN);
+                    if (result == 1) w.setBackground(Utils.colorCorrectCell);
                     else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
                 }
 
@@ -251,7 +233,7 @@ public class Play {
                 int correctNumber = ctrlUI.help2(posX,posY);
                 KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                 w.setValue(correctNumber);
-                w.setBackground(Color.GREEN);
+                w.setBackground(Utils.colorCorrectCell);
 
             }
         });
@@ -300,7 +282,8 @@ public class Play {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                Config config = new Config();
+                config.drawConfig();
             }
         });
     }
@@ -311,10 +294,10 @@ public class Play {
     }
 
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
-        if (cell.getBackground() != Color.GREEN) {
+        if (cell.getBackground() != Utils.colorCorrectCell) {
             if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
                 cell.setBackground(Utils.colorIncorrectCell);
-            } else cell.setBackground(Color.WHITE);
+            } else cell.setBackground(Utils.colorWhiteCell);
         }
 
     }

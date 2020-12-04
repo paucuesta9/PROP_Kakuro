@@ -34,6 +34,8 @@ public class Config {
     private JPanel nWhPanel;
     private JFrame frame = new JFrame("Configuración");
 
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
+
 
 // logotipo.add(new JColorChooser());
 
@@ -51,7 +53,6 @@ public class Config {
         Utils.setButtons(volver);
         volver.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
 
-        Utils.setMusic();
         volume.setValue(Utils.volume);
 
         Utils.setButtons(blackCell);
@@ -90,6 +91,7 @@ public class Config {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
+                ctrlUI.setConfigToPlayer(Utils.getConfig());
             }
         });
 

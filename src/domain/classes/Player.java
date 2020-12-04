@@ -20,6 +20,9 @@ public class Player {
     @SerializedName("savedGames")
     @Expose
     private List<Integer> savedGames = null;
+    @SerializedName("config")
+    @Expose
+    private Config config;
 
     /**
      * No args constructor for use in serialization
@@ -40,14 +43,17 @@ public class Player {
      * @param password
      * @param stats
      * @param savedGames
+     * @param config
      * @param username
      */
-    public Player(String username, String password, Stats stats, List<Integer> savedGames) {
+    public Player(String username, String password, Stats stats, int currentGame, List<Integer> savedGames, Config config) {
         super();
         this.username = username;
         this.password = password;
         this.stats = stats;
+        this.currentGame = currentGame;
         this.savedGames = savedGames;
+        this.config = config;
     }
 
     public String getUsername() {
@@ -90,4 +96,15 @@ public class Player {
         this.savedGames = savedGames;
     }
 
+    public Config getConfig() {
+        return config;
+    }
+
+    public void setConfig(Config config) {
+        this.config = config;
+    }
+
+    public ArrayList<String> getConfigToArray() {
+        return config.getConfig();
+    }
 }

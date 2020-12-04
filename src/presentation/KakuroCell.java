@@ -13,7 +13,7 @@ public class KakuroCell extends JPanel {
         this.posX = posX;
         this.posY = posY;
 
-        setBorder(BorderFactory.createLineBorder(Color.GRAY));
+        setBorder(BorderFactory.createLineBorder(Utils.colorBorde));
 
         setPreferredSize(new Dimension(size, size));
     }

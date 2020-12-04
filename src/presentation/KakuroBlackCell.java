@@ -12,12 +12,12 @@ public class KakuroBlackCell extends KakuroCell {
 
     KakuroBlackCell(int x, int y, int size) {
         super(x, y, size);
-        setBackground(Color.BLACK);
+        setBackground(Utils.colorBlackCell);
         setLayout(new GridBagLayout());
 
         jLabelRow = new JLabel();
         jLabelRow.setFont(new Font("Roboto", Font.PLAIN,15*size/50));
-        jLabelRow.setForeground(Color.WHITE);
+        jLabelRow.setForeground(Utils.colorNumbersBlackCell);
 
         add(jLabelRow, new GridBagConstraints(
                 0, // gridx

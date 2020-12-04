@@ -61,7 +61,7 @@ public class CtrlDomain {
     public void signUp(String username, String password) {
         currentPlayer = new Player(username, password);
         String playerJSON = gson.toJson(currentPlayer);
-        data.saveNewPlayer(username, playerJSON);
+        data.savePlayer(username, playerJSON);
     }
 
     // OPTION 1 - PLAY
@@ -336,5 +336,16 @@ public class CtrlDomain {
         Ranking r = new Ranking();
         List<Player> p = r.getList(s);
         return p;
+    }
+
+    public ArrayList<String> getConfig() {
+        return currentPlayer.getConfigToArray();
+    }
+
+    public void setConfigToPlayer(ArrayList<String> config) {
+        Config c = new Config(config.get(0), config.get(1), config.get(2), config.get(3), config.get(4), config.get(5), config.get(6), config.get(7), Integer.parseInt(config.get(8)));
+        currentPlayer.setConfig(c);
+        String playerJSON = gson.toJson(currentPlayer);
+        data.savePlayer(currentPlayer.getUsername(), playerJSON);
     }
 }
