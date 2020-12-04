@@ -4,6 +4,7 @@ package domain.classes;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Config {
@@ -41,6 +42,15 @@ public class Config {
      * 
      */
     public Config() {
+        colorBlackCell = "#000000";
+        colorWhiteCell = "#FFFFFF";
+        colorNumbersBlackCell = "#FFFFFF";
+        colorNumbersWhiteCell = "#000000";
+        colorCorrectCell = "#00FF00";
+        colorIncorrectCell = "#E53935";
+        colorSelCell = "#64b5f6";
+        colorBorde = "#808080";
+        volume = -10;
     }
 
     /**

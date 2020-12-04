@@ -29,6 +29,7 @@ public class Utils {
 
     public static Font fontAwesome;
     public static Font roboto;
+    public static Font digital;
 
     private static FloatControl gainControl;
 
@@ -80,6 +81,20 @@ public class Utils {
             ioException.printStackTrace();
         }
         roboto = ttfBase.deriveFont(Font.PLAIN, 20f);
+
+        try {
+            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/digital-clock.ttf"));
+        } catch (FileNotFoundException fileNotFoundException) {
+            fileNotFoundException.printStackTrace();
+        }
+        try {
+            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
+        } catch (FontFormatException fontFormatException) {
+            fontFormatException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        digital = ttfBase.deriveFont(Font.PLAIN, 20f);
     }
 
     public static void setMusic() {
@@ -162,5 +177,35 @@ public class Utils {
         config.add("#"+Integer.toHexString(colorBorde.getRGB()).substring(2));
         config.add(String.valueOf(volume));
         return config;
+    }
+
+    public static String setTimeToLabel(int gameTime) {
+        int sec = 0;
+        int min = 0;
+        int hours = 0;
+        String timeString = "";
+        if (gameTime >= 60) {
+            if (gameTime / 60 >= 60) {
+                hours = gameTime / 3600;
+                min = (gameTime / 60) % 60;
+                sec = (gameTime % 3600) % 60;
+            } else {
+                min = gameTime / 60;
+                sec = gameTime % 60;
+            }
+        } else {
+            sec = gameTime;
+        }
+        if (hours != 0) {
+            if (hours < 10) timeString = timeString.concat("0" + hours);
+            else timeString = timeString.concat(String.valueOf(hours));
+            timeString = timeString.concat(":");
+        }
+        if (min < 10) timeString = timeString.concat("0" + min);
+        else timeString = timeString.concat(String.valueOf(min));
+        timeString = timeString.concat(":");
+        if (sec < 10) timeString = timeString.concat("0" + sec);
+        else timeString = timeString.concat(String.valueOf(sec));
+        return timeString;
     }
 }

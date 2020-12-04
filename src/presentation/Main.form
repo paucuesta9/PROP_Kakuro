@@ -34,10 +34,11 @@
             </constraints>
             <properties>
               <background color="-15108398"/>
-              <borderPainted value="true"/>
-              <contentAreaFilled value="true"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <enabled value="true"/>
               <focusPainted value="false"/>
+              <focusable value="false"/>
               <text value="Jugar"/>
             </properties>
           </component>
@@ -50,7 +51,10 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
+              <focusable value="false"/>
               <text value="Crear Kakuro"/>
             </properties>
           </component>
@@ -63,7 +67,10 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
+              <focusable value="false"/>
               <text value="Resolver"/>
             </properties>
           </component>
@@ -76,7 +83,10 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
+              <focusable value="false"/>
               <text value="Generar"/>
             </properties>
           </component>
@@ -89,7 +99,10 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
+              <focusable value="false"/>
               <text value="Ranking"/>
             </properties>
           </component>
@@ -116,7 +129,10 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
+              <focusable value="false"/>
               <text value="Cerrar sesión"/>
             </properties>
           </component>
@@ -150,7 +166,10 @@
           </grid>
         </constraints>
         <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
           <focusPainted value="false"/>
+          <focusable value="false"/>
           <text value=""/>
         </properties>
       </component>

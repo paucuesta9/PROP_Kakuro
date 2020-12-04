@@ -1,10 +1,16 @@
 package presentation;
 
+import com.google.gson.stream.JsonReader;
+import domain.classes.Game;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.plaf.basic.BasicScrollBarUI;
+import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class LoadGame {
     private JPanel panel1;
@@ -17,6 +23,7 @@ public class LoadGame {
     private JLabel text;
 
     private JFrame frame = new JFrame("Load Game");
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
     private JPanel logotipo;
     private JPanel scroll;
 
@@ -26,6 +33,7 @@ public class LoadGame {
 
         Utils.loadFonts();
         setListeners();
+        loadGames();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -40,21 +48,51 @@ public class LoadGame {
         text.setForeground(Color.BLACK);
         text.setFont(Utils.roboto.deriveFont(18f));
 
-        //CtrlUI ctrlUI = CtrlUI.getInstance();
-        //ctrlUI.getStartedGames();
-        scroll.setLayout(new BoxLayout(scroll, BoxLayout.Y_AXIS));
-
-        for (int i = 0; i < 10; ++i) {
-            scroll.add(new JLabel("Partida " + i ));
-        }
-        games.setViewportView(scroll);
-        games.setBorder(null);
-
         Utils.setButtons(play);
         play.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
 
         Utils.setButtons(exit);
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
+
+        games.setBorder(null);
+
+        games.getVerticalScrollBar().setBackground(Color.white);
+
+
+
+        games.getVerticalScrollBar().setUI(new Scroll());
+        games.getVerticalScrollBar().setUnitIncrement(16);
+
+
+    }
+
+    private void loadGames() {
+        ArrayList<ArrayList<Integer>> listGames = ctrlUI.getStartedGames();
+        scroll.setLayout(new BoxLayout(scroll, BoxLayout.Y_AXIS));
+
+        if (listGames.size() == 0) {
+            JLabel noGames = new JLabel("No hay partidas");
+            noGames.setFont(Utils.roboto.deriveFont(20f));
+            noGames.setForeground(Color.RED);
+            play.setEnabled(false);
+            scroll.add(noGames);
+        }
+        for (int i = 0; i < listGames.size(); ++i) {
+            int id = listGames.get(i).get(0);
+            int time = listGames.get(i).get(1);
+            int diff = listGames.get(i).get(2);
+            int rowSize = listGames.get(i).get(5);
+            int columnSize = listGames.get(i).get(6);
+
+            String timeString = Utils.setTimeToLabel(time);
+            GameBrief gb = new GameBrief (id, rowSize, columnSize, diff, timeString);
+            scroll.add(gb.panel1);
+            scroll.validate();
+            scroll.add(new JSeparator(SwingConstants.VERTICAL));
+        }
+
+        games.setViewportView(scroll);
+        games.validate();
 
     }
 

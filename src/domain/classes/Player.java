@@ -36,6 +36,7 @@ public class Player {
         this.password = password;
         this.stats = new Stats();
         this.savedGames = new ArrayList<Game>();
+        this.config = new Config();
     }
 
     /**

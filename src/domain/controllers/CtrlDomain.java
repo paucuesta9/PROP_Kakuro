@@ -323,8 +323,13 @@ public class CtrlDomain {
         return (x < getRowSize() && x >= 0 && y < getColumnSize() && y >= 0);
     }
 
-    public ArrayList<Integer> getStartedGames() {
-        return data.loadGames(currentPlayer.getUsername());
+    public ArrayList<ArrayList<Integer>> getStartedGames() {
+        ArrayList<Game> listGames = (ArrayList<Game>) currentPlayer.getSavedGames();
+        ArrayList<ArrayList<Integer>> startedGames = new ArrayList<ArrayList<Integer>>();
+        for (int i = 0; i < listGames.size(); ++i) {
+            startedGames.add(listGames.get(i).gameToArrayList());
+        }
+        return startedGames;
     }
 
     public void saveGame() {

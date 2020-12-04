@@ -51,8 +51,8 @@ public class AskNewContinue {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                LeadGame lg = new LoadGame();
-//                ld.drawLoadGame();
+                LoadGame lg = new LoadGame();
+                lg.drawLoadGame();
             }
         });
 

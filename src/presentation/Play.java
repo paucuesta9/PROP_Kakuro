@@ -76,7 +76,7 @@ public class Play {
         timeLogo.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));
         timeLogo.setForeground(Color.decode(Utils.colorBlue));
 
-        time.setFont(Utils.roboto.deriveFont(Font.PLAIN, 30f));
+        time.setFont(Utils.digital.deriveFont(Font.PLAIN, 30f));
         time.setForeground(Color.decode(Utils.colorBlue));
 
         Utils.setButtons(resolve);
@@ -308,43 +308,13 @@ public class Play {
             @Override
             public void run() {
                 ++gameTime;
-                setTimeToLabel();
+                time.setText(Utils.setTimeToLabel(gameTime));
             }
         }, 0, 1000);
     }
 
     private void stopTimer() {
         timer.cancel();
-    }
-
-    private void setTimeToLabel() {
-        int sec = 0;
-        int min = 0;
-        int hours = 0;
-        String timeString = "";
-        if (gameTime >= 60) {
-            if (gameTime / 60 >= 60) {
-                hours = gameTime / 3600;
-                min = (gameTime / 60) % 60;
-                sec = (gameTime % 3600) % 60;
-            } else {
-                min = gameTime / 60;
-                sec = gameTime % 60;
-            }
-        } else {
-            sec = gameTime;
-        }
-        if (hours != 0) {
-            if (hours < 10) timeString = timeString.concat("0" + hours);
-            else timeString = timeString.concat(String.valueOf(hours));
-            timeString = timeString.concat(":");
-        }
-        if (min < 10) timeString = timeString.concat("0" + min);
-        else timeString = timeString.concat(String.valueOf(min));
-        timeString = timeString.concat(":");
-        if (sec < 10) timeString = timeString.concat("0" + sec);
-        else timeString = timeString.concat(String.valueOf(sec));
-        time.setText(timeString);
     }
 
     private void createUIComponents() {
