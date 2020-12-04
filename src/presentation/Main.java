@@ -30,6 +30,8 @@ public class Main {
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,10));
 
+        photo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
         playButton.setFont(Utils.roboto);
         playButton.setForeground(Color.WHITE);
         playButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));

@@ -32,20 +32,23 @@ public class LoadGame {
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,20));
 
+        picLabel.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
         logo.setFont(Utils.roboto.deriveFont(40f));
         logo.setForeground(Color.decode(Utils.colorDarkBlue));
 
         text.setForeground(Color.BLACK);
         text.setFont(Utils.roboto.deriveFont(18f));
 
-        CtrlUI ctrlUI = CtrlUI.getInstance();
-        ctrlUI.getStartedGames();
+        //CtrlUI ctrlUI = CtrlUI.getInstance();
+        //ctrlUI.getStartedGames();
         scroll.setLayout(new BoxLayout(scroll, BoxLayout.Y_AXIS));
 
         for (int i = 0; i < 10; ++i) {
             scroll.add(new JLabel("Partida " + i ));
         }
         games.setViewportView(scroll);
+        games.setBorder(null);
 
         Utils.setButtons(play);
         play.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));

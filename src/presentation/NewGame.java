@@ -14,8 +14,7 @@ import java.text.NumberFormat;
 
 public class NewGame {
     private JPanel panel1;
-    private JPanel picLabel;
-    private JLabel label;
+    private JLabel picLabel;
     private JButton config;
     private JButton easy;
     private JButton medium;
@@ -43,7 +42,9 @@ public class NewGame {
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,20));
+        config.setBorder(new EmptyBorder(10,0,0,30));
+
+        picLabel.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         logo.setFont(Utils.roboto.deriveFont(40f));
         logo.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -72,11 +73,11 @@ public class NewGame {
         easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
 
         Utils.setButtons(medium);
-        medium.setForeground(Color.BLACK);
+        medium.setForeground(Color.decode(Utils.colorDarkBlue));
         medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
 
         Utils.setButtons(hard);
-        hard.setForeground(Color.BLACK);
+        hard.setForeground(Color.decode(Utils.colorDarkBlue));
         hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
 
         Utils.setButtons(play);
@@ -146,9 +147,9 @@ public class NewGame {
                 easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
                 easy.setForeground(Color.WHITE);
                 medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
-                medium.setForeground(Color.BLACK);
+                medium.setForeground(Color.decode(Utils.colorDarkBlue));
                 hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-                hard.setForeground(Color.BLACK);
+                hard.setForeground(Color.decode(Utils.colorDarkBlue));
                 diff = 1;
             }
         });
@@ -157,11 +158,11 @@ public class NewGame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
-                easy.setForeground(Color.BLACK);
+                easy.setForeground(Color.decode(Utils.colorDarkBlue));
                 medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -4.png")));
                 medium.setForeground(Color.WHITE);
                 hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-                hard.setForeground(Color.BLACK);
+                hard.setForeground(Color.decode(Utils.colorDarkBlue));
                 diff = 2;
             }
         });
@@ -170,9 +171,9 @@ public class NewGame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
-                easy.setForeground(Color.BLACK);
+                easy.setForeground(Color.decode(Utils.colorDarkBlue));
                 medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
-                medium.setForeground(Color.BLACK);
+                medium.setForeground(Color.decode(Utils.colorDarkBlue));
                 hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
                 hard.setForeground(Color.WHITE);
                 diff = 3;
@@ -209,7 +210,7 @@ public class NewGame {
     }
 
     private void createUIComponents() {
-        label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
+        picLabel = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
     }
 
     public static void main(String [] args) {
