@@ -207,7 +207,7 @@ public class CtrlData {
         }
     }
 
-    private boolean existsPlayer(String username) {
+    public boolean existsPlayer(String username) {
         File file = new File("data/players/" + username + ".json");
         return file.exists();
     }

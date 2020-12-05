@@ -1,5 +1,6 @@
 package presentation;
 
+import domain.classes.Exceptions.PlayerExists;
 import domain.controllers.CtrlDomain;
 
 import javax.swing.*;
@@ -124,10 +125,14 @@ public class Register {
                 public void actionPerformed(ActionEvent e) {
                     if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseña no válidos");
                     else if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) {
-                        ctrlUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
-                        frame.dispose();
-                        Main main = new Main();
-                        main.drawMain();
+                        try {
+                            ctrlUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
+                            frame.dispose();
+                            Main main = new Main();
+                            main.drawMain();
+                        } catch (PlayerExists playerExists) {
+                            Utils.showError("El usuario ya existe");
+                        }
                     }
                     else {
                         Utils.showError("Las contraseñas no són iguales");

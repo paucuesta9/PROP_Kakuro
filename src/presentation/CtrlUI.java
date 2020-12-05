@@ -3,6 +3,7 @@ package presentation;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import data.CtrlData;
+import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.classes.Player;
 import domain.controllers.CtrlDomain;
@@ -129,7 +130,7 @@ public class CtrlUI {
         cd.setConfigToPlayer(config);
     }
 
-    public void signUp(String username, String password) {
+    public void signUp(String username, String password) throws PlayerExists {
         cd.signUp(username, String.valueOf(password));
         Utils.setConfig(cd.getConfig());
     }

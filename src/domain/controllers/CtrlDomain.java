@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import data.CtrlData;
 import domain.classes.*;
+import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 import netscape.javascript.JSObject;
 
@@ -58,9 +59,12 @@ public class CtrlDomain {
         currentKakuro = null;
     }
 
-    public void signUp(String username, String password) {
+    public void signUp(String username, String password) throws PlayerExists {
         currentPlayer = new Player(username, password);
         String playerJSON = gson.toJson(currentPlayer);
+        if (data.existsPlayer(username)) {
+            throw new PlayerExists();
+        }
         data.savePlayer(username, playerJSON);
     }
 
