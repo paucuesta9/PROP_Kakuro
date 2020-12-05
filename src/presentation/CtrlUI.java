@@ -160,4 +160,8 @@ public class CtrlUI {
     public void resetParameters() {
         cd.resetParameters();
     }
+
+    public void setGame(int id) {
+        cd.setGame(id);
+    }
 }

@@ -51,6 +51,9 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <focusPainted value="false"/>
               <focusable value="false"/>
               <text value="Volver"/>
             </properties>
@@ -88,6 +91,9 @@
               <component id="14533" class="javax.swing.JButton" binding="puntos">
                 <constraints border-constraint="West"/>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <maximumSize width="120" height="56"/>
                   <minimumSize width="120" height="56"/>
@@ -98,6 +104,9 @@
               <component id="df226" class="javax.swing.JButton" binding="wins">
                 <constraints border-constraint="Center"/>
                 <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <horizontalTextPosition value="11"/>
                   <maximumSize width="120" height="56"/>
@@ -109,7 +118,9 @@
               <component id="742b3" class="javax.swing.JButton" binding="creadas">
                 <constraints border-constraint="East"/>
                 <properties>
-                  <contentAreaFilled value="true"/>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
+                  <focusPainted value="false"/>
                   <focusable value="false"/>
                   <maximumSize width="120" height="56"/>
                   <minimumSize width="120" height="56"/>
@@ -138,6 +149,9 @@
             </constraints>
             <properties>
               <background color="-852481"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <focusPainted value="false"/>
               <focusable value="false"/>
               <text value=""/>
             </properties>

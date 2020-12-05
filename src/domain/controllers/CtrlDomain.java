@@ -117,9 +117,13 @@ public class CtrlDomain {
     }
 
     public void setGame(int game) {
-        JsonReader reader = data.loadGame(currentPlayer.getUsername(), game);
-        currentGame = gson.fromJson(reader, Game.class);
+        currentGame = currentPlayer.getGame(game);
         currentPlayer.setCurrentGame(currentGame);
+        try {
+            currentGame.setKakuro(new Kakuro(data.getKakuro("data/players/" + currentPlayer.getUsername() + "/" + game + ".txt")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         currentKakuro = currentGame.getKakuro();
     }
 
@@ -376,4 +380,5 @@ public class CtrlDomain {
         currentGame = null;
         currentPlayer.setCurrentGame(null);
     }
+
 }

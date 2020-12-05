@@ -67,11 +67,10 @@ public class SetValues extends JDialog {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                if (e.getKeyChar() > '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
                     etValue.setEditable(true);
                 } else {
                     etValue.setEditable(false);
-                    Utils.showError("Escriba solo números");
                 }
             }
 
@@ -93,7 +92,6 @@ public class SetValues extends JDialog {
                     etRow.setEditable(true);
                 } else {
                     etRow.setEditable(false);
-                    Utils.showError("Escriba solo números");
                 }
             }
 
@@ -115,7 +113,6 @@ public class SetValues extends JDialog {
                     etColumn.setEditable(true);
                 } else {
                     etColumn.setEditable(false);
-                    Utils.showError("Escriba solo números");
                 }
             }
 
@@ -162,8 +159,8 @@ public class SetValues extends JDialog {
                 result[0] = Integer.valueOf(etValue.getText());
             }
         } else {
-            if (etRow.getText().isEmpty() || etRow.getText().length() > 1) Utils.showError("El valor debe estar entre 1 y 9");
-            else if (etColumn.getText().isEmpty() || etColumn.getText().length() > 1) Utils.showError("El valor debe estar entre 1 y 9");
+            if (etRow.getText().isEmpty() || Integer.parseInt(etRow.getText()) > 45) Utils.showError("El valor debe estar entre 0 y 45");
+            else if (etColumn.getText().isEmpty() || Integer.parseInt(etColumn.getText()) > 45) Utils.showError("El valor debe estar entre 0 y 45");
             else {
                 dispose();
                 result = new int[2];

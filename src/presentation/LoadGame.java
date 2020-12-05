@@ -8,8 +8,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import javax.swing.plaf.synth.SynthScrollBarUI;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.ArrayList;
 
 public class LoadGame {
@@ -26,6 +25,9 @@ public class LoadGame {
     private CtrlUI ctrlUI = CtrlUI.getInstance();
     private JPanel logotipo;
     private JPanel scroll;
+    ArrayList<ArrayList<Integer>> listGames;
+
+    private int gameSelected = -1;
 
     public LoadGame() {
 
@@ -62,7 +64,7 @@ public class LoadGame {
     }
 
     private void loadGames() {
-        ArrayList<ArrayList<Integer>> listGames = ctrlUI.getStartedGames();
+        listGames = ctrlUI.getStartedGames();
         scroll.setLayout(new BoxLayout(scroll, BoxLayout.Y_AXIS));
 
         if (listGames.size() == 0) {
@@ -81,6 +83,48 @@ public class LoadGame {
 
             String timeString = Utils.setTimeToLabel(time);
             GameBrief gb = new GameBrief (id, rowSize, columnSize, diff, timeString);
+            gb.panel1.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    gb.panel1.requestFocus();
+                }
+
+                @Override
+                public void mousePressed(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent e) {
+
+                }
+
+                @Override
+                public void mouseExited(MouseEvent e) {
+
+                }
+            });
+            int finalI = i;
+            gb.panel1.addFocusListener(new FocusListener() {
+                @Override
+                public void focusGained(FocusEvent e) {
+                    gb.changeImage(1);
+                    gameSelected = finalI;
+
+                }
+
+                @Override
+                public void focusLost(FocusEvent e) {
+                    gb.changeImage(0);
+
+
+                }
+            });
             scroll.add(gb.panel1);
             scroll.validate();
             scroll.add(new JSeparator(SwingConstants.VERTICAL));
@@ -104,6 +148,15 @@ public class LoadGame {
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (gameSelected == -1) Utils.showError("No se ha seleccionado ninguna partida");
+                else {
+                    ArrayList<Integer> game = listGames.get(gameSelected);
+                    ctrlUI.setGame(game.get(0));
+                    String kakuro = ctrlUI.getKakuro();
+                    frame.dispose();
+                    Play p = new Play(kakuro);
+                    p.drawPlay();
+                }
 
             }
         });

@@ -154,34 +154,6 @@ public class CtrlData {
         return reader;
     }
 
-//    public ArrayList<JsonReader> loadGames(String username) {
-//        ArrayList <JsonReader> games = new ArrayList<>();
-//        File folder = new File("data/players" + username);
-//        File[] listFiles = folder.listFiles();
-//        for (int i = 0; i < listFiles.length; ++i) {
-//            if (listFiles[i].getName().endsWith(".json")) {
-//                JsonReader reader = null;
-//                try {
-//                    reader = new JsonReader(new FileReader("data/players/" + username + "/" + i + ".json"));
-//                    games.add(reader);
-//                } catch (FileNotFoundException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//        return games;
-//    }
-
-    public JsonReader loadGame(String username, int game) {
-        JsonReader reader = null;
-        try {
-            reader = new JsonReader(new FileReader("data/players/" + username + "/" + game + ".json"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return reader;
-    }
-
     public void savePlayer(String username, String playerJSON) {
         boolean exists = existsPlayer(username);
         if (exists) {
@@ -248,4 +220,5 @@ public class CtrlData {
         pw.close();
 
     }
+
 }

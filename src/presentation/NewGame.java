@@ -129,9 +129,9 @@ public class NewGame {
             @Override
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-                    numSize.setEditable(true);
+                    numColumn.setEditable(true);
                 } else {
-                    numSize.setEditable(false);
+                    numColumn.setEditable(false);
                 }
             }
 

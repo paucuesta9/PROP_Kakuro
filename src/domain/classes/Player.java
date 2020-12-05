@@ -117,4 +117,15 @@ public class Player {
     public void addSavedGame() {
         savedGames.add(currentGame);
     }
+
+    public Game getGame(int game) {
+        for (int i = 0; i < savedGames.size(); ++i) {
+            if (savedGames.get(i).getId() == game) {
+                Game loadGame = savedGames.get(i);
+                savedGames.remove(i);
+                return loadGame;
+            }
+        }
+        return null;
+    }
 }
