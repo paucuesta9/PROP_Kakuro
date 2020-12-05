@@ -16,7 +16,8 @@ public class Player {
     @SerializedName("stats")
     @Expose
     private Stats stats;
-    private int currentGame;
+    @Expose(serialize = false)
+    private Game currentGame;
     @SerializedName("savedGames")
     @Expose
     private List<Game> savedGames = null;
@@ -47,7 +48,7 @@ public class Player {
      * @param config
      * @param username
      */
-    public Player(String username, String password, Stats stats, int currentGame, List<Game> savedGames, Config config) {
+    public Player(String username, String password, Stats stats, Game currentGame, List<Game> savedGames, Config config) {
         super();
         this.username = username;
         this.password = password;
@@ -81,11 +82,11 @@ public class Player {
         this.stats = stats;
     }
 
-    public int getCurrentGame() {
+    public Game getCurrentGame() {
         return currentGame;
     }
 
-    public void setCurrentGame(int currentGame) {
+    public void setCurrentGame(Game currentGame) {
         this.currentGame = currentGame;
     }
 
@@ -111,5 +112,9 @@ public class Player {
 
     public void resetCongifColors() {
         config.resetColors();
+    }
+
+    public void addSavedGame() {
+        savedGames.add(currentGame);
     }
 }

@@ -93,15 +93,15 @@ public class CtrlDomain {
             resolve();
             currentKakuro.setId(saveKakuro());
         }
-        //int id = getGameId();
-        //currentGame = new Game(id,  0, 0, id);
-        //currentPlayer.setCurrentGame(currentGame.getId());
+        int id = getGameId();
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), kakuroSizeRow, kakuroSizeColumn, difficulty );
+        currentPlayer.setCurrentGame(currentGame);
         CtrlPlay.startGame(currentKakuro);
         setCorrectValues();
     }
 
     private int getGameId() {
-        return 5;
+        return data.getNewGameId(currentPlayer.getUsername());
     }
 
     /** @brief Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correctValue de la correspondiente celda blanca
@@ -119,7 +119,7 @@ public class CtrlDomain {
     public void setGame(int game) {
         JsonReader reader = data.loadGame(currentPlayer.getUsername(), game);
         currentGame = gson.fromJson(reader, Game.class);
-        currentPlayer.setCurrentGame(game);
+        currentPlayer.setCurrentGame(currentGame);
         currentKakuro = currentGame.getKakuro();
     }
 
@@ -341,8 +341,10 @@ public class CtrlDomain {
     }
 
     public void saveGame() {
-        String gameJSON = gson.toJson(currentGame);
-        data.saveGame(currentPlayer.getUsername(), gameJSON, currentGame.getId());
+        data.saveKakuroGame(currentKakuro.toString(), currentPlayer.getUsername(), currentGame.getId());
+        currentPlayer.addSavedGame();
+        String playerJSON = gson.toJson(currentPlayer);
+        data.savePlayer(currentPlayer.getUsername(), playerJSON);
     }
 
     public List<Player> getListOfPlayers(String s) {
@@ -363,5 +365,15 @@ public class CtrlDomain {
         currentPlayer.setConfig(c);
         String playerJSON = gson.toJson(currentPlayer);
         data.savePlayer(currentPlayer.getUsername(), playerJSON);
+    }
+
+    public void setTimeToGame(int gameTime) {
+        currentGame.setTime(gameTime);
+    }
+
+    public void resetParameters() {
+        currentKakuro = null;
+        currentGame = null;
+        currentPlayer.setCurrentGame(null);
     }
 }

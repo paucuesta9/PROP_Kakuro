@@ -21,21 +21,23 @@ public class Generate2 {
     private KakuroBoard sg;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
-    private JFrame frame = new JFrame("Generate");
+    private JFrame frame = new JFrame("Save");
 
     private JFrame conf;
     private String kAux;
+    private int option;
 
-    public Generate2(String uwu, String k) {
+    public Generate2(String uwu, String k, int option) {
         Utils.loadFonts();
 
         setListeners();
 
+        this.option = option;
         kAux = k;
         sg = new KakuroBoard(k);
         board.add(sg);
 
-        photo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+        board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -122,7 +124,10 @@ public class Generate2 {
         síButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlUI.save();
+                if (option == 1) ctrlUI.save();
+                else {
+                    ctrlUI.saveGame();
+                }
                 frame.dispose();
                 Main main = new Main();
                 main.drawMain();
@@ -158,7 +163,7 @@ public class Generate2 {
     }
 
     public static void main(String [] args) {
-        JFrame frameMain = new JFrame("Generate");
+        JFrame frameMain = new JFrame("Save");
         //frameMain.setContentPane(new Generate2(6, 6, 1).panel1);
         frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMain.setSize(1200,800);

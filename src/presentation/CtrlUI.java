@@ -149,4 +149,15 @@ public class CtrlUI {
         cd.saveKakuro();
     }
 
+    public void saveGame() {
+        cd.saveGame();
+    }
+
+    public void setTimeToGame(int gameTime) {
+        cd.setTimeToGame(gameTime);
+    }
+
+    public void resetParameters() {
+        cd.resetParameters();
+    }
 }

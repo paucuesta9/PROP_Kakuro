@@ -153,8 +153,9 @@ public class Play {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                Main m = new Main();
-                m.drawMain();
+                Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlUI.getKakuro(), 2);
+                ctrlUI.setTimeToGame(gameTime);
+                as.drawGenerate2();
             }
         });
 

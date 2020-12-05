@@ -18,11 +18,15 @@ public class Main {
     private JLabel photo;
     private JPanel logotipo;
 
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
+
     private JFrame frame = new JFrame("Main");
 
     public Main() {
         Utils.loadFonts();
         setListeners();
+
+        ctrlUI.resetParameters();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -45,6 +49,7 @@ public class Main {
 
         Utils.setButtons(logoutButton);
         logoutButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
+
     }
 
     private void setListeners() {
