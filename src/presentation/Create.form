@@ -21,7 +21,9 @@
             <preferred-size width="800" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <opaque value="true"/>
+        </properties>
         <border type="none"/>
         <children/>
       </grid>

@@ -38,7 +38,7 @@ public class Config {
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
-    private boolean muted = false;
+    private boolean muted;
     private int vol;
 
 // logotipo.add(new JColorChooser());
@@ -95,7 +95,13 @@ public class Config {
         mute.setFont(Utils.fontAwesome);
         mute.setForeground(Color.decode("#00204A"));
         mute.setBackground(null);
-        mute.setText("\uF028");
+        if (Utils.volume == -70) {
+            muted = true;
+            mute.setText("\uF6A9");
+        } else {
+            muted = false;
+            mute.setText("\uF028");
+        }
 
         Utils.setButtons(reset);
         reset.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
