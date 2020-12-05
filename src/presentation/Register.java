@@ -62,6 +62,13 @@ public class Register {
     }
 
     private void setListeners() {
+            config.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    Config config = new Config();
+                    config.drawConfig();
+                }
+            });
 
             usuarioTextField.addFocusListener(new FocusAdapter() {
                 @Override

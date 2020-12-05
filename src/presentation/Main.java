@@ -121,8 +121,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                Generate g = new Generate();
-//                g.drawGenerate();
+                Generate g = new Generate();
+                g.drawGenerate();
             }
         });
 

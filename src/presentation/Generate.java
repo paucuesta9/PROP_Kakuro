@@ -103,49 +103,14 @@ public class Generate {
         exit.setHorizontalTextPosition(JButton.CENTER);
         exit.setVerticalTextPosition(JButton.CENTER);
 
-        numRow.addKeyListener(new KeyListener() {
+        config.addActionListener(new ActionListener() {
             @Override
-            public void keyTyped(KeyEvent e) {
-
-            }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                String value = numRow.getText();
-                int l = value.length();
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-                    numRow.setEditable(true);
-                } else {
-                    numRow.setEditable(false);
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
+            public void actionPerformed(ActionEvent e) {
+                Config config = new Config();
+                config.drawConfig();
             }
         });
-        numColumn.addKeyListener(new KeyListener() {
-            @Override
-            public void keyTyped(KeyEvent e) {
-            }
 
-            @Override
-            public void keyPressed(KeyEvent e) {
-                String value = numRow.getText();
-                int l = value.length();
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-                    numRow.setEditable(true);
-                } else {
-                    numRow.setEditable(false);
-                }
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-
-            }
-        });
         easy.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -187,7 +152,6 @@ public class Generate {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())>=3 && Integer.parseInt(numColumn.getText())>=3) {
-                    generateButton.setText("Cargando...");
                     ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
                     frame.dispose();
                     Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro());

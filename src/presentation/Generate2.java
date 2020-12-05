@@ -19,15 +19,19 @@ public class Generate2 {
     private JPanel board;
 
     private KakuroBoard sg;
-
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     private JFrame frame = new JFrame("Generate");
+
+    private JFrame conf;
+    private String kAux;
 
     public Generate2(String uwu, String k) {
         Utils.loadFonts();
 
         setListeners();
 
+        kAux = k;
         sg = new KakuroBoard(k);
         board.add(sg);
 
@@ -64,93 +68,59 @@ public class Generate2 {
         volverButton.setVerticalTextPosition(JButton.CENTER);
     }
 
-   /* private void listeners() {
-        for (int i = 0; i < components.length; ++i) {
-            if (components[i] instanceof KakuroWhiteCell) {
-                KakuroWhiteCell cell = (KakuroWhiteCell) components[i];
-                cell.addFocusListener(new FocusListener() {
-                    Color color;
-                    int value;
-                    @Override
-                    public void focusGained(FocusEvent e) {
-                        color = cell.getBackground();
-                        value = cell.getValue();
-                        cell.setBackground(Color.decode(Utils.colorBlueSelectedCell));
-                        posX = cell.getPosX();
-                        posY = cell.getPosY();
-                    }
-
-                    @Override
-                    public void focusLost(FocusEvent e) {
-                        if (!cell.getBackground().equals(Color.decode(Utils.colorRedCell))) cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Color.decode(Utils.colorRedCell))) cell.setBackground(Color.WHITE);
-                       // checkValidityCell(cell, posX, posY);
-                        int posXAux = posX;
-                        int posYAux = posY;
-                        while (true) {
-                            --posYAux;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                               // checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                        posYAux = posY;
-                        while (true) {
-                            ++posYAux;
-                            if (posYAux == columnSize) break;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                               // checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                        posYAux = posY;
-                        while (true) {
-                            --posXAux;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                          //      checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                        posXAux = posX;
-                        while (true) {
-                            ++posXAux;
-                            if (posXAux == rowSize) break;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                             //   checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                    }
-                });
-            }
-        }
-
-        config.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-    }*/
-
     private void setListeners() {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-//                Config c = new Config();
-//                c.drawConfig();
+                Config config = new Config();
+                config.drawConfig();
+                conf = config.getFrame();
+                conf.addWindowListener(new WindowListener() {
+                    @Override
+                    public void windowOpened(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosing(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosed(WindowEvent e) {
+                        sg = new KakuroBoard(kAux);
+                        board.removeAll();
+                        board.add(sg);
+                        board.validate();
+                    }
+
+                    @Override
+                    public void windowIconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeiconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowActivated(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeactivated(WindowEvent e) {
+
+                    }
+                });
             }
         });
 
         síButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                ctrlUI.save();
                 frame.dispose();
                 Main main = new Main();
                 main.drawMain();
@@ -170,8 +140,8 @@ public class Generate2 {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-                Generate g = new Generate();
-                g.drawGenerate();
+                Main m = new Main();
+                m.drawMain();
             }
         });
     }

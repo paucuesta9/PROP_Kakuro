@@ -144,4 +144,9 @@ public class CtrlUI {
         cd.generate(i, diff);
         cd.resolve();
     }
+
+    public void save() {
+        cd.saveKakuro();
+    }
+
 }

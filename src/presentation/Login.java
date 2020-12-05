@@ -61,6 +61,14 @@ public class Login {
 
     }
     private void setListeners() {
+            config.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    Config config = new Config();
+                    config.drawConfig();
+                }
+            });
+
             usuarioTextField.addFocusListener(new FocusAdapter() {
             @Override
             public void focusGained(FocusEvent e) {
