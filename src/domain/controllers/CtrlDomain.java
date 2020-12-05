@@ -64,6 +64,10 @@ public class CtrlDomain {
         data.savePlayer(username, playerJSON);
     }
 
+    public void resetConfigColors() {
+        currentPlayer.resetCongifColors();
+    }
+
     // OPTION 1 - PLAY
 
     /** @brief Inicia una nueva partida

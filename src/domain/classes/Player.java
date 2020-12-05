@@ -108,4 +108,8 @@ public class Player {
     public ArrayList<String> getConfigToArray() {
         return config.getConfig();
     }
+
+    public void resetCongifColors() {
+        config.resetColors();
+    }
 }

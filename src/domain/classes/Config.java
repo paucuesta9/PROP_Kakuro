@@ -163,4 +163,15 @@ public class Config {
         config.add(String.valueOf(volume));
         return config;
     }
+
+    public void resetColors() {
+        colorBlackCell = "#000000";
+        colorWhiteCell = "#FFFFFF";
+        colorNumbersBlackCell = "#FFFFFF";
+        colorNumbersWhiteCell = "#000000";
+        colorCorrectCell = "#00FF00";
+        colorIncorrectCell = "#E53935";
+        colorSelCell = "#64b5f6";
+        colorBorde = "#808080";
+    }
 }

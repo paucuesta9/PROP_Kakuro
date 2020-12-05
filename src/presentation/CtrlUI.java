@@ -132,4 +132,8 @@ public class CtrlUI {
         cd.signUp(username, String.valueOf(password));
         Utils.setConfig(cd.getConfig());
     }
+
+    public void resetConfigColors() {
+        cd.resetConfigColors();
+    }
 }
