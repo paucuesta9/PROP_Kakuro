@@ -34,6 +34,8 @@ public class Create {
         Utils.loadFonts();
         setListeners();
 
+        board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
         textSize.setFont(Utils.roboto.deriveFont(18f));
         textSize.setForeground(Color.BLACK);
 

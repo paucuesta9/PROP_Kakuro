@@ -43,6 +43,8 @@ public class Rankings implements ListSelectionListener {
         menu.setBackground(null);
         panel2.setBackground(null);
 
+        table.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
         //rankings
 
         String [] titles = {"Posición", "Nombre", "Puntos"}; //Nombre de cada columna

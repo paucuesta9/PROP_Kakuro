@@ -87,7 +87,7 @@ public class Play {
         Utils.setButtons(resolve);
         resolve.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
 
-        menu.setBorder(BorderFactory.createMatteBorder(0, 1, 0, 0, Color.decode(Utils.colorDarkBlue)));
+        board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
     }
 
     private void listeners() {
@@ -127,6 +127,7 @@ public class Play {
                 board.validate();
                 help1.setEnabled(false);
                 help2.setEnabled(false);
+                pauseResume.setEnabled(false);
                 stopTimer();
             }
         });

@@ -46,7 +46,7 @@ public class NewGame {
 
         picLabel.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
-        logo.setFont(Utils.digital.deriveFont(40f));
+        logo.setFont(Utils.roboto.deriveFont(40f));
         logo.setForeground(Color.decode(Utils.colorDarkBlue));
 
         textSize.setFont(Utils.roboto);

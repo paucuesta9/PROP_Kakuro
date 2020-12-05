@@ -21,6 +21,8 @@ public class AskSave {
         Utils.loadFonts();
         setListeners();
 
+        board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
         board.add(kBoard);
         board.validate();
         

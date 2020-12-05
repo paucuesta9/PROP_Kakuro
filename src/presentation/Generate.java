@@ -9,7 +9,6 @@ import java.awt.event.*;
 
 public class Generate {
     private JPanel panel1;
-    private JPanel picLabel;
     private JLabel label;
     private JButton config;
     private JButton easy;
@@ -37,6 +36,8 @@ public class Generate {
 
         Utils.loadFonts();
         ctrlUI = CtrlUI.getInstance();
+
+        label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -94,6 +95,7 @@ public class Generate {
         generateButton.setBackground(null);
         generateButton.setHorizontalTextPosition(JButton.CENTER);
         generateButton.setVerticalTextPosition(JButton.CENTER);
+        generateButton.setText("Generar");
 
         exit.setFont(Utils.roboto);
         exit.setForeground(Color.WHITE);
@@ -152,11 +154,16 @@ public class Generate {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())>=3 && Integer.parseInt(numColumn.getText())>=3) {
-                    ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
-                    frame.dispose();
-                    Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro());
-                    as.drawGenerate2();
-
+                    generateButton.setText("Cargando...");
+                    Thread t = new Thread() {
+                        public void run () {
+                            ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
+                            frame.dispose();
+                            Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro());
+                            as.drawGenerate2();
+                        }
+                    };
+                    t.start();
                 }
                 else Utils.showError("Tamaño inválido");
             }

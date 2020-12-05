@@ -21,6 +21,8 @@ public class AskNewContinue {
         Utils.loadFonts();
         setListeners();
 
+        photo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);

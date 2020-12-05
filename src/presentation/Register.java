@@ -32,6 +32,7 @@ public class Register {
         setListeners();
 
         toLogin.setFont(Utils.roboto.deriveFont(12f));
+        label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));

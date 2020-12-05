@@ -55,14 +55,9 @@ public class LoadGame {
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
 
         games.setBorder(null);
-
         games.getVerticalScrollBar().setBackground(Color.white);
-
-
-
         games.getVerticalScrollBar().setUI(new Scroll());
         games.getVerticalScrollBar().setUnitIncrement(16);
-
 
     }
 
