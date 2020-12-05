@@ -11,7 +11,6 @@ public class Main {
     private JPanel panel1;
     private JButton playButton;
     private JButton createKakuroButton;
-    private JButton solveButton;
     private JButton generateButton;
     private JButton rankingButton;
     private JButton logoutButton;
@@ -32,53 +31,20 @@ public class Main {
 
         photo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
-        playButton.setFont(Utils.roboto);
-        playButton.setForeground(Color.WHITE);
+        Utils.setButtons(playButton);
         playButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
-        playButton.setBorderPainted(false);
-        playButton.setBackground(null);
-        playButton.setHorizontalTextPosition(JButton.CENTER);
-        playButton.setVerticalTextPosition(JButton.CENTER);
 
-        createKakuroButton.setFont(Utils.roboto);
-        createKakuroButton.setForeground(Color.WHITE);
+        Utils.setButtons(createKakuroButton);
         createKakuroButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        createKakuroButton.setBorderPainted(false);
-        createKakuroButton.setBackground(null);
-        createKakuroButton.setHorizontalTextPosition(JButton.CENTER);
-        createKakuroButton.setVerticalTextPosition(JButton.CENTER);
 
-        solveButton.setFont(Utils.roboto);
-        solveButton.setForeground(Color.WHITE);
-        solveButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        solveButton.setBorderPainted(false);
-        solveButton.setBackground(null);
-        solveButton.setHorizontalTextPosition(JButton.CENTER);
-        solveButton.setVerticalTextPosition(JButton.CENTER);
-
-        generateButton.setFont(Utils.roboto);
-        generateButton.setForeground(Color.WHITE);
+        Utils.setButtons(generateButton);
         generateButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        generateButton.setBorderPainted(false);
-        generateButton.setBackground(null);
-        generateButton.setHorizontalTextPosition(JButton.CENTER);
-        generateButton.setVerticalTextPosition(JButton.CENTER);
 
-        rankingButton.setFont(Utils.roboto);
-        rankingButton.setForeground(Color.WHITE);
+        Utils.setButtons(rankingButton);
         rankingButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        rankingButton.setBorderPainted(false);
-        rankingButton.setBackground(null);
-        rankingButton.setHorizontalTextPosition(JButton.CENTER);
-        rankingButton.setVerticalTextPosition(JButton.CENTER);
 
-        logoutButton.setFont(Utils.roboto);
-        logoutButton.setForeground(Color.WHITE);
+        Utils.setButtons(logoutButton);
         logoutButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
-        logoutButton.setBorderPainted(false);
-        logoutButton.setBackground(null);
-        logoutButton.setHorizontalTextPosition(JButton.CENTER);
-        logoutButton.setVerticalTextPosition(JButton.CENTER);
     }
 
     private void setListeners() {
@@ -108,15 +74,6 @@ public class Main {
             }
         });
 
-        solveButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-//                Solve solve = new Solve();
-//                solve.drawSolve();
-            }
-        });
-
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -138,6 +95,7 @@ public class Main {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frame.dispose();
                 Login login = new Login();
                 login.drawLogin();
             }
