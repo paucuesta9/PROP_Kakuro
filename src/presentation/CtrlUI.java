@@ -135,5 +135,6 @@ public class CtrlUI {
 
     public void resetConfigColors() {
         cd.resetConfigColors();
+        Utils.setConfig(cd.getConfig());
     }
 }
