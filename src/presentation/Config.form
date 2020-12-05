@@ -364,7 +364,7 @@
                 <properties>
                   <background color="-1973532"/>
                   <maximum value="6"/>
-                  <minimum value="-25"/>
+                  <minimum value="-70"/>
                   <value value="-10"/>
                   <valueIsAdjusting value="false"/>
                 </properties>

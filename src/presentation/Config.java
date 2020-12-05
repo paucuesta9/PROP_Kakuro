@@ -123,7 +123,7 @@ public class Config {
                 if(muted) {
                     mute.setText("\uF6A9");
                     vol = volume.getValue();
-                    volume.setValue(-25);
+                    volume.setValue(-70);
                 }
                 else {
                     mute.setText("\uF028");
@@ -241,6 +241,12 @@ public class Config {
             public void stateChanged(ChangeEvent e) {
                 int vol = volume.getValue();
                 Utils.updateVolume(vol);
+                if (vol == -70) {
+                    muted = true;
+                    mute.setText("\uF6A9");
+                } else {
+                    mute.setText("\uF028");
+                }
             }
         });
     }
