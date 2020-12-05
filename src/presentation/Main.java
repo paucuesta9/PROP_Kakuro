@@ -130,8 +130,8 @@ public class Main {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
-//                Rankings ranking = new Rankings();
-//                ranking.drawRanking();
+                Rankings ranking = new Rankings();
+                ranking.drawRanking();
             }
         });
 

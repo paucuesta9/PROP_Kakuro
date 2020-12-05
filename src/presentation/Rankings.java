@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rankings implements ListSelectionListener {
-    private static JFrame frame;
+    private JFrame frame = new JFrame("Rankings");
     private JPanel menu;
     private JPanel logotipo;
     private JButton volver;
@@ -37,7 +37,7 @@ public class Rankings implements ListSelectionListener {
     private CtrlUI ctrlUI;
     private Font fontAwesome, roboto;
 
-    public Rankings() throws FileNotFoundException {
+    public Rankings() {
         ctrlUI = new CtrlUI();
         loadFonts();
         menu.setBackground(null);
@@ -254,10 +254,19 @@ public class Rankings implements ListSelectionListener {
         scrollPane.setViewportView(table);
         scrollPane.setVisible(true);
     }
-    
 
-    public static void main(String [] args) throws FileNotFoundException {
-        frame = new JFrame("Rankings");
+    public void drawRanking() {
+        frame.setContentPane(panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1200,800);
+        frame.setResizable(false);
+        Utils.center(frame);
+        frame.setVisible(true);
+
+    }
+
+    public static void main(String [] args)  {
+        JFrame frame = new JFrame("Rankings");
         frame.setContentPane(new Rankings().panel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
