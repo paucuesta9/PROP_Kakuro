@@ -38,6 +38,10 @@ public class Play {
     private KakuroBoard sg;
     private Component[] components;
 
+    private String kakAux;
+    private JFrame conf;
+
+
     public Play(String kakuro) {
         String[] values = kakuro.split("\n");
         String[] valuesSize = values[0].split(",");
@@ -47,12 +51,13 @@ public class Play {
         ctrlUI = CtrlUI.getInstance();
 
         Utils.loadFonts();
-
+        kakAux = kakuro;
         sg = new KakuroBoard(kakuro);
         board.add(sg);
         components = sg.getComponents();
         listeners();
         startTimer();
+        setListenerBoard();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -86,6 +91,124 @@ public class Play {
     }
 
     private void listeners() {
+
+
+        help1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int result = ctrlUI.help1(posX, posY);
+                if (result != -1) {
+                    KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
+                    if (result == 1) w.setBackground(Utils.colorCorrectCell);
+                    else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
+                }
+
+            }
+        });
+        help2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                int correctNumber = ctrlUI.help2(posX,posY);
+                KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
+                w.setValue(correctNumber);
+                w.setBackground(Utils.colorCorrectCell);
+
+            }
+        });
+
+        resolve.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String kakuroSolved = ctrlUI.getCorrectKakuro();
+                sg = new KakuroBoard(kakuroSolved);
+                board.removeAll();
+                board.add(sg);
+                components = sg.getComponents();
+                board.validate();
+                help1.setEnabled(false);
+                help2.setEnabled(false);
+                stopTimer();
+            }
+        });
+
+        pauseResume.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (paused) {
+                    board.setVisible(true);
+                    startTimer();
+                    pauseResume.setText("Pausar");
+                    paused = false;
+                } else {
+                    board.setVisible(false);
+                    stopTimer();
+                    pauseResume.setText("Continuar");
+                    paused = true;
+                }
+            }
+        });
+
+        exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame.dispose();
+                Main m = new Main();
+                m.drawMain();
+            }
+        });
+
+        config.addActionListener(new ActionListener() {
+            @Override
+
+            public void actionPerformed(ActionEvent e) {
+                Config config = new Config();
+                config.drawConfig();
+                conf = config.getFrame();
+                conf.addWindowListener(new WindowListener() {
+                    @Override
+                    public void windowOpened(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosing(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosed(WindowEvent e) {
+                        sg = new KakuroBoard(kakAux);
+                        board.removeAll();
+                        board.add(sg);
+                        components = sg.getComponents();
+                        setListenerBoard();
+                    }
+
+                    @Override
+                    public void windowIconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeiconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowActivated(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeactivated(WindowEvent e) {
+
+                    }
+                });
+            }
+        });
+    }
+
+    private void setListenerBoard() {
         for (int i = 0; i < components.length; ++i) {
             if (components[i] instanceof KakuroWhiteCell) {
                 KakuroWhiteCell cell = (KakuroWhiteCell) components[i];
@@ -214,78 +337,6 @@ public class Play {
                 });
             }
         }
-
-        help1.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int result = ctrlUI.help1(posX, posY);
-                if (result != -1) {
-                    KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
-                    if (result == 1) w.setBackground(Utils.colorCorrectCell);
-                    else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
-                }
-
-            }
-        });
-        help2.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                int correctNumber = ctrlUI.help2(posX,posY);
-                KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
-                w.setValue(correctNumber);
-                w.setBackground(Utils.colorCorrectCell);
-
-            }
-        });
-
-        resolve.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String kakuroSolved = ctrlUI.getCorrectKakuro();
-                sg = new KakuroBoard(kakuroSolved);
-                board.removeAll();
-                board.add(sg);
-                components = sg.getComponents();
-                board.validate();
-                help1.setEnabled(false);
-                help2.setEnabled(false);
-                stopTimer();
-            }
-        });
-
-        pauseResume.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (paused) {
-                    board.setVisible(true);
-                    startTimer();
-                    pauseResume.setText("Pausar");
-                    paused = false;
-                } else {
-                    board.setVisible(false);
-                    stopTimer();
-                    pauseResume.setText("Continuar");
-                    paused = true;
-                }
-            }
-        });
-
-        exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                Main m = new Main();
-                m.drawMain();
-            }
-        });
-
-        config.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Config config = new Config();
-                config.drawConfig();
-            }
-        });
     }
 
     private void finishGame() {
@@ -342,4 +393,5 @@ public class Play {
         Utils.center(frame);
         frame.setVisible(true);
     }
+
 }

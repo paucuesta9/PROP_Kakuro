@@ -33,12 +33,14 @@ public class Config {
     private JPanel nBlPanel;
     private JPanel nWhPanel;
     private JButton mute;
+    private JButton reset;
     private JFrame frame = new JFrame("Configuración");
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     private boolean muted = false;
     private int vol;
+
 // logotipo.add(new JColorChooser());
 
     public Config() {
@@ -95,6 +97,24 @@ public class Config {
         mute.setBackground(null);
         mute.setText("\uF028");
 
+        Utils.setButtons(reset);
+        reset.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
+
+
+        reset.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ctrlUI.resetConfigColors();
+                blackPanel.setBackground(Utils.colorBlackCell);
+                whitePanel.setBackground(Utils.colorWhiteCell);
+                selectedPanel.setBackground(Utils.colorSelCell);
+                corrPanel.setBackground(Utils.colorCorrectCell);
+                incPanel.setBackground(Utils.colorIncorrectCell);
+                borderPanel.setBackground(Utils.colorBorde);
+                nBlPanel.setBackground(Utils.colorNumbersBlackCell);
+                nWhPanel.setBackground(Utils.colorNumbersWhiteCell);
+            }
+        });
 
         mute.addActionListener(new ActionListener() {
             @Override
@@ -223,6 +243,10 @@ public class Config {
                 Utils.updateVolume(vol);
             }
         });
+    }
+
+    public JFrame getFrame() {
+        return frame;
     }
 
     public void drawConfig() {

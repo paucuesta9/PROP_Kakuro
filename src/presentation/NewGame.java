@@ -183,6 +183,7 @@ public class NewGame {
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                frame.dispose();
                 if (numSize.getText().isEmpty() || numColumn.getText().isEmpty()) Utils.showError("No se ha indicado alguno de los tamaños solicitados");
                 else {
                     int rowSize = Integer.parseInt(numSize.getText());

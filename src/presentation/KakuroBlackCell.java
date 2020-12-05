@@ -37,7 +37,7 @@ public class KakuroBlackCell extends KakuroCell {
 
         jLabelColumn = new JLabel();
         jLabelColumn.setFont(new Font("Roboto", Font.PLAIN,15*size/50));
-        jLabelColumn.setForeground(Color.WHITE);
+        jLabelColumn.setForeground(Utils.colorNumbersBlackCell);
         add(jLabelColumn, new GridBagConstraints(
                 0, // gridx
                 0, // gridy
