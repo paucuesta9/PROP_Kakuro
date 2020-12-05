@@ -19,28 +19,17 @@ public class Generate2 {
     private JPanel board;
 
     private KakuroBoard sg;
-    private Component[] components;
 
-    private static CtrlDomain ctrlDomain;
 
     private JFrame frame = new JFrame("Generate");
 
-    private int rowSize, columnSize;
-    private int posX, posY;
-
-    public Generate2(int i, int j, int diff) {
+    public Generate2(String uwu, String k) {
         Utils.loadFonts();
 
         setListeners();
-        rowSize = i; columnSize = j;
-
-        ctrlDomain = new CtrlDomain();
-        ctrlDomain.generate(i, diff);
-        String k = ctrlDomain.getKakuroToString();
 
         sg = new KakuroBoard(k);
         board.add(sg);
-        components = sg.getComponents();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -48,6 +37,7 @@ public class Generate2 {
         config.setBorder(new EmptyBorder(10,0,0,10));
 
         question.setFont(Utils.roboto.deriveFont(18f));
+        question.setText(uwu);
 
         síButton.setFont(Utils.roboto);
         síButton.setForeground(Color.WHITE);
@@ -160,8 +150,7 @@ public class Generate2 {
         síButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlDomain.resolve();
-                ctrlDomain.saveKakuro();
+
                 frame.dispose();
                 Main main = new Main();
                 main.drawMain();
@@ -198,7 +187,7 @@ public class Generate2 {
 
     public static void main(String [] args) {
         JFrame frameMain = new JFrame("Generate");
-        frameMain.setContentPane(new Generate2(6, 6, 1).panel1);
+        //frameMain.setContentPane(new Generate2(6, 6, 1).panel1);
         frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMain.setSize(1200,800);
         frameMain.setResizable(false);

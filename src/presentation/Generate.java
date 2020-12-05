@@ -28,13 +28,15 @@ public class Generate {
     private JLabel difficulty;
     private JLabel errorValue;
 
-    private JFrame frame = new JFrame("Generate");
+    private CtrlUI ctrlUI;
+    private static JFrame frame = new JFrame("Generate");
 
     int diff = 1;
 
     public Generate() {
 
         Utils.loadFonts();
+        ctrlUI = CtrlUI.getInstance();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -184,11 +186,13 @@ public class Generate {
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())>=4 && Integer.parseInt(numColumn.getText())>=4) {
+                if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())>=3 && Integer.parseInt(numColumn.getText())>=3) {
                     generateButton.setText("Cargando...");
+                    ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
                     frame.dispose();
-                    Generate2 g = new Generate2(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
-                    g.drawGenerate2();
+                    Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro());
+                    as.drawGenerate2();
+
                 }
                 else Utils.showError("Tamaño inválido");
             }
@@ -210,7 +214,7 @@ public class Generate {
     }
 
     public static void main(String [] args) {
-        JFrame frame = new JFrame("Generate");
+        frame = new JFrame("Generate");
         frame.setContentPane(new Generate().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);

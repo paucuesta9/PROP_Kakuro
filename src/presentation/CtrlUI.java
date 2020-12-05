@@ -7,6 +7,7 @@ import domain.classes.Exceptions.WrongPasswordException;
 import domain.classes.Player;
 import domain.controllers.CtrlDomain;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -136,5 +137,10 @@ public class CtrlUI {
     public void resetConfigColors() {
         cd.resetConfigColors();
         Utils.setConfig(cd.getConfig());
+    }
+
+    public void generate(int i, int j, int diff) {
+        cd.generate(i, diff);
+        cd.resolve();
     }
 }

@@ -20,8 +20,9 @@ public class Login {
     private JLabel label;
     private JPanel panel2;
     private JPanel logotipo;
-    private JPanel Prueba;
     private JButton config;
+    private JLabel toRegister;
+
 
     private CtrlUI ctrlUI;
     private static JFrame frame = new JFrame("Login");
@@ -33,6 +34,8 @@ public class Login {
         Utils.loadFonts();
         setListeners();
         ctrlUI = CtrlUI.getInstance();
+
+        toRegister.setFont(Utils.roboto.deriveFont(12f));
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -113,6 +116,17 @@ public class Login {
                     }
                 }
             });
+
+        toRegister.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                frame.dispose();
+                Register r = new Register();
+                r.drawRegister();
+            }
+        });
     }
 
 

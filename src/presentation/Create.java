@@ -189,14 +189,14 @@ public class Create {
             }
         });
 
-        confirm.addActionListener(new ActionListener() {
+        /*confirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 frame.dispose();
                 AskSave a = new AskSave("¿Desea guardar el kakuro creado?", kBoard);
                 a.drawAskSave();
             }
-        });
+        });*/
 
         cancel.addActionListener(new ActionListener() {
             @Override

@@ -16,8 +16,9 @@ public class Register {
     private JButton registrarseButton;
     private JPasswordField repetirContraseñaPasswordField;
     private JPanel logotipo;
+    private JLabel toLogin;
 
-    private static JFrame frame;
+    private static JFrame frame = new JFrame("Register");
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     boolean mod = false;
@@ -28,6 +29,8 @@ public class Register {
 
         Utils.loadFonts();
         setListeners();
+
+        toLogin.setFont(Utils.roboto.deriveFont(12f));
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -119,12 +122,29 @@ public class Register {
             registrarseButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) ctrlUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
-                    frame.dispose();
-                    Main main = new Main();
-                    main.drawMain();
+                    if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseña no válidos");
+                    else if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) {
+                        ctrlUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
+                        frame.dispose();
+                        Main main = new Main();
+                        main.drawMain();
+                    }
+                    else {
+                        Utils.showError("Las contraseñas no són iguales");
+                    }
                 }
             });
+
+        toLogin.addMouseListener(new MouseAdapter()
+        {
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
+                frame.dispose();
+                Login l = new Login();
+                l.drawLogin();
+            }
+        });
     }
 
     private void createUIComponents() {
@@ -133,7 +153,7 @@ public class Register {
         label.requestFocusInWindow();
     }
 
-    public void drawLogin() {
+    public void drawRegister() {
         frame.setContentPane(panel2);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
