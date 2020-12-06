@@ -64,46 +64,22 @@ public class Generate {
         difficulty.setFont(Utils.roboto);
         difficulty.setForeground(Color.BLACK);
 
-        easy.setFont(Utils.roboto);
-        easy.setForeground(Color.WHITE);
+        Utils.setButtons(easy);
         easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
-        easy.setBorderPainted(false);
-        easy.setBackground(null);
-        easy.setHorizontalTextPosition(JButton.CENTER);
-        easy.setVerticalTextPosition(JButton.CENTER);
 
-        medium.setFont(Utils.roboto);
+        Utils.setButtons(medium);
         medium.setForeground(Color.BLACK);
         medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
-        medium.setBorderPainted(false);
-        medium.setBackground(null);
-        medium.setHorizontalTextPosition(JButton.CENTER);
-        medium.setVerticalTextPosition(JButton.CENTER);
 
-        hard.setFont(Utils.roboto);
+        Utils.setButtons(hard);
         hard.setForeground(Color.BLACK);
         hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-        hard.setBorderPainted(false);
-        hard.setBackground(null);
-        hard.setHorizontalTextPosition(JButton.CENTER);
-        hard.setVerticalTextPosition(JButton.CENTER);
 
-        generateButton.setFont(Utils.roboto);
-        generateButton.setForeground(Color.WHITE);
+        Utils.setButtons(generateButton);
         generateButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
-        generateButton.setBorderPainted(false);
-        generateButton.setBackground(null);
-        generateButton.setHorizontalTextPosition(JButton.CENTER);
-        generateButton.setVerticalTextPosition(JButton.CENTER);
-        generateButton.setText("Generar");
 
-        exit.setFont(Utils.roboto);
-        exit.setForeground(Color.WHITE);
+        Utils.setButtons(exit);
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        exit.setBorderPainted(false);
-        exit.setBackground(null);
-        exit.setHorizontalTextPosition(JButton.CENTER);
-        exit.setVerticalTextPosition(JButton.CENTER);
 
         config.addActionListener(new ActionListener() {
             @Override
