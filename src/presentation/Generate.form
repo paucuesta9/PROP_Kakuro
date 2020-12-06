@@ -309,19 +309,6 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="2d2bc" class="javax.swing.JLabel" binding="label" custom-create="true">
-        <constraints>
-          <grid row="0" column="0" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="1" use-parent-layout="false">
-            <minimum-size width="780" height="800"/>
-            <preferred-size width="780" height="800"/>
-            <maximum-size width="780" height="800"/>
-          </grid>
-        </constraints>
-        <properties>
-          <requestFocusEnabled value="true"/>
-          <text value=""/>
-        </properties>
-      </component>
       <hspacer id="c192d">
         <constraints>
           <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
@@ -331,6 +318,19 @@
           </grid>
         </constraints>
       </hspacer>
+      <component id="2d2bc" class="javax.swing.JLabel" binding="label" custom-create="true">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="800" height="800"/>
+            <preferred-size width="800" height="800"/>
+            <maximum-size width="800" height="800"/>
+          </grid>
+        </constraints>
+        <properties>
+          <requestFocusEnabled value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>
