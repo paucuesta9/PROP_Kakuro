@@ -208,6 +208,8 @@
               </grid>
             </constraints>
             <properties>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
               <focusPainted value="false"/>
               <foreground color="-1"/>
               <label value="Resolver"/>

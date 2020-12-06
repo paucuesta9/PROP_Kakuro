@@ -125,6 +125,15 @@ public class CtrlDomain {
             e.printStackTrace();
         }
         currentKakuro = currentGame.getKakuro();
+        currentKakuro.setDifficulty(currentGame.getDiff());
+        currentKakuro.setId(currentGame.getKakuroId());
+        try {
+            Kakuro sol = new Kakuro(getKakuro("data/solutions/diff" + currentGame.getDiff() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + currentKakuro.getId() + ".txt"));
+            currentKakuro.setCorrectValues(sol);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     /** @brief Se mira si el usuario ha completado el tablero
