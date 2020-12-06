@@ -159,7 +159,7 @@ public class Generate {
                         public void run () {
                             ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
                             frame.dispose();
-                            Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro(), 1);
+                            Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getCorrectKakuro(), 1);
                             as.drawGenerate2();
                         }
                     };
