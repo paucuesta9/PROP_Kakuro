@@ -9,6 +9,9 @@ import domain.classes.Cell;
 import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 /** @brief Clase CtrlGenerate que contiene los atributos y metodos para la funcionalidad de generar
@@ -21,6 +24,7 @@ public class CtrlGenerate {
 
     private static Kakuro currentKakuro;
 
+    private static int[][][] mat = new int[45][9][];
     /**
      * @brief Creadora por defecto
      */
@@ -145,11 +149,11 @@ public class CtrlGenerate {
      *
      * @param arr vector de enteros lim posiciones
      * @param index indica el número de valores
-     * @param num
-     * @param reducedNum
-     * @param lim
-     * @param posSums
-     * @param no
+     * @param num indica la suma hasta el momento
+     * @param reducedNum indica el numero que queremos sumar
+     * @param lim indica el maximo numero de valores
+     * @param posSums indica nos valores que son posibles
+     * @param no indica un valor que no se puede usar
      */
     private static void computePosSumsRec(int arr[], int index, int num, int reducedNum, int lim, int posSums[], int no) {
         if (reducedNum < 0 || index > lim)
@@ -397,8 +401,8 @@ public class CtrlGenerate {
                 for (int y = 0; y < posComb[nV].length; ++y) {
                     boolean allOk = true;
                     tempBoard[lastCol][j][2] = posComb[nV][y];
-                    int[] prueba = computePosSums(posComb[nV][y], nV, 0);
-
+                    //int[] prueba = computePosSums(posComb[nV][y], nV, 0);
+                    int[] prueba = mat[posComb[nV][y]-1][nV-1];
                     int value = intersection(prueba, tempBoard[i][j]);
 
                     int[] prueba2 = {0,0,0,0,0,0,0,0,0};
@@ -463,7 +467,8 @@ public class CtrlGenerate {
                 for (int y = 0; y < posComb[nH].length; ++y) {
                     boolean allOk = true;
                     tempBoard[i][lastRow][3] = posComb[nH][y];
-                    int[] prueba = computePosSums(posComb[nH][y], nH, 0);
+                    //int[] prueba = computePosSums(posComb[nH][y], nH, 0);
+                    int[] prueba = mat[posComb[nH][y]-1][nH-1];
 
                     int value = intersection(prueba, tempBoard[i][j]);
 
@@ -573,13 +578,17 @@ public class CtrlGenerate {
             if (nV == 9 || nH == 9) return fillBoardAux(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
             else {
                 int[][][] copy = new int[board.length][board[0].length][9];
+                //--------------------------------------------------------------------
                 for (int r = 0; r < board.length; ++r)
                     for (int c = 0; c < board[0].length; ++c)
                         for (int z = 0; z < 9; ++z) copy[r][c][z] = tempBoard[r][c][z];
+                //--------------------------------------------------------------------
                 for (int x = 0; x < posComb[nH].length; ++x) {
-                    int[] valuesH = computePosSums(posComb[nH][x], nH, 0);
+                    int[] valuesH = mat[posComb[nH][x]-1][nH-1];
+                    //int[] valuesH = computePosSums(posComb[nH][x], nH, 0);
                     for (int y = 0; y < posComb[nV].length; ++y) {
-                        int[] valuesV = computePosSums(posComb[nV][y], nV, 0);
+                        int[] valuesV = mat[posComb[nV][y]-1][nV-1];
+                        //int[] valuesV = computePosSums(posComb[nV][y], nV, 0);
                         int value = intersection(valuesH, valuesV);
                         if (value != -1) {
                             tempBoard[i][j][value] = 1;
@@ -587,6 +596,7 @@ public class CtrlGenerate {
                             tempBoard[i][lastRow][3] = posComb[nH][x];
                             int[] auxH = computePosSums(posComb[nH][x], nH - 1, value + 1);
                             int[] auxV = computePosSums(posComb[nV][y], nV - 1, value + 1);
+
                             int f = 1;
                             while (j + f < board.length && board[i][j + f].isWhite()) {
                                 for (int tt = 0; tt < 9; ++tt)
@@ -648,16 +658,17 @@ public class CtrlGenerate {
         };
         Random rand = new Random();
 
-        for (int i = 0; i < posComb.length; i++) {
+        //mezclamos los numeros para evitar que siempre encuentre los mismos valores
+        /*for (int i = 0; i < posComb.length; i++) {
             for(int j = 0; j < posComb[i].length;++j) {
                 int randomIndexToSwap = rand.nextInt(posComb[i].length);
                 int temp = posComb[i][randomIndexToSwap];
                 posComb[i][randomIndexToSwap] = posComb[i][j];
                 posComb[i][j] = temp;
             }
-        }
+        }*/
 
-        int tempBoard[][][] = new int[board.length][board[0].length][9];  //Matriz para calcular posibles valores
+        int tempBoard[][][] = new int[board.length][board[0].length][9];
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board.length; ++j) {
                 for (int k = 0; k < 9; ++k) {
@@ -706,37 +717,7 @@ public class CtrlGenerate {
         return w;
     }
 
-    /**@brief función principal de CtrlGenerate
-     *
-     * @param size tamaño del tablero a generar
-     * @param dif indica el porcenatge de celdas blancas
-     * @return un kakuro con solución única
-     *
-     * Esta función generará tableros mientras no sean válidos o no puedan tener solución única
-     */
-    public static Kakuro generate(int size,int dif) {
-        boolean repeat = true;
-        while(repeat) {
-            repeat = false;
-            Cell [][] board = new Cell [size][size];
-            for(int i = 0; i < size; ++i){
-                board[0][i] = new BlackCell();
-                board[i][0] = new BlackCell();
-            }
-            firstColRow(board,dif);
-            randomCells(board,dif);
-            checkBoard(board);
-            if(!connexBoard(board)){
-                repeat = true;
-            }
-            currentKakuro = new Kakuro(0,0,board);
-            if(!repeat && fillBoard(board)) { }
-            else repeat = true;
-        }
-        CtrlValidate.setDifficulty();
-        System.out.println("Finalmente, la dificultad es " + currentKakuro.getDifficulty());
-        return currentKakuro;
-    }
+
 
     /**@brief función que genera la primera y la última fila del talbero de manera que simétrico
      *
@@ -826,8 +807,9 @@ public class CtrlGenerate {
                 else {
                     int x = 0;
                     if( dif == 1) x = 30;
-                    else if( dif == 2) x = 50;
-                    else x = 60;
+                    else if( dif == 2) x = 40;
+                    else x = 50;
+                    if( n >= 5 || m >= 5 ) x -= 45;
                     Random rand = new Random();
                     if (rand.nextInt(101) <= x ) {
                         board[i][j] = new WhiteCell();
@@ -950,4 +932,46 @@ public class CtrlGenerate {
         if(nWhite == nDFS) return true;
         return false;
     }
+
+
+    /**@brief función principal de CtrlGenerate
+     *
+     * @param size tamaño del tablero a generar
+     * @param dif indica el porcenatge de celdas blancas
+     * @return un kakuro con solución única
+     *
+     * Esta función generará tableros mientras no sean válidos o no puedan tener solución única
+     */
+    public static Kakuro generate(int size,int dif) {
+        //Inicializamos la matriz
+        mat = new int[45][9][];
+        for(int i = 1; i <= 45; ++i) {
+            for(int j = 1; j <= 9; ++j ){
+                mat[i-1][j-1] = new int[] {0,0,0,0,0,0,0,0,0};
+                mat[i-1][j-1] = computePosSums(i,j,0);
+            }
+        }
+        boolean repeat = true;
+        while(repeat) {
+            repeat = false;
+            Cell [][] board = new Cell [size][size];
+            for(int i = 0; i < size; ++i){
+                board[0][i] = new BlackCell();
+                board[i][0] = new BlackCell();
+            }
+            firstColRow(board,dif);
+            randomCells(board,dif);
+            checkBoard(board);
+            if(!connexBoard(board)){
+                repeat = true;
+            }
+            currentKakuro = new Kakuro(0,0,board);
+            if(!repeat && fillBoard(board)) { }
+            else repeat = true;
+        }
+        CtrlValidate.setDifficulty();
+        System.out.println("Finalmente, la dificultad es " + currentKakuro.getDifficulty());
+        return currentKakuro;
+    }
+
 }
