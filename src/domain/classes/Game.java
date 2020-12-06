@@ -23,7 +23,7 @@ public class Game {
     @SerializedName("kakuroId")
     @Expose
     private int kakuroId;
-    private Kakuro kakuro;
+    private transient Kakuro kakuro;
     @SerializedName("rowSize")
     @Expose
     private int rowSize;

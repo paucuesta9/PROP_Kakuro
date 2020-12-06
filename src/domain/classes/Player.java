@@ -16,8 +16,7 @@ public class Player {
     @SerializedName("stats")
     @Expose
     private Stats stats;
-    @Expose(serialize = false)
-    private Game currentGame;
+    private transient Game currentGame;
     @SerializedName("savedGames")
     @Expose
     private List<Game> savedGames = null;
