@@ -30,6 +30,8 @@ public class Generate {
     private CtrlUI ctrlUI;
     private static JFrame frame = new JFrame("Generate");
 
+    private boolean g = false;
+
     int diff = 1;
 
     public Generate() {
@@ -92,70 +94,81 @@ public class Generate {
         easy.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
-                medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
-                hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-                easy.setForeground(Color.WHITE);
-                medium.setForeground(Color.BLACK);
-                hard.setForeground(Color.BLACK);
-                diff = 1;
+                if (!g) {
+                    easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
+                    medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
+                    hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
+                    easy.setForeground(Color.WHITE);
+                    medium.setForeground(Color.BLACK);
+                    hard.setForeground(Color.BLACK);
+                    diff = 1;
+                }
             }
         });
         medium.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
-                medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -4.png")));
-                hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-                easy.setForeground(Color.BLACK);
-                medium.setForeground(Color.WHITE);
-                hard.setForeground(Color.BLACK);
-                diff = 2;
+                if (!g) {
+                    easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
+                    medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -4.png")));
+                    hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
+                    easy.setForeground(Color.BLACK);
+                    medium.setForeground(Color.WHITE);
+                    hard.setForeground(Color.BLACK);
+                    diff = 2;
+                }
             }
         });
 
         hard.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
-                medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
-                hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
-                easy.setForeground(Color.BLACK);
-                medium.setForeground(Color.BLACK);
-                hard.setForeground(Color.WHITE);
-                diff = 3;
+                if (!g) {
+                    easy.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Trazado 1.png")));
+                    medium.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 7.png")));
+                    hard.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
+                    easy.setForeground(Color.BLACK);
+                    medium.setForeground(Color.BLACK);
+                    hard.setForeground(Color.WHITE);
+                    diff = 3;
+                }
             }
         });
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText())>=3 && Integer.parseInt(numColumn.getText())>=3) {
-                    generateButton.setText("Cargando...");
-                    Thread t = new Thread() {
-                        public void run () {
-                            ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
-                            frame.dispose();
-                            Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getCorrectKakuro(), 1);
-                            as.drawGenerate2();
-                        }
-                    };
-                    t.start();
+                if (!g) {
+                    if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText()) >= 3 && Integer.parseInt(numColumn.getText()) >= 3) {
+                        g = true;
+                        numRow.setEditable(false);
+                        numColumn.setEditable(false);
+                        generateButton.setText("Cargando...");
+                        Thread t = new Thread() {
+                            public void run() {
+                                ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
+                                frame.dispose();
+                                Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro(), 1);
+                                as.drawGenerate2();
+                            }
+                        };
+                        t.start();
+                    } else Utils.showError("Tamaño inválido");
                 }
-                else Utils.showError("Tamaño inválido");
             }
         });
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                Main m = new Main();
-                m.drawMain();
+                if (!g) {
+                    frame.dispose();
+                    Main m = new Main();
+                    m.drawMain();
+                }
             }
         });
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
         label.requestFocusInWindow();
     }

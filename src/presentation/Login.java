@@ -60,9 +60,23 @@ public class Login {
         iniciarSesiónButton.setBackground(null);
         iniciarSesiónButton.setHorizontalTextPosition(JButton.CENTER);
         iniciarSesiónButton.setVerticalTextPosition(JButton.CENTER);
-
     }
     private void setListeners() {
+
+            usuarioTextField.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    iniciarSesiónButton.doClick();
+                }
+            });
+
+            contraseñaPasswordField.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    iniciarSesiónButton.doClick();
+                }
+            });
+
             config.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {

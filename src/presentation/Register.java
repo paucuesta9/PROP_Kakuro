@@ -63,6 +63,28 @@ public class Register {
     }
 
     private void setListeners() {
+
+            usuarioTextField.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    registrarseButton.doClick();
+                }
+            });
+
+            contraseñaPasswordField.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    registrarseButton.doClick();
+                }
+            });
+
+            repetirContraseñaPasswordField.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    registrarseButton.doClick();
+                }
+            });
+
             config.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
