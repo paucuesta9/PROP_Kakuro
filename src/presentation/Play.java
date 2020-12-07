@@ -1,5 +1,6 @@
 package presentation;
 
+import domain.classes.Exceptions.NoTypeCellException;
 import jdk.jshell.execution.Util;
 
 import java.util.*;
@@ -38,7 +39,6 @@ public class Play {
     private KakuroBoard sg;
     private Component[] components;
 
-    private String kakAux;
     private JFrame conf;
 
 
@@ -51,7 +51,6 @@ public class Play {
         ctrlUI = CtrlUI.getInstance();
 
         Utils.loadFonts();
-        kakAux = kakuro;
         sg = new KakuroBoard(kakuro);
         board.add(sg);
         components = sg.getComponents();
@@ -161,7 +160,6 @@ public class Play {
 
         config.addActionListener(new ActionListener() {
             @Override
-
             public void actionPerformed(ActionEvent e) {
                 Config config = new Config();
                 config.drawConfig();
@@ -179,7 +177,11 @@ public class Play {
 
                     @Override
                     public void windowClosed(WindowEvent e) {
-                        sg = new KakuroBoard(kakAux);
+                        try {
+                            sg = new KakuroBoard(sg.boardToString());
+                        } catch (NoTypeCellException noTypeCellException) {
+                            noTypeCellException.printStackTrace();
+                        }
                         board.removeAll();
                         board.add(sg);
                         components = sg.getComponents();

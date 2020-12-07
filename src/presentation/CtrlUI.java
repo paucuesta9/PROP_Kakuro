@@ -7,6 +7,7 @@ import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.classes.Player;
 import domain.controllers.CtrlDomain;
+import domain.controllers.CtrlValidate;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -163,5 +164,13 @@ public class CtrlUI {
 
     public void setGame(int id) {
         cd.setGame(id);
+    }
+
+    public void setKakuro(String kakuro) {
+        cd.setKakuro(kakuro);
+    }
+
+    public boolean validate() {
+        return cd.validate();
     }
 }

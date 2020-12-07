@@ -207,9 +207,11 @@ public class CtrlDomain {
         int [] vec = {0,0,0,0,0,0,0,0,0,0};
         CtrlValidate.setKakuro(currentKakuro);
         CtrlValidate.validate(0,0, 0, vec, res);
-        CtrlValidate.setDifficulty();
         if (res[0]!=1) return false;
-        else return true;
+        else {
+            CtrlValidate.setDifficulty();
+            return true;
+        }
     }
 
     // OPTION 3 - RESOLVE
@@ -390,4 +392,7 @@ public class CtrlDomain {
         currentPlayer.setCurrentGame(null);
     }
 
+    public void setKakuro(String kakuro) {
+        currentKakuro = new Kakuro(kakuro);
+    }
 }

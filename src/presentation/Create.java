@@ -1,5 +1,7 @@
 package presentation;
 
+import domain.classes.Exceptions.NoTypeCellException;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -24,6 +26,8 @@ public class Create {
 
     private KakuroBoard kBoard;
     private Component[] cells;
+
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     private int posX, posY;
     private int sizeRow, sizeColumn;
@@ -194,9 +198,20 @@ public class Create {
         confirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
-                Generate2 a = new Generate2("¿Desea guardar el kakuro creado?", "", 1);
-                a.drawGenerate2();
+                String boardKakuro = null;
+                try {
+                    boardKakuro = ((KakuroBoard) board.getComponent(0)).boardToString();
+                    ctrlUI.setKakuro(boardKakuro);
+                    if (!ctrlUI.validate()) {
+                        Utils.showError("El kakuro creado no es válido");
+                    } else {
+                        frame.dispose();
+                        Generate2 a = new Generate2("¿Desea guardar el kakuro creado?", boardKakuro, 1);
+                        a.drawGenerate2();
+                    }
+                } catch (NoTypeCellException noTypeCellException) {
+                    Utils.showError("No se han rellenado todas las celdas");
+                }
             }
         });
 

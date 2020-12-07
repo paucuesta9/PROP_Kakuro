@@ -2,6 +2,7 @@ package presentation;
 
 import domain.classes.BlackCell;
 import domain.classes.Cell;
+import domain.classes.Exceptions.NoTypeCellException;
 import domain.classes.WhiteCell;
 
 import javax.swing.*;
@@ -9,12 +10,15 @@ import java.awt.*;
 
 public class KakuroBoard extends JPanel {
 
+    int rowSize;
+    int columnSize;
+
     KakuroBoard(String kakuro) {
         super(new GridBagLayout());
         String[] values = kakuro.split("\n");
         String[] valuesSize = values[0].split(",");
-        int rowSize = Integer.parseInt(valuesSize[0]);
-        int columnSize = Integer.parseInt(valuesSize[1]);
+        rowSize = Integer.parseInt(valuesSize[0]);
+        columnSize = Integer.parseInt(valuesSize[1]);
         int size = Math.max(rowSize, columnSize);
         size = 750 / size;
         GridBagConstraints c = new GridBagConstraints();
@@ -48,5 +52,33 @@ public class KakuroBoard extends JPanel {
                 } else add(new KakuroWhiteCell(i, j, Integer.parseInt(valuesRow[j]), size), c);
             }
         }
+    }
+
+    public String boardToString() throws NoTypeCellException {
+        StringBuilder content = new StringBuilder();
+        String line;
+        line = rowSize + "," + columnSize;
+        content.append(line).append("\n");
+        for (int i = 0; i < rowSize; ++i) {
+            for (int j = 0; j < columnSize; ++j) {
+                int pos = i * columnSize + j;
+                if (getComponent(pos) instanceof KakuroWhiteCell) {
+                    KakuroWhiteCell w = (KakuroWhiteCell) getComponent(pos);
+                    if (w.getValue() != 0) content.append(w.getValue());
+                    else content.append("?");
+                }
+                else if (getComponent(pos) instanceof KakuroBlackCell) {
+                    KakuroBlackCell bc = (KakuroBlackCell) getComponent(pos);
+                    if (bc.getColumn() == 0 && bc.getRow() == 0) {
+                        content.append("*");
+                    }
+                    if (bc.getColumn() != 0) content.append("C" + bc.getColumn());
+                    if (bc.getRow() != 0) content.append("F" + bc.getRow());
+                } else throw new NoTypeCellException();
+                if (j != columnSize - 1) content.append(",");
+            }
+            content.append("\n");
+        }
+        return content.toString();
     }
 }
