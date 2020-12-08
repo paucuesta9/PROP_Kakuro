@@ -30,7 +30,7 @@ public class NewGame {
     private JLabel difficulty;
     private JLabel logo;
 
-    private JFrame frame = new JFrame("New Game");
+    private JFrame frame;
 
     private int diff = 1;
 
@@ -93,7 +93,7 @@ public class NewGame {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
+//                frame.dispose();
 //                Config c = new Config();
 //                c.drawConfig();
             }
@@ -183,7 +183,6 @@ public class NewGame {
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 if (numSize.getText().isEmpty() || numColumn.getText().isEmpty()) Utils.showError("No se ha indicado alguno de los tamaños solicitados");
                 else {
                     int rowSize = Integer.parseInt(numSize.getText());
@@ -193,7 +192,7 @@ public class NewGame {
                         ctrlUI.startGame(diff, rowSize, columnSize);
                         String kakuro = ctrlUI.getKakuro();
                         Play play = new Play(kakuro);
-                        play.drawPlay();
+                        play.drawPlay(frame);
                     }
                     else Utils.showError("El tamaño debe ser minimo 3x3");
                 }
@@ -203,9 +202,8 @@ public class NewGame {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Main main = new Main();
-                main.drawMain();
+                main.drawMain(frame);
             }
         });
     }
@@ -224,12 +222,10 @@ public class NewGame {
         frame.setVisible(true);
     }
 
-    public void drawNewGame() {
+    public void drawNewGame(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("New Game");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 }

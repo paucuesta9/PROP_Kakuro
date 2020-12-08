@@ -21,7 +21,7 @@ public class LoadGame {
     private JScrollPane games;
     private JLabel text;
 
-    private JFrame frame = new JFrame("Load Game");
+    private JFrame frame;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
     private JPanel logotipo;
     private JPanel scroll;
@@ -139,7 +139,7 @@ public class LoadGame {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
+//                frame.dispose();
 //                Config c = new Config();
 //                c.drawConfig();
             }
@@ -155,7 +155,7 @@ public class LoadGame {
                     String kakuro = ctrlUI.getKakuro();
                     frame.dispose();
                     Play p = new Play(kakuro);
-                    p.drawPlay();
+                    p.drawPlay(frame);
                 }
 
             }
@@ -164,9 +164,8 @@ public class LoadGame {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Main main = new Main();
-                main.drawMain();
+                main.drawMain(frame);
             }
         });
     }
@@ -185,12 +184,10 @@ public class LoadGame {
         frame.setVisible(true);
     }
 
-    public void drawLoadGame() {
+    public void drawLoadGame(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Load Game");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 }

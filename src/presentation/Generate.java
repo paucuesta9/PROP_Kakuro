@@ -28,7 +28,7 @@ public class Generate {
     private JLabel errorValue;
 
     private CtrlUI ctrlUI;
-    private static JFrame frame = new JFrame("Generate");
+    private JFrame frame;
 
     private boolean g = false;
 
@@ -146,9 +146,8 @@ public class Generate {
                         Thread t = new Thread() {
                             public void run() {
                                 ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
-                                frame.dispose();
                                 Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro(), 1);
-                                as.drawGenerate2();
+                                as.drawGenerate2(frame);
                             }
                         };
                         t.start();
@@ -160,9 +159,8 @@ public class Generate {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!g) {
-                    frame.dispose();
                     Main m = new Main();
-                    m.drawMain();
+                    m.drawMain(frame);
                 }
             }
         });
@@ -174,7 +172,7 @@ public class Generate {
     }
 
     public static void main(String [] args) {
-        frame = new JFrame("Generate");
+        JFrame frame = new JFrame("Generate");
         frame.setContentPane(new Generate().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
@@ -183,12 +181,10 @@ public class Generate {
         frame.setVisible(true);
     }
 
-    public void drawGenerate() {
+    public void drawGenerate(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Generate");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 }

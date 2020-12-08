@@ -21,7 +21,7 @@ public class Generate2 {
     private KakuroBoard sg;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
-    private JFrame frame = new JFrame("Save");
+    private JFrame frame;
 
     private JFrame conf;
     private String kAux;
@@ -128,37 +128,32 @@ public class Generate2 {
                 else {
                     ctrlUI.saveGame();
                 }
-                frame.dispose();
                 Main main = new Main();
-                main.drawMain();
+                main.drawMain(frame);
             }
         });
 
         noButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Main main = new Main();
-                main.drawMain();
+                main.drawMain(frame);
             }
         });
 
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Main m = new Main();
-                m.drawMain();
+                m.drawMain(frame);
             }
         });
     }
 
-    public void drawGenerate2() {
+    public void drawGenerate2(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Save");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 

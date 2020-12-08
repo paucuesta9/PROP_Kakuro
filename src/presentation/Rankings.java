@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rankings implements ListSelectionListener {
-    private JFrame frame = new JFrame("Rankings");
+    private JFrame frame;
     private JPanel menu;
     private JPanel logotipo;
     private JButton volver;
@@ -194,9 +194,8 @@ public class Rankings implements ListSelectionListener {
         volver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Main m = new Main();
-                m.drawMain();
+                m.drawMain(frame);
             }
         });
 
@@ -257,14 +256,11 @@ public class Rankings implements ListSelectionListener {
         scrollPane.setVisible(true);
     }
 
-    public void drawRanking() {
+    public void drawRanking(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Rankings");
         frame.setContentPane(panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
-
     }
 
     public static void main(String [] args)  {

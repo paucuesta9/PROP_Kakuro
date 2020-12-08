@@ -19,7 +19,7 @@ public class Register {
     private JPanel logotipo;
     private JLabel toLogin;
 
-    private static JFrame frame = new JFrame("Register");
+    private JFrame frame;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     boolean mod = false;
@@ -157,9 +157,8 @@ public class Register {
                     else if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) {
                         try {
                             ctrlUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
-                            frame.dispose();
                             Main main = new Main();
-                            main.drawMain();
+                            main.drawMain(frame);
                         } catch (PlayerExists playerExists) {
                             Utils.showError("El usuario ya existe");
                         }
@@ -175,9 +174,8 @@ public class Register {
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                frame.dispose();
                 Login l = new Login();
-                l.drawLogin();
+                l.drawLogin(frame);
             }
         });
     }
@@ -188,17 +186,15 @@ public class Register {
         label.requestFocusInWindow();
     }
 
-    public void drawRegister() {
+    public void drawRegister(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Register");
         frame.setContentPane(panel2);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 
     public static void main(String [] args) {
-        frame = new JFrame("Register");
+        JFrame frame = new JFrame("Register");
         frame.setContentPane(new Register().panel2);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);

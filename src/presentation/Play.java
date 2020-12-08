@@ -31,7 +31,7 @@ public class Play {
     private Timer timer;
     private boolean paused = false;
 
-    private JFrame frame = new JFrame("Play");
+    private JFrame frame;
 
     private int rowSize, columnSize;
     private int posX, posY;
@@ -151,10 +151,9 @@ public class Play {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlUI.getKakuro(), 2);
                 ctrlUI.setTimeToGame(gameTime);
-                as.drawGenerate2();
+                as.drawGenerate2(frame);
             }
         });
 
@@ -376,12 +375,10 @@ public class Play {
         board = new JPanel();
     }
 
-    public void drawPlay() {
+    public void drawPlay(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Main");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 

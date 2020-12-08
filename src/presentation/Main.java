@@ -20,7 +20,7 @@ public class Main {
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
-    private JFrame frame = new JFrame("Main");
+    private JFrame frame;
 
     public Main() {
         Utils.loadFonts();
@@ -64,55 +64,48 @@ public class Main {
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 AskNewContinue a = new AskNewContinue();
-                a.drawAskNewContinue();
+                a.drawAskNewContinue(frame);
             }
         });
 
         createKakuroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Create create = new Create();
-                create.drawCreate();
+                create.drawCreate(frame);
             }
         });
 
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Generate g = new Generate();
-                g.drawGenerate();
+                g.drawGenerate(frame);
             }
         });
 
         rankingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Rankings ranking = new Rankings();
-                ranking.drawRanking();
+                ranking.drawRanking(frame);
             }
         });
 
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Login login = new Login();
-                login.drawLogin();
+                login.drawLogin(frame);
             }
         });
     }
 
-    public void drawMain() {
+    public void drawMain(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Main");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 

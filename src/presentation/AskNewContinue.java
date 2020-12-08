@@ -15,7 +15,7 @@ public class AskNewContinue {
     private JButton volverButton;
     private JLabel question;
 
-    private JFrame frame = new JFrame("New or Continue");
+    private JFrame frame;
 
     public AskNewContinue() {
         Utils.loadFonts();
@@ -43,7 +43,7 @@ public class AskNewContinue {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
+//                frame.dispose();
 //                Config c = new Config();
 //                c.drawConfig();
             }
@@ -52,37 +52,32 @@ public class AskNewContinue {
         síButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 LoadGame lg = new LoadGame();
-                lg.drawLoadGame();
+                lg.drawLoadGame(frame);
             }
         });
 
         noButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 NewGame ng = new NewGame();
-                ng.drawNewGame();
+                ng.drawNewGame(frame);
             }
         });
 
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
                 Main main = new Main();
-                main.drawMain();
+                main.drawMain(frame);
             }
         });
     }
 
-    public void drawAskNewContinue() {
+    public void drawAskNewContinue(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("New or Continue");
         frame.setContentPane(panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 

@@ -25,7 +25,7 @@ public class Login {
 
 
     private CtrlUI ctrlUI;
-    private static JFrame frame = new JFrame("Login");
+    private JFrame frame = new JFrame("Login");
 
     boolean mod = false;
     boolean mod1 = false;
@@ -130,9 +130,8 @@ public class Login {
                     try {
                         ctrlUI.login(usuarioTextField.getText(), contraseñaPasswordField.getPassword());
                         Utils.updateVolume(Utils.volume);
-                        frame.dispose();
                         Main main = new Main();
-                        main.drawMain();
+                        main.drawMain(frame);
                     } catch (FileNotFoundException fileNotFoundException) {
                         Utils.showError("Usuario y/o contraseña incorrecta");
                     } catch (WrongPasswordException wrongPasswordException) {
@@ -146,9 +145,8 @@ public class Login {
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                frame.dispose();
                 Register r = new Register();
-                r.drawRegister();
+                r.drawRegister(frame);
             }
         });
     }
@@ -159,17 +157,15 @@ public class Login {
         label.requestFocusInWindow();
     }
 
-    public void drawLogin() {
+    public void drawLogin(JFrame frame) {
+        this.frame = frame;
+        frame.setTitle("Login");
         frame.setContentPane(panel2);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 
     public static void main(String [] args) {
-        frame = new JFrame("Login");
+        JFrame frame = new JFrame("Login");
         frame.setContentPane(new Login().panel2);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);

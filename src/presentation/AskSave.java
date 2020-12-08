@@ -19,7 +19,7 @@ public class AskSave {
 
     public AskSave(String text, KakuroBoard kBoard) {
         Utils.loadFonts();
-        setListeners();
+        //setListeners();
 
         board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
@@ -43,6 +43,7 @@ public class AskSave {
         volverButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
     }
 
+    /*
     private void setListeners() {
         síButton.addActionListener(new ActionListener() {
             @Override
@@ -50,7 +51,7 @@ public class AskSave {
                 //TODO Save Kakuro
                 frame.dispose();
                 Main m = new Main();
-                m.drawMain();
+                m.drawMain(frame);
             }
         });
 
@@ -72,6 +73,8 @@ public class AskSave {
             }
         });
     }
+
+     */
 
     public void drawAskSave() {
         frame.setContentPane(panel1);

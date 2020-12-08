@@ -9,6 +9,7 @@ import domain.classes.Player;
 import domain.controllers.CtrlDomain;
 import domain.controllers.CtrlValidate;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -56,7 +57,12 @@ public class CtrlUI {
         Utils.setMusic();
         Utils.loadFonts();
         Login login = new Login();
-        login.drawLogin();
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(1200,800);
+        frame.setResizable(false);
+        Utils.center(frame);
+        login.drawLogin(frame);
     }
 
     public int getRowSize() {

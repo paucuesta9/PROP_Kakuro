@@ -8,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Config {
+public class Config extends JDialog {
     private JButton volver;
     private JPanel panel;
     private JPanel configuracion;
@@ -44,8 +44,11 @@ public class Config {
 // logotipo.add(new JColorChooser());
 
     public Config() {
-        Utils.loadFonts();
+        setContentPane(panel);
+        setModal(true);
+        getRootPane().setDefaultButton(volver);
 
+        Utils.loadFonts();
         musicText.setFont(Utils.roboto);
         musicText.setForeground(Color.BLACK);
         musicText.setBackground(null);
@@ -141,7 +144,7 @@ public class Config {
         volver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frame.dispose();
+                dispose();
                 ctrlUI.setConfigToPlayer(Utils.getConfig());
             }
         });
@@ -262,12 +265,14 @@ public class Config {
     }
 
     public void drawConfig() {
-        frame.setContentPane(panel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(500,650);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
+        pack();
+        setResizable(false);
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = toolkit.getScreenSize();
+        int x = (screenSize.width) / 2 - getSize().width / 2;
+        int y = (screenSize.height) / 2 - getSize().height / 2;
+        setLocation(x, y);
+        setVisible(true);
     }
 
     public static void main(String [] args) {
