@@ -96,6 +96,7 @@ public class CtrlDomain {
         int id = getGameId();
         currentGame = new Game(id, 0, 0, currentKakuro.getId(), kakuroSizeRow, kakuroSizeColumn, difficulty );
         currentPlayer.setCurrentGame(currentGame);
+        currentPlayer.getStats().setTotal(1);
         CtrlPlay.startGame(currentKakuro);
         setCorrectValues();
     }
@@ -166,6 +167,8 @@ public class CtrlDomain {
      * @return -2 si no se ha colocado un valor
      */
     public int helpMyValue(int x, int y) {
+        updatePoints(-1);
+        currentPlayer.getStats().setHelps(1);
         return CtrlPlay.helpMyValue(x, y);
     }
 
@@ -176,24 +179,36 @@ public class CtrlDomain {
      * @return Devuelve cierto si la posición [x][y] es una celda blanca, en caso contrario, devuelve falso
      */
     public int helpCorrectNumber(int x, int y) {
+        updatePoints(-2);
+        currentPlayer.getStats().setHelps(1);
         return CtrlPlay.helpCorrectNumber(x, y);
     }
 
-    public void finishGame() {
+    public int finishGame(boolean selfFinished) {
         int points = 0;
-        int diff = currentKakuro.getDifficulty();
-        if (diff == 1) points = 10;
-        else if (diff == 2) points = 20;
-        else if (diff == 3) points = 30;
-        points += Integer.max(currentKakuro.getRowSize(), currentKakuro.getColumnSize()) / 2;
-        updatePoints(points);
-        updateStatsPlayer();
+        if (selfFinished) {
+            int diff = currentKakuro.getDifficulty();
+            if (diff == 1) points = 10;
+            else if (diff == 2) points = 20;
+            else if (diff == 3) points = 30;
+            points += Integer.max(currentKakuro.getRowSize(), currentKakuro.getColumnSize()) / 2;
+            updatePoints(points);
+            updateStatsPlayer();
+        }
+        else {
+            currentGame.setPoints(0);
+        }
+        points = currentGame.getPoints();
         currentGame = null;
         currentKakuro = null;
+        return points;
     }
 
     private void updateStatsPlayer() {
-        //TODO: Hacer función
+        currentPlayer.getStats().setPoints(currentGame.getPoints());
+        currentPlayer.getStats().setFinished(1);
+        String playerJSON = gson.toJson(currentPlayer);
+        data.savePlayer(currentPlayer.getUsername(), playerJSON);
     }
 
     // OPTION 2 - CREATE VALIDATE
@@ -320,14 +335,6 @@ public class CtrlDomain {
         return data.getKakuro(filePath);
     }
 
-//    /** @brief Getter de partidas empezadas por el usuario actual
-//     *
-//     * @return Devuelve una lista de Strings con los identificadores de las partidas que tiene empezadas el usuario
-//     */
-//    public ArrayList<Integer> getStartedGames() {
-//        return currentPlayer.getStartedGames();
-//    }
-
     /** @brief Guarda un Kakuro en un fichero
      *
      */
@@ -346,6 +353,10 @@ public class CtrlDomain {
         return (x < getRowSize() && x >= 0 && y < getColumnSize() && y >= 0);
     }
 
+    /** @brief Getter de partidas empezadas por el usuario actual
+     *
+     * @return Devuelve una lista de listas de enteros con los atributos de todas las partidas que tiene empezadas el usuario
+     */
     public ArrayList<ArrayList<Integer>> getStartedGames() {
         ArrayList<Game> listGames = (ArrayList<Game>) currentPlayer.getSavedGames();
         ArrayList<ArrayList<Integer>> startedGames = new ArrayList<ArrayList<Integer>>();

@@ -113,9 +113,8 @@ public class CtrlUI {
         return cd.isFinished();
     }
 
-    public void finishGame() {
-        cd.finishGame();
-        //TODO: Hacer pantallita final partida
+    public int finishGame(boolean selfFinished) {
+        return cd.finishGame(selfFinished);
     }
 
     public ArrayList<ArrayList<Integer>> getStartedGames() {

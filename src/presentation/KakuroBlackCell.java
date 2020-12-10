@@ -4,12 +4,33 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Line2D;
 
+/** @file KakuroBlackCell.java
+ @brief Clase  <em>KakuroBlackCell</em>.
+ */
+
+/** @brief Clase KakuroBlackCell que carga una celda negra con sus atributos.
+ * @author Judith Almoño Gómez
+ */
+
 public class KakuroBlackCell extends KakuroCell {
+    /**
+     * row representa la suma total del bloque de celdas blancas de la fila
+     */
     private int row = 0;
+    /**
+     * column representa la suma total del bloque de celdas blancas de la columna
+     */
     private int column = 0;
+
     private JLabel jLabelRow;
     private JLabel jLabelColumn;
 
+    /** @brief Constructora
+     *
+     * @param x representa la posición de la fila
+     * @param y representa la posición de la columna
+     * @param size representa el tamaño de la celda
+     */
     KakuroBlackCell(int x, int y, int size) {
         super(x, y, size);
         setBackground(Utils.colorBlackCell);
@@ -55,6 +76,14 @@ public class KakuroBlackCell extends KakuroCell {
                 0));
     }
 
+    /** @brief Función para introducir los valores de la celda negra
+     *
+     * @param i representa la posición de la fila
+     * @param j representa la posición de la columna
+     * @param horizontal representa la suma total del bloque de celdas blancas de la fila
+     * @param vertical representa la suma total del bloque de celdas blancas de la columna
+     * @param size representa el tamaño de la celda
+     */
     public KakuroBlackCell(int i, int j, int horizontal, int vertical, int size) {
         this(i, j, size);
         this.row = horizontal;
@@ -63,6 +92,9 @@ public class KakuroBlackCell extends KakuroCell {
         if (column != 0) jLabelColumn.setText(String.valueOf(column));
     }
 
+    /** @brief Función que pinta la linea diagonal
+     *
+     */
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -72,19 +104,35 @@ public class KakuroBlackCell extends KakuroCell {
         }
     }
 
+    /** @brief Getter de row
+     *
+     * @return la suma total del bloque de celdas blancas de la fila
+     */
     public int getRow() {
         return row;
     }
 
+    /** @brief Setter de row
+     *
+     * @param row representa la suma total del bloque de celdas blancas de la fila
+     */
     public void setRow(int row) {
         this.row = row;
         jLabelRow.setText(String.valueOf(row));
     }
 
+    /** @brief Getter de column
+     *
+     * @return la suma total del bloque de celdas blancas de la columna
+     */
     public int getColumn() {
         return column;
     }
 
+    /** @brief Setter de column
+     *
+     * @param column representa la suma total del bloque de celdas blancas de la columna
+     */
     public void setColumn(int column) {
         this.column = column;
         jLabelColumn.setText(String.valueOf(column));

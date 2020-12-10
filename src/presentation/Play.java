@@ -12,29 +12,88 @@ import java.awt.event.*;
 import java.io.*;
 import java.util.Timer;
 
+/** @file Play.java
+ @brief Clase  <em>Play</em>.
+ */
+
+/** @brief Clase Play que carga una partida y contiene las funciones y atributos necesarios para jugar una partida.
+ * @author Judith Almoño Gómez y Pau Cuesta Arcos
+ */
+
 public class Play {
+
+    /**
+     * panel1 es la ventana entera
+     */
     private JPanel panel1;
+    /**
+     * pauseResume es el boton Pausar
+     */
     private JButton pauseResume;
+    /**
+     * exit es el boton Salir
+     */
     private JButton exit;
+    /**
+     * board es el tablero
+     */
     private JPanel board;
+    /**
+     * menu es el conjunto de botones de la derecha
+     */
     private JPanel menu;
     private JPanel logotipo;
+    /**
+     * help1 es el primer boton circular
+     */
     private JButton help1;
+    /**
+     * help2 es el segundo boton circular (?)
+     */
     private JButton help2;
+    /**
+     * timeLogo es el simbolo del cronometro
+     */
     private JLabel timeLogo;
+    /**
+     * time es el texto del tiempo de la partida
+     */
     private JLabel time;
+    /**
+     * config es el boton situado en la esquina superior derecha
+     */
     private JButton config;
+    /**
+     * resolve es el boton Resolver
+     */
     private JButton resolve;
 
     private static CtrlUI ctrlUI;
+    /**
+     * gameTime representa el tiempo de la partida
+     */
     private int gameTime = 0;
     private Timer timer;
+    /**
+     * paused representa si la partida está pausada o no
+     */
     private boolean paused = false;
 
     private JFrame frame;
 
+    /**
+     * rowSize representa el numero de filas del kakuro de la partida
+     * columnSize representa el numero de columnas del kakuro de la partida
+     */
     private int rowSize, columnSize;
+    /**
+     * posX representa la posición de una celda respecto a la fila
+     * posY representa la posición de una celda respecto a la columna
+     */
     private int posX, posY;
+    private boolean training;
+    private boolean isFinished = false;
+    private boolean selfFinished = true;
 
     private KakuroBoard sg;
     private Component[] components;
@@ -42,11 +101,16 @@ public class Play {
     private JFrame conf;
 
 
-    public Play(String kakuro) {
+    /** @brief Constructora
+     *
+     * @param kakuro representa el kakuro de la partida
+     */
+    public Play(String kakuro, boolean training) {
         String[] values = kakuro.split("\n");
         String[] valuesSize = values[0].split(",");
         this.rowSize =  Integer.parseInt(valuesSize[0]);
         this.columnSize = Integer.parseInt(valuesSize[1]);
+        this.training = training;
 
         ctrlUI = CtrlUI.getInstance();
 
@@ -89,8 +153,11 @@ public class Play {
         board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
     }
 
+    /** @brief Listeners
+     *
+     * Funcionalidades de los botones help1, help2, resolve, pauseResume, exit y config
+     */
     private void listeners() {
-
 
         help1.addActionListener(new ActionListener() {
             @Override
@@ -126,8 +193,9 @@ public class Play {
                 board.validate();
                 help1.setEnabled(false);
                 help2.setEnabled(false);
+                selfFinished = false;
                 pauseResume.setEnabled(false);
-                stopTimer();
+                finishGame(false);
             }
         });
 
@@ -151,9 +219,16 @@ public class Play {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlUI.getKakuro(), 2);
-                ctrlUI.setTimeToGame(gameTime);
-                as.drawGenerate2(frame);
+                if (!training && selfFinished) {
+                    Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlUI.getKakuro(), 2);
+                    ctrlUI.setTimeToGame(gameTime);
+                    as.drawGenerate2(frame);
+                }
+                else {
+                    Main m = new Main();
+                    m.drawMain(frame);
+                }
+
             }
         });
 
@@ -211,6 +286,9 @@ public class Play {
         });
     }
 
+    /** @brief Listener del tablero
+     *
+     */
     private void setListenerBoard() {
         for (int i = 0; i < components.length; ++i) {
             if (components[i] instanceof KakuroWhiteCell) {
@@ -231,13 +309,13 @@ public class Play {
                     public void focusLost(FocusEvent e) {
                         if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(color);
                         if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell)) cell.setBackground(Utils.colorWhiteCell);
-                        checkValidityCell(cell, posX, posY);
+                        if (!isFinished) checkValidityCell(cell, posX, posY);
                         int posXAux = posX;
                         int posYAux = posY;
                         while (true) {
                             --posYAux;
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
+                            else if (!isFinished){
                                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                                 checkValidityCell(whiteCell, posXAux, posYAux);
                             }
@@ -247,7 +325,7 @@ public class Play {
                             ++posYAux;
                             if (posYAux == columnSize) break;
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
+                            else if (!isFinished){
                                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                                 checkValidityCell(whiteCell, posXAux, posYAux);
                             }
@@ -256,7 +334,7 @@ public class Play {
                         while (true) {
                             --posXAux;
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
+                            else if (!isFinished){
                                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                                 checkValidityCell(whiteCell, posXAux, posYAux);
                             }
@@ -266,7 +344,7 @@ public class Play {
                             ++posXAux;
                             if (posXAux == rowSize) break;
                             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else {
+                            else if (!isFinished){
                                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                                 checkValidityCell(whiteCell, posXAux, posYAux);
                             }
@@ -329,11 +407,11 @@ public class Play {
                             cell.setBackground(Utils.colorSelCell);
                             cell.setValue(value);
                             ctrlUI.setValue(posX, posY, value);
-                            boolean isFinished = ctrlUI.isFinished();
+                            isFinished = ctrlUI.isFinished();
                             if (isFinished) {
                                 help1.setEnabled(false);
                                 help2.setEnabled(false);
-                                finishGame();
+                                finishGame(selfFinished);
                             }
                         }
                     }
@@ -342,11 +420,64 @@ public class Play {
         }
     }
 
-    private void finishGame() {
+    /** @brief Comprueba que si el tablero se ha acabado
+     *
+     */
+    private void finishGame(boolean selfFinished) {
         stopTimer();
-        ctrlUI.finishGame();
+        if (!training) {
+            int points = ctrlUI.finishGame(selfFinished);
+            if (selfFinished) {
+                FinishedGame fg = new FinishedGame(points);
+                fg.drawFinishedGame();
+                fg.addWindowListener(new WindowListener() {
+                    @Override
+                    public void windowOpened(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosing(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosed(WindowEvent e) {
+                        Main m = new Main();
+                        m.drawMain(frame);
+                    }
+
+                    @Override
+                    public void windowIconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeiconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowActivated(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeactivated(WindowEvent e) {
+
+                    }
+                });
+            }
+        }
+
     }
 
+    /** @brief Pinta las casillas dependiendo de la validez de su valor
+     *
+     * @param cell representa la celda a pintar
+     * @param positionX representa la posición de la celda respecto la fila
+     * @param positionY representa la posición de la celda respecto la columna
+     */
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
         if (cell.getBackground() != Utils.colorCorrectCell) {
             if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
@@ -356,6 +487,9 @@ public class Play {
 
     }
 
+    /** @brief Empieza/reanuda el timer
+     *
+     */
     private void startTimer() {
         timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -367,14 +501,23 @@ public class Play {
         }, 0, 1000);
     }
 
+    /** @brief Para el timer
+     *
+     */
     private void stopTimer() {
         timer.cancel();
     }
 
+    /** @brief Inserción del tablero
+     *
+     */
     private void createUIComponents() {
         board = new JPanel();
     }
 
+    /** @brief Pinta Play
+     *
+     */
     public void drawPlay(JFrame frame) {
         this.frame = frame;
         frame.setTitle("Main");
@@ -382,12 +525,15 @@ public class Play {
         frame.setVisible(true);
     }
 
+    /** @brief Función inicial que lanza la pantalla de Play
+     *
+     */
     public static void main(String [] args) {
         JFrame frame = new JFrame("Play");
         ctrlUI = CtrlUI.getInstance();
         ctrlUI.startGame(2, 3, 3);
         String kakuro = ctrlUI.getKakuro();
-        frame.setContentPane(new Play(kakuro).panel1);
+        frame.setContentPane(new Play(kakuro, false).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);

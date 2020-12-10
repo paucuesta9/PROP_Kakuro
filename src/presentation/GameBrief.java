@@ -6,18 +6,54 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+/** @file GameBrief.java
+ @brief Clase  <em>GameBrief</em>.
+ */
+
+/** @brief Clase GameBreif que carga la partida guardada con todos sus atributos.
+ * @author Judith Almoño Gómez
+ */
+
 public class GameBrief extends JPanel {
 
+    /**
+     * idLabel es "Partida: " + el id de la partida
+     */
     private JLabel idLabel;
+    /**
+     * sizeLabel es "Tamaño: " + el tamaño del kakuro de la partida
+     */
     private JLabel sizeLabel;
+    /**
+     * diffLabel es "Dificultad: " + la dificultad del kakuro de la partida
+     */
     private JLabel diffLabel;
+    /**
+     * timeLable es el tiempo de la partida
+     */
     private JLabel timeLabel;
+
     public JPanel panel1;
     public JPanel panel2;
 
+    /**
+     * pathImage es el fondo del panel de la partida a escoger
+     */
     public String pathImage = "fondo-game-brief.png";
+
+    /**
+     * difficulty es la dificultad del kakuro de la partida
+     */
     private int difficulty;
 
+    /** @brief Constructora
+     *
+     * @param id representa el id de la partida
+     * @param rowSize representa el numero de filas del kakuro de la partida
+     * @param columnSize representa el numero de columnas del kakuro de la partida
+     * @param diff representa la dificultad del kakuro de la partida
+     * @param time representa el tiempo de la partida
+     */
     public GameBrief(int id, int rowSize, int columnSize, int diff, String time) {
         super();
 
@@ -47,6 +83,10 @@ public class GameBrief extends JPanel {
         panel2 = new ImageGame();
     }
 
+    /** @brief Función que cambia las propiedades al seleccionar o deseleccionar la partida
+     *
+     * @param option representa si la partida está seleccionada o no
+     */
     public void changeImage(int option) {
         if (option == 0) {
             pathImage = "fondo-game-brief.png";
@@ -69,6 +109,9 @@ public class GameBrief extends JPanel {
 
     }
 
+    /** @brief Función para cargar el fondo del panel de la partida
+     *
+     */
     class ImageGame extends JPanel
     {
         public void paintComponent (Graphics g)

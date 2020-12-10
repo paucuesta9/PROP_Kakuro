@@ -10,10 +10,11 @@ public class AskNewContinue {
     private JPanel panel1;
     private JLabel photo;
     private JButton config;
-    private JButton síButton;
-    private JButton noButton;
+    private JButton loadButton;
+    private JButton newButton;
     private JButton volverButton;
     private JLabel question;
+    private JButton training;
 
     private JFrame frame;
 
@@ -30,12 +31,14 @@ public class AskNewContinue {
 
         question.setFont(Utils.roboto.deriveFont(18f));
 
-        Utils.setButtons(síButton);
-        Utils.setButtons(noButton);
+        Utils.setButtons(loadButton);
+        Utils.setButtons(newButton);
         Utils.setButtons(volverButton);
+        Utils.setButtons(training);
 
-        síButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOkError.png")));
-        noButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-cyan-little.png")));
+        training.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
+        loadButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOkError.png")));
+        newButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-cyan-little.png")));
         volverButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
     }
 
@@ -48,8 +51,15 @@ public class AskNewContinue {
 //                c.drawConfig();
             }
         });
+        training.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                NewGame ng = new NewGame(true);
+                ng.drawNewGame(frame);
+            }
+        });
 
-        síButton.addActionListener(new ActionListener() {
+        loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 LoadGame lg = new LoadGame();
@@ -57,10 +67,10 @@ public class AskNewContinue {
             }
         });
 
-        noButton.addActionListener(new ActionListener() {
+        newButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NewGame ng = new NewGame();
+                NewGame ng = new NewGame(false);
                 ng.drawNewGame(frame);
             }
         });
