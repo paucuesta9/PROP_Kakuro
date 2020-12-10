@@ -237,8 +237,7 @@ public class Play {
             public void actionPerformed(ActionEvent e) {
                 Config config = new Config();
                 config.drawConfig();
-                conf = config.getFrame();
-                conf.addWindowListener(new WindowListener() {
+                config.addWindowListener(new WindowListener() {
                     @Override
                     public void windowOpened(WindowEvent e) {
 

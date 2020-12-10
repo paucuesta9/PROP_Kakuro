@@ -34,7 +34,6 @@ public class Config extends JDialog {
     private JPanel nWhPanel;
     private JButton mute;
     private JButton reset;
-    private JFrame frame = new JFrame("Configuración");
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
@@ -258,10 +257,6 @@ public class Config extends JDialog {
                 }
             }
         });
-    }
-
-    public JFrame getFrame() {
-        return frame;
     }
 
     public void drawConfig() {
