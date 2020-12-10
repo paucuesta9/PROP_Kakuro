@@ -1,11 +1,10 @@
 package presentation;
 
-import jdk.jshell.execution.Util;
-
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
+import java.net.URL;
 
 public class Generate {
     private JPanel panel1;
@@ -25,7 +24,6 @@ public class Generate {
     private JLabel columnSizeText;
     private JTextField numRow;
     private JLabel difficulty;
-    private JLabel errorValue;
 
     private CtrlUI ctrlUI;
     private JFrame frame;
@@ -142,7 +140,11 @@ public class Generate {
                         g = true;
                         numRow.setEditable(false);
                         numColumn.setEditable(false);
-                        generateButton.setText("Cargando...");
+                        URL url = Generate.class.getClassLoader().getResource("images/load.gif");
+                        ImageIcon imageIcon = new ImageIcon(url);
+                        generateButton.setText("");
+                        generateButton.setIcon(imageIcon);
+                        exit.setEnabled(false);
                         Thread t = new Thread() {
                             public void run() {
                                 ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
