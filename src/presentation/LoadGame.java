@@ -11,24 +11,69 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
+/** @file LoadGame.java
+ @brief Clase  <em>LoadGame</em>.
+ */
+
+/** @brief Clase LoadGame que carga la pantalla de LoagGame y contiene las funciones y atributos necesarios para cargar una partida.
+ * @author Judith Almoño Gómez
+ */
+
 public class LoadGame {
+    /**
+     * panel1 es la ventana entera
+     */
     private JPanel panel1;
+    /**
+     * logo es el ""
+     */
     private JLabel logo;
+    /**
+     * config es el boton de configuración situado en la esquina superior derecha
+     */
     private JButton config;
+    /**
+     * picLabel es la imagen de un kakuro de la izquierda
+     */
     private JLabel picLabel;
+    /**
+     * play es el boton de jugar que inicia la partida
+     */
     private JButton play;
+    /**
+     * exit es el boton de volver situado en la zona inferior de la derecha
+     */
     private JButton exit;
+    /**
+     * games es el conjunto de partidas cargadas que aparecen en la derecha
+     */
     private JScrollPane games;
+    /**
+     * text es el "Seleccionar partida:"
+     */
     private JLabel text;
+    private JPanel logotipo;
 
     private JFrame frame;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
-    private JPanel logotipo;
+
+    /**
+     * scroll es el conjunto de partidas cargadas dentro del games
+     */
     private JPanel scroll;
+    /**
+     * listGames es el conjunto partidas cargadas con todos sus atributos
+     */
     ArrayList<ArrayList<Integer>> listGames;
 
+    /**
+     * gameSelected indica si la partida esta seleccionada o no
+     */
     private int gameSelected = -1;
 
+    /** @brief Constructora
+     *
+     */
     public LoadGame() {
 
         scroll = new JPanel();
@@ -63,6 +108,10 @@ public class LoadGame {
 
     }
 
+    /** @brief Cargar partidas empezadas
+     *
+     * Muestra las partidas que hay empezadas y carga la que el usuario quiere jugar
+     */
     private void loadGames() {
         listGames = ctrlUI.getStartedGames();
         scroll.setLayout(new BoxLayout(scroll, BoxLayout.Y_AXIS));
@@ -135,6 +184,10 @@ public class LoadGame {
 
     }
 
+    /** @brief Listeners necesarios
+     *
+     * Funcionalidades de los botones config, play y exit.
+     */
     private void setListeners() {
         config.addActionListener(new ActionListener() {
             @Override
@@ -154,7 +207,7 @@ public class LoadGame {
                     ctrlUI.setGame(game.get(0));
                     String kakuro = ctrlUI.getKakuro();
                     frame.dispose();
-                    Play p = new Play(kakuro);
+                    Play p = new Play(kakuro, false);
                     p.drawPlay(frame);
                 }
 
@@ -170,10 +223,16 @@ public class LoadGame {
         });
     }
 
+    /** @brief Inserción Imagen Kakuro
+     *
+     */
     private void createUIComponents() {
         picLabel = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
     }
 
+    /** @brief Función inicial que lanza la pantalla de LoadGames
+     *
+     */
     public static void main(String [] args) {
         JFrame frame = new JFrame("Load Game");
         frame.setContentPane(new LoadGame().panel1);
@@ -184,6 +243,9 @@ public class LoadGame {
         frame.setVisible(true);
     }
 
+    /** @brief Pinta LoadGames
+     *
+     */
     public void drawLoadGame(JFrame frame) {
         this.frame = frame;
         frame.setTitle("Load Game");

@@ -65,7 +65,7 @@ public class Stats {
     }
 
     public void setFinished(int finished) {
-        this.finished = finished;
+        this.finished += finished;
     }
 
     public int getTotal() {
@@ -73,7 +73,7 @@ public class Stats {
     }
 
     public void setTotal(int total) {
-        this.total = total;
+        this.total += total;
     }
 
     public int getHelps() {
@@ -81,7 +81,7 @@ public class Stats {
     }
 
     public void setHelps(int helps) {
-        this.helps = helps;
+        this.helps += helps;
     }
 
     public int getPoints() {
@@ -89,7 +89,7 @@ public class Stats {
     }
 
     public void setPoints(int points) {
-        this.points = points;
+        this.points += points;
     }
 
     public int getCreated() {
@@ -97,7 +97,7 @@ public class Stats {
     }
 
     public void setCreated(int created) {
-        this.created = created;
+        this.created += created;
     }
 
     public int getMinTimeEasy() {
@@ -105,7 +105,7 @@ public class Stats {
     }
 
     public void setMinTimeEasy(int minTimeEasy) {
-        this.minTimeEasy = minTimeEasy;
+        this.minTimeEasy += minTimeEasy;
     }
 
     public int getMinTimeMedium() {
@@ -113,7 +113,7 @@ public class Stats {
     }
 
     public void setMinTimeMedium(int minTimeMedium) {
-        this.minTimeMedium = minTimeMedium;
+        this.minTimeMedium += minTimeMedium;
     }
 
     public int getMinTimeDifficult() {
@@ -121,7 +121,7 @@ public class Stats {
     }
 
     public void setMinTimeDifficult(int minTimeDifficult) {
-        this.minTimeDifficult = minTimeDifficult;
+        this.minTimeDifficult += minTimeDifficult;
     }
 
 }

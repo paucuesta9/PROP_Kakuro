@@ -5,19 +5,36 @@ Pol:
     - CtrlResolve
     - Cell
     - CtrlGenerate
+
+    - CreatedRanking
+    - PointsRanking
+    - Ranking
+    - WinsRanking
 Alvaro:
     - CtrlValidate
     - Kakuro
     - CtlrGenerate
+
+    - Stats
 Pau:
     - WhiteCell
     - CtrlData
     - CtrlDomain
     - Main
+    - Player
+
+    - KakuroWhiteCell
+    - KakuroBoard
+    - Utils
+    - Config
 Judith:
     - BlackCell
     - CtrlPlay
     - CtrlUI
+    - Game
+
+    - KakuroBlackCell
+    - KakuroCell
 
 DRIVERS
 Pol:
@@ -34,6 +51,30 @@ Judith:
     - DriverWhiteCell
     - DriverCtrlPlay
     - DriverCtrlData
+
+INTERFAZ
+Pol:
+    - ColorChooser
+    - Config
+    - Rankings
+
+Alvaro:
+    - Generate
+    - Generate2 ****************************
+    - Login
+    - Register
+Pau:
+    - Play
+    - Main
+    - Create
+    - AskNewContinue
+    - SetValues
+Judith:
+    - Play
+    - NewGame
+    - LoadGame
+    - GameBrief
+    - Error
 
 OTROS
     Pau:

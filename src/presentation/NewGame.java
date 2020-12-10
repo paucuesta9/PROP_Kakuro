@@ -6,38 +6,96 @@ import javax.swing.border.LineBorder;
 import javax.swing.text.NumberFormatter;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.text.NumberFormat;
+
+/** @file NewGame.java
+ @brief Clase  <em>NewGame</em>.
+ */
+
+/** @brief Clase NewGame que carga la pantalla de NewGame y contiene las funciones y atributos necesarios para empezar una partida.
+ * @author Judith Almoño Gómez
+ */
 
 public class NewGame {
+    /**
+     * panel1 es la ventana entera
+     */
     private JPanel panel1;
+    /**
+     * picLabel es la imagen de un kakuro de la izquierda
+     */
     private JLabel picLabel;
+    /**
+     * config es el boton de configuración situado en la esquina superior derecha
+     */
     private JButton config;
+    /**
+     * easy es el boton Fácil que indica la dificultad del kakuro
+     */
     private JButton easy;
+    /**
+     * easy es el boton Medio que indica la dificultad del kakuro
+     */
     private JButton medium;
+    /**
+     * easy es el boton Difícil que indica la dificultad del kakuro
+     */
     private JButton hard;
+    /**
+     * play es el boton de jugar que inicia la partida
+     */
     private JButton play;
+    /**
+     * exit es el boton de volver situado en la zona inferior de la derecha
+     */
     private JButton exit;
+
     private JPanel logotipo;
+    /**
+     * numColumn es el campo donde se introduce el número de columnas
+     */
     private JTextField numColumn;
+    /**
+     * textSize es el "Indique el tamaño del tablero a jugar:"
+     */
     private JLabel textSize;
+    /**
+     * rowSizeText es el "Número de filas:"
+     */
     private JLabel rowSizeText;
+    /**
+     * columnSizeText es el "Número de columnas:"
+     */
     private JLabel columnSizeText;
-    private JTextField numSize;
+    /**
+     * numColumn es el campo donde se introduce el número de filas
+     */
+    private JTextField numRow;
+    /**
+     * difficulty es el "Indique la dificultad del tablero:"
+     */
     private JLabel difficulty;
+    /**
+     * logo es el ""
+     */
     private JLabel logo;
 
     private JFrame frame;
 
+    /**
+     * diff indica la dificultad del kakuro
+     */
     private int diff = 1;
+    private boolean training;
 
-    public NewGame() {
+    /** @brief Constructora
+     *
+     */
+    public NewGame(boolean training) {
 
         Utils.loadFonts();
         setListeners();
+
+        this.training = training;
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -55,9 +113,9 @@ public class NewGame {
         rowSizeText.setForeground(Color.BLACK);
         rowSizeText.setFont(Utils.roboto.deriveFont(18f));
 
-        numSize.setForeground(Color.BLACK);
-        numSize.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
-        numSize.setFont(Utils.roboto.deriveFont(18f));
+        numRow.setForeground(Color.BLACK);
+        numRow.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        numRow.setFont(Utils.roboto.deriveFont(18f));
 
         columnSizeText.setForeground(Color.BLACK);
         columnSizeText.setFont(Utils.roboto.deriveFont(18f));
@@ -88,6 +146,10 @@ public class NewGame {
 
     }
 
+    /** @brief Listeners
+     *
+     * Funcionalidades de los botones config, easy, medium, hard, play exit y de los campos numRow y numColumn
+     */
     private void setListeners() {
 
         config.addActionListener(new ActionListener() {
@@ -99,7 +161,7 @@ public class NewGame {
             }
         });
 
-        numSize.addKeyListener(new KeyListener() {
+        numRow.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
 
@@ -107,11 +169,7 @@ public class NewGame {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-                    numSize.setEditable(true);
-                } else {
-                    numSize.setEditable(false);
-                }
+                numRow.setEditable(e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE);
             }
 
             @Override
@@ -128,11 +186,7 @@ public class NewGame {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
-                    numColumn.setEditable(true);
-                } else {
-                    numColumn.setEditable(false);
-                }
+                numColumn.setEditable(e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE);
             }
 
             @Override
@@ -183,15 +237,15 @@ public class NewGame {
         play.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (numSize.getText().isEmpty() || numColumn.getText().isEmpty()) Utils.showError("No se ha indicado alguno de los tamaños solicitados");
+                if (numRow.getText().isEmpty() || numColumn.getText().isEmpty()) Utils.showError("No se ha indicado alguno de los tamaños solicitados");
                 else {
-                    int rowSize = Integer.parseInt(numSize.getText());
+                    int rowSize = Integer.parseInt(numRow.getText());
                     int columnSize = Integer.parseInt(numColumn.getText());
                     if (rowSize >= 3 && columnSize >= 3) {
                         CtrlUI ctrlUI = CtrlUI.getInstance();
                         ctrlUI.startGame(diff, rowSize, columnSize);
                         String kakuro = ctrlUI.getKakuro();
-                        Play play = new Play(kakuro);
+                        Play play = new Play(kakuro, training);
                         play.drawPlay(frame);
                     }
                     else Utils.showError("El tamaño debe ser minimo 3x3");
@@ -208,13 +262,19 @@ public class NewGame {
         });
     }
 
+    /** @brief Inserción Imagen Kakuro
+     *
+     */
     private void createUIComponents() {
         picLabel = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
     }
 
+    /** @brief Función inicial que lanza la pantalla de LoadGames
+     *
+     */
     public static void main(String [] args) {
         JFrame frame = new JFrame("New Game");
-        frame.setContentPane(new NewGame().panel1);
+        frame.setContentPane(new NewGame(false).panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);
@@ -222,6 +282,9 @@ public class NewGame {
         frame.setVisible(true);
     }
 
+    /** @brief Pinta NewGame
+     *
+     */
     public void drawNewGame(JFrame frame) {
         this.frame = frame;
         frame.setTitle("New Game");
