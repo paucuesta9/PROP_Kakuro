@@ -24,6 +24,7 @@ public class Utils {
     public static Color colorIncorrectCell = Color.decode("#E53935");
     public static Color colorSelCell = Color.decode("#64b5f6");
     public static Color colorBorde = Color.decode("#808080");
+    public static ImageIcon logo = new ImageIcon(Utils.class.getClassLoader().getResource("images/logo.png"));
 
     public static int volume= -10;
 
@@ -35,6 +36,11 @@ public class Utils {
 
     public Utils() {
 
+    }
+
+    public static ImageIcon getLogo() {
+        Image logoImage = Utils.logo.getImage().getScaledInstance(252, 200, Image.SCALE_SMOOTH);
+        return new ImageIcon(logoImage);
     }
 
     public static void setButtons(JButton button) {

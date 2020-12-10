@@ -16,7 +16,7 @@ public class Main {
     private JButton logoutButton;
     private JButton config;
     private JLabel photo;
-    private JPanel logotipo;
+    private JLabel logo;
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
@@ -34,6 +34,8 @@ public class Main {
         config.setBorder(new EmptyBorder(10,0,0,10));
 
         photo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
+        logo.setIcon(Utils.getLogo());
 
         Utils.setButtons(playButton);
         playButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
