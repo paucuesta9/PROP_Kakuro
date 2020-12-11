@@ -3,7 +3,9 @@ package presentation;
 import domain.classes.Exceptions.NoTypeCellException;
 import jdk.jshell.execution.Util;
 
+import java.awt.image.BufferedImage;
 import java.util.*;
+import javax.imageio.ImageIO;
 import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -68,6 +70,7 @@ public class Play {
      */
     private JButton resolve;
     private JLabel logo;
+    private JButton lapizButton;
 
     private static CtrlUI ctrlUI;
     /**
@@ -135,6 +138,15 @@ public class Play {
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
 
         logo.setIcon(Utils.getLogo());
+
+        try {
+            BufferedImage switchON = ImageIO.read(new File("resources/images/switch-on.png"));
+            Image scaled = switchON.getScaledInstance(lapizButton.getPreferredSize().width, lapizButton.getPreferredSize().height, java.awt.Image.SCALE_SMOOTH);
+            lapizButton.setIcon(new ImageIcon(scaled));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
         Utils.setButtons(help1);
         help1.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));

@@ -40,6 +40,8 @@ public class Generate2 {
 
         board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
+        logo.setIcon(Utils.getLogo());
+
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);

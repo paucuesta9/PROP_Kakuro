@@ -86,6 +86,8 @@ public class LoadGame {
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10,0,0,20));
 
+        logo.setIcon(Utils.getLogo());
+
         picLabel.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         logo.setFont(Utils.roboto.deriveFont(40f));

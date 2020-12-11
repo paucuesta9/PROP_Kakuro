@@ -127,19 +127,6 @@
           </grid>
         </constraints>
       </hspacer>
-      <component id="e7330" class="javax.swing.JButton" binding="config">
-        <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="40"/>
-          </grid>
-        </constraints>
-        <properties>
-          <borderPainted value="false"/>
-          <contentAreaFilled value="false"/>
-          <focusPainted value="false"/>
-          <text value=""/>
-        </properties>
-      </component>
       <component id="8abd9" class="javax.swing.JLabel" binding="label" custom-create="true">
         <constraints>
           <grid row="0" column="0" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false">
@@ -154,8 +141,8 @@
       </component>
       <vspacer id="7d66e">
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="35"/>
+          <grid row="0" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="85"/>
           </grid>
         </constraints>
       </vspacer>
@@ -171,6 +158,15 @@
           <text value=""/>
         </properties>
       </component>
+      <hspacer id="ff702">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="60" height="-1"/>
+            <preferred-size width="60" height="-1"/>
+            <maximum-size width="60" height="-1"/>
+          </grid>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
 </form>

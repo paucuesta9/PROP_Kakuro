@@ -41,11 +41,6 @@ public class Login {
 
         label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
-        config.setFont(Utils.fontAwesome);
-        config.setForeground(Color.decode(Utils.colorDarkBlue));
-        config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,20));
-
         usuarioTextField.setForeground(Color.BLACK);
         usuarioTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         usuarioTextField.setFont(Utils.roboto.deriveFont(18f));
@@ -76,14 +71,6 @@ public class Login {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     iniciarSesiónButton.doClick();
-                }
-            });
-
-            config.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    Config config = new Config();
-                    config.drawConfig();
                 }
             });
 

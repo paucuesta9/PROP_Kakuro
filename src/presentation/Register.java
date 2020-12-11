@@ -36,11 +36,6 @@ public class Register {
 
         logo.setIcon(Utils.getLogo());
 
-        config.setFont(Utils.fontAwesome);
-        config.setForeground(Color.decode(Utils.colorDarkBlue));
-        config.setBackground(null);
-        config.setBorder(new EmptyBorder(10, 0, 0, 20));
-
         usuarioTextField.setForeground(Color.BLACK);
         usuarioTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         usuarioTextField.setFont(Utils.roboto.deriveFont(18f));
@@ -84,14 +79,6 @@ public class Register {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     registrarseButton.doClick();
-                }
-            });
-
-            config.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    Config config = new Config();
-                    config.drawConfig();
                 }
             });
 

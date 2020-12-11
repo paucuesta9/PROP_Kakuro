@@ -49,6 +49,8 @@ public class Create {
         rowSizeText.setForeground(Color.BLACK);
         rowSizeText.setFont(Utils.roboto.deriveFont(18f));
 
+        logo.setIcon(Utils.getLogo());
+
         numRow.setForeground(Color.BLACK);
         numRow.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         numRow.setFont(Utils.roboto.deriveFont(16f));
