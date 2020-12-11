@@ -21,6 +21,7 @@ public class Create {
     private JButton confirm;
     private JButton cancel;
     private JButton aceptar;
+    private JLabel logo;
 
     private JFrame frame;
 

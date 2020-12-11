@@ -17,6 +17,7 @@ public class Generate2 {
     private JButton volverButton;
     private JLabel question;
     private JPanel board;
+    private JLabel logo;
 
     private KakuroBoard sg;
     private CtrlUI ctrlUI = CtrlUI.getInstance();

@@ -15,6 +15,7 @@ public class AskNewContinue {
     private JButton volverButton;
     private JLabel question;
     private JButton training;
+    private JLabel logo;
 
     private JFrame frame;
 
@@ -31,12 +32,14 @@ public class AskNewContinue {
 
         question.setFont(Utils.roboto.deriveFont(18f));
 
+        logo.setIcon(Utils.getLogo());
+
         Utils.setButtons(loadButton);
         Utils.setButtons(newButton);
         Utils.setButtons(volverButton);
         Utils.setButtons(training);
 
-        training.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
+        training.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-naranja.png")));
         loadButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOkError.png")));
         newButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-cyan-little.png")));
         volverButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));

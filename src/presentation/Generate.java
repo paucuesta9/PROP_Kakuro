@@ -15,7 +15,6 @@ public class Generate {
     private JButton hard;
     private JButton generateButton;
     private JButton exit;
-    private JPanel logotipo;
     private JPanel rowSize;
     private JPanel columnSize;
     private JTextField numColumn;
@@ -24,6 +23,9 @@ public class Generate {
     private JLabel columnSizeText;
     private JTextField numRow;
     private JLabel difficulty;
+    private JLabel logo;
+    private JPanel panelGenerate;
+    private JPanel buttonDiff;
 
     private CtrlUI ctrlUI;
     private JFrame frame;
@@ -38,6 +40,8 @@ public class Generate {
         ctrlUI = CtrlUI.getInstance();
 
         label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
+        logo.setIcon(Utils.getLogo());
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
@@ -138,8 +142,7 @@ public class Generate {
                 if (!g) {
                     if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText()) >= 3 && Integer.parseInt(numColumn.getText()) >= 3) {
                         g = true;
-                        numRow.setEditable(false);
-                        numColumn.setEditable(false);
+                        exit.setVisible(false);
                         URL url = Generate.class.getClassLoader().getResource("images/load.gif");
                         ImageIcon imageIcon = new ImageIcon(url);
                         generateButton.setText("");

@@ -52,7 +52,6 @@ public class LoadGame {
      * text es el "Seleccionar partida:"
      */
     private JLabel text;
-    private JPanel logotipo;
 
     private JFrame frame;
     private CtrlUI ctrlUI = CtrlUI.getInstance();

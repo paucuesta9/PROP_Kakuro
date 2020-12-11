@@ -16,8 +16,8 @@ public class Register {
     private JButton config;
     private JButton registrarseButton;
     private JPasswordField repetirContraseñaPasswordField;
-    private JPanel logotipo;
     private JLabel toLogin;
+    private JLabel logo;
 
     private JFrame frame;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
@@ -33,6 +33,8 @@ public class Register {
 
         toLogin.setFont(Utils.roboto.deriveFont(12f));
         label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
+        logo.setIcon(Utils.getLogo());
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
