@@ -67,6 +67,7 @@ public class Play {
      * resolve es el boton Resolver
      */
     private JButton resolve;
+    private JLabel logo;
 
     private static CtrlUI ctrlUI;
     /**
@@ -133,6 +134,8 @@ public class Play {
         Utils.setButtons(exit);
         exit.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
 
+        logo.setIcon(Utils.getLogo());
+
         Utils.setButtons(help1);
         help1.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));
         help1.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/elipse-azul.png")));
@@ -178,6 +181,7 @@ public class Play {
                 KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                 w.setValue(correctNumber);
                 w.setBackground(Utils.colorCorrectCell);
+                checkContinousCells(posX, posY);
 
             }
         });
@@ -309,45 +313,7 @@ public class Play {
                         if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(color);
                         if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell)) cell.setBackground(Utils.colorWhiteCell);
                         if (!isFinished) checkValidityCell(cell, posX, posY);
-                        int posXAux = posX;
-                        int posYAux = posY;
-                        while (true) {
-                            --posYAux;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else if (!isFinished){
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                                checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                        posYAux = posY;
-                        while (true) {
-                            ++posYAux;
-                            if (posYAux == columnSize) break;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else if (!isFinished){
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                                checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                        posYAux = posY;
-                        while (true) {
-                            --posXAux;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else if (!isFinished){
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                                checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
-                        posXAux = posX;
-                        while (true) {
-                            ++posXAux;
-                            if (posXAux == rowSize) break;
-                            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-                            else if (!isFinished){
-                                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
-                                checkValidityCell(whiteCell, posXAux, posYAux);
-                            }
-                        }
+                        checkContinousCells(posX, posY);
                     }
                 });
                 cell.addMouseListener(new MouseListener() {
@@ -415,6 +381,48 @@ public class Play {
                         }
                     }
                 });
+            }
+        }
+    }
+
+    private void checkContinousCells(int positionX, int positionY) {
+        int posXAux = positionX;
+        int posYAux = positionY;
+        while (true) {
+            --posYAux;
+            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+            else if (!isFinished){
+                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                checkValidityCell(whiteCell, posXAux, posYAux);
+            }
+        }
+        posYAux = positionY;
+        while (true) {
+            ++posYAux;
+            if (posYAux == columnSize) break;
+            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+            else if (!isFinished){
+                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                checkValidityCell(whiteCell, posXAux, posYAux);
+            }
+        }
+        posYAux = positionY;
+        while (true) {
+            --posXAux;
+            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+            else if (!isFinished){
+                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                checkValidityCell(whiteCell, posXAux, posYAux);
+            }
+        }
+        posXAux = positionX;
+        while (true) {
+            ++posXAux;
+            if (posXAux == rowSize) break;
+            if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
+            else if (!isFinished){
+                KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
+                checkValidityCell(whiteCell, posXAux, posYAux);
             }
         }
     }

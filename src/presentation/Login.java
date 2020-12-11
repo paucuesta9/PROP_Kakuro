@@ -19,9 +19,9 @@ public class Login {
     private JButton iniciarSesiónButton;
     private JLabel label;
     private JPanel panel2;
-    private JPanel logotipo;
     private JButton config;
     private JLabel toRegister;
+    private JLabel logo;
 
 
     private CtrlUI ctrlUI;
@@ -36,6 +36,8 @@ public class Login {
         ctrlUI = CtrlUI.getInstance();
 
         toRegister.setFont(Utils.roboto.deriveFont(12f));
+
+        logo.setIcon(Utils.getLogo());
 
         label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
