@@ -36,16 +36,16 @@ public class Register {
 
         logo.setIcon(Utils.getLogo());
 
-        usuarioTextField.setForeground(Color.BLACK);
+        usuarioTextField.setForeground(Color.DARK_GRAY);
         usuarioTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         usuarioTextField.setFont(Utils.roboto.deriveFont(18f));
 
-        contraseñaPasswordField.setForeground(Color.BLACK);
+        contraseñaPasswordField.setForeground(Color.darkGray);
         contraseñaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         contraseñaPasswordField.setFont(Utils.roboto.deriveFont(18f));
         contraseñaPasswordField.setEchoChar((char) 0);
 
-        repetirContraseñaPasswordField.setForeground(Color.BLACK);
+        repetirContraseñaPasswordField.setForeground(Color.darkGray);
         repetirContraseñaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         repetirContraseñaPasswordField.setFont(Utils.roboto.deriveFont(18f));
         repetirContraseñaPasswordField.setEchoChar((char) 0);
@@ -64,6 +64,7 @@ public class Register {
             usuarioTextField.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    usuarioTextField.setForeground(Color.BLACK);
                     registrarseButton.doClick();
                 }
             });
@@ -87,6 +88,7 @@ public class Register {
                 public void focusGained(FocusEvent e) {
                     if (usuarioTextField.getText().equals("Usuario") && !mod) {
                         usuarioTextField.setText("");
+                        usuarioTextField.setForeground(Color.BLACK);
                     }
                 }
             });
@@ -95,6 +97,7 @@ public class Register {
                 public void focusLost(FocusEvent e) {
                     if (usuarioTextField.getText().equals("")) {
                         usuarioTextField.setText("Usuario");
+                        usuarioTextField.setForeground(Color.DARK_GRAY);
                         mod = false;
                     } else mod = true;
                 }
@@ -105,6 +108,7 @@ public class Register {
                     contraseñaPasswordField.setEchoChar('•');
                     if (contraseñaPasswordField.getText().equals("Contraseña") && !mod1) {
                         contraseñaPasswordField.setText("");
+                        contraseñaPasswordField.setForeground(Color.BLACK);
                     }
                 }
             });
@@ -114,6 +118,7 @@ public class Register {
                     if (contraseñaPasswordField.getText().equals("")) {
                         contraseñaPasswordField.setEchoChar((char) 0);
                         contraseñaPasswordField.setText("Contraseña");
+                        contraseñaPasswordField.setForeground(Color.darkGray);
                         mod1 = false;
                     } else mod1 = true;
                 }
@@ -125,6 +130,7 @@ public class Register {
                     repetirContraseñaPasswordField.setEchoChar('•');
                     if (repetirContraseñaPasswordField.getText().equals("Repetir contraseña") && !mod2) {
                         repetirContraseñaPasswordField.setText("");
+                        repetirContraseñaPasswordField.setForeground(Color.BLACK);
                     }
                 }
             });
@@ -135,6 +141,7 @@ public class Register {
 
                         repetirContraseñaPasswordField.setEchoChar((char) 0);
                         repetirContraseñaPasswordField.setText("Repetir contraseña");
+                        repetirContraseñaPasswordField.setForeground(Color.darkGray);
                         mod2 = false;
                     } else mod2 = true;
                 }

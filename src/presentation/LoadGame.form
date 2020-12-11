@@ -6,6 +6,7 @@
       <xy x="20" y="20" width="1200" height="800"/>
     </constraints>
     <properties>
+      <background color="-1973022"/>
       <maximumSize width="1200" height="800"/>
       <minimumSize width="1200" height="800"/>
       <preferredSize width="1200" height="800"/>
@@ -39,7 +40,9 @@
         <constraints>
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties/>
+        <properties>
+          <background color="-1973022"/>
+        </properties>
         <border type="none"/>
         <children>
           <component id="96ece" class="javax.swing.JLabel" binding="text">
@@ -79,12 +82,13 @@
           <scrollpane id="70a55" binding="games">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
-                <minimum-size width="252" height="380"/>
-                <preferred-size width="252" height="380"/>
-                <maximum-size width="252" height="380"/>
+                <minimum-size width="252" height="350"/>
+                <preferred-size width="252" height="350"/>
+                <maximum-size width="252" height="350"/>
               </grid>
             </constraints>
             <properties>
+              <background color="-1973022"/>
               <foreground color="-4473925"/>
               <horizontalScrollBarPolicy value="31"/>
               <opaque value="false"/>
@@ -94,7 +98,11 @@
           </scrollpane>
           <vspacer id="d48c5">
             <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="-1" height="75"/>
+                <preferred-size width="-1" height="75"/>
+                <maximum-size width="-1" height="75"/>
+              </grid>
             </constraints>
           </vspacer>
         </children>

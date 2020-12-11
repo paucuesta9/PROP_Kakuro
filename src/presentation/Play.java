@@ -71,6 +71,7 @@ public class Play {
     private JButton resolve;
     private JLabel logo;
     private JButton lapizButton;
+    private JLabel textLapiz;
 
     private static CtrlUI ctrlUI;
     /**
@@ -102,8 +103,8 @@ public class Play {
     private KakuroBoard sg;
     private Component[] components;
 
-    private JFrame conf;
-
+    private ImageIcon switchON, switchOFF;
+    private boolean pencilON = false;
 
     /** @brief Constructora
      *
@@ -140,13 +141,19 @@ public class Play {
         logo.setIcon(Utils.getLogo());
 
         try {
-            BufferedImage switchON = ImageIO.read(new File("resources/images/switch-on.png"));
-            Image scaled = switchON.getScaledInstance(lapizButton.getPreferredSize().width, lapizButton.getPreferredSize().height, java.awt.Image.SCALE_SMOOTH);
-            lapizButton.setIcon(new ImageIcon(scaled));
+            BufferedImage buffer = ImageIO.read(new File("resources/images/switch-off.png"));
+            Image scaled = buffer.getScaledInstance(90, 50, java.awt.Image.SCALE_SMOOTH);
+            switchOFF = new ImageIcon(scaled);
+            lapizButton.setIcon(switchOFF);
+            textLapiz.setFont(Utils.roboto.deriveFont(30f));
+            textLapiz.setForeground(Color.BLACK);
+
+            buffer = ImageIO.read(new File("resources/images/switch-on.png"));
+            scaled = buffer.getScaledInstance(90, 50, java.awt.Image.SCALE_SMOOTH);
+            switchON = new ImageIcon(scaled);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
         Utils.setButtons(help1);
         help1.setFont(Utils.fontAwesome.deriveFont(Font.PLAIN, 40f));
@@ -173,6 +180,26 @@ public class Play {
      * Funcionalidades de los botones help1, help2, resolve, pauseResume, exit y config
      */
     private void listeners() {
+
+        lapizButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (pencilON) {
+                    lapizButton.setIcon(switchOFF);
+                    textLapiz.setForeground(Color.BLACK);
+                    pencilON = false;
+                    help1.setEnabled(true);
+                    help2.setEnabled(true);
+                }
+                else {
+                    lapizButton.setIcon(switchON);
+                    textLapiz.setForeground(Color.decode(Utils.colorDarkBlue));
+                    pencilON = true;
+                    help1.setEnabled(false);
+                    help2.setEnabled(false);
+                }
+            }
+        });
 
         help1.addActionListener(new ActionListener() {
             @Override
@@ -266,6 +293,12 @@ public class Play {
 
                     @Override
                     public void windowClosed(WindowEvent e) {
+                        boolean[][] pencil = new boolean[rowSize*columnSize][10];
+                        for (int i = 0; i < rowSize*columnSize; ++i) {
+                            if (sg.getComponent(i) instanceof KakuroWhiteCell) {
+                                pencil[i] = ((KakuroWhiteCell) sg.getComponent(i)).getAllPencil();
+                            }
+                        }
                         try {
                             sg = new KakuroBoard(sg.boardToString());
                         } catch (NoTypeCellException noTypeCellException) {
@@ -273,6 +306,11 @@ public class Play {
                         }
                         board.removeAll();
                         board.add(sg);
+                        for (int i = 0; i < rowSize*columnSize; ++i) {
+                            if (sg.getComponent(i) instanceof KakuroWhiteCell) {
+                                ((KakuroWhiteCell) sg.getComponent(i)).setAllPencil(pencil[i]);
+                            }
+                        }
                         components = sg.getComponents();
                         setListenerBoard();
                     }
@@ -323,9 +361,9 @@ public class Play {
                     @Override
                     public void focusLost(FocusEvent e) {
                         if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell)) cell.setBackground(Utils.colorWhiteCell);
-                        if (!isFinished) checkValidityCell(cell, posX, posY);
-                        checkContinousCells(posX, posY);
+                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(Utils.colorWhiteCell);
+                        if (!pencilON && !isFinished) checkValidityCell(cell, posX, posY);
+                        if (!pencilON) checkContinousCells(posX, posY);
                     }
                 });
                 cell.addMouseListener(new MouseListener() {
@@ -381,14 +419,19 @@ public class Play {
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                         if (value != 0) {
-                            cell.setBackground(Utils.colorSelCell);
-                            cell.setValue(value);
-                            ctrlUI.setValue(posX, posY, value);
-                            isFinished = ctrlUI.isFinished();
-                            if (isFinished) {
-                                help1.setEnabled(false);
-                                help2.setEnabled(false);
-                                finishGame(selfFinished);
+                            if (pencilON) {
+                                cell.setPencil(value);
+                            }
+                            else {
+                                cell.setBackground(Utils.colorSelCell);
+                                cell.setValue(value);
+                                ctrlUI.setValue(posX, posY, value);
+                                isFinished = ctrlUI.isFinished();
+                                if (isFinished) {
+                                    help1.setEnabled(false);
+                                    help2.setEnabled(false);
+                                    finishGame(selfFinished);
+                                }
                             }
                         }
                     }
@@ -498,7 +541,7 @@ public class Play {
      * @param positionY representa la posición de la celda respecto la columna
      */
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
-        if (cell.getBackground() != Utils.colorCorrectCell) {
+        if (cell.getBackground() != Utils.colorCorrectCell && cell.getBackground() != Utils.colorIncorrectCell) {
             if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
                 cell.setBackground(Utils.colorIncorrectCell);
             } else cell.setBackground(Utils.colorWhiteCell);

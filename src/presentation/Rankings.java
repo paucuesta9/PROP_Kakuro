@@ -21,7 +21,6 @@ import java.util.List;
 public class Rankings implements ListSelectionListener {
     private JFrame frame;
     private JPanel menu;
-    private JPanel logotipo;
     private JButton volver;
     //private JList list;
     private JButton config;
@@ -34,6 +33,7 @@ public class Rankings implements ListSelectionListener {
     private JPanel panel2;
     private JPanel ButtonPan;
     private JTable table;
+    private JLabel logo;
     private CtrlUI ctrlUI;
     private Font fontAwesome, roboto;
 
@@ -44,6 +44,8 @@ public class Rankings implements ListSelectionListener {
         panel2.setBackground(null);
 
         table.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+
+        logo.setIcon(Utils.getLogo());
 
         //rankings
 

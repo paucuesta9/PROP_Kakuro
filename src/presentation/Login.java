@@ -41,11 +41,11 @@ public class Login {
 
         label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
-        usuarioTextField.setForeground(Color.BLACK);
+        usuarioTextField.setForeground(Color.darkGray);
         usuarioTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         usuarioTextField.setFont(Utils.roboto.deriveFont(18f));
 
-        contraseñaPasswordField.setForeground(Color.BLACK);
+        contraseñaPasswordField.setForeground(Color.darkGray);
         contraseñaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         contraseñaPasswordField.setFont(Utils.roboto.deriveFont(18f));
         contraseñaPasswordField.setEchoChar((char)0);
@@ -79,6 +79,7 @@ public class Login {
             public void focusGained(FocusEvent e) {
                 if (usuarioTextField.getText().equals("Usuario") && !mod) {
                     usuarioTextField.setText("");
+                    usuarioTextField.setForeground(Color.BLACK);
                 }
             }
         });
@@ -86,6 +87,7 @@ public class Login {
             @Override
             public void focusLost(FocusEvent e) {
                 if(usuarioTextField.getText().equals("")) {
+                    usuarioTextField.setForeground(Color.darkGray);
                     usuarioTextField.setText("Usuario");
                     mod = false;
                 }
@@ -98,6 +100,7 @@ public class Login {
                     contraseñaPasswordField.setEchoChar('•');
                     if (contraseñaPasswordField.getText().equals("Contraseña") == !mod1) {
                         contraseñaPasswordField.setText("");
+                        contraseñaPasswordField.setForeground(Color.BLACK);
                     }
             }
         });
@@ -107,6 +110,7 @@ public class Login {
                 if(contraseñaPasswordField.getText().equals("")) {
                     contraseñaPasswordField.setText("Contraseña");
                     contraseñaPasswordField.setEchoChar((char)0);
+                    contraseñaPasswordField.setForeground(Color.darkGray);
                     mod1 = false;
                 }
                 else mod1 = true;

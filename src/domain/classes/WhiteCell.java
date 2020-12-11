@@ -19,7 +19,6 @@ public class WhiteCell extends Cell {
      * correctValue es el valor correcto de la celda
      */
     private int correctValue;
-    //private List<Boolean> tempValues;
 
     /** @brief Creadora de una celda blanca sin valor
      *
@@ -29,7 +28,6 @@ public class WhiteCell extends Cell {
         super();
         this.value = 0;
         this.correctValue = 0;
-        //this.tempValues = new ArrayList<>(9);
     }
 
     /** @brief Creadora de una celda blanca con valor
@@ -41,7 +39,6 @@ public class WhiteCell extends Cell {
         super();
         this.value = value;
         this.correctValue = 0;
-        //this.tempValues = new ArrayList<>(9);
     }
 
     /** @brief Getter del atributo value
@@ -78,22 +75,6 @@ public class WhiteCell extends Cell {
     public void setCorrectValue(int correctValue) {
         this.correctValue = correctValue;
     }
-
-//    public List<Boolean> getTempValues() {
-//        return this.tempValues;
-//    }
-//
-//    public Boolean getTempValue(int index) {
-//        return this.tempValues.get(index);
-//    }
-//
-//    public void setTempValues(List<Boolean> tempValues) {
-//        this.tempValues = tempValues;
-//    }
-//
-//    public void setTempValue(int index, Boolean value) {
-//        this.tempValues.set(index, value);
-//    }
 
     /** @brief Función que indica que la celda es blanca
      *
