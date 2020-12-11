@@ -23,6 +23,8 @@ public class Main {
     private JFrame frame;
 
     public Main() {
+        Utils.setMusic();
+        Utils.updateVolume(Utils.volume);
         Utils.loadFonts();
         setListeners();
 

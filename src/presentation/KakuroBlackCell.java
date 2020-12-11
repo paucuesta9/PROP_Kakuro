@@ -118,7 +118,7 @@ public class KakuroBlackCell extends KakuroCell {
      */
     public void setRow(int row) {
         this.row = row;
-        jLabelRow.setText(String.valueOf(row));
+        if (row != 0) jLabelRow.setText(String.valueOf(row));
     }
 
     /** @brief Getter de column
@@ -135,6 +135,6 @@ public class KakuroBlackCell extends KakuroCell {
      */
     public void setColumn(int column) {
         this.column = column;
-        jLabelColumn.setText(String.valueOf(column));
+        if (column != 0) jLabelColumn.setText(String.valueOf(column));
     }
 }

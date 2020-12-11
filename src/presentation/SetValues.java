@@ -39,14 +39,29 @@ public class SetValues extends JDialog {
             etRow.setVisible(false);
             textColumn.setVisible(false);
             etColumn.setVisible(false);
-        } else {
+        } else if (type == 2) {
             textValue.setVisible(false);
             etValue.setVisible(false);
             textRow.setVisible(true);
             etRow.setVisible(true);
             textColumn.setVisible(true);
             etColumn.setVisible(true);
+        } else if (type == 3) {
+            textValue.setVisible(false);
+            etValue.setVisible(false);
+            textRow.setVisible(true);
+            etRow.setVisible(true);
+            textColumn.setVisible(false);
+            etColumn.setVisible(false);
+        } else {
+            textValue.setVisible(false);
+            etValue.setVisible(false);
+            textRow.setVisible(false);
+            etRow.setVisible(false);
+            textColumn.setVisible(true);
+            etColumn.setVisible(true);
         }
+
         Utils.loadFonts();
         text1.setFont(Utils.roboto);
         textValue.setFont(Utils.roboto.deriveFont(16f));
@@ -158,7 +173,7 @@ public class SetValues extends JDialog {
                 result = new int[1];
                 result[0] = Integer.valueOf(etValue.getText());
             }
-        } else {
+        } else if (type == 2) {
             if (etRow.getText().isEmpty() || Integer.parseInt(etRow.getText()) > 45) Utils.showError("El valor debe estar entre 0 y 45");
             else if (etColumn.getText().isEmpty() || Integer.parseInt(etColumn.getText()) > 45) Utils.showError("El valor debe estar entre 0 y 45");
             else {
@@ -167,7 +182,20 @@ public class SetValues extends JDialog {
                 result[0] = Integer.valueOf(etRow.getText());
                 result[1] = Integer.valueOf(etColumn.getText());
             }
-
+        } else if (type == 3) {
+            if (etRow.getText().isEmpty() || Integer.parseInt(etRow.getText()) > 45) Utils.showError("El valor debe estar entre 0 y 45");
+            else {
+                dispose();
+                result = new int[2];
+                result[0] = Integer.valueOf(etRow.getText());
+            }
+        } else if (type == 4) {
+            if  (etColumn.getText().isEmpty() || Integer.parseInt(etColumn.getText()) > 45) Utils.showError("El valor debe estar entre 0 y 45");
+            else {
+                dispose();
+                result = new int[2];
+                result[0] = Integer.valueOf(etColumn.getText());
+            }
         }
     }
 
@@ -175,7 +203,7 @@ public class SetValues extends JDialog {
         // add your code here if necessary
         dispose();
         result = new int[1];
-        result[0] = 0;
+        result[0] = -1;
     }
 
     public int[] drawSetValues() {

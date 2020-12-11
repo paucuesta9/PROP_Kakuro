@@ -33,6 +33,8 @@ public class Create {
     private int sizeRow, sizeColumn;
 
     private JPopupMenu popupMenu;
+    private JPopupMenu popupMenuOnlyBlackLeft;
+    private JPopupMenu popupMenuOnlyBlackTop;
 
     public Create() {
         Utils.loadFonts();
@@ -75,16 +77,20 @@ public class Create {
 
     private void setPopUpCells() {
         popupMenu = new JPopupMenu();
+        popupMenuOnlyBlackLeft = new JPopupMenu();
+        popupMenuOnlyBlackTop = new JPopupMenu();
         JMenuItem whiteCellItem = new JMenuItem("Asignar Celda Blanca");
         whiteCellItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
                 cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(1);
                 int[] value = setValues.drawSetValues();
-                if (value[0] != 0) {
+                if (value[0] != -1) {
                     ((KakuroWhiteCell) cells[pos]).setValue(value[0]);
                     GridBagConstraints c = new GridBagConstraints();
                     c.weightx = 1.0;
@@ -106,11 +112,13 @@ public class Create {
             @Override
             public void actionPerformed(ActionEvent e) {
                 popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
                 cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(2);
                 int[] value = setValues.drawSetValues();
-                if (value[0] != 0) {
+                if (value[0] != -1) {
                     ((KakuroBlackCell) cells[pos]).setRow(value[0]);
                     ((KakuroBlackCell) cells[pos]).setColumn(value[1]);
                     GridBagConstraints c = new GridBagConstraints();
@@ -127,6 +135,64 @@ public class Create {
                 }
             }
         });
+
+        JMenuItem blackCellItemLeft = new JMenuItem("Asignar Celda Negra");
+        blackCellItemLeft.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
+                int pos = posX * sizeColumn + posY;
+                cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
+                SetValues setValues = new SetValues(3);
+                int[] value = setValues.drawSetValues();
+                if (value[0] != -1) {
+                    ((KakuroBlackCell) cells[pos]).setRow(value[0]);
+                    GridBagConstraints c = new GridBagConstraints();
+                    c.weightx = 1.0;
+                    c.weighty = 1.0;
+                    c.fill = GridBagConstraints.BOTH;
+                    c.gridx = posY;
+                    c.gridy = posX;
+                    kBoard.remove(pos);
+                    kBoard.add(cells[pos], c, pos);
+                    kBoard.validate();
+                    board.validate();
+                    listenersCells();
+                }
+            }
+        });
+
+        JMenuItem blackCellItemTop = new JMenuItem("Asignar Celda Negra");
+        blackCellItemTop.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
+                int pos = posX * sizeColumn + posY;
+                cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
+                SetValues setValues = new SetValues(4);
+                int[] value = setValues.drawSetValues();
+                if (value[0] != -1) {
+                    ((KakuroBlackCell) cells[pos]).setColumn(value[0]);
+                    GridBagConstraints c = new GridBagConstraints();
+                    c.weightx = 1.0;
+                    c.weighty = 1.0;
+                    c.fill = GridBagConstraints.BOTH;
+                    c.gridx = posY;
+                    c.gridy = posX;
+                    kBoard.remove(pos);
+                    kBoard.add(cells[pos], c, pos);
+                    kBoard.validate();
+                    board.validate();
+                    listenersCells();
+                }
+            }
+        });
+        popupMenuOnlyBlackLeft.add(blackCellItemLeft);
+        popupMenuOnlyBlackTop.add(blackCellItemTop);
         popupMenu.add(blackCellItem);
     }
 
@@ -236,6 +302,8 @@ public class Create {
                 @Override
                 public void mousePressed(MouseEvent e) {
                     popupMenu.setVisible(false);
+                    popupMenuOnlyBlackLeft.setVisible(false);
+                    popupMenuOnlyBlackTop.setVisible(false);
                     showMenu(e);
                 }
 
@@ -246,8 +314,16 @@ public class Create {
 
                 private void showMenu(MouseEvent e) {
                     if (e.isPopupTrigger()) {
-                        popupMenu.setLocation(e.getLocationOnScreen());
-                        popupMenu.setVisible(true);
+                        if (((KakuroCell) cells[finalI]).getPosX() == 0) {
+                            popupMenuOnlyBlackTop.setLocation(e.getLocationOnScreen());
+                            popupMenuOnlyBlackTop.setVisible(true);
+                        } else if (((KakuroCell) cells[finalI]).getPosY() == 0) {
+                            popupMenuOnlyBlackLeft.setLocation(e.getLocationOnScreen());
+                            popupMenuOnlyBlackLeft.setVisible(true);
+                        } else {
+                            popupMenu.setLocation(e.getLocationOnScreen());
+                            popupMenu.setVisible(true);
+                        }
                     }
                 }
 
@@ -261,6 +337,7 @@ public class Create {
                     showMenu(e);
                 }
             });
+
             cells[i].addFocusListener(new FocusListener() {
                 private Color color;
                 @Override

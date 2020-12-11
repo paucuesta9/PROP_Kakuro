@@ -54,7 +54,6 @@ public class CtrlUI {
     // ****************** NUEVA VERSIÓN ****************** //
 
     public void run() {
-        Utils.setMusic();
         Utils.loadFonts();
         Login login = new Login();
         JFrame frame = new JFrame();
