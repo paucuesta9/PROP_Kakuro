@@ -10,9 +10,7 @@ import domain.classes.Kakuro;
 import domain.classes.WhiteCell;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /** @brief Clase CtrlGenerate que contiene los atributos y metodos para la funcionalidad de generar
  * @author Pol Vallespí Soro y Alvaro Armada Ruiz
@@ -25,6 +23,20 @@ public class CtrlGenerate {
     private static Kakuro currentKakuro;
 
     private static int[][][] mat = new int[45][9][];
+    private static int[][][] tempBoard;
+
+    private static int[][] posComb = new int[][]{ //possible values for sum using n cels
+            {}, //con zero
+            {1, 2, 3, 4, 5, 6, 7, 8, 9}, //una casilla
+            {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}, //dos casillas
+            {6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}, //tres casillas
+            {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30}, //cuatro casillas
+            {15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36}, //cinco casillas
+            {21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39}, //seis casillas
+            {28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 42}, //siete casillas
+            {36, 37, 38, 39, 40, 41, 42, 43, 44}, //ocho casillas
+            {45} //nueve casillas
+    };
     /**
      * @brief Creadora por defecto
      */
@@ -81,13 +93,7 @@ public class CtrlGenerate {
             for (int j = 0; j < board[0].length; ++j) {
                 if (!board[i][j].isWhite()) {
                     if (count != 0) {
-                        if (count == 9) {
-                            BlackCell b = (BlackCell) board[lastR][lastC];
-                            // b.setRow(45);
-                            tempBoard[lastR][lastC][1] = 9;
-                        } else {
-                            tempBoard[lastR][lastC][1] = count;
-                        }
+                        tempBoard[lastR][lastC][1] = count;
                     }
                     count = 0;
                     lastC = j;
@@ -120,13 +126,7 @@ public class CtrlGenerate {
             for (int i = 0; i < board.length; ++i) {
                 if (!board[i][j].isWhite()) {
                     if (count != 0) {
-                        if (count == 9) {
-                            BlackCell b = (BlackCell) board[lastR][lastC];
-                            // b.setColumn(45);
-                            tempBoard[lastR][lastC][0] = 9;
-                        } else {
-                            tempBoard[lastR][lastC][0] = count;
-                        }
+                        tempBoard[lastR][lastC][0] = count;
                     }
                     count = 0;
                     lastC = j;
@@ -294,349 +294,410 @@ public class CtrlGenerate {
         return (b == 1);
     }
 
-    /**@brief función que va rellenando todas las celdas posibles
-     *
-     * @param board representa un tablero con celdas blancas y negras
-     * @param i indica la fila de la celda que estamos tratando
-     * @param j indica la columna de la celda que estamos tratando
-     * @param posComb matriz de 2 dimensiones en la que guardamos las posibles sumas que se pueden hacer con n celdas blancas
-     * @param tempBoard matriz de 3 dimensiones que nos permite guardar información adicional
-     * @param totalWhites número total de celdas blancas a rellenar
-     * @param whites número de celdas blancas con valor hasta el momento
-     * @return true si es posible rellenar el tablero entero, false si no es posible
-     */
-    private static boolean fillBoardAux2(Cell[][] board, int i, int j, int[][] posComb, int[][][] tempBoard, int totalWhites, int whites) {
-        if (totalWhites == whites) {
-            return true;
-        }
-        if (i == board.length) {
-            return false;
-        } else if (j == board[0].length) return fillBoardAux2(board, i + 1, 0, posComb, tempBoard, totalWhites, whites);
-        else if (!board[i][j].isWhite()) return fillBoardAux2(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
-        WhiteCell w = (WhiteCell) board[i][j];
-        if (w.getCorrectValue() != 0) {
-            return fillBoardAux2(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
-        }
-        else if (allZero(tempBoard, i, j)) {
-            return fillBoardAux2(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
-        }
-        else {
-
-            int[][][] copy = new int[board.length][board[0].length][9];
-            for (int r = 0; r < board.length; ++r)
-                for (int c = 0; c < board[0].length; ++c)
-                    for (int z = 0; z < 9; ++z) copy[r][c][z] = tempBoard[r][c][z];
-
-            int nH = 0;
-            int nV = 0;
-            int lastCol = 0;
-            int lastRow = 0;
-
-            boolean found = false;
-            for (int k = j; k >= 0 && !found; --k) {
-                if (!board[i][k].isWhite()) {
-                    found = true;
-                    nH = tempBoard[i][k][1];
-                    lastRow = k;
-                }
-            }
-            found = false;
-            for (int k = i; k >= 0 && !found; --k) {
-                if (!board[k][j].isWhite()) {
-                    found = true;
-                    nV = tempBoard[k][j][0];
-                    lastCol = k;
-                }
-            }
-
-            boolean row = (tempBoard[i][lastRow][3] != 0);
-            boolean column = (tempBoard[lastCol][j][2] != 0);
-
-            if (row && column) {
-                if (isUnique(tempBoard[i][j])) {
-                    int v = 0;
-                    for (int oo = 0; oo<9; ++oo) {
-                        if (tempBoard[i][j][oo] == 1) {
-                            v = oo;
+    private static boolean fillBoardAux2(Cell[][] board, int row, int col, int totalWhites, int whites) {
+        if(totalWhites == whites) return true;
+        boolean stop = false;
+        int j = col;
+        for(int i = row; i < board.length && !stop; ++i) {
+            if(i != row) j = 0;
+            while( j < board[0].length && !stop) {
+                if(board[i][j].isWhite() && ((WhiteCell)board[i][j]).getCorrectValue() == 0 && !allZero(tempBoard,i,j)){
+                    int nH = 0;
+                    int nV = 0;
+                    int lastCol = 0;
+                    int lastRow = 0;
+                    boolean found = false;
+                    for (int k = j; k >= 0 && !found; --k) {
+                        if (!board[i][k].isWhite()) {
+                            found = true;
+                            nH = tempBoard[i][k][1];
+                            lastRow = k;
                         }
                     }
-                    boolean allOk = true;
-                    int f = 1;
-                    int prueba2 [] = computePosSums(tempBoard[i][lastRow][3], nH-1, v+1);
-                    while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
-                        allOk = intersection2(prueba2, tempBoard[i][j + f]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
-                        allOk = intersection2(prueba2, tempBoard[i][j - f]);
-                        ++f;
-                    }
-                    f = 1;
-                    int prueba [] = computePosSums(tempBoard[lastCol][j][2], nV-1, v+1);
-                    while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
-                        allOk = intersection2(prueba, tempBoard[i + f][j]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
-                        allOk = intersection2(prueba, tempBoard[i - f][j]);
-                        ++f;
-                    }
-
-                    if (allOk) {
-                        w.setCorrectValue(v+1);
-                        if (fillBoardAux2(board, 0, 0, posComb, tempBoard, totalWhites, whites + 1)) return true;
-                        w.setCorrectValue(0);
-                    }
-
-                    for (int r = 0; r < board.length; ++r)
-                        for (int c = 0; c < board[0].length; ++c)
-                            for (int z = 0; z < 9; ++z) tempBoard[r][c][z] = copy[r][c][z];
-                }
-                else return (fillBoardAux2(board, i, j+1, posComb, tempBoard, totalWhites, whites));
-            }
-
-            else if (row) {
-                for (int y = 0; y < posComb[nV].length; ++y) {
-                    boolean allOk = true;
-                    tempBoard[lastCol][j][2] = posComb[nV][y];
-                    //int[] prueba = computePosSums(posComb[nV][y], nV, 0);
-                    int[] prueba = mat[posComb[nV][y]-1][nV-1];
-                    int value = intersection(prueba, tempBoard[i][j]);
-
-                    int[] prueba2 = {0,0,0,0,0,0,0,0,0};
-
-                    if (value != -1) {
-                        tempBoard[i][j][value]=1;
-                        for(int xx = 0; xx<9; ++xx) {
-                            if(xx!=value) tempBoard[i][j][xx] = 0;
+                    found = false;
+                    for (int k = i; k >= 0 && !found; --k) {
+                        if (!board[k][j].isWhite()) {
+                            found = true;
+                            nV = tempBoard[k][j][0];
+                            lastCol = k;
                         }
-                        prueba2 = computePosSums(tempBoard[i][lastRow][3], nH - 1, value + 1);
-                        prueba = computePosSums(posComb[nV][y], nV - 1, value + 1);
                     }
-                    else allOk = false;
+                    if (tempBoard[i][lastRow][3] != 0 && tempBoard[lastCol][j][2] != 0) {
+                        if (isUnique(tempBoard[i][j])) {
+                            stop = true;
+                            WhiteCell w = (WhiteCell) board[i][j];
+                            //guardar el estado anterior
+                            int [][] copyRow = new int[nH+1][9];
+                            int [][] copyCol = new int[nV+1][9];
 
-                    int temp2 = 0;
-                    for (int pp = 0; pp<9 && allOk; ++pp) {
-                        if (prueba[pp]==1) ++temp2;
-                    }
-                    if (temp2==0) allOk = false;
+                            int r = lastRow+1;
+                            int index = 0;
+                            while(r < board.length && r < lastRow+nV && board[r][j].isWhite()) {
+                                copyCol[index] = tempBoard[r][j];
+                                ++index;
+                                ++r;
+                            }
+                            r = lastCol+1;
+                            index = 0;
+                            while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                                copyRow[index] = tempBoard[i][r];
+                                ++index;
+                                ++r;
+                            }
 
-                    temp2 = 0;
-                    for (int pp = 0; pp<9 && allOk; ++pp) {
-                        if (prueba2[pp]==1) ++temp2;
-                    }
+                            int v = 0;
+                            for (int oo = 0; oo<9; ++oo) {
+                                if (tempBoard[i][j][oo] == 1) {
+                                    v = oo;
+                                }
+                            }
+                            boolean allOk = true;
+                            int f = 1;
+                            int prueba2 [] = computePosSums(tempBoard[i][lastRow][3], nH-1, v+1);
+                            while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
+                                allOk = intersection2(prueba2, tempBoard[i][j + f]);
+                                ++f;
+                            }
+                            f = 1;
+                            while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
+                                allOk = intersection2(prueba2, tempBoard[i][j - f]);
+                                ++f;
+                            }
+                            f = 1;
+                            prueba2 = computePosSums(tempBoard[lastCol][j][2], nV-1, v+1);
+                            while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
+                                allOk = intersection2(prueba2, tempBoard[i + f][j]);
+                                ++f;
+                            }
+                            f = 1;
+                            while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
+                                allOk = intersection2(prueba2, tempBoard[i - f][j]);
+                                ++f;
+                            }
+                            if (allOk) {
+                                w.setCorrectValue(v+1);
+                                if (fillBoardAux2(board, 1, 1, totalWhites, whites + 1)) return true;
+                                w.setCorrectValue(0);
+                            }
 
-                    if (temp2==0) allOk = false;
-
-                    int f = 1;
-                    while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
-                        allOk = intersection2(prueba2, tempBoard[i][j + f]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
-                        allOk = intersection2(prueba2, tempBoard[i][j - f]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
-                        allOk = intersection3(prueba, tempBoard[i + f][j]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
-                        allOk = intersection3(prueba, tempBoard[i - f][j]);
-                        ++f;
-                    }
-
-                    if (allOk) {
-                        int temp = w.getCorrectValue();
-                        w.setCorrectValue(value + 1);
-                        if (fillBoardAux2(board, 0, 0, posComb, tempBoard, totalWhites, whites+1)) return true;
-                        w.setCorrectValue(temp);
-                    }
-                    for (int r = 0; r < board.length; ++r)
-                        for (int c = 0; c < board[0].length; ++c)
-                            for (int z = 0; z < 9; ++z) tempBoard[r][c][z] = copy[r][c][z];
-                }
-
-            }
-            else {
-                for (int y = 0; y < posComb[nH].length; ++y) {
-                    boolean allOk = true;
-                    tempBoard[i][lastRow][3] = posComb[nH][y];
-                    //int[] prueba = computePosSums(posComb[nH][y], nH, 0);
-                    int[] prueba = mat[posComb[nH][y]-1][nH-1];
-
-                    int value = intersection(prueba, tempBoard[i][j]);
-
-                    int[] prueba2 = {0,0,0,0,0,0,0,0,0};
-                    if (value != -1) {
-                        tempBoard[i][j][value]=1;
-                        for(int xx = 0; xx<9; ++xx) {
-                            if(xx!=value) tempBoard[i][j][xx] = 0;
+                            r = lastRow+1;
+                            index = 0;
+                            while(r < board.length && r < lastRow+nV && board[r][j].isWhite()) {
+                                tempBoard[r][j] =copyCol[index];
+                                ++index;
+                                ++r;
+                            }
+                            r= lastCol+1;
+                            index = 0;
+                            while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                                tempBoard[i][r] = copyRow[index];
+                                ++index;
+                                ++r;
+                            }
                         }
-                        prueba2 = computePosSums(tempBoard[lastCol][j][2], nV - 1, value + 1);
-                        prueba = computePosSums(posComb[nH][y], nH - 1, value + 1);
                     }
+                    else if (tempBoard[i][lastRow][3] != 0) {
+                        stop = true;
+                        WhiteCell w = (WhiteCell) board[i][j];
+                        //guardar el estado actual
+                        int [][] copyRow = new int[nH+1][9];
+                        int [][] copyCol = new int[nV+1][9];
+                        int r = lastRow+1;
+                        int index = 0;
+                        while(r < board.length && r < lastRow+nV && board[r][j].isWhite()) {
+                            copyCol[index] = tempBoard[r][j];
+                            ++index;
+                            ++r;
+                        }
+                        r = lastCol+1;
+                        index = 0;
+                        while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                            copyRow[index] = tempBoard[i][r];
+                            ++index;
+                            ++r;
+                        }
+                        for (int y = 0; y < posComb[nV].length; ++y) {
+                            boolean allOk = true;
+                            tempBoard[lastCol][j][2] = posComb[nV][y];
+                            int[] prueba = mat[posComb[nV][y]-1][nV-1];
+                            int value = intersection(prueba, tempBoard[i][j]);
 
-                    else allOk = false;
+                            int[] prueba2 = {0,0,0,0,0,0,0,0,0};
 
-                    int temp2 = 0;
-                    for (int pp = 0; pp<9&&allOk; ++pp) {
-                        if (prueba[pp]==1) ++temp2;
-                    }
-                    if (temp2==0) allOk = false;
+                            if (value != -1) {
+                                tempBoard[i][j][value]=1;
+                                for(int xx = 0; xx<9; ++xx) {
+                                    if(xx!=value) tempBoard[i][j][xx] = 0;
+                                }
+                                prueba2 = computePosSums(tempBoard[i][lastRow][3], nH - 1, value + 1);
+                                prueba = computePosSums(posComb[nV][y], nV - 1, value + 1);
+                            }
+                            else allOk = false;
+                            if(allOk) {
+                                int f = 0;
+                                for (int pp = 0; pp < 9 && allOk; ++pp) {
+                                    if (prueba[pp] == 1) ++f;
+                                }
+                                if (f == 0) allOk = false;
 
-                    temp2 = 0;
-                    for (int pp = 0; pp<9&allOk; ++pp) {
-                        if (prueba2[pp]==1) ++temp2;
-                    }
+                                f = 0;
+                                for (int pp = 0; pp < 9 && allOk; ++pp) {
+                                    if (prueba2[pp] == 1) ++f;
+                                }
 
-                    if (temp2==0) allOk = false;
+                                if (f == 0) allOk = false;
+                                if(allOk) {
+                                    f = 1;
+                                    while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
+                                        allOk = intersection2(prueba2, tempBoard[i][j + f]);
+                                        ++f;
+                                    }
+                                    f = 1;
+                                    while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
+                                        allOk = intersection2(prueba2, tempBoard[i][j - f]);
+                                        ++f;
+                                    }
+                                    f = 1;
+                                    while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
+                                        allOk = intersection3(prueba, tempBoard[i + f][j]);
+                                        ++f;
+                                    }
+                                    f = 1;
+                                    while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
+                                        allOk = intersection3(prueba, tempBoard[i - f][j]);
+                                        ++f;
+                                    }
 
-                    int f = 1;
-                    while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
-                        allOk = intersection3(prueba, tempBoard[i][j + f]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
-                        allOk = intersection3(prueba, tempBoard[i][j - f]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
-                        allOk = intersection2(prueba2, tempBoard[i + f][j]);
-                        ++f;
-                    }
-                    f = 1;
-                    while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
-                        allOk = intersection2(prueba2, tempBoard[i - f][j]);
-                        ++f;
-                    }
+                                    if (allOk) {
+                                        w.setCorrectValue(value + 1);
+                                        if (fillBoardAux2(board, i, j+1, totalWhites, whites + 1)) return true;
+                                        w.setCorrectValue(0);
+                                    }
+                                    //reestablecer el estado anterior
+                                    r = lastRow + 1;
+                                    index = 0;
+                                    while (r < board.length && r < lastRow + nV && board[r][j].isWhite()) {
+                                        tempBoard[r][j] = copyCol[index];
+                                        ++index;
+                                        ++r;
+                                    }
+                                    r = lastCol + 1;
+                                    index = 0;
+                                    while (r < board.length && r < lastCol + nH && board[i][r].isWhite()) {
+                                        tempBoard[i][r] = copyRow[index];
+                                        ++index;
+                                        ++r;
+                                    }
+                                }
+                            }
+                        }
 
-                    if (allOk) {
-
-                        int temp = w.getCorrectValue();
-                        w.setCorrectValue(value + 1);
-                        if (fillBoardAux2(board, 0, 0, posComb, tempBoard, totalWhites, whites+1)) return true;
-                        w.setCorrectValue(temp);
                     }
-                    for (int r = 0; r < board.length; ++r)
-                        for (int c = 0; c < board[0].length; ++c)
-                            for (int z = 0; z < 9; ++z) tempBoard[r][c][z] = copy[r][c][z];
+                    else {
+                        stop = true;
+                        WhiteCell w = (WhiteCell) board[i][j];
+                        //guardar el estado anterior
+                        int [][] copyRow = new int[nH+1][9];
+                        int [][] copyCol = new int[nV+1][9];
+
+                        int r = lastRow+1;
+                        int index = 0;
+                        while(r < board.length && r < lastRow+nV && board[r][j].isWhite()) {
+                            copyCol[index] = tempBoard[r][j];
+                            ++index;
+                            ++r;
+                        }
+                        r = lastCol+1;
+                        index = 0;
+                        while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                            copyRow[index] = tempBoard[i][r];
+                            ++index;
+                            ++r;
+                        }
+                        for (int y = 0; y < posComb[nH].length; ++y) {
+                            boolean allOk = true;
+                            tempBoard[i][lastRow][3] = posComb[nH][y];
+                            int[] prueba = mat[posComb[nH][y]-1][nH-1];
+
+                            int value = intersection(prueba, tempBoard[i][j]);
+
+                            int[] prueba2 = {0,0,0,0,0,0,0,0,0};
+                            if (value != -1) {
+                                tempBoard[i][j][value]=1;
+                                for(int xx = 0; xx<9; ++xx) {
+                                    if(xx!=value) tempBoard[i][j][xx] = 0;
+                                }
+                                prueba2 = computePosSums(tempBoard[lastCol][j][2], nV - 1, value + 1);
+                                prueba = computePosSums(posComb[nH][y], nH - 1, value + 1);
+                            }
+                            else allOk = false;
+                            if(allOk) {
+                                int f = 0;
+                                for (int pp = 0; pp < 9 && allOk; ++pp) {
+                                    if (prueba[pp] == 1) ++f;
+                                }
+                                if (f == 0) allOk = false;
+                                f = 0;
+                                for (int pp = 0; pp < 9 & allOk; ++pp) {
+                                    if (prueba2[pp] == 1) ++f;
+                                }
+                                if (f == 0) allOk = false;
+                                f = 1;
+                                while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
+                                    allOk = intersection3(prueba, tempBoard[i][j + f]);
+                                    ++f;
+                                }
+                                f = 1;
+                                while (j - f >= 0 && board[i][j - f].isWhite() && allOk) {
+                                    allOk = intersection3(prueba, tempBoard[i][j - f]);
+                                    ++f;
+                                }
+                                f = 1;
+                                while (i + f < board.length && board[i + f][j].isWhite() && allOk) {
+                                    allOk = intersection2(prueba2, tempBoard[i + f][j]);
+                                    ++f;
+                                }
+                                f = 1;
+                                while (i - f >= 0 && board[i - f][j].isWhite() && allOk) {
+                                    allOk = intersection2(prueba2, tempBoard[i - f][j]);
+                                    ++f;
+                                }
+                                if (allOk) {
+                                    w.setCorrectValue(value + 1);
+                                    if (fillBoardAux2(board, i, j+1, totalWhites, whites + 1)) return true;
+                                    w.setCorrectValue(0);
+                                }
+                                r = lastRow + 1;
+                                index = 0;
+                                while (r < board.length && r < lastRow + nV && board[r][j].isWhite()) {
+                                    tempBoard[r][j] = copyCol[index];
+                                    ++index;
+                                    ++r;
+                                }
+                                r = lastCol + 1;
+                                index = 0;
+                                while (r < board.length && r < lastCol + nH && board[i][r].isWhite()) {
+                                    tempBoard[i][r] = copyRow[index];
+                                    ++index;
+                                    ++r;
+                                }
+                            }
+                        }
+
+                    }
                 }
-
+                ++j;
             }
         }
         return false;
     }
 
-    /**@brief funcion para buscar una combinación inicial con un valor único
-     *
-     * @param board representa un tablero con casillas blancas y negras
-     * @param i indica la fila de la celda que estamos tratando
-     * @param j indica la columna de la celda que estamos tratando
-     * @param posComb matriz de 2 dimensiones en la que guardamos las posibles sumas que se pueden hacer con n celdas blancas
-     * @param tempBoard matriz de 3  dimensiones que nos permite guardar información adicional
-     * @param totalWhites número total de casillas blancas
-     * @param whites número de casillas blancas con valor hasta el momento
-     * @return false si no podemos encontrar ninguna combinación inicial o si el tablero no puede ser único, true si puede ser único
-     *
-     * Esta función nos permite rellenar un tablero para que sea único junto a la función fillBoardAux2
-     */
-    private static boolean fillBoardAux(Cell[][] board, int i, int j, int[][] posComb, int[][][] tempBoard, int totalWhites, int whites) {
-        if (i == board.length) {
-            return false;
-        } else if (j == board[0].length) return fillBoardAux(board, i + 1, 0, posComb, tempBoard, totalWhites, whites);
-        else if (!board[i][j].isWhite()) return fillBoardAux(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
-        else {
-            int nH = 0;
-            int nV = 0;
-            int lastCol = 0;
-            int lastRow = 0;
-
-            boolean found = false;
-            for (int k = j; k >= 0 && !found; --k) {
-                if (!board[i][k].isWhite()) {
-                    found = true;
-                    nH = tempBoard[i][k][1];
-                    lastRow = k;
-                }
-            }
-            found = false;
-            for (int k = i; k >= 0 && !found; --k) {
-                if (!board[k][j].isWhite()) {
-                    found = true;
-                    nV = tempBoard[k][j][0];
-                    lastCol = k;
-                }
-            }
-            if (nV == 9 || nH == 9) return fillBoardAux(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
-            else {
-                int[][][] copy = new int[board.length][board[0].length][9];
-                //--------------------------------------------------------------------
-                for (int r = 0; r < board.length; ++r)
-                    for (int c = 0; c < board[0].length; ++c)
-                        for (int z = 0; z < 9; ++z) copy[r][c][z] = tempBoard[r][c][z];
-                //--------------------------------------------------------------------
-                for (int x = 0; x < posComb[nH].length; ++x) {
-                    int[] valuesH = mat[posComb[nH][x]-1][nH-1];
-                    //int[] valuesH = computePosSums(posComb[nH][x], nH, 0);
-                    for (int y = 0; y < posComb[nV].length; ++y) {
-                        int[] valuesV = mat[posComb[nV][y]-1][nV-1];
-                        //int[] valuesV = computePosSums(posComb[nV][y], nV, 0);
-                        int value = intersection(valuesH, valuesV);
-                        if (value != -1) {
-                            tempBoard[i][j][value] = 1;
-                            tempBoard[lastCol][j][2] = posComb[nV][y];
-                            tempBoard[i][lastRow][3] = posComb[nH][x];
-                            int[] auxH = computePosSums(posComb[nH][x], nH - 1, value + 1);
-                            int[] auxV = computePosSums(posComb[nV][y], nV - 1, value + 1);
-
-                            int f = 1;
-                            while (j + f < board.length && board[i][j + f].isWhite()) {
-                                for (int tt = 0; tt < 9; ++tt)
-                                    tempBoard[i][j + f][tt] = auxH[tt];
-                                ++f;
-                            }
-                            f = 1;
-                            while (j - f >= 0 && board[i][j - f].isWhite()) {
-                                for (int tt = 0; tt < 9; ++tt) tempBoard[i][j - f][tt] = auxH[tt];
-                                ++f;
-                            }
-                            f = 1;
-                            while (i + f < board.length && board[i + f][j].isWhite()) {
-                                for (int tt = 0; tt < 9; ++tt) tempBoard[i + f][j][tt] = auxV[tt];
-                                ++f;
-                            }
-                            f = 1;
-                            while (i - f > 0 && board[i - f][j].isWhite()) {
-                                for (int tt = 0; tt < 9; ++tt) tempBoard[i - f][j][tt] = auxV[tt];
-                                ++f;
-                            }
-                            WhiteCell w = (WhiteCell) board[i][j];
-                            int temp = w.getCorrectValue();
-                            w.setCorrectValue(value+1);
-                            if (fillBoardAux2(board, 0, 0, posComb, tempBoard, totalWhites, whites+1)) return true;
-                            for (int r = 0; r < board.length; ++r)
-                                for (int c = 0; c < board[0].length; ++c)
-                                    for (int z = 0; z < 9; ++z) tempBoard[r][c][z] = copy[r][c][z];
-                            w.setCorrectValue(temp);
-
+    private static boolean fillBoardAux(Cell[][] board, int row, int col, int totalWhites, int whites) {
+        int nH = 0;
+        int nV = 0;
+        int lastCol = 0;
+        int lastRow = 0;
+        boolean stop = false;
+        for(int i = 1; i < board.length && !stop; ++i) {
+            for(int j = 1; j < board[0].length && !stop; ++j) {
+                if(board[i][j].isWhite()) {
+                    boolean found = false;
+                    for (int k = j; k >= 0 && !found; --k) {
+                        if (!board[i][k].isWhite()) {
+                            found = true;
+                            nH = tempBoard[i][k][1];
+                            lastRow = k;
                         }
+                    }
+                    found = false;
+                    for (int k = i; k >= 0 && !found; --k) {
+                        if (!board[k][j].isWhite()) {
+                            found = true;
+                            nV = tempBoard[k][j][0];
+                            lastCol = k;
+                        }
+                    }
+                    if (nV != 9 && nH != 9) {
+                        stop = true; //si no es capaz de generar una solucion con todas las combinaciones de sumas posibles en una casilla, no va a poder nunca
+                        int [][] copyRow = new int[nH+1][9];
+                        int [][] copyCol = new int[nV+1][9];
 
+                        int r = lastRow+1;
+                        int index = 0;
+                        while(r < board.length && r < lastRow+nV && board[r][j].isWhite()) {
+                            copyCol[index] = tempBoard[r][j];
+                            ++index;
+                            ++r;
+                        }
+                        r= lastCol+1;
+                        index = 0;
+                        while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                            copyRow[index] = tempBoard[i][r];
+                            ++index;
+                            ++r;
+                        }
+                        for (int x = 0; x < posComb[nH].length; ++x) {
+                            int[] valuesH = mat[posComb[nH][x]-1][nH-1];
+                            for (int y = 0; y < posComb[nV].length; ++y) {
+                                int[] valuesV = mat[posComb[nV][y]-1][nV-1];
+                                int value = intersection(valuesH, valuesV);
+                                if (value != -1) {
+                                    tempBoard[i][j][value] = 1;
+                                    tempBoard[lastCol][j][2] = posComb[nV][y];
+                                    tempBoard[i][lastRow][3] = posComb[nH][x];
+                                    int[] auxH = computePosSums(posComb[nH][x], nH - 1, value + 1);
+                                    int[] auxV = computePosSums(posComb[nV][y], nV - 1, value + 1);
 
+                                    int f = 1;
+                                    while (j + f < board.length && board[i][j + f].isWhite()) {
+                                        for (int tt = 0; tt < 9; ++tt)
+                                            tempBoard[i][j + f][tt] = auxH[tt];
+                                        ++f;
+                                    }
+                                    f = 1;
+                                    while (j - f >= 0 && board[i][j - f].isWhite()) {
+                                        for (int tt = 0; tt < 9; ++tt) tempBoard[i][j - f][tt] = auxH[tt];
+                                        ++f;
+                                    }
+                                    f = 1;
+                                    while (i + f < board.length && board[i + f][j].isWhite()) {
+                                        for (int tt = 0; tt < 9; ++tt) tempBoard[i + f][j][tt] = auxV[tt];
+                                        ++f;
+                                    }
+                                    f = 1;
+                                    while (i - f > 0 && board[i - f][j].isWhite()) {
+                                        for (int tt = 0; tt < 9; ++tt) tempBoard[i - f][j][tt] = auxV[tt];
+                                        ++f;
+                                    }
+                                    WhiteCell w = (WhiteCell) board[i][j];
+                                    w.setCorrectValue(value+1);
+                                    if (fillBoardAux2(board, 1, 1, totalWhites, whites+1)) return true;
+                                    r = lastRow+1;
+                                    index = 0;
+                                    while(r < board.length && r < lastRow+nV && board[r][j].isWhite()) {
+                                        tempBoard[r][j] =copyCol[index];
+                                        ++index;
+                                        ++r;
+                                    }
+                                    r= lastCol+1;
+                                    index = 0;
+                                    while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                                        tempBoard[i][r] = copyRow[index];
+                                        ++index;
+                                        ++r;
+                                    }
+                                    w.setCorrectValue(0);
+                                }
+                            }
+                        }
                     }
                 }
-
-                return fillBoardAux(board, i, j + 1, posComb, tempBoard, totalWhites, whites);
             }
         }
+        return false;
     }
+
+
 
     /**@brief función que crea las estructuras necesarias para después poder crear un tablero con solución única
      *
@@ -644,31 +705,7 @@ public class CtrlGenerate {
      * @return true si tenemos un tablero con solución única, false si tiene más de una solución
      */
     public static boolean fillBoard(Cell[][] board) {
-        int[][] posComb = new int[][]{ //possible values for sum using n cels
-                {}, //con zero
-                {1, 2, 3, 4, 5, 6, 7, 8, 9}, //una casilla
-                {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}, //dos casillas
-                {6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}, //tres casillas
-                {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30}, //cuatro casillas
-                {15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36}, //cinco casillas
-                {21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39}, //seis casillas
-                {28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 42}, //siete casillas
-                {36, 37, 38, 39, 40, 41, 42, 43, 44}, //ocho casillas
-                {45} //nueve casillas
-        };
-        Random rand = new Random();
-
-        //mezclamos los numeros para evitar que siempre encuentre los mismos valores
-        /*for (int i = 0; i < posComb.length; i++) {
-            for(int j = 0; j < posComb[i].length;++j) {
-                int randomIndexToSwap = rand.nextInt(posComb[i].length);
-                int temp = posComb[i][randomIndexToSwap];
-                posComb[i][randomIndexToSwap] = posComb[i][j];
-                posComb[i][j] = temp;
-            }
-        }*/
-
-        int tempBoard[][][] = new int[board.length][board[0].length][9];
+        tempBoard = new int[board.length][board[0].length][9];
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board.length; ++j) {
                 for (int k = 0; k < 9; ++k) {
@@ -679,7 +716,8 @@ public class CtrlGenerate {
         nineCellsRow(board, tempBoard);
         nineCellsCol(board, tempBoard);
         int whites = howManyWhites(board);
-        boolean ans = fillBoardAux(board, 0, 0, posComb, tempBoard, whites, 0);
+        if( !fillBoardAux(board,1,1, whites, 0)) return false;
+        //if(!buildUniqueSolution(board,whites)) return false;
         for (int x = 0; x < board.length; ++x) {
             for (int y = 0; y < board[0].length; ++y) {
                 if (!board[x][y].isWhite()) {
@@ -694,13 +732,13 @@ public class CtrlGenerate {
         int[] vec = {0,0,0,0,0,0,0,0,0,0};
         int[] res = new int[1];
         CtrlValidate.validate(0,0,0,vec,res);
-        if(res[0] == 1 && ans) {
+        if(res[0] == 1) {
             return true;
         }
-        else {
-            return false;
-        }
+        else return false;
     }
+
+
 
     /**@brief función que cuenta el número de celdas blancas del tablero
      *
@@ -716,8 +754,6 @@ public class CtrlGenerate {
         }
         return w;
     }
-
-
 
     /**@brief función que genera la primera y la última fila del talbero de manera que simétrico
      *
@@ -749,6 +785,8 @@ public class CtrlGenerate {
                 if( dif == 1) x = 55;
                 else if( dif == 2) x = 60;
                 else x = 65;
+                if(cont > 3) x = 0;
+
                 if( random <= x) {
                     board[i][j] = new WhiteCell();
                     board[size-i][size-j] = new WhiteCell();
@@ -784,13 +822,13 @@ public class CtrlGenerate {
                     board[i][j] = new BlackCell();
                     board[size-i][size-j] = new BlackCell();
                 }
-                else if( n == 1 && m == 9 ) {
+                else if( n == 1 && m >= 6 ) {
                     board[i-1][j] = new BlackCell();
                     board[size-i-1][size-j] = new BlackCell();
                     board[i][j] = new BlackCell();
                     board[size-i][size-j] = new BlackCell();
                 }
-                else if( n == 9 && m == 1 ) {
+                else if( n >= 6 && m == 1 ) {
                     board[i][j-1] = new BlackCell();
                     board[size-i][size-j-1] = new BlackCell();
                     board[i][j] = new BlackCell();
@@ -806,10 +844,10 @@ public class CtrlGenerate {
                 }
                 else {
                     int x = 0;
-                    if( dif == 1) x = 30;
-                    else if( dif == 2) x = 40;
-                    else x = 50;
-                    if( n >= 5 || m >= 5 ) x -= 45;
+                    if( dif == 1) x = 55;
+                    else if( dif == 2) x = 65;
+                    else x = 70;
+                    if( n >= 3 || m >= 3 ) x = 0;
                     Random rand = new Random();
                     if (rand.nextInt(101) <= x ) {
                         board[i][j] = new WhiteCell();
@@ -929,10 +967,38 @@ public class CtrlGenerate {
 
             }
         }
-        if(nWhite == nDFS) return true;
+        if(nWhite < 0.4*size*size) return false;
+        else if(nWhite == nDFS) return true;
         return false;
     }
 
+    static boolean checkRunsH(Cell[][] board) {
+        int n = 0;
+        for(int i = 0; i < board.length; ++i) {
+            for(int j = 0; j < board[0].length; ++j) {
+                if(!board[i][j].isWhite()) n = 0;
+                else {
+                    ++n;
+                    if (n > 9) return true;
+                }
+            }
+        }
+        return (n > 9);
+    }
+
+    static boolean checkRunsV(Cell[][] board) {
+        int n = 0;
+        for(int i = 0; i < board.length; ++i) {
+            for(int j = 0; j < board[0].length; ++j) {
+                if(!board[j][i].isWhite()) n = 0;
+                else {
+                    ++n;
+                    if (n > 9) return true;
+                }
+            }
+        }
+        return (n > 9);
+    }
 
     /**@brief función principal de CtrlGenerate
      *
@@ -961,17 +1027,37 @@ public class CtrlGenerate {
             }
             firstColRow(board,dif);
             randomCells(board,dif);
-            checkBoard(board);
-            if(!connexBoard(board)){
-                repeat = true;
+            if(checkRunsV(board)) repeat = true;
+            else if(checkRunsH(board)) repeat = true;
+            else {
+                checkBoard(board);
+                if(!connexBoard(board)){
+                    repeat = true;
+                }
+                else {
+                    currentKakuro = new Kakuro(0, 0, board);
+                    if (!repeat && fillBoard(board)) {
+                    } else repeat = true;
+                }
             }
-            currentKakuro = new Kakuro(0,0,board);
-            if(!repeat && fillBoard(board)) { }
-            else repeat = true;
         }
         CtrlValidate.setDifficulty();
         System.out.println("Finalmente, la dificultad es " + currentKakuro.getDifficulty());
         return currentKakuro;
     }
 
+    static void printBoard(Cell[][] board) {
+        System.out.println("------------------------------------");
+        for(int i = 0; i < board.length; ++i) {
+            for(int j = 0; j < board.length; ++j) {
+                if(board[i][j].isWhite()) {
+                    System.out.print(((WhiteCell)board[i][j]).getCorrectValue());
+                    System.out.print(" ");
+                }
+                else System.out.print("X ");
+            }
+            System.out.println();
+        }
+        System.out.println("------------------------------------");
+    }
 }
