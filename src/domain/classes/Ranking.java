@@ -19,7 +19,6 @@ import java.util.*;
  */
 public abstract class Ranking {
     private CtrlData data;
-    private String type;
     protected List<Player> players;
     private Gson gson;
 
@@ -28,14 +27,6 @@ public abstract class Ranking {
         data = CtrlData.getInstance();
         gson = new Gson();
         listOfPlayers();
-    }
-
-    /**@brief nos devuelve el tipo de ranking
-     *
-     * @return el tipo de ranking
-     */
-    public String getType() {
-        return type;
     }
 
     public void listOfPlayers()  {

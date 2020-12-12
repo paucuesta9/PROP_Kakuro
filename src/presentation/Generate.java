@@ -46,7 +46,7 @@ public class Generate {
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,50));
+        config.setBorder(new EmptyBorder(10,0,0,54));
 
         textSize.setFont(Utils.roboto);
         textSize.setForeground(Color.BLACK);

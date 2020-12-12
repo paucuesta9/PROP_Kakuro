@@ -65,7 +65,7 @@ public class Create {
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,10));
+        config.setBorder(new EmptyBorder(10,0,0,22));
 
         Utils.setButtons(aceptar);
         Utils.setButtons(confirm);

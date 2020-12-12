@@ -124,17 +124,17 @@
           <vspacer id="11162">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="20"/>
-                <preferred-size width="-1" height="20"/>
-                <maximum-size width="-1" height="20"/>
+                <minimum-size width="-1" height="15"/>
+                <preferred-size width="-1" height="15"/>
+                <maximum-size width="-1" height="15"/>
               </grid>
             </constraints>
           </vspacer>
           <vspacer id="c401e">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="30"/>
-                <preferred-size width="-1" height="30"/>
+                <minimum-size width="-1" height="35"/>
+                <preferred-size width="-1" height="35"/>
               </grid>
             </constraints>
           </vspacer>
@@ -174,9 +174,9 @@
       </grid>
       <hspacer id="cf4b7">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <minimum-size width="25" height="-1"/>
-            <preferred-size width="25" height="-1"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="4" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="42" height="-1"/>
+            <preferred-size width="42" height="-1"/>
           </grid>
         </constraints>
       </hspacer>
@@ -195,7 +195,7 @@
       </component>
       <hspacer id="e8c1d">
         <constraints>
-          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="50" height="-1"/>
             <preferred-size width="50" height="-1"/>
           </grid>
@@ -203,12 +203,16 @@
       </hspacer>
       <component id="c47c5" class="javax.swing.JButton" binding="config">
         <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+          <grid row="0" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="40" height="40"/>
           </grid>
         </constraints>
         <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
           <focusPainted value="false"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
           <text value=""/>
         </properties>
       </component>

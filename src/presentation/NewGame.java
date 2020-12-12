@@ -49,7 +49,6 @@ public class NewGame {
      */
     private JButton exit;
 
-    private JPanel logotipo;
     /**
      * numColumn es el campo donde se introduce el número de columnas
      */
@@ -100,12 +99,14 @@ public class NewGame {
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,30));
+        config.setBorder(new EmptyBorder(10,0,0,54));
 
         picLabel.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         logo.setFont(Utils.roboto.deriveFont(40f));
         logo.setForeground(Color.decode(Utils.colorDarkBlue));
+
+        logo.setIcon(Utils.getLogo());
 
         textSize.setFont(Utils.roboto);
         textSize.setForeground(Color.BLACK);

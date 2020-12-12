@@ -63,8 +63,6 @@ public class Rankings implements ListSelectionListener {
         }
         showTable(t, titles);
 
-
-
         config.setFont(fontAwesome);
         config.setForeground(Color.decode("#00204A"));
         config.setBackground(null);

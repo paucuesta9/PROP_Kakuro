@@ -28,7 +28,7 @@ public class AskNewContinue {
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,10));
+        config.setBorder(new EmptyBorder(10,0,0,12));
 
         question.setFont(Utils.roboto.deriveFont(18f));
 

@@ -2,7 +2,7 @@ package domain.controllers;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
-import data.CtrlData;
+import data.*;
 import domain.classes.*;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;

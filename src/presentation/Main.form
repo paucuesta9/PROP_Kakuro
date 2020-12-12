@@ -145,8 +145,8 @@
       </hspacer>
       <component id="e7330" class="javax.swing.JButton" binding="config">
         <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="-1" height="40"/>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="40" height="40"/>
           </grid>
         </constraints>
         <properties>

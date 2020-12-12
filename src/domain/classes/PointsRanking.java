@@ -6,7 +6,6 @@ import java.util.Comparator;
 
 public class PointsRanking extends Ranking {
 
-
     public PointsRanking() {
         super();
     }

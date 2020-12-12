@@ -6,6 +6,7 @@
       <xy x="20" y="20" width="1333" height="840"/>
     </constraints>
     <properties>
+      <background color="-1973022"/>
       <doubleBuffered value="true"/>
       <maximumSize width="1200" height="800"/>
       <minimumSize width="1200" height="800"/>
@@ -32,7 +33,9 @@
             <constraints>
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1973022"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="86d15" class="javax.swing.JLabel" binding="rowSizeText">
@@ -63,7 +66,9 @@
             <constraints>
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1973022"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="442cc" class="javax.swing.JLabel" binding="columnSizeText">
@@ -96,7 +101,9 @@
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1973022"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="9323c" class="javax.swing.JLabel" binding="difficulty">
@@ -131,7 +138,9 @@
             <constraints>
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
-            <properties/>
+            <properties>
+              <background color="-1973022"/>
+            </properties>
             <border type="none"/>
             <children>
               <component id="55e1e" class="javax.swing.JButton" binding="easy">

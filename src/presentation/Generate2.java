@@ -65,14 +65,6 @@ public class Generate2 {
         noButton.setBackground(Color.magenta);
         noButton.setHorizontalTextPosition(JButton.CENTER);
         noButton.setVerticalTextPosition(JButton.CENTER);
-
-        volverButton.setFont(Utils.roboto);
-        volverButton.setForeground(Color.WHITE);
-        volverButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
-        volverButton.setBorderPainted(false);
-        volverButton.setBackground(null);
-        volverButton.setHorizontalTextPosition(JButton.CENTER);
-        volverButton.setVerticalTextPosition(JButton.CENTER);
     }
 
     private void setListeners() {
@@ -140,14 +132,6 @@ public class Generate2 {
             public void actionPerformed(ActionEvent e) {
                 Main main = new Main();
                 main.drawMain(frame);
-            }
-        });
-
-        volverButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                Main m = new Main();
-                m.drawMain(frame);
             }
         });
     }

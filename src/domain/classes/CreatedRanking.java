@@ -8,7 +8,6 @@ import java.util.List;
 
 public class CreatedRanking extends Ranking {
 
-
     public CreatedRanking() {
         super();
     }
