@@ -1,16 +1,11 @@
 package presentation;
 
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
-import data.CtrlData;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.classes.Player;
 import domain.controllers.CtrlDomain;
-import domain.controllers.CtrlValidate;
 
 import javax.swing.*;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -64,14 +59,6 @@ public class CtrlUI {
         login.drawLogin(frame);
     }
 
-    public int getRowSize() {
-        return cd.getRowSize();
-    }
-
-    public int getColumnSize() {
-        return cd.getColumnSize();
-    }
-
     public String getKakuro() {
         return cd.getKakuroToString();
     }
@@ -80,9 +67,9 @@ public class CtrlUI {
         return cd.getCorrectKakuroToString();
     }
 
-    public void searchKakuro(int i, int i1, int i2) {
+    public void searchKakuro(int diff, int rowSize, int columnSize) {
         try {
-            cd.searchKakuro(i, i1, i2);
+            cd.searchKakuro(diff, rowSize, columnSize);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -104,8 +91,8 @@ public class CtrlUI {
         return cd.helpCorrectNumber(x,y);
     }
 
-    public void startGame(int i, int i1, int i2) {
-        cd.startNewGame(i,i1,i2);
+    public void startGame(int diff, int rowSize, int columnSize) {
+        cd.startNewGame(diff, rowSize, columnSize);
     }
 
     public boolean isFinished() {
@@ -128,7 +115,6 @@ public class CtrlUI {
 
     public void login(String username, char[] password) throws FileNotFoundException, WrongPasswordException {
         cd.login(username, String.valueOf(password));
-        Utils.setConfig(cd.getConfig());
     }
 
     public void setConfigToPlayer(ArrayList<String> config) {
@@ -137,17 +123,14 @@ public class CtrlUI {
 
     public void signUp(String username, String password) throws PlayerExists {
         cd.signUp(username, String.valueOf(password));
-        Utils.setConfig(cd.getConfig());
     }
 
     public void resetConfigColors() {
         cd.resetConfigColors();
-        Utils.setConfig(cd.getConfig());
     }
 
     public void generate(int i, int j, int diff) {
         cd.generate(i, diff);
-        cd.resolve();
     }
 
     public void save() {
@@ -176,5 +159,9 @@ public class CtrlUI {
 
     public boolean validate() {
         return cd.validate();
+    }
+
+    public ArrayList<String> getConfig() {
+        return cd.getConfig();
     }
 }

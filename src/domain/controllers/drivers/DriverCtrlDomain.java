@@ -69,10 +69,11 @@ public class DriverCtrlDomain {
             cd.getKakuro("data/"+s+".txt");
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }/*
         boolean b = cd.checkCoord(fila,columna);
         if(b) System.out.println("Coordenadas correctas");
         else System.out.println("Coordenadas incorrectas");
+        */
     }
 
     /**@brief función main del driver CtrlDomain

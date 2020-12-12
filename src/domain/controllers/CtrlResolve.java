@@ -17,21 +17,13 @@ public class CtrlResolve {
     /**
      * Instància del kakuro con el que se trabaja en cada momento
      */
-    private static Kakuro kakuro;
+    private Kakuro kakuro;
 
     /** @brief Creadora por defecto
      *
      */
-    public CtrlResolve() {}
-
-    /** @brief Setter de Kakuro
-     *
-     * Settea un Kakuro al controlador para poder trabajar con él
-     *
-     * @param currentKakuro instància de Kakuro
-     */
-    public static void setKakuro(Kakuro currentKakuro) {
-        kakuro = currentKakuro;
+    public CtrlResolve(Kakuro kakuro) {
+        this.kakuro = kakuro;
     }
 
     /** @brief Resuelve un Kakuro
@@ -42,7 +34,7 @@ public class CtrlResolve {
      * @param vec vector de 10 posiciones donde vec[i] = 1 si hemos puesto i en la run horizontal, 0 si no.
      * @return true si se encuentra una solución, false si no
      */
-    public static boolean resolve(int r, int c, int sum, int [] vec) {
+    public boolean resolve(int r, int c, int sum, int [] vec) {
         if( r == kakuro.getRowSize() ) { return true; } //hemos llegado al final, la solucion es correcta
         else {
             Cell[][] board = kakuro.getBoard();

@@ -1,12 +1,10 @@
 package presentation;
 
 import domain.classes.Exceptions.NoTypeCellException;
-import jdk.jshell.execution.Util;
 
 import java.awt.image.BufferedImage;
 import java.util.*;
 import javax.imageio.ImageIO;
-import javax.sound.sampled.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -72,8 +70,6 @@ public class Play {
     private JLabel logo;
     private JButton lapizButton;
     private JLabel textLapiz;
-
-    private static CtrlUI ctrlUI;
     /**
      * gameTime representa el tiempo de la partida
      */
@@ -106,6 +102,8 @@ public class Play {
     private ImageIcon switchON, switchOFF;
     private boolean pencilON = false;
 
+    private CtrlPlayUI ctrlPlayUI;
+
     /** @brief Constructora
      *
      * @param kakuro representa el kakuro de la partida
@@ -117,7 +115,7 @@ public class Play {
         this.columnSize = Integer.parseInt(valuesSize[1]);
         this.training = training;
 
-        ctrlUI = CtrlUI.getInstance();
+        this.ctrlPlayUI = CtrlPlayUI.getInstance();
 
         Utils.loadFonts();
         sg = new KakuroBoard(kakuro);
@@ -204,7 +202,7 @@ public class Play {
         help1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int result = ctrlUI.help1(posX, posY);
+                int result = ctrlPlayUI.help1(posX, posY);
                 if (result != -1) {
                     KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                     if (result == 1) w.setBackground(Utils.colorCorrectCell);
@@ -216,7 +214,7 @@ public class Play {
         help2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int correctNumber = ctrlUI.help2(posX,posY);
+                int correctNumber = ctrlPlayUI.help2(posX, posY);
                 KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                 w.setValue(correctNumber);
                 w.setBackground(Utils.colorCorrectCell);
@@ -228,7 +226,7 @@ public class Play {
         resolve.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String kakuroSolved = ctrlUI.getCorrectKakuro();
+                String kakuroSolved = ctrlPlayUI.getCorrectKakuro();
                 sg = new KakuroBoard(kakuroSolved);
                 board.removeAll();
                 board.add(sg);
@@ -263,8 +261,8 @@ public class Play {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!training && selfFinished) {
-                    Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlUI.getKakuro(), 2);
-                    ctrlUI.setTimeToGame(gameTime);
+                    Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlPlayUI.getKakuro(), 2);
+                    ctrlPlayUI.setTimeToGame(gameTime);
                     as.drawGenerate2(frame);
                 }
                 else {
@@ -425,8 +423,8 @@ public class Play {
                             else {
                                 cell.setBackground(Utils.colorSelCell);
                                 cell.setValue(value);
-                                ctrlUI.setValue(posX, posY, value);
-                                isFinished = ctrlUI.isFinished();
+                                ctrlPlayUI.setValue(posX, posY, value);
+                                isFinished = ctrlPlayUI.isFinished();
                                 if (isFinished) {
                                     help1.setEnabled(false);
                                     help2.setEnabled(false);
@@ -488,7 +486,7 @@ public class Play {
     private void finishGame(boolean selfFinished) {
         stopTimer();
         if (!training) {
-            int points = ctrlUI.finishGame(selfFinished);
+            int points = ctrlPlayUI.finishGame(selfFinished);
             if (selfFinished) {
                 FinishedGame fg = new FinishedGame(points);
                 fg.drawFinishedGame();
@@ -542,7 +540,7 @@ public class Play {
      */
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
         if (cell.getBackground() != Utils.colorCorrectCell && cell.getBackground() != Utils.colorIncorrectCell) {
-            if (cell.getValue() != 0 && !ctrlUI.checkValidity(positionX, positionY, cell.getValue())) {
+            if (cell.getValue() != 0 && !ctrlPlayUI.checkValidity(positionX, positionY, cell.getValue())) {
                 cell.setBackground(Utils.colorIncorrectCell);
             } else cell.setBackground(Utils.colorWhiteCell);
         }
@@ -584,22 +582,6 @@ public class Play {
         this.frame = frame;
         frame.setTitle("Main");
         frame.setContentPane(panel1);
-        frame.setVisible(true);
-    }
-
-    /** @brief Función inicial que lanza la pantalla de Play
-     *
-     */
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Play");
-        ctrlUI = CtrlUI.getInstance();
-        ctrlUI.startGame(2, 3, 3);
-        String kakuro = ctrlUI.getKakuro();
-        frame.setContentPane(new Play(kakuro, false).panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
         frame.setVisible(true);
     }
 

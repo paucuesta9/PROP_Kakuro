@@ -26,7 +26,7 @@ public class DriverCtrlPlay {
      */
     private static void testStartGame(String kakuroText) {
         Kakuro kakuro = new Kakuro(kakuroText);
-        CtrlPlay.startGame(kakuro);
+        //CtrlPlay.startGame(kakuro);
         System.out.println("Se ha empezado una partida");
     }
 
@@ -44,9 +44,9 @@ public class DriverCtrlPlay {
         Cell[][] board = k.getBoard();
         Cell[][] boardSol = kSol.getBoard();
         if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
-        CtrlPlay.startGame(k);
+        //CtrlPlay.startGame(k);
 
-        int result = CtrlPlay.helpMyValue(x,y);
+        int result = 0;// = CtrlPlay.helpMyValue(x,y);
         if (result == -2) System.out.println("La celda no tiene un valor asignado");
         else if (result == -1) System.out.println("La celda no es blanca");
         else if (result == 0) System.out.println("El valor no es correcto");
@@ -67,7 +67,7 @@ public class DriverCtrlPlay {
         Cell[][] boardSol = kSol.getBoard();
         if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
 
-        CtrlPlay.startGame(k);
+        //CtrlPlay.startGame(k);
         //if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda se ha cambiado correctamente");
         //else System.out.println("No es una celda blanca");
     }

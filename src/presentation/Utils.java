@@ -104,45 +104,47 @@ public class Utils {
     }
 
     public static void setMusic() {
-        InputStream audioSrc = Utils.class.getClassLoader().getResourceAsStream("MUSICA2.wav");
-        AudioInputStream as1 = null;
-        try {
-            as1 = AudioSystem.getAudioInputStream(audioSrc);
-        } catch (UnsupportedAudioFileException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        AudioFormat af = as1.getFormat();
-        Clip clip1 = null;
-        try {
-            clip1 = AudioSystem.getClip();
-        } catch (LineUnavailableException e) {
-            e.printStackTrace();
-        }
-        DataLine.Info info = new DataLine.Info(Clip.class, af);
-
-        Line line1 = null;
-        try {
-            line1 = AudioSystem.getLine(info);
-        } catch (LineUnavailableException e) {
-            e.printStackTrace();
-        }
-
-        if ( ! line1.isOpen() )
-        {
+        if (gainControl == null) {
+            InputStream audioSrc = Utils.class.getClassLoader().getResourceAsStream("MUSICA2.wav");
+            AudioInputStream as1 = null;
             try {
-                clip1.open(as1);
-            } catch (LineUnavailableException e) {
+                as1 = AudioSystem.getAudioInputStream(audioSrc);
+            } catch (UnsupportedAudioFileException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            clip1.loop(Clip.LOOP_CONTINUOUSLY);
-            gainControl =
-                    (FloatControl) clip1.getControl(FloatControl.Type.MASTER_GAIN);
-            gainControl.setValue(volume);
-            clip1.start();
+            AudioFormat af = as1.getFormat();
+            Clip clip1 = null;
+            try {
+                clip1 = AudioSystem.getClip();
+            } catch (LineUnavailableException e) {
+                e.printStackTrace();
+            }
+            DataLine.Info info = new DataLine.Info(Clip.class, af);
+
+            Line line1 = null;
+            try {
+                line1 = AudioSystem.getLine(info);
+            } catch (LineUnavailableException e) {
+                e.printStackTrace();
+            }
+
+            if ( ! line1.isOpen() )
+            {
+                try {
+                    clip1.open(as1);
+                } catch (LineUnavailableException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                clip1.loop(Clip.LOOP_CONTINUOUSLY);
+                gainControl =
+                        (FloatControl) clip1.getControl(FloatControl.Type.MASTER_GAIN);
+                gainControl.setValue(volume);
+                clip1.start();
+            }
         }
     }
 

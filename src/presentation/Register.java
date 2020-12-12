@@ -20,7 +20,7 @@ public class Register {
     private JLabel logo;
 
     private JFrame frame;
-    private CtrlUI ctrlUI = CtrlUI.getInstance();
+    private CtrlPlayerUI ctrlPlayerUI = CtrlPlayerUI.getInstance();
 
     boolean mod = false;
     boolean mod1 = false;
@@ -152,7 +152,7 @@ public class Register {
                     if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseña no válidos");
                     else if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) {
                         try {
-                            ctrlUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
+                            ctrlPlayerUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
                             Main main = new Main();
                             main.drawMain(frame);
                         } catch (PlayerExists playerExists) {

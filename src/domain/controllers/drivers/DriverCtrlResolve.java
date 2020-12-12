@@ -21,7 +21,7 @@ public class DriverCtrlResolve {
      * Comprueba si se crea correctamente
      */
     private static void testCreadora() {
-        CtrlResolve ctrlResolve = new CtrlResolve();
+        //CtrlResolve ctrlResolve = new CtrlResolve();
         System.out.println("Se ha creado");
     }
 
@@ -35,12 +35,12 @@ public class DriverCtrlResolve {
         System.out.println("Indique un kakuro para realizar el test: ");
         String kakuroText = readKakuro();
         Kakuro kakuro = new Kakuro(kakuroText);
-        CtrlResolve.setKakuro(kakuro);
+        CtrlResolve ctrlResolve = new CtrlResolve(kakuro);
         int fila = 0;
         int columna = 0;
         int suma = 0;
         int [] vec = new int[] {0,0,0,0,0,0,0,0,0,0};
-        boolean b = CtrlResolve.resolve(fila,columna,suma,vec);
+        boolean b = ctrlResolve.resolve(fila,columna,suma,vec);
 
         if(b) {
             System.out.println("Se ha encontrado la siguiente solucion: ");

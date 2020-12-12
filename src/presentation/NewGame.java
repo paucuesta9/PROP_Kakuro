@@ -86,6 +86,8 @@ public class NewGame {
     private int diff = 1;
     private boolean training;
 
+    private CtrlPlayUI ctrlPlayUI = CtrlPlayUI.getInstance();
+
     /** @brief Constructora
      *
      */
@@ -243,9 +245,8 @@ public class NewGame {
                     int rowSize = Integer.parseInt(numRow.getText());
                     int columnSize = Integer.parseInt(numColumn.getText());
                     if (rowSize >= 3 && columnSize >= 3) {
-                        CtrlUI ctrlUI = CtrlUI.getInstance();
-                        ctrlUI.startGame(diff, rowSize, columnSize);
-                        String kakuro = ctrlUI.getKakuro();
+                        ctrlPlayUI.startGame(diff, rowSize, columnSize);
+                        String kakuro = ctrlPlayUI.getKakuro();
                         Play play = new Play(kakuro, training);
                         play.drawPlay(frame);
                     }

@@ -24,7 +24,7 @@ public class Login {
     private JLabel logo;
 
 
-    private CtrlUI ctrlUI;
+    private CtrlPlayerUI ctrlPlayerUI = CtrlPlayerUI.getInstance();
     private JFrame frame = new JFrame("Login");
 
     boolean mod = false;
@@ -33,7 +33,6 @@ public class Login {
     public Login() {
         Utils.loadFonts();
         setListeners();
-        ctrlUI = CtrlUI.getInstance();
 
         toRegister.setFont(Utils.roboto.deriveFont(12f));
 
@@ -121,7 +120,7 @@ public class Login {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     try {
-                        ctrlUI.login(usuarioTextField.getText(), contraseñaPasswordField.getPassword());
+                        ctrlPlayerUI.login(usuarioTextField.getText(), contraseñaPasswordField.getPassword());
                         Main main = new Main();
                         main.drawMain(frame);
                     } catch (FileNotFoundException fileNotFoundException) {

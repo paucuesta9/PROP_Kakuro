@@ -35,7 +35,7 @@ public class Config extends JDialog {
     private JButton mute;
     private JButton reset;
 
-    private CtrlUI ctrlUI = CtrlUI.getInstance();
+    private CtrlPlayerUI ctrlPlayerUI = CtrlPlayerUI.getInstance();
 
     private boolean muted;
     private int vol;
@@ -112,7 +112,7 @@ public class Config extends JDialog {
         reset.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ctrlUI.resetConfigColors();
+                ctrlPlayerUI.resetConfigColors();
                 blackPanel.setBackground(Utils.colorBlackCell);
                 whitePanel.setBackground(Utils.colorWhiteCell);
                 selectedPanel.setBackground(Utils.colorSelCell);
@@ -144,7 +144,7 @@ public class Config extends JDialog {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
-                ctrlUI.setConfigToPlayer(Utils.getConfig());
+                ctrlPlayerUI.setConfigToPlayer(Utils.getConfig());
             }
         });
 

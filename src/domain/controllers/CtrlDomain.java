@@ -6,7 +6,7 @@ import data.*;
 import domain.classes.*;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
-import netscape.javascript.JSObject;
+import domain.controllers.drivers.CtrlPlayer;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -27,6 +27,8 @@ public class CtrlDomain {
      * Instáncia del cotrolador persistencia
      */
     private CtrlData data;
+    private CtrlPlay ctrlPlay;
+    private CtrlPlayer ctrlPlayer;
     private Game currentGame;
     /**
      * Instància del kakuro con el que se trabaja en cada momento
@@ -45,27 +47,22 @@ public class CtrlDomain {
     }
 
     public void login(String username, String password) throws FileNotFoundException, WrongPasswordException {
-        JsonReader reader = data.getUser(username);
-        currentPlayer = gson.fromJson(reader, Player.class);
-        if (!password.equals(currentPlayer.getPassword())) {
-            currentPlayer = null;
-            throw new WrongPasswordException();
-        }
+        ctrlPlayer = new CtrlPlayer(this);
+        ctrlPlayer.login(username, password);
+        currentPlayer = ctrlPlayer.getPlayer();
     }
 
     public void logout() {
         currentPlayer = null;
         currentGame = null;
         currentKakuro = null;
+        ctrlPlayer = null;
     }
 
     public void signUp(String username, String password) throws PlayerExists {
-        currentPlayer = new Player(username, password);
-        String playerJSON = gson.toJson(currentPlayer);
-        if (data.existsPlayer(username)) {
-            throw new PlayerExists();
-        }
-        data.savePlayer(username, playerJSON);
+        ctrlPlayer = new CtrlPlayer(this);
+        ctrlPlayer.signUp(username, password);
+        currentPlayer = ctrlPlayer.getPlayer();
     }
 
     public void resetConfigColors() {
@@ -84,57 +81,19 @@ public class CtrlDomain {
      *
      */
     public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
-        try {
-            searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
-        } catch (IOException e) {
-            System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)");
-            currentKakuro = CtrlGenerate.generate(kakuroSizeRow,difficulty);
-            System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
-            resolve();
-            currentKakuro.setId(saveKakuro());
-        }
-        int id = getGameId();
-        currentGame = new Game(id, 0, 0, currentKakuro.getId(), kakuroSizeRow, kakuroSizeColumn, difficulty );
-        currentPlayer.setCurrentGame(currentGame);
-        currentPlayer.getStats().setTotal(1);
-        CtrlPlay.startGame(currentKakuro);
-        setCorrectValues();
+        ctrlPlay = new CtrlPlay(difficulty, kakuroSizeRow, kakuroSizeColumn, this);
+        currentGame = ctrlPlay.getGame();
+        currentKakuro = ctrlPlay.getKakuro();
     }
 
-    private int getGameId() {
+    public int getGameId() {
         return data.getNewGameId(currentPlayer.getUsername());
     }
 
-    /** @brief Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correctValue de la correspondiente celda blanca
-     *
-     */
-    public void setCorrectValues() {
-        try {
-            Kakuro sol = new Kakuro(getKakuro("data/solutions/diff" + currentKakuro.getDifficulty() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + currentKakuro.getId() + ".txt"));
-            currentKakuro.setCorrectValues(sol);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void setGame(int game) {
-        currentGame = currentPlayer.getGame(game);
-        currentPlayer.setCurrentGame(currentGame);
-        try {
-            currentGame.setKakuro(new Kakuro(data.getKakuro("data/players/" + currentPlayer.getUsername() + "/" + game + ".txt")));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        currentKakuro = currentGame.getKakuro();
-        currentKakuro.setDifficulty(currentGame.getDiff());
-        currentKakuro.setId(currentGame.getKakuroId());
-        try {
-            Kakuro sol = new Kakuro(getKakuro("data/solutions/diff" + currentGame.getDiff() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + currentKakuro.getId() + ".txt"));
-            currentKakuro.setCorrectValues(sol);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        ctrlPlay = new CtrlPlay(game, this);
+        currentGame = ctrlPlay.getGame();
+        currentKakuro = ctrlPlay.getKakuro();
     }
 
     /** @brief Se mira si el usuario ha completado el tablero
@@ -142,7 +101,7 @@ public class CtrlDomain {
      * @return cierto si el usuario ha colocado todos los valores de las celdas y son correctos, en caso contrario, devuelve falso
      */
     public boolean isFinished() {
-        return currentKakuro.isFinished();
+        return ctrlPlay.isFinished();
     }
 
     /** @brief Comprueba la validez de un número añadido a una celda blanca
@@ -154,7 +113,7 @@ public class CtrlDomain {
      * @return devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas
      */
     public boolean checkValidity(int x, int y, int value) {
-        return currentKakuro.checkValidity(x, y, value);
+        return ctrlPlay.checkValidity(x, y, value);
     }
 
     /** @brief Se activa la ayuda que mira si el valor que el usuario ha puesto es correcto
@@ -167,9 +126,7 @@ public class CtrlDomain {
      * @return -2 si no se ha colocado un valor
      */
     public int helpMyValue(int x, int y) {
-        updatePoints(-1);
-        currentPlayer.getStats().setHelps(1);
-        return CtrlPlay.helpMyValue(x, y);
+        return ctrlPlay.helpMyValue(x, y);
     }
 
     /** @brief Se activa la ayuda que coloca el valor correcto de una celda
@@ -179,36 +136,15 @@ public class CtrlDomain {
      * @return Devuelve cierto si la posición [x][y] es una celda blanca, en caso contrario, devuelve falso
      */
     public int helpCorrectNumber(int x, int y) {
-        updatePoints(-2);
-        currentPlayer.getStats().setHelps(1);
-        return CtrlPlay.helpCorrectNumber(x, y);
+        return ctrlPlay.helpCorrectNumber(x, y);
     }
 
     public int finishGame(boolean selfFinished) {
-        int points = 0;
-        if (selfFinished) {
-            int diff = currentKakuro.getDifficulty();
-            if (diff == 1) points = 10;
-            else if (diff == 2) points = 20;
-            else if (diff == 3) points = 30;
-            points += Integer.max(currentKakuro.getRowSize(), currentKakuro.getColumnSize()) / 2;
-            updatePoints(points);
-            updateStatsPlayer();
-        }
-        else {
-            currentGame.setPoints(0);
-        }
-        points = currentGame.getPoints();
-        currentGame = null;
-        currentKakuro = null;
-        return points;
+        return ctrlPlay.finishGame(selfFinished);
     }
 
-    private void updateStatsPlayer() {
-        currentPlayer.getStats().setPoints(currentGame.getPoints());
-        currentPlayer.getStats().setFinished(1);
-        String playerJSON = gson.toJson(currentPlayer);
-        data.savePlayer(currentPlayer.getUsername(), playerJSON);
+    public void updateStatsPlayer() {
+        ctrlPlay.updateStatsPlayer();
     }
 
     // OPTION 2 - CREATE VALIDATE
@@ -229,22 +165,13 @@ public class CtrlDomain {
         }
     }
 
-    // OPTION 3 - RESOLVE
-    /** @brief Se resuelve un Kakuro
-     *
-     */
-    public void resolve() {
-        int [] vec = {0,0,0,0,0,0,0,0,0,0};
-        CtrlResolve.setKakuro(currentKakuro);
-        CtrlResolve.resolve(0,0, 0, vec);
-    }
-
     // OPTION 4 - GENERATE
     /** @brief Se genera un Kakuro
      *
      */
     public void generate(int size, int dif) {
-        currentKakuro = CtrlGenerate.generate(size,dif);
+        CtrlGenerate ctrlGenerate = new CtrlGenerate();
+        currentKakuro = ctrlGenerate.generate(size,dif);
         System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
     }
 
@@ -259,23 +186,7 @@ public class CtrlDomain {
      * @return Devuelve cierto si la celda es blanco, en caso contrario, devuelve falso
      */
     public boolean kakuroSetValue(int x, int y, int value) {
-        return currentKakuro.setValue(x, y, value);
-    }
-
-    /** @brief Getter del tamaño de fila
-     *
-     * @return Devuelve un entero con el tamaño de fila del tablero
-     */
-    public int getRowSize() {
-        return currentKakuro.getRowSize();
-    }
-
-    /** @brief Getter del tamaño de columna
-     *
-     * @return Devuelve un entero con el tamaño de columna del tablero
-     */
-    public int getColumnSize() {
-        return currentKakuro.getColumnSize();
+        return ctrlPlay.setValue(x, y, value);
     }
 
     /** @brief Getter del kakuro en formato String
@@ -294,10 +205,6 @@ public class CtrlDomain {
         return currentKakuro.correctToString();
     }
 
-    public void updatePoints(int points) {
-        currentGame.setPoints(currentGame.getPoints() + points);
-    }
-
     /* READ AND WRITE (FILE) */
     /** @bief Busca un Kakuro
      *
@@ -307,12 +214,8 @@ public class CtrlDomain {
      * @param kakuroSizeRow tamaño de filas del tablero
      * @param kakuroSizeColumn tamaño de columnas del tablero
      */
-    public void searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException, IndexOutOfBoundsException, NumberFormatException {
-        String kakuro = data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
-        int id = Character.getNumericValue(kakuro.charAt(0));
-        this.currentKakuro = new Kakuro(kakuro.substring(2));
-        currentKakuro.setId(id);
-        currentKakuro.setDifficulty(difficulty);
+    public String searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+        return data.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
     }
 
     /** @brief Getter de Kakuro
@@ -342,17 +245,6 @@ public class CtrlDomain {
         return data.saveKakuro(currentKakuro.toString(), currentKakuro.correctToString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
     }
 
-    /** @brief Comprobadora de coordenadas
-     *
-     * Comprueba si las coordenadas dadas se encuentran dentro del tablero
-     * @param x representa el número de la fila del tablero
-     * @param y representa el número de la columna del tablero
-     * @return cierto si las coordenadas son correctas y falso si las coordenadas no lo son
-     */
-    public boolean checkCoord(int x, int y) {
-        return (x < getRowSize() && x >= 0 && y < getColumnSize() && y >= 0);
-    }
-
     /** @brief Getter de partidas empezadas por el usuario actual
      *
      * @return Devuelve una lista de listas de enteros con los atributos de todas las partidas que tiene empezadas el usuario
@@ -369,8 +261,7 @@ public class CtrlDomain {
     public void saveGame() {
         data.saveKakuroGame(currentKakuro.toString(), currentPlayer.getUsername(), currentGame.getId());
         currentPlayer.addSavedGame();
-        String playerJSON = gson.toJson(currentPlayer);
-        data.savePlayer(currentPlayer.getUsername(), playerJSON);
+        savePlayer();
     }
 
     public List<Player> getListOfPlayers(String s) {
@@ -394,7 +285,7 @@ public class CtrlDomain {
     }
 
     public void setTimeToGame(int gameTime) {
-        currentGame.setTime(gameTime);
+        ctrlPlay.setTimeToGame(gameTime);
     }
 
     public void resetParameters() {
@@ -405,5 +296,25 @@ public class CtrlDomain {
 
     public void setKakuro(String kakuro) {
         currentKakuro = new Kakuro(kakuro);
+    }
+
+    public void savePlayer() {
+        String playerJSON = gson.toJson(currentPlayer);
+        data.savePlayer(currentPlayer.getUsername(), playerJSON);
+    }
+
+    public JsonReader getUser(String username) throws FileNotFoundException {
+        return data.getUser(username);
+    }
+
+    public void saveNewPlayer(String username, String playerJSON) throws PlayerExists {
+        if (data.existsPlayer(username)) {
+            throw new PlayerExists();
+        }
+        data.savePlayer(username, playerJSON);
+    }
+
+    public Player getCurrentPlayer() {
+        return currentPlayer;
     }
 }

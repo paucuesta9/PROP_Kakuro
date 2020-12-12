@@ -54,7 +54,7 @@ public class LoadGame {
     private JLabel text;
 
     private JFrame frame;
-    private CtrlUI ctrlUI = CtrlUI.getInstance();
+    private CtrlPlayUI ctrlPlayUI = CtrlPlayUI.getInstance();
 
     /**
      * scroll es el conjunto de partidas cargadas dentro del games
@@ -114,7 +114,7 @@ public class LoadGame {
      * Muestra las partidas que hay empezadas y carga la que el usuario quiere jugar
      */
     private void loadGames() {
-        listGames = ctrlUI.getStartedGames();
+        listGames = ctrlPlayUI.getStartedGames();
         scroll.setLayout(new BoxLayout(scroll, BoxLayout.Y_AXIS));
 
         if (listGames.size() == 0) {
@@ -205,8 +205,8 @@ public class LoadGame {
                 if (gameSelected == -1) Utils.showError("No se ha seleccionado ninguna partida");
                 else {
                     ArrayList<Integer> game = listGames.get(gameSelected);
-                    ctrlUI.setGame(game.get(0));
-                    String kakuro = ctrlUI.getKakuro();
+                    ctrlPlayUI.setGame(game.get(0));
+                    String kakuro = ctrlPlayUI.getKakuro();
                     frame.dispose();
                     Play p = new Play(kakuro, false);
                     p.drawPlay(frame);
