@@ -16,14 +16,6 @@ import java.util.Scanner;
 public class DriverCtrlResolve {
 
     private static Scanner reader = new Scanner((System.in));
-    /** @brief Test de la creadora
-     *
-     * Comprueba si se crea correctamente
-     */
-    private static void testCreadora() {
-        //CtrlResolve ctrlResolve = new CtrlResolve();
-        System.out.println("Se ha creado");
-    }
 
     /**@Brief Test de la función resolve
      * Comprueva que la función resolve se ejecuta correctamente y da el resultado esperado
@@ -35,12 +27,12 @@ public class DriverCtrlResolve {
         System.out.println("Indique un kakuro para realizar el test: ");
         String kakuroText = readKakuro();
         Kakuro kakuro = new Kakuro(kakuroText);
-        CtrlResolve ctrlResolve = new CtrlResolve(kakuro);
+        CtrlResolve c = new CtrlResolve(kakuro);
         int fila = 0;
         int columna = 0;
         int suma = 0;
         int [] vec = new int[] {0,0,0,0,0,0,0,0,0,0};
-        boolean b = ctrlResolve.resolve(fila,columna,suma,vec);
+        boolean b = c.resolve();
 
         if(b) {
             System.out.println("Se ha encontrado la siguiente solucion: ");
@@ -62,7 +54,7 @@ public class DriverCtrlResolve {
                 case 1:
                     System.out.println();
                     System.out.println("Se llama a la creadora");
-                    testCreadora();
+                   // testCreadora();
                     break;
                 case 2:
                     System.out.println();

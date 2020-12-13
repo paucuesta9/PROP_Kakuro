@@ -42,7 +42,7 @@ public class CtrlPlay {
             System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
             CtrlResolve ctrlResolve =  new CtrlResolve(currentKakuro);
             int [] vec = {0,0,0,0,0,0,0,0,0,0};
-            ctrlResolve.resolve(0,0, 0, vec);
+            ctrlResolve.resolve();
             currentKakuro.setId(cd.saveKakuro());
         }
         int id = cd.getGameId();
