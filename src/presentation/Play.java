@@ -234,8 +234,10 @@ public class Play {
                 board.validate();
                 help1.setEnabled(false);
                 help2.setEnabled(false);
+                lapizButton.setEnabled(false);
                 selfFinished = false;
                 pauseResume.setEnabled(false);
+                resolve.setEnabled(false);
                 finishGame(false);
             }
         });
@@ -245,12 +247,20 @@ public class Play {
             public void actionPerformed(ActionEvent e) {
                 if (paused) {
                     board.setVisible(true);
+                    help1.setEnabled(true);
+                    help2.setEnabled(true);
+                    lapizButton.setEnabled(true);
+                    resolve.setEnabled(true);
                     startTimer();
                     pauseResume.setText("Pausar");
                     paused = false;
                 } else {
                     board.setVisible(false);
                     stopTimer();
+                    help1.setEnabled(false);
+                    help2.setEnabled(false);
+                    lapizButton.setEnabled(false);
+                    resolve.setEnabled(false);
                     pauseResume.setText("Continuar");
                     paused = true;
                 }
