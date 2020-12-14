@@ -36,13 +36,14 @@ public class CtrlPlay {
             this.currentKakuro = new Kakuro(kakuro.substring(2));
             currentKakuro.setId(id);
             currentKakuro.setDifficulty(difficulty);
+            cd.setKakuro(currentKakuro);
         } catch (IOException e) {
             System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)");
             currentKakuro = CtrlGenerate.generate(rowSize, difficulty);
             System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
             CtrlResolve ctrlResolve =  new CtrlResolve(currentKakuro);
-            int [] vec = {0,0,0,0,0,0,0,0,0,0};
             ctrlResolve.resolve();
+            cd.setKakuro(currentKakuro);
             currentKakuro.setId(cd.saveKakuro());
         }
         int id = cd.getGameId();
@@ -67,6 +68,7 @@ public class CtrlPlay {
         try {
             Kakuro sol = new Kakuro(cd.getKakuro("data/solutions/diff" + currentGame.getDiff() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + currentKakuro.getId() + ".txt"));
             currentKakuro.setCorrectValues(sol);
+            cd.setKakuro(currentKakuro);
         } catch (IOException e) {
             e.printStackTrace();
         }

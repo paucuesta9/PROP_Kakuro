@@ -55,6 +55,7 @@ public class CtrlUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(1200,800);
         frame.setResizable(false);
+        frame.setIconImage(Utils.getLogo().getImage());
         Utils.center(frame);
         login.drawLogin(frame);
     }
