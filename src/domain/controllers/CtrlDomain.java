@@ -298,6 +298,10 @@ public class CtrlDomain {
         currentKakuro = new Kakuro(kakuro);
     }
 
+    public void setKakuro(Kakuro kakuro) {
+        currentKakuro = kakuro;
+    }
+
     public void savePlayer() {
         String playerJSON = gson.toJson(currentPlayer);
         data.savePlayer(currentPlayer.getUsername(), playerJSON);

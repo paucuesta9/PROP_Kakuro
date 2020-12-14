@@ -41,7 +41,7 @@ public class KakuroWhiteCell extends KakuroCell {
             for (int j = 0; j < 3; ++j) {
                 JLabel labelPencil = new JLabel();
                 labelPencil.setForeground(Utils.colorBorde);
-                labelPencil.setFont(Utils.roboto.deriveFont(20*size/450));
+                labelPencil.setFont(Utils.roboto.deriveFont(20*size/150f));
                 c.weightx = 1.0;
                 c.weighty = 1.0;
                 c.fill = GridBagConstraints.NONE;
