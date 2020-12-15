@@ -49,7 +49,7 @@ public class AskSave {
 
         síButton.setFont(Utils.roboto);
         síButton.setForeground(Color.WHITE);
-        síButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOkError.png")));
+        síButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOKError.png")));
         síButton.setBorderPainted(false);
         síButton.setBackground(Color.magenta);
         síButton.setHorizontalTextPosition(JButton.CENTER);

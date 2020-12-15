@@ -41,7 +41,7 @@ public class AskNewContinue {
         Utils.setButtons(training);
 
         training.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-naranja.png")));
-        loadButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOkError.png")));
+        loadButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/bottonOKError.png")));
         newButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-cyan-little.png")));
         volverButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
     }
