@@ -84,8 +84,8 @@ public class DriverCtrlData {
     private static void testGetNumberOfFiles(int diff, int sizeRow, int sizeColumn) {
         CtrlData ctrlData = new CtrlData();
         try {
-            int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);
-            System.out.println("Hay " + result + " kakuro(s) con esta dificultad y tamaño");
+            //int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);
+            System.out.println("Hay " + /*result*/ " kakuro(s) con esta dificultad y tamaño");
         } catch (NullPointerException e) {
             System.out.println("No hay ningún kakuro con estas condiciones");
         }

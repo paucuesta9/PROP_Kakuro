@@ -274,8 +274,7 @@ public class Create {
                     if (!ctrlUI.validate()) {
                         Utils.showError("El kakuro creado no es válido");
                     } else {
-                        Generate2 a = new Generate2("¿Desea guardar el kakuro creado?", boardKakuro, 1);
-                        a.drawGenerate2(frame);
+                        ctrlUI.toAskSave("¿Desea guardar el kakuro creado?", boardKakuro, 1);
                     }
                 } catch (NoTypeCellException noTypeCellException) {
                     Utils.showError("No se han rellenado todas las celdas");
@@ -286,8 +285,7 @@ public class Create {
         cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main m = new Main();
-                m.drawMain(frame);
+                ctrlUI.toMain();
             }
         });
     }
@@ -434,24 +432,11 @@ public class Create {
         listenersCells();
     }
 
+    public JPanel getDefaultPanel() {
+        return panel1;
+    }
+
     private void createUIComponents() {
         board = new JPanel();
-    }
-
-    public void drawCreate(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Create");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Create");
-        frame.setContentPane(new Create().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
     }
 }

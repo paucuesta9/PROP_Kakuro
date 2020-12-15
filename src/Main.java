@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                CtrlUI ui = new CtrlUI();
+                CtrlUI ui = CtrlUI.getInstance();
                 ui.run();
             }
         });

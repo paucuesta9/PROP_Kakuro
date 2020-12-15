@@ -151,8 +151,7 @@ public class Generate {
                         Thread t = new Thread() {
                             public void run() {
                                 ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
-                                Generate2 as = new Generate2("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro(), 1);
-                                as.drawGenerate2(frame);
+                                ctrlUI.toAskSave("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro(), 1);
                             }
                         };
                         t.start();
@@ -164,32 +163,18 @@ public class Generate {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!g) {
-                    Main m = new Main();
-                    m.drawMain(frame);
+                    ctrlUI.toMain();
                 }
             }
         });
     }
 
+    public JPanel getDefaultPanel() {
+        return panel1;
+    }
+
     private void createUIComponents() {
         label = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
         label.requestFocusInWindow();
-    }
-
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Generate");
-        frame.setContentPane(new Generate().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
-    }
-
-    public void drawGenerate(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Generate");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
     }
 }

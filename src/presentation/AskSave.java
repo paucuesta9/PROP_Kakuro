@@ -8,7 +8,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Generate2 {
+public class AskSave {
     private JPanel panel1;
     private JLabel photo;
     private JButton config;
@@ -28,7 +28,7 @@ public class Generate2 {
     private String kAux;
     private int option;
 
-    public Generate2(String uwu, String k, int option) {
+    public AskSave(String uwu, String k, int option) {
         Utils.loadFonts();
 
         setListeners();
@@ -122,35 +122,20 @@ public class Generate2 {
                 else {
                     ctrlUI.saveGame();
                 }
-                Main main = new Main();
-                main.drawMain(frame);
+                ctrlUI.toMain();
             }
         });
 
         noButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main main = new Main();
-                main.drawMain(frame);
+                ctrlUI.toMain();
             }
         });
     }
 
-    public void drawGenerate2(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Save");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args) {
-        JFrame frameMain = new JFrame("Save");
-        //frameMain.setContentPane(new Generate2(6, 6, 1).panel1);
-        frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameMain.setSize(1200,800);
-        frameMain.setResizable(false);
-        Utils.center(frameMain);
-        frameMain.setVisible(true);
+    public JPanel getDefaultPanel() {
+        return panel1;
     }
 
     private void createUIComponents() {

@@ -20,8 +20,6 @@ public class Main {
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
-    private JFrame frame;
-
     public Main() {
         Utils.setMusic();
         Utils.updateVolume(Utils.volume);
@@ -68,59 +66,41 @@ public class Main {
         playButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AskNewContinue a = new AskNewContinue();
-                a.drawAskNewContinue(frame);
+                ctrlUI.toAskNewContinue();
             }
         });
 
         createKakuroButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Create create = new Create();
-                create.drawCreate(frame);
+                ctrlUI.toCreate();
             }
         });
 
         generateButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Generate g = new Generate();
-                g.drawGenerate(frame);
+                ctrlUI.toGenerate();
             }
         });
 
         rankingButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Rankings ranking = new Rankings();
-                ranking.drawRanking(frame);
+                ctrlUI.toRankings();
             }
         });
 
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Login login = new Login();
-                login.drawLogin(frame);
+                ctrlUI.toLogin();
             }
         });
     }
 
-    public void drawMain(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Main");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Main");
-        frame.setContentPane(new Main().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
+    public JPanel getDefaultPanel() {
+        return panel1;
     }
 
     private void createUIComponents() {

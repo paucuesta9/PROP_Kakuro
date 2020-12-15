@@ -19,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Rankings implements ListSelectionListener {
-    private JFrame frame;
     private JPanel menu;
     private JButton volver;
     //private JList list;
@@ -34,11 +33,11 @@ public class Rankings implements ListSelectionListener {
     private JPanel ButtonPan;
     private JTable table;
     private JLabel logo;
-    private CtrlUI ctrlUI;
     private Font fontAwesome, roboto;
 
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
+
     public Rankings() {
-        ctrlUI = new CtrlUI();
         loadFonts();
         menu.setBackground(null);
         panel2.setBackground(null);
@@ -194,8 +193,7 @@ public class Rankings implements ListSelectionListener {
         volver.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main m = new Main();
-                m.drawMain(frame);
+                ctrlUI.toMain();
             }
         });
 
@@ -256,21 +254,8 @@ public class Rankings implements ListSelectionListener {
         scrollPane.setVisible(true);
     }
 
-    public void drawRanking(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Rankings");
-        frame.setContentPane(panel);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args)  {
-        JFrame frame = new JFrame("Rankings");
-        frame.setContentPane(new Rankings().panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        frame.setVisible(true);
-        Utils.center(frame);
+    public JPanel getDefaultPanel() {
+        return panel;
     }
 
     @Override

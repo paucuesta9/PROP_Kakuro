@@ -29,13 +29,27 @@ public class CtrlUI {
      * reader es una atributo que sirve para leer de la terminal
      */
     private Scanner reader = new Scanner(System.in);
+    private JFrame mainFrame = new JFrame();
     private static CtrlUI ctrlUI;
+
 
     public static CtrlUI getInstance() {
         if (ctrlUI == null)
             ctrlUI = new CtrlUI();
         return ctrlUI;
     }
+
+    private Login login;
+    private Register register;
+    private Main main;
+    private AskNewContinue askNewContinue;
+    private LoadGame loadGame;
+    private NewGame newGame;
+    private Play play;
+    private Create create;
+    private Generate generate;
+    private AskSave askSave;
+    private Rankings rankings;
 
     /** @brief Creadora por defecto
      *
@@ -46,18 +60,93 @@ public class CtrlUI {
         cd = new CtrlDomain();
     }
 
-    // ****************** NUEVA VERSIÓN ****************** //
 
+    // ****************** NUEVA VERSIÓN ****************** //
     public void run() {
         Utils.loadFonts();
-        Login login = new Login();
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        frame.setIconImage(Utils.getLogo().getImage());
-        Utils.center(frame);
-        login.drawLogin(frame);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        mainFrame.setSize(1200,800);
+        mainFrame.setResizable(false);
+        mainFrame.setIconImage(Utils.getLogo().getImage());
+        Utils.center(mainFrame);
+        toLogin();
+    }
+
+    public void toLogin() {
+        login = new Login();
+        mainFrame.setTitle("Login");
+        mainFrame.setContentPane(login.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toRegister() {
+        register = new Register();
+        mainFrame.setTitle("Register");
+        mainFrame.setContentPane(register.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toMain() {
+        main = new Main();
+        mainFrame.setTitle("Main");
+        mainFrame.setContentPane(main.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toAskNewContinue() {
+        askNewContinue = new AskNewContinue();
+        mainFrame.setTitle("New game or continue");
+        mainFrame.setContentPane(askNewContinue.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toNewGame(boolean training) {
+        newGame = new NewGame(training);
+        mainFrame.setTitle("New Game");
+        mainFrame.setContentPane(newGame.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toLoadGame() {
+        loadGame = new LoadGame();
+        mainFrame.setTitle("LoadGame");
+        mainFrame.setContentPane(loadGame.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toPlay(String kakuro, boolean training) {
+        play = new Play(kakuro, training);
+        mainFrame.setTitle("Play");
+        mainFrame.setContentPane(play.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toCreate() {
+        create = new Create();
+        mainFrame.setTitle("Create");
+        mainFrame.setContentPane(create.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toGenerate() {
+        generate = new Generate();
+        mainFrame.setTitle("Generate");
+        mainFrame.setContentPane(generate.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toRankings() {
+        rankings = new Rankings();
+        mainFrame.setTitle("Ranking");
+        mainFrame.setContentPane(rankings.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toAskSave(String question, String boardKakuro, int option) {
+        askSave = new AskSave(question, boardKakuro, option);
+        mainFrame.setTitle("Save");
+        mainFrame.setContentPane(askSave.getDefaultPanel());
+        mainFrame.setVisible(true);
     }
 
     public String getKakuro() {
@@ -67,7 +156,6 @@ public class CtrlUI {
     public String getCorrectKakuro() {
         return cd.getCorrectKakuroToString();
     }
-
     public void searchKakuro(int diff, int rowSize, int columnSize) {
         try {
             cd.searchKakuro(diff, rowSize, columnSize);
@@ -109,6 +197,7 @@ public class CtrlUI {
     }
 
     //Funcio de prova per agafar un ranking
+
     public List<Player> getListOfPlayers(String s) {
         List<Player> p = cd.getListOfPlayers(s);
         return p;

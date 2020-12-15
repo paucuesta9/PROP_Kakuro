@@ -1,10 +1,8 @@
 package presentation;
 
 import domain.classes.Exceptions.PlayerExists;
-import domain.controllers.CtrlDomain;
 
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -19,7 +17,7 @@ public class Register {
     private JLabel toLogin;
     private JLabel logo;
 
-    private JFrame frame;
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
     private CtrlPlayerUI ctrlPlayerUI = CtrlPlayerUI.getInstance();
 
     boolean mod = false;
@@ -153,8 +151,7 @@ public class Register {
                     else if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) {
                         try {
                             ctrlPlayerUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
-                            Main main = new Main();
-                            main.drawMain(frame);
+                            ctrlUI.toMain();
                         } catch (PlayerExists playerExists) {
                             Utils.showError("El usuario ya existe");
                         }
@@ -170,8 +167,7 @@ public class Register {
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                Login l = new Login();
-                l.drawLogin(frame);
+                ctrlUI.toLogin();
             }
         });
     }
@@ -182,20 +178,7 @@ public class Register {
         label.requestFocusInWindow();
     }
 
-    public void drawRegister(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Register");
-        frame.setContentPane(panel2);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Register");
-        frame.setContentPane(new Register().panel2);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
+    public JPanel getDefaultPanel() {
+        return panel2;
     }
 }

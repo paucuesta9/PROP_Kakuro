@@ -53,7 +53,7 @@ public class LoadGame {
      */
     private JLabel text;
 
-    private JFrame frame;
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
     private CtrlPlayUI ctrlPlayUI = CtrlPlayUI.getInstance();
 
     /**
@@ -193,9 +193,8 @@ public class LoadGame {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                frame.dispose();
-//                Config c = new Config();
-//                c.drawConfig();
+                Config c = new Config();
+                c.drawConfig();
             }
         });
 
@@ -207,9 +206,7 @@ public class LoadGame {
                     ArrayList<Integer> game = listGames.get(gameSelected);
                     ctrlPlayUI.setGame(game.get(0));
                     String kakuro = ctrlPlayUI.getKakuro();
-                    frame.dispose();
-                    Play p = new Play(kakuro, false);
-                    p.drawPlay(frame);
+                    ctrlUI.toPlay(kakuro, false);
                 }
 
             }
@@ -218,10 +215,13 @@ public class LoadGame {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main main = new Main();
-                main.drawMain(frame);
+                ctrlUI.toMain();
             }
         });
+    }
+
+    public JPanel getDefaultPanel() {
+        return panel1;
     }
 
     /** @brief Inserción Imagen Kakuro
@@ -229,28 +229,5 @@ public class LoadGame {
      */
     private void createUIComponents() {
         picLabel = new JLabel(new ImageIcon(new ImageIcon("resources/images/Captura.PNG").getImage()));
-    }
-
-    /** @brief Función inicial que lanza la pantalla de LoadGames
-     *
-     */
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Load Game");
-        frame.setContentPane(new LoadGame().panel1);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
-    }
-
-    /** @brief Pinta LoadGames
-     *
-     */
-    public void drawLoadGame(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Load Game");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
     }
 }

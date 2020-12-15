@@ -17,7 +17,7 @@ public class AskNewContinue {
     private JButton training;
     private JLabel logo;
 
-    private JFrame frame;
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     public AskNewContinue() {
         Utils.loadFonts();
@@ -49,59 +49,41 @@ public class AskNewContinue {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                frame.dispose();
-//                Config c = new Config();
-//                c.drawConfig();
+                Config c = new Config();
+                c.drawConfig();
             }
         });
         training.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NewGame ng = new NewGame(true);
-                ng.drawNewGame(frame);
+                ctrlUI.toNewGame(true);
             }
         });
 
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                LoadGame lg = new LoadGame();
-                lg.drawLoadGame(frame);
+                ctrlUI.toLoadGame();
             }
         });
 
         newButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                NewGame ng = new NewGame(false);
-                ng.drawNewGame(frame);
+                ctrlUI.toNewGame(false);
             }
         });
 
         volverButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main main = new Main();
-                main.drawMain(frame);
+                ctrlUI.toMain();
             }
         });
     }
 
-    public void drawAskNewContinue(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("New or Continue");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args) {
-        JFrame frameMain = new JFrame("New or Continue");
-        frameMain.setContentPane(new AskNewContinue().panel1);
-        frameMain.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameMain.setSize(1200,800);
-        frameMain.setResizable(false);
-        Utils.center(frameMain);
-        frameMain.setVisible(true);
+    public JPanel getDefaultPanel() {
+        return panel1;
     }
 
     private void createUIComponents() {

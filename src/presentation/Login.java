@@ -1,17 +1,11 @@
 package presentation;
 
 import domain.classes.Exceptions.WrongPasswordException;
-import domain.controllers.CtrlDomain;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class Login {
     private JPasswordField contraseñaPasswordField;
@@ -23,9 +17,8 @@ public class Login {
     private JLabel toRegister;
     private JLabel logo;
 
-
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
     private CtrlPlayerUI ctrlPlayerUI = CtrlPlayerUI.getInstance();
-    private JFrame frame = new JFrame("Login");
 
     boolean mod = false;
     boolean mod1 = false;
@@ -121,8 +114,7 @@ public class Login {
                 public void actionPerformed(ActionEvent e) {
                     try {
                         ctrlPlayerUI.login(usuarioTextField.getText(), contraseñaPasswordField.getPassword());
-                        Main main = new Main();
-                        main.drawMain(frame);
+                        ctrlUI.toMain();
                     } catch (FileNotFoundException fileNotFoundException) {
                         Utils.showError("Usuario y/o contraseña incorrecta");
                     } catch (WrongPasswordException wrongPasswordException) {
@@ -136,8 +128,7 @@ public class Login {
             @Override
             public void mouseClicked(MouseEvent e)
             {
-                Register r = new Register();
-                r.drawRegister(frame);
+                ctrlUI.toRegister();
             }
         });
     }
@@ -148,20 +139,7 @@ public class Login {
         label.requestFocusInWindow();
     }
 
-    public void drawLogin(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Login");
-        frame.setContentPane(panel2);
-        frame.setVisible(true);
-    }
-
-    public static void main(String [] args) {
-        JFrame frame = new JFrame("Login");
-        frame.setContentPane(new Login().panel2);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200,800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
+    public JPanel getDefaultPanel() {
+        return panel2;
     }
 }

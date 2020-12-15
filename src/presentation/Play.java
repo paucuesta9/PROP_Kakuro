@@ -102,6 +102,7 @@ public class Play {
     private ImageIcon switchON, switchOFF;
     private boolean pencilON = false;
 
+    private CtrlUI ctrlUI = CtrlUI.getInstance();
     private CtrlPlayUI ctrlPlayUI;
 
     /** @brief Constructora
@@ -271,15 +272,12 @@ public class Play {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!training && selfFinished) {
-                    Generate2 as = new Generate2("¿Desea guardar la partida?", ctrlPlayUI.getKakuro(), 2);
                     ctrlPlayUI.setTimeToGame(gameTime);
-                    as.drawGenerate2(frame);
+                    ctrlUI.toAskSave("¿Desea guardar la partida?", ctrlPlayUI.getKakuro(), 2);
                 }
                 else {
-                    Main m = new Main();
-                    m.drawMain(frame);
+                    ctrlUI.toMain();
                 }
-
             }
         });
 
@@ -513,8 +511,7 @@ public class Play {
 
                     @Override
                     public void windowClosed(WindowEvent e) {
-                        Main m = new Main();
-                        m.drawMain(frame);
+                        ctrlUI.toMain();
                     }
 
                     @Override
@@ -585,14 +582,7 @@ public class Play {
         board = new JPanel();
     }
 
-    /** @brief Pinta Play
-     *
-     */
-    public void drawPlay(JFrame frame) {
-        this.frame = frame;
-        frame.setTitle("Main");
-        frame.setContentPane(panel1);
-        frame.setVisible(true);
+    public Container getDefaultPanel() {
+        return panel1;
     }
-
 }
