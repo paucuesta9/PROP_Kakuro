@@ -6,15 +6,15 @@ DRIVERS = src/domain/controllers/drivers
 JUNIT = src/domain/controllers/junits
 
 ifeq ($(OS), Windows_NT)
-CLPTH = "bin;lib/junit-4.12.jar;lib/hamcrest-core-1.3.jar"
+CLPTH = "bin;lib/junit-4.12.jar;lib/hamcrest-core-1.3.jar;lib/gson-2.8.6.jar;lib/forms_rt.jar;resources"
 else
-CLPTH = "bin:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar"
+CLPTH = "bin:lib/junit-4.12.jar:lib/hamcrest-core-1.3.jar:lib/gson-2.8.6.jar:lib/forms_rt.jar:resources"
 endif
 
 default: class
 
 class:
-	javac -d bin -cp $(CLPTH) -sourcepath src src/Main.java $(CLASSES)/*.java $(CONTROLADORES)/*.java $(VISTA)/*.java $(DATA)/*.java $(DRIVERS)/*.java $(JUNIT)/*.java
+	javac -d bin -encoding UTF-8 -cp $(CLPTH) -sourcepath src src/Main.java $(CLASSES)/*.java $(CONTROLADORES)/*.java $(VISTA)/*.java $(DATA)/*.java $(DRIVERS)/*.java $(JUNIT)/*.java
 
 jar:
 	jar -cvfm Kakuro.jar MANIFEST.MF -C bin/ .

@@ -24,7 +24,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="138dc" class="javax.swing.JButton" binding="iniciarSesiónButton">
+          <component id="138dc" class="javax.swing.JButton" binding="iniciarSesionButton">
             <constraints>
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <minimum-size width="252" height="-1"/>
@@ -61,7 +61,7 @@
               <text value="Usuario"/>
             </properties>
           </component>
-          <component id="203f4" class="javax.swing.JPasswordField" binding="contraseñaPasswordField" default-binding="true">
+          <component id="203f4" class="javax.swing.JPasswordField" binding="contrasenaPasswordField" default-binding="true">
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>

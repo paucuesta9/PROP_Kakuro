@@ -9,11 +9,9 @@ public class KakuroWhiteCell extends KakuroCell {
     private boolean[] pencil = new boolean[10];
 
     private JLabel jLabel;
-    private CtrlUI ctrlUI;
 
     KakuroWhiteCell(int x, int y, int size) {
         super(x, y, size);
-        ctrlUI = CtrlUI.getInstance();
         setLayout(new GridBagLayout());
         jLabel = new JLabel();
         jLabel.setFont(Utils.roboto.deriveFont(20*size/50f));

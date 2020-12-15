@@ -6,7 +6,6 @@ import data.*;
 import domain.classes.*;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
-import domain.controllers.drivers.CtrlPlayer;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

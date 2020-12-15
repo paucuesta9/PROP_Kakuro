@@ -16,8 +16,9 @@ import java.util.Timer;
  @brief Clase  <em>Play</em>.
  */
 
-/** @brief Clase Play que carga una partida y contiene las funciones y atributos necesarios para jugar una partida.
+/**
  * @author Judith Almoño Gómez y Pau Cuesta Arcos
+ * @brief Clase Play que carga una partida y contiene las funciones y atributos necesarios para jugar una partida.
  */
 
 public class Play {
@@ -105,14 +106,15 @@ public class Play {
     private CtrlUI ctrlUI = CtrlUI.getInstance();
     private CtrlPlayUI ctrlPlayUI;
 
-    /** @brief Constructora
-     *
+    /**
      * @param kakuro representa el kakuro de la partida
+     * @brief Constructora
      */
     public Play(String kakuro, boolean training) {
+        $$$setupUI$$$();
         String[] values = kakuro.split("\n");
         String[] valuesSize = values[0].split(",");
-        this.rowSize =  Integer.parseInt(valuesSize[0]);
+        this.rowSize = Integer.parseInt(valuesSize[0]);
         this.columnSize = Integer.parseInt(valuesSize[1]);
         this.training = training;
 
@@ -129,7 +131,7 @@ public class Play {
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));
         config.setBackground(null);
-        config.setBorder(new EmptyBorder(10,0,0,10));
+        config.setBorder(new EmptyBorder(10, 0, 0, 10));
 
         Utils.setButtons(pauseResume);
         pauseResume.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
@@ -141,14 +143,14 @@ public class Play {
 
         try {
             BufferedImage buffer = ImageIO.read(new File("resources/images/switch-off.png"));
-            Image scaled = buffer.getScaledInstance(90, 50, java.awt.Image.SCALE_SMOOTH);
+            Image scaled = buffer.getScaledInstance(90, 50, Image.SCALE_SMOOTH);
             switchOFF = new ImageIcon(scaled);
             lapizButton.setIcon(switchOFF);
             textLapiz.setFont(Utils.roboto.deriveFont(30f));
             textLapiz.setForeground(Color.BLACK);
 
             buffer = ImageIO.read(new File("resources/images/switch-on.png"));
-            scaled = buffer.getScaledInstance(90, 50, java.awt.Image.SCALE_SMOOTH);
+            scaled = buffer.getScaledInstance(90, 50, Image.SCALE_SMOOTH);
             switchON = new ImageIcon(scaled);
         } catch (IOException e) {
             e.printStackTrace();
@@ -174,8 +176,9 @@ public class Play {
         board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
     }
 
-    /** @brief Listeners
-     *
+    /**
+     * @brief Listeners
+     * <p>
      * Funcionalidades de los botones help1, help2, resolve, pauseResume, exit y config
      */
     private void listeners() {
@@ -189,8 +192,7 @@ public class Play {
                     pencilON = false;
                     help1.setEnabled(true);
                     help2.setEnabled(true);
-                }
-                else {
+                } else {
                     lapizButton.setIcon(switchON);
                     textLapiz.setForeground(Color.decode(Utils.colorDarkBlue));
                     pencilON = true;
@@ -274,8 +276,7 @@ public class Play {
                 if (!training && selfFinished) {
                     ctrlPlayUI.setTimeToGame(gameTime);
                     ctrlUI.toAskSave("¿Desea guardar la partida?", ctrlPlayUI.getKakuro(), 2);
-                }
-                else {
+                } else {
                     ctrlUI.toMain();
                 }
             }
@@ -299,8 +300,8 @@ public class Play {
 
                     @Override
                     public void windowClosed(WindowEvent e) {
-                        boolean[][] pencil = new boolean[rowSize*columnSize][10];
-                        for (int i = 0; i < rowSize*columnSize; ++i) {
+                        boolean[][] pencil = new boolean[rowSize * columnSize][10];
+                        for (int i = 0; i < rowSize * columnSize; ++i) {
                             if (sg.getComponent(i) instanceof KakuroWhiteCell) {
                                 pencil[i] = ((KakuroWhiteCell) sg.getComponent(i)).getAllPencil();
                             }
@@ -312,7 +313,7 @@ public class Play {
                         }
                         board.removeAll();
                         board.add(sg);
-                        for (int i = 0; i < rowSize*columnSize; ++i) {
+                        for (int i = 0; i < rowSize * columnSize; ++i) {
                             if (sg.getComponent(i) instanceof KakuroWhiteCell) {
                                 ((KakuroWhiteCell) sg.getComponent(i)).setAllPencil(pencil[i]);
                             }
@@ -345,8 +346,8 @@ public class Play {
         });
     }
 
-    /** @brief Listener del tablero
-     *
+    /**
+     * @brief Listener del tablero
      */
     private void setListenerBoard() {
         for (int i = 0; i < components.length; ++i) {
@@ -355,6 +356,7 @@ public class Play {
                 cell.addFocusListener(new FocusListener() {
                     Color color;
                     int value;
+
                     @Override
                     public void focusGained(FocusEvent e) {
                         color = cell.getBackground();
@@ -366,8 +368,10 @@ public class Play {
 
                     @Override
                     public void focusLost(FocusEvent e) {
-                        if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell)) cell.setBackground(Utils.colorWhiteCell);
+                        if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell))
+                            cell.setBackground(color);
+                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell))
+                            cell.setBackground(Utils.colorWhiteCell);
                         if (!pencilON && !isFinished) checkValidityCell(cell, posX, posY);
                         if (!pencilON) checkContinousCells(posX, posY);
                     }
@@ -427,8 +431,7 @@ public class Play {
                         if (value != 0) {
                             if (pencilON) {
                                 cell.setPencil(value);
-                            }
-                            else {
+                            } else {
                                 cell.setBackground(Utils.colorSelCell);
                                 cell.setValue(value);
                                 ctrlPlayUI.setValue(posX, posY, value);
@@ -452,7 +455,7 @@ public class Play {
         while (true) {
             --posYAux;
             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-            else if (!isFinished){
+            else if (!isFinished) {
                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                 checkValidityCell(whiteCell, posXAux, posYAux);
             }
@@ -462,7 +465,7 @@ public class Play {
             ++posYAux;
             if (posYAux == columnSize) break;
             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-            else if (!isFinished){
+            else if (!isFinished) {
                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                 checkValidityCell(whiteCell, posXAux, posYAux);
             }
@@ -471,7 +474,7 @@ public class Play {
         while (true) {
             --posXAux;
             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-            else if (!isFinished){
+            else if (!isFinished) {
                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                 checkValidityCell(whiteCell, posXAux, posYAux);
             }
@@ -481,15 +484,15 @@ public class Play {
             ++posXAux;
             if (posXAux == rowSize) break;
             if (components[posXAux * columnSize + posYAux] instanceof KakuroBlackCell) break;
-            else if (!isFinished){
+            else if (!isFinished) {
                 KakuroWhiteCell whiteCell = (KakuroWhiteCell) components[posXAux * columnSize + posYAux];
                 checkValidityCell(whiteCell, posXAux, posYAux);
             }
         }
     }
 
-    /** @brief Comprueba que si el tablero se ha acabado
-     *
+    /**
+     * @brief Comprueba que si el tablero se ha acabado
      */
     private void finishGame(boolean selfFinished) {
         stopTimer();
@@ -539,11 +542,11 @@ public class Play {
 
     }
 
-    /** @brief Pinta las casillas dependiendo de la validez de su valor
-     *
-     * @param cell representa la celda a pintar
+    /**
+     * @param cell      representa la celda a pintar
      * @param positionX representa la posición de la celda respecto la fila
      * @param positionY representa la posición de la celda respecto la columna
+     * @brief Pinta las casillas dependiendo de la validez de su valor
      */
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
         if (cell.getBackground() != Utils.colorCorrectCell && cell.getBackground() != Utils.colorIncorrectCell) {
@@ -554,8 +557,8 @@ public class Play {
 
     }
 
-    /** @brief Empieza/reanuda el timer
-     *
+    /**
+     * @brief Empieza/reanuda el timer
      */
     private void startTimer() {
         timer = new Timer();
@@ -568,21 +571,132 @@ public class Play {
         }, 0, 1000);
     }
 
-    /** @brief Para el timer
-     *
+    /**
+     * @brief Para el timer
      */
     private void stopTimer() {
         timer.cancel();
     }
 
-    /** @brief Inserción del tablero
-     *
+    /**
+     * @brief Inserción del tablero
      */
     private void createUIComponents() {
         board = new JPanel();
     }
 
     public Container getDefaultPanel() {
+        return panel1;
+    }
+
+    /**
+     * Method generated by IntelliJ IDEA GUI Designer
+     * >>> IMPORTANT!! <<<
+     * DO NOT edit this method OR call it in your code!
+     *
+     * @noinspection ALL
+     */
+    private void $$$setupUI$$$() {
+        createUIComponents();
+        panel1 = new JPanel();
+        panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panel1.setBackground(new Color(-1973532));
+        panel1.setForeground(new Color(-4473925));
+        board.setBackground(new Color(-1118482));
+        board.setForeground(new Color(-4473925));
+        panel1.add(board, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(800, 800), new Dimension(800, 800), new Dimension(800, 800), 0, false));
+        menu = new JPanel();
+        menu.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(11, 3, new Insets(0, 0, 0, 0), -1, -1));
+        menu.setBackground(new Color(-1973532));
+        menu.setForeground(new Color(-1973532));
+        panel1.add(menu, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        pauseResume = new JButton();
+        pauseResume.setBorderPainted(false);
+        pauseResume.setContentAreaFilled(false);
+        pauseResume.setFocusPainted(false);
+        pauseResume.setFocusable(false);
+        pauseResume.setForeground(new Color(-1));
+        pauseResume.setLabel("Pausar");
+        pauseResume.setText("Pausar");
+        menu.add(pauseResume, new com.intellij.uiDesigner.core.GridConstraints(8, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, 40), new Dimension(252, -1), 0, false));
+        exit = new JButton();
+        exit.setBorderPainted(false);
+        exit.setContentAreaFilled(false);
+        exit.setFocusPainted(false);
+        exit.setForeground(new Color(-1));
+        exit.setText("Salir");
+        menu.add(exit, new com.intellij.uiDesigner.core.GridConstraints(9, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, -1), new Dimension(252, -1), 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
+        menu.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(3, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 10), new Dimension(-1, 10), new Dimension(-1, 10), 0, false));
+        help1 = new JButton();
+        help1.setBorderPainted(false);
+        help1.setContentAreaFilled(false);
+        help1.setFocusPainted(false);
+        help1.setFocusable(false);
+        help1.setText("\uF00C");
+        menu.add(help1, new com.intellij.uiDesigner.core.GridConstraints(5, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(90, -1), new Dimension(90, -1), new Dimension(90, -1), 0, false));
+        help2 = new JButton();
+        help2.setBorderPainted(false);
+        help2.setContentAreaFilled(false);
+        help2.setFocusPainted(false);
+        help2.setFocusable(false);
+        help2.setText("\uF128");
+        menu.add(help2, new com.intellij.uiDesigner.core.GridConstraints(6, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(90, -1), new Dimension(90, -1), new Dimension(90, -1), 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer2 = new com.intellij.uiDesigner.core.Spacer();
+        menu.add(spacer2, new com.intellij.uiDesigner.core.GridConstraints(8, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, 1, null, new Dimension(50, -1), new Dimension(15, -1), 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
+        menu.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(8, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, 1, null, new Dimension(50, -1), new Dimension(50, 40), 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer4 = new com.intellij.uiDesigner.core.Spacer();
+        menu.add(spacer4, new com.intellij.uiDesigner.core.GridConstraints(10, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 60), new Dimension(-1, 60), new Dimension(-1, 60), 0, false));
+        final JPanel panel2 = new JPanel();
+        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panel2.setBackground(new Color(-1973532));
+        panel2.setForeground(new Color(-1973532));
+        menu.add(panel2, new com.intellij.uiDesigner.core.GridConstraints(2, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        timeLogo = new JLabel();
+        timeLogo.setText("\uF2F2");
+        panel2.add(timeLogo, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_EAST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        time = new JLabel();
+        time.setText("00:00");
+        panel2.add(time, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        config = new JButton();
+        config.setBorderPainted(false);
+        config.setContentAreaFilled(false);
+        config.setFocusPainted(false);
+        config.setText("\uF013");
+        menu.add(config, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 2, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_EAST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(40, -1), null, 0, false));
+        resolve = new JButton();
+        resolve.setBorderPainted(false);
+        resolve.setContentAreaFilled(false);
+        resolve.setFocusPainted(false);
+        resolve.setForeground(new Color(-1));
+        resolve.setLabel("Resolver");
+        resolve.setText("Resolver");
+        menu.add(resolve, new com.intellij.uiDesigner.core.GridConstraints(7, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, 40), new Dimension(252, -1), 0, false));
+        logo = new JLabel();
+        logo.setText("");
+        menu.add(logo, new com.intellij.uiDesigner.core.GridConstraints(1, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, 200), new Dimension(252, 200), new Dimension(252, 200), 1, false));
+        final JPanel panel3 = new JPanel();
+        panel3.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panel3.setDoubleBuffered(true);
+        panel3.setEnabled(true);
+        panel3.setOpaque(false);
+        menu.add(panel3, new com.intellij.uiDesigner.core.GridConstraints(4, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_BOTH, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        lapizButton = new JButton();
+        lapizButton.setBorderPainted(false);
+        lapizButton.setContentAreaFilled(false);
+        lapizButton.setFocusPainted(false);
+        lapizButton.setText("");
+        panel3.add(lapizButton, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_EAST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(90, 50), new Dimension(90, 50), new Dimension(90, 50), 0, false));
+        textLapiz = new JLabel();
+        textLapiz.setText("Lápiz");
+        panel3.add(textLapiz, new com.intellij.uiDesigner.core.GridConstraints(0, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
 }

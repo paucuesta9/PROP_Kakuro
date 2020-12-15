@@ -3,17 +3,20 @@ package presentation;
 import domain.classes.Exceptions.PlayerExists;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
+import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.Locale;
 
 public class Register {
     private JTextField usuarioTextField;
-    private JPasswordField contraseñaPasswordField;
+    private JPasswordField contrasenaPasswordField;
     private JPanel panel2;
     private JLabel label;
     private JButton config;
     private JButton registrarseButton;
-    private JPasswordField repetirContraseñaPasswordField;
+    private JPasswordField repetirContrasenaPasswordField;
     private JLabel toLogin;
     private JLabel logo;
 
@@ -26,6 +29,7 @@ public class Register {
 
     public Register() {
 
+        $$$setupUI$$$();
         Utils.loadFonts();
         setListeners();
 
@@ -38,15 +42,15 @@ public class Register {
         usuarioTextField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
         usuarioTextField.setFont(Utils.roboto.deriveFont(18f));
 
-        contraseñaPasswordField.setForeground(Color.darkGray);
-        contraseñaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
-        contraseñaPasswordField.setFont(Utils.roboto.deriveFont(18f));
-        contraseñaPasswordField.setEchoChar((char) 0);
+        contrasenaPasswordField.setForeground(Color.darkGray);
+        contrasenaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        contrasenaPasswordField.setFont(Utils.roboto.deriveFont(18f));
+        contrasenaPasswordField.setEchoChar((char) 0);
 
-        repetirContraseñaPasswordField.setForeground(Color.darkGray);
-        repetirContraseñaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
-        repetirContraseñaPasswordField.setFont(Utils.roboto.deriveFont(18f));
-        repetirContraseñaPasswordField.setEchoChar((char) 0);
+        repetirContrasenaPasswordField.setForeground(Color.darkGray);
+        repetirContrasenaPasswordField.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
+        repetirContrasenaPasswordField.setFont(Utils.roboto.deriveFont(18f));
+        repetirContrasenaPasswordField.setEchoChar((char) 0);
 
         registrarseButton.setFont(Utils.roboto);
         registrarseButton.setForeground(Color.WHITE);
@@ -59,114 +63,111 @@ public class Register {
 
     private void setListeners() {
 
-            usuarioTextField.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    usuarioTextField.setForeground(Color.BLACK);
-                    registrarseButton.doClick();
-                }
-            });
-
-            contraseñaPasswordField.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    registrarseButton.doClick();
-                }
-            });
-
-            repetirContraseñaPasswordField.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    registrarseButton.doClick();
-                }
-            });
-
-            usuarioTextField.addFocusListener(new FocusAdapter() {
-                @Override
-                public void focusGained(FocusEvent e) {
-                    if (usuarioTextField.getText().equals("Usuario") && !mod) {
-                        usuarioTextField.setText("");
-                        usuarioTextField.setForeground(Color.BLACK);
-                    }
-                }
-            });
-            usuarioTextField.addFocusListener(new FocusAdapter() {
-                @Override
-                public void focusLost(FocusEvent e) {
-                    if (usuarioTextField.getText().equals("")) {
-                        usuarioTextField.setText("Usuario");
-                        usuarioTextField.setForeground(Color.DARK_GRAY);
-                        mod = false;
-                    } else mod = true;
-                }
-            });
-            contraseñaPasswordField.addFocusListener(new FocusAdapter() {
-                @Override
-                public void focusGained(FocusEvent e) {
-                    contraseñaPasswordField.setEchoChar('•');
-                    if (contraseñaPasswordField.getText().equals("Contraseña") && !mod1) {
-                        contraseñaPasswordField.setText("");
-                        contraseñaPasswordField.setForeground(Color.BLACK);
-                    }
-                }
-            });
-            contraseñaPasswordField.addFocusListener(new FocusAdapter() {
-                @Override
-                public void focusLost(FocusEvent e) {
-                    if (contraseñaPasswordField.getText().equals("")) {
-                        contraseñaPasswordField.setEchoChar((char) 0);
-                        contraseñaPasswordField.setText("Contraseña");
-                        contraseñaPasswordField.setForeground(Color.darkGray);
-                        mod1 = false;
-                    } else mod1 = true;
-                }
-            });
-
-            repetirContraseñaPasswordField.addFocusListener(new FocusAdapter() {
-                @Override
-                public void focusGained(FocusEvent e) {
-                    repetirContraseñaPasswordField.setEchoChar('•');
-                    if (repetirContraseñaPasswordField.getText().equals("Repetir contraseña") && !mod2) {
-                        repetirContraseñaPasswordField.setText("");
-                        repetirContraseñaPasswordField.setForeground(Color.BLACK);
-                    }
-                }
-            });
-            repetirContraseñaPasswordField.addFocusListener(new FocusAdapter() {
-                @Override
-                public void focusLost(FocusEvent e) {
-                    if (repetirContraseñaPasswordField.getText().equals("")) {
-
-                        repetirContraseñaPasswordField.setEchoChar((char) 0);
-                        repetirContraseñaPasswordField.setText("Repetir contraseña");
-                        repetirContraseñaPasswordField.setForeground(Color.darkGray);
-                        mod2 = false;
-                    } else mod2 = true;
-                }
-            });
-            registrarseButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseña no válidos");
-                    else if(repetirContraseñaPasswordField.getText().equals(contraseñaPasswordField.getText())) {
-                        try {
-                            ctrlPlayerUI.signUp(usuarioTextField.getText(), contraseñaPasswordField.getText());
-                            ctrlUI.toMain();
-                        } catch (PlayerExists playerExists) {
-                            Utils.showError("El usuario ya existe");
-                        }
-                    }
-                    else {
-                        Utils.showError("Las contraseñas no són iguales");
-                    }
-                }
-            });
-
-        toLogin.addMouseListener(new MouseAdapter()
-        {
+        usuarioTextField.addActionListener(new ActionListener() {
             @Override
-            public void mouseClicked(MouseEvent e)
-            {
+            public void actionPerformed(ActionEvent e) {
+                usuarioTextField.setForeground(Color.BLACK);
+                registrarseButton.doClick();
+            }
+        });
+
+        contrasenaPasswordField.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                registrarseButton.doClick();
+            }
+        });
+
+        repetirContrasenaPasswordField.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                registrarseButton.doClick();
+            }
+        });
+
+        usuarioTextField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                if (usuarioTextField.getText().equals("Usuario") && !mod) {
+                    usuarioTextField.setText("");
+                    usuarioTextField.setForeground(Color.BLACK);
+                }
+            }
+        });
+        usuarioTextField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (usuarioTextField.getText().equals("")) {
+                    usuarioTextField.setText("Usuario");
+                    usuarioTextField.setForeground(Color.DARK_GRAY);
+                    mod = false;
+                } else mod = true;
+            }
+        });
+        contrasenaPasswordField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                contrasenaPasswordField.setEchoChar('•');
+                if (contrasenaPasswordField.getText().equals("Contraseña") && !mod1) {
+                    contrasenaPasswordField.setText("");
+                    contrasenaPasswordField.setForeground(Color.BLACK);
+                }
+            }
+        });
+        contrasenaPasswordField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (contrasenaPasswordField.getText().equals("")) {
+                    contrasenaPasswordField.setEchoChar((char) 0);
+                    contrasenaPasswordField.setText("Contraseña");
+                    contrasenaPasswordField.setForeground(Color.darkGray);
+                    mod1 = false;
+                } else mod1 = true;
+            }
+        });
+
+        repetirContrasenaPasswordField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusGained(FocusEvent e) {
+                repetirContrasenaPasswordField.setEchoChar('•');
+                if (repetirContrasenaPasswordField.getText().equals("Repetir contraseña") && !mod2) {
+                    repetirContrasenaPasswordField.setText("");
+                    repetirContrasenaPasswordField.setForeground(Color.BLACK);
+                }
+            }
+        });
+        repetirContrasenaPasswordField.addFocusListener(new FocusAdapter() {
+            @Override
+            public void focusLost(FocusEvent e) {
+                if (repetirContrasenaPasswordField.getText().equals("")) {
+
+                    repetirContrasenaPasswordField.setEchoChar((char) 0);
+                    repetirContrasenaPasswordField.setText("Repetir contraseña");
+                    repetirContrasenaPasswordField.setForeground(Color.darkGray);
+                    mod2 = false;
+                } else mod2 = true;
+            }
+        });
+        registrarseButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseña no válidos");
+                else if (repetirContrasenaPasswordField.getText().equals(contrasenaPasswordField.getText())) {
+                    try {
+                        ctrlPlayerUI.signUp(usuarioTextField.getText(), contrasenaPasswordField.getText());
+                        ctrlUI.toMain();
+                    } catch (PlayerExists playerExists) {
+                        Utils.showError("El usuario ya existe");
+                    }
+                } else {
+                    Utils.showError("Las contraseñas no són iguales");
+                }
+            }
+        });
+
+        toLogin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
                 ctrlUI.toLogin();
             }
         });
@@ -179,6 +180,103 @@ public class Register {
     }
 
     public JPanel getDefaultPanel() {
+        return panel2;
+    }
+
+    /**
+     * Method generated by IntelliJ IDEA GUI Designer
+     * >>> IMPORTANT!! <<<
+     * DO NOT edit this method OR call it in your code!
+     *
+     * @noinspection ALL
+     */
+    private void $$$setupUI$$$() {
+        createUIComponents();
+        panel2 = new JPanel();
+        panel2.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(4, 4, new Insets(0, 0, 0, 0), -1, -1));
+        panel2.setBackground(new Color(-1973532));
+        Font panel2Font = this.$$$getFont$$$(null, -1, -1, panel2.getFont());
+        if (panel2Font != null) panel2.setFont(panel2Font);
+        panel2.setMaximumSize(new Dimension(1200, 800));
+        panel2.setMinimumSize(new Dimension(1200, 800));
+        panel2.setPreferredSize(new Dimension(1200, 800));
+        final JPanel panel1 = new JPanel();
+        panel1.setLayout(new com.intellij.uiDesigner.core.GridLayoutManager(9, 1, new Insets(0, 0, 0, 0), -1, -1));
+        panel1.setBackground(new Color(-1973532));
+        panel2.add(panel1, new com.intellij.uiDesigner.core.GridConstraints(3, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_SHRINK | com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        registrarseButton = new JButton();
+        registrarseButton.setBackground(new Color(-15108398));
+        registrarseButton.setBorderPainted(false);
+        registrarseButton.setContentAreaFilled(false);
+        registrarseButton.setEnabled(true);
+        registrarseButton.setFocusPainted(false);
+        registrarseButton.setText("Registrarse");
+        panel1.add(registrarseButton, new com.intellij.uiDesigner.core.GridConstraints(7, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, 40), new Dimension(252, -1), 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer1 = new com.intellij.uiDesigner.core.Spacer();
+        panel1.add(spacer1, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTH, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 50), null, 0, false));
+        usuarioTextField = new JTextField();
+        usuarioTextField.setFocusable(true);
+        usuarioTextField.setOpaque(false);
+        usuarioTextField.setText("Usuario");
+        panel1.add(usuarioTextField, new com.intellij.uiDesigner.core.GridConstraints(1, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        contrasenaPasswordField = new JPasswordField();
+        contrasenaPasswordField.setOpaque(false);
+        contrasenaPasswordField.setText("Contraseña");
+        panel1.add(contrasenaPasswordField, new com.intellij.uiDesigner.core.GridConstraints(3, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer2 = new com.intellij.uiDesigner.core.Spacer();
+        panel1.add(spacer2, new com.intellij.uiDesigner.core.GridConstraints(2, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 25), null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer3 = new com.intellij.uiDesigner.core.Spacer();
+        panel1.add(spacer3, new com.intellij.uiDesigner.core.GridConstraints(6, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 40), null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer4 = new com.intellij.uiDesigner.core.Spacer();
+        panel1.add(spacer4, new com.intellij.uiDesigner.core.GridConstraints(4, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 25), null, 0, false));
+        repetirContrasenaPasswordField = new JPasswordField();
+        repetirContrasenaPasswordField.setOpaque(false);
+        repetirContrasenaPasswordField.setText("Repetir contraseña");
+        panel1.add(repetirContrasenaPasswordField, new com.intellij.uiDesigner.core.GridConstraints(5, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_WEST, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, -1), null, 0, false));
+        toLogin = new JLabel();
+        toLogin.setText("¿Ya tiene cuenta? Inicie sesión aquí ");
+        panel1.add(toLogin, new com.intellij.uiDesigner.core.GridConstraints(8, 0, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer5 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer5, new com.intellij.uiDesigner.core.GridConstraints(3, 1, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, new Dimension(50, -1), null, 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer6 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer6, new com.intellij.uiDesigner.core.GridConstraints(3, 3, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, 1, null, new Dimension(50, -1), null, 0, false));
+        label.setText("");
+        panel2.add(label, new com.intellij.uiDesigner.core.GridConstraints(0, 0, 4, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_NORTHWEST, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(800, 800), new Dimension(800, 800), new Dimension(800, 800), 0, false));
+        final com.intellij.uiDesigner.core.Spacer spacer7 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer7, new com.intellij.uiDesigner.core.GridConstraints(0, 2, 2, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_VERTICAL, 1, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 85), null, 0, false));
+        logo = new JLabel();
+        logo.setText("");
+        panel2.add(logo, new com.intellij.uiDesigner.core.GridConstraints(2, 2, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_NONE, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, 200), new Dimension(252, 200), new Dimension(252, 200), 1, false));
+        final com.intellij.uiDesigner.core.Spacer spacer8 = new com.intellij.uiDesigner.core.Spacer();
+        panel2.add(spacer8, new com.intellij.uiDesigner.core.GridConstraints(2, 3, 1, 1, com.intellij.uiDesigner.core.GridConstraints.ANCHOR_CENTER, com.intellij.uiDesigner.core.GridConstraints.FILL_HORIZONTAL, com.intellij.uiDesigner.core.GridConstraints.SIZEPOLICY_FIXED, 1, new Dimension(60, -1), new Dimension(60, -1), new Dimension(60, -1), 0, false));
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    private Font $$$getFont$$$(String fontName, int style, int size, Font currentFont) {
+        if (currentFont == null) return null;
+        String resultName;
+        if (fontName == null) {
+            resultName = currentFont.getName();
+        } else {
+            Font testFont = new Font(fontName, Font.PLAIN, 10);
+            if (testFont.canDisplay('a') && testFont.canDisplay('1')) {
+                resultName = fontName;
+            } else {
+                resultName = currentFont.getName();
+            }
+        }
+        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
+        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
+        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
+    }
+
+    /**
+     * @noinspection ALL
+     */
+    public JComponent $$$getRootComponent$$$() {
         return panel2;
     }
 }
