@@ -22,5 +22,21 @@
     "minTime": 115,
     "player": "paucuesta",
     "maxPoints": 110
-    }
+    },
+      {
+          "diff": "2",
+          "size": "16_16",
+          "id": "3.txt",
+          "minTime": 115,
+          "player": "paucuesta",
+          "maxPoints": 110
+      },
+      {
+          "diff": "2",
+          "size": "16_16",
+          "id": "1.txt",
+          "minTime": 115,
+          "player": "paucuesta",
+          "maxPoints": 110
+      }
   ]

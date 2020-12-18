@@ -117,33 +117,41 @@ public class CtrlData {
             e.printStackTrace();
         }
         JsonArray l = new Gson().fromJson(reader, JsonArray.class);
-        sortJson(l);
+        String newObject = new Gson().toJson(sortJson(l));
+        l = new Gson().fromJson(newObject, JsonArray.class);
         return l;
     }
 
-    public void sortJson(JsonArray l) {
-// Create a JsonArray to a List view instance
+    public List<JsonObject> sortJson(JsonArray l) {
         List<JsonObject> list = new ArrayList<>();
         for(int i = 0; i < l.size(); ++i) {
             list.add(l.get(i).getAsJsonObject());
         }
-// Sorting the jsonElements object
         list.sort((e1, e2) -> {
             final String i1 = e1.getAsJsonObject().get("diff").getAsString();
             final String i2 = e2.getAsJsonObject().get("diff").getAsString();
             final int i3 = CharSequence.compare(i1, i2);
-            if(!i1.equals(i2)) return i3;
-            final String i4 = e1.getAsJsonObject().get("size").getAsString();
-            final String i5 = e2.getAsJsonObject().get("size").getAsString();
-            final int i6 = CharSequence.compare(i4, i5);
-            if(!i4.equals(i5) ) return i6;
-            final String i7 = e1.getAsJsonObject().get("id").getAsString();
-            final String i8 = e2.getAsJsonObject().get("id").getAsString();
-            final int i9 = CharSequence.compare(i7, i8);
+            if (!i1.equals(i2)) return i3;
+            String size1 = e1.getAsJsonObject().get("size").getAsString();
+            String[] sizes1 = size1.split("_");
+            int size1_1 = Integer.parseInt(sizes1[0]);
+            int size1_2 = Integer.parseInt(sizes1[1]);
+            String size2 = e2.getAsJsonObject().get("size").getAsString();
+            String[] sizes2 = size2.split("_");
+            int size2_1 = Integer.parseInt(sizes2[0]);
+            int size2_2 = Integer.parseInt(sizes2[1]);
+            final int i6 = Integer.compare(size1_1, size2_1);
+            if (size1_1 != size2_1) return i6;
+            final int i10 = Integer.compare(size1_2, size2_2);
+            if (size1_2 != size2_2) return i10;
+            String id1 = e1.getAsJsonObject().get("id").getAsString();
+            String id2 = e2.getAsJsonObject().get("id").getAsString();
+            int intId1 = Integer.parseInt(id1.substring(0, id1.indexOf(".")));
+            int intId2 = Integer.parseInt(id2.substring(0, id1.indexOf(".")));
+            final int i9 = Integer.compare(intId1, intId2);
             return i9;
-            /*final int i10 = Integer.compare(i3, i6);
-            return Integer.compare(i10, i9);*/
         });
+        return list;
     }
 
 }

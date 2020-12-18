@@ -252,7 +252,7 @@ public class Create {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE || e.getKeyCode() == KeyEvent.VK_ENTER) {
                     numRow.setEditable(true);
                 } else {
                     numRow.setEditable(false);
@@ -274,7 +274,7 @@ public class Create {
 
             @Override
             public void keyPressed(KeyEvent e) {
-                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE) {
+                if (e.getKeyChar() >= '0' && e.getKeyChar() <= '9' || e.getKeyCode() == KeyEvent.VK_BACK_SPACE || e.getKeyCode() == KeyEvent.VK_ENTER) {
                     numColumn.setEditable(true);
                 } else {
                     numColumn.setEditable(false);

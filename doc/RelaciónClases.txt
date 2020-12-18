@@ -19,6 +19,9 @@ Alvaro:
 Pau:
     - WhiteCell
     - CtrlData
+    - CtrlPlayerData
+    - CtrlKakuroData
+    - CtrlGameData
     - CtrlDomain
     - Main
     - Player
@@ -60,7 +63,7 @@ Pol:
 
 Alvaro:
     - Generate
-    - Generate2 ****************************
+    - AskSave
     - Login
     - Register
 Pau:
