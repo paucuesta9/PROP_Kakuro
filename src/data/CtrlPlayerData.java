@@ -1,8 +1,10 @@
 package data;
 
 import com.google.gson.stream.JsonReader;
+import domain.classes.Player;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class CtrlPlayerData {
 
@@ -20,10 +22,26 @@ public class CtrlPlayerData {
         return listFiles.length;
     }
 
-    public File[] getListOfPlayers() throws NullPointerException {
+    public JsonReader[] getListOfPlayers() throws NullPointerException {
         File folder = new File("data/players");
         File[] listFiles = folder.listFiles();
-        return listFiles;
+        int n = getNumberOfPlayers();
+        JsonReader[] read = new JsonReader[n/2];
+        int cont = 0;
+        for(int i = 0; i < n; ++i) {
+            if(listFiles[i].isFile()) {
+                JsonReader reader = null;
+                try {
+                    reader = new JsonReader(new FileReader(listFiles[i]));
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+                read[cont] = reader;
+                ++cont;
+                //players.add(gson.fromJson(reader, Player.class));
+            }
+        }
+        return read;
     }
 
     public JsonReader getUser(String username) throws FileNotFoundException {

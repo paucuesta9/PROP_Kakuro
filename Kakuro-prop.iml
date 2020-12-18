@@ -29,19 +29,10 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.6" level="project" />
-    <orderEntry type="module-library" scope="TEST">
-      <library>
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/redist/forms_rt.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/redist/forms_rt.jar!/" />
+          <root url="jar://$MODULE_DIR$/lib/forms_rt.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

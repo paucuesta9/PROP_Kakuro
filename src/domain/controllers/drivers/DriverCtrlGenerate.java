@@ -280,7 +280,7 @@ public class DriverCtrlGenerate {
         System.out.println("Introduce un kakuro con celdas blancas y negras sin sumas: ");
         String kakuroString = readKakuro();
         currentKakuro = new Kakuro(kakuroString);
-        boolean b = CtrlGenerate.fillBoard(currentKakuro.getBoard());
+        boolean b = CtrlGenerate.fillBoard(currentKakuro.getBoard(),0);
         if( b ) System.out.println("Se ha podido generar un kakuro unico con este tablero");
         else System.out.println("No se ha podido generar un kakuro unico con este tablero");
     }

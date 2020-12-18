@@ -23,9 +23,9 @@ public class CtrlPlayerUI {
 
     }
 
-    public List<Player> getListOfPlayers(String s) {
-        List<Player> p = ctrlUI.getListOfPlayers(s);
-        return p;
+    public String[][] getListOfPlayers(String s) {
+        //List<Player> p = ctrlUI.getListOfPlayers(s);
+        return ctrlUI.getListOfPlayers(s);
     }
 
     public void login(String username, char[] password) throws FileNotFoundException, WrongPasswordException {

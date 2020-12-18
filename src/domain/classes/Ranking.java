@@ -8,6 +8,9 @@ package domain.classes;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import data.CtrlData;
+import domain.controllers.CtrlDomain;
+import domain.controllers.CtrlValidate;
+import presentation.Play;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,37 +24,45 @@ public abstract class Ranking {
     private CtrlData data;
     protected List<Player> players;
     private Gson gson;
+    private CtrlDomain domain;
 
 
-    public Ranking() {
+    public Ranking(CtrlDomain d) {
+        domain = d;
         data = CtrlData.getInstance();
         gson = new Gson();
         listOfPlayers();
     }
 
-    public void listOfPlayers()  {
-        players = new ArrayList<>();
-        File[] playersList = data.getListOfPlayers();
-        int n = data.getNumberOfPlayers();
-        for(int i = 0; i < n; ++i) {
-            if(playersList[i].isFile()) {
-                JsonReader reader = null;
-                try {
-                    reader = new JsonReader(new FileReader(playersList[i]));
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-                players.add(gson.fromJson(reader, Player.class));
-            }
 
+
+    public void listOfPlayers()  {
+        JsonReader[] read = domain.getListOfPlayers();
+        players = new ArrayList<>();
+        for(int i = 0; i < read.length; ++i) {
+            players.add(gson.fromJson(read[i], Player.class));
         }
+
     }
 
     public abstract void ordena();
 
-    public List<Player> getList(String s) {
+    public String[][] getList(String s) {
         ordena();
-        return players;
+        int n = players.size();
+        String[][] t = new String[n][3];
+        for(int i = 0; i < n; ++i) {
+            String num = String.valueOf(i + 1);
+            Player a = players.get(i);
+            t[i][0] = num;
+            t[i][1] = a.getUsername();
+            String p = new String();
+            if(s == "puntos") p = String.valueOf(a.getStats().getPoints());
+            else if( s == "wins") p = String.valueOf(a.getStats().getFinished());
+            else p = String.valueOf(a.getStats().getCreated());
+            t[i][2] = p;
+        }
+        return t;
     }
 }
 
