@@ -326,4 +326,8 @@ public class CtrlDomain {
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
+
+    public ArrayList<Integer> getStatsList() {
+        return currentPlayer.getStatsInt();
+    }
 }

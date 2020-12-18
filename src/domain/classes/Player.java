@@ -117,6 +117,18 @@ public class Player {
         savedGames.add(currentGame);
     }
 
+    public ArrayList<Integer> getStatsInt() {
+        ArrayList<Integer> a = new ArrayList<>();
+
+        a.add(stats.getFinished());
+        a.add(stats.getTotal());
+        a.add(stats.getHelps());
+        a.add(stats.getPoints());
+        a.add(stats.getCreated());
+
+        return a;
+    }
+
     public Game getGame(int game) {
         for (int i = 0; i < savedGames.size(); ++i) {
             if (savedGames.get(i).getId() == game) {

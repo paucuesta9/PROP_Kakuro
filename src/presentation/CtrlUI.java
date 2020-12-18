@@ -268,4 +268,8 @@ public class CtrlUI {
     public ArrayList<String> getConfig() {
         return cd.getConfig();
     }
+
+    public ArrayList<Integer> getStatsList() {
+        return cd.getStatsList();
+    }
 }
