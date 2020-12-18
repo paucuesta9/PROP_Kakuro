@@ -227,7 +227,8 @@ public class Create {
                 int returnVal = chooser.showOpenDialog(panel1);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     String absolutePath = chooser.getSelectedFile().getAbsolutePath();
-                    if (absolutePath.contains(System.getProperty("user.dir"))) Utils.showError("Por favor, indique un Kakuro suyp y no de la base de datos de la aplicación");
+                    if (absolutePath.contains(System.getProperty("user.dir")))
+                        Utils.showError("Por favor, indique un Kakuro suyp y no de la base de datos de la aplicación");
                     else {
                         numRow.setFocusable(false);
                         numColumn.setFocusable(false);
@@ -605,5 +606,4 @@ public class Create {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

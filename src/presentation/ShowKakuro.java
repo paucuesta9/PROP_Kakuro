@@ -212,5 +212,4 @@ public class ShowKakuro {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

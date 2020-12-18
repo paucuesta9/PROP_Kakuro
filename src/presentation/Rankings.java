@@ -388,5 +388,4 @@ public class Rankings implements ListSelectionListener {
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
-
 }

@@ -129,5 +129,4 @@ public class ColorChooser extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
-
 }

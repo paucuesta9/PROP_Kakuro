@@ -31,7 +31,6 @@ public class Login {
 
     public Login() {
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         toRegister.setFont(Utils.roboto.deriveFont(12f));
@@ -236,5 +235,4 @@ public class Login {
     public JComponent $$$getRootComponent$$$() {
         return panel2;
     }
-
 }

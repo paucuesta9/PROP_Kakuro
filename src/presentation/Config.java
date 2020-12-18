@@ -453,5 +453,4 @@ public class Config extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
-
 }

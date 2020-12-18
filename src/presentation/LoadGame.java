@@ -334,5 +334,4 @@ public class LoadGame {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

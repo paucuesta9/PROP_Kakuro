@@ -369,5 +369,4 @@ public class Generate {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

@@ -109,5 +109,4 @@ public class Error extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
-
 }

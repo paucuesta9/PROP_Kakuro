@@ -191,5 +191,4 @@ public class Statistics extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
-
 }

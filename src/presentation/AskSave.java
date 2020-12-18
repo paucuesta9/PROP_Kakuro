@@ -220,5 +220,4 @@ public class AskSave {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

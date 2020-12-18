@@ -189,5 +189,4 @@ public class AskNewContinue {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

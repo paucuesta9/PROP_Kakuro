@@ -510,5 +510,4 @@ public class NewGame {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

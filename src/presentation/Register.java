@@ -282,5 +282,4 @@ public class Register {
     public JComponent $$$getRootComponent$$$() {
         return panel2;
     }
-
 }

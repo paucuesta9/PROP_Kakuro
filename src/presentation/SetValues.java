@@ -316,5 +316,4 @@ public class SetValues extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
-
 }

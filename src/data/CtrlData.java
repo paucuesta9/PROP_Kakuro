@@ -140,10 +140,10 @@ public class CtrlData {
             list.add(l.get(i).getAsJsonObject());
         }
         list.sort((e1, e2) -> {
-            final String i1 = e1.getAsJsonObject().get("diff").getAsString();
-            final String i2 = e2.getAsJsonObject().get("diff").getAsString();
-            final int i3 = CharSequence.compare(i1, i2);
-            if (!i1.equals(i2)) return i3;
+            final int i1 = Integer.parseInt(e1.getAsJsonObject().get("diff").getAsString());
+            final int i2 = Integer.parseInt(e2.getAsJsonObject().get("diff").getAsString());
+            final int i3 = Integer.compare(i1, i2);
+            if (i1 != i2) return i3;
             String size1 = e1.getAsJsonObject().get("size").getAsString();
             String[] sizes1 = size1.split("_");
             int size1_1 = Integer.parseInt(sizes1[0]);

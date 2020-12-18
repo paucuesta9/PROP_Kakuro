@@ -131,7 +131,8 @@ public class Play {
         if (gameTime != 0) {
             ArrayList<String> helps = ctrlPlayUI.getHelps();
             for (int i = 0; i < components.length; ++i) {
-                if (components[i] instanceof KakuroWhiteCell) checkValidityCell(((KakuroWhiteCell) components[i]), ((KakuroWhiteCell) components[i]).getPosX(), ((KakuroWhiteCell) components[i]).getPosY());
+                if (components[i] instanceof KakuroWhiteCell)
+                    checkValidityCell(((KakuroWhiteCell) components[i]), ((KakuroWhiteCell) components[i]).getPosX(), ((KakuroWhiteCell) components[i]).getPosY());
             }
             for (int i = 0; i < helps.size(); ++i) {
                 String help = helps.get(i);
@@ -716,5 +717,4 @@ public class Play {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

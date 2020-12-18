@@ -264,5 +264,4 @@ public class Main {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
-
 }

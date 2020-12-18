@@ -123,5 +123,4 @@ public class FinishedGame extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return contentPane;
     }
-
 }
