@@ -7,6 +7,7 @@ import domain.classes.*;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -269,13 +270,12 @@ public class CtrlDomain {
         savePlayer();
     }
 
-    public List<Player> getListOfPlayers(String s) {
+    public String[][] getListOfPlayers(String s) {
         Ranking r;
-        if(s == "puntos")  r = new PointsRanking();
-        else if( s == "wins") r = new WinsRanking();
-        else  r = new CreatedRanking();
-        List<Player> p = r.getList(s);
-        return p;
+        if(s == "puntos")  r = new PointsRanking(this);
+        else if( s == "wins") r = new WinsRanking(this);
+        else  r = new CreatedRanking(this);
+        return r.getList(s);
     }
 
     public ArrayList<String> getConfig() {
@@ -329,5 +329,9 @@ public class CtrlDomain {
 
     public ArrayList<Integer> getStatsList() {
         return currentPlayer.getStatsInt();
+    }
+
+    public JsonReader[] getListOfPlayers() throws NullPointerException {
+        return data.getListOfPlayers();
     }
 }

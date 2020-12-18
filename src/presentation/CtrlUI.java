@@ -212,9 +212,8 @@ public class CtrlUI {
 
     //Funcio de prova per agafar un ranking
 
-    public List<Player> getListOfPlayers(String s) {
-        List<Player> p = cd.getListOfPlayers(s);
-        return p;
+    public String[][] getListOfPlayers(String s) {
+        return cd.getListOfPlayers(s);
     }
 
     public void login(String username, char[] password) throws FileNotFoundException, WrongPasswordException {

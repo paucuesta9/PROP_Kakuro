@@ -638,7 +638,7 @@ public class CtrlGenerate {
                         }
                         for (int x = 0; x < posComb[nH].length; ++x) {
                             int[] valuesH = mat[posComb[nH][x]-1][nH-1];
-                            for (int y = 0; y < posComb[nV].length; ++y) {
+                            for (int y = posComb[nV].length-1; y >= 0 ; --y) {
                                 int[] valuesV = mat[posComb[nV][y]-1][nV-1];
                                 int value = intersection(valuesH, valuesV);
                                 if (value != -1) {
@@ -704,10 +704,35 @@ public class CtrlGenerate {
      * @param board representa un tablero con casillas blancas y negras
      * @return true si tenemos un tablero con solución única, false si tiene más de una solución
      */
-    public static boolean fillBoard(Cell[][] board) {
+    public static boolean fillBoard(Cell[][] board, int dif) {
+        /*if(dif == 3) {
+            posComb = new int[][]{ //possible values for sum using n cels
+                    {}, //con zero
+                    {1, 2, 3, 4, 5, 6, 7, 8, 9}, //una casilla
+                    {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17}, //dos casillas
+                    {6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24}, //tres casillas
+                    {10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30}, //cuatro casillas
+                    {15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36}, //cinco casillas
+                    {21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39}, //seis casillas
+                    {28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 42}, //siete casillas
+                    {36, 37, 38, 39, 40, 41, 42, 43, 44}, //ocho casillas
+                    {45} //nueve casillas
+            };
+            Random rand = new Random();
+            //mezclamos los numeros para evitar que siempre encuentre los mismos valores
+            for (int i = 0; i < posComb.length; i++) {
+                for(int j = 0; j < posComb[i].length;++j) {
+                    int randomIndexToSwap = rand.nextInt(posComb[i].length);
+                    int temp = posComb[i][randomIndexToSwap];
+                    posComb[i][randomIndexToSwap] = posComb[i][j];
+                    posComb[i][j] = temp;
+                }
+            }
+        }*/
+
         tempBoard = new int[board.length][board[0].length][9];
         for (int i = 0; i < board.length; ++i) {
-            for (int j = 0; j < board.length; ++j) {
+            for (int j = 0; j < board[0].length; ++j) {
                 for (int k = 0; k < 9; ++k) {
                     tempBoard[i][j][k] = 0;
                 }
@@ -1036,7 +1061,7 @@ public class CtrlGenerate {
                 }
                 else {
                     currentKakuro = new Kakuro(0, 0, board);
-                    if (!repeat && fillBoard(board)) {
+                    if (!repeat && fillBoard(board,dif)) {
                     } else repeat = true;
                 }
             }

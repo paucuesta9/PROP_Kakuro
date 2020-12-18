@@ -1,5 +1,7 @@
 package domain.classes;
 
+import domain.controllers.CtrlDomain;
+
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,8 +10,8 @@ import java.util.List;
 
 public class CreatedRanking extends Ranking {
 
-    public CreatedRanking() {
-        super();
+    public CreatedRanking(CtrlDomain d ) {
+        super(d);
     }
 
     public void ordena() {

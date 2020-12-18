@@ -52,17 +52,17 @@ public class Rankings implements ListSelectionListener {
         //rankings
 
         String[] titles = {"Posición", "Nombre", "Puntos"}; //Nombre de cada columna
-        List<Player> p = ctrlUI.getListOfPlayers("puntos");
-        int n = p.size();
-        String[][] t = new String[n][3];
-        for (int i = 0; i < n; ++i) {
+        //List<Player> p = ctrlUI.getListOfPlayers("puntos");
+        //int n = p.size();
+        String[][] t = ctrlUI.getListOfPlayers("puntos");
+       /* for (int i = 0; i < n; ++i) {
             String num = String.valueOf(i + 1);
             Player a = p.get(i);
             t[i][0] = num;
             t[i][1] = a.getUsername();
             String s = String.valueOf(a.getStats().getPoints());
             t[i][2] = s;
-        }
+        }*/
         showTable(t, titles);
 
         config.setFont(fontAwesome);
@@ -122,7 +122,7 @@ public class Rankings implements ListSelectionListener {
                 creadas.setForeground(Color.BLACK);
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
                 //Construir la tabla con la lista conseguida
-                List<Player> points = new ArrayList<>();
+                /*List<Player> points = new ArrayList<>();
                 points = ctrlUI.getListOfPlayers("puntos");
                 int n = points.size();
                 String[][] t = new String[n][3];
@@ -133,8 +133,9 @@ public class Rankings implements ListSelectionListener {
                     t[i][1] = a.getUsername();
                     String s = String.valueOf(a.getStats().getPoints());
                     t[i][2] = s;
-                }
-                showTable(t, titles);
+                }*/
+                String[][] t = ctrlUI.getListOfPlayers("puntos");
+                //showTable(t, titles);
                 String[] titles = {"Posición", "Nombre", "Puntos"};
                 showTable(t, titles);
             }
@@ -149,7 +150,7 @@ public class Rankings implements ListSelectionListener {
                 creadas.setForeground(Color.BLACK);
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
                 //Construir la tabla con la lista conseguida
-                List<Player> wins = new ArrayList<>();
+                /*List<Player> wins = new ArrayList<>();
                 wins = ctrlUI.getListOfPlayers("wins");
                 int n = wins.size();
                 String[][] t = new String[n][3];
@@ -160,8 +161,9 @@ public class Rankings implements ListSelectionListener {
                     t[i][1] = a.getUsername();
                     String s = String.valueOf(a.getStats().getFinished());
                     t[i][2] = s;
-                }
+                }*/
                 String[] titles = {"Posición", "Nombre", "Acabados"};
+                String[][] t = ctrlUI.getListOfPlayers("wins");
                 showTable(t, titles);
             }
         });
@@ -175,7 +177,7 @@ public class Rankings implements ListSelectionListener {
                 creadas.setForeground(Color.WHITE);
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
                 //Construir la tabla con la lista conseguida
-                List<Player> created = new ArrayList<>();
+                /*List<Player> created = new ArrayList<>();
                 created = ctrlUI.getListOfPlayers("creadas");
                 int n = created.size();
                 String[][] t = new String[n][3];
@@ -186,8 +188,9 @@ public class Rankings implements ListSelectionListener {
                     t[i][1] = a.getUsername();
                     String s = String.valueOf(a.getStats().getCreated());
                     t[i][2] = s;
-                }
+                }*/
                 String[] titles = {"Posición", "Nombre", "Creados"};
+                String[][] t = ctrlUI.getListOfPlayers("creadas");
                 showTable(t, titles);
             }
         });
@@ -309,7 +312,7 @@ public class Rankings implements ListSelectionListener {
         menu.add(text, new GridConstraints(3, 0, 1, 4, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         ButtonPan = new JPanel();
         ButtonPan.setLayout(new BorderLayout(0, 0));
-        menu.add(ButtonPan, new GridConstraints(4, 1, 1, 3, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        menu.add(ButtonPan, new GridConstraints(4, 0, 1, 4, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         puntos = new JButton();
         puntos.setBorderPainted(false);
         puntos.setContentAreaFilled(false);

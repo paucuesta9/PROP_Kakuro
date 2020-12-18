@@ -60,7 +60,11 @@ public class CtrlData {
         return ctrlPlayerData.getNumberOfPlayers();
     }
 
-    public File[] getListOfPlayers() throws NullPointerException {
+    /*public File[] getListOfPlayers() throws NullPointerException {
+        return ctrlPlayerData.getListOfPlayers();
+    }*/
+
+    public JsonReader[] getListOfPlayers() throws NullPointerException {
         return ctrlPlayerData.getListOfPlayers();
     }
 

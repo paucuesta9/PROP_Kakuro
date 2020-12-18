@@ -1,13 +1,15 @@
 package domain.classes;
 
+import domain.controllers.CtrlDomain;
+
 import java.io.FileNotFoundException;
 import java.util.Collections;
 import java.util.Comparator;
 
 public class WinsRanking extends Ranking {
 
-    public WinsRanking() {
-        super();
+    public WinsRanking(CtrlDomain d) {
+        super(d);
     }
 
     public void ordena() {
