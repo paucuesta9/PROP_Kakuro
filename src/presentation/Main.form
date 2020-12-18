@@ -152,6 +152,7 @@
               </grid>
             </constraints>
             <properties>
+              <background color="-1973532"/>
               <text value="Records"/>
             </properties>
           </component>
@@ -194,6 +195,7 @@
           </grid>
         </constraints>
         <properties>
+          <background color="-1973532"/>
           <text value=""/>
         </properties>
       </component>

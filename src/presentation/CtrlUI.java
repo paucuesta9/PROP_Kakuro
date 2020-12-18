@@ -142,8 +142,8 @@ public class CtrlUI {
         mainFrame.setVisible(true);
     }
 
-    public void toShowKakuro(String s) {
-        showKakuro = new ShowKakuro(s);
+    public void toShowKakuro(String s, int fila) {
+        showKakuro = new ShowKakuro(s,fila);
         mainFrame.setTitle("ShowKakuro");
         mainFrame.setContentPane(showKakuro.getDefaultPanel());
         mainFrame.setVisible(true);

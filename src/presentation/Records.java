@@ -1,9 +1,13 @@
 package presentation;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import data.CtrlData;
 import domain.classes.Exceptions.NoTypeCellException;
+import domain.controllers.CtrlDomain;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -42,7 +46,17 @@ public class Records {
         logo.setIcon(Utils.getLogo());
 
         String[] titles = {"Dificultad", "tamaño", "Kakuro"};
-        content = ctrlUI.getListOfKakuros();
+        //content = ctrlUI.getListOfKakuros();
+        CtrlData data = CtrlData.getInstance();
+        JsonArray kak = data.getkakuroRecord();
+        content = new String[kak.size()][3];
+        for (int i = 0; i < kak.size(); ++i) {
+            JsonObject kakuro = kak.get(i).getAsJsonObject();
+            content[i][0] = kakuro.get("diff").getAsString();
+            content[i][1] = kakuro.get("size").getAsString();
+            content[i][2] = kakuro.get("id").getAsString();
+        }
+
         table = new JTable(content, titles) {
             public boolean isCellEditable(int row, int column) {
                 return false;
@@ -127,9 +141,16 @@ public class Records {
                     String size = content[fila][1];
                     String id = content[fila][2];
                     String path = "data/diff" + dif + "/" + size + "/" + id;
-                    ctrlUI.toShowKakuro(path);
+                    ctrlUI.toShowKakuro(path, fila);
 
                 }
+            }
+        });
+
+        volver.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ctrlUI.toMain();
             }
         });
 
@@ -172,16 +193,6 @@ public class Records {
             ioException.printStackTrace();
         }
         roboto = ttfBase.deriveFont(Font.PLAIN, 20f);
-    }
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Records");
-        frame.setContentPane(new Records().panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1200, 800);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
     }
 
     {
