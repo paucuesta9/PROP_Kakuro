@@ -10,8 +10,8 @@ import java.awt.*;
 
 public class KakuroBoard extends JPanel {
 
-    int rowSize;
-    int columnSize;
+    private int rowSize;
+    private int columnSize;
 
     KakuroBoard(String kakuro) {
         super(new GridBagLayout());
@@ -80,5 +80,13 @@ public class KakuroBoard extends JPanel {
             content.append("\n");
         }
         return content.toString();
+    }
+
+    public int getRowSize() {
+        return rowSize;
+    }
+
+    public int getColumnSize() {
+        return columnSize;
     }
 }

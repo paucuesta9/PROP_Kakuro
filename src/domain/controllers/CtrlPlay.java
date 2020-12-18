@@ -53,6 +53,27 @@ public class CtrlPlay {
         setCorrectValues();
     }
 
+    public CtrlPlay(String absolutePath, CtrlDomain cd) {
+        this.cd = cd;
+        currentPlayer = cd.getCurrentPlayer();
+        String kakuro = null;
+        try {
+            kakuro = cd.getKakuro(absolutePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int id = Integer.parseInt(absolutePath.substring(absolutePath.lastIndexOf("\\") + 1, absolutePath.lastIndexOf(".")));
+        this.currentKakuro = new Kakuro(kakuro);
+        currentKakuro.setId(id);
+        currentKakuro.setDifficulty(Character.getNumericValue(absolutePath.charAt(absolutePath.indexOf("diff") + 4)));
+        cd.setKakuro(currentKakuro);
+        id = cd.getGameId();
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), currentKakuro.getRowSize(), currentKakuro.getColumnSize(), currentKakuro.getDifficulty());
+        currentPlayer.setCurrentGame(currentGame);
+        currentPlayer.getStats().setTotal(1);
+        setCorrectValues();
+    }
+
     public CtrlPlay(int game, CtrlDomain cd) {
         currentPlayer = cd.getCurrentPlayer();
         currentGame = currentPlayer.getGame(game);

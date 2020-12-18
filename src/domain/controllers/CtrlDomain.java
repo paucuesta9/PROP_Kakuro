@@ -85,6 +85,12 @@ public class CtrlDomain {
         currentKakuro = ctrlPlay.getKakuro();
     }
 
+    public void startNewGame(String absolutePath) {
+        ctrlPlay = new CtrlPlay(absolutePath, this);
+        currentGame = ctrlPlay.getGame();
+        currentKakuro = ctrlPlay.getKakuro();
+    }
+
     public int getGameId() {
         return data.getNewGameId(currentPlayer.getUsername());
     }

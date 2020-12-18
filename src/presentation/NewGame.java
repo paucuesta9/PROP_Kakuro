@@ -13,6 +13,7 @@ import javax.swing.text.NumberFormatter;
 import javax.swing.text.StyleContext;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import java.util.Locale;
 
 /** @file NewGame.java
@@ -190,10 +191,16 @@ public class NewGame {
                 FileNameExtensionFilter filter = new FileNameExtensionFilter(
                         "TXT Files", "txt");
                 chooser.setFileFilter(filter);
+                chooser.setCurrentDirectory(new File(System.getProperty("user.dir") + "/data/"));
                 int returnVal = chooser.showOpenDialog(panel1);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
-                    System.out.println("You chose to open this file: " +
-                            chooser.getSelectedFile().getName());
+                    String absolutePath = chooser.getSelectedFile().getAbsolutePath();
+                    if (!absolutePath.contains(System.getProperty("user.dir"))) Utils.showError("Por favor, indique un Kakuro de la base de datos de la apliación");
+                    else {
+                        ctrlPlayUI.startGame(absolutePath);
+                        String kakuro = ctrlPlayUI.getKakuro();
+                        ctrlUI.toPlay(kakuro, training);
+                    }
                 }
             }
         });
@@ -490,7 +497,10 @@ public class NewGame {
                 resultName = currentFont.getName();
             }
         }
-        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
+        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
+        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
     }
 
     /**

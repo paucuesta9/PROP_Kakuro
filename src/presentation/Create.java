@@ -104,21 +104,6 @@ public class Create {
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
                 cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
-                SetValues setValues = new SetValues(1);
-                int[] value = setValues.drawSetValues();
-                if (value[0] != -1) {
-                    ((KakuroWhiteCell) cells[pos]).setValue(value[0]);
-                    GridBagConstraints c = new GridBagConstraints();
-                    c.weightx = 1.0;
-                    c.weighty = 1.0;
-                    c.fill = GridBagConstraints.BOTH;
-                    c.gridx = posY;
-                    c.gridy = posX;
-                    kBoard.remove(pos);
-                    kBoard.add(cells[pos], c, pos);
-                    kBoard.validate();
-                    board.validate();
-                }
             }
         });
         popupMenu.add(whiteCellItem);
@@ -230,8 +215,20 @@ public class Create {
                 chooser.setFileFilter(filter);
                 int returnVal = chooser.showOpenDialog(panel1);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
-                    System.out.println("You chose to open this file: " +
-                            chooser.getSelectedFile().getName());
+                    String absolutePath = chooser.getSelectedFile().getAbsolutePath();
+                    if (absolutePath.contains(System.getProperty("user.dir"))) Utils.showError("Por favor, indique un Kakuro suyp y no de la base de datos de la aplicación");
+                    else {
+                        numRow.setFocusable(false);
+                        numColumn.setFocusable(false);
+                        ctrlUI.findKakuro(absolutePath);
+                        aceptar.setVisible(false);
+                        textSize.setVisible(false);
+                        setBoard(ctrlUI.getKakuro());
+                        sizeRow = kBoard.getRowSize();
+                        sizeColumn = kBoard.getColumnSize();
+                        numRow.setText(String.valueOf(sizeRow));
+                        numColumn.setText(String.valueOf(sizeColumn));
+                    }
                 }
             }
         });

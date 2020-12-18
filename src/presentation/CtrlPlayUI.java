@@ -59,6 +59,10 @@ public class CtrlPlayUI {
         ctrlUI.startGame(diff, rowSize, columnSize);
     }
 
+    public void startGame(String absolutePath) {
+        ctrlUI.startGame(absolutePath);
+    }
+
     public ArrayList<ArrayList<Integer>> getStartedGames() {
         return ctrlUI.getStartedGames();
     }

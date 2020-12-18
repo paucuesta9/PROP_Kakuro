@@ -156,6 +156,16 @@ public class CtrlUI {
     public String getCorrectKakuro() {
         return cd.getCorrectKakuroToString();
     }
+
+    public void findKakuro(String path) {
+        try {
+            String kakuro = cd.getKakuro(path);
+            cd.setKakuro(kakuro);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public void searchKakuro(int diff, int rowSize, int columnSize) {
         try {
             cd.searchKakuro(diff, rowSize, columnSize);
@@ -182,6 +192,10 @@ public class CtrlUI {
 
     public void startGame(int diff, int rowSize, int columnSize) {
         cd.startNewGame(diff, rowSize, columnSize);
+    }
+
+    public void startGame(String absolutePath) {
+        cd.startNewGame(absolutePath);
     }
 
     public boolean isFinished() {
