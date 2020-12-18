@@ -109,6 +109,18 @@ public class CtrlData {
         return k;
     }
 
+    public void saveKakuroRecord(JsonArray record) {
+        FileWriter file = null;
+        try {
+            file = new FileWriter("data/kakuros.json");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        PrintWriter pw = new PrintWriter(file);
+        pw.print(new Gson().toJson(record));
+        pw.close();
+    }
+
     public JsonArray getkakuroRecord() {
         JsonReader reader = null;
         try {

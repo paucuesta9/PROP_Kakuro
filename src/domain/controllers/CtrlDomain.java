@@ -1,6 +1,8 @@
 package domain.controllers;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 import data.*;
 import domain.classes.*;
@@ -248,7 +250,17 @@ public class CtrlDomain {
      *
      */
     public int saveKakuro() {
-        return data.saveKakuro(currentKakuro.toString(), currentKakuro.correctToString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
+        int id = data.saveKakuro(currentKakuro.toString(), currentKakuro.correctToString(), currentKakuro.getDifficulty(), currentKakuro.getRowSize(), currentKakuro.getColumnSize());
+        JsonArray array = data.getkakuroRecord();
+        JsonObject object = new JsonObject();
+        object.addProperty("diff", String.valueOf(currentKakuro.getDifficulty()));
+        object.addProperty("size", currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize());
+        object.addProperty("id", id);
+        object.addProperty("minTime", 0);
+        object.addProperty("player", "");
+        object.addProperty("maxPoints", 0);
+        array.add(object);
+        return id;
     }
 
     /** @brief Getter de partidas empezadas por el usuario actual
