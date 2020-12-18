@@ -167,6 +167,7 @@
             <properties>
               <borderPainted value="false"/>
               <contentAreaFilled value="false"/>
+              <focusable value="false"/>
               <text value="Volver"/>
             </properties>
           </component>

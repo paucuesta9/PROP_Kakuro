@@ -15,7 +15,6 @@ import java.util.Scanner;
  @author Judith Almoño Gómez
  */
 
-
 /** @brief Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladores
  */
 public class CtrlUI {
@@ -29,7 +28,6 @@ public class CtrlUI {
     private Scanner reader = new Scanner(System.in);
     private JFrame mainFrame = new JFrame();
     private static CtrlUI ctrlUI;
-
 
     public static CtrlUI getInstance() {
         if (ctrlUI == null)

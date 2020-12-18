@@ -4,6 +4,9 @@ package domain.controllers;
  @brief Clase  <em>CtrlPlay</em>.
  */
 
+/** @brief Clase CtrlPlay que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ * @author Judith Almoño Gómez
+ */
 import domain.classes.Game;
 import domain.classes.Kakuro;
 import domain.classes.Player;
@@ -18,14 +21,27 @@ import java.util.List;
  */
 public class CtrlPlay {
     /**
-     * kakuro instancia del kakuro con el que se trabaja en este momento
+     * currentKakuro representa la instancia del kakuro con la que se trabaja en este momento
      */
     private Kakuro currentKakuro;
+    /**
+     * currentGame representa la instancia de la partida con la que se trabaja en este momento
+     */
     private Game currentGame;
+    /**
+     * currentPlayer representa la instancia del jugador con la que se trabaja en este momento
+     */
     private Player currentPlayer;
 
     private CtrlDomain cd;
 
+    /** @brief Creadora a partir de unas características
+     *
+     * @param difficulty representa la dificultad del kakuro de la partida
+     * @param rowSize representa el número de filas del kakuro de la partida
+     * @param columnSize representa el número de columnas del kakuro de la partida
+     * @param cd representa la instancia del ctrlDomain
+     */
     public CtrlPlay(int difficulty, int rowSize, int columnSize, CtrlDomain cd) {
         this.cd = cd;
         currentPlayer = cd.getCurrentPlayer();
@@ -52,6 +68,11 @@ public class CtrlPlay {
         setCorrectValues();
     }
 
+    /** @brief Creadora a partir de un kakuro existente
+     *
+     * @param absolutePath representa el path donde se encuentra el kakuro
+     * @param cd representa la instancia del CtrlDomain
+     */
     public CtrlPlay(String absolutePath, CtrlDomain cd) {
         this.cd = cd;
         currentPlayer = cd.getCurrentPlayer();
@@ -73,6 +94,11 @@ public class CtrlPlay {
         setCorrectValues();
     }
 
+    /** @brief Creadora a partir de una partida empezada
+     *
+     * @param game representa la partida empezada
+     * @param cd representa la instancia del CtrlDomain
+     */
     public CtrlPlay(int game, CtrlDomain cd) {
         currentPlayer = cd.getCurrentPlayer();
         currentGame = currentPlayer.getGame(game);
@@ -162,6 +188,10 @@ public class CtrlPlay {
         return 0;
     }
 
+    /** @brief Actualización de los puntos de la partida
+     *
+     * @param points representan los puntos a añadir a los puntos de la partida
+     */
     public void updatePoints(int points) {
         currentGame.setPoints(currentGame.getPoints() + points);
     }
@@ -187,10 +217,19 @@ public class CtrlPlay {
         return currentKakuro.isFinished();
     }
 
+    /** @brief Guardar el tiempo en la partida
+     *
+     * @param gameTime representa el tiempo a guardar de la partida
+     */
     public void setTimeToGame(int gameTime) {
         currentGame.setTime(gameTime);
     }
 
+    /** @brief Acabar partida
+     *
+     * @param selfFinished representa si el kakuro se ha resuelto con el boton resolver o lo ha resuelto el usuario
+     * @return los puntos de la partida
+     */
     public int finishGame(boolean selfFinished) {
         int points = 0;
         if (selfFinished) {
@@ -211,28 +250,54 @@ public class CtrlPlay {
         return points;
     }
 
+    /** @brief Setter valor celda
+     *
+     * @param x representa la posición de la celda respecto las filas
+     * @param y representa la posición de la celda respecto las columnas
+     * @param value representa el valor de la celda a introducir
+     * @return cierto si se ha insertado el valor
+     */
     public boolean setValue(int x, int y, int value) {
         return currentKakuro.setValue(x, y, value);
     }
 
+    /** @brief Actualizar estadísticas del jugador
+     *
+     */
     public void updateStatsPlayer() {
         currentPlayer.getStats().setPoints(currentGame.getPoints());
         currentPlayer.getStats().setFinished(1);
         cd.savePlayer();
     }
 
+    /** @brief Getter de game
+     *
+     * @return la partida actual
+     */
     public Game getGame() {
         return currentGame;
     }
 
+    /** @brief Getter de kakuro
+     *
+     * @return el kakuro de la partida
+     */
     public Kakuro getKakuro() {
         return currentKakuro;
     }
 
+    /** @brief Getter de time
+     *
+     * @return el tiempo de la partida
+     */
     public int getTime() {
         return currentGame.getTime();
     }
 
+    /** Getter de las ayudas
+     *
+     * @return una lista con todas las ayudas utilizadas
+     */
     public ArrayList<String> getHelps() {
         return (ArrayList<String>) currentGame.getHelps();
     }

@@ -66,7 +66,7 @@ public class Create {
 
         numRow.setForeground(Color.BLACK);
         numRow.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.BLACK));
-        numRow.setFont(Utils.roboto.deriveFont(16f));
+        numRow.setFont(Utils.roboto.deriveFont(18f));
 
         columnSizeText.setForeground(Color.BLACK);
         columnSizeText.setFont(Utils.roboto.deriveFont(18f));
@@ -298,6 +298,8 @@ public class Create {
                 } else {
                     numRow.setFocusable(false);
                     numColumn.setFocusable(false);
+                    ImportButton.setVisible(false);
+                    labelO.setVisible(false);
                     String kakuro = Integer.valueOf(numRow.getText()) + "," + Integer.valueOf(numColumn.getText()) + "\n";
                     aceptar.setVisible(false);
                     textSize.setVisible(false);

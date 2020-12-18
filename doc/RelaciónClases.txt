@@ -16,6 +16,7 @@ Alvaro:
     - CtlrGenerate
 
     - Stats
+    - Pair
 Pau:
     - WhiteCell
     - CtrlData
@@ -25,6 +26,8 @@ Pau:
     - CtrlDomain
     - Main
     - Player
+    - CtrlPlayer
+    - CtrlPlayerUI
 
     - KakuroWhiteCell
     - KakuroBoard
@@ -33,6 +36,7 @@ Pau:
 Judith:
     - BlackCell
     - CtrlPlay
+    - CtrlPlayUI
     - CtrlUI
     - Game
 
@@ -79,7 +83,7 @@ Judith:
     - GameBrief
     - Error
 
-OTROS
+OTROSjcantel
     Pau:
         - Makefile
     Judith:

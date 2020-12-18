@@ -93,7 +93,7 @@
           <vspacer id="87924">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <preferred-size width="-1" height="50"/>
+                <preferred-size width="-1" height="30"/>
               </grid>
             </constraints>
           </vspacer>
@@ -123,7 +123,7 @@
           <vspacer id="ecc2b">
             <constraints>
               <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
-                <minimum-size width="-1" height="80"/>
+                <minimum-size width="-1" height="40"/>
               </grid>
             </constraints>
           </vspacer>
@@ -153,6 +153,9 @@
             </constraints>
             <properties>
               <background color="-1973532"/>
+              <borderPainted value="false"/>
+              <contentAreaFilled value="false"/>
+              <focusable value="false"/>
               <text value="Records"/>
             </properties>
           </component>

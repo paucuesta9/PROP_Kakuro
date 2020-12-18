@@ -66,6 +66,9 @@ public class Game {
     @SerializedName("diff")
     @Expose
     private int diff;
+    /**
+     * helps representa una lista de las ayudas utilizadas en la partida
+     */
     @SerializedName("helps")
     @Expose
     private List<String> helps = null;
@@ -224,14 +227,28 @@ public class Game {
         this.diff = diff;
     }
 
+    /** @brief Getter de helps
+     *
+     * @return la lista de las ayudas
+     */
     public List<String> getHelps() {
         return helps;
     }
 
+    /** @brief Setter de helps
+     *
+     * @param helps representa una lista de ayudas
+     */
     public void setHelps(List<String> helps) {
         this.helps = helps;
     }
 
+    /** @brief Añadir una ayuda a helps
+     *
+     * @param posX representa la posición de la celda respecto a las filas
+     * @param posY representa la posición de la celda respecto a las columnas
+     * @param isCorrect representa si la ayuda ha dado correcto o incorrecto
+     */
     public void addHelp(int posX, int posY, int isCorrect) {
         for (int i = 0; i < helps.size(); ++i) {
             if (helps.get(i).contains(posX + "_" + posY)) {

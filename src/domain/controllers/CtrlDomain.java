@@ -17,7 +17,6 @@ import java.util.List;
  @brief Clase  <em>CtrlDomain</em>.
  */
 
-
 /** @brief Clase CtrlDomain que contiene los atributos y metodos para el intercambio de atributos entre controladores
  * @author Pau Cuesta Arcos
  */
