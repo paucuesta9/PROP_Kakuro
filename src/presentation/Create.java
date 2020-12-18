@@ -318,6 +318,7 @@ public class Create {
                     if (!ctrlUI.validate()) {
                         Utils.showError("El kakuro creado no es válido");
                     } else {
+                        ctrlUI.resolve();
                         ctrlUI.toAskSave("¿Desea guardar el kakuro creado?", boardKakuro, 1);
                     }
                 } catch (NoTypeCellException noTypeCellException) {

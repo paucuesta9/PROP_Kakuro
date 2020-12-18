@@ -342,4 +342,9 @@ public class CtrlDomain {
     public ArrayList<String> getHelps() {
         return ctrlPlay.getHelps();
     }
+
+    public void resolve() {
+        new CtrlResolve(currentKakuro);
+        CtrlResolve.resolve();
+    }
 }

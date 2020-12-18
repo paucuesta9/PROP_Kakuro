@@ -277,4 +277,8 @@ public class CtrlUI {
     public ArrayList<String> getHelps() {
         return cd.getHelps();
     }
+
+    public void resolve() {
+        cd.resolve();
+    }
 }
