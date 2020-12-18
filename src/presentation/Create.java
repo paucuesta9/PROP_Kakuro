@@ -104,6 +104,17 @@ public class Create {
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
                 cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
+                GridBagConstraints c = new GridBagConstraints();
+                c.weightx = 1.0;
+                c.weighty = 1.0;
+                c.fill = GridBagConstraints.BOTH;
+                c.gridx = posY;
+                c.gridy = posX;
+                kBoard.remove(pos);
+                kBoard.add(cells[pos], c, pos);
+                kBoard.validate();
+                board.validate();
+                listenersCells();
             }
         });
         popupMenu.add(whiteCellItem);
