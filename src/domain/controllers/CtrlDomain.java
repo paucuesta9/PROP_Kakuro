@@ -366,4 +366,8 @@ public class CtrlDomain {
     public String getThisKakuro(String s) {
         return data.getThisKakuro(s);
     }
+
+    public JsonArray getRecords() {
+        return data.getkakuroRecord();
+    }
 }

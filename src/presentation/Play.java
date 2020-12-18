@@ -513,6 +513,7 @@ public class Play {
     private void finishGame(boolean selfFinished) {
         stopTimer();
         if (!training) {
+            ctrlPlayUI.setTimeToGame(gameTime);
             int points = ctrlPlayUI.finishGame(selfFinished);
             if (selfFinished) {
                 FinishedGame fg = new FinishedGame(points);

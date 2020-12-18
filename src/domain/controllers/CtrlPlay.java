@@ -7,6 +7,8 @@ package domain.controllers;
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para el intercambio de atributos entre controladores
  * @author Judith Almoño Gómez
  */
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import domain.classes.Game;
 import domain.classes.Kakuro;
 import domain.classes.Player;
@@ -245,6 +247,25 @@ public class CtrlPlay {
             currentGame.setPoints(0);
         }
         points = currentGame.getPoints();
+        JsonArray records = cd.getRecords();
+        for (int i = 0; i < records.size(); ++i) {
+            JsonObject record = records.get(i).getAsJsonObject();
+            int diff = Integer.parseInt(record.get("diff").getAsString());
+            String size = record.get("size").getAsString();
+            String id = record.get("id").getAsString();
+            id = id.substring(0, id.indexOf("."));
+            int idInt = Integer.parseInt(id);
+            String[] sizes = size.split("_");
+            int rowSize = Integer.parseInt(sizes[0]);
+            int columnSize = Integer.parseInt(sizes[1]);
+            if (diff == currentKakuro.getDifficulty() && rowSize == currentKakuro.getRowSize() && columnSize == currentKakuro.getColumnSize() && idInt == currentKakuro.getId()) {
+                if (record.get("minTime").getAsInt() > currentGame.getTime()) {
+                    record.addProperty("minTime", currentGame.getTime());
+                    record.addProperty("player", currentPlayer.getUsername());
+                    record.addProperty("maxPoints", currentGame.getPoints());
+                }
+            }
+        }
         currentGame = null;
         currentKakuro = null;
         return points;
