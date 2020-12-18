@@ -84,8 +84,6 @@ public class Play {
      */
     private boolean paused = false;
 
-    private JFrame frame;
-
     /**
      * rowSize representa el numero de filas del kakuro de la partida
      * columnSize representa el numero de columnas del kakuro de la partida
@@ -123,10 +121,25 @@ public class Play {
 
         this.ctrlPlayUI = CtrlPlayUI.getInstance();
 
+        this.gameTime = ctrlPlayUI.getTime();
+        time.setText(Utils.setTimeToLabel(gameTime));
+
         Utils.loadFonts();
         sg = new KakuroBoard(kakuro);
         board.add(sg);
         components = sg.getComponents();
+        if (gameTime != 0) {
+            ArrayList<String> helps = ctrlPlayUI.getHelps();
+            for (int i = 0; i < components.length; ++i) {
+                if (components[i] instanceof KakuroWhiteCell) checkValidityCell(((KakuroWhiteCell) components[i]), ((KakuroWhiteCell) components[i]).getPosX(), ((KakuroWhiteCell) components[i]).getPosY());
+            }
+            for (int i = 0; i < helps.size(); ++i) {
+                String help = helps.get(i);
+                String[] valuesHelp = help.split("_");
+                components[Integer.parseInt(valuesHelp[0]) * columnSize + Integer.parseInt(valuesHelp[1])].setBackground(((Integer.parseInt(valuesHelp[2]) == 1) ? Utils.colorCorrectCell : Utils.colorIncorrectCell));
+            }
+        }
+
         listeners();
         startTimer();
         setListenerBoard();

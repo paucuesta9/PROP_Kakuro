@@ -2,14 +2,12 @@ package presentation;
 
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
-import domain.classes.Player;
 import domain.controllers.CtrlDomain;
 
 import javax.swing.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 /** @file CtrlUI.java
@@ -270,5 +268,13 @@ public class CtrlUI {
 
     public ArrayList<Integer> getStatsList() {
         return cd.getStatsList();
+    }
+
+    public int getTime() {
+        return cd.getTime();
+    }
+
+    public ArrayList<String> getHelps() {
+        return cd.getHelps();
     }
 }

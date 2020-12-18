@@ -70,4 +70,12 @@ public class CtrlPlayUI {
     public void setGame(Integer id) {
         ctrlUI.setGame(id);
     }
+
+    public int getTime() {
+        return ctrlUI.getTime();
+    }
+
+    public ArrayList<String> getHelps() {
+        return ctrlUI.getHelps();
+    }
 }

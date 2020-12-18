@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -65,6 +66,9 @@ public class Game {
     @SerializedName("diff")
     @Expose
     private int diff;
+    @SerializedName("helps")
+    @Expose
+    private List<String> helps = null;
 
     /** @brief Constructora por defecto
      * No args constructor for use in serialization
@@ -80,7 +84,7 @@ public class Game {
      * @param points representa los puntos de la partida
      * @param kakuroId representa el id del kakuro de la partida
      */
-    public Game(int id, int time, int points, int kakuroId, int rowSize, int columnSize, int diff) {
+    public Game(int id, int time, int points, int kakuroId, int rowSize, int columnSize, int diff, List<String> helps) {
         super();
         this.id = id;
         this.time = time;
@@ -89,6 +93,7 @@ public class Game {
         this.rowSize = rowSize;
         this.columnSize = columnSize;
         this.diff = diff;
+        this.helps = helps;
     }
 
     /** @brief Getter del Id
@@ -217,6 +222,23 @@ public class Game {
      */
     public void setDiff(int diff) {
         this.diff = diff;
+    }
+
+    public List<String> getHelps() {
+        return helps;
+    }
+
+    public void setHelps(List<String> helps) {
+        this.helps = helps;
+    }
+
+    public void addHelp(int posX, int posY, int isCorrect) {
+        for (int i = 0; i < helps.size(); ++i) {
+            if (helps.get(i).contains(posX + "_" + posY)) {
+                helps.remove(i);
+            }
+        }
+        helps.add(posX + "_" + posY + "_" + isCorrect);
     }
 
     /** @brief Lista los atributos de una partida

@@ -8,11 +8,10 @@ import domain.classes.Game;
 import domain.classes.Kakuro;
 import domain.classes.Player;
 import domain.classes.WhiteCell;
-import presentation.CtrlPlayUI;
-import presentation.CtrlUI;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar
  * @author Judith Almoño Gómez
@@ -47,7 +46,7 @@ public class CtrlPlay {
             currentKakuro.setId(cd.saveKakuro());
         }
         int id = cd.getGameId();
-        currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, difficulty);
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, difficulty, null);
         currentPlayer.setCurrentGame(currentGame);
         currentPlayer.getStats().setTotal(1);
         setCorrectValues();
@@ -68,7 +67,7 @@ public class CtrlPlay {
         currentKakuro.setDifficulty(Character.getNumericValue(absolutePath.charAt(absolutePath.indexOf("diff") + 4)));
         cd.setKakuro(currentKakuro);
         id = cd.getGameId();
-        currentGame = new Game(id, 0, 0, currentKakuro.getId(), currentKakuro.getRowSize(), currentKakuro.getColumnSize(), currentKakuro.getDifficulty());
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), currentKakuro.getRowSize(), currentKakuro.getColumnSize(), currentKakuro.getDifficulty(), null);
         currentPlayer.setCurrentGame(currentGame);
         currentPlayer.getStats().setTotal(1);
         setCorrectValues();
@@ -135,7 +134,11 @@ public class CtrlPlay {
         if (currentKakuro.getCell(x, y).isWhite()) {
             int value = ((WhiteCell) currentKakuro.getCell(x, y)).getValue();
             if (value == 0) return -2;
-            else return (((WhiteCell) currentKakuro.getCell(x, y)).getCorrectValue() == value) ? 1 : 0;
+            else {
+                int help = (((WhiteCell) currentKakuro.getCell(x, y)).getCorrectValue() == value) ? 1 : 0;
+                currentGame.addHelp(x, y, help);
+                return help;
+            }
         }
         return -1;
     }
@@ -153,6 +156,7 @@ public class CtrlPlay {
         if (currentKakuro.getCell(x, y).isWhite()) {
             int correctNumber = ((WhiteCell) currentKakuro.getCell(x, y)).getCorrectValue();
             currentKakuro.setValue(x, y, correctNumber);
+            currentGame.addHelp(x, y, 1);
             return correctNumber;
         }
         return 0;
@@ -223,5 +227,13 @@ public class CtrlPlay {
 
     public Kakuro getKakuro() {
         return currentKakuro;
+    }
+
+    public int getTime() {
+        return currentGame.getTime();
+    }
+
+    public ArrayList<String> getHelps() {
+        return (ArrayList<String>) currentGame.getHelps();
     }
 }

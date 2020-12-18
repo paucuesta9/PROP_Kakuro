@@ -334,4 +334,12 @@ public class CtrlDomain {
     public JsonReader[] getListOfPlayers() throws NullPointerException {
         return data.getListOfPlayers();
     }
+
+    public int getTime() {
+        return ctrlPlay.getTime();
+    }
+
+    public ArrayList<String> getHelps() {
+        return ctrlPlay.getHelps();
+    }
 }
