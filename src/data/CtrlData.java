@@ -72,6 +72,7 @@ public class CtrlData {
         return ctrlPlayerData.getUser(username);
     }
 
+
     public void savePlayer(String username, String playerJSON) {
         ctrlPlayerData.savePlayer(username, playerJSON);
     }
@@ -86,5 +87,19 @@ public class CtrlData {
 
     public void saveKakuroGame(String kakuro, String username, int id) {
         ctrlGameData.saveKakuroGame(kakuro, username, id);
+    }
+
+    public String[][] getListOfKakuros() {
+        return ctrlKakuroData.getListOfKakuros();
+    }
+
+    public String getThisKakuro(String s) {
+        String k = "";
+        try {
+            k = ctrlKakuroData.getKakuro(s);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return k;
     }
 }

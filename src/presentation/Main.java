@@ -25,6 +25,7 @@ public class Main {
     private JButton statsButton;
     private JLabel photo;
     private JLabel logo;
+    private JButton recordsButton;
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
@@ -60,6 +61,9 @@ public class Main {
 
         Utils.setButtons(statsButton);
         statsButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
+
+        Utils.setButtons(recordsButton);
+        recordsButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
 
         Utils.setButtons(logoutButton);
         logoutButton.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
@@ -116,6 +120,13 @@ public class Main {
                 s.drawStatistics();
             }
         });
+
+        recordsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ctrlUI.toRecords();
+            }
+        });
     }
 
     public JPanel getDefaultPanel() {
@@ -144,7 +155,7 @@ public class Main {
         panel1.setMinimumSize(new Dimension(1200, 800));
         panel1.setPreferredSize(new Dimension(1200, 800));
         final JPanel panel2 = new JPanel();
-        panel2.setLayout(new GridLayoutManager(9, 1, new Insets(0, 0, 0, 0), -1, -1));
+        panel2.setLayout(new GridLayoutManager(10, 1, new Insets(0, 0, 0, 0), -1, -1));
         panel2.setBackground(new Color(-1973532));
         panel1.add(panel2, new GridConstraints(3, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         playButton = new JButton();
@@ -185,11 +196,11 @@ public class Main {
         logoutButton.setFocusPainted(false);
         logoutButton.setFocusable(false);
         logoutButton.setText("Cerrar sesión");
-        panel2.add(logoutButton, new GridConstraints(7, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, 40), new Dimension(252, -1), 0, false));
+        panel2.add(logoutButton, new GridConstraints(8, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, 40), new Dimension(252, -1), 0, false));
         final Spacer spacer2 = new Spacer();
-        panel2.add(spacer2, new GridConstraints(8, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 100), null, 0, false));
+        panel2.add(spacer2, new GridConstraints(9, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(-1, 100), null, 0, false));
         final Spacer spacer3 = new Spacer();
-        panel2.add(spacer3, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 80), null, null, 0, false));
+        panel2.add(spacer3, new GridConstraints(7, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 80), null, null, 0, false));
         statsButton = new JButton();
         statsButton.setBorderPainted(false);
         statsButton.setContentAreaFilled(false);
@@ -197,6 +208,9 @@ public class Main {
         statsButton.setFocusable(false);
         statsButton.setText("Estadísticas");
         panel2.add(statsButton, new GridConstraints(5, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, -1), new Dimension(252, 40), new Dimension(252, -1), 0, false));
+        recordsButton = new JButton();
+        recordsButton.setText("Records");
+        panel2.add(recordsButton, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, 40), new Dimension(252, 40), null, 0, false));
         final Spacer spacer4 = new Spacer();
         panel1.add(spacer4, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, new Dimension(50, -1), null, 0, false));
         final Spacer spacer5 = new Spacer();

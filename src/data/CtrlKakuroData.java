@@ -100,4 +100,60 @@ public class CtrlKakuroData {
         File[] listFiles = folder.listFiles();
         return listFiles.length;
     }
+
+    public int getNumberKakurosTotal(int diff) {
+        int kakuros = 0;
+        File folder = new File("data/diff"+diff);
+        File[] listFiles = folder.listFiles();
+        int n = listFiles.length;
+        for(int i = 0; i < n; ++i) {
+            kakuros+= listFiles[i].listFiles().length;
+        }
+        return kakuros;
+    }
+
+    public String[][] getListOfKakuros() {
+        int n = getNumberKakurosTotal(1);
+        int m = getNumberKakurosTotal(2);
+        int o = getNumberKakurosTotal(3);
+        String[][] t = new String[n+m+o][4];
+        int cont = 0;
+        File folder = new File("data/diff1");
+        File[] listFiles = folder.listFiles();
+        int nkak = listFiles.length;
+        for(int i = 0; i < nkak; ++i) {
+            File[] files = listFiles[i].listFiles(); //p.e 3_3
+           for(int j = 0; j < files.length; ++j) {
+               t[cont][0] = "1";
+               t[cont][1] = listFiles[i].getName(); //obtenir el nom de la carpeta? (del pal 3_3)
+               t[cont][2] = files[j].getName(); //obtenir l'id del kakuro
+               ++cont;
+            }
+        }
+        folder = new File("data/diff2");
+        listFiles = folder.listFiles();
+        nkak = listFiles.length;
+        for(int i = 0; i < nkak; ++i) {
+            File[] files = listFiles[i].listFiles();
+            for(int j = 0; j < files.length; ++j) {
+                t[cont][0]= "2";
+                t[cont][1] = listFiles[i].getName(); //obtenir el nom de la carpeta? (del pal 3_3)
+                t[cont][2] = files[j].getName(); //obtenir l'id del kakuro
+                ++cont;
+            }
+        }
+        folder = new File("data/diff3");
+        listFiles = folder.listFiles();
+        nkak = listFiles.length;
+        for(int i = 0; i < nkak; ++i) {
+            File[] files = listFiles[i].listFiles();
+            for(int j = 0; j < files.length; ++j) {
+                t[cont][0] = "3";
+                t[cont][1] = listFiles[i].getName(); //obtenir el nom de la carpeta? (del pal 3_3)
+                t[cont][2] = files[j].getName(); //obtenir l'id del kakuro
+                ++cont;
+            }
+        }
+        return t;
+    }
 }

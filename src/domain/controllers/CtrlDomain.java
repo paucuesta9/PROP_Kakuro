@@ -347,4 +347,12 @@ public class CtrlDomain {
         new CtrlResolve(currentKakuro);
         CtrlResolve.resolve();
     }
+
+    public String[][] getListOfKakuros() {
+        return data.getListOfKakuros();
+    }
+
+    public String getThisKakuro(String s) {
+        return data.getThisKakuro(s);
+    }
 }

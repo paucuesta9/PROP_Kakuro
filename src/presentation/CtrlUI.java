@@ -48,6 +48,8 @@ public class CtrlUI {
     private Generate generate;
     private AskSave askSave;
     private Rankings rankings;
+    private ShowKakuro showKakuro;
+    private Records records;
 
     /** @brief Creadora por defecto
      *
@@ -140,10 +142,24 @@ public class CtrlUI {
         mainFrame.setVisible(true);
     }
 
+    public void toShowKakuro(String s) {
+        showKakuro = new ShowKakuro(s);
+        mainFrame.setTitle("ShowKakuro");
+        mainFrame.setContentPane(showKakuro.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
     public void toAskSave(String question, String boardKakuro, int option) {
         askSave = new AskSave(question, boardKakuro, option);
         mainFrame.setTitle("Save");
         mainFrame.setContentPane(askSave.getDefaultPanel());
+        mainFrame.setVisible(true);
+    }
+
+    public void toRecords() {
+        records = new Records();
+        mainFrame.setTitle("Records");
+        mainFrame.setContentPane(records.getDefaultPanel());
         mainFrame.setVisible(true);
     }
 
@@ -280,5 +296,13 @@ public class CtrlUI {
 
     public void resolve() {
         cd.resolve();
+    }
+
+    public String getThisKakuro(String s){
+        return cd.getThisKakuro(s);
+    }
+
+    public String[][] getListOfKakuros() {
+        return cd.getListOfKakuros();
     }
 }
