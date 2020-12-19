@@ -242,30 +242,31 @@ public class CtrlPlay {
             points += Integer.max(currentKakuro.getRowSize(), currentKakuro.getColumnSize()) / 2;
             updatePoints(points);
             cd.updateStatsPlayer();
+            JsonArray records = cd.getRecords();
+            for (int i = 0; i < records.size(); ++i) {
+                JsonObject record = records.get(i).getAsJsonObject();
+                diff = Integer.parseInt(record.get("diff").getAsString());
+                String size = record.get("size").getAsString();
+                String id = record.get("id").getAsString();
+                id = id.substring(0, id.indexOf("."));
+                int idInt = Integer.parseInt(id);
+                String[] sizes = size.split("_");
+                int rowSize = Integer.parseInt(sizes[0]);
+                int columnSize = Integer.parseInt(sizes[1]);
+                if (diff == currentKakuro.getDifficulty() && rowSize == currentKakuro.getRowSize() && columnSize == currentKakuro.getColumnSize() && idInt == currentKakuro.getId()) {
+                    if (record.get("minTime").getAsInt() != 0 && record.get("minTime").getAsInt() > currentGame.getTime()) {
+                        record.addProperty("minTime", currentGame.getTime());
+                        record.addProperty("player", currentPlayer.getUsername());
+                        record.addProperty("maxPoints", currentGame.getPoints());
+                    }
+                }
+            }
+            cd.saveRecords(records);
         }
         else {
             currentGame.setPoints(0);
         }
         points = currentGame.getPoints();
-        JsonArray records = cd.getRecords();
-        for (int i = 0; i < records.size(); ++i) {
-            JsonObject record = records.get(i).getAsJsonObject();
-            int diff = Integer.parseInt(record.get("diff").getAsString());
-            String size = record.get("size").getAsString();
-            String id = record.get("id").getAsString();
-            id = id.substring(0, id.indexOf("."));
-            int idInt = Integer.parseInt(id);
-            String[] sizes = size.split("_");
-            int rowSize = Integer.parseInt(sizes[0]);
-            int columnSize = Integer.parseInt(sizes[1]);
-            if (diff == currentKakuro.getDifficulty() && rowSize == currentKakuro.getRowSize() && columnSize == currentKakuro.getColumnSize() && idInt == currentKakuro.getId()) {
-                if (record.get("minTime").getAsInt() > currentGame.getTime()) {
-                    record.addProperty("minTime", currentGame.getTime());
-                    record.addProperty("player", currentPlayer.getUsername());
-                    record.addProperty("maxPoints", currentGame.getPoints());
-                }
-            }
-        }
         currentGame = null;
         currentKakuro = null;
         return points;

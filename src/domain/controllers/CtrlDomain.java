@@ -515,4 +515,8 @@ public class CtrlDomain {
     public JsonArray getRecords() {
         return data.getkakuroRecord();
     }
+
+    public void saveRecords(JsonArray records) {
+        data.saveKakuroRecord(records);
+    }
 }
