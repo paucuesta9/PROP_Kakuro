@@ -58,6 +58,7 @@ public class Config extends JDialog {
         setContentPane(panel);
         setModal(true);
         getRootPane().setDefaultButton(volver);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         Utils.loadFonts();
         musicText.setFont(Utils.roboto);
