@@ -245,7 +245,7 @@ public class CtrlUI {
     }
 
     public void generate(int i, int j, int diff) {
-        cd.generate(i, diff);
+        cd.generate(i,j, diff);
     }
 
     public void save() {

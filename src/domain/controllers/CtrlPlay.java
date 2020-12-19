@@ -56,7 +56,7 @@ public class CtrlPlay {
             cd.setKakuro(currentKakuro);
         } catch (IOException e) {
             System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)");
-            currentKakuro = CtrlGenerate.generate(rowSize, difficulty);
+            currentKakuro = CtrlGenerate.generate(rowSize,columnSize, difficulty);
             System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
             CtrlResolve ctrlResolve =  new CtrlResolve(currentKakuro);
             ctrlResolve.resolve();
@@ -64,7 +64,7 @@ public class CtrlPlay {
             currentKakuro.setId(cd.saveKakuro());
         }
         int id = cd.getGameId();
-        currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, difficulty, null);
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, difficulty, new ArrayList<>());
         currentPlayer.setCurrentGame(currentGame);
         currentPlayer.getStats().setTotal(1);
         setCorrectValues();
@@ -90,7 +90,7 @@ public class CtrlPlay {
         currentKakuro.setDifficulty(Character.getNumericValue(absolutePath.charAt(absolutePath.indexOf("diff") + 4)));
         cd.setKakuro(currentKakuro);
         id = cd.getGameId();
-        currentGame = new Game(id, 0, 0, currentKakuro.getId(), currentKakuro.getRowSize(), currentKakuro.getColumnSize(), currentKakuro.getDifficulty(), null);
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), currentKakuro.getRowSize(), currentKakuro.getColumnSize(), currentKakuro.getDifficulty(), new ArrayList<>());
         currentPlayer.setCurrentGame(currentGame);
         currentPlayer.getStats().setTotal(1);
         setCorrectValues();

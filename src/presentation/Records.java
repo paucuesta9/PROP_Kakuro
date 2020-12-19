@@ -47,6 +47,7 @@ public class Records {
 
         String[] titles = {"Dificultad", "tamaño", "Kakuro"};
         //content = ctrlUI.getListOfKakuros();
+        //ui, ctrlDom,
         CtrlData data = CtrlData.getInstance();
         JsonArray kak = data.getkakuroRecord();
         content = new String[kak.size()][3];

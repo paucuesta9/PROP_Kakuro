@@ -71,7 +71,7 @@ public class Game {
      */
     @SerializedName("helps")
     @Expose
-    private List<String> helps = null;
+    private List<String> helps =  new ArrayList<>();
 
     /** @brief Constructora por defecto
      * No args constructor for use in serialization

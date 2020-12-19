@@ -306,7 +306,7 @@ public class DriverCtrlGenerate {
         int n = readNumber();
         System.out.println("Indica la dificultad deseada: ");
         int d = readNumber();
-        currentKakuro = CtrlGenerate.generate(n,d);
+        currentKakuro = CtrlGenerate.generate(n,n,d);
         System.out.println(currentKakuro.toString());
         System.out.println("Se ha generado un kakuro del tamano deseado con solucion unica");
     }
@@ -387,7 +387,7 @@ public class DriverCtrlGenerate {
     }
 
     /**@brief Test de la función connexBoard
-     * Comprueba si la función connexBoard retorna adecuadamente si un talbero es conexo o no
+     * Comprueba si la función connexBoard retorna adecuadamente si un talbero es conexo o no, y si tiene un numerp mínimo de casillas blancas
      */
     private static void testConnexBoard() {
         System.out.println("Escribe un kakuro para realizar el test");
@@ -396,6 +396,24 @@ public class DriverCtrlGenerate {
         boolean b = CtrlGenerate.connexBoard(currentKakuro.getBoard());
         if(b) System.out.println("El tablero es conexo");
         else System.out.println("El tablero no es conexo");
+    }
+
+    private static void testCheckRunsH() {
+        System.out.println("Escribe el kakuro para realizar el test");
+        String kakuroString = readKakuro();
+        currentKakuro = new Kakuro(kakuroString);
+        boolean b = CtrlGenerate.checkRunsH(currentKakuro.getBoard());
+        if(b) System.out.println("El kakuro no tiene runs horizontales de más de 9 celdas blancas");
+        else System.out.println("Kakuro incorrecto");
+    }
+
+    private static void testCheckRunsV() {
+        System.out.println("Escribe el kakuro para realizar el test");
+        String kakuroString = readKakuro();
+        currentKakuro = new Kakuro(kakuroString);
+        boolean b = CtrlGenerate.checkRunsH(currentKakuro.getBoard());
+        if(b) System.out.println("El kakuro no tiene runs verticales de más de 9 celdas blancas");
+        else System.out.println("Kakuro incorrecto");
     }
 
     /**@brief función main del driver CtrlGenerate
