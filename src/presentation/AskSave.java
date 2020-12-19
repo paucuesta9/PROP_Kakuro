@@ -117,7 +117,10 @@ public class AskSave {
         síButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (option == 1) ctrlUI.save();
+                if (option == 1) {
+                    String info = ctrlUI.saveAndGetInfo();
+                    Utils.showError("El kakuro se ha guardado en data/" + info);
+                }
                 else {
                     ctrlUI.saveGame();
                 }

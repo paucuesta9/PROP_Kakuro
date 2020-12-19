@@ -315,6 +315,11 @@ public class CtrlDomain {
         return id;
     }
 
+    public String saveKakuroAndGetInfo() {
+        int id = saveKakuro();
+        return "diff" + currentKakuro.getDifficulty() + "/" + currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize() + "/" + id + ".txt";
+    }
+
     /** @brief Getter de partidas empezadas por el usuario actual
      *
      * @return Devuelve una lista de listas de enteros con los atributos de todas las partidas que tiene empezadas el usuario

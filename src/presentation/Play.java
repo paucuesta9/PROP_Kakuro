@@ -556,6 +556,9 @@ public class Play {
                     }
                 });
             }
+        } else {
+            Utils.showError("¡Ha terminado el kakuro correctamente!");
+            ctrlUI.toMain();
         }
 
     }

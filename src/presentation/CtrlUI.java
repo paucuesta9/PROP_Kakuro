@@ -248,8 +248,8 @@ public class CtrlUI {
         cd.generate(i,j, diff);
     }
 
-    public void save() {
-        cd.saveKakuro();
+    public String saveAndGetInfo() {
+        return cd.saveKakuroAndGetInfo();
     }
 
     public void saveGame() {
