@@ -16,6 +16,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
+/** @file ShowKakuro.java
+ @brief Clase  <em>ShowKakuro</em>.
+ */
+
+/**
+ * @author Pol Vallespí Soro
+ * @brief Clase ShowKakuro que se encarga de mostrar los kakuros del repositorio y la información de los records. Contiene las funciones y atributos necesarios para poder hacerlo.
+ */
+
 public class ShowKakuro {
     private JPanel panel1;
     private JLabel photo;
