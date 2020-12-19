@@ -115,6 +115,7 @@ public class Create {
                 kBoard.validate();
                 board.validate();
                 listenersCells();
+                panel1.requestFocus();
             }
         });
         popupMenu.add(whiteCellItem);
@@ -144,6 +145,7 @@ public class Create {
                     kBoard.validate();
                     board.validate();
                     listenersCells();
+                    panel1.requestFocus();
                 }
             }
         });
@@ -172,6 +174,7 @@ public class Create {
                     kBoard.validate();
                     board.validate();
                     listenersCells();
+                    panel1.requestFocus();
                 }
             }
         });
@@ -185,10 +188,24 @@ public class Create {
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
                 cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
-                SetValues setValues = new SetValues(4);
-                int[] value = setValues.drawSetValues();
-                if (value[0] != -1) {
-                    ((KakuroBlackCell) cells[pos]).setColumn(value[0]);
+                if (posY != 0) {
+                    SetValues setValues = new SetValues(4);
+                    int[] value = setValues.drawSetValues();
+                    if (value[0] != -1) {
+                        ((KakuroBlackCell) cells[pos]).setColumn(value[0]);
+                        GridBagConstraints c = new GridBagConstraints();
+                        c.weightx = 1.0;
+                        c.weighty = 1.0;
+                        c.fill = GridBagConstraints.BOTH;
+                        c.gridx = posY;
+                        c.gridy = posX;
+                        kBoard.remove(pos);
+                        kBoard.add(cells[pos], c, pos);
+                        kBoard.validate();
+                        board.validate();
+                        listenersCells();
+                    }
+                } else {
                     GridBagConstraints c = new GridBagConstraints();
                     c.weightx = 1.0;
                     c.weighty = 1.0;
@@ -201,6 +218,7 @@ public class Create {
                     board.validate();
                     listenersCells();
                 }
+                panel1.requestFocus();
             }
         });
         popupMenuOnlyBlackLeft.add(blackCellItemLeft);
@@ -355,6 +373,7 @@ public class Create {
                     popupMenuOnlyBlackLeft.setVisible(false);
                     popupMenuOnlyBlackTop.setVisible(false);
                     showMenu(e);
+                    cells[finalI].requestFocus();
                 }
 
                 @Override
