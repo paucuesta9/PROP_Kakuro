@@ -213,7 +213,7 @@ public class Main {
         recordsButton.setBorderPainted(false);
         recordsButton.setContentAreaFilled(false);
         recordsButton.setFocusable(false);
-        recordsButton.setText("Records");
+        recordsButton.setText("Repositorio");
         panel2.add(recordsButton, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, new Dimension(252, 40), new Dimension(252, 40), new Dimension(252, 40), 0, false));
         final Spacer spacer4 = new Spacer();
         panel1.add(spacer4, new GridConstraints(3, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, new Dimension(50, -1), null, 0, false));

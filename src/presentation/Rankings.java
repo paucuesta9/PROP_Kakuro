@@ -21,10 +21,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/** @file Rankings.java
+ @brief Clase  <em>Rankings</em>.
+ */
+
+/**
+ * @author Pol Vallespí Soro
+ * @brief Clase Ranking que muestra un ranking según el criterio del usuario. Contiene las funciones y atributos necesarios para poder hacerlo.
+ */
+
 public class Rankings implements ListSelectionListener {
+
     private JPanel menu;
     private JButton volver;
-    //private JList list;
     private JButton config;
     private JPanel panel;
     private JLabel text;
@@ -47,20 +56,8 @@ public class Rankings implements ListSelectionListener {
 
         logo.setIcon(Utils.getLogo());
 
-        //rankings
-
         String[] titles = {"Posición", "Nombre", "Puntos"}; //Nombre de cada columna
-        //List<Player> p = ctrlUI.getListOfPlayers("puntos");
-        //int n = p.size();
         String[][] t = ctrlUI.getListOfPlayers("puntos");
-       /* for (int i = 0; i < n; ++i) {
-            String num = String.valueOf(i + 1);
-            Player a = p.get(i);
-            t[i][0] = num;
-            t[i][1] = a.getUsername();
-            String s = String.valueOf(a.getStats().getPoints());
-            t[i][2] = s;
-        }*/
         showTable(t, titles);
 
         config.setFont(Utils.fontAwesome);
@@ -92,7 +89,6 @@ public class Rankings implements ListSelectionListener {
         wins.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Partidas_ganadas.png")));
         wins.setBorderPainted(false);
         wins.setBackground(null);
-        //wins.setText("Acabada");
         wins.setHorizontalTextPosition(JButton.CENTER);
         wins.setVerticalTextPosition(JButton.CENTER);
 
@@ -119,21 +115,7 @@ public class Rankings implements ListSelectionListener {
                 wins.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Partidas_ganadas.png")));
                 creadas.setForeground(Color.BLACK);
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-                //Construir la tabla con la lista conseguida
-                /*List<Player> points = new ArrayList<>();
-                points = ctrlUI.getListOfPlayers("puntos");
-                int n = points.size();
-                String[][] t = new String[n][3];
-                for (int i = 0; i < n; ++i) {
-                    String num = String.valueOf(i + 1);
-                    Player a = points.get(i);
-                    t[i][0] = num;
-                    t[i][1] = a.getUsername();
-                    String s = String.valueOf(a.getStats().getPoints());
-                    t[i][2] = s;
-                }*/
                 String[][] t = ctrlUI.getListOfPlayers("puntos");
-                //showTable(t, titles);
                 String[] titles = {"Posición", "Nombre", "Puntos"};
                 showTable(t, titles);
             }
@@ -147,19 +129,6 @@ public class Rankings implements ListSelectionListener {
                 wins.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/ganadas-azul.png")));
                 creadas.setForeground(Color.BLACK);
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
-                //Construir la tabla con la lista conseguida
-                /*List<Player> wins = new ArrayList<>();
-                wins = ctrlUI.getListOfPlayers("wins");
-                int n = wins.size();
-                String[][] t = new String[n][3];
-                for (int i = 0; i < n; ++i) {
-                    String num = String.valueOf(i + 1);
-                    Player a = wins.get(i);
-                    t[i][0] = num;
-                    t[i][1] = a.getUsername();
-                    String s = String.valueOf(a.getStats().getFinished());
-                    t[i][2] = s;
-                }*/
                 String[] titles = {"Posición", "Nombre", "Acabados"};
                 String[][] t = ctrlUI.getListOfPlayers("wins");
                 showTable(t, titles);
@@ -174,19 +143,6 @@ public class Rankings implements ListSelectionListener {
                 wins.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Partidas_ganadas.png")));
                 creadas.setForeground(Color.WHITE);
                 creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 8.png")));
-                //Construir la tabla con la lista conseguida
-                /*List<Player> created = new ArrayList<>();
-                created = ctrlUI.getListOfPlayers("creadas");
-                int n = created.size();
-                String[][] t = new String[n][3];
-                for (int i = 0; i < n; ++i) {
-                    String num = String.valueOf(i + 1);
-                    Player a = created.get(i);
-                    t[i][0] = num;
-                    t[i][1] = a.getUsername();
-                    String s = String.valueOf(a.getStats().getCreated());
-                    t[i][2] = s;
-                }*/
                 String[] titles = {"Posición", "Nombre", "Creados"};
                 String[][] t = ctrlUI.getListOfPlayers("creadas");
                 showTable(t, titles);

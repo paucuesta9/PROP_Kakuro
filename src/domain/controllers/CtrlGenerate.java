@@ -294,6 +294,14 @@ public class CtrlGenerate {
         return (b == 1);
     }
 
+    /**@brief Función que se encarga de rellenar el tablero para que tenga solución única
+     * @param board representa un tablero
+     * @param row indica una fila del tablero
+     * @param col indica una columna del tablero
+     * @param totalWhites indica el número de celdas blancas que hay en el tablero
+     * @param whites indica el número de celdas blancas a las que ya se les ha asignado un valor
+     * @return true si ha conseguido el objectivo, false si no lo ha conseguido
+     */
     private static boolean fillBoardAux2(Cell[][] board, int row, int col, int totalWhites, int whites) {
         if(totalWhites == whites) return true;
         boolean stop = false;
@@ -998,6 +1006,10 @@ public class CtrlGenerate {
         return false;
     }
 
+    /**@brief Esta función comprueba que no hay runs horizontales de más de 9 casillas blancas en el tablero
+     * @param board representa un tablero con celdas blancas y negras
+     * @return true si no hay runs horizontales de más de 9 casillas blancas, false si hay.
+     */
     public static boolean checkRunsH(Cell[][] board) {
         int n = 0;
         for(int i = 0; i < board.length; ++i) {
@@ -1012,6 +1024,10 @@ public class CtrlGenerate {
         return (n > 9);
     }
 
+    /**@brief Esta función comprueba que no hay runs verticales de más de 9 casillas blancas en el tablero
+     * @param board representa un tablero con celdas blancas y negras
+     * @return true si no hay runs verticales de más de 9 casillas blancas, false si hay.
+     */
     public static boolean checkRunsV(Cell[][] board) {
         int n = 0;
         for(int i = 0; i < board[0].length; ++i) {
@@ -1028,7 +1044,8 @@ public class CtrlGenerate {
 
     /**@brief función principal de CtrlGenerate
      *
-     * @param size tamaño del tablero a generar
+     * @param rows número de filas del tablero a generar
+     * @param cols número de columnas del tablero
      * @param dif indica el porcenatge de celdas blancas
      * @return un kakuro con solución única
      *
@@ -1075,7 +1092,7 @@ public class CtrlGenerate {
         return currentKakuro;
     }
 
-    static void printBoard(Cell[][] board) {
+    /*polstatic void printBoard(Cell[][] board) {
         System.out.println("------------------------------------");
         for(int i = 0; i < board.length; ++i) {
             for(int j = 0; j < board[0].length; ++j) {
@@ -1088,5 +1105,5 @@ public class CtrlGenerate {
             System.out.println();
         }
         System.out.println("------------------------------------");
-    }
+    }*/
 }

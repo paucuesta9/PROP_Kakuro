@@ -12,6 +12,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/** @file Config.java
+ @brief Clase  <em>Config</em>.
+ */
+
+/**
+ * @author Pol Vallespí Soro
+ * @brief Extend de JDialog, Config, que nos permite hacer un dialog para la pantalla de configuración. Contiene las funciones y atributos necesarios para poder hacerlo.
+ */
+
 public class Config extends JDialog {
     private JButton volver;
     private JPanel panel;
@@ -44,13 +53,12 @@ public class Config extends JDialog {
     private boolean muted;
     private int vol;
 
-// logotipo.add(new JColorChooser());
-
     public Config() {
         $$$setupUI$$$();
         setContentPane(panel);
         setModal(true);
         getRootPane().setDefaultButton(volver);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         Utils.loadFonts();
         musicText.setFont(Utils.roboto);

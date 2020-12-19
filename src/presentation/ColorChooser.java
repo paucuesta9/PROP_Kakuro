@@ -8,6 +8,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/** @file ColorChooser.java
+ @brief Clase  <em>ColorChooser</em>.
+ */
+
+/**
+ * @author Pau Cuesta Arcos y Pol Vallespí Soro
+ * @brief Extend de JDialog, ColorChooser, que nos permite hacer un dialog para seleccionar un color. Contiene las funciones y atributos necesarios para poder hacerlo.
+ */
+
 public class ColorChooser extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
@@ -35,16 +44,12 @@ public class ColorChooser extends JDialog {
                 onCancel();
             }
         });
-
-        // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
                 onCancel();
             }
         });
-
-        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -53,14 +58,12 @@ public class ColorChooser extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
         dispose();
         color = c.getColor();
 
     }
 
     private void onCancel() {
-        // add your code here if necessary
         dispose();
         color = null;
     }

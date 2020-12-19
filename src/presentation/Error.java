@@ -19,6 +19,7 @@ public class Error extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         text.setText(textError);
         text.setFont(Utils.roboto.deriveFont(Font.PLAIN, 14f));
 

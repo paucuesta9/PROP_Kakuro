@@ -25,6 +25,7 @@ public class FinishedGame extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
+        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
         Utils.loadFonts();
 
@@ -47,6 +48,7 @@ public class FinishedGame extends JDialog {
                 onOK();
             }
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
     }
 
     private void onOK() {

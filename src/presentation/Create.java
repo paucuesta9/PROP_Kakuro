@@ -87,6 +87,7 @@ public class Create {
 
         aceptar.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
         confirm.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-azul.png")));
+        confirm.setEnabled(false);
         cancel.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/rectangulo-rojo.png")));
     }
 
@@ -306,6 +307,7 @@ public class Create {
                     setBoard(kakuro);
                     sizeRow = Integer.valueOf(numRow.getText());
                     sizeColumn = Integer.valueOf(numColumn.getText());
+                    confirm.setEnabled(true);
                 }
             }
         });
