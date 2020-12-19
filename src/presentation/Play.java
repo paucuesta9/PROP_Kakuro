@@ -93,7 +93,7 @@ public class Play {
      * posX representa la posición de una celda respecto a la fila
      * posY representa la posición de una celda respecto a la columna
      */
-    private int posX, posY;
+    private int posX, posY = -1;
     private boolean training;
     private boolean isFinished = false;
     private boolean selfFinished = true;
@@ -222,33 +222,41 @@ public class Play {
         help1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int result = ctrlPlayUI.help1(posX, posY);
-                if (result != -1) {
-                    KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
-                    if (result == 1) w.setBackground(Utils.colorCorrectCell);
-                    else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
-                }
-                isFinished = ctrlPlayUI.isFinished();
-                if (isFinished) {
-                    help1.setEnabled(false);
-                    help2.setEnabled(false);
-                    finishGame(selfFinished);
+                if (posX == -1 || posY == -1) {
+                    Utils.showError("Por favor, seleccione una casilla");
+                } else {
+                    int result = ctrlPlayUI.help1(posX, posY);
+                    if (result != -1) {
+                        KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
+                        if (result == 1) w.setBackground(Utils.colorCorrectCell);
+                        else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
+                    }
+                    isFinished = ctrlPlayUI.isFinished();
+                    if (isFinished) {
+                        help1.setEnabled(false);
+                        help2.setEnabled(false);
+                        finishGame(selfFinished);
+                    }
                 }
             }
         });
         help2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int correctNumber = ctrlPlayUI.help2(posX, posY);
-                KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
-                w.setValue(correctNumber);
-                w.setBackground(Utils.colorCorrectCell);
-                checkContinousCells(posX, posY);
-                isFinished = ctrlPlayUI.isFinished();
-                if (isFinished) {
-                    help1.setEnabled(false);
-                    help2.setEnabled(false);
-                    finishGame(selfFinished);
+                if (posX == -1 || posY == -1) {
+                    Utils.showError("Por favor, seleccione una casilla");
+                } else {
+                    int correctNumber = ctrlPlayUI.help2(posX, posY);
+                    KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
+                    w.setValue(correctNumber);
+                    w.setBackground(Utils.colorCorrectCell);
+                    checkContinousCells(posX, posY);
+                    isFinished = ctrlPlayUI.isFinished();
+                    if (isFinished) {
+                        help1.setEnabled(false);
+                        help2.setEnabled(false);
+                        finishGame(selfFinished);
+                    }
                 }
             }
         });
