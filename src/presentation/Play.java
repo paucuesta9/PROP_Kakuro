@@ -567,12 +567,11 @@ public class Play {
      * @brief Pinta las casillas dependiendo de la validez de su valor
      */
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
-        if (cell.getBackground() != Utils.colorCorrectCell && cell.getBackground() != Utils.colorIncorrectCell) {
+        if (cell.getBackground() != Utils.colorCorrectCell) {
             if (cell.getValue() != 0 && !ctrlPlayUI.checkValidity(positionX, positionY, cell.getValue())) {
                 cell.setBackground(Utils.colorIncorrectCell);
             } else cell.setBackground(Utils.colorWhiteCell);
         }
-
     }
 
     /**
