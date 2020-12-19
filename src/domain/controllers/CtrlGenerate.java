@@ -339,7 +339,7 @@ public class CtrlGenerate {
                             }
                             r = lastCol+1;
                             index = 0;
-                            while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                            while(r < board[0].length && r < lastCol+nH && board[i][r].isWhite()) {
                                 copyRow[index] = tempBoard[i][r];
                                 ++index;
                                 ++r;
@@ -354,7 +354,7 @@ public class CtrlGenerate {
                             boolean allOk = true;
                             int f = 1;
                             int prueba2 [] = computePosSums(tempBoard[i][lastRow][3], nH-1, v+1);
-                            while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
+                            while (j + f < board[0].length && board[i][j + f].isWhite() && allOk) {
                                 allOk = intersection2(prueba2, tempBoard[i][j + f]);
                                 ++f;
                             }
@@ -389,7 +389,7 @@ public class CtrlGenerate {
                             }
                             r= lastCol+1;
                             index = 0;
-                            while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                            while(r < board[0].length && r < lastCol+nH && board[i][r].isWhite()) {
                                 tempBoard[i][r] = copyRow[index];
                                 ++index;
                                 ++r;
@@ -411,7 +411,7 @@ public class CtrlGenerate {
                         }
                         r = lastCol+1;
                         index = 0;
-                        while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                        while(r < board[0].length && r < lastCol+nH && board[i][r].isWhite()) {
                             copyRow[index] = tempBoard[i][r];
                             ++index;
                             ++r;
@@ -448,7 +448,7 @@ public class CtrlGenerate {
                                 if (f == 0) allOk = false;
                                 if(allOk) {
                                     f = 1;
-                                    while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
+                                    while (j + f < board[0].length && board[i][j + f].isWhite() && allOk) {
                                         allOk = intersection2(prueba2, tempBoard[i][j + f]);
                                         ++f;
                                     }
@@ -483,7 +483,7 @@ public class CtrlGenerate {
                                     }
                                     r = lastCol + 1;
                                     index = 0;
-                                    while (r < board.length && r < lastCol + nH && board[i][r].isWhite()) {
+                                    while (r < board[0].length && r < lastCol + nH && board[i][r].isWhite()) {
                                         tempBoard[i][r] = copyRow[index];
                                         ++index;
                                         ++r;
@@ -509,7 +509,7 @@ public class CtrlGenerate {
                         }
                         r = lastCol+1;
                         index = 0;
-                        while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                        while(r < board[0].length && r < lastCol+nH && board[i][r].isWhite()) {
                             copyRow[index] = tempBoard[i][r];
                             ++index;
                             ++r;
@@ -543,7 +543,7 @@ public class CtrlGenerate {
                                 }
                                 if (f == 0) allOk = false;
                                 f = 1;
-                                while (j + f < board.length && board[i][j + f].isWhite() && allOk) {
+                                while (j + f < board[0].length && board[i][j + f].isWhite() && allOk) {
                                     allOk = intersection3(prueba, tempBoard[i][j + f]);
                                     ++f;
                                 }
@@ -576,7 +576,7 @@ public class CtrlGenerate {
                                 }
                                 r = lastCol + 1;
                                 index = 0;
-                                while (r < board.length && r < lastCol + nH && board[i][r].isWhite()) {
+                                while (r < board[0].length && r < lastCol + nH && board[i][r].isWhite()) {
                                     tempBoard[i][r] = copyRow[index];
                                     ++index;
                                     ++r;
@@ -631,7 +631,7 @@ public class CtrlGenerate {
                         }
                         r= lastCol+1;
                         index = 0;
-                        while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                        while(r < board[0].length && r < lastCol+nH && board[i][r].isWhite()) {
                             copyRow[index] = tempBoard[i][r];
                             ++index;
                             ++r;
@@ -649,7 +649,7 @@ public class CtrlGenerate {
                                     int[] auxV = computePosSums(posComb[nV][y], nV - 1, value + 1);
 
                                     int f = 1;
-                                    while (j + f < board.length && board[i][j + f].isWhite()) {
+                                    while (j + f < board[0].length && board[i][j + f].isWhite()) {
                                         for (int tt = 0; tt < 9; ++tt)
                                             tempBoard[i][j + f][tt] = auxH[tt];
                                         ++f;
@@ -681,7 +681,7 @@ public class CtrlGenerate {
                                     }
                                     r= lastCol+1;
                                     index = 0;
-                                    while(r < board.length && r < lastCol+nH && board[i][r].isWhite()) {
+                                    while(r < board[0].length && r < lastCol+nH && board[i][r].isWhite()) {
                                         tempBoard[i][r] = copyRow[index];
                                         ++index;
                                         ++r;
@@ -789,19 +789,19 @@ public class CtrlGenerate {
         int size = board.length;
         int i = 1;
         int cont = 0;
-        for(int j =1; j < size; ++j) {
+        for(int j =1; j < board[0].length; ++j) {
             if( j == size -1 && !board[i][j-1].isWhite()) {
                 board[i][j] = new BlackCell();
-                board[size-i][size-j] = new BlackCell();
+                board[size-i][board[0].length-j] = new BlackCell();
             }
             else if(cont == 1) {
                 board[i][j] = new WhiteCell();
-                board[size-i][size-j] = new WhiteCell();
+                board[size-i][board[0].length-j] = new WhiteCell();
                 ++cont;
             }
             else if(cont == 9 ) {
                 board[i][j] = new BlackCell();
-                board[size-i][size-j] = new BlackCell();
+                board[size-i][board[0].length-j] = new BlackCell();
                 cont = 0;
             }
             else {
@@ -814,13 +814,13 @@ public class CtrlGenerate {
 
                 if( random <= x) {
                     board[i][j] = new WhiteCell();
-                    board[size-i][size-j] = new WhiteCell();
+                    board[size-i][board[0].length-j] = new WhiteCell();
                     ++cont;
                 }
                 else {
                     cont = 0;
                     board[i][j] = new BlackCell();
-                    board[size-i][size-j] = new BlackCell();
+                    board[size-i][board[0].length-j] = new BlackCell();
                 }
             }
         }
@@ -836,36 +836,36 @@ public class CtrlGenerate {
         int i = 1;
         int size = board.length;
         while( i <= size/2 ) {
-            for(int j = 1; j < size; ++j) {
+            for(int j = 1; j < board[0].length; ++j) {
                 int n = countWhiteCellsV(board,i-1,j);
                 int m = countWhiteCellsH(board,i,j-1);
                 if(j == size-1 && m == 0) {
                     board[i][j] = new BlackCell();
-                    board[size-i][size-j] = new BlackCell();
+                    board[size-i][board[0].length-j] = new BlackCell();
                 }
                 else if(i == size/2 && n >= 5) {
                     board[i][j] = new BlackCell();
-                    board[size-i][size-j] = new BlackCell();
+                    board[size-i][board[0].length-j] = new BlackCell();
                 }
                 else if( n == 1 && m >= 6 ) {
                     board[i-1][j] = new BlackCell();
-                    board[size-i-1][size-j] = new BlackCell();
+                    board[size-i-1][board[0].length-j] = new BlackCell();
                     board[i][j] = new BlackCell();
-                    board[size-i][size-j] = new BlackCell();
+                    board[size-i][board[0].length-j] = new BlackCell();
                 }
                 else if( n >= 6 && m == 1 ) {
                     board[i][j-1] = new BlackCell();
-                    board[size-i][size-j-1] = new BlackCell();
+                    board[size-i][board[0].length-j-1] = new BlackCell();
                     board[i][j] = new BlackCell();
-                    board[size-i][size-j] = new BlackCell();
+                    board[size-i][board[0].length-j] = new BlackCell();
                 }
                 else if(n == 1 || m == 1) { //esta casilla esta forzada a ser blanca
                     board[i][j] = new WhiteCell();
-                    board[size-i][size-j] = new WhiteCell();
+                    board[size-i][board[0].length-j] = new WhiteCell();
                 }
                 else if( n == 9 || m == 9) { //esta casilla esta forzada a ser negra
                     board[i][j] = new BlackCell();
-                    board[size-i][size-j] = new BlackCell();
+                    board[size-i][board[0].length-j] = new BlackCell();
                 }
                 else {
                     int x = 0;
@@ -876,10 +876,10 @@ public class CtrlGenerate {
                     Random rand = new Random();
                     if (rand.nextInt(101) <= x ) {
                         board[i][j] = new WhiteCell();
-                        board[size - i][size - j] = new WhiteCell();
+                        board[size - i][board[0].length - j] = new WhiteCell();
                     } else {
                         board[i][j] = new BlackCell();
-                        board[size - i][size - j] = new BlackCell();
+                        board[size - i][board[0].length - j] = new BlackCell();
                     }
                 }
             }
@@ -898,8 +898,8 @@ public class CtrlGenerate {
         boolean canvi = true;
         while(canvi) { //mientas hagamos cambios tenemos que comprovar que el tablero esta bien
             canvi = false;
-            for(int r = 1; r < size;++r){
-                for(int c = 1; c < size; ++c) {
+            for(int r = 1; r < board.length;++r){
+                for(int c = 1; c < board[0].length; ++c) {
                     if(!board[r][c].isWhite()) {
                         if(r >= 2) {
                             if(board[r-1][c].isWhite() && !board[r-2][c].isWhite()){
@@ -913,25 +913,25 @@ public class CtrlGenerate {
                                 canvi = true;
                             }
                         }
-                        if(r < size-2) {
+                        if(r < board.length-2) {
                             if(board[r+1][c].isWhite() && !board[r+2][c].isWhite()){
                                 board[r+1][c] = new BlackCell();
                                 canvi = true;
                             }
                         }
-                        if(c < size-2) {
+                        if(c < board[0].length-2) {
                             if(board[r][c+1].isWhite() && !board[r][c+2].isWhite()){
                                 board[r][c+1] = new BlackCell();
                                 canvi = true;
                             }
                         }
-                        if(c == size-2) {
+                        if(c == board[0].length-2) {
                             if(board[r][c+1].isWhite()) {
                                 board[r][c+1] = new BlackCell();
                                 canvi = true;
                             }
                         }
-                        if(r == size-2) {
+                        if(r == board.length-2) {
                             if(board[r+1][c].isWhite()) {
                                 board[r+1][c] = new BlackCell();
                                 canvi = true;
@@ -974,14 +974,14 @@ public class CtrlGenerate {
         int nDFS = 0;
         int nWhite = 0;
         boolean found = false;
-        int [][] auxBoard = new int[size][size];
-        for(int i = 0; i < size; ++i ) {
-            for(int j = 0; j < size;++j) {
+        int [][] auxBoard = new int[size][board[0].length];
+        for(int i = 0; i < board.length; ++i ) {
+            for(int j = 0; j < board[0].length;++j) {
                 auxBoard[i][j] = 0;
             }
         }
-        for(int i = 0; i < size; ++i ) {
-            for(int j = 0; j < size;++j) {
+        for(int i = 0; i < board.length; ++i ) {
+            for(int j = 0; j < board[0].length;++j) {
                 if(board[i][j].isWhite()){
                     nWhite+=1;
                     if(!found ) {
@@ -992,12 +992,13 @@ public class CtrlGenerate {
 
             }
         }
+        size = Math.min(board.length,board[0].length);
         if(nWhite < 0.4*size*size) return false;
         else if(nWhite == nDFS) return true;
         return false;
     }
 
-    static boolean checkRunsH(Cell[][] board) {
+    public static boolean checkRunsH(Cell[][] board) {
         int n = 0;
         for(int i = 0; i < board.length; ++i) {
             for(int j = 0; j < board[0].length; ++j) {
@@ -1011,10 +1012,10 @@ public class CtrlGenerate {
         return (n > 9);
     }
 
-    static boolean checkRunsV(Cell[][] board) {
+    public static boolean checkRunsV(Cell[][] board) {
         int n = 0;
-        for(int i = 0; i < board.length; ++i) {
-            for(int j = 0; j < board[0].length; ++j) {
+        for(int i = 0; i < board[0].length; ++i) {
+            for(int j = 0; j < board.length; ++j) {
                 if(!board[j][i].isWhite()) n = 0;
                 else {
                     ++n;
@@ -1033,7 +1034,7 @@ public class CtrlGenerate {
      *
      * Esta función generará tableros mientras no sean válidos o no puedan tener solución única
      */
-    public static Kakuro generate(int size,int dif) {
+    public static Kakuro generate(int rows, int cols,int dif) {
         //Inicializamos la matriz
         mat = new int[45][9][];
         for(int i = 1; i <= 45; ++i) {
@@ -1045,10 +1046,13 @@ public class CtrlGenerate {
         boolean repeat = true;
         while(repeat) {
             repeat = false;
-            Cell [][] board = new Cell [size][size];
-            for(int i = 0; i < size; ++i){
+            Cell [][] board = new Cell [rows][cols];
+            for(int i = 0; i < cols; ++i){
                 board[0][i] = new BlackCell();
-                board[i][0] = new BlackCell();
+
+            }
+            for(int j = 0; j < rows;++j) {
+                board[j][0] = new BlackCell();
             }
             firstColRow(board,dif);
             randomCells(board,dif);
@@ -1074,7 +1078,7 @@ public class CtrlGenerate {
     static void printBoard(Cell[][] board) {
         System.out.println("------------------------------------");
         for(int i = 0; i < board.length; ++i) {
-            for(int j = 0; j < board.length; ++j) {
+            for(int j = 0; j < board[0].length; ++j) {
                 if(board[i][j].isWhite()) {
                     System.out.print(((WhiteCell)board[i][j]).getCorrectValue());
                     System.out.print(" ");

@@ -229,9 +229,9 @@ public class CtrlDomain {
     /** @brief Se genera un Kakuro
      *
      */
-    public void generate(int size, int dif) {
+    public void generate(int i,int j, int dif) {
         CtrlGenerate ctrlGenerate = new CtrlGenerate();
-        currentKakuro = ctrlGenerate.generate(size,dif);
+        currentKakuro = ctrlGenerate.generate(i,j,dif);
         System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
     }
 
