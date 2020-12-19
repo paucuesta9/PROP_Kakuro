@@ -66,7 +66,7 @@ public class CtrlPlay {
             JsonObject newKakuro = new JsonObject();
             newKakuro.addProperty("diff", String.valueOf(currentKakuro.getDifficulty()));
             newKakuro.addProperty("size", currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize());
-            newKakuro.addProperty("id", String.valueOf(currentKakuro.getId()));
+            newKakuro.addProperty("id", currentKakuro.getId() + ".txt");
             newKakuro.addProperty("minTime", 0);
             newKakuro.addProperty("player", "");
             newKakuro.addProperty("maxPoints", 0);
