@@ -64,7 +64,7 @@ public class CtrlPlay {
             currentKakuro.setId(cd.saveKakuro());
         }
         int id = cd.getGameId();
-        currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, difficulty, new ArrayList<>());
+        currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, currentKakuro.getDifficulty(), new ArrayList<>());
         currentPlayer.setCurrentGame(currentGame);
         currentPlayer.getStats().setTotal(1);
         setCorrectValues();
