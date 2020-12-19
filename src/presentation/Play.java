@@ -638,6 +638,8 @@ public class Play {
         createUIComponents();
         panel1 = new JPanel();
         panel1.setLayout(new GridLayoutManager(1, 2, new Insets(0, 0, 0, 0), -1, -1));
+        panel1.setAlignmentX(0.5f);
+        panel1.setAlignmentY(0.5f);
         panel1.setBackground(new Color(-1973532));
         panel1.setForeground(new Color(-4473925));
         panel1.setMaximumSize(new Dimension(1200, 800));

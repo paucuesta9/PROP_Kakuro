@@ -20,6 +20,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/** @file Records.java
+ @brief Clase  <em>Records</em>.
+ */
+
+/**
+ * @author Pol Vallespí Soro
+ * @brief Clase Records que representa el reporitorio de kakuros y los records. Contiene las funciones y atributos necesarios para poder hacerlo.
+ */
+
 public class Records {
     private JPanel panel;
     private JPanel panel2;
