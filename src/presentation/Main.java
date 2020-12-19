@@ -109,6 +109,7 @@ public class Main {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Utils.updateVolume(-70);
                 ctrlUI.toLogin();
             }
         });
