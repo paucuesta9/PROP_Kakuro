@@ -47,11 +47,26 @@ public class CtrlDomain {
         gson = new Gson();
     }
 
+    /** @brief función que permite al usuario iniciar sesión
+     *
+     * @param username representa el nombre de usuario
+     * @param password representa la contraseña del usuario
+     * @throws FileNotFoundException en caso de que el usuario no exista
+     * @throws WrongPasswordException en caso de que la contraseña no sea correcta
+     *
+     * Actualiza el jugador asociado al CtrlDomain con el usuario que corresponda al usuario y contraseña, en caso que exista y el usuario y contraseña sean correctos
+     */
+
     public void login(String username, String password) throws FileNotFoundException, WrongPasswordException {
         ctrlPlayer = new CtrlPlayer(this);
         ctrlPlayer.login(username, password);
         currentPlayer = ctrlPlayer.getPlayer();
     }
+
+    /** @brief función que permite al usuario cerrar sesión
+     *
+     * Actualiza los parámetros asociados al jugador a nulo
+     */
 
     public void logout() {
         currentPlayer = null;
@@ -60,11 +75,24 @@ public class CtrlDomain {
         ctrlPlayer = null;
     }
 
+    /** @brief función que permite al usuario registrarse
+     *
+     * @param username representa el nombre de usuario
+     * @param password representa la contraseña del usuario
+     * @throws PlayerExists en caso de que ya exista un usuario con el mismo username
+     *
+     * En caso de que el usuario se pueda registrar, crea un usuario con el nombre y contraseña e inicia sesión
+     */
+
     public void signUp(String username, String password) throws PlayerExists {
         ctrlPlayer = new CtrlPlayer(this);
         ctrlPlayer.signUp(username, password);
         currentPlayer = ctrlPlayer.getPlayer();
     }
+
+    /**
+     * @brief Reinicia la configuración de colores del usuario, poniendolos por defecto
+     */
 
     public void resetConfigColors() {
         currentPlayer.resetCongifColors();
@@ -87,15 +115,31 @@ public class CtrlDomain {
         currentKakuro = ctrlPlay.getKakuro();
     }
 
+    /** @brief Inicia una nueva partida
+     *
+     *  Se inicia una partida con el kakuro correspondiente al path escrito
+     *
+     * @param absolutePath Ruta absoluta en la que se encuentra el kakuro a jugar
+     */
     public void startNewGame(String absolutePath) {
         ctrlPlay = new CtrlPlay(absolutePath, this);
         currentGame = ctrlPlay.getGame();
         currentKakuro = ctrlPlay.getKakuro();
     }
 
+    /** @brief Devuelve un id para una partida
+     *
+     * @return un id de partida diferente a los que ya tenga el usuario
+     */
+
     public int getGameId() {
         return data.getNewGameId(currentPlayer.getUsername());
     }
+
+    /** @brief Continua una partida existente
+     *
+     * @param game id de la partida que se quiere continuar
+     */
 
     public void setGame(int game) {
         ctrlPlay = new CtrlPlay(game, this);
@@ -146,10 +190,19 @@ public class CtrlDomain {
         return ctrlPlay.helpCorrectNumber(x, y);
     }
 
+    /** @brief Acaba la partida
+     *
+     * @param selfFinished representa si el kakuro se ha resuelto con el boton resolver o lo ha resuelto el usuario
+     * @return los puntos de la partida
+     */
+
     public int finishGame(boolean selfFinished) {
         return ctrlPlay.finishGame(selfFinished);
     }
 
+    /**
+     * @brief Actualiza las estadísticas del jugador
+     */
     public void updateStatsPlayer() {
         ctrlPlay.updateStatsPlayer();
     }
@@ -275,11 +328,20 @@ public class CtrlDomain {
         return startedGames;
     }
 
+    /**
+     * @brief Guarda la partida
+     */
     public void saveGame() {
         data.saveKakuroGame(currentKakuro.toString(), currentPlayer.getUsername(), currentGame.getId());
         currentPlayer.addSavedGame();
         savePlayer();
     }
+
+    /** @brief esta función sirve para organizar el ranking
+     *
+     * @param s define si los jugadores han de estar ordenados por puntos, victorias o número de creados.
+     * @return una matriz con los jugadores ordenados según s
+     */
 
     public String[][] getListOfPlayers(String s) {
         Ranking r;
@@ -289,9 +351,19 @@ public class CtrlDomain {
         return r.getList(s);
     }
 
+    /**
+     * @brief Retorna la configuración
+     *
+     * @return la configuración del usuario asociado al Domain
+     */
     public ArrayList<String> getConfig() {
         return currentPlayer.getConfigToArray();
     }
+
+    /**
+     * @brief Se le asocia al jugador actual la configuración config
+     * @param config la configuración que se le asociará al usuario
+     */
 
     public void setConfigToPlayer(ArrayList<String> config) {
         Config c = new Config(config.get(0), config.get(1), config.get(2), config.get(3), config.get(4), config.get(5), config.get(6), config.get(7), Integer.parseInt(config.get(8)));
@@ -300,9 +372,17 @@ public class CtrlDomain {
         data.savePlayer(currentPlayer.getUsername(), playerJSON);
     }
 
+    /** @brief Guardar el tiempo en la partida
+     *
+     * @param gameTime representa el tiempo a guardar de la partida
+     */
     public void setTimeToGame(int gameTime) {
         ctrlPlay.setTimeToGame(gameTime);
     }
+
+    /**
+     * @brief Reinicia los parametros del controlador de dominio
+     */
 
     public void resetParameters() {
         currentKakuro = null;
@@ -310,23 +390,46 @@ public class CtrlDomain {
         currentPlayer.setCurrentGame(null);
     }
 
+    /**
+     * @brief Asocia el kakuro pasado por parametro al controlador
+     * @param kakuro string que representa el kakuro que se asociará
+     */
     public void setKakuro(String kakuro) {
         currentKakuro = new Kakuro(kakuro);
     }
 
+    /**
+     * @brief Asocia el kakuro pasado por parametro al controlador
+     * @param kakuro kakuro que representa el kakuro que se asociará
+     */
     public void setKakuro(Kakuro kakuro) {
         currentKakuro = kakuro;
     }
 
+    /**
+     * @brief Guarda el jugador
+     */
     public void savePlayer() {
         String playerJSON = gson.toJson(currentPlayer);
         data.savePlayer(currentPlayer.getUsername(), playerJSON);
     }
 
+    /** Retorna al jugador actual
+     *
+     * @param username representa un nombre de usuario
+     * @return el fichero gson del usuario con nombre de usuario username
+     * @throws FileNotFoundException en caso de que no exista ningun usuario con ese username
+     */
     public JsonReader getUser(String username) throws FileNotFoundException {
         return data.getUser(username);
     }
 
+    /** @brief Crea y guarda un nuevo jugador
+     *
+     * @param username nombre del usuario
+     * @param playerJSON ???????????????????????????????????????????????????????????????????????????????????????????????????????????
+     * @throws PlayerExists en caso de que ya exista un usuario con ese username
+     */
     public void saveNewPlayer(String username, String playerJSON) throws PlayerExists {
         if (data.existsPlayer(username)) {
             throw new PlayerExists();
@@ -334,39 +437,76 @@ public class CtrlDomain {
         data.savePlayer(username, playerJSON);
     }
 
+    /** @brief Retorna un jugador
+     *
+     * @return el jugador actual
+     */
     public Player getCurrentPlayer() {
         return currentPlayer;
     }
+
+    /** @brief Retorna de forma ordenada las estadísticas
+     *
+     * @return un arraylist con las estadísticas del jugador actual
+     */
 
     public ArrayList<Integer> getStatsList() {
         return currentPlayer.getStatsInt();
     }
 
+    /**
+     * ?????????????????????????????????????
+     *
+     */
     public JsonReader[] getListOfPlayers() throws NullPointerException {
         return data.getListOfPlayers();
     }
 
+    /** @brief Getter de time
+     *
+     * @return el tiempo de la partida
+     */
     public int getTime() {
         return ctrlPlay.getTime();
     }
 
+    /** @brief Getter de las ayudas
+     *
+     * @return una lista con todas las ayudas utilizadas
+     */
     public ArrayList<String> getHelps() {
         return ctrlPlay.getHelps();
     }
 
+    /** @brief Resuelvo el kakuro actual
+     *
+     */
     public void resolve() {
         new CtrlResolve(currentKakuro);
         CtrlResolve.resolve();
     }
 
+    /** Retorna una lista de kakuros
+     *
+     * @return una matriz con todos los kakuros, con su dificultad, carpeta y id.
+     */
     public String[][] getListOfKakuros() {
         return data.getListOfKakuros();
     }
 
+    /** @brief Busca un kakuro en fichero a partir de una ruta relativa
+     *
+     * @param s representa una ruta relativa
+     * @return el kakuro que se encuentra en la ruta relativa en formato String
+     */
     public String getThisKakuro(String s) {
         return data.getThisKakuro(s);
     }
 
+    /**
+     *
+     * @return
+     */
     public JsonArray getRecords() {
         return data.getkakuroRecord();
     }
