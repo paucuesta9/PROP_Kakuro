@@ -228,7 +228,12 @@ public class Play {
                     if (result == 1) w.setBackground(Utils.colorCorrectCell);
                     else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
                 }
-
+                isFinished = ctrlPlayUI.isFinished();
+                if (isFinished) {
+                    help1.setEnabled(false);
+                    help2.setEnabled(false);
+                    finishGame(selfFinished);
+                }
             }
         });
         help2.addActionListener(new ActionListener() {
@@ -239,7 +244,12 @@ public class Play {
                 w.setValue(correctNumber);
                 w.setBackground(Utils.colorCorrectCell);
                 checkContinousCells(posX, posY);
-
+                isFinished = ctrlPlayUI.isFinished();
+                if (isFinished) {
+                    help1.setEnabled(false);
+                    help2.setEnabled(false);
+                    finishGame(selfFinished);
+                }
             }
         });
 
