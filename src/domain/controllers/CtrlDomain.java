@@ -521,4 +521,16 @@ public class CtrlDomain {
     public void saveRecords(JsonArray records) {
         data.saveKakuroRecord(records);
     }
+
+    public boolean checkCoord(int x, int y) {
+        return x >= 0 && x < currentKakuro.getRowSize() && y >= 0 && y < currentKakuro.getColumnSize();
+    }
+
+    public int getRowSize() {
+        return currentKakuro.getRowSize();
+    }
+
+    public int getColumnSize() {
+        return currentKakuro.getColumnSize();
+    }
 }

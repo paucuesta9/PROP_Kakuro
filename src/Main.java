@@ -1,4 +1,5 @@
 import presentation.CtrlUI;
+import presentation.CtrlUIOld;
 
 import java.io.FileNotFoundException;
 
@@ -18,6 +19,7 @@ En este proyecto de desarrolla una aplicación para jugar, resolver, validar y g
  */
 public class Main {
 
+    //TODO: ACTUALIZAR PARA LA ENTREGA QUE SE PUEDA HACER CON EL OLD Y CON EL NUEVO
     /** @brief Función inicial que lanza la interfaz (en este caso por consola)
      */
     public static void main(String[] args) throws FileNotFoundException {
@@ -27,5 +29,7 @@ public class Main {
                 ui.run();
             }
         });
+//        CtrlUIOld ctrlUIOld = new CtrlUIOld();
+//        ctrlUIOld.run();
     }
 }
