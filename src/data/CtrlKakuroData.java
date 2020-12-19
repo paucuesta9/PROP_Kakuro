@@ -1,5 +1,8 @@
 package data;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 import java.io.*;
 import java.util.Random;
 
@@ -112,7 +115,7 @@ public class CtrlKakuroData {
         return kakuros;
     }
 
-    public String[][] getListOfKakuros() {
+    public JsonArray getListOfKakuros() {
         int n = getNumberKakurosTotal(1);
         int m = getNumberKakurosTotal(2);
         int o = getNumberKakurosTotal(3);
@@ -121,13 +124,18 @@ public class CtrlKakuroData {
         File folder = new File("data/diff1");
         File[] listFiles = folder.listFiles();
         int nkak = listFiles.length;
+        JsonArray arr = new JsonArray();
         for(int i = 0; i < nkak; ++i) {
             File[] files = listFiles[i].listFiles(); //p.e 3_3
            for(int j = 0; j < files.length; ++j) {
-               t[cont][0] = "1";
-               t[cont][1] = listFiles[i].getName(); //obtenir el nom de la carpeta? (del pal 3_3)
-               t[cont][2] = files[j].getName(); //obtenir l'id del kakuro
-               ++cont;
+               JsonObject obj = new JsonObject();
+               obj.addProperty("diff", "1");
+               obj.addProperty("size",listFiles[i].getName());
+               obj.addProperty("id",files[j].getName() );
+               obj.addProperty("minTime",0);
+               obj.addProperty("player", "");
+               obj.addProperty("maxPoints", 0);
+               arr.add(obj);
             }
         }
         folder = new File("data/diff2");
@@ -136,10 +144,14 @@ public class CtrlKakuroData {
         for(int i = 0; i < nkak; ++i) {
             File[] files = listFiles[i].listFiles();
             for(int j = 0; j < files.length; ++j) {
-                t[cont][0]= "2";
-                t[cont][1] = listFiles[i].getName(); //obtenir el nom de la carpeta? (del pal 3_3)
-                t[cont][2] = files[j].getName(); //obtenir l'id del kakuro
-                ++cont;
+                JsonObject obj = new JsonObject();
+                obj.addProperty("diff", "2");
+                obj.addProperty("size",listFiles[i].getName());
+                obj.addProperty("id",files[j].getName() );
+                obj.addProperty("minTime",0);
+                obj.addProperty("player", "");
+                obj.addProperty("maxPoints", 0);
+                arr.add(obj);
             }
         }
         folder = new File("data/diff3");
@@ -148,12 +160,16 @@ public class CtrlKakuroData {
         for(int i = 0; i < nkak; ++i) {
             File[] files = listFiles[i].listFiles();
             for(int j = 0; j < files.length; ++j) {
-                t[cont][0] = "3";
-                t[cont][1] = listFiles[i].getName(); //obtenir el nom de la carpeta? (del pal 3_3)
-                t[cont][2] = files[j].getName(); //obtenir l'id del kakuro
-                ++cont;
+                JsonObject obj = new JsonObject();
+                obj.addProperty("diff", "3");
+                obj.addProperty("size",listFiles[i].getName());
+                obj.addProperty("id",files[j].getName() );
+                obj.addProperty("minTime",0);
+                obj.addProperty("player", "");
+                obj.addProperty("maxPoints", 0);
+                arr.add(obj);
             }
         }
-        return t;
+        return arr;
     }
 }

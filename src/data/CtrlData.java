@@ -95,8 +95,8 @@ public class CtrlData {
         ctrlGameData.saveKakuroGame(kakuro, username, id);
     }
 
-    public String[][] getListOfKakuros() {
-        return ctrlKakuroData.getListOfKakuros();
+    public void getListOfKakuros() {
+        saveKakuroRecord( ctrlKakuroData.getListOfKakuros());
     }
 
     public String getThisKakuro(String s) {

@@ -26,6 +26,7 @@ public class ShowKakuro {
     private JButton volver;
     private JLabel tiempo;
     private JLabel nombre;
+    private JLabel points;
 
     private KakuroBoard sg;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
@@ -42,8 +43,18 @@ public class ShowKakuro {
         JsonArray kak = data.getkakuroRecord();
         JsonObject p = kak.get(fila).getAsJsonObject();
         tiempo.setText(Utils.setTimeToLabel(p.get("minTime").getAsInt()));
-        nombre.setText(p.get("player").getAsString());
-        //this.option = option;
+        String s = p.get("player").getAsString();
+        if (!s.isEmpty()) {
+            nombre.setText("Usuario: " + s);
+            tiempo.setText("Tiempo: " + Utils.setTimeToLabel(p.get("minTime").getAsInt()));
+            points.setText("Puntos: " + p.get("maxPoints").getAsInt());
+        } else {
+            nombre.setFont(Utils.roboto.deriveFont(20f));
+            nombre.setForeground(Color.RED);
+            nombre.setText("Este kakuro aún no se ha jugado");
+            tiempo.setText("");
+            points.setText("");
+        }
         path = dir;
         String k = ctrlUI.getThisKakuro(dir);
         kAux = k;
@@ -155,7 +166,7 @@ public class ShowKakuro {
         panel1.setPreferredSize(new Dimension(1200, 800));
         panel1.setBorder(BorderFactory.createTitledBorder(null, "", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, null, null));
         final JPanel panel2 = new JPanel();
-        panel2.setLayout(new GridLayoutManager(11, 3, new Insets(0, 0, 0, 0), -1, -1));
+        panel2.setLayout(new GridLayoutManager(12, 3, new Insets(0, 0, 0, 0), -1, -1));
         panel2.setBackground(new Color(-1973532));
         panel2.setOpaque(false);
         panel1.add(panel2, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
@@ -166,7 +177,7 @@ public class ShowKakuro {
         final Spacer spacer1 = new Spacer();
         panel2.add(spacer1, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 40), new Dimension(-1, 40), new Dimension(-1, 40), 0, false));
         final Spacer spacer2 = new Spacer();
-        panel2.add(spacer2, new GridConstraints(7, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 20), new Dimension(-1, 20), new Dimension(-1, 20), 0, false));
+        panel2.add(spacer2, new GridConstraints(8, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 20), new Dimension(-1, 20), new Dimension(-1, 20), 0, false));
         config = new JButton();
         config.setBorderPainted(false);
         config.setContentAreaFilled(false);
@@ -181,18 +192,25 @@ public class ShowKakuro {
         final Spacer spacer4 = new Spacer();
         panel2.add(spacer4, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 35), new Dimension(-1, 35), null, 0, false));
         volver = new JButton();
+        volver.setBorderPainted(false);
+        volver.setContentAreaFilled(false);
+        volver.setFocusPainted(false);
+        volver.setFocusable(true);
         volver.setText("Volver");
-        panel2.add(volver, new GridConstraints(9, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        panel2.add(volver, new GridConstraints(10, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer5 = new Spacer();
-        panel2.add(spacer5, new GridConstraints(8, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        panel2.add(spacer5, new GridConstraints(9, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final Spacer spacer6 = new Spacer();
-        panel2.add(spacer6, new GridConstraints(10, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 10), new Dimension(-1, 35), new Dimension(-1, 10), 0, false));
+        panel2.add(spacer6, new GridConstraints(11, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 10), new Dimension(-1, 35), new Dimension(-1, 10), 0, false));
         tiempo = new JLabel();
-        tiempo.setText("00:00:00");
+        tiempo.setText("Tiempo:");
         panel2.add(tiempo, new GridConstraints(6, 0, 1, 2, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         nombre = new JLabel();
-        nombre.setText("kekw");
+        nombre.setText("Usuario:");
         panel2.add(nombre, new GridConstraints(5, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        points = new JLabel();
+        points.setText("Puntos:");
+        panel2.add(points, new GridConstraints(7, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel3 = new JPanel();
         panel3.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
         panel3.setBackground(new Color(-1973532));
@@ -210,4 +228,5 @@ public class ShowKakuro {
     public JComponent $$$getRootComponent$$$() {
         return panel1;
     }
+
 }

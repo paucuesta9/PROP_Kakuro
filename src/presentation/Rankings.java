@@ -221,8 +221,8 @@ public class Rankings implements ListSelectionListener {
         };
         table.setRowHeight(30);
         table.getColumnModel().getColumn(0).setPreferredWidth(100);
-        table.getColumnModel().getColumn(1).setPreferredWidth(600);
-        table.getColumnModel().getColumn(2).setPreferredWidth(100);
+        table.getColumnModel().getColumn(1).setPreferredWidth(500);
+        table.getColumnModel().getColumn(2).setPreferredWidth(200);
         table.setFont(new Font("Verdana", Font.BOLD, 20));
         scrollPane.setViewportView(table);
         scrollPane.setVisible(true);

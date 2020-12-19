@@ -1,5 +1,6 @@
 package presentation;
 
+import com.google.gson.JsonArray;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlDomain;
@@ -300,7 +301,11 @@ public class CtrlUI {
         return cd.getThisKakuro(s);
     }
 
-    public String[][] getListOfKakuros() {
-        return cd.getListOfKakuros();
+    public void getListOfKakuros() {
+        cd.getListOfKakuros();
+    }
+
+    public JsonArray getKakuroRecords() {
+        return cd.getRecords();
     }
 }

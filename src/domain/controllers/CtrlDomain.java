@@ -495,8 +495,8 @@ public class CtrlDomain {
      *
      * @return una matriz con todos los kakuros, con su dificultad, carpeta y id.
      */
-    public String[][] getListOfKakuros() {
-        return data.getListOfKakuros();
+    public void getListOfKakuros() {
+        data.getListOfKakuros();
     }
 
     /** @brief Busca un kakuro en fichero a partir de una ruta relativa

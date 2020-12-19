@@ -46,16 +46,16 @@ public class Records {
         logo.setIcon(Utils.getLogo());
 
         String[] titles = {"Dificultad", "tamaño", "Kakuro"};
-        //content = ctrlUI.getListOfKakuros();
-        //ui, ctrlDom,
-        CtrlData data = CtrlData.getInstance();
-        JsonArray kak = data.getkakuroRecord();
+        //ctrlUI.getListOfKakuros(); //TODO : descomentar axo després de fer pull, després esborrar, BROJA :)
+
+        JsonArray kak = ctrlUI.getKakuroRecords();
         content = new String[kak.size()][3];
         for (int i = 0; i < kak.size(); ++i) {
             JsonObject kakuro = kak.get(i).getAsJsonObject();
             content[i][0] = kakuro.get("diff").getAsString();
             content[i][1] = kakuro.get("size").getAsString();
-            content[i][2] = kakuro.get("id").getAsString();
+            String s = kakuro.get("id").getAsString();
+            content[i][2] = s.substring(0, s.indexOf("."));
         }
 
         table = new JTable(content, titles) {
@@ -115,7 +115,6 @@ public class Records {
             @Override
             public void mousePressed(MouseEvent e) {
                 fila = table.getSelectedRow();
-                System.out.println(fila);
             }
 
             @Override
@@ -141,7 +140,7 @@ public class Records {
                     String dif = content[fila][0];
                     String size = content[fila][1];
                     String id = content[fila][2];
-                    String path = "data/diff" + dif + "/" + size + "/" + id;
+                    String path = "data/diff" + dif + "/" + size + "/" + id + ".txt";
                     ctrlUI.toShowKakuro(path, fila);
 
                 }
@@ -248,4 +247,5 @@ public class Records {
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
+
 }
