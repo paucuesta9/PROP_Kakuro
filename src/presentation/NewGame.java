@@ -194,7 +194,7 @@ public class NewGame {
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     String absolutePath = chooser.getSelectedFile().getAbsolutePath();
                     if (!absolutePath.contains(System.getProperty("user.dir")))
-                        Utils.showError("Por favor, indique un Kakuro de la base de datos de la apliación");
+                        Utils.showError("Por favor, indique un Kakuro de la base de datos de la aplicación");
                     else {
                         ctrlPlayUI.startGame(absolutePath);
                         String kakuro = ctrlPlayUI.getKakuro();
