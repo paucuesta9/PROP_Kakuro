@@ -31,9 +31,7 @@ public class Register {
     boolean mod2 = false;
 
     public Register() {
-
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         toLogin.setFont(Utils.roboto.deriveFont(12f));

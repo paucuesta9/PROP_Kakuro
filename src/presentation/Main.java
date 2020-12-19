@@ -33,7 +33,6 @@ public class Main {
         $$$setupUI$$$();
         Utils.setMusic();
         Utils.updateVolume(Utils.volume);
-        Utils.loadFonts();
         setListeners();
 
         ctrlUI.resetParameters();

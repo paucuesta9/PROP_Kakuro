@@ -30,7 +30,6 @@ public class AskSave {
 
     public AskSave(String uwu, String k, int option) {
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         this.option = option;

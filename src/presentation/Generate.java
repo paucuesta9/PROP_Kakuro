@@ -42,9 +42,7 @@ public class Generate {
     int diff = 1;
 
     public Generate() {
-
         $$$setupUI$$$();
-        Utils.loadFonts();
         ctrlUI = CtrlUI.getInstance();
 
         label.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));

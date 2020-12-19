@@ -25,7 +25,6 @@ public class AskNewContinue {
 
     public AskNewContinue() {
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         photo.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));

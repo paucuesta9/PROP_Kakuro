@@ -36,12 +36,10 @@ public class Rankings implements ListSelectionListener {
     private JPanel ButtonPan;
     private JTable table;
     private JLabel logo;
-    private Font fontAwesome, roboto;
 
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     public Rankings() {
-        loadFonts();
         menu.setBackground(null);
         panel2.setBackground(null);
 
@@ -65,12 +63,12 @@ public class Rankings implements ListSelectionListener {
         }*/
         showTable(t, titles);
 
-        config.setFont(fontAwesome);
+        config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode("#00204A"));
         config.setBackground(null);
         config.setBorder(new EmptyBorder(10, 0, 0, 10));
 
-        volver.setFont(roboto);
+        volver.setFont(Utils.roboto);
         volver.setForeground(Color.WHITE);
         volver.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
         volver.setBorderPainted(false);
@@ -80,7 +78,7 @@ public class Rankings implements ListSelectionListener {
 
         ButtonPan.setBackground(null);
 
-        puntos.setFont(roboto);
+        puntos.setFont(Utils.roboto);
         puntos.setForeground(Color.WHITE);
         puntos.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo 6.png")));
         puntos.setBorderPainted(false);
@@ -89,7 +87,7 @@ public class Rankings implements ListSelectionListener {
         puntos.setHorizontalTextPosition(JButton.CENTER);
         puntos.setVerticalTextPosition(JButton.CENTER);
 
-        wins.setFont(roboto);
+        wins.setFont(Utils.roboto);
         wins.setForeground(Color.BLACK);
         wins.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Partidas_ganadas.png")));
         wins.setBorderPainted(false);
@@ -98,7 +96,7 @@ public class Rankings implements ListSelectionListener {
         wins.setHorizontalTextPosition(JButton.CENTER);
         wins.setVerticalTextPosition(JButton.CENTER);
 
-        creadas.setFont(roboto);
+        creadas.setFont(Utils.roboto);
         creadas.setForeground(Color.BLACK);
         creadas.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Rectángulo -5.png")));
         creadas.setBorderPainted(false);
@@ -107,7 +105,7 @@ public class Rankings implements ListSelectionListener {
         creadas.setHorizontalTextPosition(JButton.CENTER);
         creadas.setVerticalTextPosition(JButton.CENTER);
 
-        text.setFont(roboto);
+        text.setFont(Utils.roboto);
         text.setForeground(Color.BLACK);
         text.setBackground(null);
 
@@ -210,38 +208,6 @@ public class Rankings implements ListSelectionListener {
                 conf.drawConfig();
             }
         });
-    }
-
-    private void loadFonts() {
-        BufferedInputStream myStream = null;
-        try {
-            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/fa-solid.ttf"));
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        }
-        Font ttfBase = null;
-        try {
-            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
-        } catch (FontFormatException fontFormatException) {
-            fontFormatException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
-        fontAwesome = ttfBase.deriveFont(Font.PLAIN, 30f);
-
-        try {
-            myStream = new BufferedInputStream(new FileInputStream("resources/fonts/Roboto-Bold.ttf"));
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        }
-        try {
-            ttfBase = Font.createFont(Font.TRUETYPE_FONT, myStream);
-        } catch (FontFormatException fontFormatException) {
-            fontFormatException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        }
-        roboto = ttfBase.deriveFont(Font.PLAIN, 20f);
     }
 
     void showTable(String[][] t, String[] titles) {

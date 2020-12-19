@@ -105,9 +105,7 @@ public class NewGame {
      * @brief Constructora
      */
     public NewGame(boolean training) {
-
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         this.training = training;

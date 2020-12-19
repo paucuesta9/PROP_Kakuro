@@ -45,7 +45,6 @@ public class Create {
 
     public Create() {
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));

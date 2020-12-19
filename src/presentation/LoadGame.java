@@ -81,13 +81,11 @@ public class LoadGame {
      * @brief Constructora
      */
     public LoadGame() {
-
-        scroll = new JPanel();
-
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
         loadGames();
+
+        scroll = new JPanel();
 
         config.setFont(Utils.fontAwesome);
         config.setForeground(Color.decode(Utils.colorDarkBlue));

@@ -33,11 +33,9 @@ public class ShowKakuro {
     private static String path;
 
     private static CtrlPlayUI ctrlPlayUI = CtrlPlayUI.getInstance();
-    private Font fontAwesome, roboto;
 
     public ShowKakuro(String dir, int fila) {
         $$$setupUI$$$();
-        Utils.loadFonts();
         setListeners();
 
         CtrlData data = CtrlData.getInstance();
