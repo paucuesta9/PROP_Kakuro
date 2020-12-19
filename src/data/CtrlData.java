@@ -159,7 +159,7 @@ public class CtrlData {
             String id1 = e1.getAsJsonObject().get("id").getAsString();
             String id2 = e2.getAsJsonObject().get("id").getAsString();
             int intId1 = Integer.parseInt(id1.substring(0, id1.indexOf(".")));
-            int intId2 = Integer.parseInt(id2.substring(0, id1.indexOf(".")));
+            int intId2 = Integer.parseInt(id2.substring(0, id2.indexOf(".")));
             final int i9 = Integer.compare(intId1, intId2);
             return i9;
         });
