@@ -6,8 +6,19 @@ import domain.classes.Player;
 import java.io.*;
 import java.util.ArrayList;
 
-public class CtrlPlayerData {
+/** @file CtrlPlayerData.java
+ * @brief Clase <em>CtrlPlayerData</em>
+ *
+ */
 
+/** @brief Clase CtrlPlayerData para guardar información sobre los jugadores en ficheros
+ * @author ------------------
+ */
+public class CtrlPlayerData {
+    /**
+     * No args constructor for use in serialization
+     *
+     */
     public CtrlPlayerData() {
     }
 
@@ -21,6 +32,12 @@ public class CtrlPlayerData {
         File[] listFiles = folder.listFiles();
         return listFiles.length;
     }
+
+    /** @brief Esta función retorna una lista de los jugadores
+     *
+     * @return un vector con todos los jugadores en formato json
+     * @throws NullPointerException
+     */
 
     public JsonReader[] getListOfPlayers() throws NullPointerException {
         File folder = new File("data/players");
@@ -44,11 +61,22 @@ public class CtrlPlayerData {
         return read;
     }
 
+    /** Esta función retorna el archivo json del usuario correspondiente
+     *
+     * @param username nombre de usuario del que se ha de retornar el archivo json
+     * @return un json con la información del usuario correspondiente
+     * @throws FileNotFoundException en caso de que no exista un usuario con ese nombre de usuario
+     */
     public JsonReader getUser(String username) throws FileNotFoundException {
         JsonReader reader = new JsonReader(new FileReader("data/players/" + username + ".json"));
         return reader;
     }
 
+    /** @brief Guarda al jugador
+     *
+     * @param username nombre de usuario del jugador a guardar
+     * @param playerJSON contenido del fichero asociado al jugador
+     */
     public void savePlayer(String username, String playerJSON) {
         boolean exists = existsPlayer(username);
         if (exists) {
@@ -74,6 +102,11 @@ public class CtrlPlayerData {
         }
     }
 
+    /** @brief Esta función nos indica si existe un jugador con el nombre de usuario pasado por parámetro
+     *
+     * @param username nombre de usuario a comprobar si ya existe
+     * @return cierto en caso de que ya exista un usuario con nombre de usuario username, falso en caso contrario
+     */
     public boolean existsPlayer(String username) {
         File file = new File("data/players/" + username + ".json");
         return file.exists();

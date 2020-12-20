@@ -437,7 +437,7 @@ public class CtrlDomain {
     /** Retorna al jugador actual
      *
      * @param username representa un nombre de usuario
-     * @return el fichero gson del usuario con nombre de usuario username
+     * @return el fichero json del usuario con nombre de usuario username
      * @throws FileNotFoundException en caso de que no exista ningun usuario con ese username
      */
     public JsonReader getUser(String username) throws FileNotFoundException {

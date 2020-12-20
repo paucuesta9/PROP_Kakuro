@@ -6,8 +6,21 @@ import com.google.gson.JsonObject;
 import java.io.*;
 import java.util.Random;
 
+/** @file CtrlKakuroData.java
+ * @brief Clase <em>CtrlKakuroData</em>
+ *
+ */
+
+/**
+ * @brief Clase CtrlKakuroData para guardar y conseguir información de fichero relacionada con kakuros.
+ * @author -----------------
+ */
 public class CtrlKakuroData {
 
+    /**
+     * No args constructor for use in serialization
+     *
+     */
     public CtrlKakuroData() {
     }
 
@@ -57,6 +70,7 @@ public class CtrlKakuroData {
      * @param diff representa la dificultad del kakuro
      * @param sizeRow representa el tamaño de filas del kakuro
      * @param sizeColumn representa el tamaño de columnas del kakuro
+     * @return un entero que representa el número del kakuro
      */
     public int saveKakuro(String content, String solution, int diff, int sizeRow, int sizeColumn) {
         FileWriter file = null;
@@ -104,6 +118,11 @@ public class CtrlKakuroData {
         return listFiles.length;
     }
 
+    /** @brief Retorna el número de kakuros de una cierta dificultad
+     *
+     * @param diff dificultad para la que se cuenta el número de kakuros
+     * @return un entero que representa el número de kakuros de dificultad diff
+     */
     public int getNumberKakurosTotal(int diff) {
         int kakuros = 0;
         File folder = new File("data/diff"+diff);
@@ -115,6 +134,12 @@ public class CtrlKakuroData {
         return kakuros;
     }
 
+    /** @brief Esta función obtiene una lista de kakuros con información.
+     *
+     * @return un JsonArray con información sobre todos los kakuros de la base de datos
+     *
+     *  La información es sobre su dificultad, tamaño, id, tiempo mínimo en resolverlo, el jugador que lo ha resuleto en ese tiempo y los puntos máximos conseguidos.
+     */
     public JsonArray getListOfKakuros() {
         int n = getNumberKakurosTotal(1);
         int m = getNumberKakurosTotal(2);

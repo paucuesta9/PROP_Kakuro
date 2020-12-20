@@ -11,7 +11,13 @@ import java.util.Objects;
  */
 
 public class Pair {
+    /**
+     * first representa al primer entero
+     */
     private int first;
+    /**
+     * second representa al segundo enteor
+     */
     private int second;
 
     /** @brief Creadora de Pair
