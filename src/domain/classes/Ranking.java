@@ -1,7 +1,7 @@
 package domain.classes;
 
-/** @file Cell.java
- * @brief Clase  <em>Cell</em>.
+/** @file Ranking.java
+ * @brief Clase  <em>Ranking</em>.
  */
 
 
@@ -20,6 +20,7 @@ import java.util.*;
 /** @brief Clase Cell que contiene los métodos necesarios para cualquier tipo de ranking
  * @author Pol Vallespí Soro
  */
+
 public abstract class Ranking {
     private CtrlData data;
     protected List<Player> players;
@@ -27,6 +28,10 @@ public abstract class Ranking {
     private CtrlDomain domain;
 
 
+    /** @brief Creadora de Ranking
+     *
+     * @param d controlador de dominio
+     */
     public Ranking(CtrlDomain d) {
         domain = d;
         data = CtrlData.getInstance();
@@ -35,7 +40,9 @@ public abstract class Ranking {
     }
 
 
-
+    /** @brief Copia todos los jugadores del controlador de dominio a su atributo de jugadores
+     *
+     */
     public void listOfPlayers()  {
         JsonReader[] read = domain.getListOfPlayers();
         players = new ArrayList<>();
@@ -45,8 +52,16 @@ public abstract class Ranking {
 
     }
 
+    /** @brief Función que cada subclase implementará para ordenar a los jugadores según algún criterio
+     *
+     */
     public abstract void ordena();
 
+    /** @brief Función que retorna una lista de jugadores ordenada según el criterio de clasificación
+     *
+     * @param s string que representa si se han de ordenar los jugadores por puntos, victorias o creadas
+     * @return Matriz donde se guarda la posición del jugador, su usuario y el número de puntos, victorias o credas.
+     */
     public String[][] getList(String s) {
         ordena();
         int n = players.size();
