@@ -62,6 +62,10 @@ public class CtrlDomain {
         gson = new Gson();
     }
 
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
     /** @brief función que permite al usuario iniciar sesión
      *
      * @param username representa el nombre de usuario
