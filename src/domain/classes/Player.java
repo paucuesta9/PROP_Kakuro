@@ -14,20 +14,37 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Player {
-
+    /**
+     * username representa el nombre de usuario del jugador
+     */
     @SerializedName("username")
     @Expose
     private String username;
+    /**
+     * password representa la contraseña del jugador
+     */
     @SerializedName("password")
     @Expose
     private String password;
+    /**
+     * stats representa las estadísticas del jugador
+     */
     @SerializedName("stats")
     @Expose
     private Stats stats;
+    /**
+     * currentGame representa la partida actual del jugador
+     */
     private transient Game currentGame;
+    /**
+     * savedGames representa las partidas guardadas del jugador
+     */
     @SerializedName("savedGames")
     @Expose
     private List<Game> savedGames = null;
+    /**
+     * config representa la configuración del usuario
+     */
     @SerializedName("config")
     @Expose
     private Config config;

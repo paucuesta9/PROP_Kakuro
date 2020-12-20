@@ -22,9 +22,21 @@ import java.util.*;
  */
 
 public abstract class Ranking {
+    /**
+     * Instancia del controlador de persistencia
+     */
     private CtrlData data;
+    /**
+     * Lista con todos los jugadores
+     */
     protected List<Player> players;
+    /**
+     * Gson con información de los jugadores
+     */
     private Gson gson;
+    /**
+     * Instancia del controlador de dominio
+     */
     private CtrlDomain domain;
 
 

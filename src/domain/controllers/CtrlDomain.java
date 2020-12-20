@@ -28,14 +28,29 @@ public class CtrlDomain {
      * Instáncia del cotrolador persistencia
      */
     private CtrlData data;
+    /**
+     * Instáncia del controlador de jugar
+     */
     private CtrlPlay ctrlPlay;
+    /**
+     * Instancia del controlador de jugador
+     */
     private CtrlPlayer ctrlPlayer;
+    /**
+     * Instáncia de la partida actual
+     */
     private Game currentGame;
     /**
      * Instància del kakuro con el que se trabaja en cada momento
      */
     private Kakuro currentKakuro;
+    /**
+     * Instáncia del jugador actual
+     */
     private Player currentPlayer;
+    /**
+     * gson con información de los jugadores
+     */
     private Gson gson;
 
     /** @brief Creadora por defecto
@@ -518,18 +533,36 @@ public class CtrlDomain {
         return data.getkakuroRecord();
     }
 
+    /** Guarda los records
+     *
+     * @param records records que se han de guardar
+     */
     public void saveRecords(JsonArray records) {
         data.saveKakuroRecord(records);
     }
 
+    /** @brief Comprueba que la posición x, y sea váldia
+     *
+     * @param x coordenada horizontal de la posición
+     * @param y coordenada vertical de la posición
+     * @return cierto si la posición x, y es válida, falso en caso contrario
+     */
     public boolean checkCoord(int x, int y) {
         return x >= 0 && x < currentKakuro.getRowSize() && y >= 0 && y < currentKakuro.getColumnSize();
     }
 
+    /** @brief Retorna el número de filas
+     *
+     * @return entero que representa el número de filas del kakuro actual
+     */
     public int getRowSize() {
         return currentKakuro.getRowSize();
     }
 
+    /** Retorna el número de columnas
+     *
+     * @return entero que representa el número de columnas del kakuro actual
+     */
     public int getColumnSize() {
         return currentKakuro.getColumnSize();
     }

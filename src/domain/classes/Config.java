@@ -7,32 +7,68 @@ import com.google.gson.annotations.SerializedName;
 import java.awt.*;
 import java.util.ArrayList;
 
+/** @file Config.java
+ @brief Clase  <em>Config</em>.
+ */
+
+
+/** @brief Clase Config que guarda las configuraciones del usuario
+ * @author -----------
+ */
+
 public class Config {
 
+    /**
+     * colorBlackCell representa el color de las celdas negras
+     */
     @SerializedName("colorBlackCell")
     @Expose
     private String colorBlackCell;
+    /**
+     * colorWhiteCell representa el color de las celdas blancas
+     */
     @SerializedName("colorWhiteCell")
     @Expose
     private String colorWhiteCell;
+    /**
+     * colorNumbersBlackCell representa el color de los números de las celdas negras
+     */
     @SerializedName("colorNumbersBlackCell")
     @Expose
     private String colorNumbersBlackCell;
+    /**
+     * colorNumbersWhiteCell representa el color de los números de las celdas blancas
+     */
     @SerializedName("colorNumbersWhiteCell")
     @Expose
     private String colorNumbersWhiteCell;
+    /**
+     * colorCorrectCell representa el color de las celdas con valor correcto
+     */
     @SerializedName("colorCorrectCell")
     @Expose
     private String colorCorrectCell;
+    /**
+     * colorIncorrectCell representa el color de las celdas con valor no válido
+     */
     @SerializedName("colorIncorrectCell")
     @Expose
     private String colorIncorrectCell;
+    /** colorSelCell representa el color de la celda seleccionada
+     *
+     */
     @SerializedName("colorSelCell")
     @Expose
     private String colorSelCell;
+    /**
+     * colorBorde representa el color del borde entre casillas y de los número a lápiz
+     */
     @SerializedName("colorBorde")
     @Expose
     private String colorBorde;
+    /**
+     * volume representa el valor del volumen de la música
+     */
     @SerializedName("volume")
     @Expose
     private int volume;
