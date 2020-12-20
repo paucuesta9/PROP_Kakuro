@@ -1,10 +1,14 @@
 package domain.controllers.drivers;
 
+import domain.classes.Game;
 import domain.classes.Kakuro;
+import domain.classes.Player;
 import domain.controllers.CtrlDomain;
 import domain.controllers.CtrlPlay;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -69,11 +73,32 @@ public class DriverCtrlDomain {
             cd.getKakuro("data/"+s+".txt");
         } catch (IOException e) {
             e.printStackTrace();
-        }/*
+        }
         boolean b = cd.checkCoord(fila,columna);
         if(b) System.out.println("Coordenadas correctas");
         else System.out.println("Coordenadas incorrectas");
-        */
+
+    }
+
+    private static void testStartedGames() {
+        CtrlDomain cd = new CtrlDomain();
+        Player p = new Player();
+        List<String> h = new ArrayList<>();
+        Game game1 = new Game(0, 1, 2, 3, 4, 5, 6, h);
+        Game game2 = new Game(6, 5, 4 ,3 ,2 ,1 , 0,h);
+        List<Game> l = new ArrayList<>();
+        l.add(game1); l.add(game2);
+
+        p.setSavedGames(l);
+        cd.setCurrentPlayer(p);
+
+        ArrayList<ArrayList<Integer>> a = cd.getStartedGames();
+
+        for(int i=0; i<a.size(); ++i) {
+            ArrayList<Integer> aa = a.get(i);
+            for(int j=0; j<aa.size(); ++j) System.out.print(aa.get(j)+" ");
+            System.out.println();
+        }
     }
 
     /**@brief función main del driver CtrlDomain
@@ -81,9 +106,9 @@ public class DriverCtrlDomain {
      * Nos permite escoger el test que queremos realizar
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Lista de partidas empezadas\n 5. Salir");
         int value = readNumber();
-        while (value != 4) {
+        while (value != 5) {
             int x, y;
             switch (value) {
                 case 1:
@@ -101,13 +126,18 @@ public class DriverCtrlDomain {
                     System.out.println("Se llama a checkCoord");
                     testCheckCoord();
                     break;
+                case 4:
+                    System.out.println();
+                    System.out.println("Se llama a getStartedGames");
+                    testStartedGames();
+                    break;
                 default:
                     System.out.println();
                     System.out.println("Valor incorrecto");
                     break;
             }
             System.out.println();
-            System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Salir");
+            System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas \n 4. Lista de partidas empezadas\n 5. Salir");
             value = readNumber();
         }
         System.exit(0);
