@@ -17,7 +17,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 /** @file ShowKakuro.java
- @brief Clase  <em>ShowKakuro</em>.
+ @class ShowKakuro
  */
 
 /**

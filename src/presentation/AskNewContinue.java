@@ -10,6 +10,14 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/** @file AskNewContinue.java
+ @class AskNewContinue
+ */
+
+/** @brief Pantalla que pregunta si quieres crear una nueva partida o jugar una que tenias guardada
+ * @author --------------
+ */
+
 public class AskNewContinue {
     private JPanel panel1;
     private JLabel photo;

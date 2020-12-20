@@ -21,7 +21,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /** @file Records.java
- @brief Clase  <em>Records</em>.
+ @class Records
  */
 
 /**

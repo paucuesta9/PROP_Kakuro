@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** @file Rankings.java
- @brief Clase  <em>Rankings</em>.
+ @class Rankings
  */
 
 /**

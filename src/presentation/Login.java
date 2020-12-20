@@ -13,6 +13,14 @@ import java.awt.event.*;
 import java.io.FileNotFoundException;
 import java.util.Locale;
 
+/** @file Login.java
+ @class Login
+ */
+
+/** @brief Pantalla para iniciar sesión
+ * @author ------------------
+ */
+
 public class Login {
     private JPasswordField contrasenaPasswordField;
     private JTextField usuarioTextField;

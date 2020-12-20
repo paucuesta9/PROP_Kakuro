@@ -4,6 +4,14 @@ import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 
+/** @file Scroll.java
+ @class Scroll
+ */
+
+/** @brief Clase Scroll
+ * @author ------------
+ */
+
 public class Scroll extends BasicScrollBarUI {
     private final Dimension d = new Dimension();
     @Override

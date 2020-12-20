@@ -11,6 +11,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/** @file Statistics.java
+ @class Statistics
+ */
+
+/** @brief Pantalla que muestra un Dialog con las estadísticas del jugador
+ * @author ---------------------
+ */
+
 public class Statistics extends JDialog {
     private JPanel panel;
     private JPanel stats;

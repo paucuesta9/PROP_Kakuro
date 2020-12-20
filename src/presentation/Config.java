@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /** @file Config.java
- @brief Clase  <em>Config</em>.
+ @class Config
  */
 
 /**

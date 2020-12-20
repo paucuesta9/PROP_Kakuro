@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 /** @file KakuroCell.java
- @brief Clase  <em>KakuroCell</em>.
+ @class KakuroCell
  */
 
 /** @brief Clase KakuroCell que carga una celda con sus atributos.

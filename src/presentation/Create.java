@@ -11,6 +11,14 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.*;
 
+/** @file Create.java
+ @class Create
+ */
+
+/** @brief Pantalla que permite crear un kakuro
+ * @author ---------------
+ */
+
 public class Create {
     private JPanel panel1;
     private JButton config;

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 /** @file LoadGame.java
- @brief Clase  <em>LoadGame</em>.
+ @class LoadGame
  */
 
 /**

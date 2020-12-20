@@ -8,6 +8,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/** @file SetValues.java
+ @class SetValues
+ */
+
+/** @brief Pantalla que muestra un Dialog para introducir la suma de columna y/o fila
+ * @author ---------------------
+ */
+
 public class SetValues extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;

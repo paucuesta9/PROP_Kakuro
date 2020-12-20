@@ -10,6 +10,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URI;
 
+/** @file Error.java
+ @class Error
+ */
+
+/** @brief Pantalla que  muestra un Dialog con mensaje
+ * @author ------------
+ */
+
 public class Error extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;

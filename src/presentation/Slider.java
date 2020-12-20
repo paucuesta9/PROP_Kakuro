@@ -5,6 +5,14 @@ import javax.swing.plaf.basic.BasicSliderUI;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 
+/** @file Slider.java
+ @class Slider
+ */
+
+/** @brief Clase Slider
+ * @author -----------
+ */
+
 public class Slider extends BasicSliderUI {
 
     private static final int TRACK_HEIGHT = 8;

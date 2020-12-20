@@ -12,6 +12,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Locale;
 
+/** @file Register.java
+ @class Register
+ */
+
+/** @brief Pantalla para poder registrarte
+ * @author -------------
+ */
+
 public class Register {
     private JTextField usuarioTextField;
     private JPasswordField contrasenaPasswordField;

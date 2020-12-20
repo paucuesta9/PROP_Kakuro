@@ -12,6 +12,14 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 import java.awt.event.*;
 
+/** @file AskSave.java
+ @class AskSave
+ */
+
+/** @brief Pantalla que pregunta si quieres guardar un cierto kakuro
+ * @author ---------------------
+ */
+
 public class AskSave {
     private JPanel panel1;
     private JLabel photo;

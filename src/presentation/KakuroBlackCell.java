@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 
 /** @file KakuroBlackCell.java
- @brief Clase  <em>KakuroBlackCell</em>.
+ @class KakuroBlackCell
  */
 
 /** @brief Clase KakuroBlackCell que carga una celda negra con sus atributos.

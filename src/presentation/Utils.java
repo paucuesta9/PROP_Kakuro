@@ -11,6 +11,14 @@ import java.awt.*;
 import java.io.*;
 import java.util.ArrayList;
 
+/** @file Utils.java
+ @class Utils
+ */
+
+/** @brief Clase Utils que implementa métodos útiles para la presentación
+ * @author --------------
+ */
+
 public class Utils {
     public final static String colorBlue = "#1976D2";
     public final static String colorDarkBlue = "#00204A";

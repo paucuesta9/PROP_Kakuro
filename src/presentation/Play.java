@@ -16,7 +16,7 @@ import java.io.*;
 import java.util.Timer;
 
 /** @file Play.java
- @brief Clase  <em>Play</em>.
+ @class Play
  */
 
 /**
@@ -74,6 +74,7 @@ public class Play {
     private JLabel logo;
     private JButton lapizButton;
     private JLabel textLapiz;
+    private JPanel panelB;
     /**
      * gameTime representa el tiempo de la partida
      */
@@ -290,6 +291,7 @@ public class Play {
                     lapizButton.setEnabled(true);
                     resolve.setEnabled(true);
                     startTimer();
+                    panelB.setVisible(true);
                     pauseResume.setText("Pausar");
                     paused = false;
                 } else {
@@ -299,6 +301,7 @@ public class Play {
                     help2.setEnabled(false);
                     lapizButton.setEnabled(false);
                     resolve.setEnabled(false);
+                    panelB.setVisible(false);
                     pauseResume.setText("Continuar");
                     paused = true;
                 }
@@ -732,17 +735,17 @@ public class Play {
         textLapiz = new JLabel();
         textLapiz.setText("Lápiz");
         panel3.add(textLapiz, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        final JPanel panel4 = new JPanel();
-        panel4.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
-        panel4.setBackground(new Color(-1973532));
-        panel4.setEnabled(true);
-        panel1.add(panel4, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        panelB = new JPanel();
+        panelB.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
+        panelB.setBackground(new Color(-1973532));
+        panelB.setEnabled(true);
+        panel1.add(panelB, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         board.setBackground(new Color(-1973532));
-        panel4.add(board, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(800, -1), null, new Dimension(800, 800), 0, false));
+        panelB.add(board, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, new Dimension(800, 800), 0, false));
         final Spacer spacer5 = new Spacer();
-        panel4.add(spacer5, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
+        panelB.add(spacer5, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
         final Spacer spacer6 = new Spacer();
-        panel4.add(spacer6, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 40), null, null, 0, false));
+        panelB.add(spacer6, new GridConstraints(2, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 40), null, null, 0, false));
     }
 
     /**

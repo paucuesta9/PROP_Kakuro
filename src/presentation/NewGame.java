@@ -17,7 +17,7 @@ import java.io.File;
 import java.util.Locale;
 
 /** @file NewGame.java
- @brief Clase  <em>NewGame</em>.
+ @class NewGame
  */
 
 /**

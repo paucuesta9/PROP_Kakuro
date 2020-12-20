@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /** @file CtrlUI.java
- @brief Clase  <em>CtrlUI</em>.
+ @class CtrlUIOld
  @author Judith Almoño Gómez
  */
 

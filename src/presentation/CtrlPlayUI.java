@@ -4,6 +4,14 @@ import domain.controllers.CtrlPlay;
 
 import java.util.ArrayList;
 
+/** @file CtrlPlayUI.java
+ * @class CtrlPlayUI
+ */
+
+/** @brief Controlador de presentación para jugar
+ * @author ------------------
+ */
+
 public class CtrlPlayUI {
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 

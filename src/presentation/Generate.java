@@ -13,6 +13,14 @@ import java.awt.event.*;
 import java.net.URL;
 import java.util.Locale;
 
+/** @file Generate.java
+ @class Generate
+ */
+
+/** @brief Pantalla para generar kakuros
+ * @author ------------
+ */
+
 public class Generate {
     private JPanel panel1;
     private JLabel label;

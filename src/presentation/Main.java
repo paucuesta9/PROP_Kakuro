@@ -13,6 +13,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Locale;
 
+/** @file Main.java
+ @class Main
+ */
+
+/** @brief Pantalla principal que muestra todas las opciones disponibles
+ * @author -----------------
+ */
+
 public class Main {
 
     private JPanel panel1;

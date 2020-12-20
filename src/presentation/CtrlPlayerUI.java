@@ -8,6 +8,13 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
+/** @file CtrlPlayerUI.java
+ * @class CtrlPlayerUI
+ */
+
+/** @brief Controlador de presentación de jugador
+ * @author ------------------
+ */
 public class CtrlPlayerUI {
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 

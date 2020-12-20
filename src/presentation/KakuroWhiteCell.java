@@ -4,6 +4,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+/** @file KakuroWhiteCell.java
+ @class KakuroWhiteCell
+ */
+
+/** @brief Clase KakuroWhiteCell que carga una celda blanca con sus atributos.
+ * @author ------------
+ */
+
 public class KakuroWhiteCell extends KakuroCell {
     private int value = 0;
     private boolean[] pencil = new boolean[10];

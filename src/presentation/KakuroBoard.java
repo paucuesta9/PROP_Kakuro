@@ -8,6 +8,14 @@ import domain.classes.WhiteCell;
 import javax.swing.*;
 import java.awt.*;
 
+/** @file KakuroBoard.java
+ * @class KakuroBoard
+ */
+
+/** @brief Clase que carga un kakuro con sus atributos
+ * @author ------------------
+ */
+
 public class KakuroBoard extends JPanel {
 
     private int rowSize;

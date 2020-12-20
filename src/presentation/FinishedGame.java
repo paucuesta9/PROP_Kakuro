@@ -12,6 +12,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.net.URL;
 
+/** @file FinishedGame.java
+ @class FinishedGame
+ */
+
+/** @brief Pantalla que muestra un Dialog cuando completas un kakuro en modo normal
+ * @author ------------
+ */
+
 public class FinishedGame extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
