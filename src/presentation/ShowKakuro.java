@@ -36,6 +36,7 @@ public class ShowKakuro {
     private JLabel tiempo;
     private JLabel nombre;
     private JLabel points;
+    private JPanel panelB;
 
     private KakuroBoard sg;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
@@ -69,7 +70,7 @@ public class ShowKakuro {
         sg = new KakuroBoard(k);
         board.add(sg);
 
-        board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+        panelB.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
 
         logo.setIcon(Utils.getLogo());
 
@@ -219,13 +220,13 @@ public class ShowKakuro {
         points = new JLabel();
         points.setText("Puntos:");
         panel2.add(points, new GridConstraints(7, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
-        final JPanel panel3 = new JPanel();
-        panel3.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        panel3.setBackground(new Color(-1973532));
-        panel3.setForeground(new Color(-1973532));
-        panel1.add(panel3, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        board.setBackground(new Color(-1973532));
-        panel3.add(board, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(800, -1), new Dimension(800, -1), new Dimension(800, -1), 0, false));
+        panelB = new JPanel();
+        panelB.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
+        panelB.setBackground(new Color(-1118482));
+        panelB.setForeground(new Color(-1973532));
+        panel1.add(panelB, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        board.setBackground(new Color(-1118482));
+        panelB.add(board, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, new Dimension(800, -1), new Dimension(800, -1), new Dimension(800, -1), 0, false));
         final Spacer spacer7 = new Spacer();
         panel1.add(spacer7, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, 1, new Dimension(25, -1), new Dimension(25, -1), new Dimension(25, -1), 0, false));
     }

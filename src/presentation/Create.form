@@ -7,6 +7,7 @@
     </constraints>
     <properties>
       <background color="-1973532"/>
+      <foreground color="-4473925"/>
       <maximumSize width="1200" height="800"/>
       <minimumSize width="1200" height="800"/>
       <preferredSize width="1200" height="800"/>
@@ -19,8 +20,9 @@
           <grid row="0" column="0" row-span="7" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-1973532"/>
-          <opaque value="false"/>
+          <background color="-1118482"/>
+          <foreground color="-4473925"/>
+          <opaque value="true"/>
         </properties>
         <border type="none"/>
         <children>
@@ -33,7 +35,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-1973532"/>
+              <background color="-1118482"/>
             </properties>
             <border type="none"/>
             <children/>

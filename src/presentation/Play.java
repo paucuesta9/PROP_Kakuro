@@ -191,7 +191,7 @@ public class Play {
         Utils.setButtons(resolve);
         resolve.setIcon(new ImageIcon(getClass().getClassLoader().getResource("images/Volver.png")));
 
-        board.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
+        panelB.setBorder(BorderFactory.createMatteBorder(0, 0, 0, 1, Color.decode(Utils.colorDarkBlue)));
     }
 
     /**
@@ -476,7 +476,8 @@ public class Play {
                         if (keyCode == KeyEvent.VK_7 || keyCode == KeyEvent.VK_NUMPAD7) value = 7;
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
-                        if (keyCode == KeyEvent.VK_DELETE || keyCode == KeyEvent.VK_BACK_SPACE) value = 0; //tecla para borrar
+                        if (keyCode == KeyEvent.VK_DELETE || keyCode == KeyEvent.VK_BACK_SPACE)
+                            value = 0; //tecla para borrar
                         if (value != -1 && value != cell.getValue()) {
                             if (pencilON) {
                                 cell.setPencil(value);
@@ -548,7 +549,8 @@ public class Play {
         stopTimer();
         if (!training) {
             for (int i = 0; i < components.length; ++i)
-                if (components[i] instanceof KakuroWhiteCell) ((KakuroWhiteCell) components[i]).setBackground(Utils.colorWhiteCell);
+                if (components[i] instanceof KakuroWhiteCell)
+                    ((KakuroWhiteCell) components[i]).setBackground(Utils.colorWhiteCell);
             ctrlPlayUI.setTimeToGame(gameTime);
             int points = ctrlPlayUI.finishGame(selfFinished);
             if (selfFinished) {
@@ -751,10 +753,10 @@ public class Play {
         panel3.add(textLapiz, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         panelB = new JPanel();
         panelB.setLayout(new GridLayoutManager(3, 1, new Insets(0, 0, 0, 0), -1, -1));
-        panelB.setBackground(new Color(-1973532));
+        panelB.setBackground(new Color(-1118482));
         panelB.setEnabled(true);
         panel1.add(panelB, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
-        board.setBackground(new Color(-1973532));
+        board.setBackground(new Color(-1118482));
         panelB.add(board, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, new Dimension(800, 800), 0, false));
         final Spacer spacer5 = new Spacer();
         panelB.add(spacer5, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, null, null, 0, false));
