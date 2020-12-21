@@ -331,6 +331,7 @@ public class CtrlDomain {
         object.addProperty("player", "");
         object.addProperty("maxPoints", 0);
         array.add(object);
+        data.saveKakuroRecord(array);
         return id;
     }
 

@@ -63,16 +63,6 @@ CtrlPlay {
             ctrlResolve.resolve();
             cd.setKakuro(currentKakuro);
             currentKakuro.setId(cd.saveKakuro());
-            JsonArray records = cd.getRecords();
-            JsonObject newKakuro = new JsonObject();
-            newKakuro.addProperty("diff", String.valueOf(currentKakuro.getDifficulty()));
-            newKakuro.addProperty("size", currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize());
-            newKakuro.addProperty("id", currentKakuro.getId() + ".txt");
-            newKakuro.addProperty("minTime", 0);
-            newKakuro.addProperty("player", "");
-            newKakuro.addProperty("maxPoints", 0);
-            records.add(newKakuro);
-            cd.saveRecords(records);
         }
         int id = cd.getGameId();
         currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, currentKakuro.getDifficulty(), new ArrayList<>());
