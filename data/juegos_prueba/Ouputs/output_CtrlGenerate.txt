@@ -17,7 +17,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a setkakuro
 Indica un kakuro para hacer el test: 
@@ -42,7 +44,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a countWhiteCellsV
 Introduce un kakuro para hacer el test:
@@ -70,7 +74,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a countWhiteCellsV
 Introduce un kakuro para hacer el test:
@@ -98,7 +104,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a la countWhiteCellsH
 Esta funcion cuenta cuantas casillas blancas, de la misma run horizontal, hay antes de un celda en la posicion (x,y)
@@ -127,7 +135,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a la countWhiteCellsH
 Esta funcion cuenta cuantas casillas blancas, de la misma run horizontal, hay antes de un celda en la posicion (x,y)
@@ -156,7 +166,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a NineCellsRow
 Esta funcion cuenta el numero de casillas blancas de cada run en horizontal
@@ -191,7 +203,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a NineCellsRow
 Esta funcion cuenta el numero de casillas blancas de cada run en horizontal
@@ -226,7 +240,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a NineCellsCol
 Esta funcion cuenta el numero de casillas blancas de cada run en vertical
@@ -261,7 +277,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a NineCellsCol
 Esta funcion cuenta el numero de casillas blancas de cada run en vertical
@@ -296,7 +314,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a ComputePosSums
 Indica el numero que queremos sumar:
@@ -324,7 +344,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a ComputePosSums
 Indica el numero que queremos sumar:
@@ -352,7 +374,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a AllZero
 Introduce un vector de 9 valores
@@ -377,7 +401,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a AllZero
 Introduce un vector de 9 valores
@@ -402,7 +428,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection3
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -428,7 +456,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection3
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -454,7 +484,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection3
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -480,7 +512,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection2
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -506,7 +540,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection2
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -532,7 +568,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -558,7 +596,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -584,7 +624,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -610,7 +652,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a Intersection
 Introduce un vector de 9 elementos, que pueden ser 0 o 1
@@ -636,7 +680,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a isUnique
 Esta funcion comprueba si en un vector solo hay un numero disponible (vec[i]= 1)
@@ -662,7 +708,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a isUnique
 Esta funcion comprueba si en un vector solo hay un numero disponible (vec[i]= 1)
@@ -688,7 +736,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a isUnique
 Esta funcion comprueba si en un vector solo hay un numero disponible (vec[i]= 1)
@@ -714,7 +764,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a fillBoard
 Este test puede tardar un tiempo elevado en dar respuesta
@@ -740,7 +792,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a howManyWhites
 Indica un kakuro para hacer el test:
@@ -765,7 +819,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a howManyWhites
 Indica un kakuro para hacer el test:
@@ -790,18 +846,21 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a generate
 Indica el tamano de tablero deseado: 
 Indica la dificultad deseada: 
+Finalmente, la dificultad es 1
 6,6
-*,*,C28,C31,*,*
-*,F16,?,?,C12,C8
-*,C16F29,?,?,?,?
-F18,?,?,?,?,?
-F27,?,?,?,?,*
-*,*,F5,?,?,*
+*,*,*,C4,C10,*
+*,C4,C11F3,?,?,*
+F10,?,?,?,?,C3
+F4,?,?,C3F3,?,?
+*,F11,?,?,?,?
+*,F4,?,?,*,*
 
 Se ha generado un kakuro del tamano deseado con solucion unica
 
@@ -824,7 +883,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a firstColRow
 Introduce el tamano del tablero (nxn): 
@@ -850,7 +911,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a firstColRow
 Introduce el tamano del tablero (nxn): 
@@ -876,21 +939,23 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a randomCells
 Introduce el tamano del tablero (nxn): 
 Introduce la dificultad: 
 9,9
 *,*,*,*,*,*,*,*,*
-*,*,?,?,*,?,?,?,?
-*,?,?,?,*,?,?,?,?
-*,?,?,*,*,*,?,?,*
-*,*,*,*,*,*,?,?,?
-*,?,?,?,*,*,*,*,*
-*,*,?,?,*,*,*,?,?
-*,?,?,?,?,*,?,?,?
-*,?,?,?,?,*,?,?,*
+*,?,?,?,*,*,?,?,?
+*,?,?,?,*,*,?,?,?
+*,?,?,?,*,*,?,?,?
+*,*,*,*,?,?,*,*,*
+*,*,*,*,?,?,*,*,*
+*,?,?,?,*,*,?,?,?
+*,?,?,?,*,*,?,?,?
+*,?,?,?,*,*,?,?,?
 
 Se ha generado un tablero del tamano deseado con casillas blancas y negras
 
@@ -913,7 +978,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a checkBoard
 Escribe un kakuro para realizar el test: 
@@ -951,7 +1018,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a checkBoard
 Escribe un kakuro para realizar el test: 
@@ -989,7 +1058,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a checkBoard
 Escribe un kakuro para realizar el test: 
@@ -1027,7 +1098,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a checkBoard
 Escribe un kakuro para realizar el test: 
@@ -1065,7 +1138,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a checkBoard
 Escribe un kakuro para realizar el test: 
@@ -1103,7 +1178,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a DFS
 Escribe un kakuro para realizar el test:
@@ -1130,7 +1207,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a DFS
 Escribe un kakuro para realizar el test:
@@ -1157,7 +1236,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a connexBoard
 Escribe un kakuro para realizar el test
@@ -1182,7 +1263,9 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a connexBoard
 Escribe un kakuro para realizar el test
@@ -1207,11 +1290,13 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
 
 Se llama a connexBoard
 Escribe un kakuro para realizar el test
-El tablero es conexo
+El tablero no es conexo
 
 Opciones: 
  1. setKakuro 
@@ -1232,4 +1317,114 @@ Opciones:
  16. Rellenar el tablero con casillas blancas y negras
  17. Comprobar que no hay casillas blancas solitarias 
  18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
- 19. Mirar si el tablero es conexo
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
+
+Se llama a checkRunsH
+Escribe el kakuro para realizar el test
+Kakuro incorrecto
+
+Opciones: 
+ 1. setKakuro 
+ 2. Casillas blancas en vertical anteriores a una casilla en concreto 
+ 3. Casillas blancas en horizontal anteriores a una casilla en concreto 
+ 4. Calcular el tamano de todas las runs horizontales 
+ 5. Calcular el tamano de todas las runs verticales
+ 6. ComputePosSums 
+ 7. Comprobar si todos los elementos de un vector son 0  
+ 8. Interseccion entre vectores 3 
+ 9. Interseccion entre vectores 2
+ 10. Interseccion entre vectores 1 
+ 11. Comprobar si un solo hay un valor posible 
+ 12. Rellenar un tablero para que sea unico 
+ 13 Cuenta casillas blancas 
+ 14. Generar un kakuro unico 
+ 15. Generar la primera fila y columna de un tablero 
+ 16. Rellenar el tablero con casillas blancas y negras
+ 17. Comprobar que no hay casillas blancas solitarias 
+ 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
+
+Se llama a checkRunsH
+Escribe el kakuro para realizar el test
+El kakuro no tiene runs horizontales de mas de 9 celdas blancas
+
+Opciones: 
+ 1. setKakuro 
+ 2. Casillas blancas en vertical anteriores a una casilla en concreto 
+ 3. Casillas blancas en horizontal anteriores a una casilla en concreto 
+ 4. Calcular el tamano de todas las runs horizontales 
+ 5. Calcular el tamano de todas las runs verticales
+ 6. ComputePosSums 
+ 7. Comprobar si todos los elementos de un vector son 0  
+ 8. Interseccion entre vectores 3 
+ 9. Interseccion entre vectores 2
+ 10. Interseccion entre vectores 1 
+ 11. Comprobar si un solo hay un valor posible 
+ 12. Rellenar un tablero para que sea unico 
+ 13 Cuenta casillas blancas 
+ 14. Generar un kakuro unico 
+ 15. Generar la primera fila y columna de un tablero 
+ 16. Rellenar el tablero con casillas blancas y negras
+ 17. Comprobar que no hay casillas blancas solitarias 
+ 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
+
+Se llama a checkRunsV
+Escribe el kakuro para realizar el test
+Kakuro incorrecto
+
+Opciones: 
+ 1. setKakuro 
+ 2. Casillas blancas en vertical anteriores a una casilla en concreto 
+ 3. Casillas blancas en horizontal anteriores a una casilla en concreto 
+ 4. Calcular el tamano de todas las runs horizontales 
+ 5. Calcular el tamano de todas las runs verticales
+ 6. ComputePosSums 
+ 7. Comprobar si todos los elementos de un vector son 0  
+ 8. Interseccion entre vectores 3 
+ 9. Interseccion entre vectores 2
+ 10. Interseccion entre vectores 1 
+ 11. Comprobar si un solo hay un valor posible 
+ 12. Rellenar un tablero para que sea unico 
+ 13 Cuenta casillas blancas 
+ 14. Generar un kakuro unico 
+ 15. Generar la primera fila y columna de un tablero 
+ 16. Rellenar el tablero con casillas blancas y negras
+ 17. Comprobar que no hay casillas blancas solitarias 
+ 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 
+
+Se llama a checkRunsV
+Escribe el kakuro para realizar el test
+El kakuro no tiene runs verticales de mas de 9 celdas blancas
+
+Opciones: 
+ 1. setKakuro 
+ 2. Casillas blancas en vertical anteriores a una casilla en concreto 
+ 3. Casillas blancas en horizontal anteriores a una casilla en concreto 
+ 4. Calcular el tamano de todas las runs horizontales 
+ 5. Calcular el tamano de todas las runs verticales
+ 6. ComputePosSums 
+ 7. Comprobar si todos los elementos de un vector son 0  
+ 8. Interseccion entre vectores 3 
+ 9. Interseccion entre vectores 2
+ 10. Interseccion entre vectores 1 
+ 11. Comprobar si un solo hay un valor posible 
+ 12. Rellenar un tablero para que sea unico 
+ 13 Cuenta casillas blancas 
+ 14. Generar un kakuro unico 
+ 15. Generar la primera fila y columna de un tablero 
+ 16. Rellenar el tablero con casillas blancas y negras
+ 17. Comprobar que no hay casillas blancas solitarias 
+ 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca 
+ 19. Mirar si el tablero es conexo 
+ 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas 
+ 21. Mirar que no hay runs verticales de mas de 9 celdas blancas 

@@ -38,6 +38,11 @@ CtrlPlay {
 
     private CtrlDomain cd;
 
+
+    public CtrlPlay(Player p, Kakuro kakuro ) {
+
+    }
+
     /** @brief Creadora a partir de unas características
      *
      * @param difficulty representa la dificultad del kakuro de la partida

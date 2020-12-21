@@ -48,8 +48,7 @@ public class ShowKakuro {
         $$$setupUI$$$();
         setListeners();
 
-        CtrlData data = CtrlData.getInstance();
-        JsonArray kak = data.getkakuroRecord();
+        JsonArray kak = ctrlUI.getKakuroRecords();
         JsonObject p = kak.get(fila).getAsJsonObject();
         tiempo.setText(Utils.setTimeToLabel(p.get("minTime").getAsInt()));
         String s = p.get("player").getAsString();
@@ -181,8 +180,8 @@ public class ShowKakuro {
         panel1.add(panel2, new GridConstraints(0, 2, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         Record = new JLabel();
         Record.setForeground(new Color(-16777216));
-        Record.setText("Récord de tiempo");
-        panel2.add(Record, new GridConstraints(4, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        Record.setText("Récord de tiempo:");
+        panel2.add(Record, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer1 = new Spacer();
         panel2.add(spacer1, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_FIXED, new Dimension(-1, 40), new Dimension(-1, 40), new Dimension(-1, 40), 0, false));
         final Spacer spacer2 = new Spacer();

@@ -11,14 +11,13 @@ import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlPlay;
 import domain.controllers.CtrlPlayer;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CtrlDomain extends domain.controllers.CtrlDomain {
+
+    private Gson gson;
 
     public  CtrlDomain() {
 
@@ -48,5 +47,16 @@ public class CtrlDomain extends domain.controllers.CtrlDomain {
         testV[1] = test2;
 
         return testV;
+    }
+
+    public Player getCurrentPlayer() {
+        JsonReader reader = null;
+        try {
+            reader = getUser("1234");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        Player p = gson.fromJson(reader, Player.class);
+        return p;
     }
 }

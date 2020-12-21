@@ -455,7 +455,7 @@ public class Play {
 
                     @Override
                     public void keyReleased(KeyEvent e) {
-                        int value = 0;
+                        int value = -1;
                         int keyCode = e.getKeyCode();
                         if (keyCode == KeyEvent.VK_1 || keyCode == KeyEvent.VK_NUMPAD1) value = 1;
                         if (keyCode == KeyEvent.VK_2 || keyCode == KeyEvent.VK_NUMPAD2) value = 2;
@@ -466,7 +466,8 @@ public class Play {
                         if (keyCode == KeyEvent.VK_7 || keyCode == KeyEvent.VK_NUMPAD7) value = 7;
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
-                        if (value != 0) {
+                        if (keyCode == KeyEvent.VK_DELETE || keyCode == KeyEvent.VK_BACK_SPACE) value = 0; //tecla para borrar
+                        if (value != -1) {
                             if (pencilON) {
                                 cell.setPencil(value);
                             } else {

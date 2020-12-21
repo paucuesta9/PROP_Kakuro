@@ -2,8 +2,10 @@ package domain.controllers.drivers;
 
 import domain.classes.Cell;
 import domain.classes.Kakuro;
+import domain.classes.Player;
 import domain.classes.WhiteCell;
 import domain.controllers.CtrlPlay;
+import domain.controllers.stubs.CtrlDomain;
 
 import java.util.Scanner;
 
@@ -39,12 +41,14 @@ public class DriverCtrlPlay {
      * @param y representa el número de columna de la celda que quiere comprobar
      */
     private static void testHelpMyValue(String kakuro1, String kakuroSol, int x, int y) {
-        Kakuro k = new Kakuro(kakuro1);
+        CtrlDomain cdStub = new CtrlDomain();
+        Player p = cdStub.getCurrentPlayer();
+        /*Kakuro k = new Kakuro(kakuro1);
         Kakuro kSol = new Kakuro(kakuroSol);
         Cell[][] board = k.getBoard();
         Cell[][] boardSol = kSol.getBoard();
         if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
-        //CtrlPlay.startGame(k);
+        //CtrlPlay.startGame(k);*/
 
         int result = 0;// = CtrlPlay.helpMyValue(x,y);
         if (result == -2) System.out.println("La celda no tiene un valor asignado");

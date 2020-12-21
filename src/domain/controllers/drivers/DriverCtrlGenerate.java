@@ -403,7 +403,7 @@ public class DriverCtrlGenerate {
         String kakuroString = readKakuro();
         currentKakuro = new Kakuro(kakuroString);
         boolean b = CtrlGenerate.checkRunsH(currentKakuro.getBoard());
-        if(b) System.out.println("El kakuro no tiene runs horizontales de más de 9 celdas blancas");
+        if(!b) System.out.println("El kakuro no tiene runs horizontales de mas de 9 celdas blancas");
         else System.out.println("Kakuro incorrecto");
     }
 
@@ -411,8 +411,8 @@ public class DriverCtrlGenerate {
         System.out.println("Escribe el kakuro para realizar el test");
         String kakuroString = readKakuro();
         currentKakuro = new Kakuro(kakuroString);
-        boolean b = CtrlGenerate.checkRunsH(currentKakuro.getBoard());
-        if(b) System.out.println("El kakuro no tiene runs verticales de más de 9 celdas blancas");
+        boolean b = CtrlGenerate.checkRunsV(currentKakuro.getBoard());
+        if(!b) System.out.println("El kakuro no tiene runs verticales de mas de 9 celdas blancas");
         else System.out.println("Kakuro incorrecto");
     }
 
@@ -425,10 +425,10 @@ public class DriverCtrlGenerate {
         System.out.println("Opciones: \n 1. setKakuro \n 2. Casillas blancas en vertical anteriores a una casilla en concreto \n 3. Casillas blancas en horizontal anteriores a una casilla en concreto \n 4. Calcular el tamano de todas las runs horizontales \n 5. Calcular el tamano de todas las runs verticales"+
                 "\n 6. ComputePosSums \n 7. Comprobar si todos los elementos de un vector son 0  \n 8. Interseccion entre vectores 3 \n 9. Interseccion entre vectores 2" +
                 "\n 10. Interseccion entre vectores 1 \n 11. Comprobar si un solo hay un valor posible \n 12. Rellenar un tablero para que sea unico \n 13 Cuenta casillas blancas \n 14. Generar un kakuro unico \n 15. Generar la primera fila y columna de un tablero \n 16. Rellenar el tablero con casillas blancas y negras" +
-                "\n 17. Comprobar que no hay casillas blancas solitarias \n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \n 19. Mirar si el tablero es conexo");
+                "\n 17. Comprobar que no hay casillas blancas solitarias \n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \n 19. Mirar si el tablero es conexo \n 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas \n 21. Mirar que no hay runs verticales de mas de 9 celdas blancas ");
 
         int value = readNumber();
-        while (value != 20) {
+        while (value != 22) {
             switch (value) {
                 case 1:
                     System.out.println();
@@ -525,6 +525,16 @@ public class DriverCtrlGenerate {
                     System.out.println("Se llama a connexBoard");
                     testConnexBoard();
                     break;
+                case 20:
+                    System.out.println();
+                    System.out.println("Se llama a checkRunsH");
+                    testCheckRunsH();
+                    break;
+                case 21:
+                    System.out.println();
+                    System.out.println("Se llama a checkRunsV");
+                    testCheckRunsV();
+                    break;
                 default:
                     System.out.println();
                     System.out.println("El numero introducido es incorrecto");
@@ -534,7 +544,7 @@ public class DriverCtrlGenerate {
             System.out.println("Opciones: \n 1. setKakuro \n 2. Casillas blancas en vertical anteriores a una casilla en concreto \n 3. Casillas blancas en horizontal anteriores a una casilla en concreto \n 4. Calcular el tamano de todas las runs horizontales \n 5. Calcular el tamano de todas las runs verticales"+
                     "\n 6. ComputePosSums \n 7. Comprobar si todos los elementos de un vector son 0  \n 8. Interseccion entre vectores 3 \n 9. Interseccion entre vectores 2" +
                     "\n 10. Interseccion entre vectores 1 \n 11. Comprobar si un solo hay un valor posible \n 12. Rellenar un tablero para que sea unico \n 13 Cuenta casillas blancas \n 14. Generar un kakuro unico \n 15. Generar la primera fila y columna de un tablero \n 16. Rellenar el tablero con casillas blancas y negras" +
-                    "\n 17. Comprobar que no hay casillas blancas solitarias \n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \n 19. Mirar si el tablero es conexo");
+                    "\n 17. Comprobar que no hay casillas blancas solitarias \n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \n 19. Mirar si el tablero es conexo \n 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas \n 21. Mirar que no hay runs verticales de mas de 9 celdas blancas ");
             value = readNumber();
         }
         System.exit(0);

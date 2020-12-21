@@ -161,7 +161,8 @@ public class Register {
         registrarseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (contrasenaPasswordField.getText().equals("") || repetirContrasenaPasswordField.getText().equals("")) Utils.showError("Contraseñas no válidas");
+                if (contrasenaPasswordField.getText().equals("") || repetirContrasenaPasswordField.getText().equals(""))
+                    Utils.showError("Contraseñas no válidas");
                 else if (repetirContrasenaPasswordField.getText().equals(contrasenaPasswordField.getText())) {
                     try {
                         ctrlPlayerUI.signUp(usuarioTextField.getText(), contrasenaPasswordField.getText());
@@ -277,10 +278,7 @@ public class Register {
                 resultName = currentFont.getName();
             }
         }
-        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
-        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
-        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
-        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
+        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
     }
 
     /**

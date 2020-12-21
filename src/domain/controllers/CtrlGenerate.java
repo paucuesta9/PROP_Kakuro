@@ -646,7 +646,7 @@ public class CtrlGenerate {
                         }
                         for (int x = 0; x < posComb[nH].length; ++x) {
                             int[] valuesH = mat[posComb[nH][x]-1][nH-1];
-                            for (int y = posComb[nV].length-1; y >= 0 ; --y) {
+                            for (int y = 0; y < posComb[nV].length ; ++y) {
                                 int[] valuesV = mat[posComb[nV][y]-1][nV-1];
                                 int value = intersection(valuesH, valuesV);
                                 if (value != -1) {
@@ -737,7 +737,12 @@ public class CtrlGenerate {
                 }
             }
         }*/
-
+        for(int i = 1; i <= 45; ++i) {
+            for(int j = 1; j <= 9; ++j ){
+                mat[i-1][j-1] = new int[] {0,0,0,0,0,0,0,0,0};
+                mat[i-1][j-1] = computePosSums(i,j,0);
+            }
+        }
         tempBoard = new int[board.length][board[0].length][9];
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board[0].length; ++j) {
@@ -1001,6 +1006,7 @@ public class CtrlGenerate {
             }
         }
         size = Math.min(board.length,board[0].length);
+        //size = (int) (board.length+board[0].length )/2;
         if(nWhite < 0.4*size*size) return false;
         else if(nWhite == nDFS) return true;
         return false;
@@ -1081,6 +1087,7 @@ public class CtrlGenerate {
                     repeat = true;
                 }
                 else {
+                    //printBoard(board);
                     currentKakuro = new Kakuro(0, 0, board);
                     if (!repeat && fillBoard(board,dif)) {
                     } else repeat = true;
@@ -1092,7 +1099,7 @@ public class CtrlGenerate {
         return currentKakuro;
     }
 
-    /*polstatic void printBoard(Cell[][] board) {
+    static void printBoard(Cell[][] board) {
         System.out.println("------------------------------------");
         for(int i = 0; i < board.length; ++i) {
             for(int j = 0; j < board[0].length; ++j) {
@@ -1105,5 +1112,5 @@ public class CtrlGenerate {
             System.out.println();
         }
         System.out.println("------------------------------------");
-    }*/
+    }
 }

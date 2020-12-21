@@ -326,7 +326,7 @@ public class CtrlDomain {
         JsonObject object = new JsonObject();
         object.addProperty("diff", String.valueOf(currentKakuro.getDifficulty()));
         object.addProperty("size", currentKakuro.getRowSize() + "_" + currentKakuro.getColumnSize());
-        object.addProperty("id", id);
+        object.addProperty("id", id+".txt");
         object.addProperty("minTime", 0);
         object.addProperty("player", "");
         object.addProperty("maxPoints", 0);
@@ -334,6 +334,11 @@ public class CtrlDomain {
         data.saveKakuroRecord(array);
         return id;
     }
+
+    /** @brief Guarda un kakuro y obtiene la información de este
+     *
+     * @return Devuelve la ruta del kakuro guardado
+     */
 
     public String saveKakuroAndGetInfo() {
         int id = saveKakuro();
