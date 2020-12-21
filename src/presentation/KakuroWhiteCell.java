@@ -74,7 +74,8 @@ public class KakuroWhiteCell extends KakuroCell {
 
     public void setValue(int value) {
         this.value = value;
-        jLabel.setText(String.valueOf(value));
+        if (value != 0) jLabel.setText(String.valueOf(value));
+        else jLabel.setText("");
         for (int i = 1; i < 10; ++i) {
             getComponent(i).setVisible(false);
         }
