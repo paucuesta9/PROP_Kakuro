@@ -161,7 +161,7 @@ public class Register {
         registrarseButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseña no válidos");
+                if (contrasenaPasswordField.getText().equals("") || repetirContrasenaPasswordField.getText().equals("")) Utils.showError("Contraseñas no válidas");
                 else if (repetirContrasenaPasswordField.getText().equals(contrasenaPasswordField.getText())) {
                     try {
                         ctrlPlayerUI.signUp(usuarioTextField.getText(), contrasenaPasswordField.getText());

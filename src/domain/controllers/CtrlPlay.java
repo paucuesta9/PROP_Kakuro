@@ -21,7 +21,8 @@ import java.util.List;
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar
  * @author Judith Almoño Gómez
  */
-public class CtrlPlay {
+public class
+CtrlPlay {
     /**
      * currentKakuro representa la instancia del kakuro con la que se trabaja en este momento
      */
@@ -112,6 +113,7 @@ public class CtrlPlay {
      * @param cd representa la instancia del CtrlDomain
      */
     public CtrlPlay(int game, CtrlDomain cd) {
+        this.cd = cd;
         currentPlayer = cd.getCurrentPlayer();
         currentGame = currentPlayer.getGame(game);
         currentPlayer.setCurrentGame(currentGame);
