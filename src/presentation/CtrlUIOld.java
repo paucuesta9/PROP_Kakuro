@@ -10,11 +10,11 @@ import java.util.Scanner;
 
 /** @file CtrlUI.java
  @class CtrlUIOld
- @author Judith Almoño Gómez
  */
 
 
 /** @brief Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ * @author Judith Almoño Gómez
  */
 public class CtrlUIOld {
     /**

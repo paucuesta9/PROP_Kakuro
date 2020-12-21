@@ -9,7 +9,6 @@ import java.awt.*;
  */
 
 /** @brief Clase Scroll
- * @author ------------
  */
 
 public class Scroll extends BasicScrollBarUI {

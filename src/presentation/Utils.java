@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 
 /** @brief Clase Utils que implementa métodos útiles para la presentación
- * @author --------------
+ * @author Pau Cuesta Arcos
  */
 
 public class Utils {

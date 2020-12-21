@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 /** @brief Controlador de presentación de jugador
- * @author ------------------
+ * @author Pau Cuesta Arcos
  */
 public class CtrlPlayerUI {
     private CtrlUI ctrlUI = CtrlUI.getInstance();

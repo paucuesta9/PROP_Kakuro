@@ -10,7 +10,6 @@ import java.awt.geom.RoundRectangle2D;
  */
 
 /** @brief Clase Slider
- * @author -----------
  */
 
 public class Slider extends BasicSliderUI {

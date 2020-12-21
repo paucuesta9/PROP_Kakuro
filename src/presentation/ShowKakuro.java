@@ -21,13 +21,12 @@ import java.awt.event.WindowListener;
  */
 
 /**
- * @author Pol Vallespí Soro
  * @brief Clase ShowKakuro que se encarga de mostrar los kakuros del repositorio y la información de los records. Contiene las funciones y atributos necesarios para poder hacerlo.
+ * @author Pol Vallespí Soro
  */
 
 public class ShowKakuro {
     private JPanel panel1;
-    private JLabel photo;
     private JButton config;
     private JLabel Record;
     private JPanel board;
@@ -41,9 +40,7 @@ public class ShowKakuro {
     private KakuroBoard sg;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
     private String kAux;
-    private static String path;
 
-    private static CtrlPlayUI ctrlPlayUI = CtrlPlayUI.getInstance();
 
     public ShowKakuro(String dir, int fila) {
         $$$setupUI$$$();
@@ -64,7 +61,6 @@ public class ShowKakuro {
             tiempo.setText("");
             points.setText("");
         }
-        path = dir;
         String k = ctrlUI.getThisKakuro(dir);
         kAux = k;
         sg = new KakuroBoard(k);

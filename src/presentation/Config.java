@@ -17,8 +17,8 @@ import java.awt.event.ActionListener;
  */
 
 /**
- * @author Pol Vallespí Soro
  * @brief Extend de JDialog, Config, que nos permite hacer un dialog para la pantalla de configuración. Contiene las funciones y atributos necesarios para poder hacerlo.
+ * @author Pol Vallespí Soro
  */
 
 public class Config extends JDialog {

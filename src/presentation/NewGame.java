@@ -21,8 +21,8 @@ import java.util.Locale;
  */
 
 /**
- * @author Judith Almoño Gómez
  * @brief Clase NewGame que carga la pantalla de NewGame y contiene las funciones y atributos necesarios para empezar una partida.
+ * @author Judith Almoño Gómez
  */
 
 public class NewGame {
@@ -506,7 +506,10 @@ public class NewGame {
                 resultName = currentFont.getName();
             }
         }
-        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
+        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
+        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
     }
 
     /**

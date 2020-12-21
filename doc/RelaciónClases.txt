@@ -13,7 +13,7 @@ Pol:
 Alvaro:
     - CtrlValidate
     - Kakuro
-    - CtlrGenerate
+    - CtrlGenerate
 
     - Stats
     - Pair
@@ -33,11 +33,14 @@ Pau:
     - KakuroBoard
     - Utils
     - Config
+
+    - Excepciones
 Judith:
     - BlackCell
     - CtrlPlay
     - CtrlPlayUI
     - CtrlUI
+    - CtrlUIOld
     - Game
 
     - KakuroBlackCell
@@ -50,6 +53,12 @@ Pol:
     - DriverCtrlDomain
 Alvaro:
     - DriverCtrlValidate
+    - DriverCreatedRanking
+    - DriverPointsRanking
+    - DriverCtrlPlayer
+    - DriverGame
+    - DriverPlayer
+    - DriverFinishedRanking
 Pau:
     - DriverBlackCell
     - DriverCell
@@ -64,31 +73,42 @@ Pol:
     - ColorChooser
     - Config
     - Rankings
+    - Records
+    - ShowKakuro
 
 Alvaro:
     - Generate
     - AskSave
     - Login
     - Register
+    - Statistics
+
 Pau:
     - Play
     - Main
     - Create
     - AskNewContinue
     - SetValues
+
 Judith:
     - Play
     - NewGame
     - LoadGame
     - GameBrief
     - Error
+    - FinishedGame
 
-OTROSjcantel
+OTROS
     Pau:
         - Makefile
+        - Mockup diseno inicial
+        - Listado funcionalidades
+        - Relación librerias externas
     Judith:
         - Manual del Usuario
+        - Manual del Usuario (Final)
         - Manual de Drivers
+        - Listado funcionalidades
     Alvaro:
         - JUnit
         - Descripción de algoritmos y estructuras de datos

@@ -13,8 +13,8 @@ import java.awt.event.*;
  */
 
 /**
- * @author Pau Cuesta Arcos y Pol Vallespí Soro
  * @brief Extend de JDialog, ColorChooser, que nos permite hacer un dialog para seleccionar un color. Contiene las funciones y atributos necesarios para poder hacerlo.
+ * @author Pol Vallespí Soro
  */
 
 public class ColorChooser extends JDialog {

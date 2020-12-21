@@ -11,7 +11,7 @@ import java.io.PrintWriter;
  */
 
 /** @brief Clase CtrlGameData para guardar en ficheros la información correspondiente a partidas
- * @autor --------------
+ * @autor Pau Cuesta Arcos
  */
 
 public class CtrlGameData {

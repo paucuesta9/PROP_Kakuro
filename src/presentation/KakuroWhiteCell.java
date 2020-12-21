@@ -9,7 +9,7 @@ import java.awt.event.*;
  */
 
 /** @brief Clase KakuroWhiteCell que carga una celda blanca con sus atributos.
- * @author ------------
+ * @author Pau Cuesta Arcos
  */
 
 public class KakuroWhiteCell extends KakuroCell {

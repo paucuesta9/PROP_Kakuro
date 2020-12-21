@@ -12,7 +12,7 @@ import java.util.Comparator;
 
 
 /** @brief Clase PointsRanking que representa el ranking por puntos e indica como ordenar a los jugadores según ese criterio
- * @author ----------------
+ * @author Pol Vallespí Soro
  */
 
 public class PointsRanking extends Ranking {

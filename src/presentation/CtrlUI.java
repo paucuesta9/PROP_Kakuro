@@ -13,10 +13,10 @@ import java.util.Scanner;
 
 /** @file CtrlUI.java
  @class CtrlUI
- @author Judith Almoño Gómez
  */
 
 /** @brief Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladores
+ * @author Judith Almoño Gómez
  */
 public class CtrlUI {
     /**
@@ -307,5 +307,9 @@ public class CtrlUI {
 
     public JsonArray getKakuroRecords() {
         return cd.getRecords();
+    }
+
+    public void addCreatedToPlayer() {
+        cd.addCreatedToPlayer();
     }
 }

@@ -15,8 +15,8 @@ import java.awt.event.MouseListener;
  */
 
 /**
- * @author Judith Almoño Gómez
  * @brief Clase GameBreif que carga la partida guardada con todos sus atributos.
+ * @author Judith Almoño Gómez
  */
 
 public class GameBrief extends JPanel {

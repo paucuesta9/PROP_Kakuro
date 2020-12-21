@@ -17,7 +17,7 @@ import java.net.URL;
  */
 
 /** @brief Pantalla que muestra un Dialog cuando completas un kakuro en modo normal
- * @author ------------
+ * @author Judith Almoño Gómez
  */
 
 public class FinishedGame extends JDialog {

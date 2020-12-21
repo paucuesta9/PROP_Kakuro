@@ -14,7 +14,7 @@ import java.util.List;
 
 
 /** @brief Clase CreatedRanking que representa el ranking por partidas creadas e indica como ordenar a los jugadores según ese criterio
- * @author ----------------
+ * @author Pol Vallespí Soro
  */
 
 public class CreatedRanking extends Ranking {

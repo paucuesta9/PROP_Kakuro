@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 
 /** @brief Controlador de presentación para jugar
- * @author ------------------
+ * @author Judith Almoño Gómez
  */
 
 public class CtrlPlayUI {

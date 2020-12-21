@@ -16,14 +16,12 @@ import java.util.ArrayList;
  */
 
 /** @brief Pantalla que muestra un Dialog con las estadísticas del jugador
- * @author ---------------------
+ * @author Alvaro Armada Ruiz
  */
 
 public class Statistics extends JDialog {
     private JPanel panel;
     private JPanel stats;
-    private JPanel Estadisticas;
-    private JButton config;
     private JLabel acabadosT;
     private JLabel empezadosT;
     private JLabel ayudasT;
@@ -34,8 +32,6 @@ public class Statistics extends JDialog {
     private JLabel ayudasI;
     private JLabel puntosI;
     private JLabel creadosI;
-    private JLabel logo;
-    private JLabel statsText;
     private JPanel Panel2;
     private JButton volver;
 
@@ -108,16 +104,6 @@ public class Statistics extends JDialog {
         int y = (screenSize.height) / 2 - getSize().height / 2;
         setLocation(x, y);
         setVisible(true);
-    }
-
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Estadísticas");
-        frame.setContentPane(new Statistics().panel);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setSize(500, 650);
-        frame.setResizable(false);
-        Utils.center(frame);
-        frame.setVisible(true);
     }
 
     /**

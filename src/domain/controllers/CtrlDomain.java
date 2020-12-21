@@ -565,11 +565,19 @@ public class CtrlDomain {
         return currentKakuro.getRowSize();
     }
 
-    /** Retorna el número de columnas
+    /** @brief Retorna el número de columnas
      *
      * @return entero que representa el número de columnas del kakuro actual
      */
     public int getColumnSize() {
         return currentKakuro.getColumnSize();
+    }
+
+    /**@brief Augmenta en uno el número de kakuros creados del jugador
+     *
+     */
+    public void addCreatedToPlayer() {
+        currentPlayer.getStats().setCreated(currentPlayer.getStats().getCreated() + 1);
+        savePlayer();
     }
 }

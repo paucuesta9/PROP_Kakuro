@@ -17,8 +17,8 @@ import java.awt.event.*;
  */
 
 /**
- * @author ---------------------
  * @brief Pantalla que pregunta si quieres guardar un cierto kakuro
+ * @author Alvaro Armada Ruiz
  */
 
 public class AskSave {

@@ -13,7 +13,7 @@ import java.awt.event.*;
  */
 
 /** @brief Pantalla que muestra un Dialog para introducir la suma de columna y/o fila
- * @author ---------------------
+ * @author Pau Cuesta Arcos
  */
 
 public class SetValues extends JDialog {

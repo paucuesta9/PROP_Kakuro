@@ -25,8 +25,8 @@ import java.io.IOException;
  */
 
 /**
- * @author Pol Vallespí Soro
  * @brief Clase Records que representa el reporitorio de kakuros y los records. Contiene las funciones y atributos necesarios para poder hacerlo.
+ * @author Pol Vallespí Soro
  */
 
 public class Records {
@@ -40,7 +40,6 @@ public class Records {
     private JLabel logo;
     private JLabel text;
     private JButton mostrar;
-    private Font fontAwesome, roboto;
     private CtrlUI ctrlUI = CtrlUI.getInstance();
 
     private String[][] content;

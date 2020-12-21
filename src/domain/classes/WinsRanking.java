@@ -12,7 +12,7 @@ import java.util.Comparator;
 
 
 /** @brief Clase WinsRanking que representa el ranking por victorias e indica como ordenar a los jugadores según ese criterio
- * @author ----------------
+ * @author Pol Vallespí Soro
  */
 
 public class WinsRanking extends Ranking {

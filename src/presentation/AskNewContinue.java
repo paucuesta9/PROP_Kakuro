@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
  */
 
 /** @brief Pantalla que pregunta si quieres crear una nueva partida o jugar una que tenias guardada
- * @author --------------
+ * @author Pau Cuesta Arcos
  */
 
 public class AskNewContinue {

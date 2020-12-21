@@ -16,8 +16,8 @@ import java.awt.event.*;
  */
 
 /**
- * @author ---------------
  * @brief Pantalla que permite crear un kakuro
+ * @author Pau Cuesta Arcos
  */
 
 public class Create {
@@ -362,6 +362,7 @@ public class Create {
                         Utils.showError("El kakuro creado no es válido");
                     } else {
                         ctrlUI.resolve();
+                        ctrlUI.addCreatedToPlayer();
                         ctrlUI.toAskSave("¿Desea guardar el kakuro creado?", boardKakuro, 1);
                     }
                 } catch (NoTypeCellException noTypeCellException) {

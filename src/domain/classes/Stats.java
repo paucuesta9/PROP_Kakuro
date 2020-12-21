@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 /** @brief Clase que representa las estadísticas de un jugador
- * @autor ---------------------
+ * @autor Alvaro Armada Ruiz
  */
 public class Stats {
     /**

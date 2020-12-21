@@ -1,10 +1,14 @@
 package domain.classes.Exceptions;
 
-public class WrongPasswordException extends Exception {
-    public static final long serialVersionUID = 1L;
+/** @file WrongPasswordException.java
+ * @brief Clase  <em>WrongPasswordException</em>.
+ */
 
-    /* Mètode creador de la classe, el qual invoca a super que  és la cosntructura
-     * de la classe Exception */
+
+/** @brief Clase WrongPasswordException que contiene la constructora para que salte la excepción
+ * @author Pau Cuesta Arcos
+ */
+public class WrongPasswordException extends Exception {
     public WrongPasswordException() {
         super();
     }

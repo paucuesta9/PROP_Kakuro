@@ -20,8 +20,8 @@ import java.util.Timer;
  */
 
 /**
- * @author Judith Almoño Gómez y Pau Cuesta Arcos
  * @brief Clase Play que carga una partida y contiene las funciones y atributos necesarios para jugar una partida.
+ * @author Judith Almoño Gómez y Pau Cuesta Arcos
  */
 
 public class Play {

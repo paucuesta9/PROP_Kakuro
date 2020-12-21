@@ -26,8 +26,8 @@ import java.util.List;
  */
 
 /**
- * @author Pol Vallespí Soro
  * @brief Clase Ranking que muestra un ranking según el criterio del usuario. Contiene las funciones y atributos necesarios para poder hacerlo.
+ * @author Pol Vallespí Soro
  */
 
 public class Rankings implements ListSelectionListener {

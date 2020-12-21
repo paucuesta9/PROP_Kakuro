@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 
 /** @brief Clase Config que guarda las configuraciones del usuario
- * @author -----------
+ * @author Pau Cuesta Arcos
  */
 
 public class Config {

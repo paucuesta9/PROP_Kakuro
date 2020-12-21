@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
  */
 
 /** @brief Controlador de jugador
- * @author ----------------
+ * @author Pau Cuesta Arcos
  */
 public class CtrlPlayer {
 

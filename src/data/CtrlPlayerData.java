@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 
 /** @brief Clase CtrlPlayerData para guardar información sobre los jugadores en ficheros
- * @author ------------------
+ * @author Pau Cuesta Arcos
  */
 public class CtrlPlayerData {
     /**

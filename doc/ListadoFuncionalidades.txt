@@ -1,0 +1,36 @@
+- Login: un usuario previamente registrado puede iniciar sesión y carga su configuracion y datos
+- Registrarse: un usuario que no este autenticado, se puede registrar.
+- Jugar
+  - Dos modos de juego
+    - Normal, cuenta para estadisticas
+      - Cargar partida
+      - Iniciar nueva partida
+    - Modo entrenamiento, no cuenta para estadisticas (EXTRA)
+    - Tanto en modo entrenamiento como en normal, al iniciar nueva partida, se puede indicar tamanos y dificultad o bien abrir un fichero en concreto
+  - Monitorizacion del tiempo por partida
+  - Pausar partida i reanudar (EXTRA)
+  - Ayudas. Hemos incluido dos tipus de ayuda
+    - Comprobacion de numero indicado
+    - Colocacion de numero correcto
+  - Modo lapiz, se puede poner en pequeno en cada celda varios valores temporales (EXTRA)
+  - Resolver
+  - Guardar partida
+  - Calculo de puntos. Una vez acabada la partida, el jugador obtiene ciertos puntos
+- Creación. Hay dos modos de crear:
+  - Importando un nuevo kakuro desde fichero
+  - Por interfaz grafica, introduciendo los tamanos y asignando a cada celda el tipo y valor
+- Generacion
+- Validar: tanto en la creacion se validan los kakuros para comprobar si son unicos y validos
+- Resolver: tanto en el generar como en el crear se resuelven automaticamente para poder guardar su solucion en el repositorio
+- Guardar Kakuro: una vez validados despues de generar o crear, si el usuario lo confirma se guarda en el repositorio
+- Rankings. Tres tipos de ranking. Se listan todos los usuarios por:
+  - Puntos
+  - Kakuros acabados
+  - Kakuro creados
+- Estadisticas. Se listan todas las estadisticas del usuario
+- Reoositorio. Se listan todos los kakuros y se pueden ver y obtener el record de ese kakuro.
+- Records indicando el tiempo minimo, el usuario y los puntos.
+- Banda sonora. Hemos creado una banda sonora exclusiva para nuesra nuestra aplicacion. (EXTRA)
+- Configuración de colores de la interfaz del kakuro. Se pueden modificar absolutamente todos los colores del tablero en cualquier momento,
+  incluso manteniendo los colores de las ayudas si es el caso. (EXTRA)
+- Guardado de ayudas. En caso de que el usuario deje una partida a medias, al renaudarla más adelante, conservará las ayudas empleadas. (EXTRA)

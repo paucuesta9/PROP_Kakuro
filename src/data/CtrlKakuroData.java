@@ -13,7 +13,7 @@ import java.util.Random;
 
 /**
  * @brief Clase CtrlKakuroData para guardar y conseguir información de fichero relacionada con kakuros.
- * @author -----------------
+ * @author Pau Cuesta Arcos
  */
 public class CtrlKakuroData {
 

@@ -15,7 +15,7 @@ import java.net.URI;
  */
 
 /** @brief Pantalla que  muestra un Dialog con mensaje
- * @author ------------
+ * @author Judith Almoño Gómez
  */
 
 public class Error extends JDialog {

@@ -13,7 +13,7 @@ import java.awt.*;
  */
 
 /** @brief Clase que carga un kakuro con sus atributos
- * @author ------------------
+ * @author Pau Cuesta Arcos
  */
 
 public class KakuroBoard extends JPanel {
