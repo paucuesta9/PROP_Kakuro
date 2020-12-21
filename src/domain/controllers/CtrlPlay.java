@@ -256,7 +256,7 @@ CtrlPlay {
                 int rowSize = Integer.parseInt(sizes[0]);
                 int columnSize = Integer.parseInt(sizes[1]);
                 if (diff == currentKakuro.getDifficulty() && rowSize == currentKakuro.getRowSize() && columnSize == currentKakuro.getColumnSize() && idInt == currentKakuro.getId()) {
-                    if (record.get("minTime").getAsInt() != 0 && record.get("minTime").getAsInt() > currentGame.getTime()) {
+                    if (record.get("minTime").getAsInt() == 0 || record.get("minTime").getAsInt() > currentGame.getTime()) {
                         record.addProperty("minTime", currentGame.getTime());
                         record.addProperty("player", currentPlayer.getUsername());
                         record.addProperty("maxPoints", currentGame.getPoints());
