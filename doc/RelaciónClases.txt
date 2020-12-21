@@ -51,13 +51,14 @@ Pol:
     - DriverCtrlResolve
     - DriverCtrlGenerate
     - DriverCtrlDomain
+    - DriverGame
+
 Alvaro:
     - DriverCtrlValidate
     - DriverCreatedRanking
     - DriverPointsRanking
-    - DriverCtrlPlayer
-    - DriverGame
     - DriverPlayer
+    - DriverCtrlPlayer
     - DriverFinishedRanking
 Pau:
     - DriverBlackCell
@@ -112,8 +113,10 @@ OTROS
     Alvaro:
         - JUnit
         - Descripción de algoritmos y estructuras de datos
+        - Stub de CtrlDomain
     Pol:
         - Descripción de algoritmos y estructuras de datos
+        - Stub de CtrlDomain
     Todos:
         - Casos de uso
         - Diagrama de clases

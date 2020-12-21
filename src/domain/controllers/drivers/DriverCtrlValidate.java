@@ -138,6 +138,9 @@ public class DriverCtrlValidate {
         }
     }
 
+    /** @brief Comprueba que la funcion hace correctamente la insterseccion entre dos arrays
+     *
+     */
     private static void testIntersection() {
         System.out.println("Introduzca nueve numeros (0 o 1)");
         int a [] = new int [9];
@@ -153,6 +156,9 @@ public class DriverCtrlValidate {
         for (int i=0; i<9; ++i) System.out.println(a[i]+" ");
     }
 
+    /** @brief Comprueba que la función recorre la run de la fila negra y hace la interseccion entre el valor de las casillas negras y los valores posibles, actualizando las casillas con valor único
+     *
+     */
     private static void testIniRow() {
         System.out.println("Introduzca el numero de filas y el numero de columnas");
         int r = readNumber(); int c = readNumber();
@@ -190,6 +196,9 @@ public class DriverCtrlValidate {
 
     }
 
+    /** @brief Comprueba que la función, dada una casilla con valor único y un tempBoard, se propagan restricciones de forma adecuada
+     *
+     */
     private static void testSpreadUnique() {
         System.out.println("Introduzca el numero de filas y el numero de columnas");
         int r = readNumber(); int c = readNumber();
@@ -261,10 +270,10 @@ public class DriverCtrlValidate {
      */
 
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 9. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 10. intersection \n 11. iniRow \n 12. spreadUnique \n 13. Salir");
         int value = readNumber();
         String kakuro;
-        while(value != 9) {
+        while(value != 12) {
             int x,y;
             switch(value) {
                 case 1:
@@ -359,7 +368,7 @@ public class DriverCtrlValidate {
 
             }
             System.out.print("\n");
-            System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 9. Salir");
+            System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 10. intersection \n 11. iniRow \n 12. spreadUnique \n 13. Salir");
             value = readNumber();
         }
     }

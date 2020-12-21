@@ -58,6 +58,11 @@ public class DriverCtrlResolve {
         else System.out.println("No se ha encontrado solucion");
     }
 
+    /**@Brief Test de la función isUnique
+     *
+     * Comprueba si retorna cierto si en el array a hay solamente un 1, y falso de cualquier otra manera.
+     */
+
     private static void testIsUnique() {
         System.out.println("Introduzca nueve numeros (0 o 1)");
         int a [] = new int [9];
@@ -68,6 +73,9 @@ public class DriverCtrlResolve {
         else System.out.println("Habia un uno en la posicion "+(value-1));
     }
 
+    /** @brief Comprueba que la funcion hace correctamente la insterseccion entre dos arrays
+     *
+     */
     private static void testIntersection() {
         System.out.println("Introduzca nueve numeros (0 o 1)");
         int a [] = new int [9];
@@ -83,6 +91,9 @@ public class DriverCtrlResolve {
         for (int i=0; i<9; ++i) System.out.println(a[i]+" ");
     }
 
+    /** @brief Comprueba que la función recorre la run de la fila negra y hace la interseccion entre el valor de las casillas negras y los valores posibles, actualizando las casillas con valor único
+     *
+     */
     private static void testIniRow() {
         System.out.println("Introduzca el numero de filas y el numero de columnas");
         int r = readNumber(); int c = readNumber();
@@ -120,6 +131,9 @@ public class DriverCtrlResolve {
 
     }
 
+    /** @brief Comprueba que la función, dada una casilla con valor único y un tempBoard, se propagan restricciones de forma adecuada
+     *
+     */
     private static void testSpreadUnique() {
         System.out.println("Introduzca el numero de filas y el numero de columnas");
         int r = readNumber(); int c = readNumber();
@@ -148,8 +162,6 @@ public class DriverCtrlResolve {
         System.out.println("Introduzca las coordenadas de la casilla blanca unica a probar");
         int x = readNumber(); int y = readNumber();
 
-        BlackCell b = (BlackCell) board[x][y];
-
         Set<Pair> uniques = new HashSet<>();
 
         CtrlResolve.spreadUnique(x, y, tempBoard, board, uniques);
@@ -166,11 +178,6 @@ public class DriverCtrlResolve {
     }
 
     /**@Brief Test de la función computePosSums
-     * Comprueva que la función computePosSums se ejecuta correctamente y da el resultado esperado
-     *
-     * @param x es el número del cual queremos saber las combinaciones de números que suman hasta él con un número determinado de casillas
-     * @param n es el número determinado de casillas
-     * @param no indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.
      *
      * Comprueba si dado un valor x, un número de casillas y un valor de no, deja en un array de 9 posiciones un 1 para los números que aparezcan en las combinacione y un 0 para aquellos que no
      */
@@ -193,9 +200,9 @@ public class DriverCtrlResolve {
      * Nos permite escoger el test que queremos realizar
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Resolver \n 3. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Resolver \n 3. IsUnique \n 4. Intersection \n 5. IniRow \n 6. ComputePosSums \n 7. SpreadUnique \n 8. Salir");
         int value = readNumber();
-        while(value != 3) {
+        while(value != 8) {
             switch(value) {
                 case 1:
                     System.out.println();
@@ -239,7 +246,7 @@ public class DriverCtrlResolve {
 
             }
             System.out.println();
-            System.out.println("Opciones: \n 1. Creadora \n 2. Resolver \n 3. Salir");
+            System.out.println("Opciones: \n 1. Creadora \n 2. Resolver \n 3. IsUnique \n 4. Intersection \n 5. IniRow \n 6. ComputePosSums \n 7. SpreadUnique \n 8. Salir");
             value = readNumber();
         }
     }

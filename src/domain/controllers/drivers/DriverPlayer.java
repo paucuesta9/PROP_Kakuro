@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 
 /** @brief Clase DriverPlayer que comprueba la correctividad de las funciones de Player
- * @author -------------
+ * @author Alvaro Armada Ruiz
  *
  */
 public class DriverPlayer {

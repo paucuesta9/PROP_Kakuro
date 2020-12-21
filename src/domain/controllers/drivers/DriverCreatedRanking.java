@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 /**
  * @brief Clase DriverCreatedRanking que comprueba la correctividad de las funciones de createdRanking
- * @author --------
+ * @author Alvaro Armada Ruiz
  */
 
 public class DriverCreatedRanking {

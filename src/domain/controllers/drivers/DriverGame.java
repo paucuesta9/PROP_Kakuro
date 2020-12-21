@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 
 /** @brief Clase DriverGame que comprueba la correctividad de las funciones de la clase Game
- * @author ------------
+ * @author Pol Vallespí Soro
  */
 
 public class DriverGame {
@@ -113,10 +113,14 @@ public class DriverGame {
 
     }
 
+    /** @brief Función principal
+     *
+     * Indica las opciones que hay para testear
+     */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Anadir ayuda \n 3. Informacion de game a un arraylist\n 4. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Anadir ayuda \n 3. Informacion de game a un arraylist \n 4. removeHelp \n 5. Salir");
         int value = readNumber();
-        while (value != 4) {
+        while (value != 5) {
             int x, y;
             switch (value) {
                 case 1:
@@ -145,7 +149,7 @@ public class DriverGame {
                     break;
             }
             System.out.println();
-            System.out.println("Opciones: \n 1. Creadora \n 2. Anadir ayuda \n 3. Informacion de game a un arraylist\n 4. Salir");
+            System.out.println("Opciones: \n 1. Creadora \n 2. Anadir ayuda \n 3. Informacion de game a un arraylist \n 4. removeHelp \n 5. Salir");
             value = readNumber();
         }
         System.exit(0);

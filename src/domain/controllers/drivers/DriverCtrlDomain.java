@@ -80,7 +80,10 @@ public class DriverCtrlDomain {
 
     }
 
-    private static void testStartedGames() {
+    /** @brief Función que comprueba que se retornan en formato adecuado todas las partidas del usuario actual
+     *
+     */
+    private static void testGetStartedGames() {
         CtrlDomain cd = new CtrlDomain();
         Player p = new Player();
         List<String> h = new ArrayList<>();
@@ -129,7 +132,7 @@ public class DriverCtrlDomain {
                 case 4:
                     System.out.println();
                     System.out.println("Se llama a getStartedGames");
-                    testStartedGames();
+                    testGetStartedGames();
                     break;
                 default:
                     System.out.println();

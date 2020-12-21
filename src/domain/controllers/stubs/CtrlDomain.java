@@ -106,4 +106,5 @@ public class CtrlDomain extends domain.controllers.CtrlDomain {
     public void updateStatsPlayer() {
         System.out.println("Update stats");
     }
+
 }

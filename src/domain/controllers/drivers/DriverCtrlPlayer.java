@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 
 /** @brief Clase DriverCtrlPlayer que comprueba la correctividad de las funciones de la clase CtrlPlayer
- * @author -------------
+ * @author Alvaro Armada Ruiz
  *
  */
 
@@ -67,7 +67,7 @@ public class DriverCtrlPlayer {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n1. Empezar una partida \n 2. Ayuda para el valor del usuario \n 3. Ayuda para el valor correcto de una celda blanca \n 4. Salir");
+        System.out.println("Opciones: \n1. Empezar una partida \n 2. Login \n 3. Sign Up \n 4. Salir");
         int value = readNumber();
         while (value != 4) {
             int x, y;
@@ -90,7 +90,7 @@ public class DriverCtrlPlayer {
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("\nOpciones: \n1. Empezar una partida \n 2. Ayuda para el valor del usuario \n 3. Ayuda para el valor correcto de una celda blanca \n 4. Salir");
+            System.out.println("\nOpciones: \n1. Empezar una partida \n 2. Login \n 3. Sign Up \n 4. Salir");
             value = readNumber();
         }
         System.exit(0);

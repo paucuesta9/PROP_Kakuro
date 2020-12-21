@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 /**
  * @brief Clase DriverWinsRanking que comprueba la correctividad de las funciones de winsRanking
- * @author --------
+ * @author Alvaro Armada Ruiz
  */
 
 public class DriverWinsRanking {
