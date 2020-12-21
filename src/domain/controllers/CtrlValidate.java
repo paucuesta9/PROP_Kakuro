@@ -4,11 +4,12 @@ package domain.controllers;
  @brief Clase <em>CtrlValidate</em>.
  */
 
-import domain.classes.BlackCell;
-import domain.classes.Cell;
-import domain.classes.Kakuro;
-import domain.classes.WhiteCell;
+import domain.classes.*;
+
 import java.lang.Math;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /** @brief Clase CtrlValidate que contiene los atributos y metodos para la funcionalidad de validar
  * @author Alvaro Armada Ruiz
@@ -139,7 +140,7 @@ public class CtrlValidate {
                 }
 
                 if (uniqueTemp == 1) {
-                    System.out.println("Unique i:"+(i+x)+" j:"+(j));
+                  //  System.out.println("Unique i:"+(i+x)+" j:"+(j));
                     ++unique;
                 }
             }
@@ -147,21 +148,6 @@ public class CtrlValidate {
         return unique;
     }
 
-    /** @brief Comprueba si solo hay un 1 en un array de 9 posiciones
-     *
-     * @param a array de 9 posiciones que pueden ser 1 o 0
-     *
-     * @return true si solo hay un 1,
-     * @return false si no hay 1 o hay mas de un 1
-     */
-
-    public static boolean isUnique(int [] a) { //a tiene mida 9
-        int b = 0;
-        for(int i=0; i<9; ++i)
-            if(a[i]==1) ++b;
-
-        return (b==1);
-    }
 
     /** @brief Encuentra casillas con valor trivial
      *
@@ -184,7 +170,7 @@ public class CtrlValidate {
                         int numWhiteRun = 1;
                         int numUnique = 0;
                         int numTemp = 0;
-                        if (isUnique(tempBoard[i][j+1])) {
+                        if (isUnique(tempBoard[i][j+1])!=0) {
                             //System.out.println("i: "+i+"j: "+(j+1));
                             ++numUnique;
                             for(int r = 0; r<9; ++r) {
@@ -194,7 +180,7 @@ public class CtrlValidate {
 
                         while(j+1+numWhiteRun< kakuro.getColumnSize() && board[i][j+1+numWhiteRun].isWhite()) {
                             ++numWhiteRun;
-                            if (isUnique(tempBoard[i][j+numWhiteRun])) {
+                            if (isUnique(tempBoard[i][j+numWhiteRun])!=0) {
                                 // System.out.println("i: "+i+"j: "+(j+1));
                                 ++numUnique;
                                 for(int r = 0; r<9; ++r) {
@@ -208,7 +194,7 @@ public class CtrlValidate {
                             BlackCell b = (BlackCell) board[i][j];
                             numTemp = b.getRow()-numTemp;
                             for(int r = 1; r<=numWhiteRun; ++r) {
-                                if (!isUnique(tempBoard[i][j+r])) {
+                                if (isUnique(tempBoard[i][j+r])==0) {
                                    // System.out.println("New unique: "+(i)+" "+(j+r));
                                     for (int rr = 0; rr<9; ++rr) {
                                         if(rr==numTemp-1) tempBoard[i][r+j][rr] = 1;
@@ -222,7 +208,7 @@ public class CtrlValidate {
                         int numWhiteRun = 1;
                         int numUnique = 0;
                         int numTemp = 0;
-                        if (isUnique(tempBoard[i+1][j])) {
+                        if (isUnique(tempBoard[i+1][j])!=0) {
                             ++numUnique;
                             //  System.out.println("i: "+(i+1)+"j: "+j);
                             for(int r = 0; r<9; ++r) {
@@ -232,7 +218,7 @@ public class CtrlValidate {
 
                         while(i+1+numWhiteRun<kakuro.getRowSize() && board[i+1+numWhiteRun][j].isWhite()) {
                             ++numWhiteRun;
-                            if (isUnique(tempBoard[i+numWhiteRun][j])) {
+                            if (isUnique(tempBoard[i+numWhiteRun][j])!=0) {
                                 ++numUnique;
                                 //   System.out.println("i: "+(i+1)+"j: "+j);
                                 for(int r = 0; r<9; ++r) {
@@ -245,7 +231,7 @@ public class CtrlValidate {
                             BlackCell b = (BlackCell) board[i][j];
                             numTemp = b.getColumn()-numTemp;
                             for(int r = 1; r<=numWhiteRun; ++r) {
-                                if (!isUnique(tempBoard[i+r][j])) {
+                                if (isUnique(tempBoard[i+r][j])==0) {
                                    // System.out.println("New unique: "+(i+r)+" "+j);
                                     for (int rr = 0; rr<9; ++rr) {
                                         if(rr==numTemp-1) tempBoard[i+r][j][rr] = 1;
@@ -444,7 +430,7 @@ public class CtrlValidate {
 
                     number += howManyNumbers(tempBoard[i][j]);
 
-                    if (isUnique(tempBoard[i][j]))
+                    if (isUnique(tempBoard[i][j])!=0)
                         ++prueba;
                 }
 
@@ -456,7 +442,7 @@ public class CtrlValidate {
         int difficulty = 0;
 
         if (numBlackCell+numWhiteCell<100); //facil -10x10
-        else if (numBlackCell+numWhiteCell>144) difficulty+=2; //dificil +12x12
+        else if (numBlackCell+numWhiteCell>223) difficulty+=2; //dificil +12x12
         else ++difficulty; //media entre los dos
 
         if (100*numWhiteCell/(numBlackCell+numWhiteCell)<=58); //facil
@@ -499,18 +485,165 @@ public class CtrlValidate {
         return b;
     }
 
-    /** @brief Valida un Kakuro
-     *
-     * @param r fila que estamos tratando
-     * @param c columna que estamos tratando
-     * @param sum valor que tiene que sumar la fila que estamos tratando
-     * @param vec vector de 10 posiciones donde vec[i] es 1 si hemos puesto i en la fila, 0 si no.
-     * @param res guarda cuantas soluciones hemos encontrado hasta el momento
-     */
 
-    public static void validate(int r, int c, int sum, int [] vec, int [] res) {
-        if (res[0]==2) return;
-        if( r == kakuro.getRowSize() ) { res[0]++; } //hemos llegado al final, la solucion es correcta
+    public static void iniColumn(int i, int j, int [] posSums, int numWhiteRun, int [][][] tempBoard) {
+        for(int x = 0; x<numWhiteRun; ++x) {
+            System.arraycopy(posSums, 0, tempBoard[i+1+x][j], 0, 9);
+        }
+    }
+
+    public static int isUnique(int [] a) {
+        int n = 0;
+        int v = 0;
+        for (int i=0; i<9; ++i) {
+            if (a[i]==1) {
+                ++n;
+                v = i+1;
+            }
+        }
+        if (n==1) return v;
+        else return 0;
+    }
+
+    public static void intersection(int [] a, int [] b) { //se modifica a
+        for (int i = 0; i<9; ++i) {
+            if(!(a[i]==1 && b[i]==1)) a[i] = 0;
+        }
+    }
+
+    public static void iniRow(int i, int j, int [] posSums, int numWhiteRun, int [][][] tempBoard, Set<Pair> uniques, Cell [][] board) {
+        for(int x = 0; x<numWhiteRun; ++x) {
+            intersection(tempBoard[i][j+1+x], posSums);
+            int v = isUnique(tempBoard[i][j+1+x]);
+            if (v != 0) {
+                WhiteCell w = (WhiteCell) board[i][j+1+x];
+                if (w.getCorrectValue()==0) {
+                    Pair p = new Pair(i, j + 1 + x);
+                    uniques.add(p);
+                    w.setCorrectValue(v);
+                }
+            }
+        }
+    }
+
+    private static void spreadUniqueCol(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
+        int up = 0;
+        int down = 0;
+        while (i+1+down < board.length && board[i+1+down][j].isWhite()) ++down;
+        while (board[i-1-up][j].isWhite()) ++up;
+        int run = up + down + 1;
+
+        BlackCell b = (BlackCell) board[i-1-up][j];
+        WhiteCell w = (WhiteCell) board[i][j];
+        int posSums [] = computePosSums(b.getColumn(), run-1, w.getCorrectValue());
+
+        for (int x = 0; x<run; ++x) {
+            if (i-up+x!=i) {
+                WhiteCell wt = (WhiteCell) board[i-up+x][j];
+                if (wt.getCorrectValue()==0) {
+                    intersection(tempBoard[i - up + x][j], posSums);
+                    int v = isUnique(tempBoard[i - up + x][j]);
+                    if (v != 0) {
+                        Pair p = new Pair(i - up + x, j);
+                        uniques.add(p);
+                        wt.setCorrectValue(v);
+                    }
+                }
+            }
+        }
+
+    }
+
+    private static void spreadUniqueRow(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
+        int left = 0;
+        int right = 0;
+        while (board[i][j-1-left].isWhite()) ++left;
+        while (j+1+right < board[0].length && board[i][j+1+right].isWhite()) ++right;
+        int run = left + right + 1;
+
+        BlackCell b = (BlackCell) board[i][j-1-left];
+        WhiteCell w = (WhiteCell) board[i][j];
+        int posSums [] = computePosSums(b.getRow(), run-1, w.getCorrectValue());
+
+        for (int x = 0; x<run; ++x) {
+            if (j-left-x!=j) {
+                WhiteCell wt = (WhiteCell) board[i][j-left+x];
+                if (wt.getCorrectValue()==0) {
+                    intersection(tempBoard[i][j - left + x], posSums);
+                    int v = isUnique(tempBoard[i][j - left + x]);
+                    if (v != 0) {
+                        Pair p = new Pair(i, j - left + x);
+                        uniques.add(p);
+                        wt.setCorrectValue(v);
+                    }
+                }
+            }
+        }
+    }
+
+    public static void spreadUnique(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
+        spreadUniqueCol(i, j, tempBoard, board, uniques);
+        spreadUniqueRow(i, j, tempBoard, board, uniques);
+    }
+
+
+    public static boolean validate() {
+        //inicialización
+
+        int [][][] tempBoard = new int [kakuro.getRowSize()][kakuro.getColumnSize()][9];
+        for(int i=0; i< kakuro.getRowSize(); ++i) for(int j=0; j< kakuro.getColumnSize(); ++j) for (int z=0; z<9; ++z) tempBoard [i][j][z] = -1;
+
+        Cell [][] board = kakuro.getBoard();
+        Set<Pair> uniques = new HashSet<>();
+        int numWhite = 0;
+        int numBlack = 0;
+
+        for (int i=0; i < kakuro.getRowSize(); ++i) {
+            for (int j=0; j < kakuro.getColumnSize(); ++j) {
+                if (!board[i][j].isWhite()) {
+                    ++numBlack;
+                    if (i < kakuro.getRowSize()-1 && board[i+1][j].isWhite()) {//columna hacia abajo
+                        int numWhiteRun = 1;
+                        while(i+1+numWhiteRun< kakuro.getRowSize() && board[i+1+numWhiteRun][j].isWhite()) ++numWhiteRun;
+                        BlackCell b = (BlackCell) board[i][j];
+                        int [] posSums = computePosSums(b.getColumn(), numWhiteRun, 0);
+                        iniColumn(i, j, posSums, numWhiteRun, tempBoard);
+                    }
+                    if (j < kakuro.getColumnSize()-1 && board[i][j+1].isWhite()) {//fila hacia derecha
+                        int numWhiteRun = 1;
+                        while(j+1+numWhiteRun< kakuro.getColumnSize() && board[i][j+1+numWhiteRun].isWhite()) ++numWhiteRun;
+                        BlackCell b = (BlackCell) board[i][j];
+                        int [] posSums = computePosSums(b.getRow(), numWhiteRun, 0);
+                        iniRow(i, j, posSums, numWhiteRun, tempBoard, uniques, board);
+                    }
+                } else ++numWhite;
+            }
+        }
+        if (numBlack == kakuro.getColumnSize()* kakuro.getRowSize()) return false;
+        int u = uniques.size();
+        while (uniques.size()!=0 && u!=numWhite) {
+            Iterator it = uniques.iterator();
+            Pair p = (Pair) it.next();
+            it.remove();
+            int tmpu = uniques.size();
+            spreadUnique(p.getFirst(), p.getSecond(), tempBoard, board, uniques);
+            int ttmpu = uniques.size();
+            u = u + (ttmpu - tmpu);
+        }
+
+        if (u==numWhite) return true;
+        int [] tmp = {0,0,0,0,0,0,0,0,0};
+        //return resolveRecursive(0,0,0, tmp, board, tempBoard);
+        int a[] = new int[1]; a[0] = 0;
+        validateRecursive(0,0,0, tmp, tempBoard, a);
+
+        if (a[0]==1) return true;
+        return false;
+    }
+
+    private static void validateRecursive(int r, int c, int sum, int [] vec, int [][][] tempBoard, int a[]) {
+        if (a[0]==2) return;
+        if( r == kakuro.getRowSize() ) { ++a[0]; } //hemos llegado al final, la solucion es correcta
         else {
             Cell[][] board = kakuro.getBoard();
             if( !board[r][c].isWhite() ) { // estamos en una casilla negra; queremos cambiar de columna o de casilla
@@ -523,14 +656,14 @@ public class CtrlValidate {
                     }
                 }
                 int [] aux = {0,0,0,0,0,0,0,0,0,0};
-                if (c == kakuro.getColumnSize() - 1) validate(r + 1, 0, 0, aux, res); //cambiamos de fila, estamos en la ultima columna }
-                else validate(r,c+1, sum, aux, res); //cambiamos de columna
+                if (c == kakuro.getColumnSize() - 1) validateRecursive(r + 1, 0, 0, aux, tempBoard, a); //cambiamos de fila, estamos en la ultima columna }
+                else validateRecursive(r,c+1, sum, aux, tempBoard, a); //cambiamos de columna
             }
             else { // si estamos en una casilla blanca
                 vec[0] = 1; //indica que s'ha modificat
                 WhiteCell w = (WhiteCell) board[r][c];
                 for(int i = 1; i < 10 && sum-i >= 0; ++i ) {
-                    if ( vec[i] == 0) {
+                    if ( vec[i] == 0 && tempBoard[r][c][i-1]==1) {
                         vec[i] = 1;
                         w.setCorrectValue(i);
                         boolean f = false;
@@ -538,15 +671,14 @@ public class CtrlValidate {
                         if(kakuro.checkColumn(r-1, c, i, f, i)) {
                             if (c == kakuro.getColumnSize() - 1 && sum-i != 0) { }
                             else if (c == kakuro.getColumnSize() - 1 && sum-i == 0) { // estamos en la ultima casilla de la fila pero la suma es correcta
-                                validate(r + 1, 0, 0, vec, res);
+                                validateRecursive( r + 1, 0, 0, vec, tempBoard, a);
                             }
-                            else validate(r, c + 1, sum-i, vec, res);
+                            else validateRecursive(r, c + 1, sum-i, vec, tempBoard, a);
                         }
                         vec[i] = 0;
                     }
                 }
             }
         }
-        return;
-    }//
+    }
 }

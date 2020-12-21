@@ -7,10 +7,23 @@ import domain.controllers.stubs.CtrlDomain;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/** @file DriverCtrlPlayer.java
+ * @class DriverCtrlPlayer
+ *
+ */
+
+/** @brief Clase DriverCtrlPlayer que comprueba la correctividad de las funciones de la clase CtrlPlayer
+ * @author -------------
+ *
+ */
+
 public class DriverCtrlPlayer {
 
     private static Scanner reader = new Scanner((System.in));
 
+    /** @brief Comprueba que la funcion de Login (inicio de sesión)funciona correctamente
+     *
+     */
     private static void testLogin() {
         System.out.println("Existe un usuario con username 1234 y contrasena 1234, y otro con usuario polFeo y contrasena 1234");
         System.out.println("Introduzca un nombre de usuario");
@@ -31,6 +44,9 @@ public class DriverCtrlPlayer {
         }
     }
 
+    /** @brief Comprueba que la funcion signUp (registro) funciona correctamente
+     *
+     */
     private static void testSignUp() {
         System.out.println("Introduzca un nombre de usuario");
         String username = reader.next();

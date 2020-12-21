@@ -232,12 +232,8 @@ public class CtrlDomain {
      * @return Devuelve cierto si el Kakuro es correcto, en caso contrario, devuelve falso
      */
     public boolean validate() {
-        int [] res = new int[1];
-        res[0] = 0;
-        int [] vec = {0,0,0,0,0,0,0,0,0,0};
         CtrlValidate.setKakuro(currentKakuro);
-        CtrlValidate.validate(0,0, 0, vec, res);
-        if (res[0]!=1) return false;
+        if (!CtrlValidate.validate()) return false;
         else {
             CtrlValidate.setDifficulty();
             return true;

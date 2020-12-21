@@ -9,10 +9,22 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/** @file DriverPlayer.java
+ * @class DriverPlayer
+ *
+ */
+
+/** @brief Clase DriverPlayer que comprueba la correctividad de las funciones de Player
+ * @author -------------
+ *
+ */
 public class DriverPlayer {
     private static Scanner reader = new Scanner(System.in);
 
 
+    /** @brief Test de la creadora
+     *
+     */
     private static void testCreadoras() {
         Player player = new Player();
         System.out.println("Se ha creado");
@@ -22,6 +34,10 @@ public class DriverPlayer {
         System.out.println("Se ha creado");
     }
 
+    /** @brief Comprueba la función getGame
+     *  Comprueba que se retornan todas las partidas de la lista de guardadas
+     *
+     */
     private static void testGetGame() {
         System.out.println("Se crean dos games");
         Player p = new Player();
@@ -45,6 +61,9 @@ public class DriverPlayer {
         System.out.println();
     }
 
+    /** @brief Comprueba que se devuelven en el formato correcto las estadísticas de jugadores
+     *
+     */
     private static void testGetStatsInt() {
         System.out.println("Primero crearemos las estadísticas: ");
         System.out.println("Introduzca las partidas ganadas:");
@@ -70,6 +89,10 @@ public class DriverPlayer {
 
     }
 
+    /** @brief Función principal
+     *
+     * Indica las opciones que hay para testear
+     */
     public static void main(String[] args) {
         System.out.println("Opciones: \n 1. Creadora \n 2. Estadisticas en formato entero \n 3. Partidas del usuario a arrayList\n 4. Salir");
         int value = readNumber();

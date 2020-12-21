@@ -4,11 +4,14 @@ package domain.controllers.drivers;
  @brief Clase  <em>DriverCtrlValidate</em>.
  */
 
-import domain.classes.Kakuro;
+import domain.classes.*;
+import domain.controllers.CtrlResolve;
 import domain.controllers.CtrlValidate;
 
 import javax.swing.*;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /** @brief Clase DriverCtrlValidate que comprueba la correctividad de las funciones del controlador CtrlValidate
  * @author Alvaro Armada Ruiz
@@ -36,12 +39,9 @@ public class DriverCtrlValidate {
 
     private  static void testValidate(String kakuroText) {
         Kakuro kakuro = new Kakuro(kakuroText);
-        CtrlValidate.setKakuro(kakuro);
-        int [] vec = new int[] {0,0,0,0,0,0,0,0,0,0};
-        int res[] = new int [1];
-        res[0] = 0;
-        CtrlValidate.validate(0,0,0,vec,res);
-        if (res[0] != 1)
+        CtrlValidate ctrlValidate = new CtrlValidate();
+        ctrlValidate.setKakuro(kakuro);
+        if (!ctrlValidate.validate())
             System.out.println("El kakuro no es valido");
         else
             System.out.println("El kakuro es valido");
@@ -66,7 +66,7 @@ public class DriverCtrlValidate {
      * Comprueba si retorna cierto si en el array a hay solamente un 1, y falso de cualquier otra manera.
      */
     private static void testIsUnique(int a[]) { //a tiene mida 9
-        if (CtrlValidate.isUnique(a)) System.out.println("Hay exactamente un 1 entre los numeros introducidos");
+        if (CtrlValidate.isUnique(a)!=0) System.out.println("Hay exactamente un 1 entre los numeros introducidos");
         else System.out.println("No hay 1's entre los numeros introducidos o bien hay mas de un 1");
     }
 
@@ -113,27 +113,6 @@ public class DriverCtrlValidate {
         }
     }
 
-    /**@Brief Test de la función computePosSums
-     * Comprueva que la función computePosSums se ejecuta correctamente y da el resultado esperado
-     *
-     * @param x es el número del cual queremos saber las combinaciones de números que suman hasta él con un número determinado de casillas
-     * @param n es el número determinado de casillas
-     * @param no indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.
-     *
-     * Comprueba si dado un valor x, un número de casillas y un valor de no, deja en un array de 9 posiciones un 1 para los números que aparezcan en las combinacione y un 0 para aquellos que no
-     */
-    private static void testComputePosSums(int x, int n, int no) {
-        int [] a;
-        if (no == 0) a = CtrlValidate.computePosSums(x,n,no);
-        else a = CtrlValidate.computePosSums(x,n-1,no);
-        if (no==0) System.out.println("Estos son los valores que que tienen una combinacion para sumar "+x+" en "+n+" casillas");
-        else System.out.println("Estos son los valores que que tienen una combinacion para sumar "+x+" en "+n+" casillas sabiendo que tenemos fijo el numero "+no);
-        System.out.println("Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece");
-        for (int i=0; i<9; ++i) System.out.print(a[i]+" ");
-        System.out.print("\n");
-
-    }
-
     /**@Brief Test de la función checkForNewUniques
      * Comprueva que la función checkForNewUniques se ejecuta correctamente y da el resultado esperado
      *
@@ -157,6 +136,123 @@ public class DriverCtrlValidate {
             }
             System.out.println();
         }
+    }
+
+    private static void testIntersection() {
+        System.out.println("Introduzca nueve numeros (0 o 1)");
+        int a [] = new int [9];
+        for (int i=0; i<9; ++i) a[i] = readNumber();
+
+        System.out.println("Introduzca nueve numeros (0 o 1)");
+        int b [] = new int [9];
+        for (int i=0; i<9; ++i) b[i] = readNumber();
+
+        CtrlResolve.intersection(a, b);
+
+        System.out.println("Esta es la interseccion de los dos arrays anteriores");
+        for (int i=0; i<9; ++i) System.out.println(a[i]+" ");
+    }
+
+    private static void testIniRow() {
+        System.out.println("Introduzca el numero de filas y el numero de columnas");
+        int r = readNumber(); int c = readNumber();
+        System.out.println("Introduzca un kakuro");
+        String k = readKakuro();
+        Kakuro kakuro = new Kakuro(k);
+        Cell[][] board = kakuro.getBoard();
+        System.out.println("Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. \nPor cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario");
+        int tempBoard [][][] = new int [r][c][9];
+        for (int i=0; i<r; ++i) {
+            for (int j=0; j<c; ++j) {
+                for (int z=0; z<9; ++z) tempBoard[i][j][z] = readNumber();
+            }
+        }
+        System.out.println("Introduzca las coordenadas de la casilla negra a probar");
+        int x = readNumber(); int y = readNumber();
+        System.out.println("Introduzca como de larga es la run asociada a la casilla negra");
+        int numWhiteRun = readNumber();
+
+        BlackCell b = (BlackCell) board[x][y];
+
+        Set<Pair> uniques = new HashSet<>();
+
+        CtrlResolve.iniRow(x, y, CtrlResolve.computePosSums(b.getRow(), numWhiteRun, 0), numWhiteRun, tempBoard, uniques, board);
+        System.out.println("Ha encontrado "+uniques.size()+" casillas unicas");
+        System.out.println("Asi ha quedado tempboard");
+
+        for (int i=0; i<r; ++i) {
+            for (int j=0; j<c; ++j) {
+                for (int z=0; z<9; ++z) System.out.print(tempBoard[i][j][z]+" ");
+                System.out.print("    ");
+            }
+            System.out.println();
+        }
+
+    }
+
+    private static void testSpreadUnique() {
+        System.out.println("Introduzca el numero de filas y el numero de columnas");
+        int r = readNumber(); int c = readNumber();
+        System.out.println("Introduzca un kakuro");
+        String k = readKakuro();
+        Kakuro kakuro = new Kakuro(k);
+        Cell[][] board = kakuro.getBoard();
+        System.out.println("Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. \nPor cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario");
+        int tempBoard [][][] = new int [r][c][9];
+        for (int i=0; i<r; ++i) {
+            for (int j=0; j<c; ++j) {
+                for (int z=0; z<9; ++z) tempBoard[i][j][z] = readNumber();
+            }
+        }
+
+        System.out.println("Introduzca cuantas casillas con valor fijado tiene el kakuro");
+        int n = readNumber();
+
+        for (int i=0; i<n; ++i) {
+            System.out.println("Introduzca las coordenadas y el valor de la casilla blanca con valor unico");
+            int x = readNumber(); int y = readNumber(); int v = readNumber();
+            WhiteCell w = (WhiteCell) board[x][y];
+            w.setCorrectValue(v);
+        }
+
+        System.out.println("Introduzca las coordenadas de la casilla blanca unica a probar");
+        int x = readNumber(); int y = readNumber();
+
+        BlackCell b = (BlackCell) board[x][y];
+
+        Set<Pair> uniques = new HashSet<>();
+
+        CtrlResolve.spreadUnique(x, y, tempBoard, board, uniques);
+        System.out.println("Ha encontrado "+uniques.size()+" casillas unicas");
+        System.out.println("Asi ha quedado tempboard");
+
+        for (int i=0; i<r; ++i) {
+            for (int j=0; j<c; ++j) {
+                for (int z=0; z<9; ++z) System.out.print(tempBoard[i][j][z]+" ");
+                System.out.print("    ");
+            }
+            System.out.println();
+        }
+    }
+
+    /**@Brief Test de la función computePosSums
+     * Comprueba que la función computePosSums se ejecuta correctamente y da el resultado esperado
+     *
+     *
+     * Comprueba si dado un valor x, un número de casillas y un valor de no, deja en un array de 9 posiciones un 1 para los números que aparezcan en las combinacione y un 0 para aquellos que no
+     */
+    private static void testComputePosSums() {
+        System.out.println("Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.\n ");
+        int x = readNumber(); int n = readNumber(); int no = readNumber();
+        int [] a;
+        if (no == 0) a = CtrlValidate.computePosSums(x,n,no);
+        else a = CtrlValidate.computePosSums(x,n-1,no);
+        if (no==0) System.out.println("Estos son los valores que que tienen una combinacion para sumar "+x+" en "+n+" casillas");
+        else System.out.println("Estos son los valores que que tienen una combinacion para sumar "+x+" en "+n+" casillas sabiendo que tenemos fijo el numero "+no);
+        System.out.println("Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece");
+        for (int i=0; i<9; ++i) System.out.print(a[i]+" ");
+        System.out.print("\n");
+
     }
 
     /** @brief Función principal
@@ -222,10 +318,8 @@ public class DriverCtrlValidate {
                     testValidatePosSums(tempBoard, posCombs, length, row, i, j);
                     break;
                 case 7:
-                    System.out.println("Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.\n ");
-                    int e = readNumber(); int c = readNumber(); int no = readNumber();
                     System.out.println("Se llama a computePosSums");
-                    testComputePosSums(e, c, no);
+                    testComputePosSums();
                     break;
                 case 8:
                     System.out.println("Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar");
@@ -243,6 +337,21 @@ public class DriverCtrlValidate {
                     }
                     System.out.println("Se llama a checkForNewUniques");
                     testCheckForNewUniques(tempBoardd, kakuro);
+                    break;
+                case 9:
+                    System.out.println();
+                    System.out.println("Se llama a intersection");
+                    testIntersection();
+                    break;
+                case 10:
+                    System.out.println();
+                    System.out.println("Se llama a iniRow");
+                    testIniRow();
+                    break;
+                case 11:
+                    System.out.println();
+                    System.out.println("Se llama a spreadUnique");
+                    testSpreadUnique();
                     break;
                 default:
                     System.out.println("El número introduciodo es incorrecto");

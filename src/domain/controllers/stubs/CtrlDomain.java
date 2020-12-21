@@ -106,4 +106,9 @@ public class CtrlDomain extends domain.controllers.CtrlDomain {
     public void updateStatsPlayer() {
         System.out.println("Update stats");
     }
+
+    @Override
+    public String searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) throws IOException, IndexOutOfBoundsException, NumberFormatException {
+        return super.searchKakuro(difficulty, kakuroSizeRow, kakuroSizeColumn);
+    }
 }

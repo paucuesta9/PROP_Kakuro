@@ -761,10 +761,7 @@ public class CtrlGenerate {
         }
         currentKakuro = new Kakuro(0,0, board);
         CtrlValidate.setKakuro(currentKakuro);
-        int[] vec = {0,0,0,0,0,0,0,0,0,0};
-        int[] res = new int[1];
-        CtrlValidate.validate(0,0,0,vec,res);
-        if(res[0] == 1) {
+        if(CtrlValidate.validate()) {
             return true;
         }
         else return false;

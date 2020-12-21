@@ -8,17 +8,33 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/** @file DriverWinsRanking.java
+ * @class DriverWinsRanking
+ *
+ */
+
+/**
+ * @brief Clase DriverWinsRanking que comprueba la correctividad de las funciones de winsRanking
+ * @author --------
+ */
+
 public class DriverWinsRanking {
 
     private static Scanner reader = new Scanner(System.in);
 
 
+    /** @brief Test de la creadora
+     *
+     */
     private static void testCreadora() {
         CtrlDomain cdStub = new CtrlDomain();
         WinsRanking winsRanking = new WinsRanking(cdStub);
         System.out.println("Se ha creado");
     }
 
+    /** @brief test que comprueba que se ordenan los jugadores segun kakuros creados
+     *
+     */
     private static void testGetList() {
         System.out.println("Se ordenan los jugadores segun victorias");
 
@@ -34,6 +50,11 @@ public class DriverWinsRanking {
             System.out.println();
         }
     }
+
+    /** @brief Función principal
+     *
+     * Indica las opciones que hay para testear
+     */
 
     public static void main(String[] args) {
         System.out.println("Opciones: \n 1. Creadora \n 2. Lista ordenada de jugadores por victorias \n 3. Salir");

@@ -40,7 +40,7 @@ public class CtrlResolve {
      *
      */
 
-    public static void computePosSumsRec(int arr[], int index, int reducedNum, int lim, int posSums[], int no) {
+    private static void computePosSumsRec(int arr[], int index, int reducedNum, int lim, int posSums[], int no) {
         if (reducedNum < 0 || index > lim)
             return;
 
@@ -122,7 +122,7 @@ public class CtrlResolve {
         }
     }
 
-    public static void spreadUniqueCol(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
+    private static void spreadUniqueCol(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
         int up = 0;
         int down = 0;
         while (i+1+down < board.length && board[i+1+down][j].isWhite()) ++down;
@@ -150,7 +150,7 @@ public class CtrlResolve {
 
     }
 
-    public static void spreadUniqueRow(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
+    private static void spreadUniqueRow(int i, int j, int [][][] tempBoard, Cell [][] board, Set<Pair> uniques) {
         int left = 0;
         int right = 0;
         while (board[i][j-1-left].isWhite()) ++left;
@@ -230,7 +230,7 @@ public class CtrlResolve {
         return resolveRecursive(0,0,0, tmp, tempBoard);
     }
 
-    public static boolean resolveRecursive(int r, int c, int sum, int [] vec, int [][][] tempBoard) {
+    private static boolean resolveRecursive(int r, int c, int sum, int [] vec, int [][][] tempBoard) {
         if( r == kakuro.getRowSize() ) { return true; } //hemos llegado al final, la solucion es correcta
         else {
             Cell[][] board = kakuro.getBoard();
