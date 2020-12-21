@@ -52,34 +52,38 @@ public class Kakuro {
      *
      * @param kakuro Es un String de un fichero entero de un Kakuro
      */
-    public Kakuro(String kakuro) {
+    public Kakuro(String kakuro) throws NumberFormatException {
         String[] values = kakuro.split("\n");
         String[] valuesSize = values[0].split(",");
         rowSize = Integer.parseInt(valuesSize[0]);
         columnSize = Integer.parseInt(valuesSize[1]);
         board = new Cell[rowSize][columnSize];
-        for (int i = 0; i < rowSize; ++i) {
-            String[] valuesRow = values[i + 1].split(",");
-            for (int j = 0; j < columnSize; ++j) {
-                if (valuesRow[j].equals("*")) board[i][j] = new BlackCell();
-                else if (valuesRow[j].equals("?")) board[i][j] = new WhiteCell();
-                else if (valuesRow[j].charAt(0) == 'C' || valuesRow[j].charAt(0) == 'F') {
-                    int vertical = 0, horizontal = 0;
-                    if (valuesRow[j].charAt(0) == 'C') {
-                        valuesRow[j] = valuesRow[j].substring(1);
-                        if (valuesRow[j].contains("F")) {
-                            String[] CF = valuesRow[j].split("F");
-                            vertical = Integer.parseInt(CF[0]);
-                            horizontal = Integer.parseInt(CF[1]);
+        try {
+            for (int i = 0; i < rowSize; ++i) {
+                String[] valuesRow = values[i + 1].split(",");
+                for (int j = 0; j < columnSize; ++j) {
+                    if (valuesRow[j].equals("*")) board[i][j] = new BlackCell();
+                    else if (valuesRow[j].equals("?")) board[i][j] = new WhiteCell();
+                    else if (valuesRow[j].charAt(0) == 'C' || valuesRow[j].charAt(0) == 'F') {
+                        int vertical = 0, horizontal = 0;
+                        if (valuesRow[j].charAt(0) == 'C') {
+                            valuesRow[j] = valuesRow[j].substring(1);
+                            if (valuesRow[j].contains("F")) {
+                                String[] CF = valuesRow[j].split("F");
+                                vertical = Integer.parseInt(CF[0]);
+                                horizontal = Integer.parseInt(CF[1]);
+                            } else {
+                                vertical = Integer.parseInt(valuesRow[j]);
+                            }
                         } else {
-                            vertical = Integer.parseInt(valuesRow[j]);
+                            horizontal = Integer.parseInt(valuesRow[j].substring(1));
                         }
-                    } else {
-                        horizontal = Integer.parseInt(valuesRow[j].substring(1));
-                    }
-                    board[i][j] = new BlackCell(vertical, horizontal);
-                } else board[i][j] = new WhiteCell(Integer.parseInt(valuesRow[j]));
+                        board[i][j] = new BlackCell(vertical, horizontal);
+                    } else board[i][j] = new WhiteCell(Integer.parseInt(valuesRow[j]));
+                }
             }
+        } catch (NumberFormatException e) {
+            throw new NumberFormatException();
         }
     }
 

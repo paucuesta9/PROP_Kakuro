@@ -263,16 +263,20 @@ public class Create {
                     if (absolutePath.contains(System.getProperty("user.dir")))
                         Utils.showError("Por favor, indique un Kakuro suyo y no de la base de datos de la aplicación");
                     else {
-                        numRow.setFocusable(false);
-                        numColumn.setFocusable(false);
-                        ctrlUI.findKakuro(absolutePath);
-                        aceptar.setVisible(false);
-                        textSize.setVisible(false);
-                        setBoard(ctrlUI.getKakuro());
-                        sizeRow = kBoard.getRowSize();
-                        sizeColumn = kBoard.getColumnSize();
-                        numRow.setText(String.valueOf(sizeRow));
-                        numColumn.setText(String.valueOf(sizeColumn));
+                        try {
+                            numRow.setFocusable(false);
+                            numColumn.setFocusable(false);
+                            ctrlUI.findKakuro(absolutePath);
+                            aceptar.setVisible(false);
+                            textSize.setVisible(false);
+                            setBoard(ctrlUI.getKakuro());
+                            sizeRow = kBoard.getRowSize();
+                            sizeColumn = kBoard.getColumnSize();
+                            numRow.setText(String.valueOf(sizeRow));
+                            numColumn.setText(String.valueOf(sizeColumn));
+                        } catch (NumberFormatException exception) {
+                            Utils.showError("El fichero contiene carácteres no permitidos");
+                        }
                     }
                 }
             }

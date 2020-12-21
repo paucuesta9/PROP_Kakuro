@@ -170,7 +170,7 @@ public class CtrlUI {
         return cd.getCorrectKakuroToString();
     }
 
-    public void findKakuro(String path) {
+    public void findKakuro(String path) throws NumberFormatException {
         try {
             String kakuro = cd.getKakuro(path);
             cd.setKakuro(kakuro);

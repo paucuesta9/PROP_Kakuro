@@ -424,7 +424,7 @@ public class CtrlDomain {
      * @brief Asocia el kakuro pasado por parametro al controlador
      * @param kakuro string que representa el kakuro que se asociará
      */
-    public void setKakuro(String kakuro) {
+    public void setKakuro(String kakuro) throws NumberFormatException {
         currentKakuro = new Kakuro(kakuro);
     }
 
