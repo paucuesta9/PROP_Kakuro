@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 /** @file Create.java
  @class Create
@@ -113,10 +114,10 @@ public class Create {
                 popupMenuOnlyBlackLeft.setVisible(false);
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
-                cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(1);
                 int[] value = setValues.drawSetValues();
-                if (value[0] != -1) {
+                if (value[0] > 0 && value[0] < 10) {
+                    cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
                     ((KakuroWhiteCell) cells[pos]).setValue(value[0]);
                     GridBagConstraints c = new GridBagConstraints();
                     c.weightx = 1.0;
@@ -143,10 +144,10 @@ public class Create {
                 popupMenuOnlyBlackLeft.setVisible(false);
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
-                cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(2);
                 int[] value = setValues.drawSetValues();
                 if (value[0] != -1) {
+                    cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                     ((KakuroBlackCell) cells[pos]).setRow(value[0]);
                     ((KakuroBlackCell) cells[pos]).setColumn(value[1]);
                     GridBagConstraints c = new GridBagConstraints();
@@ -173,10 +174,10 @@ public class Create {
                 popupMenuOnlyBlackLeft.setVisible(false);
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
-                cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                 SetValues setValues = new SetValues(3);
                 int[] value = setValues.drawSetValues();
                 if (value[0] != -1) {
+                    cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                     ((KakuroBlackCell) cells[pos]).setRow(value[0]);
                     GridBagConstraints c = new GridBagConstraints();
                     c.weightx = 1.0;
@@ -202,11 +203,11 @@ public class Create {
                 popupMenuOnlyBlackLeft.setVisible(false);
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
-                cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                 if (posY != 0) {
                     SetValues setValues = new SetValues(4);
                     int[] value = setValues.drawSetValues();
                     if (value[0] != -1) {
+                        cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                         ((KakuroBlackCell) cells[pos]).setColumn(value[0]);
                         GridBagConstraints c = new GridBagConstraints();
                         c.weightx = 1.0;
@@ -221,6 +222,7 @@ public class Create {
                         listenersCells();
                     }
                 } else {
+                    cells[pos] = new KakuroBlackCell(posX, posY, cells[pos].getSize().width);
                     GridBagConstraints c = new GridBagConstraints();
                     c.weightx = 1.0;
                     c.weighty = 1.0;
@@ -245,8 +247,51 @@ public class Create {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Config config = new Config();
-                config.drawConfig();
+                Config configMen = new Config();
+                configMen.drawConfig();
+                configMen.addWindowListener(new WindowListener() {
+                    @Override
+                    public void windowOpened(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosing(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowClosed(WindowEvent e) {
+                        String kakuroBoard = null;
+                        try {
+                            kakuroBoard = ((KakuroBoard) board.getComponent(0)).boardToString(0);
+                        } catch (NoTypeCellException noTypeCellException) {
+                            noTypeCellException.printStackTrace();
+                        }
+                        board.removeAll();
+                        setBoard(kakuroBoard);
+                    }
+
+                    @Override
+                    public void windowIconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeiconified(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowActivated(WindowEvent e) {
+
+                    }
+
+                    @Override
+                    public void windowDeactivated(WindowEvent e) {
+
+                    }
+                });
             }
         });
 

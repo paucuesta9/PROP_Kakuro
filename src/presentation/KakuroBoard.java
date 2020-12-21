@@ -57,7 +57,9 @@ public class KakuroBoard extends JPanel {
                         horizontal = Integer.parseInt(valuesRow[j].substring(1));
                     }
                     add(new KakuroBlackCell(i, j, horizontal, vertical, size), c);
-                } else add(new KakuroWhiteCell(i, j, Integer.parseInt(valuesRow[j]), size), c);
+                } else if (valuesRow[j].equals("k"))
+                    add(new KakuroCell(i, j, size), c);
+                else add(new KakuroWhiteCell(i, j, Integer.parseInt(valuesRow[j]), size), c);
             }
         }
     }
@@ -85,6 +87,8 @@ public class KakuroBoard extends JPanel {
                     }
                     if (bc.getColumn() != 0) content.append("C" + bc.getColumn());
                     if (bc.getRow() != 0) content.append("F" + bc.getRow());
+                } else if (screen == 0) {
+                    content.append("k");
                 } else throw new NoTypeCellException();
                 if (j != columnSize - 1) content.append(",");
             }
