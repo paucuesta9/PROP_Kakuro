@@ -288,6 +288,7 @@ CtrlPlay {
      * @return cierto si se ha insertado el valor
      */
     public boolean setValue(int x, int y, int value) {
+        currentGame.removeHelp(x, y);
         return currentKakuro.setValue(x, y, value);
     }
 

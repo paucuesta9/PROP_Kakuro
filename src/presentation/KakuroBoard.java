@@ -62,7 +62,7 @@ public class KakuroBoard extends JPanel {
         }
     }
 
-    public String boardToString() throws NoTypeCellException {
+    public String boardToString(int screen) throws NoTypeCellException {
         StringBuilder content = new StringBuilder();
         String line;
         line = rowSize + "," + columnSize;
@@ -71,7 +71,12 @@ public class KakuroBoard extends JPanel {
             for (int j = 0; j < columnSize; ++j) {
                 int pos = i * columnSize + j;
                 if (getComponent(pos) instanceof KakuroWhiteCell) {
-                    content.append("?");
+                    if (screen == 1) content.append("?");
+                    else {
+                        KakuroWhiteCell w = ((KakuroWhiteCell) getComponent(pos));
+                        if (w.getValue() != 0) content.append(w.getValue());
+                        else content.append("?");
+                    }
                 }
                 else if (getComponent(pos) instanceof KakuroBlackCell) {
                     KakuroBlackCell bc = (KakuroBlackCell) getComponent(pos);

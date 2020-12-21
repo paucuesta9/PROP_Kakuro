@@ -258,6 +258,20 @@ public class Game {
         helps.add(posX + "_" + posY + "_" + isCorrect);
     }
 
+    /**  @brief Eliminar una ayuda a helps si existia
+     *
+     * @param posX representa la posición de la celda respecto a las filas
+     * @param posY representa la posición de la celda respecto a las columnas
+     */
+    public void removeHelp(int posX, int posY) {
+        for (int i = 0; i < helps.size(); ++i) {
+            if (helps.get(i).contains(posX + "_" + posY)) {
+                helps.remove(i);
+                break;
+            }
+        }
+    }
+
     /** @brief Lista los atributos de una partida
      *
      * @return la lista de los atributos de una partida

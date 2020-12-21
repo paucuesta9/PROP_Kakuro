@@ -216,6 +216,11 @@ public class Config extends JDialog {
                 if (color != null) {
                     Utils.colorIncorrectCell = color;
                     incPanel.setBackground(Utils.colorIncorrectCell);
+                    int r = Utils.colorIncorrectCell.getRed();
+                    int g = Utils.colorIncorrectCell.getGreen();
+                    int b = Utils.colorIncorrectCell.getBlue();
+                    int a = Utils.colorIncorrectCell.getAlpha();
+                    Utils.colorIncorrectHelp1Cell = new Color(r + 1, g, b, a);
                 }
             }
         });

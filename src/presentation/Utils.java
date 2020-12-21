@@ -30,6 +30,7 @@ public class Utils {
     public static Color colorNumbersWhiteCell = Color.decode("#000000");
     public static Color colorCorrectCell = Color.decode("#00FF00");
     public static Color colorIncorrectCell = Color.decode("#E53935");
+    public static Color colorIncorrectHelp1Cell = Color.decode("#E63935");
     public static Color colorSelCell = Color.decode("#64b5f6");
     public static Color colorBorde = Color.decode("#808080");
     public static ImageIcon logo = new ImageIcon(Utils.class.getClassLoader().getResource("images/logo.png"));
@@ -176,6 +177,11 @@ public class Utils {
         colorNumbersWhiteCell = Color.decode(config.get(3));
         colorCorrectCell = Color.decode(config.get(4));
         colorIncorrectCell = Color.decode(config.get(5));
+        int r = colorIncorrectCell.getRed();
+        int g = colorIncorrectCell.getGreen();
+        int b = colorIncorrectCell.getBlue();
+        int a = colorIncorrectCell.getAlpha();
+        colorIncorrectHelp1Cell = new Color(r + 1, g, b, a);
         colorSelCell = Color.decode(config.get(6));
         colorBorde = Color.decode(config.get(7));
         volume = Integer.parseInt(config.get(8));

@@ -356,7 +356,7 @@ public class Create {
             public void actionPerformed(ActionEvent e) {
                 String boardKakuro = null;
                 try {
-                    boardKakuro = ((KakuroBoard) board.getComponent(0)).boardToString();
+                    boardKakuro = ((KakuroBoard) board.getComponent(0)).boardToString(1);
                     ctrlUI.setKakuro(boardKakuro);
                     if (!ctrlUI.validate()) {
                         Utils.showError("El kakuro creado no es válido");

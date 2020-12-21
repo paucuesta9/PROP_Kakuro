@@ -230,7 +230,7 @@ public class Play {
                     if (result != -1) {
                         KakuroWhiteCell w = (KakuroWhiteCell) sg.getComponent(posX * columnSize + posY);
                         if (result == 1) w.setBackground(Utils.colorCorrectCell);
-                        else if (result == 0) w.setBackground(Utils.colorIncorrectCell);
+                        else if (result == 0) w.setBackground(Utils.colorIncorrectHelp1Cell);
                     }
                     isFinished = ctrlPlayUI.isFinished();
                     if (isFinished) {
@@ -345,7 +345,7 @@ public class Play {
                             }
                         }
                         try {
-                            sg = new KakuroBoard(sg.boardToString());
+                            sg = new KakuroBoard(sg.boardToString(0));
                         } catch (NoTypeCellException noTypeCellException) {
                             noTypeCellException.printStackTrace();
                         }
@@ -357,6 +357,16 @@ public class Play {
                             }
                         }
                         components = sg.getComponents();
+                        ArrayList<String> helps = ctrlPlayUI.getHelps();
+                        for (int i = 0; i < components.length; ++i) {
+                            if (components[i] instanceof KakuroWhiteCell)
+                                checkValidityCell(((KakuroWhiteCell) components[i]), ((KakuroWhiteCell) components[i]).getPosX(), ((KakuroWhiteCell) components[i]).getPosY());
+                        }
+                        for (int i = 0; i < helps.size(); ++i) {
+                            String help = helps.get(i);
+                            String[] valuesHelp = help.split("_");
+                            components[Integer.parseInt(valuesHelp[0]) * columnSize + Integer.parseInt(valuesHelp[1])].setBackground(((Integer.parseInt(valuesHelp[2]) == 1) ? Utils.colorCorrectCell : Utils.colorIncorrectHelp1Cell));
+                        }
                         setListenerBoard();
                     }
 
@@ -406,9 +416,9 @@ public class Play {
 
                     @Override
                     public void focusLost(FocusEvent e) {
-                        if (!cell.getBackground().equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell))
+                        if (!cell.getBackground().equals(Utils.colorIncorrectHelp1Cell) && !cell.getBackground().equals(Utils.colorCorrectCell))
                             cell.setBackground(color);
-                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectCell) && !cell.getBackground().equals(Utils.colorCorrectCell))
+                        if (value != cell.getValue() && color.equals(Utils.colorIncorrectHelp1Cell) && !cell.getBackground().equals(Utils.colorCorrectCell))
                             cell.setBackground(Utils.colorWhiteCell);
                         if (!pencilON && !isFinished) checkValidityCell(cell, posX, posY);
                         if (!pencilON) checkContinousCells(posX, posY);
@@ -467,7 +477,7 @@ public class Play {
                         if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
                         if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
                         if (keyCode == KeyEvent.VK_DELETE || keyCode == KeyEvent.VK_BACK_SPACE) value = 0; //tecla para borrar
-                        if (value != -1) {
+                        if (value != -1 && value != cell.getValue()) {
                             if (pencilON) {
                                 cell.setPencil(value);
                                 ctrlPlayUI.setValue(posX, posY, 0);
@@ -595,7 +605,7 @@ public class Play {
      * @brief Pinta las casillas dependiendo de la validez de su valor
      */
     private void checkValidityCell(KakuroWhiteCell cell, int positionX, int positionY) {
-        if (cell.getBackground() != Utils.colorCorrectCell) {
+        if (cell.getBackground() != Utils.colorCorrectCell && cell.getBackground() != Utils.colorIncorrectHelp1Cell) {
             if (cell.getValue() != 0 && !ctrlPlayUI.checkValidity(positionX, positionY, cell.getValue())) {
                 cell.setBackground(Utils.colorIncorrectCell);
             } else cell.setBackground(Utils.colorWhiteCell);
