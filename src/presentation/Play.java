@@ -470,6 +470,7 @@ public class Play {
                         if (value != -1) {
                             if (pencilON) {
                                 cell.setPencil(value);
+                                ctrlPlayUI.setValue(posX, posY, 0);
                             } else {
                                 cell.setBackground(Utils.colorSelCell);
                                 cell.setValue(value);
@@ -536,6 +537,8 @@ public class Play {
     private void finishGame(boolean selfFinished) {
         stopTimer();
         if (!training) {
+            for (int i = 0; i < components.length; ++i)
+                if (components[i] instanceof KakuroWhiteCell) ((KakuroWhiteCell) components[i]).setBackground(Utils.colorWhiteCell);
             ctrlPlayUI.setTimeToGame(gameTime);
             int points = ctrlPlayUI.finishGame(selfFinished);
             if (selfFinished) {

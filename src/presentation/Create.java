@@ -15,8 +15,9 @@ import java.awt.event.*;
  @class Create
  */
 
-/** @brief Pantalla que permite crear un kakuro
+/**
  * @author ---------------
+ * @brief Pantalla que permite crear un kakuro
  */
 
 public class Create {
@@ -113,17 +114,22 @@ public class Create {
                 popupMenuOnlyBlackTop.setVisible(false);
                 int pos = posX * sizeColumn + posY;
                 cells[pos] = new KakuroWhiteCell(posX, posY, cells[pos].getSize().width);
-                GridBagConstraints c = new GridBagConstraints();
-                c.weightx = 1.0;
-                c.weighty = 1.0;
-                c.fill = GridBagConstraints.BOTH;
-                c.gridx = posY;
-                c.gridy = posX;
-                kBoard.remove(pos);
-                kBoard.add(cells[pos], c, pos);
-                kBoard.validate();
-                board.validate();
-                listenersCells();
+                SetValues setValues = new SetValues(1);
+                int[] value = setValues.drawSetValues();
+                if (value[0] != -1) {
+                    ((KakuroWhiteCell) cells[pos]).setValue(value[0]);
+                    GridBagConstraints c = new GridBagConstraints();
+                    c.weightx = 1.0;
+                    c.weighty = 1.0;
+                    c.fill = GridBagConstraints.BOTH;
+                    c.gridx = posY;
+                    c.gridy = posX;
+                    kBoard.remove(pos);
+                    kBoard.add(cells[pos], c, pos);
+                    kBoard.validate();
+                    board.validate();
+                    listenersCells();
+                }
                 panel1.requestFocus();
             }
         });
@@ -154,8 +160,8 @@ public class Create {
                     kBoard.validate();
                     board.validate();
                     listenersCells();
-                    panel1.requestFocus();
                 }
+                panel1.requestFocus();
             }
         });
 
@@ -183,8 +189,8 @@ public class Create {
                     kBoard.validate();
                     board.validate();
                     listenersCells();
-                    panel1.requestFocus();
                 }
+                panel1.requestFocus();
             }
         });
 
@@ -321,8 +327,10 @@ public class Create {
             public void actionPerformed(ActionEvent e) {
                 if (numRow.getText().isEmpty() || numColumn.getText().isEmpty()) {
                     Utils.showError("No se ha indicado alguno de los tamaños solicitados");
-                } else if (Integer.valueOf(numRow.getText()) < 3 || Integer.valueOf(numColumn.getText()) < 3) {
+                } else if (Integer.parseInt(numRow.getText()) < 3 || Integer.parseInt(numColumn.getText()) < 3) {
                     Utils.showError("El tamaño debe ser mínimo 3x3");
+                } else if (Integer.parseInt(numRow.getText()) > 60 || Integer.parseInt(numColumn.getText()) > 60) {
+                    Utils.showError("El tamaño debe ser máximo 60");
                 } else {
                     numRow.setFocusable(false);
                     numColumn.setFocusable(false);
@@ -433,72 +441,6 @@ public class Create {
                         cells[finalI].setBackground(color);
                 }
             });
-            if (cells[i] instanceof KakuroWhiteCell) {
-                KakuroWhiteCell whiteCell = (KakuroWhiteCell) cells[i];
-                whiteCell.addKeyListener(new KeyListener() {
-                    @Override
-                    public void keyTyped(KeyEvent e) {
-
-                    }
-
-                    @Override
-                    public void keyPressed(KeyEvent e) {
-
-                    }
-
-                    @Override
-                    public void keyReleased(KeyEvent e) {
-                        int value = 0;
-                        int keyCode = e.getKeyCode();
-                        if (keyCode == KeyEvent.VK_1 || keyCode == KeyEvent.VK_NUMPAD1) value = 1;
-                        if (keyCode == KeyEvent.VK_2 || keyCode == KeyEvent.VK_NUMPAD2) value = 2;
-                        if (keyCode == KeyEvent.VK_3 || keyCode == KeyEvent.VK_NUMPAD3) value = 3;
-                        if (keyCode == KeyEvent.VK_4 || keyCode == KeyEvent.VK_NUMPAD4) value = 4;
-                        if (keyCode == KeyEvent.VK_5 || keyCode == KeyEvent.VK_NUMPAD5) value = 5;
-                        if (keyCode == KeyEvent.VK_6 || keyCode == KeyEvent.VK_NUMPAD6) value = 6;
-                        if (keyCode == KeyEvent.VK_7 || keyCode == KeyEvent.VK_NUMPAD7) value = 7;
-                        if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
-                        if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
-                        if (value != 0) {
-                            whiteCell.setBackground(Color.decode(Utils.colorSelectedCell));
-                            whiteCell.setValue(value);
-                        }
-                    }
-                });
-            }
-            if (cells[i] instanceof KakuroBlackCell) {
-                KakuroBlackCell blackCell = (KakuroBlackCell) cells[i];
-                blackCell.addKeyListener(new KeyListener() {
-                    @Override
-                    public void keyTyped(KeyEvent e) {
-
-                    }
-
-                    @Override
-                    public void keyPressed(KeyEvent e) {
-
-                    }
-
-                    @Override
-                    public void keyReleased(KeyEvent e) {
-                        int value = 0;
-                        int keyCode = e.getKeyCode();
-                        if (keyCode == KeyEvent.VK_1 || keyCode == KeyEvent.VK_NUMPAD1) value = 1;
-                        if (keyCode == KeyEvent.VK_2 || keyCode == KeyEvent.VK_NUMPAD2) value = 2;
-                        if (keyCode == KeyEvent.VK_3 || keyCode == KeyEvent.VK_NUMPAD3) value = 3;
-                        if (keyCode == KeyEvent.VK_4 || keyCode == KeyEvent.VK_NUMPAD4) value = 4;
-                        if (keyCode == KeyEvent.VK_5 || keyCode == KeyEvent.VK_NUMPAD5) value = 5;
-                        if (keyCode == KeyEvent.VK_6 || keyCode == KeyEvent.VK_NUMPAD6) value = 6;
-                        if (keyCode == KeyEvent.VK_7 || keyCode == KeyEvent.VK_NUMPAD7) value = 7;
-                        if (keyCode == KeyEvent.VK_8 || keyCode == KeyEvent.VK_NUMPAD8) value = 8;
-                        if (keyCode == KeyEvent.VK_9 || keyCode == KeyEvent.VK_NUMPAD9) value = 9;
-                        if (value != 0) {
-                            blackCell.setBackground(Color.decode(Utils.colorSelectedCell));
-                            blackCell.setRow(value);
-                        }
-                    }
-                });
-            }
         }
     }
 

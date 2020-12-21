@@ -71,9 +71,7 @@ public class KakuroBoard extends JPanel {
             for (int j = 0; j < columnSize; ++j) {
                 int pos = i * columnSize + j;
                 if (getComponent(pos) instanceof KakuroWhiteCell) {
-                    KakuroWhiteCell w = (KakuroWhiteCell) getComponent(pos);
-                    if (w.getValue() != 0) content.append(w.getValue());
-                    else content.append("?");
+                    content.append("?");
                 }
                 else if (getComponent(pos) instanceof KakuroBlackCell) {
                     KakuroBlackCell bc = (KakuroBlackCell) getComponent(pos);
