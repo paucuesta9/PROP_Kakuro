@@ -274,6 +274,7 @@ CtrlPlay {
             currentGame.setPoints(0);
         }
         points = currentGame.getPoints();
+        cd.savePlayer();
         currentGame = null;
         currentKakuro = null;
         return points;
@@ -296,7 +297,6 @@ CtrlPlay {
     public void updateStatsPlayer() {
         currentPlayer.getStats().setPoints(currentGame.getPoints());
         currentPlayer.getStats().setFinished(1);
-        cd.savePlayer();
     }
 
     /** @brief Getter de game
