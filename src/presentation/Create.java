@@ -247,6 +247,9 @@ public class Create {
         config.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 Config configMen = new Config();
                 configMen.drawConfig();
                 configMen.addWindowListener(new WindowListener() {
@@ -298,6 +301,9 @@ public class Create {
         ImportButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 JFileChooser chooser = new JFileChooser();
                 FileNameExtensionFilter filter = new FileNameExtensionFilter(
                         "TXT Files", "txt");
@@ -349,6 +355,15 @@ public class Create {
             }
         });
 
+        numRow.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
+            }
+        });
+
         numColumn.addKeyListener(new KeyListener() {
             @Override
             public void keyTyped(KeyEvent e) {
@@ -371,9 +386,21 @@ public class Create {
             }
         });
 
+        numColumn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
+            }
+        });
+
         aceptar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 if (numRow.getText().isEmpty() || numColumn.getText().isEmpty()) {
                     Utils.showError("No se ha indicado alguno de los tamaños solicitados");
                 } else if (Integer.parseInt(numRow.getText()) < 3 || Integer.parseInt(numColumn.getText()) < 3) {
@@ -399,6 +426,9 @@ public class Create {
         confirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 String boardKakuro = null;
                 try {
                     boardKakuro = ((KakuroBoard) board.getComponent(0)).boardToString(1);
@@ -419,7 +449,39 @@ public class Create {
         cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
                 ctrlUI.toMain();
+            }
+        });
+
+        panel1.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                popupMenu.setVisible(false);
+                popupMenuOnlyBlackLeft.setVisible(false);
+                popupMenuOnlyBlackTop.setVisible(false);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
             }
         });
     }
