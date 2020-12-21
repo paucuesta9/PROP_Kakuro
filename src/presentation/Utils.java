@@ -181,7 +181,8 @@ public class Utils {
         int g = colorIncorrectCell.getGreen();
         int b = colorIncorrectCell.getBlue();
         int a = colorIncorrectCell.getAlpha();
-        colorIncorrectHelp1Cell = new Color(r + 1, g, b, a);
+        if (r == 255) colorIncorrectHelp1Cell = new Color(r - 1, g, b, a);
+        else colorIncorrectHelp1Cell = new Color(r + 1, g, b, a);
         colorSelCell = Color.decode(config.get(6));
         colorBorde = Color.decode(config.get(7));
         volume = Integer.parseInt(config.get(8));
