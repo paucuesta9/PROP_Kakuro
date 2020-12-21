@@ -280,7 +280,9 @@ public class DriverCtrlGenerate {
         System.out.println("Introduce un kakuro con celdas blancas y negras sin sumas: ");
         String kakuroString = readKakuro();
         currentKakuro = new Kakuro(kakuroString);
-        boolean b = CtrlGenerate.fillBoard(currentKakuro.getBoard(),0);
+        CtrlGenerate cg = new CtrlGenerate();
+        cg.initializeMat();
+        boolean b = cg.fillBoard(currentKakuro.getBoard(),0);
         if( b ) System.out.println("Se ha podido generar un kakuro unico con este tablero");
         else System.out.println("No se ha podido generar un kakuro unico con este tablero");
     }
@@ -398,6 +400,9 @@ public class DriverCtrlGenerate {
         else System.out.println("El tablero no es conexo");
     }
 
+    /**@brief Test de la función checkRunsH
+     * Comprueba si la función checkRunsH detecta correctamente cuando hay una run horizontal de mas de 9 celdas blancas
+     */
     private static void testCheckRunsH() {
         System.out.println("Escribe el kakuro para realizar el test");
         String kakuroString = readKakuro();
@@ -407,6 +412,9 @@ public class DriverCtrlGenerate {
         else System.out.println("Kakuro incorrecto");
     }
 
+    /**@brief Test de la función checkRunsV
+     * Comprueba si la función checkRunsV detecta correctamente cuando hay una run vertical de mas de 9 celdas blancas
+     */
     private static void testCheckRunsV() {
         System.out.println("Escribe el kakuro para realizar el test");
         String kakuroString = readKakuro();

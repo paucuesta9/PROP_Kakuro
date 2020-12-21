@@ -21,36 +21,40 @@ import java.util.Scanner;
 public class DriverCtrlPlay {
     private static Scanner reader = new Scanner((System.in));
 
-    /** @brief Test del startGame
-     *
-     * Comprueba que la función startGame se ejecute correctamente
-     * @param kakuroText representa el kakuro con el que se jugará
+    /** @brief Test de la creadora
      */
-    private static void testStartGame(String kakuroText) {
-        Kakuro kakuro = new Kakuro(kakuroText);
-        //CtrlPlay.startGame(kakuro);
-        System.out.println("Se ha empezado una partida");
+    private static void testCtrlPlay1() {
+        CtrlDomain cdStub = new CtrlDomain();
+        CtrlPlay play = new CtrlPlay(0,9,9,cdStub);
+        System.out.println("Se ha creado");
     }
 
-    /** @brief Test de la función helpMyValue
-     *
-     * Comprueba que la función helpMyValue se ejecute correctamente
-     * @param kakuro1 representa el kakuro hecho por el usuario
-     * @param kakuroSol representa el kakuro con esa posición resuelta
-     * @param x representa el número de fila de la celda que quiere comprobar
-     * @param y representa el número de columna de la celda que quiere comprobar
+    /** @brief Test de la creadora
      */
-    private static void testHelpMyValue(String kakuro1, String kakuroSol, int x, int y) {
+    private static void testCtrlPlay2() {
         CtrlDomain cdStub = new CtrlDomain();
-        Player p = cdStub.getCurrentPlayer();
-        /*Kakuro k = new Kakuro(kakuro1);
-        Kakuro kSol = new Kakuro(kakuroSol);
-        Cell[][] board = k.getBoard();
-        Cell[][] boardSol = kSol.getBoard();
-        if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
-        //CtrlPlay.startGame(k);*/
+        CtrlPlay play = new CtrlPlay("alvaroFeardo\\diff1\\3_3\\0.txt",cdStub);
+        System.out.println("Se ha creado");
+    }
 
-        int result = 0;// = CtrlPlay.helpMyValue(x,y);
+    private static void testCtrlPlay3() {
+
+    }
+
+
+    /** @brief Test de la función helpMyValue
+     * Comprueba si la función helpMyValue detecta adecuadamente un valor correcto
+     */
+    private static void testHelpMyValue() {
+        CtrlDomain cdStub = new CtrlDomain();
+        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        System.out.println("Introduce la fila de la celda:");
+        int x = readNumber();
+        System.out.println("Introduce la columna de la celda:");
+        int y = readNumber();
+        System.out.println();
+
+        int result = p.helpMyValue(x,y);
         if (result == -2) System.out.println("La celda no tiene un valor asignado");
         else if (result == -1) System.out.println("La celda no es blanca");
         else if (result == 0) System.out.println("El valor no es correcto");
@@ -58,22 +62,32 @@ public class DriverCtrlPlay {
     }
 
     /** @brief Test de la función helpCorrectNumber
-     *
-     * Comprueba que la función helpCorrectNumber se ejecute correctamente
-     * @param kakuro1 representa el kakuro hecho por el usuario
-     * @param x representa el número de fila de la celda que quiere comprobar
-     * @param y representa el número de columna de la celda que quiere comprobar
+     *  Comprueba que se retorna adecuadamente el valor correcto
      */
-    private static void testHelpCorrectNumber(String kakuro1, String kakuroSol, int x, int y) {
-        Kakuro k = new Kakuro(kakuro1);
-        Kakuro kSol = new Kakuro(kakuroSol);
-        Cell[][] board = k.getBoard();
-        Cell[][] boardSol = kSol.getBoard();
-        if (board[x][y].isWhite()) ((WhiteCell) board[x][y]).setCorrectValue(((WhiteCell)boardSol[x][y]).getValue());
+    private static void testHelpCorrectNumber() {
+        CtrlDomain cdStub = new CtrlDomain();
+        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        System.out.println("Introduce la fila de la celda:");
+        int x = readNumber();
+        System.out.println("Introduce la columna de la celda:");
+        int y = readNumber();
+        System.out.println();
 
-        //CtrlPlay.startGame(k);
-        //if (CtrlPlay.helpCorrectNumber(x,y)) System.out.println("El valor de la celda se ha cambiado correctamente");
-        //else System.out.println("No es una celda blanca");
+        int result = p.helpCorrectNumber(x,y);
+        if (result == 0) System.out.println("El valor no es correcto");
+        else System.out.println("El valor es correcto");
+    }
+
+    /**@brief Test de la función finishGame
+     * Comprueba que se hace correctamente su función dependiendo de si lo he resuelto el usuario o la máquina
+     */
+    private static void testFinishGame() {
+        CtrlDomain cdStub = new CtrlDomain();
+        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        System.out.println("¿Se ha pulsado el boton de resolver? (0->false, 1->true)");
+        int x = readNumber();
+        boolean b = (x==1);
+        System.out.println("Se han sumado "+p.finishGame(b)+" puntos");
     }
 
     /** @brief Función principal
@@ -81,40 +95,43 @@ public class DriverCtrlPlay {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n1. Empezar una partida \n 2. Ayuda para el valor del usuario \n 3. Ayuda para el valor correcto de una celda blanca \n 4. Salir");
+        System.out.println("Opciones: \n 1. 1ra constructora \n 2. 2da constructora \n 3. 3ra constructora \n 4. Comprobar si un valor és correcto \n 5. Retornar el valor correcto \n 6. Acabar una partida \n 7. Salir");
         int value = readNumber();
-        while (value != 4) {
+        while (value != 7) {
             int x, y;
             switch (value) {
                 case 1:
-                    System.out.println("Indique un Kakuro en el formato correcto");
-                    String kakuro = readKakuro();
-                    System.out.println("Se llama a startGame");
-                    testStartGame(kakuro);
+                    System.out.println("Constructora 1");
+                    System.out.println("Se llama a Constructora 1");
+                    testCtrlPlay1();
                     break;
                 case 2:
-                    System.out.println("Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
-                    x = readNumber();
-                    y = readNumber();
-                    String kakuro1 = readKakuro();
-                    String kakuroSol = readKakuro();
-                    System.out.println("Se llama a helpMyValue");
-                    testHelpMyValue(kakuro1, kakuroSol, x, y);
+                    System.out.println("Constructora 2");
+                    System.out.println("Se llama a Constructora 2");
+                    testCtrlPlay2();
                     break;
                 case 3:
-                    System.out.println("Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto");
-                    x = readNumber();
-                    y = readNumber();
-                    kakuro1 = readKakuro();
-                    kakuroSol = readKakuro();
+                    System.out.println("Constructora 3");
+                    System.out.println("Se llama a Constructora 3");
+                    testCtrlPlay3();
+                    break;
+                case 4:
+                    System.out.println("Se llama a helpMyValue");
+                    testHelpMyValue();
+                    break;
+                case 5:
                     System.out.println("Se llama a helpCorrectNumber");
-                    testHelpCorrectNumber(kakuro1, kakuroSol, x,y);
+                    testHelpCorrectNumber();
+                    break;
+                case 6:
+                    System.out.println("Se llama a FinishGame");
+                    testFinishGame();
                     break;
                 default:
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("\nOpciones: \n1. Empezar una partida \n 2. Ayuda para el valor del usuario \n 3. Ayuda para el valor correcto de una celda blanca \n 4. Salir");
+            System.out.println("Opciones: \n 1. 1ra constructora \n 2. 2da constructora \n 3. 3ra constructora \n 4. Comprobar si un valor és correcto \n 5. Retornar el valor correcto \n 6. Acabar una partida \n 7. Salir");
             value = readNumber();
         }
         System.exit(0);

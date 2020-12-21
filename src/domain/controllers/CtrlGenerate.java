@@ -737,12 +737,6 @@ public class CtrlGenerate {
                 }
             }
         }*/
-        for(int i = 1; i <= 45; ++i) {
-            for(int j = 1; j <= 9; ++j ){
-                mat[i-1][j-1] = new int[] {0,0,0,0,0,0,0,0,0};
-                mat[i-1][j-1] = computePosSums(i,j,0);
-            }
-        }
         tempBoard = new int[board.length][board[0].length][9];
         for (int i = 0; i < board.length; ++i) {
             for (int j = 0; j < board[0].length; ++j) {
@@ -1048,6 +1042,18 @@ public class CtrlGenerate {
         return (n > 9);
     }
 
+    /**@brief función que inicializa la matriz mat
+     */
+    public static void initializeMat() {
+        mat = new int[45][9][];
+        for(int i = 1; i <= 45; ++i) {
+            for(int j = 1; j <= 9; ++j ){
+                mat[i-1][j-1] = new int[] {0,0,0,0,0,0,0,0,0};
+                mat[i-1][j-1] = computePosSums(i,j,0);
+            }
+        }
+    }
+
     /**@brief función principal de CtrlGenerate
      *
      * @param rows número de filas del tablero a generar
@@ -1059,13 +1065,7 @@ public class CtrlGenerate {
      */
     public static Kakuro generate(int rows, int cols,int dif) {
         //Inicializamos la matriz
-        mat = new int[45][9][];
-        for(int i = 1; i <= 45; ++i) {
-            for(int j = 1; j <= 9; ++j ){
-                mat[i-1][j-1] = new int[] {0,0,0,0,0,0,0,0,0};
-                mat[i-1][j-1] = computePosSums(i,j,0);
-            }
-        }
+        initializeMat();
         boolean repeat = true;
         while(repeat) {
             repeat = false;
