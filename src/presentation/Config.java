@@ -17,8 +17,8 @@ import java.awt.event.ActionListener;
  */
 
 /**
- * @brief Extend de JDialog, Config, que nos permite hacer un dialog para la pantalla de configuración. Contiene las funciones y atributos necesarios para poder hacerlo.
  * @author Pol Vallespí Soro
+ * @brief Extend de JDialog, Config, que nos permite hacer un dialog para la pantalla de configuración. Contiene las funciones y atributos necesarios para poder hacerlo.
  */
 
 public class Config extends JDialog {
@@ -220,7 +220,7 @@ public class Config extends JDialog {
                     int g = Utils.colorIncorrectCell.getGreen();
                     int b = Utils.colorIncorrectCell.getBlue();
                     int a = Utils.colorIncorrectCell.getAlpha();
-                    Utils.colorIncorrectHelp1Cell = new Color(r + 1, g, b, a);
+                    Utils.colorIncorrectHelp1Cell = new Color(r, g, b, a);
                 }
             }
         });
@@ -466,4 +466,5 @@ public class Config extends JDialog {
     public JComponent $$$getRootComponent$$$() {
         return panel;
     }
+
 }
