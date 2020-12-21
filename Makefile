@@ -20,10 +20,16 @@ jar:
 	jar -cvfm Kakuro.jar MANIFEST.MF -C bin/ .
 
 runjar:
-	java -jar Kakuro.jar
+	java -jar Kakuro.jar 1
+
+runjarOld:
+	java -jar Kakuro.jar 2
 
 run:
-	java -cp $(CLPTH) Main
+	java -cp $(CLPTH) Main 1
+
+runOld:
+	java -cp $(CLPTH) Main 2
 
 run_driver_WhiteCell_man:
 	java -cp $(CLPTH) domain.controllers.drivers.DriverWhiteCell
