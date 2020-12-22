@@ -265,14 +265,16 @@ public class Create {
 
                     @Override
                     public void windowClosed(WindowEvent e) {
-                        String kakuroBoard = null;
-                        try {
-                            kakuroBoard = ((KakuroBoard) board.getComponent(0)).boardToString(0);
-                        } catch (NoTypeCellException noTypeCellException) {
-                            noTypeCellException.printStackTrace();
+                        if (board.getComponents().length != 0) {
+                            String kakuroBoard = null;
+                            try {
+                                kakuroBoard = ((KakuroBoard) board.getComponent(0)).boardToString(0);
+                            } catch (NoTypeCellException noTypeCellException) {
+                                noTypeCellException.printStackTrace();
+                            }
+                            board.removeAll();
+                            setBoard(kakuroBoard);
                         }
-                        board.removeAll();
-                        setBoard(kakuroBoard);
                     }
 
                     @Override
