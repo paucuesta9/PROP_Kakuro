@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['blackcell_16',['BlackCell',['../classdomain_1_1classes_1_1_black_cell.html',1,'domain.classes.BlackCell'],['../classpresentation_1_1_config.html#a1a2999609a8a2309f061d0e6456eef19',1,'presentation.Config.blackCell()'],['../classdomain_1_1classes_1_1_black_cell.html#ad27d0c4968e9037a8cf5a406ab399498',1,'domain.classes.BlackCell.BlackCell()'],['../classdomain_1_1classes_1_1_black_cell.html#a60ea32d3b734fe848c498299df382a32',1,'domain.classes.BlackCell.BlackCell(int column, int row)']]],
+  ['blackcell_16',['BlackCell',['../classdomain_1_1classes_1_1_black_cell.html',1,'domain.classes.BlackCell'],['../classdomain_1_1classes_1_1_black_cell.html#ad27d0c4968e9037a8cf5a406ab399498',1,'domain.classes.BlackCell.BlackCell()'],['../classdomain_1_1classes_1_1_black_cell.html#a60ea32d3b734fe848c498299df382a32',1,'domain.classes.BlackCell.BlackCell(int column, int row)'],['../classpresentation_1_1_config.html#a1a2999609a8a2309f061d0e6456eef19',1,'presentation.Config.blackCell()']]],
   ['blackcell_2ejava_17',['BlackCell.java',['../_black_cell_8java.html',1,'']]],
   ['blacknum_18',['blackNum',['../classpresentation_1_1_config.html#ac6c00eec965357170d1de5b2b2d47d5e',1,'presentation::Config']]],
   ['blackpanel_19',['blackPanel',['../classpresentation_1_1_config.html#ad4f17a9f724537c8804573af62d91ac4',1,'presentation::Config']]],

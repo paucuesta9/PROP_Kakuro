@@ -173,8 +173,8 @@ public class CtrlPlay {
      * @return -2 si no se ha colocado un valor
      */
     public int helpMyValue(int x, int y) {
-        if (!training) updatePoints(-1);
-        currentPlayer.getStats().setHelps(1);
+        updatePoints(-1);
+        if (!training) currentPlayer.getStats().setHelps(1);
         if (currentKakuro.getCell(x, y).isWhite()) {
             int value = ((WhiteCell) currentKakuro.getCell(x, y)).getValue();
             if (value == 0) return -2;
@@ -195,8 +195,8 @@ public class CtrlPlay {
      * @return cierto si es una celda blanca y falso si es una celda negra
      */
     public int helpCorrectNumber(int x, int y) {
-        if (!training) updatePoints(-2);
-        currentPlayer.getStats().setHelps(1);
+        updatePoints(-2);
+        if (!training) currentPlayer.getStats().setHelps(1);
         if (currentKakuro.getCell(x, y).isWhite()) {
             int correctNumber = ((WhiteCell) currentKakuro.getCell(x, y)).getCorrectValue();
             currentKakuro.setValue(x, y, correctNumber);
