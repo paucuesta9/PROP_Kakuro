@@ -309,6 +309,7 @@ public class Config extends JDialog {
                     muted = true;
                     mute.setText("\uF6A9");
                 } else {
+                    muted = false;
                     mute.setText("\uF028");
                 }
             }

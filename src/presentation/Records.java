@@ -54,7 +54,7 @@ public class Records {
         logo.setIcon(Utils.getLogo());
 
         String[] titles = {"Dificultad", "tamaño", "Kakuro"};
-        //alvctrlUI.getListOfKakuros(); //TODO : descomentar aixo després de fer pull, després esborrar, BROJA :)
+        ctrlUI.getListOfKakuros(); //TODO : descomentar aixo després de fer pull, després esborrar, BROJA :)
 
 
         JsonArray kak = ctrlUI.getKakuroRecords();
