@@ -29,34 +29,6 @@ public class DriverGame {
         System.out.println("Se ha creado");
     }
 
-    /** @brief Función que comprueba que se borre la ayuda de la posicion indicada
-     *
-     */
-    private static void testRemoveHelp() {
-        System.out.println("Cuantas ayudas quiere anadir?");
-        int n = readNumber();
-        List<String> h = new ArrayList<>();
-        Game game = new Game(0,0,0,0,10,10,1, h);
-        for (int i=0; i<n; ++i) {
-            System.out.println("En que posicion quiere la ayuda? Escriba la posición horizontal y luego la vertical");
-            int x = readNumber(); int y = readNumber();
-            System.out.println("Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0");
-            int c = readNumber();
-
-            game.addHelp(x, y, c);
-
-        }
-        System.out.println("Que ayuda quiere borrar? Introduzca la fila y columna");
-        int x = readNumber(); int y = readNumber();
-        game.removeHelp(x, y);
-        List<String> r = game.getHelps();
-        System.out.println("Al comenzar habia "+n+", ahora hay "+r.size()+" ayudas. \nA continuacion se listaran:\n");
-
-        for(int i=0; i<r.size(); ++i) {
-            System.out.println(r.get(i));
-        }
-    }
-
     /** @brief Función que comprueba que se añadan las ayudas utilizadas
      *
      */
@@ -67,7 +39,7 @@ public class DriverGame {
         List<String> h = new ArrayList<>();
         Game game = new Game(0,0,0,0,10,10,1, h);
         for (int i=0; i<n; ++i) {
-            System.out.println("En que posicion quiere la ayuda? Escriba la posición horizontal y luego la vertical");
+            System.out.println("En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical");
             int x = readNumber(); int y = readNumber();
             System.out.println("Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0");
             int c = readNumber();
@@ -111,6 +83,34 @@ public class DriverGame {
         for(int i=0; i<r.size(); ++i) System.out.print(r.get(i)+" ");
         System.out.println();
 
+    }
+
+    /** @brief Función que comprueba que se borre la ayuda de la posicion indicada
+     *
+     */
+    private static void testRemoveHelp() {
+        System.out.println("Cuantas ayudas quiere anadir?");
+        int n = readNumber();
+        List<String> h = new ArrayList<>();
+        Game game = new Game(0,0,0,0,10,10,1, h);
+        for (int i=0; i<n; ++i) {
+            System.out.println("En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical");
+            int x = readNumber(); int y = readNumber();
+            System.out.println("Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0");
+            int c = readNumber();
+
+            game.addHelp(x, y, c);
+
+        }
+        System.out.println("Que ayuda quiere borrar? Introduzca la fila y columna");
+        int x = readNumber(); int y = readNumber();
+        game.removeHelp(x, y);
+        List<String> r = game.getHelps();
+        System.out.println("Al comenzar habia "+n+", ahora hay "+r.size()+" ayudas. \nA continuacion se listaran:\n");
+
+        for(int i=0; i<r.size(); ++i) {
+            System.out.println(r.get(i));
+        }
     }
 
     /** @brief Función principal

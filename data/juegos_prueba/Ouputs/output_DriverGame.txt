@@ -1,0 +1,75 @@
+Opciones: 
+ 1. Creadora 
+ 2. Anadir ayuda 
+ 3. Informacion de game a un arraylist 
+ 4. removeHelp 
+ 5. Salir
+
+Se llama a la Creadora
+Se ha creado
+
+Opciones: 
+ 1. Creadora 
+ 2. Anadir ayuda 
+ 3. Informacion de game a un arraylist 
+ 4. removeHelp 
+ 5. Salir
+
+Se llama a addHelp
+Cuantas ayudas quiere anadir?
+En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical
+Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0
+En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical
+Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0
+Al comenzar no habia ayudas, ahora hay 2 ayudas. 
+A continuacion se listaran:
+
+2_3_1
+2_5_0
+
+Opciones: 
+ 1. Creadora 
+ 2. Anadir ayuda 
+ 3. Informacion de game a un arraylist 
+ 4. removeHelp 
+ 5. Salir
+
+Se llama a gameToArrayList
+Primero crearemos la partida: 
+Introduzca el id:
+Introduzca el tiempo:
+Introduzca la dificultad:
+Introduzca los puntos:
+Introduzca el id del Kakuro
+Introduzca el numero de filas y columnas
+A continuacion se anadiran a un ArrayList todos los atributos y se mostraran por pantalla en el mismo orden
+2 153 2 101 0 9 9 
+
+Opciones: 
+ 1. Creadora 
+ 2. Anadir ayuda 
+ 3. Informacion de game a un arraylist 
+ 4. removeHelp 
+ 5. Salir
+
+Se llama a removeHelp
+Cuantas ayudas quiere anadir?
+En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical
+Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0
+En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical
+Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0
+En que posicion quiere la ayuda? Escriba la posicion horizontal y luego la vertical
+Si quiere que la ayuda sea correcta introduzca un 1, en caso contrario un 0
+Que ayuda quiere borrar? Introduzca la fila y columna
+Al comenzar habia 3, ahora hay 2 ayudas. 
+A continuacion se listaran:
+
+2_6_0
+3_5_1
+
+Opciones: 
+ 1. Creadora 
+ 2. Anadir ayuda 
+ 3. Informacion de game a un arraylist 
+ 4. removeHelp 
+ 5. Salir
