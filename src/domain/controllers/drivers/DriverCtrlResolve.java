@@ -88,7 +88,8 @@ public class DriverCtrlResolve {
         CtrlResolve.intersection(a, b);
 
         System.out.println("Esta es la interseccion de los dos arrays anteriores");
-        for (int i=0; i<9; ++i) System.out.println(a[i]+" ");
+        for (int i=0; i<9; ++i) System.out.print(a[i]+" ");
+        System.out.println();
     }
 
     /** @brief Comprueba que la función recorre la run de la fila negra y hace la interseccion entre el valor de las casillas negras y los valores posibles, actualizando las casillas con valor único

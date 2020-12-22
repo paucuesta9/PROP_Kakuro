@@ -101,7 +101,7 @@ public class DriverPlayer {
             switch (value) {
                 case 1:
                     System.out.println();
-                    System.out.println("Se llama a la Creadora");
+                    System.out.println("Se llama a las  2 creadoras");
                     testCreadoras();
                     break;
                 case 2:

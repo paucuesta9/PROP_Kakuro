@@ -153,7 +153,8 @@ public class DriverCtrlValidate {
         CtrlResolve.intersection(a, b);
 
         System.out.println("Esta es la interseccion de los dos arrays anteriores");
-        for (int i=0; i<9; ++i) System.out.println(a[i]+" ");
+        for (int i=0; i<9; ++i) System.out.print(a[i]+" ");
+        System.out.println();
     }
 
     /** @brief Comprueba que la función recorre la run de la fila negra y hace la interseccion entre el valor de las casillas negras y los valores posibles, actualizando las casillas con valor único
@@ -227,8 +228,6 @@ public class DriverCtrlValidate {
         System.out.println("Introduzca las coordenadas de la casilla blanca unica a probar");
         int x = readNumber(); int y = readNumber();
 
-        BlackCell b = (BlackCell) board[x][y];
-
         Set<Pair> uniques = new HashSet<>();
 
         CtrlResolve.spreadUnique(x, y, tempBoard, board, uniques);
@@ -270,7 +269,7 @@ public class DriverCtrlValidate {
      */
 
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 10. intersection \n 11. iniRow \n 12. spreadUnique \n 13. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 9. intersection \n 10. iniRow \n 11. spreadUnique \n 12. Salir");
         int value = readNumber();
         String kakuro;
         while(value != 12) {
@@ -368,7 +367,7 @@ public class DriverCtrlValidate {
 
             }
             System.out.print("\n");
-            System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 10. intersection \n 11. iniRow \n 12. spreadUnique \n 13. Salir");
+            System.out.println("Opciones: \n 1. Creadora \n 2. Validar \n 3. Dificultad \n 4. isUnique \n 5. howManyNumbers \n 6. validatePosSums \n 7. computePosSums \n 8. checkForNewUniques \n 9. intersection \n 10. iniRow \n 11. spreadUnique \n 12. Salir");
             value = readNumber();
         }
     }
