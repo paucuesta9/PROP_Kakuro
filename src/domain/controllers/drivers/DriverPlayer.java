@@ -65,7 +65,7 @@ public class DriverPlayer {
      *
      */
     private static void testGetStatsInt() {
-        System.out.println("Primero crearemos las estadísticas: ");
+        System.out.println("Primero crearemos las estadisticas: ");
         System.out.println("Introduzca las partidas ganadas:");
         int w = readNumber();
         System.out.println("Introduzca las partidas empezadas:");

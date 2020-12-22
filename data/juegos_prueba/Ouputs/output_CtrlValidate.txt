@@ -7,7 +7,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Se llama a la creadora
 Se ha creado
 
@@ -20,7 +23,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro a validar
 Se llama a validar
 El kakuro no es valido
@@ -34,7 +40,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro a validar
 Se llama a validar
 El kakuro no es valido
@@ -48,7 +57,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro a validar
 Se llama a validar
 El kakuro no es valido
@@ -62,7 +74,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro a validar
 Se llama a validar
 El kakuro es valido
@@ -76,7 +91,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro para mirar su dificultad
 Se llama a dificultad
 El kakuro es de dificultad facil
@@ -90,7 +108,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro para mirar su dificultad
 Se llama a dificultad
 El kakuro es de dificultad dificil
@@ -104,7 +125,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro para mirar su dificultad
 Se llama a dificultad
 El kakuro es de dificultad media
@@ -118,7 +142,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce 9 enteros entre 0 y 1
 Se llama a isUnique
 No hay 1's entre los numeros introducidos o bien hay mas de un 1
@@ -132,7 +159,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce 9 enteros entre 0 y 1
 Se llama a isUnique
 Hay exactamente un 1 entre los numeros introducidos
@@ -146,7 +176,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce 9 enteros entre 0 y 1
 Se llama a isUnique
 No hay 1's entre los numeros introducidos o bien hay mas de un 1
@@ -160,7 +193,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce 9 enteros entre 0 y 1
 Se llama a howManyNumbers
 El array tiene 0.0 unos.
@@ -174,7 +210,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce 9 enteros entre 0 y 1
 Se llama a howManyNumbers
 El array tiene 3.0 unos.
@@ -188,7 +227,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce tamano de tablero N x M
 Introduce un tablero de la siguiente manera: 
 Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles
@@ -207,7 +249,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Introduce tamano de tablero N x M
 Introduce un tablero de la siguiente manera: 
 Nueve -1 si es una casilla negra y en caso de ser blanca 9 valores entre 0 y 1, si todo son zeros aun no se ha tratado, si hay 0 y unos indica que los 1 son valores posibles
@@ -229,10 +274,13 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+Se llama a computePosSums
 Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
  
-Se llama a computePosSums
 Estos son los valores que que tienen una combinacion para sumar 3 en 2 casillas
 Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
 1 1 0 0 0 0 0 0 0 
@@ -246,10 +294,13 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+Se llama a computePosSums
 Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
  
-Se llama a computePosSums
 Estos son los valores que que tienen una combinacion para sumar 28 en 9 casillas
 Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
 0 0 0 0 0 0 0 0 0 
@@ -263,10 +314,13 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+Se llama a computePosSums
 Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
  
-Se llama a computePosSums
 Estos son los valores que que tienen una combinacion para sumar 3 en 2 casillas sabiendo que tenemos fijo el numero 1
 Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
 0 1 0 0 0 0 0 0 0 
@@ -280,10 +334,13 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+Se llama a computePosSums
 Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
  
-Se llama a computePosSums
 Estos son los valores que que tienen una combinacion para sumar 45 en 9 casillas sabiendo que tenemos fijo el numero 8
 Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
 1 1 1 1 1 1 1 0 1 
@@ -297,7 +354,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar
 Introduce tamano de tablero N x M
 Introduce un tablero de la siguiente manera: 
@@ -317,7 +377,10 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
 Indique el kakuro para mirar cuantas casillas con valor unico trivial se pueden encontrar
 Introduce tamano de tablero N x M
 Introduce un tablero de la siguiente manera: 
@@ -337,4 +400,157 @@ Opciones:
  6. validatePosSums 
  7. computePosSums 
  8. checkForNewUniques 
- 9. Salir
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+
+Se llama a intersection
+Introduzca nueve numeros (0 o 1)
+Introduzca nueve numeros (0 o 1)
+Esta es la interseccion de los dos arrays anteriores
+0 0 0 0 0 0 0 0 0 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+
+Se llama a intersection
+Introduzca nueve numeros (0 o 1)
+Introduzca nueve numeros (0 o 1)
+Esta es la interseccion de los dos arrays anteriores
+0 0 1 0 1 0 1 0 0 
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+
+Se llama a iniRow
+Introduzca el numero de filas y el numero de columnas
+Introduzca un kakuro
+Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
+Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
+Introduzca las coordenadas de la casilla negra a probar
+Introduzca como de larga es la run asociada a la casilla negra
+Ha encontrado 1 casillas unicas
+Asi ha quedado tempboard
+0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
+0 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     0 1 1 1 1 1 1 1 1     
+0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     0 1 1 1 1 1 1 1 1     
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+
+Se llama a iniRow
+Introduzca el numero de filas y el numero de columnas
+Introduzca un kakuro
+Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
+Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
+Introduzca las coordenadas de la casilla negra a probar
+Introduzca como de larga es la run asociada a la casilla negra
+Ha encontrado 1 casillas unicas
+Asi ha quedado tempboard
+0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
+0 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     0 1 1 1 1 1 1 1 1     
+0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     1 1 1 1 1 1 1 1 1     
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+
+Se llama a spreadUnique
+Introduzca el numero de filas y el numero de columnas
+Introduzca un kakuro
+Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
+Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
+Introduzca cuantas casillas con valor fijado tiene el kakuro
+Introduzca las coordenadas y el valor de la casilla blanca con valor unico
+Introduzca las coordenadas de la casilla blanca unica a probar
+Ha encontrado 2 casillas unicas
+Asi ha quedado tempboard
+0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
+0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 1     
+0 0 0 0 0 0 0 0 0     1 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
+
+Se llama a spreadUnique
+Introduzca el numero de filas y el numero de columnas
+Introduzca un kakuro
+Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
+Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
+Introduzca cuantas casillas con valor fijado tiene el kakuro
+Introduzca las coordenadas y el valor de la casilla blanca con valor unico
+Introduzca las coordenadas de la casilla blanca unica a probar
+Ha encontrado 1 casillas unicas
+Asi ha quedado tempboard
+0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
+0 0 0 0 0 0 0 0 0     1 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
+0 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     
+
+Opciones: 
+ 1. Creadora 
+ 2. Validar 
+ 3. Dificultad 
+ 4. isUnique 
+ 5. howManyNumbers 
+ 6. validatePosSums 
+ 7. computePosSums 
+ 8. checkForNewUniques 
+ 9. intersection 
+ 10. iniRow 
+ 11. spreadUnique 
+ 12. Salir
