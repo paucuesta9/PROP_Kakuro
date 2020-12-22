@@ -195,7 +195,8 @@ public class NewGame {
                 int returnVal = chooser.showOpenDialog(panel1);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     String absolutePath = chooser.getSelectedFile().getAbsolutePath();
-                    if (!absolutePath.contains(System.getProperty("user.dir")) && (!absolutePath.contains("data/diff1") || !absolutePath.contains("data/diff2") || !absolutePath.contains("data/diff3")) || absolutePath.contains("solutions"))
+                    boolean difficultyPath = absolutePath.contains("diff1") || absolutePath.contains("diff2") || absolutePath.contains("diff3");
+                    if (!absolutePath.contains(System.getProperty("user.dir")) || (absolutePath.contains(System.getProperty("user.dir")) && (!difficultyPath || absolutePath.contains("solutions"))))
                         Utils.showError("Por favor, indique un Kakuro de la base de datos de la aplicación");
                     else {
                         ctrlPlayUI.startGame(absolutePath);
