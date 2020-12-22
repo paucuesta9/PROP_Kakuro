@@ -129,10 +129,10 @@ Métodos públicos</h2></td></tr>
 <tr class="separator:af1ccd05e145aa6ac6cc08a03075eb863"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a329c316bc1b0ecaa3c9ebac798bb20cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a329c316bc1b0ecaa3c9ebac798bb20cc">help2</a> (int x, int y)</td></tr>
 <tr class="separator:a329c316bc1b0ecaa3c9ebac798bb20cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7062a4cf1df8ff4f3be371c68159993e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a7062a4cf1df8ff4f3be371c68159993e">startGame</a> (int diff, int rowSize, int columnSize, boolean trainig)</td></tr>
+<tr class="memitem:a7062a4cf1df8ff4f3be371c68159993e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a7062a4cf1df8ff4f3be371c68159993e">startGame</a> (int diff, int rowSize, int columnSize, boolean trainig)  throws CantGenerateException </td></tr>
 <tr class="separator:a7062a4cf1df8ff4f3be371c68159993e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6199554ef4ae10788e6ca8903b2511da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a6199554ef4ae10788e6ca8903b2511da">startGame</a> (String absolutePath)</td></tr>
-<tr class="separator:a6199554ef4ae10788e6ca8903b2511da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74522f1e4c66fd60f760b376febc7b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a74522f1e4c66fd60f760b376febc7b85">startGame</a> (String absolutePath, boolean training)</td></tr>
+<tr class="separator:a74522f1e4c66fd60f760b376febc7b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a996127f628875954320a4d376be514e6"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a996127f628875954320a4d376be514e6">isFinished</a> ()</td></tr>
 <tr class="separator:a996127f628875954320a4d376be514e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1237b90c8f69bd69f1ce531b81e9b71b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpresentation_1_1_ctrl_u_i.html#a1237b90c8f69bd69f1ce531b81e9b71b">finishGame</a> (boolean selfFinished)</td></tr>
@@ -235,7 +235,7 @@ Atributos privados estáticos</h2></td></tr>
 <div class="textblock"><p>Clase <a class="el" href="classpresentation_1_1_ctrl_u_i.html" title="Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladore...">CtrlUI</a> que contiene los atributos y metodos para el intercambio de atributos entre controladores. </p>
 <dl class="section author"><dt>Autor</dt><dd>Judith Almoño Gómez </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00022">22</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00023">23</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="ab0f148c9dc080eceb818087cad16b592"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0f148c9dc080eceb818087cad16b592">&#9670;&nbsp;</a></span>CtrlUI()</h2>
@@ -255,10 +255,10 @@ Atributos privados estáticos</h2></td></tr>
 <p>Creadora por defecto. </p>
 <p>Se ejecuta automáticamente al declarar una instancia del CtrlDomain. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00059">59</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a> = <span class="keyword">new</span> CtrlDomain();</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00060">60</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a> = <span class="keyword">new</span> CtrlDomain();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -286,12 +286,12 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00034">34</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                       {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">ctrlUI</a> == <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">ctrlUI</a> = <span class="keyword">new</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#ab0f148c9dc080eceb818087cad16b592">CtrlUI</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">ctrlUI</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00035">35</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                       {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">ctrlUI</a> == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">ctrlUI</a> = <span class="keyword">new</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#ab0f148c9dc080eceb818087cad16b592">CtrlUI</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">ctrlUI</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,16 +310,16 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00065">65</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                      {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        Utils.loadFonts();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setSize(1200,800);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setResizable(<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setIconImage(Utils.getLogo().getImage());</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        Utils.center(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a5c10a39034057778412d7fdf794dd99d">toLogin</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00066">66</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                      {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        Utils.loadFonts();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setSize(1200,800);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setResizable(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setIconImage(Utils.getLogo().getImage());</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Utils.center(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a5c10a39034057778412d7fdf794dd99d">toLogin</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -338,13 +338,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00075">75</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                          {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a16caef7238c13b2287fd88f60943eb8b">login</a> = <span class="keyword">new</span> Login();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Login&quot;</span>);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a16caef7238c13b2287fd88f60943eb8b">login</a>.<a class="code" href="classpresentation_1_1_login.html#a2d8aa6313fc18b2e26b8bc4aa3f1a273">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00076">76</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                          {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a16caef7238c13b2287fd88f60943eb8b">login</a> = <span class="keyword">new</span> Login();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Login&quot;</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a16caef7238c13b2287fd88f60943eb8b">login</a>.<a class="code" href="classpresentation_1_1_login.html#a2d8aa6313fc18b2e26b8bc4aa3f1a273">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -363,13 +363,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00082">82</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                             {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">register</span> = <span class="keyword">new</span> Register();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Register&quot;</span>);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<span class="keyword">register</span>.getDefaultPanel());</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00083">83</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                             {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">register</span> = <span class="keyword">new</span> Register();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Register&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<span class="keyword">register</span>.getDefaultPanel());</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -388,13 +388,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00089">89</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                         {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#ae57c6ae34f440e3fb15e53acffb3c54f">main</a> = <span class="keyword">new</span> <a class="code" href="class_main.html">Main</a>();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Main&quot;</span>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#ae57c6ae34f440e3fb15e53acffb3c54f">main</a>.<a class="code" href="classpresentation_1_1_main.html#ae0bd80f14169554f669b5a3afc013b30">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00090">90</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                         {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#ae57c6ae34f440e3fb15e53acffb3c54f">main</a> = <span class="keyword">new</span> <a class="code" href="class_main.html">Main</a>();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Main&quot;</span>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#ae57c6ae34f440e3fb15e53acffb3c54f">main</a>.<a class="code" href="classpresentation_1_1_main.html#ae0bd80f14169554f669b5a3afc013b30">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -413,13 +413,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00096">96</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                                   {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cb7e42d1dca3e3e6a0dd2ad1e4760b9">askNewContinue</a> = <span class="keyword">new</span> AskNewContinue();</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;New game or continue&quot;</span>);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cb7e42d1dca3e3e6a0dd2ad1e4760b9">askNewContinue</a>.<a class="code" href="classpresentation_1_1_ask_new_continue.html#af2d0d3cc05dcd2becd5d966c6aa4af6f">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00097">97</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                                   {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cb7e42d1dca3e3e6a0dd2ad1e4760b9">askNewContinue</a> = <span class="keyword">new</span> AskNewContinue();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;New game or continue&quot;</span>);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cb7e42d1dca3e3e6a0dd2ad1e4760b9">askNewContinue</a>.<a class="code" href="classpresentation_1_1_ask_new_continue.html#af2d0d3cc05dcd2becd5d966c6aa4af6f">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -439,13 +439,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00103">103</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                                            {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#aae7bb2f73cc249d4ac7647614be42e3b">newGame</a> = <span class="keyword">new</span> NewGame(training);</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;New Game&quot;</span>);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#aae7bb2f73cc249d4ac7647614be42e3b">newGame</a>.<a class="code" href="classpresentation_1_1_new_game.html#ac3af6f5021d32ed7cfd3419016be3144">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00104">104</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                                            {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#aae7bb2f73cc249d4ac7647614be42e3b">newGame</a> = <span class="keyword">new</span> NewGame(training);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;New Game&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#aae7bb2f73cc249d4ac7647614be42e3b">newGame</a>.<a class="code" href="classpresentation_1_1_new_game.html#ac3af6f5021d32ed7cfd3419016be3144">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -464,13 +464,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00110">110</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                             {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cfa4bf8e3f5aa80ff7136fd96a84fcb">loadGame</a> = <span class="keyword">new</span> LoadGame();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;LoadGame&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cfa4bf8e3f5aa80ff7136fd96a84fcb">loadGame</a>.<a class="code" href="classpresentation_1_1_load_game.html#a71fcc5667aa8a7187f98bac68bb970df">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00111">111</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                             {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cfa4bf8e3f5aa80ff7136fd96a84fcb">loadGame</a> = <span class="keyword">new</span> LoadGame();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;LoadGame&quot;</span>);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a9cfa4bf8e3f5aa80ff7136fd96a84fcb">loadGame</a>.<a class="code" href="classpresentation_1_1_load_game.html#a71fcc5667aa8a7187f98bac68bb970df">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -500,13 +500,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00117">117</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                        {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a6c5ff900d687ca061748ce47cbc9e501">play</a> = <span class="keyword">new</span> Play(kakuro, training);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Play&quot;</span>);</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a6c5ff900d687ca061748ce47cbc9e501">play</a>.<a class="code" href="classpresentation_1_1_play.html#aafcab42d4f553dcc94f17eafde571724">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00118">118</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a6c5ff900d687ca061748ce47cbc9e501">play</a> = <span class="keyword">new</span> Play(kakuro, training);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Play&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a6c5ff900d687ca061748ce47cbc9e501">play</a>.<a class="code" href="classpresentation_1_1_play.html#aafcab42d4f553dcc94f17eafde571724">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -525,13 +525,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00124">124</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                           {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a328d3c93dff9ab0de4f877a9fae1b542">create</a> = <span class="keyword">new</span> Create();</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Create&quot;</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a328d3c93dff9ab0de4f877a9fae1b542">create</a>.<a class="code" href="classpresentation_1_1_create.html#a119bea3daf44952bad56d15791f0f64f">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00125">125</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                           {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a328d3c93dff9ab0de4f877a9fae1b542">create</a> = <span class="keyword">new</span> Create();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Create&quot;</span>);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a328d3c93dff9ab0de4f877a9fae1b542">create</a>.<a class="code" href="classpresentation_1_1_create.html#a119bea3daf44952bad56d15791f0f64f">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -550,13 +550,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00131">131</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                             {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a41d8b59ae2ef30334cd7226f43f4e2dd">generate</a> = <span class="keyword">new</span> Generate();</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Generate&quot;</span>);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a41d8b59ae2ef30334cd7226f43f4e2dd">generate</a>.<a class="code" href="classpresentation_1_1_generate.html#aba913fed282401096169026cb9c3541e">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00132">132</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                             {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a41d8b59ae2ef30334cd7226f43f4e2dd">generate</a> = <span class="keyword">new</span> Generate();</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Generate&quot;</span>);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a41d8b59ae2ef30334cd7226f43f4e2dd">generate</a>.<a class="code" href="classpresentation_1_1_generate.html#aba913fed282401096169026cb9c3541e">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -575,13 +575,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00138">138</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                             {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">rankings</a> = <span class="keyword">new</span> Rankings();</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Ranking&quot;</span>);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">rankings</a>.<a class="code" href="classpresentation_1_1_rankings.html#a05bb8fd892a55745a7cf495d1089cbfd">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00139">139</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                             {</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">rankings</a> = <span class="keyword">new</span> Rankings();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Ranking&quot;</span>);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">rankings</a>.<a class="code" href="classpresentation_1_1_rankings.html#a05bb8fd892a55745a7cf495d1089cbfd">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -611,13 +611,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00145">145</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                                 {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#aff2ff4c3207b8b2df66653caafce6be8">showKakuro</a> = <span class="keyword">new</span> ShowKakuro(s,fila);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;ShowKakuro&quot;</span>);</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#aff2ff4c3207b8b2df66653caafce6be8">showKakuro</a>.<a class="code" href="classpresentation_1_1_show_kakuro.html#a87767e22cafa0d07758c85e73db34668">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00146">146</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                                                 {</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#aff2ff4c3207b8b2df66653caafce6be8">showKakuro</a> = <span class="keyword">new</span> ShowKakuro(s,fila);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;ShowKakuro&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#aff2ff4c3207b8b2df66653caafce6be8">showKakuro</a>.<a class="code" href="classpresentation_1_1_show_kakuro.html#a87767e22cafa0d07758c85e73db34668">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -653,13 +653,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00152">152</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                                                           {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a80fa66bc2060aed0ceac386ea7c0449f">askSave</a> = <span class="keyword">new</span> AskSave(question, boardKakuro, option);</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Save&quot;</span>);</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a80fa66bc2060aed0ceac386ea7c0449f">askSave</a>.<a class="code" href="classpresentation_1_1_ask_save.html#ae0f24722147bee28a2f628e2b80641b4">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00153">153</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                                                           {</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a80fa66bc2060aed0ceac386ea7c0449f">askSave</a> = <span class="keyword">new</span> AskSave(question, boardKakuro, option);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Save&quot;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a80fa66bc2060aed0ceac386ea7c0449f">askSave</a>.<a class="code" href="classpresentation_1_1_ask_save.html#ae0f24722147bee28a2f628e2b80641b4">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -678,13 +678,13 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00159">159</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                            {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">records</a> = <span class="keyword">new</span> Records();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Records&quot;</span>);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">records</a>.<a class="code" href="classpresentation_1_1_records.html#a7e755cddc136843002b5c74c0696c409">getDefaultPanel</a>());</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00160">160</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                            {</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">records</a> = <span class="keyword">new</span> Records();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setTitle(<span class="stringliteral">&quot;Records&quot;</span>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setContentPane(<a class="code" href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">records</a>.<a class="code" href="classpresentation_1_1_records.html#a7e755cddc136843002b5c74c0696c409">getDefaultPanel</a>());</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">mainFrame</a>.setVisible(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -703,10 +703,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00166">166</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                              {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e">getKakuroToString</a>();</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00167">167</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                              {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e">getKakuroToString</a>();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -725,10 +725,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00170">170</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                                     {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a84a0345c9576dafd89f020650b4054ef">getCorrectKakuroToString</a>();</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00171">171</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                     {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a84a0345c9576dafd89f020650b4054ef">getCorrectKakuroToString</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -748,15 +748,15 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00174">174</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                                     {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            String kakuro = <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a995aae7fccd5b3683d811e2df26dae5b">getKakuro</a>(path);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac3498321dc99c9fcfb10f5a121577d26">setKakuro</a>(kakuro);</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        } <span class="keywordflow">catch</span> (IOException e) {</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            e.printStackTrace();</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        }</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00175">175</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                                                                     {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            String kakuro = <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a995aae7fccd5b3683d811e2df26dae5b">getKakuro</a>(path);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac3498321dc99c9fcfb10f5a121577d26">setKakuro</a>(kakuro);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            e.printStackTrace();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -792,14 +792,14 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00183">183</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                                                    {</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a1b935a9e1d06256e382ab7b0069ca1fe">searchKakuro</a>(diff, rowSize, columnSize);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        } <span class="keywordflow">catch</span> (IOException e) {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            e.printStackTrace();</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        }</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00184">184</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                                                                    {</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a1b935a9e1d06256e382ab7b0069ca1fe">searchKakuro</a>(diff, rowSize, columnSize);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        } <span class="keywordflow">catch</span> (IOException e) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            e.printStackTrace();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -835,10 +835,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00191">191</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                                                           {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a98cba0a1a89d37fcc57aecbb2ad491c7">checkValidity</a>(x,y,value);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00192">192</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                                           {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a98cba0a1a89d37fcc57aecbb2ad491c7">checkValidity</a>(x,y,value);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -874,10 +874,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00195">195</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                                  {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#aade2f964f7f12976d9a3bbb642c140c9">kakuroSetValue</a>(x,y,value);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00196">196</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                                                  {</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#aade2f964f7f12976d9a3bbb642c140c9">kakuroSetValue</a>(x,y,value);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -907,10 +907,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00199">199</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                   {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac571b44b2ea9370ad8dc99cbb51c2672">helpMyValue</a>(x, y);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00200">200</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                                   {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac571b44b2ea9370ad8dc99cbb51c2672">helpMyValue</a>(x, y);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -940,10 +940,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00203">203</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                   {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#af7b7d0c2f90437093500f33bf4eaca5c">helpCorrectNumber</a>(x,y);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00204">204</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                   {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#af7b7d0c2f90437093500f33bf4eaca5c">helpCorrectNumber</a>(x,y);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -980,20 +980,20 @@ Atributos privados estáticos</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> throws <a class="el" href="classdomain_1_1classes_1_1_exceptions_1_1_cant_generate_exception.html">CantGenerateException</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00207">207</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                                                                                  {</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ab7f822ef336ee90cd841166b1e24b936">startNewGame</a>(diff, rowSize, columnSize, trainig);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00208">208</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                                                                                               {</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ab7f822ef336ee90cd841166b1e24b936">startNewGame</a>(diff, rowSize, columnSize, trainig);</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a6199554ef4ae10788e6ca8903b2511da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6199554ef4ae10788e6ca8903b2511da">&#9670;&nbsp;</a></span>startGame() <span class="overload">[2/2]</span></h2>
+<a id="a74522f1e4c66fd60f760b376febc7b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74522f1e4c66fd60f760b376febc7b85">&#9670;&nbsp;</a></span>startGame() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1002,16 +1002,26 @@ Atributos privados estáticos</h2></td></tr>
           <td class="memname">void presentation.CtrlUI.startGame </td>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
-          <td class="paramname"><em>absolutePath</em></td><td>)</td>
+          <td class="paramname"><em>absolutePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>training</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00211">211</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                               {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ab7f822ef336ee90cd841166b1e24b936">startNewGame</a>(absolutePath);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00212">212</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                                                 {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ab7f822ef336ee90cd841166b1e24b936">startNewGame</a>(absolutePath, training);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1030,10 +1040,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00215">215</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                                {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5f1520ae955bee1e861eaa23b4b7c61f">isFinished</a>();</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00216">216</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                                {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5f1520ae955bee1e861eaa23b4b7c61f">isFinished</a>();</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1053,10 +1063,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00219">219</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                                {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a2cddf096335f4e5c4371f68668b2065f">finishGame</a>(selfFinished);</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00220">220</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                                {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a2cddf096335f4e5c4371f68668b2065f">finishGame</a>(selfFinished);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1075,10 +1085,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00223">223</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                                                           {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a38db74a9b64f312f843b81021eca8dcc">getStartedGames</a>();</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00224">224</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                                                           {</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a38db74a9b64f312f843b81021eca8dcc">getStartedGames</a>();</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1098,10 +1108,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00229">229</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                                 {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#aee031aa5434b1c906b1ae98790254288">getListOfPlayers</a>(s);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00230">230</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                                                 {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#aee031aa5434b1c906b1ae98790254288">getListOfPlayers</a>(s);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1131,10 +1141,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00233">233</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                                                                                             {</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae8d8d972572f0ae0a323455982767336">login</a>(username, String.valueOf(password));</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00234">234</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                                                                                             {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae8d8d972572f0ae0a323455982767336">login</a>(username, String.valueOf(password));</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1154,10 +1164,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00237">237</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                                                            {</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac60326d680b830f11f5b0616e2171969">setConfigToPlayer</a>(config);</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00238">238</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                                            {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac60326d680b830f11f5b0616e2171969">setConfigToPlayer</a>(config);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1187,10 +1197,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00241">241</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                                                                             {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8c301851185581b07421d0b26e706fad">signUp</a>(username, String.valueOf(password));</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00242">242</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                                                                             {</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8c301851185581b07421d0b26e706fad">signUp</a>(username, String.valueOf(password));</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1209,10 +1219,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00245">245</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                                    {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a3e793f193af9fd214bbcfb03f27755ab">resetConfigColors</a>();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00246">246</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                    {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a3e793f193af9fd214bbcfb03f27755ab">resetConfigColors</a>();</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1248,10 +1258,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00249">249</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                                                 {</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#acff26df08c2f4fe190d9103809c9f4c0">generate</a>(i,j, diff);</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00250">250</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                                                 {</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#acff26df08c2f4fe190d9103809c9f4c0">generate</a>(i,j, diff);</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1270,10 +1280,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00253">253</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                   {</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a7823d752fcf767995c2f7e76e4e1d576">saveKakuroAndGetInfo</a>();</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00254">254</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                                   {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a7823d752fcf767995c2f7e76e4e1d576">saveKakuroAndGetInfo</a>();</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1292,10 +1302,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00257">257</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                           {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#adbc14104d6a911125ffae083d55b7d66">saveGame</a>();</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00258">258</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                           {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#adbc14104d6a911125ffae083d55b7d66">saveGame</a>();</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1315,10 +1325,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00261">261</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                                            {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a37ae2972df63c86f15293db04ad06089">setTimeToGame</a>(gameTime);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00262">262</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                                            {</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a37ae2972df63c86f15293db04ad06089">setTimeToGame</a>(gameTime);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1337,10 +1347,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00265">265</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                                  {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad759f4f2a4bd7a5918db28b254282158">resetParameters</a>();</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00266">266</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                                  {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad759f4f2a4bd7a5918db28b254282158">resetParameters</a>();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1360,10 +1370,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00269">269</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                                {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a674522020a65e57190718c78b83ea942">setGame</a>(<span class="keywordtype">id</span>);</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00270">270</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                {</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a674522020a65e57190718c78b83ea942">setGame</a>(<span class="keywordtype">id</span>);</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1383,10 +1393,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00273">273</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                                         {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac3498321dc99c9fcfb10f5a121577d26">setKakuro</a>(kakuro);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00274">274</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                                         {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac3498321dc99c9fcfb10f5a121577d26">setKakuro</a>(kakuro);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1405,10 +1415,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00277">277</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                              {</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a9f1e10a0ea84bf53bf417392e3193d96">validate</a>();</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00278">278</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                              {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a9f1e10a0ea84bf53bf417392e3193d96">validate</a>();</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1427,10 +1437,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00281">281</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                         {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#affa2df906c62d26e3d7f39a0a7e213e4">getConfig</a>();</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00282">282</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                                         {</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#affa2df906c62d26e3d7f39a0a7e213e4">getConfig</a>();</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1449,10 +1459,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00285">285</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                                             {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac624fdd3982402e1968bbf5595b83031">getStatsList</a>();</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00286">286</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                                             {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac624fdd3982402e1968bbf5595b83031">getStatsList</a>();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1471,10 +1481,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00289">289</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                         {</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5df49f884b214fa3b1a4ea0a3aa9ed67">getTime</a>();</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00290">290</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                         {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5df49f884b214fa3b1a4ea0a3aa9ed67">getTime</a>();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1493,10 +1503,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00293">293</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                        {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad41e4cf31139cb39be0893f24cbc11ba">getHelps</a>();</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00294">294</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                                        {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad41e4cf31139cb39be0893f24cbc11ba">getHelps</a>();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1515,10 +1525,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00297">297</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                          {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae2291141db524d97560745e7f608b5ef">resolve</a>();</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00298">298</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                          {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae2291141db524d97560745e7f608b5ef">resolve</a>();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1538,10 +1548,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00301">301</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                                         {</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#afc912106f5730669864240291942a657">getThisKakuro</a>(s);</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00302">302</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                                         {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#afc912106f5730669864240291942a657">getThisKakuro</a>(s);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1560,10 +1570,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00305">305</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                                   {</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a56ae4751e61082731407e4c8644a374e">getListOfKakuros</a>();</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00306">306</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                   {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a56ae4751e61082731407e4c8644a374e">getListOfKakuros</a>();</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1582,10 +1592,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00309">309</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                                        {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8e53f271cbdf7f36e4871170ce7e2c0e">getRecords</a>();</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00310">310</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                                        {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8e53f271cbdf7f36e4871170ce7e2c0e">getRecords</a>();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1604,10 +1614,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00313">313</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                                     {</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a15cbb6f6b999458ad3de319d173ed6c3">addCreatedToPlayer</a>();</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00314">314</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                                     {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a15cbb6f6b999458ad3de319d173ed6c3">addCreatedToPlayer</a>();</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1626,10 +1636,10 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00317">317</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                         {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a0d1ea47e7ae6ff75e09d7f8f7786162c">logout</a>();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00318">318</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                         {</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <a class="code" href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">cd</a>.<a class="code" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a0d1ea47e7ae6ff75e09d7f8f7786162c">logout</a>();</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1655,7 +1665,7 @@ Atributos privados estáticos</h2></td></tr>
 </div><div class="memdoc">
 <p>cd es la instancia del CtrlDomain </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00026">26</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00027">27</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +1690,7 @@ Atributos privados estáticos</h2></td></tr>
 </div><div class="memdoc">
 <p>reader es una atributo que sirve para leer de la terminal </p>
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00030">30</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00031">31</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1704,7 +1714,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00031">31</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00032">32</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1728,7 +1738,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00032">32</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00033">33</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1752,7 +1762,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00040">40</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00041">41</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1776,7 +1786,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00041">41</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00042">42</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1800,7 +1810,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00042">42</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00043">43</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1824,7 +1834,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00043">43</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00044">44</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1848,7 +1858,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00044">44</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00045">45</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1872,7 +1882,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00045">45</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00046">46</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1896,7 +1906,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00046">46</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00047">47</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1920,7 +1930,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00047">47</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00048">48</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1944,7 +1954,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00048">48</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00049">49</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1968,7 +1978,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00049">49</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00050">50</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -1992,7 +2002,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00050">50</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00051">51</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -2016,7 +2026,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00051">51</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00052">52</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -2040,7 +2050,7 @@ Atributos privados estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00052">52</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="_ctrl_u_i_8java_source.html#l00053">53</a> del archivo <a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a>.</p>
 
 </div>
 </div>
@@ -2048,71 +2058,71 @@ Atributos privados estáticos</h2></td></tr>
 <li><a class="el" href="_ctrl_u_i_8java_source.html">CtrlUI.java</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_acff26df08c2f4fe190d9103809c9f4c0"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#acff26df08c2f4fe190d9103809c9f4c0">domain.controllers.CtrlDomain.generate</a></div><div class="ttdeci">void generate(int i, int j, int dif)</div><div class="ttdoc">Se genera un Kakuro.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00247">CtrlDomain.java:247</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_acff26df08c2f4fe190d9103809c9f4c0"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#acff26df08c2f4fe190d9103809c9f4c0">domain.controllers.CtrlDomain.generate</a></div><div class="ttdeci">void generate(int i, int j, int dif)</div><div class="ttdoc">Se genera un Kakuro.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00249">CtrlDomain.java:249</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_show_kakuro_html_a87767e22cafa0d07758c85e73db34668"><div class="ttname"><a href="classpresentation_1_1_show_kakuro.html#a87767e22cafa0d07758c85e73db34668">presentation.ShowKakuro.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_show_kakuro_8java_source.html#l00158">ShowKakuro.java:158</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a98cba0a1a89d37fcc57aecbb2ad491c7"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a98cba0a1a89d37fcc57aecbb2ad491c7">domain.controllers.CtrlDomain.checkValidity</a></div><div class="ttdeci">boolean checkValidity(int x, int y, int value)</div><div class="ttdoc">Comprueba la validez de un número añadido a una celda blanca.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00185">CtrlDomain.java:185</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac60326d680b830f11f5b0616e2171969"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac60326d680b830f11f5b0616e2171969">domain.controllers.CtrlDomain.setConfigToPlayer</a></div><div class="ttdeci">void setConfigToPlayer(ArrayList&lt; String &gt; config)</div><div class="ttdoc">Se le asocia al jugador actual la configuración config.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00394">CtrlDomain.java:394</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ad6f12d4830c90bf5f3e3b0e9696eaf0e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e">domain.controllers.CtrlDomain.getKakuroToString</a></div><div class="ttdeci">String getKakuroToString()</div><div class="ttdoc">Getter del kakuro en formato String.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00271">CtrlDomain.java:271</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a45f180389f94524353ed18af517c2885"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">presentation.CtrlUI.ctrlUI</a></div><div class="ttdeci">static CtrlUI ctrlUI</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00032">CtrlUI.java:32</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a2cddf096335f4e5c4371f68668b2065f"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a2cddf096335f4e5c4371f68668b2065f">domain.controllers.CtrlDomain.finishGame</a></div><div class="ttdeci">int finishGame(boolean selfFinished)</div><div class="ttdoc">Acaba la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00218">CtrlDomain.java:218</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a1b935a9e1d06256e382ab7b0069ca1fe"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a1b935a9e1d06256e382ab7b0069ca1fe">domain.controllers.CtrlDomain.searchKakuro</a></div><div class="ttdeci">String searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00292">CtrlDomain.java:292</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a5df49f884b214fa3b1a4ea0a3aa9ed67"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5df49f884b214fa3b1a4ea0a3aa9ed67">domain.controllers.CtrlDomain.getTime</a></div><div class="ttdeci">int getTime()</div><div class="ttdoc">Getter de time.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00497">CtrlDomain.java:497</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a5c10a39034057778412d7fdf794dd99d"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a5c10a39034057778412d7fdf794dd99d">presentation.CtrlUI.toLogin</a></div><div class="ttdeci">void toLogin()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00075">CtrlUI.java:75</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_ab0f148c9dc080eceb818087cad16b592"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#ab0f148c9dc080eceb818087cad16b592">presentation.CtrlUI.CtrlUI</a></div><div class="ttdeci">CtrlUI()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00059">CtrlUI.java:59</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_new_game_html_ac3af6f5021d32ed7cfd3419016be3144"><div class="ttname"><a href="classpresentation_1_1_new_game.html#ac3af6f5021d32ed7cfd3419016be3144">presentation.NewGame.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_new_game_8java_source.html#l00316">NewGame.java:316</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_login_html_a2d8aa6313fc18b2e26b8bc4aa3f1a273"><div class="ttname"><a href="classpresentation_1_1_login.html#a2d8aa6313fc18b2e26b8bc4aa3f1a273">presentation.Login.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_login_8java_source.html#l00153">Login.java:153</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a98cba0a1a89d37fcc57aecbb2ad491c7"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a98cba0a1a89d37fcc57aecbb2ad491c7">domain.controllers.CtrlDomain.checkValidity</a></div><div class="ttdeci">boolean checkValidity(int x, int y, int value)</div><div class="ttdoc">Comprueba la validez de un número añadido a una celda blanca.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00187">CtrlDomain.java:187</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac60326d680b830f11f5b0616e2171969"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac60326d680b830f11f5b0616e2171969">domain.controllers.CtrlDomain.setConfigToPlayer</a></div><div class="ttdeci">void setConfigToPlayer(ArrayList&lt; String &gt; config)</div><div class="ttdoc">Se le asocia al jugador actual la configuración config.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00396">CtrlDomain.java:396</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ad6f12d4830c90bf5f3e3b0e9696eaf0e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e">domain.controllers.CtrlDomain.getKakuroToString</a></div><div class="ttdeci">String getKakuroToString()</div><div class="ttdoc">Getter del kakuro en formato String.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00273">CtrlDomain.java:273</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a45f180389f94524353ed18af517c2885"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a45f180389f94524353ed18af517c2885">presentation.CtrlUI.ctrlUI</a></div><div class="ttdeci">static CtrlUI ctrlUI</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00033">CtrlUI.java:33</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a2cddf096335f4e5c4371f68668b2065f"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a2cddf096335f4e5c4371f68668b2065f">domain.controllers.CtrlDomain.finishGame</a></div><div class="ttdeci">int finishGame(boolean selfFinished)</div><div class="ttdoc">Acaba la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00220">CtrlDomain.java:220</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a1b935a9e1d06256e382ab7b0069ca1fe"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a1b935a9e1d06256e382ab7b0069ca1fe">domain.controllers.CtrlDomain.searchKakuro</a></div><div class="ttdeci">String searchKakuro(int difficulty, int kakuroSizeRow, int kakuroSizeColumn)</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00294">CtrlDomain.java:294</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a5df49f884b214fa3b1a4ea0a3aa9ed67"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5df49f884b214fa3b1a4ea0a3aa9ed67">domain.controllers.CtrlDomain.getTime</a></div><div class="ttdeci">int getTime()</div><div class="ttdoc">Getter de time.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00499">CtrlDomain.java:499</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a5c10a39034057778412d7fdf794dd99d"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a5c10a39034057778412d7fdf794dd99d">presentation.CtrlUI.toLogin</a></div><div class="ttdeci">void toLogin()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00076">CtrlUI.java:76</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_ab0f148c9dc080eceb818087cad16b592"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#ab0f148c9dc080eceb818087cad16b592">presentation.CtrlUI.CtrlUI</a></div><div class="ttdeci">CtrlUI()</div><div class="ttdoc">Creadora por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00060">CtrlUI.java:60</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_new_game_html_ac3af6f5021d32ed7cfd3419016be3144"><div class="ttname"><a href="classpresentation_1_1_new_game.html#ac3af6f5021d32ed7cfd3419016be3144">presentation.NewGame.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_new_game_8java_source.html#l00323">NewGame.java:323</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_login_html_a2d8aa6313fc18b2e26b8bc4aa3f1a273"><div class="ttname"><a href="classpresentation_1_1_login.html#a2d8aa6313fc18b2e26b8bc4aa3f1a273">presentation.Login.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_login_8java_source.html#l00158">Login.java:158</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_load_game_html_a71fcc5667aa8a7187f98bac68bb970df"><div class="ttname"><a href="classpresentation_1_1_load_game.html#a71fcc5667aa8a7187f98bac68bb970df">presentation.LoadGame.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_load_game_8java_source.html#l00232">LoadGame.java:232</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a2fccba9fe657240378046a2ceefb03fb"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">presentation.CtrlUI.mainFrame</a></div><div class="ttdeci">JFrame mainFrame</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00031">CtrlUI.java:31</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_aade2f964f7f12976d9a3bbb642c140c9"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#aade2f964f7f12976d9a3bbb642c140c9">domain.controllers.CtrlDomain.kakuroSetValue</a></div><div class="ttdeci">boolean kakuroSetValue(int x, int y, int value)</div><div class="ttdoc">Setter de valor en una celda.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00263">CtrlDomain.java:263</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_aff2ff4c3207b8b2df66653caafce6be8"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#aff2ff4c3207b8b2df66653caafce6be8">presentation.CtrlUI.showKakuro</a></div><div class="ttdeci">ShowKakuro showKakuro</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00051">CtrlUI.java:51</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a2fccba9fe657240378046a2ceefb03fb"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a2fccba9fe657240378046a2ceefb03fb">presentation.CtrlUI.mainFrame</a></div><div class="ttdeci">JFrame mainFrame</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00032">CtrlUI.java:32</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_aade2f964f7f12976d9a3bbb642c140c9"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#aade2f964f7f12976d9a3bbb642c140c9">domain.controllers.CtrlDomain.kakuroSetValue</a></div><div class="ttdeci">boolean kakuroSetValue(int x, int y, int value)</div><div class="ttdoc">Setter de valor en una celda.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00265">CtrlDomain.java:265</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_aff2ff4c3207b8b2df66653caafce6be8"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#aff2ff4c3207b8b2df66653caafce6be8">presentation.CtrlUI.showKakuro</a></div><div class="ttdeci">ShowKakuro showKakuro</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00052">CtrlUI.java:52</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_rankings_html_a05bb8fd892a55745a7cf495d1089cbfd"><div class="ttname"><a href="classpresentation_1_1_rankings.html#a05bb8fd892a55745a7cf495d1089cbfd">presentation.Rankings.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_rankings_8java_source.html#l00188">Rankings.java:188</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a6c5ff900d687ca061748ce47cbc9e501"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a6c5ff900d687ca061748ce47cbc9e501">presentation.CtrlUI.play</a></div><div class="ttdeci">Play play</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00046">CtrlUI.java:46</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a6c5ff900d687ca061748ce47cbc9e501"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a6c5ff900d687ca061748ce47cbc9e501">presentation.CtrlUI.play</a></div><div class="ttdeci">Play play</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00047">CtrlUI.java:47</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_ask_new_continue_html_af2d0d3cc05dcd2becd5d966c6aa4af6f"><div class="ttname"><a href="classpresentation_1_1_ask_new_continue.html#af2d0d3cc05dcd2becd5d966c6aa4af6f">presentation.AskNewContinue.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_ask_new_continue_8java_source.html#l00098">AskNewContinue.java:98</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a16caef7238c13b2287fd88f60943eb8b"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a16caef7238c13b2287fd88f60943eb8b">presentation.CtrlUI.login</a></div><div class="ttdeci">Login login</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00040">CtrlUI.java:40</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_aee031aa5434b1c906b1ae98790254288"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#aee031aa5434b1c906b1ae98790254288">domain.controllers.CtrlDomain.getListOfPlayers</a></div><div class="ttdeci">String[][] getListOfPlayers(String s)</div><div class="ttdoc">esta función sirve para organizar el ranking</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00372">CtrlDomain.java:372</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_afc912106f5730669864240291942a657"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#afc912106f5730669864240291942a657">domain.controllers.CtrlDomain.getThisKakuro</a></div><div class="ttdeci">String getThisKakuro(String s)</div><div class="ttdoc">Busca un kakuro en fichero a partir de una ruta relativa.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00530">CtrlDomain.java:530</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_affa2df906c62d26e3d7f39a0a7e213e4"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#affa2df906c62d26e3d7f39a0a7e213e4">domain.controllers.CtrlDomain.getConfig</a></div><div class="ttdeci">ArrayList&lt; String &gt; getConfig()</div><div class="ttdoc">Retorna la configuración.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00385">CtrlDomain.java:385</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a16caef7238c13b2287fd88f60943eb8b"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a16caef7238c13b2287fd88f60943eb8b">presentation.CtrlUI.login</a></div><div class="ttdeci">Login login</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00041">CtrlUI.java:41</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_aee031aa5434b1c906b1ae98790254288"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#aee031aa5434b1c906b1ae98790254288">domain.controllers.CtrlDomain.getListOfPlayers</a></div><div class="ttdeci">String[][] getListOfPlayers(String s)</div><div class="ttdoc">esta función sirve para organizar el ranking</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00374">CtrlDomain.java:374</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_afc912106f5730669864240291942a657"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#afc912106f5730669864240291942a657">domain.controllers.CtrlDomain.getThisKakuro</a></div><div class="ttdeci">String getThisKakuro(String s)</div><div class="ttdoc">Busca un kakuro en fichero a partir de una ruta relativa.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00532">CtrlDomain.java:532</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_affa2df906c62d26e3d7f39a0a7e213e4"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#affa2df906c62d26e3d7f39a0a7e213e4">domain.controllers.CtrlDomain.getConfig</a></div><div class="ttdeci">ArrayList&lt; String &gt; getConfig()</div><div class="ttdoc">Retorna la configuración.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00387">CtrlDomain.java:387</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_ask_save_html_ae0f24722147bee28a2f628e2b80641b4"><div class="ttname"><a href="classpresentation_1_1_ask_save.html#ae0f24722147bee28a2f628e2b80641b4">presentation.AskSave.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_ask_save_8java_source.html#l00149">AskSave.java:149</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ab7f822ef336ee90cd841166b1e24b936"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ab7f822ef336ee90cd841166b1e24b936">domain.controllers.CtrlDomain.startNewGame</a></div><div class="ttdeci">void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn, boolean training)</div><div class="ttdoc">Inicia una nueva partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00131">CtrlDomain.java:131</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a8e53f271cbdf7f36e4871170ce7e2c0e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8e53f271cbdf7f36e4871170ce7e2c0e">domain.controllers.CtrlDomain.getRecords</a></div><div class="ttdeci">JsonArray getRecords()</div><div class="ttdoc">Lee el fichero de records.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00538">CtrlDomain.java:538</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a9cb7e42d1dca3e3e6a0dd2ad1e4760b9">presentation.CtrlUI.askNewContinue</a></div><div class="ttdeci">AskNewContinue askNewContinue</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00043">CtrlUI.java:43</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a7823d752fcf767995c2f7e76e4e1d576"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a7823d752fcf767995c2f7e76e4e1d576">domain.controllers.CtrlDomain.saveKakuroAndGetInfo</a></div><div class="ttdeci">String saveKakuroAndGetInfo()</div><div class="ttdoc">Guarda un kakuro y obtiene la información de este.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00339">CtrlDomain.java:339</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ab7f822ef336ee90cd841166b1e24b936"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ab7f822ef336ee90cd841166b1e24b936">domain.controllers.CtrlDomain.startNewGame</a></div><div class="ttdeci">void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn, boolean training)</div><div class="ttdoc">Inicia una nueva partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00132">CtrlDomain.java:132</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a8e53f271cbdf7f36e4871170ce7e2c0e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8e53f271cbdf7f36e4871170ce7e2c0e">domain.controllers.CtrlDomain.getRecords</a></div><div class="ttdeci">JsonArray getRecords()</div><div class="ttdoc">Lee el fichero de records.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00540">CtrlDomain.java:540</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a9cb7e42d1dca3e3e6a0dd2ad1e4760b9">presentation.CtrlUI.askNewContinue</a></div><div class="ttdeci">AskNewContinue askNewContinue</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00044">CtrlUI.java:44</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a7823d752fcf767995c2f7e76e4e1d576"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a7823d752fcf767995c2f7e76e4e1d576">domain.controllers.CtrlDomain.saveKakuroAndGetInfo</a></div><div class="ttdeci">String saveKakuroAndGetInfo()</div><div class="ttdoc">Guarda un kakuro y obtiene la información de este.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00341">CtrlDomain.java:341</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_records_html_a7e755cddc136843002b5c74c0696c409"><div class="ttname"><a href="classpresentation_1_1_records.html#a7e755cddc136843002b5c74c0696c409">presentation.Records.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_records_8java_source.html#l00113">Records.java:113</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ad759f4f2a4bd7a5918db28b254282158"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad759f4f2a4bd7a5918db28b254282158">domain.controllers.CtrlDomain.resetParameters</a></div><div class="ttdeci">void resetParameters()</div><div class="ttdoc">Reinicia los parametros del controlador de dominio.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00413">CtrlDomain.java:413</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a328d3c93dff9ab0de4f877a9fae1b542"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a328d3c93dff9ab0de4f877a9fae1b542">presentation.CtrlUI.create</a></div><div class="ttdeci">Create create</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00047">CtrlUI.java:47</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ae8d8d972572f0ae0a323455982767336"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae8d8d972572f0ae0a323455982767336">domain.controllers.CtrlDomain.login</a></div><div class="ttdeci">void login(String username, String password)</div><div class="ttdoc">función que permite al usuario iniciar sesión</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00079">CtrlDomain.java:79</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a56ae4751e61082731407e4c8644a374e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a56ae4751e61082731407e4c8644a374e">domain.controllers.CtrlDomain.getListOfKakuros</a></div><div class="ttdeci">void getListOfKakuros()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00521">CtrlDomain.java:521</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a80fa66bc2060aed0ceac386ea7c0449f"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a80fa66bc2060aed0ceac386ea7c0449f">presentation.CtrlUI.askSave</a></div><div class="ttdeci">AskSave askSave</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00049">CtrlUI.java:49</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_adbc14104d6a911125ffae083d55b7d66"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#adbc14104d6a911125ffae083d55b7d66">domain.controllers.CtrlDomain.saveGame</a></div><div class="ttdeci">void saveGame()</div><div class="ttdoc">Guarda la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00360">CtrlDomain.java:360</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_af7b7d0c2f90437093500f33bf4eaca5c"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#af7b7d0c2f90437093500f33bf4eaca5c">domain.controllers.CtrlDomain.helpCorrectNumber</a></div><div class="ttdeci">int helpCorrectNumber(int x, int y)</div><div class="ttdoc">Se activa la ayuda que coloca el valor correcto de una celda.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00208">CtrlDomain.java:208</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a41d8b59ae2ef30334cd7226f43f4e2dd"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a41d8b59ae2ef30334cd7226f43f4e2dd">presentation.CtrlUI.generate</a></div><div class="ttdeci">Generate generate</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00048">CtrlUI.java:48</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a995aae7fccd5b3683d811e2df26dae5b"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a995aae7fccd5b3683d811e2df26dae5b">domain.controllers.CtrlDomain.getKakuro</a></div><div class="ttdeci">String getKakuro(String filePath)</div><div class="ttdoc">Getter de Kakuro.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00312">CtrlDomain.java:312</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a15cbb6f6b999458ad3de319d173ed6c3"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a15cbb6f6b999458ad3de319d173ed6c3">domain.controllers.CtrlDomain.addCreatedToPlayer</a></div><div class="ttdeci">void addCreatedToPlayer()</div><div class="ttdoc">Augmenta en uno el número de kakuros creados del jugador.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00579">CtrlDomain.java:579</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a37ae2972df63c86f15293db04ad06089"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a37ae2972df63c86f15293db04ad06089">domain.controllers.CtrlDomain.setTimeToGame</a></div><div class="ttdeci">void setTimeToGame(int gameTime)</div><div class="ttdoc">Guardar el tiempo en la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00405">CtrlDomain.java:405</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ad759f4f2a4bd7a5918db28b254282158"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad759f4f2a4bd7a5918db28b254282158">domain.controllers.CtrlDomain.resetParameters</a></div><div class="ttdeci">void resetParameters()</div><div class="ttdoc">Reinicia los parametros del controlador de dominio.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00415">CtrlDomain.java:415</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a328d3c93dff9ab0de4f877a9fae1b542"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a328d3c93dff9ab0de4f877a9fae1b542">presentation.CtrlUI.create</a></div><div class="ttdeci">Create create</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00048">CtrlUI.java:48</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ae8d8d972572f0ae0a323455982767336"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae8d8d972572f0ae0a323455982767336">domain.controllers.CtrlDomain.login</a></div><div class="ttdeci">void login(String username, String password)</div><div class="ttdoc">función que permite al usuario iniciar sesión</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00080">CtrlDomain.java:80</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a56ae4751e61082731407e4c8644a374e"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a56ae4751e61082731407e4c8644a374e">domain.controllers.CtrlDomain.getListOfKakuros</a></div><div class="ttdeci">void getListOfKakuros()</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00523">CtrlDomain.java:523</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a80fa66bc2060aed0ceac386ea7c0449f"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a80fa66bc2060aed0ceac386ea7c0449f">presentation.CtrlUI.askSave</a></div><div class="ttdeci">AskSave askSave</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00050">CtrlUI.java:50</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_adbc14104d6a911125ffae083d55b7d66"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#adbc14104d6a911125ffae083d55b7d66">domain.controllers.CtrlDomain.saveGame</a></div><div class="ttdeci">void saveGame()</div><div class="ttdoc">Guarda la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00362">CtrlDomain.java:362</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_af7b7d0c2f90437093500f33bf4eaca5c"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#af7b7d0c2f90437093500f33bf4eaca5c">domain.controllers.CtrlDomain.helpCorrectNumber</a></div><div class="ttdeci">int helpCorrectNumber(int x, int y)</div><div class="ttdoc">Se activa la ayuda que coloca el valor correcto de una celda.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00210">CtrlDomain.java:210</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a41d8b59ae2ef30334cd7226f43f4e2dd"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a41d8b59ae2ef30334cd7226f43f4e2dd">presentation.CtrlUI.generate</a></div><div class="ttdeci">Generate generate</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00049">CtrlUI.java:49</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a995aae7fccd5b3683d811e2df26dae5b"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a995aae7fccd5b3683d811e2df26dae5b">domain.controllers.CtrlDomain.getKakuro</a></div><div class="ttdeci">String getKakuro(String filePath)</div><div class="ttdoc">Getter de Kakuro.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00314">CtrlDomain.java:314</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a15cbb6f6b999458ad3de319d173ed6c3"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a15cbb6f6b999458ad3de319d173ed6c3">domain.controllers.CtrlDomain.addCreatedToPlayer</a></div><div class="ttdeci">void addCreatedToPlayer()</div><div class="ttdoc">Augmenta en uno el número de kakuros creados del jugador.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00581">CtrlDomain.java:581</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a37ae2972df63c86f15293db04ad06089"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a37ae2972df63c86f15293db04ad06089">domain.controllers.CtrlDomain.setTimeToGame</a></div><div class="ttdeci">void setTimeToGame(int gameTime)</div><div class="ttdoc">Guardar el tiempo en la partida.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00407">CtrlDomain.java:407</a></div></div>
 <div class="ttc" id="aclass_main_html"><div class="ttname"><a href="class_main.html">Main</a></div><div class="ttdoc">Clase Main que lanza el juego.</div><div class="ttdef"><b>Definition:</b> <a href="_main_8java_source.html#l00020">Main.java:20</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a5f1520ae955bee1e861eaa23b4b7c61f"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5f1520ae955bee1e861eaa23b4b7c61f">domain.controllers.CtrlDomain.isFinished</a></div><div class="ttdeci">boolean isFinished()</div><div class="ttdoc">Se mira si el usuario ha completado el tablero.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00173">CtrlDomain.java:173</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a3e793f193af9fd214bbcfb03f27755ab"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a3e793f193af9fd214bbcfb03f27755ab">domain.controllers.CtrlDomain.resetConfigColors</a></div><div class="ttdeci">void resetConfigColors()</div><div class="ttdoc">Reinicia la configuración de colores del usuario, poniendolos por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00116">CtrlDomain.java:116</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a8e3c43d091ee8a2f9a4908e1cca189d4"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">presentation.CtrlUI.rankings</a></div><div class="ttdeci">Rankings rankings</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00050">CtrlUI.java:50</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a22fd95268f323388ace60d4e224ce8a0"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">presentation.CtrlUI.records</a></div><div class="ttdeci">Records records</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00052">CtrlUI.java:52</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac3498321dc99c9fcfb10f5a121577d26"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac3498321dc99c9fcfb10f5a121577d26">domain.controllers.CtrlDomain.setKakuro</a></div><div class="ttdeci">void setKakuro(String kakuro)</div><div class="ttdoc">Asocia el kakuro pasado por parametro al controlador.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00423">CtrlDomain.java:423</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ae2291141db524d97560745e7f608b5ef"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae2291141db524d97560745e7f608b5ef">domain.controllers.CtrlDomain.resolve</a></div><div class="ttdeci">void resolve()</div><div class="ttdoc">Resuelvo el kakuro actual.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00512">CtrlDomain.java:512</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a9cfa4bf8e3f5aa80ff7136fd96a84fcb"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a9cfa4bf8e3f5aa80ff7136fd96a84fcb">presentation.CtrlUI.loadGame</a></div><div class="ttdeci">LoadGame loadGame</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00044">CtrlUI.java:44</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ad41e4cf31139cb39be0893f24cbc11ba"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad41e4cf31139cb39be0893f24cbc11ba">domain.controllers.CtrlDomain.getHelps</a></div><div class="ttdeci">ArrayList&lt; String &gt; getHelps()</div><div class="ttdoc">Getter de las ayudas.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00505">CtrlDomain.java:505</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_aae7bb2f73cc249d4ac7647614be42e3b"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#aae7bb2f73cc249d4ac7647614be42e3b">presentation.CtrlUI.newGame</a></div><div class="ttdeci">NewGame newGame</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00045">CtrlUI.java:45</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a674522020a65e57190718c78b83ea942"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a674522020a65e57190718c78b83ea942">domain.controllers.CtrlDomain.setGame</a></div><div class="ttdeci">void setGame(int game)</div><div class="ttdoc">Continua una partida existente.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00163">CtrlDomain.java:163</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_generate_html_aba913fed282401096169026cb9c3541e"><div class="ttname"><a href="classpresentation_1_1_generate.html#aba913fed282401096169026cb9c3541e">presentation.Generate.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_generate_8java_source.html#l00224">Generate.java:224</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_af25cee06be25636889ea413d4acf3ad8"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">presentation.CtrlUI.cd</a></div><div class="ttdeci">CtrlDomain cd</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00026">CtrlUI.java:26</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a84a0345c9576dafd89f020650b4054ef"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a84a0345c9576dafd89f020650b4054ef">domain.controllers.CtrlDomain.getCorrectKakuroToString</a></div><div class="ttdeci">String getCorrectKakuroToString()</div><div class="ttdoc">Getter del kakuro correcto en formato String.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00279">CtrlDomain.java:279</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a5f1520ae955bee1e861eaa23b4b7c61f"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a5f1520ae955bee1e861eaa23b4b7c61f">domain.controllers.CtrlDomain.isFinished</a></div><div class="ttdeci">boolean isFinished()</div><div class="ttdoc">Se mira si el usuario ha completado el tablero.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00175">CtrlDomain.java:175</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a3e793f193af9fd214bbcfb03f27755ab"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a3e793f193af9fd214bbcfb03f27755ab">domain.controllers.CtrlDomain.resetConfigColors</a></div><div class="ttdeci">void resetConfigColors()</div><div class="ttdoc">Reinicia la configuración de colores del usuario, poniendolos por defecto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00117">CtrlDomain.java:117</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a8e3c43d091ee8a2f9a4908e1cca189d4"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">presentation.CtrlUI.rankings</a></div><div class="ttdeci">Rankings rankings</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00051">CtrlUI.java:51</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a22fd95268f323388ace60d4e224ce8a0"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">presentation.CtrlUI.records</a></div><div class="ttdeci">Records records</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00053">CtrlUI.java:53</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac3498321dc99c9fcfb10f5a121577d26"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac3498321dc99c9fcfb10f5a121577d26">domain.controllers.CtrlDomain.setKakuro</a></div><div class="ttdeci">void setKakuro(String kakuro)</div><div class="ttdoc">Asocia el kakuro pasado por parametro al controlador.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00425">CtrlDomain.java:425</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ae2291141db524d97560745e7f608b5ef"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae2291141db524d97560745e7f608b5ef">domain.controllers.CtrlDomain.resolve</a></div><div class="ttdeci">void resolve()</div><div class="ttdoc">Resuelvo el kakuro actual.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00514">CtrlDomain.java:514</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_a9cfa4bf8e3f5aa80ff7136fd96a84fcb"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#a9cfa4bf8e3f5aa80ff7136fd96a84fcb">presentation.CtrlUI.loadGame</a></div><div class="ttdeci">LoadGame loadGame</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00045">CtrlUI.java:45</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ad41e4cf31139cb39be0893f24cbc11ba"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad41e4cf31139cb39be0893f24cbc11ba">domain.controllers.CtrlDomain.getHelps</a></div><div class="ttdeci">ArrayList&lt; String &gt; getHelps()</div><div class="ttdoc">Getter de las ayudas.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00507">CtrlDomain.java:507</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_aae7bb2f73cc249d4ac7647614be42e3b"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#aae7bb2f73cc249d4ac7647614be42e3b">presentation.CtrlUI.newGame</a></div><div class="ttdeci">NewGame newGame</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00046">CtrlUI.java:46</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a674522020a65e57190718c78b83ea942"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a674522020a65e57190718c78b83ea942">domain.controllers.CtrlDomain.setGame</a></div><div class="ttdeci">void setGame(int game)</div><div class="ttdoc">Continua una partida existente.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00165">CtrlDomain.java:165</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_generate_html_aba913fed282401096169026cb9c3541e"><div class="ttname"><a href="classpresentation_1_1_generate.html#aba913fed282401096169026cb9c3541e">presentation.Generate.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_generate_8java_source.html#l00227">Generate.java:227</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_af25cee06be25636889ea413d4acf3ad8"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#af25cee06be25636889ea413d4acf3ad8">presentation.CtrlUI.cd</a></div><div class="ttdeci">CtrlDomain cd</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00027">CtrlUI.java:27</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a84a0345c9576dafd89f020650b4054ef"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a84a0345c9576dafd89f020650b4054ef">domain.controllers.CtrlDomain.getCorrectKakuroToString</a></div><div class="ttdeci">String getCorrectKakuroToString()</div><div class="ttdoc">Getter del kakuro correcto en formato String.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00281">CtrlDomain.java:281</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_play_html_aafcab42d4f553dcc94f17eafde571724"><div class="ttname"><a href="classpresentation_1_1_play.html#aafcab42d4f553dcc94f17eafde571724">presentation.Play.getDefaultPanel</a></div><div class="ttdeci">Container getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_play_8java_source.html#l00670">Play.java:670</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac624fdd3982402e1968bbf5595b83031"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac624fdd3982402e1968bbf5595b83031">domain.controllers.CtrlDomain.getStatsList</a></div><div class="ttdeci">ArrayList&lt; Integer &gt; getStatsList()</div><div class="ttdoc">Retorna de forma ordenada las estadísticas.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00488">CtrlDomain.java:488</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_ae57c6ae34f440e3fb15e53acffb3c54f"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#ae57c6ae34f440e3fb15e53acffb3c54f">presentation.CtrlUI.main</a></div><div class="ttdeci">Main main</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00042">CtrlUI.java:42</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a8c301851185581b07421d0b26e706fad"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8c301851185581b07421d0b26e706fad">domain.controllers.CtrlDomain.signUp</a></div><div class="ttdeci">void signUp(String username, String password)</div><div class="ttdoc">función que permite al usuario registrarse</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00106">CtrlDomain.java:106</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac624fdd3982402e1968bbf5595b83031"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac624fdd3982402e1968bbf5595b83031">domain.controllers.CtrlDomain.getStatsList</a></div><div class="ttdeci">ArrayList&lt; Integer &gt; getStatsList()</div><div class="ttdoc">Retorna de forma ordenada las estadísticas.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00490">CtrlDomain.java:490</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_ctrl_u_i_html_ae57c6ae34f440e3fb15e53acffb3c54f"><div class="ttname"><a href="classpresentation_1_1_ctrl_u_i.html#ae57c6ae34f440e3fb15e53acffb3c54f">presentation.CtrlUI.main</a></div><div class="ttdeci">Main main</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_u_i_8java_source.html#l00043">CtrlUI.java:43</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a8c301851185581b07421d0b26e706fad"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a8c301851185581b07421d0b26e706fad">domain.controllers.CtrlDomain.signUp</a></div><div class="ttdeci">void signUp(String username, String password)</div><div class="ttdoc">función que permite al usuario registrarse</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00107">CtrlDomain.java:107</a></div></div>
 <div class="ttc" id="aclasspresentation_1_1_main_html_ae0bd80f14169554f669b5a3afc013b30"><div class="ttname"><a href="classpresentation_1_1_main.html#ae0bd80f14169554f669b5a3afc013b30">presentation.Main.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="presentation_2_main_8java_source.html#l00143">presentation/Main.java:143</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac571b44b2ea9370ad8dc99cbb51c2672"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac571b44b2ea9370ad8dc99cbb51c2672">domain.controllers.CtrlDomain.helpMyValue</a></div><div class="ttdeci">int helpMyValue(int x, int y)</div><div class="ttdoc">Se activa la ayuda que mira si el valor que el usuario ha puesto es correcto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00198">CtrlDomain.java:198</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a0d1ea47e7ae6ff75e09d7f8f7786162c"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a0d1ea47e7ae6ff75e09d7f8f7786162c">domain.controllers.CtrlDomain.logout</a></div><div class="ttdeci">void logout()</div><div class="ttdoc">función que permite al usuario cerrar sesión</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00090">CtrlDomain.java:90</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a38db74a9b64f312f843b81021eca8dcc"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a38db74a9b64f312f843b81021eca8dcc">domain.controllers.CtrlDomain.getStartedGames</a></div><div class="ttdeci">ArrayList&lt; ArrayList&lt; Integer &gt; &gt; getStartedGames()</div><div class="ttdoc">Getter de partidas empezadas por el usuario actual.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00348">CtrlDomain.java:348</a></div></div>
-<div class="ttc" id="aclasspresentation_1_1_create_html_a119bea3daf44952bad56d15791f0f64f"><div class="ttname"><a href="classpresentation_1_1_create.html#a119bea3daf44952bad56d15791f0f64f">presentation.Create.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_create_8java_source.html#l00573">Create.java:573</a></div></div>
-<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a9f1e10a0ea84bf53bf417392e3193d96"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a9f1e10a0ea84bf53bf417392e3193d96">domain.controllers.CtrlDomain.validate</a></div><div class="ttdeci">boolean validate()</div><div class="ttdoc">Se valida un Kakuro que sea correcto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00234">CtrlDomain.java:234</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_ac571b44b2ea9370ad8dc99cbb51c2672"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#ac571b44b2ea9370ad8dc99cbb51c2672">domain.controllers.CtrlDomain.helpMyValue</a></div><div class="ttdeci">int helpMyValue(int x, int y)</div><div class="ttdoc">Se activa la ayuda que mira si el valor que el usuario ha puesto es correcto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00200">CtrlDomain.java:200</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a0d1ea47e7ae6ff75e09d7f8f7786162c"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a0d1ea47e7ae6ff75e09d7f8f7786162c">domain.controllers.CtrlDomain.logout</a></div><div class="ttdeci">void logout()</div><div class="ttdoc">función que permite al usuario cerrar sesión</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00091">CtrlDomain.java:91</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a38db74a9b64f312f843b81021eca8dcc"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a38db74a9b64f312f843b81021eca8dcc">domain.controllers.CtrlDomain.getStartedGames</a></div><div class="ttdeci">ArrayList&lt; ArrayList&lt; Integer &gt; &gt; getStartedGames()</div><div class="ttdoc">Getter de partidas empezadas por el usuario actual.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00350">CtrlDomain.java:350</a></div></div>
+<div class="ttc" id="aclasspresentation_1_1_create_html_a119bea3daf44952bad56d15791f0f64f"><div class="ttname"><a href="classpresentation_1_1_create.html#a119bea3daf44952bad56d15791f0f64f">presentation.Create.getDefaultPanel</a></div><div class="ttdeci">JPanel getDefaultPanel()</div><div class="ttdef"><b>Definition:</b> <a href="_create_8java_source.html#l00574">Create.java:574</a></div></div>
+<div class="ttc" id="aclassdomain_1_1controllers_1_1_ctrl_domain_html_a9f1e10a0ea84bf53bf417392e3193d96"><div class="ttname"><a href="classdomain_1_1controllers_1_1_ctrl_domain.html#a9f1e10a0ea84bf53bf417392e3193d96">domain.controllers.CtrlDomain.validate</a></div><div class="ttdeci">boolean validate()</div><div class="ttdoc">Se valida un Kakuro que sea correcto.</div><div class="ttdef"><b>Definition:</b> <a href="_ctrl_domain_8java_source.html#l00236">CtrlDomain.java:236</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado por&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

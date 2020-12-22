@@ -54,9 +54,9 @@ int \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af1ccd05e145aa6ac6cc08a03075
 \item 
 int \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a329c316bc1b0ecaa3c9ebac798bb20cc}{help2}} (int x, int y)
 \item 
-void \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a7062a4cf1df8ff4f3be371c68159993e}{start\+Game}} (int diff, int row\+Size, int column\+Size, boolean trainig)
+void \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a7062a4cf1df8ff4f3be371c68159993e}{start\+Game}} (int diff, int row\+Size, int column\+Size, boolean trainig)  throws Cant\+Generate\+Exception 
 \item 
-void \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a6199554ef4ae10788e6ca8903b2511da}{start\+Game}} (String absolute\+Path)
+void \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a74522f1e4c66fd60f760b376febc7b85}{start\+Game}} (String absolute\+Path, boolean training)
 \item 
 boolean \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a996127f628875954320a4d376be514e6}{is\+Finished}} ()
 \item 
@@ -165,7 +165,7 @@ Judith Almoño Gómez
 \end{DoxyAuthor}
 
 
-Definición en la línea 22 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 23 del archivo Ctrl\+U\+I.\+java.
 
 
 
@@ -182,13 +182,13 @@ Creadora por defecto.
 
 Se ejecuta automáticamente al declarar una instancia del Ctrl\+Domain. 
 
-Definición en la línea 59 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 60 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{59                     \{}
-\DoxyCodeLine{60         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}} = \textcolor{keyword}{new} CtrlDomain();}
-\DoxyCodeLine{61     \}}
+\DoxyCodeLine{60                     \{}
+\DoxyCodeLine{61         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}} = \textcolor{keyword}{new} CtrlDomain();}
+\DoxyCodeLine{62     \}}
 
 \end{DoxyCode}
 
@@ -202,15 +202,15 @@ Definición en la línea 59 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 34 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 35 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{34                                        \{}
-\DoxyCodeLine{35         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}{ctrlUI}} == \textcolor{keyword}{null})}
-\DoxyCodeLine{36             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}{ctrlUI}} = \textcolor{keyword}{new} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ab0f148c9dc080eceb818087cad16b592}{CtrlUI}}();}
-\DoxyCodeLine{37         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}{ctrlUI}};}
-\DoxyCodeLine{38     \}}
+\DoxyCodeLine{35                                        \{}
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}{ctrlUI}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{37             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}{ctrlUI}} = \textcolor{keyword}{new} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ab0f148c9dc080eceb818087cad16b592}{CtrlUI}}();}
+\DoxyCodeLine{38         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}{ctrlUI}};}
+\DoxyCodeLine{39     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aef8d86118547505ecba97200a0215fdc}\label{classpresentation_1_1_ctrl_u_i_aef8d86118547505ecba97200a0215fdc}} 
@@ -221,19 +221,19 @@ Definición en la línea 34 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 65 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 66 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{65                       \{}
-\DoxyCodeLine{66         Utils.loadFonts();}
-\DoxyCodeLine{67         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
-\DoxyCodeLine{68         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setSize(1200,800);}
-\DoxyCodeLine{69         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setResizable(\textcolor{keyword}{false});}
-\DoxyCodeLine{70         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setIconImage(Utils.getLogo().getImage());}
-\DoxyCodeLine{71         Utils.center(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}});}
-\DoxyCodeLine{72         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a5c10a39034057778412d7fdf794dd99d}{toLogin}}();}
-\DoxyCodeLine{73     \}}
+\DoxyCodeLine{66                       \{}
+\DoxyCodeLine{67         Utils.loadFonts();}
+\DoxyCodeLine{68         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setDefaultCloseOperation(JFrame.EXIT\_ON\_CLOSE);}
+\DoxyCodeLine{69         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setSize(1200,800);}
+\DoxyCodeLine{70         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setResizable(\textcolor{keyword}{false});}
+\DoxyCodeLine{71         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setIconImage(Utils.getLogo().getImage());}
+\DoxyCodeLine{72         Utils.center(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}});}
+\DoxyCodeLine{73         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a5c10a39034057778412d7fdf794dd99d}{toLogin}}();}
+\DoxyCodeLine{74     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a5c10a39034057778412d7fdf794dd99d}\label{classpresentation_1_1_ctrl_u_i_a5c10a39034057778412d7fdf794dd99d}} 
@@ -244,16 +244,16 @@ Definición en la línea 65 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 75 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 76 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{75                           \{}
-\DoxyCodeLine{76         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a16caef7238c13b2287fd88f60943eb8b}{login}} = \textcolor{keyword}{new} Login();}
-\DoxyCodeLine{77         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Login"{}});}
-\DoxyCodeLine{78         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a16caef7238c13b2287fd88f60943eb8b}{login}}.\mbox{\hyperlink{classpresentation_1_1_login_a2d8aa6313fc18b2e26b8bc4aa3f1a273}{getDefaultPanel}}());}
-\DoxyCodeLine{79         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{80     \}}
+\DoxyCodeLine{76                           \{}
+\DoxyCodeLine{77         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a16caef7238c13b2287fd88f60943eb8b}{login}} = \textcolor{keyword}{new} Login();}
+\DoxyCodeLine{78         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Login"{}});}
+\DoxyCodeLine{79         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a16caef7238c13b2287fd88f60943eb8b}{login}}.\mbox{\hyperlink{classpresentation_1_1_login_a2d8aa6313fc18b2e26b8bc4aa3f1a273}{getDefaultPanel}}());}
+\DoxyCodeLine{80         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{81     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aeccd7832d33eef3ea935dedaf1522d05}\label{classpresentation_1_1_ctrl_u_i_aeccd7832d33eef3ea935dedaf1522d05}} 
@@ -264,16 +264,16 @@ Definición en la línea 75 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 82 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 83 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{82                              \{}
-\DoxyCodeLine{83         \textcolor{keyword}{register} = \textcolor{keyword}{new} Register();}
-\DoxyCodeLine{84         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Register"{}});}
-\DoxyCodeLine{85         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\textcolor{keyword}{register}.getDefaultPanel());}
-\DoxyCodeLine{86         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{87     \}}
+\DoxyCodeLine{83                              \{}
+\DoxyCodeLine{84         \textcolor{keyword}{register} = \textcolor{keyword}{new} Register();}
+\DoxyCodeLine{85         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Register"{}});}
+\DoxyCodeLine{86         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\textcolor{keyword}{register}.getDefaultPanel());}
+\DoxyCodeLine{87         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{88     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ae94fb5ce8fcfd9954acfff03bb200de3}\label{classpresentation_1_1_ctrl_u_i_ae94fb5ce8fcfd9954acfff03bb200de3}} 
@@ -284,16 +284,16 @@ Definición en la línea 82 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 89 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 90 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{89                          \{}
-\DoxyCodeLine{90         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ae57c6ae34f440e3fb15e53acffb3c54f}{main}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_main}{Main}}();}
-\DoxyCodeLine{91         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Main"{}});}
-\DoxyCodeLine{92         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ae57c6ae34f440e3fb15e53acffb3c54f}{main}}.\mbox{\hyperlink{classpresentation_1_1_main_ae0bd80f14169554f669b5a3afc013b30}{getDefaultPanel}}());}
-\DoxyCodeLine{93         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{94     \}}
+\DoxyCodeLine{90                          \{}
+\DoxyCodeLine{91         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ae57c6ae34f440e3fb15e53acffb3c54f}{main}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_main}{Main}}();}
+\DoxyCodeLine{92         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Main"{}});}
+\DoxyCodeLine{93         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_ae57c6ae34f440e3fb15e53acffb3c54f}{main}}.\mbox{\hyperlink{classpresentation_1_1_main_ae0bd80f14169554f669b5a3afc013b30}{getDefaultPanel}}());}
+\DoxyCodeLine{94         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{95     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a616a67cf1fdcd117a95d103d51c43746}\label{classpresentation_1_1_ctrl_u_i_a616a67cf1fdcd117a95d103d51c43746}} 
@@ -304,16 +304,16 @@ Definición en la línea 89 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 96 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 97 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{96                                    \{}
-\DoxyCodeLine{97         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9}{askNewContinue}} = \textcolor{keyword}{new} AskNewContinue();}
-\DoxyCodeLine{98         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}New game or continue"{}});}
-\DoxyCodeLine{99         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9}{askNewContinue}}.\mbox{\hyperlink{classpresentation_1_1_ask_new_continue_af2d0d3cc05dcd2becd5d966c6aa4af6f}{getDefaultPanel}}());}
-\DoxyCodeLine{100         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{101     \}}
+\DoxyCodeLine{97                                    \{}
+\DoxyCodeLine{98         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9}{askNewContinue}} = \textcolor{keyword}{new} AskNewContinue();}
+\DoxyCodeLine{99         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}New game or continue"{}});}
+\DoxyCodeLine{100         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9}{askNewContinue}}.\mbox{\hyperlink{classpresentation_1_1_ask_new_continue_af2d0d3cc05dcd2becd5d966c6aa4af6f}{getDefaultPanel}}());}
+\DoxyCodeLine{101         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{102     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a12e6b24d4b4de04ca517b7570b8aea4f}\label{classpresentation_1_1_ctrl_u_i_a12e6b24d4b4de04ca517b7570b8aea4f}} 
@@ -324,16 +324,16 @@ Definición en la línea 96 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 103 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 104 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{103                                             \{}
-\DoxyCodeLine{104         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aae7bb2f73cc249d4ac7647614be42e3b}{newGame}} = \textcolor{keyword}{new} NewGame(training);}
-\DoxyCodeLine{105         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}New Game"{}});}
-\DoxyCodeLine{106         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aae7bb2f73cc249d4ac7647614be42e3b}{newGame}}.\mbox{\hyperlink{classpresentation_1_1_new_game_ac3af6f5021d32ed7cfd3419016be3144}{getDefaultPanel}}());}
-\DoxyCodeLine{107         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{108     \}}
+\DoxyCodeLine{104                                             \{}
+\DoxyCodeLine{105         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aae7bb2f73cc249d4ac7647614be42e3b}{newGame}} = \textcolor{keyword}{new} NewGame(training);}
+\DoxyCodeLine{106         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}New Game"{}});}
+\DoxyCodeLine{107         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aae7bb2f73cc249d4ac7647614be42e3b}{newGame}}.\mbox{\hyperlink{classpresentation_1_1_new_game_ac3af6f5021d32ed7cfd3419016be3144}{getDefaultPanel}}());}
+\DoxyCodeLine{108         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{109     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ae925eafbc8244d7c0cf5ac8a9cfd108a}\label{classpresentation_1_1_ctrl_u_i_ae925eafbc8244d7c0cf5ac8a9cfd108a}} 
@@ -344,16 +344,16 @@ Definición en la línea 103 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 110 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 111 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{110                              \{}
-\DoxyCodeLine{111         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cfa4bf8e3f5aa80ff7136fd96a84fcb}{loadGame}} = \textcolor{keyword}{new} LoadGame();}
-\DoxyCodeLine{112         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}LoadGame"{}});}
-\DoxyCodeLine{113         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cfa4bf8e3f5aa80ff7136fd96a84fcb}{loadGame}}.\mbox{\hyperlink{classpresentation_1_1_load_game_a71fcc5667aa8a7187f98bac68bb970df}{getDefaultPanel}}());}
-\DoxyCodeLine{114         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{115     \}}
+\DoxyCodeLine{111                              \{}
+\DoxyCodeLine{112         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cfa4bf8e3f5aa80ff7136fd96a84fcb}{loadGame}} = \textcolor{keyword}{new} LoadGame();}
+\DoxyCodeLine{113         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}LoadGame"{}});}
+\DoxyCodeLine{114         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a9cfa4bf8e3f5aa80ff7136fd96a84fcb}{loadGame}}.\mbox{\hyperlink{classpresentation_1_1_load_game_a71fcc5667aa8a7187f98bac68bb970df}{getDefaultPanel}}());}
+\DoxyCodeLine{115         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{116     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aceb8433fb8d00bf5f53b657e28bf83ad}\label{classpresentation_1_1_ctrl_u_i_aceb8433fb8d00bf5f53b657e28bf83ad}} 
@@ -364,16 +364,16 @@ Definición en la línea 110 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 117 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 118 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{117                                                         \{}
-\DoxyCodeLine{118         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a6c5ff900d687ca061748ce47cbc9e501}{play}} = \textcolor{keyword}{new} Play(kakuro, training);}
-\DoxyCodeLine{119         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Play"{}});}
-\DoxyCodeLine{120         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a6c5ff900d687ca061748ce47cbc9e501}{play}}.\mbox{\hyperlink{classpresentation_1_1_play_aafcab42d4f553dcc94f17eafde571724}{getDefaultPanel}}());}
-\DoxyCodeLine{121         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{122     \}}
+\DoxyCodeLine{118                                                         \{}
+\DoxyCodeLine{119         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a6c5ff900d687ca061748ce47cbc9e501}{play}} = \textcolor{keyword}{new} Play(kakuro, training);}
+\DoxyCodeLine{120         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Play"{}});}
+\DoxyCodeLine{121         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a6c5ff900d687ca061748ce47cbc9e501}{play}}.\mbox{\hyperlink{classpresentation_1_1_play_aafcab42d4f553dcc94f17eafde571724}{getDefaultPanel}}());}
+\DoxyCodeLine{122         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{123     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a3ad5ff33d7af10577edc63e856ce1cfc}\label{classpresentation_1_1_ctrl_u_i_a3ad5ff33d7af10577edc63e856ce1cfc}} 
@@ -384,16 +384,16 @@ Definición en la línea 117 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 124 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 125 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{124                            \{}
-\DoxyCodeLine{125         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a328d3c93dff9ab0de4f877a9fae1b542}{create}} = \textcolor{keyword}{new} Create();}
-\DoxyCodeLine{126         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Create"{}});}
-\DoxyCodeLine{127         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a328d3c93dff9ab0de4f877a9fae1b542}{create}}.\mbox{\hyperlink{classpresentation_1_1_create_a119bea3daf44952bad56d15791f0f64f}{getDefaultPanel}}());}
-\DoxyCodeLine{128         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{129     \}}
+\DoxyCodeLine{125                            \{}
+\DoxyCodeLine{126         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a328d3c93dff9ab0de4f877a9fae1b542}{create}} = \textcolor{keyword}{new} Create();}
+\DoxyCodeLine{127         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Create"{}});}
+\DoxyCodeLine{128         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a328d3c93dff9ab0de4f877a9fae1b542}{create}}.\mbox{\hyperlink{classpresentation_1_1_create_a119bea3daf44952bad56d15791f0f64f}{getDefaultPanel}}());}
+\DoxyCodeLine{129         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{130     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_afdc10d95f0ff51ee2015ca27feff9aa7}\label{classpresentation_1_1_ctrl_u_i_afdc10d95f0ff51ee2015ca27feff9aa7}} 
@@ -404,16 +404,16 @@ Definición en la línea 124 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 131 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 132 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{131                              \{}
-\DoxyCodeLine{132         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a41d8b59ae2ef30334cd7226f43f4e2dd}{generate}} = \textcolor{keyword}{new} Generate();}
-\DoxyCodeLine{133         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Generate"{}});}
-\DoxyCodeLine{134         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a41d8b59ae2ef30334cd7226f43f4e2dd}{generate}}.\mbox{\hyperlink{classpresentation_1_1_generate_aba913fed282401096169026cb9c3541e}{getDefaultPanel}}());}
-\DoxyCodeLine{135         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{136     \}}
+\DoxyCodeLine{132                              \{}
+\DoxyCodeLine{133         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a41d8b59ae2ef30334cd7226f43f4e2dd}{generate}} = \textcolor{keyword}{new} Generate();}
+\DoxyCodeLine{134         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Generate"{}});}
+\DoxyCodeLine{135         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a41d8b59ae2ef30334cd7226f43f4e2dd}{generate}}.\mbox{\hyperlink{classpresentation_1_1_generate_aba913fed282401096169026cb9c3541e}{getDefaultPanel}}());}
+\DoxyCodeLine{136         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{137     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_abb62b5bdaaf4dd9bb5509ce1e60e1e91}\label{classpresentation_1_1_ctrl_u_i_abb62b5bdaaf4dd9bb5509ce1e60e1e91}} 
@@ -424,16 +424,16 @@ Definición en la línea 131 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 138 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 139 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{138                              \{}
-\DoxyCodeLine{139         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a8e3c43d091ee8a2f9a4908e1cca189d4}{rankings}} = \textcolor{keyword}{new} Rankings();}
-\DoxyCodeLine{140         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Ranking"{}});}
-\DoxyCodeLine{141         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a8e3c43d091ee8a2f9a4908e1cca189d4}{rankings}}.\mbox{\hyperlink{classpresentation_1_1_rankings_a05bb8fd892a55745a7cf495d1089cbfd}{getDefaultPanel}}());}
-\DoxyCodeLine{142         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{143     \}}
+\DoxyCodeLine{139                              \{}
+\DoxyCodeLine{140         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a8e3c43d091ee8a2f9a4908e1cca189d4}{rankings}} = \textcolor{keyword}{new} Rankings();}
+\DoxyCodeLine{141         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Ranking"{}});}
+\DoxyCodeLine{142         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a8e3c43d091ee8a2f9a4908e1cca189d4}{rankings}}.\mbox{\hyperlink{classpresentation_1_1_rankings_a05bb8fd892a55745a7cf495d1089cbfd}{getDefaultPanel}}());}
+\DoxyCodeLine{143         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{144     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aedf3a3ede5246fecaba14db59c8f22f1}\label{classpresentation_1_1_ctrl_u_i_aedf3a3ede5246fecaba14db59c8f22f1}} 
@@ -444,16 +444,16 @@ Definición en la línea 138 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 145 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 146 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{145                                                  \{}
-\DoxyCodeLine{146         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aff2ff4c3207b8b2df66653caafce6be8}{showKakuro}} = \textcolor{keyword}{new} ShowKakuro(s,fila);}
-\DoxyCodeLine{147         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}ShowKakuro"{}});}
-\DoxyCodeLine{148         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aff2ff4c3207b8b2df66653caafce6be8}{showKakuro}}.\mbox{\hyperlink{classpresentation_1_1_show_kakuro_a87767e22cafa0d07758c85e73db34668}{getDefaultPanel}}());}
-\DoxyCodeLine{149         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{150     \}}
+\DoxyCodeLine{146                                                  \{}
+\DoxyCodeLine{147         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aff2ff4c3207b8b2df66653caafce6be8}{showKakuro}} = \textcolor{keyword}{new} ShowKakuro(s,fila);}
+\DoxyCodeLine{148         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}ShowKakuro"{}});}
+\DoxyCodeLine{149         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aff2ff4c3207b8b2df66653caafce6be8}{showKakuro}}.\mbox{\hyperlink{classpresentation_1_1_show_kakuro_a87767e22cafa0d07758c85e73db34668}{getDefaultPanel}}());}
+\DoxyCodeLine{150         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{151     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_af596b77d57523e0ea5975c2565157427}\label{classpresentation_1_1_ctrl_u_i_af596b77d57523e0ea5975c2565157427}} 
@@ -464,16 +464,16 @@ Definición en la línea 145 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 152 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 153 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{152                                                                            \{}
-\DoxyCodeLine{153         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a80fa66bc2060aed0ceac386ea7c0449f}{askSave}} = \textcolor{keyword}{new} AskSave(question, boardKakuro, option);}
-\DoxyCodeLine{154         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Save"{}});}
-\DoxyCodeLine{155         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a80fa66bc2060aed0ceac386ea7c0449f}{askSave}}.\mbox{\hyperlink{classpresentation_1_1_ask_save_ae0f24722147bee28a2f628e2b80641b4}{getDefaultPanel}}());}
-\DoxyCodeLine{156         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{157     \}}
+\DoxyCodeLine{153                                                                            \{}
+\DoxyCodeLine{154         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a80fa66bc2060aed0ceac386ea7c0449f}{askSave}} = \textcolor{keyword}{new} AskSave(question, boardKakuro, option);}
+\DoxyCodeLine{155         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Save"{}});}
+\DoxyCodeLine{156         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a80fa66bc2060aed0ceac386ea7c0449f}{askSave}}.\mbox{\hyperlink{classpresentation_1_1_ask_save_ae0f24722147bee28a2f628e2b80641b4}{getDefaultPanel}}());}
+\DoxyCodeLine{157         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{158     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aa1420b8416f27b9202dbe4a759761c12}\label{classpresentation_1_1_ctrl_u_i_aa1420b8416f27b9202dbe4a759761c12}} 
@@ -484,16 +484,16 @@ Definición en la línea 152 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 159 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 160 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{159                             \{}
-\DoxyCodeLine{160         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a22fd95268f323388ace60d4e224ce8a0}{records}} = \textcolor{keyword}{new} Records();}
-\DoxyCodeLine{161         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Records"{}});}
-\DoxyCodeLine{162         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a22fd95268f323388ace60d4e224ce8a0}{records}}.\mbox{\hyperlink{classpresentation_1_1_records_a7e755cddc136843002b5c74c0696c409}{getDefaultPanel}}());}
-\DoxyCodeLine{163         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
-\DoxyCodeLine{164     \}}
+\DoxyCodeLine{160                             \{}
+\DoxyCodeLine{161         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a22fd95268f323388ace60d4e224ce8a0}{records}} = \textcolor{keyword}{new} Records();}
+\DoxyCodeLine{162         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setTitle(\textcolor{stringliteral}{"{}Records"{}});}
+\DoxyCodeLine{163         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setContentPane(\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a22fd95268f323388ace60d4e224ce8a0}{records}}.\mbox{\hyperlink{classpresentation_1_1_records_a7e755cddc136843002b5c74c0696c409}{getDefaultPanel}}());}
+\DoxyCodeLine{164         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}{mainFrame}}.setVisible(\textcolor{keyword}{true});}
+\DoxyCodeLine{165     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ac83dc67a6065a1ab75b84c412f7edb9d}\label{classpresentation_1_1_ctrl_u_i_ac83dc67a6065a1ab75b84c412f7edb9d}} 
@@ -504,13 +504,13 @@ Definición en la línea 159 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 166 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 167 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{166                               \{}
-\DoxyCodeLine{167         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad6f12d4830c90bf5f3e3b0e9696eaf0e}{getKakuroToString}}();}
-\DoxyCodeLine{168     \}}
+\DoxyCodeLine{167                               \{}
+\DoxyCodeLine{168         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad6f12d4830c90bf5f3e3b0e9696eaf0e}{getKakuroToString}}();}
+\DoxyCodeLine{169     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a16a99b0e0a0a14c7824e9effe9ad9893}\label{classpresentation_1_1_ctrl_u_i_a16a99b0e0a0a14c7824e9effe9ad9893}} 
@@ -521,13 +521,13 @@ Definición en la línea 166 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 170 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 171 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{170                                      \{}
-\DoxyCodeLine{171         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a84a0345c9576dafd89f020650b4054ef}{getCorrectKakuroToString}}();}
-\DoxyCodeLine{172     \}}
+\DoxyCodeLine{171                                      \{}
+\DoxyCodeLine{172         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a84a0345c9576dafd89f020650b4054ef}{getCorrectKakuroToString}}();}
+\DoxyCodeLine{173     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_adb88dd57cc7805700a5c9d340d2ea0b0}\label{classpresentation_1_1_ctrl_u_i_adb88dd57cc7805700a5c9d340d2ea0b0}} 
@@ -538,18 +538,18 @@ Definición en la línea 170 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 174 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 175 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{174                                                                      \{}
-\DoxyCodeLine{175         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{176             String kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(path);}
-\DoxyCodeLine{177             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(kakuro);}
-\DoxyCodeLine{178         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{179             e.printStackTrace();}
-\DoxyCodeLine{180         \}}
-\DoxyCodeLine{181     \}}
+\DoxyCodeLine{175                                                                      \{}
+\DoxyCodeLine{176         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{177             String kakuro = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(path);}
+\DoxyCodeLine{178             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(kakuro);}
+\DoxyCodeLine{179         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{180             e.printStackTrace();}
+\DoxyCodeLine{181         \}}
+\DoxyCodeLine{182     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_af3be3b149e0e10e45793931063af6c4b}\label{classpresentation_1_1_ctrl_u_i_af3be3b149e0e10e45793931063af6c4b}} 
@@ -560,17 +560,17 @@ Definición en la línea 174 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 183 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 184 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{183                                                                     \{}
-\DoxyCodeLine{184         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{185             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a1b935a9e1d06256e382ab7b0069ca1fe}{searchKakuro}}(diff, rowSize, columnSize);}
-\DoxyCodeLine{186         \} \textcolor{keywordflow}{catch} (IOException e) \{}
-\DoxyCodeLine{187             e.printStackTrace();}
-\DoxyCodeLine{188         \}}
-\DoxyCodeLine{189     \}}
+\DoxyCodeLine{184                                                                     \{}
+\DoxyCodeLine{185         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{186             \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a1b935a9e1d06256e382ab7b0069ca1fe}{searchKakuro}}(diff, rowSize, columnSize);}
+\DoxyCodeLine{187         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{188             e.printStackTrace();}
+\DoxyCodeLine{189         \}}
+\DoxyCodeLine{190     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ad83d4cb69f16876ed8de911e41173812}\label{classpresentation_1_1_ctrl_u_i_ad83d4cb69f16876ed8de911e41173812}} 
@@ -581,13 +581,13 @@ Definición en la línea 183 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 191 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 192 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{191                                                            \{}
-\DoxyCodeLine{192         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}{checkValidity}}(x,y,value);}
-\DoxyCodeLine{193     \}}
+\DoxyCodeLine{192                                                            \{}
+\DoxyCodeLine{193         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a98cba0a1a89d37fcc57aecbb2ad491c7}{checkValidity}}(x,y,value);}
+\DoxyCodeLine{194     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a0237a74e9830f727891c5f8eac734594}\label{classpresentation_1_1_ctrl_u_i_a0237a74e9830f727891c5f8eac734594}} 
@@ -598,13 +598,13 @@ Definición en la línea 191 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 195 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 196 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{195                                                   \{}
-\DoxyCodeLine{196         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aade2f964f7f12976d9a3bbb642c140c9}{kakuroSetValue}}(x,y,value);}
-\DoxyCodeLine{197     \}}
+\DoxyCodeLine{196                                                   \{}
+\DoxyCodeLine{197         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aade2f964f7f12976d9a3bbb642c140c9}{kakuroSetValue}}(x,y,value);}
+\DoxyCodeLine{198     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_af1ccd05e145aa6ac6cc08a03075eb863}\label{classpresentation_1_1_ctrl_u_i_af1ccd05e145aa6ac6cc08a03075eb863}} 
@@ -615,13 +615,13 @@ Definición en la línea 195 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 199 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 200 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{199                                    \{}
-\DoxyCodeLine{200         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac571b44b2ea9370ad8dc99cbb51c2672}{helpMyValue}}(x, y);}
-\DoxyCodeLine{201     \}}
+\DoxyCodeLine{200                                    \{}
+\DoxyCodeLine{201         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac571b44b2ea9370ad8dc99cbb51c2672}{helpMyValue}}(x, y);}
+\DoxyCodeLine{202     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a329c316bc1b0ecaa3c9ebac798bb20cc}\label{classpresentation_1_1_ctrl_u_i_a329c316bc1b0ecaa3c9ebac798bb20cc}} 
@@ -632,47 +632,47 @@ Definición en la línea 199 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 203 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 204 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{203                                    \{}
-\DoxyCodeLine{204         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_af7b7d0c2f90437093500f33bf4eaca5c}{helpCorrectNumber}}(x,y);}
-\DoxyCodeLine{205     \}}
+\DoxyCodeLine{204                                    \{}
+\DoxyCodeLine{205         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_af7b7d0c2f90437093500f33bf4eaca5c}{helpCorrectNumber}}(x,y);}
+\DoxyCodeLine{206     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a7062a4cf1df8ff4f3be371c68159993e}\label{classpresentation_1_1_ctrl_u_i_a7062a4cf1df8ff4f3be371c68159993e}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!startGame@{startGame}}
 \index{startGame@{startGame}!presentation.CtrlUI@{presentation.CtrlUI}}
 \doxysubsubsection{\texorpdfstring{startGame()}{startGame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void presentation.\+Ctrl\+U\+I.\+start\+Game (\begin{DoxyParamCaption}\item[{int}]{diff,  }\item[{int}]{row\+Size,  }\item[{int}]{column\+Size,  }\item[{boolean}]{trainig }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void presentation.\+Ctrl\+U\+I.\+start\+Game (\begin{DoxyParamCaption}\item[{int}]{diff,  }\item[{int}]{row\+Size,  }\item[{int}]{column\+Size,  }\item[{boolean}]{trainig }\end{DoxyParamCaption}) throws \mbox{\hyperlink{classdomain_1_1classes_1_1_exceptions_1_1_cant_generate_exception}{Cant\+Generate\+Exception}}}
 
 
 
-Definición en la línea 207 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 208 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{207                                                                                   \{}
-\DoxyCodeLine{208         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab7f822ef336ee90cd841166b1e24b936}{startNewGame}}(diff, rowSize, columnSize, trainig);}
-\DoxyCodeLine{209     \}}
+\DoxyCodeLine{208                                                                                                                \{}
+\DoxyCodeLine{209         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab7f822ef336ee90cd841166b1e24b936}{startNewGame}}(diff, rowSize, columnSize, trainig);}
+\DoxyCodeLine{210     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a6199554ef4ae10788e6ca8903b2511da}\label{classpresentation_1_1_ctrl_u_i_a6199554ef4ae10788e6ca8903b2511da}} 
+\mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a74522f1e4c66fd60f760b376febc7b85}\label{classpresentation_1_1_ctrl_u_i_a74522f1e4c66fd60f760b376febc7b85}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!startGame@{startGame}}
 \index{startGame@{startGame}!presentation.CtrlUI@{presentation.CtrlUI}}
 \doxysubsubsection{\texorpdfstring{startGame()}{startGame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void presentation.\+Ctrl\+U\+I.\+start\+Game (\begin{DoxyParamCaption}\item[{String}]{absolute\+Path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void presentation.\+Ctrl\+U\+I.\+start\+Game (\begin{DoxyParamCaption}\item[{String}]{absolute\+Path,  }\item[{boolean}]{training }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 211 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 212 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{211                                                \{}
-\DoxyCodeLine{212         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab7f822ef336ee90cd841166b1e24b936}{startNewGame}}(absolutePath);}
-\DoxyCodeLine{213     \}}
+\DoxyCodeLine{212                                                                  \{}
+\DoxyCodeLine{213         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab7f822ef336ee90cd841166b1e24b936}{startNewGame}}(absolutePath, training);}
+\DoxyCodeLine{214     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a996127f628875954320a4d376be514e6}\label{classpresentation_1_1_ctrl_u_i_a996127f628875954320a4d376be514e6}} 
@@ -683,13 +683,13 @@ Definición en la línea 211 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 215 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 216 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{215                                 \{}
-\DoxyCodeLine{216         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}{isFinished}}();}
-\DoxyCodeLine{217     \}}
+\DoxyCodeLine{216                                 \{}
+\DoxyCodeLine{217         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5f1520ae955bee1e861eaa23b4b7c61f}{isFinished}}();}
+\DoxyCodeLine{218     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a1237b90c8f69bd69f1ce531b81e9b71b}\label{classpresentation_1_1_ctrl_u_i_a1237b90c8f69bd69f1ce531b81e9b71b}} 
@@ -700,13 +700,13 @@ Definición en la línea 215 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 219 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 220 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{219                                                 \{}
-\DoxyCodeLine{220         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a2cddf096335f4e5c4371f68668b2065f}{finishGame}}(selfFinished);}
-\DoxyCodeLine{221     \}}
+\DoxyCodeLine{220                                                 \{}
+\DoxyCodeLine{221         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a2cddf096335f4e5c4371f68668b2065f}{finishGame}}(selfFinished);}
+\DoxyCodeLine{222     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a85c3b6bf095b8d8c6d2320f8817d3493}\label{classpresentation_1_1_ctrl_u_i_a85c3b6bf095b8d8c6d2320f8817d3493}} 
@@ -717,13 +717,13 @@ Definición en la línea 219 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 223 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 224 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{223                                                            \{}
-\DoxyCodeLine{224         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a38db74a9b64f312f843b81021eca8dcc}{getStartedGames}}();}
-\DoxyCodeLine{225     \}}
+\DoxyCodeLine{224                                                            \{}
+\DoxyCodeLine{225         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a38db74a9b64f312f843b81021eca8dcc}{getStartedGames}}();}
+\DoxyCodeLine{226     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_af6b755af2a1db01cbd0fbe2111e37cfb}\label{classpresentation_1_1_ctrl_u_i_af6b755af2a1db01cbd0fbe2111e37cfb}} 
@@ -734,13 +734,13 @@ Definición en la línea 223 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 229 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 230 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{229                                                  \{}
-\DoxyCodeLine{230         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aee031aa5434b1c906b1ae98790254288}{getListOfPlayers}}(s);}
-\DoxyCodeLine{231     \}}
+\DoxyCodeLine{230                                                  \{}
+\DoxyCodeLine{231         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aee031aa5434b1c906b1ae98790254288}{getListOfPlayers}}(s);}
+\DoxyCodeLine{232     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ab6fdfab1f05f345b04322b6e76d3d0bf}\label{classpresentation_1_1_ctrl_u_i_ab6fdfab1f05f345b04322b6e76d3d0bf}} 
@@ -751,13 +751,13 @@ Definición en la línea 229 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 233 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 234 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{233                                                                                                              \{}
-\DoxyCodeLine{234         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae8d8d972572f0ae0a323455982767336}{login}}(username, String.valueOf(password));}
-\DoxyCodeLine{235     \}}
+\DoxyCodeLine{234                                                                                                              \{}
+\DoxyCodeLine{235         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae8d8d972572f0ae0a323455982767336}{login}}(username, String.valueOf(password));}
+\DoxyCodeLine{236     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a59531f26be0e8d64a46b5b4dd7f13bab}\label{classpresentation_1_1_ctrl_u_i_a59531f26be0e8d64a46b5b4dd7f13bab}} 
@@ -768,13 +768,13 @@ Definición en la línea 233 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 237 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 238 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{237                                                             \{}
-\DoxyCodeLine{238         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac60326d680b830f11f5b0616e2171969}{setConfigToPlayer}}(config);}
-\DoxyCodeLine{239     \}}
+\DoxyCodeLine{238                                                             \{}
+\DoxyCodeLine{239         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac60326d680b830f11f5b0616e2171969}{setConfigToPlayer}}(config);}
+\DoxyCodeLine{240     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a0b761bce52654624cdd73c4abf0dbe83}\label{classpresentation_1_1_ctrl_u_i_a0b761bce52654624cdd73c4abf0dbe83}} 
@@ -785,13 +785,13 @@ Definición en la línea 237 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 241 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 242 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{241                                                                              \{}
-\DoxyCodeLine{242         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8c301851185581b07421d0b26e706fad}{signUp}}(username, String.valueOf(password));}
-\DoxyCodeLine{243     \}}
+\DoxyCodeLine{242                                                                              \{}
+\DoxyCodeLine{243         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8c301851185581b07421d0b26e706fad}{signUp}}(username, String.valueOf(password));}
+\DoxyCodeLine{244     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aad5b50ddff96a126d7521401c5dd8d95}\label{classpresentation_1_1_ctrl_u_i_aad5b50ddff96a126d7521401c5dd8d95}} 
@@ -802,13 +802,13 @@ Definición en la línea 241 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 245 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 246 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{245                                     \{}
-\DoxyCodeLine{246         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a3e793f193af9fd214bbcfb03f27755ab}{resetConfigColors}}();}
-\DoxyCodeLine{247     \}}
+\DoxyCodeLine{246                                     \{}
+\DoxyCodeLine{247         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a3e793f193af9fd214bbcfb03f27755ab}{resetConfigColors}}();}
+\DoxyCodeLine{248     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ae2645344fda2e7b643157024cc0b3803}\label{classpresentation_1_1_ctrl_u_i_ae2645344fda2e7b643157024cc0b3803}} 
@@ -819,13 +819,13 @@ Definición en la línea 245 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 249 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 250 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{249                                                  \{}
-\DoxyCodeLine{250         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_acff26df08c2f4fe190d9103809c9f4c0}{generate}}(i,j, diff);}
-\DoxyCodeLine{251     \}}
+\DoxyCodeLine{250                                                  \{}
+\DoxyCodeLine{251         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_acff26df08c2f4fe190d9103809c9f4c0}{generate}}(i,j, diff);}
+\DoxyCodeLine{252     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a6f77d6da401dc4e57fc0acebfadb51f7}\label{classpresentation_1_1_ctrl_u_i_a6f77d6da401dc4e57fc0acebfadb51f7}} 
@@ -836,13 +836,13 @@ Definición en la línea 249 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 253 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 254 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{253                                    \{}
-\DoxyCodeLine{254         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a7823d752fcf767995c2f7e76e4e1d576}{saveKakuroAndGetInfo}}();}
-\DoxyCodeLine{255     \}}
+\DoxyCodeLine{254                                    \{}
+\DoxyCodeLine{255         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a7823d752fcf767995c2f7e76e4e1d576}{saveKakuroAndGetInfo}}();}
+\DoxyCodeLine{256     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a22dca0cbb6c8f73a0698aa01881a09bc}\label{classpresentation_1_1_ctrl_u_i_a22dca0cbb6c8f73a0698aa01881a09bc}} 
@@ -853,13 +853,13 @@ Definición en la línea 253 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 257 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 258 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{257                            \{}
-\DoxyCodeLine{258         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_adbc14104d6a911125ffae083d55b7d66}{saveGame}}();}
-\DoxyCodeLine{259     \}}
+\DoxyCodeLine{258                            \{}
+\DoxyCodeLine{259         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_adbc14104d6a911125ffae083d55b7d66}{saveGame}}();}
+\DoxyCodeLine{260     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a23390fbef78d97963086fc78f7f021a7}\label{classpresentation_1_1_ctrl_u_i_a23390fbef78d97963086fc78f7f021a7}} 
@@ -870,13 +870,13 @@ Definición en la línea 257 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 261 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 262 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{261                                             \{}
-\DoxyCodeLine{262         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a37ae2972df63c86f15293db04ad06089}{setTimeToGame}}(gameTime);}
-\DoxyCodeLine{263     \}}
+\DoxyCodeLine{262                                             \{}
+\DoxyCodeLine{263         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a37ae2972df63c86f15293db04ad06089}{setTimeToGame}}(gameTime);}
+\DoxyCodeLine{264     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a9e5500ca14124c8bfcb46aa8803ec52a}\label{classpresentation_1_1_ctrl_u_i_a9e5500ca14124c8bfcb46aa8803ec52a}} 
@@ -887,13 +887,13 @@ Definición en la línea 261 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 265 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 266 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{265                                   \{}
-\DoxyCodeLine{266         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad759f4f2a4bd7a5918db28b254282158}{resetParameters}}();}
-\DoxyCodeLine{267     \}}
+\DoxyCodeLine{266                                   \{}
+\DoxyCodeLine{267         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad759f4f2a4bd7a5918db28b254282158}{resetParameters}}();}
+\DoxyCodeLine{268     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ae427cc14cf1f83c75b0df66c2578644f}\label{classpresentation_1_1_ctrl_u_i_ae427cc14cf1f83c75b0df66c2578644f}} 
@@ -904,13 +904,13 @@ Definición en la línea 265 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 269 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 270 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{269                                 \{}
-\DoxyCodeLine{270         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a674522020a65e57190718c78b83ea942}{setGame}}(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{271     \}}
+\DoxyCodeLine{270                                 \{}
+\DoxyCodeLine{271         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a674522020a65e57190718c78b83ea942}{setGame}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{272     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a1998867f13f7b24a352d0969d410012d}\label{classpresentation_1_1_ctrl_u_i_a1998867f13f7b24a352d0969d410012d}} 
@@ -921,13 +921,13 @@ Definición en la línea 269 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 273 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 274 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{273                                          \{}
-\DoxyCodeLine{274         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(kakuro);}
-\DoxyCodeLine{275     \}}
+\DoxyCodeLine{274                                          \{}
+\DoxyCodeLine{275         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(kakuro);}
+\DoxyCodeLine{276     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a0abe53111a21bdce9644b4911d6e0503}\label{classpresentation_1_1_ctrl_u_i_a0abe53111a21bdce9644b4911d6e0503}} 
@@ -938,13 +938,13 @@ Definición en la línea 273 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 277 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 278 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{277                               \{}
-\DoxyCodeLine{278         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a9f1e10a0ea84bf53bf417392e3193d96}{validate}}();}
-\DoxyCodeLine{279     \}}
+\DoxyCodeLine{278                               \{}
+\DoxyCodeLine{279         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a9f1e10a0ea84bf53bf417392e3193d96}{validate}}();}
+\DoxyCodeLine{280     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aa38385f8cd88d94ca622a3c90ecd0798}\label{classpresentation_1_1_ctrl_u_i_aa38385f8cd88d94ca622a3c90ecd0798}} 
@@ -955,13 +955,13 @@ Definición en la línea 277 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 281 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 282 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{281                                          \{}
-\DoxyCodeLine{282         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_affa2df906c62d26e3d7f39a0a7e213e4}{getConfig}}();}
-\DoxyCodeLine{283     \}}
+\DoxyCodeLine{282                                          \{}
+\DoxyCodeLine{283         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_affa2df906c62d26e3d7f39a0a7e213e4}{getConfig}}();}
+\DoxyCodeLine{284     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a3a001227722a372e9567256bd6f234e2}\label{classpresentation_1_1_ctrl_u_i_a3a001227722a372e9567256bd6f234e2}} 
@@ -972,13 +972,13 @@ Definición en la línea 281 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 285 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 286 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{285                                              \{}
-\DoxyCodeLine{286         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac624fdd3982402e1968bbf5595b83031}{getStatsList}}();}
-\DoxyCodeLine{287     \}}
+\DoxyCodeLine{286                                              \{}
+\DoxyCodeLine{287         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac624fdd3982402e1968bbf5595b83031}{getStatsList}}();}
+\DoxyCodeLine{288     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aa3d6e10d37be44f72f97cede78082805}\label{classpresentation_1_1_ctrl_u_i_aa3d6e10d37be44f72f97cede78082805}} 
@@ -989,13 +989,13 @@ Definición en la línea 285 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 289 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 290 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{289                          \{}
-\DoxyCodeLine{290         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5df49f884b214fa3b1a4ea0a3aa9ed67}{getTime}}();}
-\DoxyCodeLine{291     \}}
+\DoxyCodeLine{290                          \{}
+\DoxyCodeLine{291         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a5df49f884b214fa3b1a4ea0a3aa9ed67}{getTime}}();}
+\DoxyCodeLine{292     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a27ea7e740cdce1e9840eaf032e6d5e4a}\label{classpresentation_1_1_ctrl_u_i_a27ea7e740cdce1e9840eaf032e6d5e4a}} 
@@ -1006,13 +1006,13 @@ Definición en la línea 289 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 293 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 294 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{293                                         \{}
-\DoxyCodeLine{294         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad41e4cf31139cb39be0893f24cbc11ba}{getHelps}}();}
-\DoxyCodeLine{295     \}}
+\DoxyCodeLine{294                                         \{}
+\DoxyCodeLine{295         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ad41e4cf31139cb39be0893f24cbc11ba}{getHelps}}();}
+\DoxyCodeLine{296     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a50dccba9b8b008b0920f6d0e71b66651}\label{classpresentation_1_1_ctrl_u_i_a50dccba9b8b008b0920f6d0e71b66651}} 
@@ -1023,13 +1023,13 @@ Definición en la línea 293 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 297 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 298 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{297                           \{}
-\DoxyCodeLine{298         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
-\DoxyCodeLine{299     \}}
+\DoxyCodeLine{298                           \{}
+\DoxyCodeLine{299         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ae2291141db524d97560745e7f608b5ef}{resolve}}();}
+\DoxyCodeLine{300     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a6f9012b54678195776faaabe566b9eca}\label{classpresentation_1_1_ctrl_u_i_a6f9012b54678195776faaabe566b9eca}} 
@@ -1040,13 +1040,13 @@ Definición en la línea 297 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 301 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 302 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{301                                          \{}
-\DoxyCodeLine{302         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_afc912106f5730669864240291942a657}{getThisKakuro}}(s);}
-\DoxyCodeLine{303     \}}
+\DoxyCodeLine{302                                          \{}
+\DoxyCodeLine{303         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_afc912106f5730669864240291942a657}{getThisKakuro}}(s);}
+\DoxyCodeLine{304     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a5c9870cce85094ab02b6c81038b0e6e1}\label{classpresentation_1_1_ctrl_u_i_a5c9870cce85094ab02b6c81038b0e6e1}} 
@@ -1057,13 +1057,13 @@ Definición en la línea 301 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 305 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 306 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{305                                    \{}
-\DoxyCodeLine{306         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a56ae4751e61082731407e4c8644a374e}{getListOfKakuros}}();}
-\DoxyCodeLine{307     \}}
+\DoxyCodeLine{306                                    \{}
+\DoxyCodeLine{307         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a56ae4751e61082731407e4c8644a374e}{getListOfKakuros}}();}
+\DoxyCodeLine{308     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ac7aa3bb9a8fbe226ce12bd3439abe6ff}\label{classpresentation_1_1_ctrl_u_i_ac7aa3bb9a8fbe226ce12bd3439abe6ff}} 
@@ -1074,13 +1074,13 @@ Definición en la línea 305 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 309 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 310 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{309                                         \{}
-\DoxyCodeLine{310         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8e53f271cbdf7f36e4871170ce7e2c0e}{getRecords}}();}
-\DoxyCodeLine{311     \}}
+\DoxyCodeLine{310                                         \{}
+\DoxyCodeLine{311         \textcolor{keywordflow}{return} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8e53f271cbdf7f36e4871170ce7e2c0e}{getRecords}}();}
+\DoxyCodeLine{312     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_af7add4cb3ca38920f270fb056986369b}\label{classpresentation_1_1_ctrl_u_i_af7add4cb3ca38920f270fb056986369b}} 
@@ -1091,13 +1091,13 @@ Definición en la línea 309 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 313 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 314 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{313                                      \{}
-\DoxyCodeLine{314         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a15cbb6f6b999458ad3de319d173ed6c3}{addCreatedToPlayer}}();}
-\DoxyCodeLine{315     \}}
+\DoxyCodeLine{314                                      \{}
+\DoxyCodeLine{315         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a15cbb6f6b999458ad3de319d173ed6c3}{addCreatedToPlayer}}();}
+\DoxyCodeLine{316     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a3bd6043b801ea6237a4541dab9cd7433}\label{classpresentation_1_1_ctrl_u_i_a3bd6043b801ea6237a4541dab9cd7433}} 
@@ -1108,13 +1108,13 @@ Definición en la línea 313 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 317 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 318 del archivo Ctrl\+U\+I.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{317                          \{}
-\DoxyCodeLine{318         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a0d1ea47e7ae6ff75e09d7f8f7786162c}{logout}}();}
-\DoxyCodeLine{319     \}}
+\DoxyCodeLine{318                          \{}
+\DoxyCodeLine{319         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_af25cee06be25636889ea413d4acf3ad8}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a0d1ea47e7ae6ff75e09d7f8f7786162c}{logout}}();}
+\DoxyCodeLine{320     \}}
 
 \end{DoxyCode}
 
@@ -1128,7 +1128,7 @@ Definición en la línea 317 del archivo Ctrl\+U\+I.\+java.
 
 cd es la instancia del Ctrl\+Domain 
 
-Definición en la línea 26 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 27 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a91c1a196e1d53661bd964daca33ab0b9}\label{classpresentation_1_1_ctrl_u_i_a91c1a196e1d53661bd964daca33ab0b9}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!reader@{reader}}
@@ -1138,7 +1138,7 @@ Definición en la línea 26 del archivo Ctrl\+U\+I.\+java.
 
 reader es una atributo que sirve para leer de la terminal 
 
-Definición en la línea 30 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 31 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}\label{classpresentation_1_1_ctrl_u_i_a2fccba9fe657240378046a2ceefb03fb}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!mainFrame@{mainFrame}}
@@ -1148,7 +1148,7 @@ Definición en la línea 30 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 31 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 32 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}\label{classpresentation_1_1_ctrl_u_i_a45f180389f94524353ed18af517c2885}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!ctrlUI@{ctrlUI}}
@@ -1158,7 +1158,7 @@ Definición en la línea 31 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 32 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 33 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a16caef7238c13b2287fd88f60943eb8b}\label{classpresentation_1_1_ctrl_u_i_a16caef7238c13b2287fd88f60943eb8b}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!login@{login}}
@@ -1168,7 +1168,7 @@ Definición en la línea 32 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 40 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 41 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ac595b476288e96a9139748d2616220b5}\label{classpresentation_1_1_ctrl_u_i_ac595b476288e96a9139748d2616220b5}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!register@{register}}
@@ -1178,7 +1178,7 @@ Definición en la línea 40 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 41 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 42 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_ae57c6ae34f440e3fb15e53acffb3c54f}\label{classpresentation_1_1_ctrl_u_i_ae57c6ae34f440e3fb15e53acffb3c54f}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!main@{main}}
@@ -1188,7 +1188,7 @@ Definición en la línea 41 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 42 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 43 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9}\label{classpresentation_1_1_ctrl_u_i_a9cb7e42d1dca3e3e6a0dd2ad1e4760b9}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!askNewContinue@{askNewContinue}}
@@ -1198,7 +1198,7 @@ Definición en la línea 42 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 43 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 44 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a9cfa4bf8e3f5aa80ff7136fd96a84fcb}\label{classpresentation_1_1_ctrl_u_i_a9cfa4bf8e3f5aa80ff7136fd96a84fcb}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!loadGame@{loadGame}}
@@ -1208,7 +1208,7 @@ Definición en la línea 43 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 44 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 45 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aae7bb2f73cc249d4ac7647614be42e3b}\label{classpresentation_1_1_ctrl_u_i_aae7bb2f73cc249d4ac7647614be42e3b}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!newGame@{newGame}}
@@ -1218,7 +1218,7 @@ Definición en la línea 44 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 45 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 46 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a6c5ff900d687ca061748ce47cbc9e501}\label{classpresentation_1_1_ctrl_u_i_a6c5ff900d687ca061748ce47cbc9e501}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!play@{play}}
@@ -1228,7 +1228,7 @@ Definición en la línea 45 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 46 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 47 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a328d3c93dff9ab0de4f877a9fae1b542}\label{classpresentation_1_1_ctrl_u_i_a328d3c93dff9ab0de4f877a9fae1b542}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!create@{create}}
@@ -1238,7 +1238,7 @@ Definición en la línea 46 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 47 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 48 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a41d8b59ae2ef30334cd7226f43f4e2dd}\label{classpresentation_1_1_ctrl_u_i_a41d8b59ae2ef30334cd7226f43f4e2dd}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!generate@{generate}}
@@ -1248,7 +1248,7 @@ Definición en la línea 47 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 48 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 49 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a80fa66bc2060aed0ceac386ea7c0449f}\label{classpresentation_1_1_ctrl_u_i_a80fa66bc2060aed0ceac386ea7c0449f}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!askSave@{askSave}}
@@ -1258,7 +1258,7 @@ Definición en la línea 48 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 49 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 50 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a8e3c43d091ee8a2f9a4908e1cca189d4}\label{classpresentation_1_1_ctrl_u_i_a8e3c43d091ee8a2f9a4908e1cca189d4}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!rankings@{rankings}}
@@ -1268,7 +1268,7 @@ Definición en la línea 49 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 50 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 51 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_aff2ff4c3207b8b2df66653caafce6be8}\label{classpresentation_1_1_ctrl_u_i_aff2ff4c3207b8b2df66653caafce6be8}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!showKakuro@{showKakuro}}
@@ -1278,7 +1278,7 @@ Definición en la línea 50 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 51 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 52 del archivo Ctrl\+U\+I.\+java.
 
 \mbox{\Hypertarget{classpresentation_1_1_ctrl_u_i_a22fd95268f323388ace60d4e224ce8a0}\label{classpresentation_1_1_ctrl_u_i_a22fd95268f323388ace60d4e224ce8a0}} 
 \index{presentation.CtrlUI@{presentation.CtrlUI}!records@{records}}
@@ -1288,7 +1288,7 @@ Definición en la línea 51 del archivo Ctrl\+U\+I.\+java.
 
 
 
-Definición en la línea 52 del archivo Ctrl\+U\+I.\+java.
+Definición en la línea 53 del archivo Ctrl\+U\+I.\+java.
 
 
 

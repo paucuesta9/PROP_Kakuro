@@ -44,7 +44,7 @@ Judith Almoño Gómez
 \end{DoxyAuthor}
 
 
-Definición en la línea 20 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 21 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 
@@ -61,15 +61,19 @@ Test de la creadora.
 
 
 
-Definición en la línea 25 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 26 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25                                         \{}
-\DoxyCodeLine{26         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
-\DoxyCodeLine{27         CtrlPlay play = \textcolor{keyword}{new} CtrlPlay(0,9,9,cdStub, \textcolor{keyword}{true});}
-\DoxyCodeLine{28         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
-\DoxyCodeLine{29     \}}
+\DoxyCodeLine{26                                         \{}
+\DoxyCodeLine{27         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{28         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{29             CtrlPlay play = \textcolor{keyword}{new} CtrlPlay(0,9,9,cdStub, \textcolor{keyword}{true});}
+\DoxyCodeLine{30         \} \textcolor{keywordflow}{catch} (CantGenerateException e) \{}
+\DoxyCodeLine{31             e.printStackTrace();}
+\DoxyCodeLine{32         \}}
+\DoxyCodeLine{33         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
+\DoxyCodeLine{34     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a6c9143aa38a05ae4304158e39b4ab8c0}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a6c9143aa38a05ae4304158e39b4ab8c0}} 
@@ -84,15 +88,15 @@ Test de la creadora.
 
 
 
-Definición en la línea 33 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 38 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33                                         \{}
-\DoxyCodeLine{34         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
-\DoxyCodeLine{35         CtrlPlay play = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub);}
-\DoxyCodeLine{36         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
-\DoxyCodeLine{37     \}}
+\DoxyCodeLine{38                                         \{}
+\DoxyCodeLine{39         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{40         CtrlPlay play = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub, \textcolor{keyword}{false});}
+\DoxyCodeLine{41         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
+\DoxyCodeLine{42     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3eabfb53807e438efab49c4dc641518f}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3eabfb53807e438efab49c4dc641518f}} 
@@ -103,23 +107,23 @@ Definición en la línea 33 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 
-Definición en la línea 39 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 44 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{39                                         \{}
-\DoxyCodeLine{40         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
-\DoxyCodeLine{41         List<String> h = \textcolor{keyword}{new} ArrayList<>();}
-\DoxyCodeLine{42         \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} game1 = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}(0,1,2,3,4,5,6,h);}
-\DoxyCodeLine{43         \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}}();}
-\DoxyCodeLine{44         List<Game> l = \textcolor{keyword}{new} ArrayList<>();}
-\DoxyCodeLine{45         l.add(game1);}
-\DoxyCodeLine{46         p.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0822bfc4ba9295acee5ffe7a9fb3318c}{setUsername}}(\textcolor{stringliteral}{"{}1234"{}});}
-\DoxyCodeLine{47         p.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0e0393f28c3a1a15efffcce739fddf88}{setSavedGames}}(l);}
-\DoxyCodeLine{48         cdStub.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8e235453b4fad1b86c4b4921f0da59a4}{setCurrentPlayer}}(p);}
-\DoxyCodeLine{49         CtrlPlay cp = \textcolor{keyword}{new} CtrlPlay(1,cdStub);}
-\DoxyCodeLine{50         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
-\DoxyCodeLine{51     \}}
+\DoxyCodeLine{44                                         \{}
+\DoxyCodeLine{45         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{46         List<String> h = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{47         \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} game1 = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}(0,1,2,3,4,5,6,h);}
+\DoxyCodeLine{48         \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}}();}
+\DoxyCodeLine{49         List<Game> l = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{50         l.add(game1);}
+\DoxyCodeLine{51         p.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0822bfc4ba9295acee5ffe7a9fb3318c}{setUsername}}(\textcolor{stringliteral}{"{}1234"{}});}
+\DoxyCodeLine{52         p.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0e0393f28c3a1a15efffcce739fddf88}{setSavedGames}}(l);}
+\DoxyCodeLine{53         cdStub.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8e235453b4fad1b86c4b4921f0da59a4}{setCurrentPlayer}}(p);}
+\DoxyCodeLine{54         CtrlPlay cp = \textcolor{keyword}{new} CtrlPlay(1,cdStub);}
+\DoxyCodeLine{55         System.out.println(\textcolor{stringliteral}{"{}Se ha creado"{}});}
+\DoxyCodeLine{56     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3a864e6b165cc9e4ae2d5ffce7ce6466}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3a864e6b165cc9e4ae2d5ffce7ce6466}} 
@@ -134,25 +138,25 @@ Test de la función help\+My\+Value Comprueba si la función help\+My\+Value det
 
 
 
-Definición en la línea 57 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 62 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{57                                           \{}
-\DoxyCodeLine{58         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
-\DoxyCodeLine{59         CtrlPlay p = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub);}
-\DoxyCodeLine{60         System.out.println(\textcolor{stringliteral}{"{}Introduce la fila de la celda:"{}});}
-\DoxyCodeLine{61         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{62         System.out.println(\textcolor{stringliteral}{"{}Introduce la columna de la celda:"{}});}
-\DoxyCodeLine{63         \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{64         System.out.println();}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66         \textcolor{keywordtype}{int} result = p.helpMyValue(x,y);}
-\DoxyCodeLine{67         \textcolor{keywordflow}{if} (result == -\/2) System.out.println(\textcolor{stringliteral}{"{}La celda no tiene un valor asignado"{}});}
-\DoxyCodeLine{68         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == -\/1) System.out.println(\textcolor{stringliteral}{"{}La celda no es blanca"{}});}
-\DoxyCodeLine{69         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 0) System.out.println(\textcolor{stringliteral}{"{}El valor no es correcto"{}});}
-\DoxyCodeLine{70         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 1) System.out.println(\textcolor{stringliteral}{"{}El valor es correcto"{}});}
-\DoxyCodeLine{71     \}}
+\DoxyCodeLine{62                                           \{}
+\DoxyCodeLine{63         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{64         CtrlPlay p = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub, \textcolor{keyword}{false});}
+\DoxyCodeLine{65         System.out.println(\textcolor{stringliteral}{"{}Introduce la fila de la celda:"{}});}
+\DoxyCodeLine{66         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{67         System.out.println(\textcolor{stringliteral}{"{}Introduce la columna de la celda:"{}});}
+\DoxyCodeLine{68         \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{69         System.out.println();}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71         \textcolor{keywordtype}{int} result = p.helpMyValue(x,y);}
+\DoxyCodeLine{72         \textcolor{keywordflow}{if} (result == -\/2) System.out.println(\textcolor{stringliteral}{"{}La celda no tiene un valor asignado"{}});}
+\DoxyCodeLine{73         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == -\/1) System.out.println(\textcolor{stringliteral}{"{}La celda no es blanca"{}});}
+\DoxyCodeLine{74         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 0) System.out.println(\textcolor{stringliteral}{"{}El valor no es correcto"{}});}
+\DoxyCodeLine{75         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (result == 1) System.out.println(\textcolor{stringliteral}{"{}El valor es correcto"{}});}
+\DoxyCodeLine{76     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a2348c878f4a174fdcd0d995fa137422d}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a2348c878f4a174fdcd0d995fa137422d}} 
@@ -167,23 +171,23 @@ Test de la función help\+Correct\+Number Comprueba que se retorna adecuadamente
 
 
 
-Definición en la línea 76 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 81 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{76                                                 \{}
-\DoxyCodeLine{77         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
-\DoxyCodeLine{78         CtrlPlay p = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub);}
-\DoxyCodeLine{79         System.out.println(\textcolor{stringliteral}{"{}Introduce la fila de la celda:"{}});}
-\DoxyCodeLine{80         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{81         System.out.println(\textcolor{stringliteral}{"{}Introduce la columna de la celda:"{}});}
-\DoxyCodeLine{82         \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{83         System.out.println();}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{85         \textcolor{keywordtype}{int} result = p.helpCorrectNumber(x,y);}
-\DoxyCodeLine{86         \textcolor{keywordflow}{if} (result == 0) System.out.println(\textcolor{stringliteral}{"{}El valor no es correcto"{}});}
-\DoxyCodeLine{87         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El valor es correcto"{}});}
-\DoxyCodeLine{88     \}}
+\DoxyCodeLine{81                                                 \{}
+\DoxyCodeLine{82         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{83         CtrlPlay p = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub, \textcolor{keyword}{false});}
+\DoxyCodeLine{84         System.out.println(\textcolor{stringliteral}{"{}Introduce la fila de la celda:"{}});}
+\DoxyCodeLine{85         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{86         System.out.println(\textcolor{stringliteral}{"{}Introduce la columna de la celda:"{}});}
+\DoxyCodeLine{87         \textcolor{keywordtype}{int} y = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{88         System.out.println();}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         \textcolor{keywordtype}{int} result = p.helpCorrectNumber(x,y);}
+\DoxyCodeLine{91         \textcolor{keywordflow}{if} (result == 0) System.out.println(\textcolor{stringliteral}{"{}El valor no es correcto"{}});}
+\DoxyCodeLine{92         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El valor es correcto"{}});}
+\DoxyCodeLine{93     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a47ce490d6e2ed8720d5177b3ee8bf1c6}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a47ce490d6e2ed8720d5177b3ee8bf1c6}} 
@@ -198,18 +202,18 @@ Test de la función finish\+Game Comprueba que se hace correctamente su función
 
 
 
-Definición en la línea 93 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 98 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{93                                          \{}
-\DoxyCodeLine{94         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
-\DoxyCodeLine{95         CtrlPlay p = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub);}
-\DoxyCodeLine{96         System.out.println(\textcolor{stringliteral}{"{}Se ha pulsado el boton de resolver? (0-\/>false, 1-\/>true)"{}});}
-\DoxyCodeLine{97         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{98         \textcolor{keywordtype}{boolean} b = (x==1);}
-\DoxyCodeLine{99         System.out.println(\textcolor{stringliteral}{"{}Se han sumado "{}}+p.finishGame(b)+\textcolor{stringliteral}{"{} puntos"{}});}
-\DoxyCodeLine{100     \}}
+\DoxyCodeLine{98                                          \{}
+\DoxyCodeLine{99         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}} cdStub = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{CtrlDomain}}();}
+\DoxyCodeLine{100         CtrlPlay p = \textcolor{keyword}{new} CtrlPlay(\textcolor{stringliteral}{"{}estoNoImporta\(\backslash\)\(\backslash\)diff1\(\backslash\)\(\backslash\)3\_3\(\backslash\)\(\backslash\)0.txt"{}},cdStub, \textcolor{keyword}{false});}
+\DoxyCodeLine{101         System.out.println(\textcolor{stringliteral}{"{}Se ha pulsado el boton de resolver? (0-\/>false, 1-\/>true)"{}});}
+\DoxyCodeLine{102         \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{103         \textcolor{keywordtype}{boolean} b = (x==1);}
+\DoxyCodeLine{104         System.out.println(\textcolor{stringliteral}{"{}Se han sumado "{}}+p.finishGame(b)+\textcolor{stringliteral}{"{} puntos"{}});}
+\DoxyCodeLine{105     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_af375f8d73a94a050b8bdc7089784c2a1}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_af375f8d73a94a050b8bdc7089784c2a1}} 
@@ -224,52 +228,52 @@ Función principal.
 
 Indica las opciones que hay para testear 
 
-Definición en la línea 106 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 111 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{106                                            \{}
-\DoxyCodeLine{107         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. 1ra constructora \(\backslash\)n 2. 2da constructora \(\backslash\)n 3. 3ra constructora \(\backslash\)n 4. Comprobar si un valor es correcto \(\backslash\)n 5. Retornar el valor correcto \(\backslash\)n 6. Acabar una partida \(\backslash\)n 7. Salir"{}});}
-\DoxyCodeLine{108         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{109         \textcolor{keywordflow}{while} (value != 7) \{}
-\DoxyCodeLine{110             \textcolor{keywordtype}{int} x, y;}
-\DoxyCodeLine{111             \textcolor{keywordflow}{switch} (value) \{}
-\DoxyCodeLine{112                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{113                     System.out.println(\textcolor{stringliteral}{"{}Constructora 1"{}});}
-\DoxyCodeLine{114                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Constructora 1"{}});}
-\DoxyCodeLine{115                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ade00aa25a5cfcd0f8ae16a443ad6a198}{testCtrlPlay1}}();}
-\DoxyCodeLine{116                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{117                 \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{118                     System.out.println(\textcolor{stringliteral}{"{}Constructora 2"{}});}
-\DoxyCodeLine{119                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Constructora 2"{}});}
-\DoxyCodeLine{120                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a6c9143aa38a05ae4304158e39b4ab8c0}{testCtrlPlay2}}();}
+\DoxyCodeLine{111                                            \{}
+\DoxyCodeLine{112         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. 1ra constructora \(\backslash\)n 2. 2da constructora \(\backslash\)n 3. 3ra constructora \(\backslash\)n 4. Comprobar si un valor es correcto \(\backslash\)n 5. Retornar el valor correcto \(\backslash\)n 6. Acabar una partida \(\backslash\)n 7. Salir"{}});}
+\DoxyCodeLine{113         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{114         \textcolor{keywordflow}{while} (value != 7) \{}
+\DoxyCodeLine{115             \textcolor{keywordtype}{int} x, y;}
+\DoxyCodeLine{116             \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{117                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{118                     System.out.println(\textcolor{stringliteral}{"{}Constructora 1"{}});}
+\DoxyCodeLine{119                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Constructora 1"{}});}
+\DoxyCodeLine{120                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ade00aa25a5cfcd0f8ae16a443ad6a198}{testCtrlPlay1}}();}
 \DoxyCodeLine{121                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{122                 \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{123                     System.out.println(\textcolor{stringliteral}{"{}Constructora 3"{}});}
-\DoxyCodeLine{124                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Constructora 3"{}});}
-\DoxyCodeLine{125                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3eabfb53807e438efab49c4dc641518f}{testCtrlPlay3}}();}
+\DoxyCodeLine{122                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{123                     System.out.println(\textcolor{stringliteral}{"{}Constructora 2"{}});}
+\DoxyCodeLine{124                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Constructora 2"{}});}
+\DoxyCodeLine{125                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a6c9143aa38a05ae4304158e39b4ab8c0}{testCtrlPlay2}}();}
 \DoxyCodeLine{126                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{127                 \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{128                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpMyValue"{}});}
-\DoxyCodeLine{129                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3a864e6b165cc9e4ae2d5ffce7ce6466}{testHelpMyValue}}();}
-\DoxyCodeLine{130                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{131                 \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{132                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpCorrectNumber"{}});}
-\DoxyCodeLine{133                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a2348c878f4a174fdcd0d995fa137422d}{testHelpCorrectNumber}}();}
-\DoxyCodeLine{134                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{135                 \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{136                     System.out.println(\textcolor{stringliteral}{"{}Se llama a FinishGame"{}});}
-\DoxyCodeLine{137                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a47ce490d6e2ed8720d5177b3ee8bf1c6}{testFinishGame}}();}
-\DoxyCodeLine{138                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{139                 \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{140                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
-\DoxyCodeLine{141                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{142             \}}
-\DoxyCodeLine{143             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. 1ra constructora \(\backslash\)n 2. 2da constructora \(\backslash\)n 3. 3ra constructora \(\backslash\)n 4. Comprobar si un valor es correcto \(\backslash\)n 5. Retornar el valor correcto \(\backslash\)n 6. Acabar una partida \(\backslash\)n 7. Salir"{}});}
-\DoxyCodeLine{144             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
-\DoxyCodeLine{145         \}}
-\DoxyCodeLine{146         System.exit(0);}
-\DoxyCodeLine{147     \}}
+\DoxyCodeLine{127                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{128                     System.out.println(\textcolor{stringliteral}{"{}Constructora 3"{}});}
+\DoxyCodeLine{129                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Constructora 3"{}});}
+\DoxyCodeLine{130                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3eabfb53807e438efab49c4dc641518f}{testCtrlPlay3}}();}
+\DoxyCodeLine{131                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{132                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{133                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpMyValue"{}});}
+\DoxyCodeLine{134                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a3a864e6b165cc9e4ae2d5ffce7ce6466}{testHelpMyValue}}();}
+\DoxyCodeLine{135                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{136                 \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{137                     System.out.println(\textcolor{stringliteral}{"{}Se llama a helpCorrectNumber"{}});}
+\DoxyCodeLine{138                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a2348c878f4a174fdcd0d995fa137422d}{testHelpCorrectNumber}}();}
+\DoxyCodeLine{139                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{140                 \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{141                     System.out.println(\textcolor{stringliteral}{"{}Se llama a FinishGame"{}});}
+\DoxyCodeLine{142                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a47ce490d6e2ed8720d5177b3ee8bf1c6}{testFinishGame}}();}
+\DoxyCodeLine{143                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{144                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{145                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
+\DoxyCodeLine{146                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{147             \}}
+\DoxyCodeLine{148             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. 1ra constructora \(\backslash\)n 2. 2da constructora \(\backslash\)n 3. 3ra constructora \(\backslash\)n 4. Comprobar si un valor es correcto \(\backslash\)n 5. Retornar el valor correcto \(\backslash\)n 6. Acabar una partida \(\backslash\)n 7. Salir"{}});}
+\DoxyCodeLine{149             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}{readNumber}}();}
+\DoxyCodeLine{150         \}}
+\DoxyCodeLine{151         System.exit(0);}
+\DoxyCodeLine{152     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a8971ffcacb75c931666b02e8a27db69b}} 
@@ -287,20 +291,20 @@ el kakuro leído
 \end{DoxyReturn}
 
 
-Definición en la línea 153 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 158 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{153                                       \{}
-\DoxyCodeLine{154         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{155         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{156         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
-\DoxyCodeLine{157         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
-\DoxyCodeLine{158         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{159         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
-\DoxyCodeLine{160             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{161         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{162     \}}
+\DoxyCodeLine{158                                       \{}
+\DoxyCodeLine{159         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{160         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{161         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{162         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{163         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{164         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{165             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{166         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{167     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_a5cbab565d735e4d14c19e0a2857a3109}} 
@@ -318,15 +322,15 @@ el número leído
 \end{DoxyReturn}
 
 
-Definición en la línea 168 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 173 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{168                                    \{}
-\DoxyCodeLine{169         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{170         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.nextInt();}
-\DoxyCodeLine{171         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{172     \}}
+\DoxyCodeLine{173                                    \{}
+\DoxyCodeLine{174         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{175         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play_ad790fa0f402e70a066418496aec92689}{reader}}.nextInt();}
+\DoxyCodeLine{176         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{177     \}}
 
 \end{DoxyCode}
 
@@ -340,7 +344,7 @@ Definición en la línea 168 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 
-Definición en la línea 21 del archivo Driver\+Ctrl\+Play.\+java.
+Definición en la línea 22 del archivo Driver\+Ctrl\+Play.\+java.
 
 
 
