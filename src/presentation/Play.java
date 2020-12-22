@@ -16,7 +16,7 @@ import java.io.*;
 import java.util.Timer;
 
 /** @file Play.java
- @class Play
+ * @class Play
  */
 
 /**
@@ -46,7 +46,6 @@ public class Play {
      * menu es el conjunto de botones de la derecha
      */
     private JPanel menu;
-    private JPanel logotipo;
     /**
      * help1 es el primer boton circular
      */
