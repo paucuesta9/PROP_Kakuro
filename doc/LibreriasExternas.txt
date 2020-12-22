@@ -1,0 +1,13 @@
+GSON
+
+Gson es una biblioteca Java que se puede utilizar para convertir objetos Java en su representación JSON.
+Tambien se puede utilizar para convertir una cadena JSON en un objeto Java equivalente. Gson puede trabajar con objetos
+Java arbitrarios, incluyendo objetos preexistentes de los que no tiene codigo fuente. [1]
+
+
+FORMS_RT
+
+Forms_rt es la librería necesaria para poder compilar y ejecutar el programa con la interfaz grafica creada a traves de
+los forms de IntelliJ IDEA.
+
+[1] https://github.com/google/gson
