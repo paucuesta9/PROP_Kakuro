@@ -87,6 +87,7 @@ public class Login {
                 if (usuarioTextField.getText().equals("Usuario") && !mod) {
                     usuarioTextField.setText("");
                     usuarioTextField.setForeground(Color.BLACK);
+                    mod = true;
                 }
             }
         });
@@ -107,6 +108,7 @@ public class Login {
                 if (contrasenaPasswordField.getText().equals("Contraseña") == !mod1) {
                     contrasenaPasswordField.setText("");
                     contrasenaPasswordField.setForeground(Color.BLACK);
+                    mod1 = true;
                 }
             }
         });
@@ -125,13 +127,16 @@ public class Login {
         iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                try {
-                    ctrlPlayerUI.login(usuarioTextField.getText(), contrasenaPasswordField.getPassword());
-                    ctrlUI.toMain();
-                } catch (FileNotFoundException fileNotFoundException) {
-                    Utils.showError("Usuario y/o contraseña incorrecta");
-                } catch (WrongPasswordException wrongPasswordException) {
-                    Utils.showError("Usuario y/o contraseña incorrecta");
+                if (!mod1 || !mod) Utils.showError("Usuario o contraseña no válida");
+                else {
+                    try {
+                        ctrlPlayerUI.login(usuarioTextField.getText(), contrasenaPasswordField.getPassword());
+                        ctrlUI.toMain();
+                    } catch (FileNotFoundException fileNotFoundException) {
+                        Utils.showError("Usuario y/o contraseña incorrecta");
+                    } catch (WrongPasswordException wrongPasswordException) {
+                        Utils.showError("Usuario y/o contraseña incorrecta");
+                    }
                 }
             }
         });
