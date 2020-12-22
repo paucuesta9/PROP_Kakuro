@@ -617,9 +617,12 @@ public class Play {
 
                     }
                 });
+            } else {
+                Utils.showError("¡Se ha resuelto el kakuro correctamente!");
+                ctrlUI.toMain();
             }
         } else {
-            Utils.showError("¡Ha terminado el kakuro correctamente!");
+            Utils.showError("¡Se ha resuelto el kakuro correctamente!");
             ctrlUI.toMain();
         }
 

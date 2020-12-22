@@ -249,7 +249,7 @@ public class CtrlDomain {
     public void generate(int i,int j, int dif) {
         CtrlGenerate ctrlGenerate = new CtrlGenerate();
         currentKakuro = ctrlGenerate.generate(i,j,dif);
-        System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
+        System.out.println("Finalmente la dificultad es " + currentKakuro.getDifficulty());
     }
 
     /* GETTERS AND SETTERS (CLASSES) */
