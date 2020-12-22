@@ -328,7 +328,7 @@ public class Create {
                             numRow.setText(String.valueOf(sizeRow));
                             numColumn.setText(String.valueOf(sizeColumn));
                         } catch (NumberFormatException exception) {
-                            Utils.showError("El fichero contiene carácteres no permitidos");
+                            Utils.showError("El fichero contiene caracteres no permitidos");
                         }
                     }
                 }
