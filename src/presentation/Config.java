@@ -473,6 +473,7 @@ public class Config extends JDialog {
         volver = new JButton();
         volver.setBorderPainted(false);
         volver.setContentAreaFilled(false);
+        volver.setFocusPainted(false);
         volver.setText("Volver");
         configuracion.add(volver, new GridConstraints(8, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final JPanel panel1 = new JPanel();

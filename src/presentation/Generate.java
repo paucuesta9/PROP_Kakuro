@@ -213,7 +213,7 @@ public class Generate {
                             }
                         };
                         t.start();
-                    } else if (Integer.parseInt(numRow.getText()) > 20 || Integer.parseInt(numColumn.getText()) > 20)
+                    } else if (!numRow.getText().equals("") && !numColumn.getText().equals("") && (Integer.parseInt(numRow.getText()) > 20 || Integer.parseInt(numColumn.getText()) > 20))
                         Utils.showError("El tamaño máximo es 20x20");
                     else Utils.showError("Tamaño inválido");
                 }

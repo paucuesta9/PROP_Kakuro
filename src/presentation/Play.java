@@ -286,8 +286,13 @@ public class Play {
             public void actionPerformed(ActionEvent e) {
                 if (paused) {
                     board.setVisible(true);
-                    help1.setEnabled(true);
-                    help2.setEnabled(true);
+                    if (pencilON) {
+                        help1.setEnabled(false);
+                        help2.setEnabled(false);
+                    } else {
+                        help1.setEnabled(true);
+                        help2.setEnabled(true);
+                    }
                     lapizButton.setEnabled(true);
                     resolve.setEnabled(true);
                     startTimer();
