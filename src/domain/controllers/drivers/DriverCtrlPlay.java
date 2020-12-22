@@ -32,7 +32,7 @@ public class DriverCtrlPlay {
      */
     private static void testCtrlPlay2() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay play = new CtrlPlay("alvaroFeardo\\diff1\\3_3\\0.txt",cdStub);
+        CtrlPlay play = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
         System.out.println("Se ha creado");
     }
 

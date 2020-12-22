@@ -28,7 +28,7 @@ public class DriverCtrlPlayer {
         System.out.println("Existe un usuario con username 1234 y contrasena 1234, y otro con usuario polFeo y contrasena 1234");
         System.out.println("Introduzca un nombre de usuario");
         String username = reader.next();
-        System.out.println("Introduzca una contraseña");
+        System.out.println("Introduzca una contrasena");
         String password = reader.next();
 
 
@@ -50,7 +50,7 @@ public class DriverCtrlPlayer {
     private static void testSignUp() {
         System.out.println("Introduzca un nombre de usuario");
         String username = reader.next();
-        System.out.println("Introduzca una contraseña");
+        System.out.println("Introduzca una contrasena");
         String password = reader.next();
 
         CtrlDomain cdStub = new CtrlDomain();
@@ -58,7 +58,7 @@ public class DriverCtrlPlayer {
         try {
             ctrlPlayer.signUp(username, password);
         } catch (Exception e) {
-            System.out.println("slhkdaskldsa");
+            System.out.println("Usuario ya existente");
         }
     }
 
@@ -67,21 +67,17 @@ public class DriverCtrlPlayer {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n1. Empezar una partida \n 2. Login \n 3. Sign Up \n 4. Salir");
+        System.out.println("Opciones: \n 1. Login \n 2. Sign Up \n 3. Salir");
         int value = readNumber();
-        while (value != 4) {
+        while (value != 3) {
             int x, y;
             switch (value) {
                 case 1:
                     System.out.println();
-                    System.out.println("Se llama a la Creadora");
-                    break;
-                case 2:
-                    System.out.println();
                     System.out.println("Se llama a Login");
                     testLogin();
                     break;
-                case 3:
+                case 2:
                     System.out.println();
                     System.out.println("Se llama a signUp");
                     testSignUp();
@@ -90,7 +86,7 @@ public class DriverCtrlPlayer {
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("\nOpciones: \n1. Empezar una partida \n 2. Login \n 3. Sign Up \n 4. Salir");
+            System.out.println("Opciones: \n 1. Login \n 2. Sign Up \n 3. Salir");
             value = readNumber();
         }
         System.exit(0);
