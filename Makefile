@@ -16,12 +16,6 @@ default: class
 class:
 	javac -d bin -encoding UTF-8 -cp $(CLPTH) -sourcepath src src/Main.java $(CLASSES)/*.java $(CONTROLADORES)/*.java $(VISTA)/*.java $(DATA)/*.java $(DRIVERS)/*.java $(JUNIT)/*.java
 
-jar:
-	jar -cvfm Kakuro.jar MANIFEST.MF -C bin/ . -C data/ . -C resources/ . -C lib/ .
-
-runjar:
-	java -jar Kakuro.jar 1
-
 runjarOld:
 	java -jar Kakuro.jar 2
 
@@ -95,4 +89,4 @@ run_junit:
 	java -cp $(CLPTH) org.junit.runner.JUnitCore domain.controllers.junits.KakuroTest
 
 clean:
-	rm -rf bin Kakuro.jar
+	rm -rf bin
