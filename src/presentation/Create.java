@@ -322,7 +322,7 @@ public class Create {
                             numColumn.setFocusable(false);
                             ctrlUI.findKakuro(absolutePath);
                             aceptar.setVisible(false);
-                            confirm.setVisible(true);
+                            confirm.setEnabled(true);
                             textSize.setVisible(false);
                             setBoard(ctrlUI.getKakuro());
                             sizeRow = kBoard.getRowSize();
