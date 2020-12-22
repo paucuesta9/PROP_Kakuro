@@ -14,7 +14,13 @@ import domain.controllers.CtrlPlayer;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
+/** @file CtrlDomain.java
+ * @brief Clase <em>CtrlDomain</em>
+ */
 
+/** @brief Stub CtrlDomain
+ * @author Alvaro Armada Ruiz
+ */
 public class CtrlDomain extends domain.controllers.CtrlDomain {
 
     private Gson gson;

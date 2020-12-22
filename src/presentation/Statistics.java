@@ -12,10 +12,11 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 /** @file Statistics.java
+ @brief Clase  <em>Statistics</em>.
  @class Statistics
  */
 
-/** @brief Pantalla que muestra un Dialog con las estadísticas del jugador
+/** @brief Pantalla Statistics que muestra un Dialog con las estadísticas del jugador
  * @author Alvaro Armada Ruiz
  */
 

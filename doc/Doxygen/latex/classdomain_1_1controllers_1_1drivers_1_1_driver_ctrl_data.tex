@@ -205,8 +205,8 @@ Definición en la línea 84 del archivo Driver\+Ctrl\+Data.\+java.
 \DoxyCodeLine{84                                                                                     \{}
 \DoxyCodeLine{85         CtrlData ctrlData = \textcolor{keyword}{new} CtrlData();}
 \DoxyCodeLine{86         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{87             \textcolor{keywordtype}{int} result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);}
-\DoxyCodeLine{88             System.out.println(\textcolor{stringliteral}{"{}Hay "{}} + result + \textcolor{stringliteral}{"{} kakuro(s) con esta dificultad y tamaño"{}});}
+\DoxyCodeLine{87             \textcolor{comment}{//int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);}}
+\DoxyCodeLine{88             System.out.println(\textcolor{stringliteral}{"{}Hay "{}} + \textcolor{comment}{/*result*/} \textcolor{stringliteral}{"{} kakuro(s) con esta dificultad y tamaño"{}});}
 \DoxyCodeLine{89         \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
 \DoxyCodeLine{90             System.out.println(\textcolor{stringliteral}{"{}No hay ningún kakuro con estas condiciones"{}});}
 \DoxyCodeLine{91         \}}

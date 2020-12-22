@@ -11,11 +11,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 /** @file GameBrief.java
+ @brief Clase  <em>GameBrief</em>.
  @class GameBrief
  */
 
 /**
- * @brief Clase GameBreif que carga la partida guardada con todos sus atributos.
+ * @brief Clase GameBrief que carga la partida guardada con todos sus atributos.
  * @author Judith Almoño Gómez
  */
 

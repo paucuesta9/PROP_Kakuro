@@ -10,7 +10,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 /** @brief Clase Player que representa un jugador y contiene los atributos necesarios de un jugador
- * @autor Pau Cuesta Arcos
+ * @author Pau Cuesta Arcos
  */
 
 public class Player {

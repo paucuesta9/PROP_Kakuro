@@ -1,6 +1,7 @@
 package presentation;
 
 import com.google.gson.JsonArray;
+import domain.classes.Exceptions.CantGenerateException;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlDomain;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /** @file CtrlUI.java
+ @brief Clase  <em>CtrlUI</em>.
  @class CtrlUI
  */
 
@@ -203,12 +205,12 @@ public class CtrlUI {
         return cd.helpCorrectNumber(x,y);
     }
 
-    public void startGame(int diff, int rowSize, int columnSize, boolean trainig) {
+    public void startGame(int diff, int rowSize, int columnSize, boolean trainig) throws CantGenerateException {
         cd.startNewGame(diff, rowSize, columnSize, trainig);
     }
 
-    public void startGame(String absolutePath) {
-        cd.startNewGame(absolutePath);
+    public void startGame(String absolutePath, boolean training) {
+        cd.startNewGame(absolutePath, training);
     }
 
     public boolean isFinished() {
@@ -311,5 +313,9 @@ public class CtrlUI {
 
     public void addCreatedToPlayer() {
         cd.addCreatedToPlayer();
+    }
+
+    public void logOut() {
+        cd.logout();
     }
 }

@@ -16,6 +16,7 @@ import java.io.*;
 import java.util.Timer;
 
 /** @file Play.java
+ * @brief Clase  <em>Play</em>.
  * @class Play
  */
 

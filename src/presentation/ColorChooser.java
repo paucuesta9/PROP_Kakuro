@@ -9,6 +9,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 /** @file ColorChooser.java
+ @brief Clase  <em>ColorChooser</em>.
  @class ColorChooser
  */
 

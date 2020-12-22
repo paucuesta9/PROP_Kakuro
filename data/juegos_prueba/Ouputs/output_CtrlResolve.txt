@@ -1,12 +1,7 @@
 Opciones: 
  1. Creadora 
  2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
+ 3. Salir
 
 Se llama a la creadora
 Se ha creado
@@ -14,12 +9,7 @@ Se ha creado
 Opciones: 
  1. Creadora 
  2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
+ 3. Salir
 
 Se llama a resolver
 Indique un kakuro para realizar el test: 
@@ -38,12 +28,7 @@ F6,4,2,*,*,F8,3,5,*
 Opciones: 
  1. Creadora 
  2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
+ 3. Salir
 
 Se llama a resolver
 Indique un kakuro para realizar el test: 
@@ -52,246 +37,4 @@ No se ha encontrado solucion
 Opciones: 
  1. Creadora 
  2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a isUnique
-Introduzca nueve numeros (0 o 1)
-No habia unos o habia mas de un uno
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a isUnique
-Introduzca nueve numeros (0 o 1)
-Habia un uno en la posicion 1
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a isUnique
-Introduzca nueve numeros (0 o 1)
-No habia unos o habia mas de un uno
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a intersection
-Introduzca nueve numeros (0 o 1)
-Introduzca nueve numeros (0 o 1)
-Esta es la interseccion de los dos arrays anteriores
-0 0 0 0 0 0 0 0 0 
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a intersection
-Introduzca nueve numeros (0 o 1)
-Introduzca nueve numeros (0 o 1)
-Esta es la interseccion de los dos arrays anteriores
-0 0 1 0 1 0 1 0 0 
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a iniRow
-Introduzca el numero de filas y el numero de columnas
-Introduzca un kakuro
-Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
-Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
-Introduzca las coordenadas de la casilla negra a probar
-Introduzca como de larga es la run asociada a la casilla negra
-Ha encontrado 1 casillas unicas
-Asi ha quedado tempboard
-0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
-0 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     0 1 1 1 1 1 1 1 1     
-0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     0 1 1 1 1 1 1 1 1     
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a iniRow
-Introduzca el numero de filas y el numero de columnas
-Introduzca un kakuro
-Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
-Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
-Introduzca las coordenadas de la casilla negra a probar
-Introduzca como de larga es la run asociada a la casilla negra
-Ha encontrado 1 casillas unicas
-Asi ha quedado tempboard
-0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
-0 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     0 1 1 1 1 1 1 1 1     
-0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     1 1 1 1 1 1 1 1 1     
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a spreadUnique
-Introduzca el numero de filas y el numero de columnas
-Introduzca un kakuro
-Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
-Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
-Introduzca cuantas casillas con valor fijado tiene el kakuro
-Introduzca las coordenadas y el valor de la casilla blanca con valor unico
-Introduzca las coordenadas de la casilla blanca unica a probar
-Ha encontrado 2 casillas unicas
-Asi ha quedado tempboard
-0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
-0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 1     
-0 0 0 0 0 0 0 0 0     1 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a spreadUnique
-Introduzca el numero de filas y el numero de columnas
-Introduzca un kakuro
-Introduce el tablero del kakuro de la siguiente forma, por cada casilla negra 9 ceros. 
-Por cada casilla blanca un 1 si el valor de la posicion mas uno en la que se encuentra el 1 es un valor posible para esa casilla, 0 por el contrario
-Introduzca cuantas casillas con valor fijado tiene el kakuro
-Introduzca las coordenadas y el valor de la casilla blanca con valor unico
-Introduzca las coordenadas y el valor de la casilla blanca con valor unico
-Introduzca las coordenadas de la casilla blanca unica a probar
-Ha encontrado 1 casillas unicas
-Asi ha quedado tempboard
-0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     0 0 0 0 0 0 0 0 0     
-0 0 0 0 0 0 0 0 0     1 1 0 0 0 0 0 0 0     1 1 1 1 1 1 1 1 1     
-0 0 0 0 0 0 0 0 0     1 0 0 0 0 0 0 0 0     0 1 0 0 0 0 0 0 0     
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a computePosSums
-Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
- 
-Estos son los valores que que tienen una combinacion para sumar 3 en 2 casillas
-Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
-1 1 0 0 0 0 0 0 0 
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a computePosSums
-Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
- 
-Estos son los valores que que tienen una combinacion para sumar 28 en 9 casillas
-Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
-0 0 0 0 0 0 0 0 0 
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a computePosSums
-Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
- 
-Estos son los valores que que tienen una combinacion para sumar 3 en 2 casillas sabiendo que tenemos fijo el numero 1
-Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
-0 1 0 0 0 0 0 0 0 
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
-
-Se llama a computePosSums
-Introduce un entero y un numero de casillas, y un valor distinto de 0 si quieres que en esas casillas ya haya un numero fijo, 0 si no.
- 
-Estos son los valores que que tienen una combinacion para sumar 45 en 9 casillas sabiendo que tenemos fijo el numero 8
-Un 1 en la posicion 0 indica que 0+1, es decir 1, aparece en la combinacion, 0 que no aparece
-1 1 1 1 1 1 1 0 1 
-
-Opciones: 
- 1. Creadora 
- 2. Resolver 
- 3. IsUnique 
- 4. Intersection 
- 5. IniRow 
- 6. ComputePosSums 
- 7. SpreadUnique 
- 8. Salir
+ 3. Salir

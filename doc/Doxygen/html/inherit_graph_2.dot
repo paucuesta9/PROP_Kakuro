@@ -4,5 +4,5 @@ digraph "Representación gráfica de la clase"
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="domain.classes.Kakuro",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_kakuro.html",tooltip="Clase Kakuro que contiene los atributos y metodos de un tablero."];
+  Node0 [label="data.CtrlKakuroData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdata_1_1_ctrl_kakuro_data.html",tooltip="Clase CtrlKakuroData para guardar y conseguir información de fichero relacionada con kakuros."];
 }

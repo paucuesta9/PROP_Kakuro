@@ -4,5 +4,5 @@ digraph "Representación gráfica de la clase"
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="domain.controllers.drivers.\lDriverCell",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html",tooltip="Clase DriverCell que comprueba la correctividad de las funciones de la clase Cell."];
+  Node0 [label="domain.classes.Pair",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_pair.html",tooltip="Clase Pair, donde ambos elementos son enteros."];
 }

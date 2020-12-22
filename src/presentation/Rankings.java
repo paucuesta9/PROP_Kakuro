@@ -22,11 +22,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** @file Rankings.java
- @class Rankings
+ * @brief Clase  <em>Rankings</em>.
+ * @class Rankings
  */
 
 /**
- * @brief Clase Ranking que muestra un ranking según el criterio del usuario. Contiene las funciones y atributos necesarios para poder hacerlo.
+ * @brief Clase Rankings que muestra un ranking según el criterio del usuario. Contiene las funciones y atributos necesarios para poder hacerlo.
  * @author Pol Vallespí Soro
  */
 

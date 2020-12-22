@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['driverblackcell_237',['DriverBlackCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell.html',1,'domain::controllers::drivers']]],
-  ['drivercell_238',['DriverCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html',1,'domain::controllers::drivers']]],
-  ['driverctrldata_239',['DriverCtrlData',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html',1,'domain::controllers::drivers']]],
-  ['driverctrldomain_240',['DriverCtrlDomain',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html',1,'domain::controllers::drivers']]],
-  ['driverctrlgenerate_241',['DriverCtrlGenerate',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate.html',1,'domain::controllers::drivers']]],
-  ['driverctrlplay_242',['DriverCtrlPlay',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play.html',1,'domain::controllers::drivers']]],
-  ['driverctrlresolve_243',['DriverCtrlResolve',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve.html',1,'domain::controllers::drivers']]],
-  ['driverctrlvalidate_244',['DriverCtrlValidate',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate.html',1,'domain::controllers::drivers']]],
-  ['driverkakuro_245',['DriverKakuro',['../classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html',1,'domain::controllers::drivers']]],
-  ['driverwhitecell_246',['DriverWhiteCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_white_cell.html',1,'domain::controllers::drivers']]]
+  ['cell_721',['Cell',['../classdomain_1_1classes_1_1_cell.html',1,'domain::classes']]],
+  ['colorchooser_722',['ColorChooser',['../classpresentation_1_1_color_chooser.html',1,'presentation']]],
+  ['config_723',['Config',['../classpresentation_1_1_config.html',1,'presentation.Config'],['../classdomain_1_1classes_1_1_config.html',1,'domain.classes.Config']]],
+  ['create_724',['Create',['../classpresentation_1_1_create.html',1,'presentation']]],
+  ['createdranking_725',['CreatedRanking',['../classdomain_1_1classes_1_1_created_ranking.html',1,'domain::classes']]],
+  ['ctrldata_726',['CtrlData',['../classdata_1_1_ctrl_data.html',1,'data']]],
+  ['ctrldomain_727',['CtrlDomain',['../classdomain_1_1controllers_1_1_ctrl_domain.html',1,'domain.controllers.CtrlDomain'],['../classdomain_1_1controllers_1_1stubs_1_1_ctrl_domain.html',1,'domain.controllers.stubs.CtrlDomain']]],
+  ['ctrlgamedata_728',['CtrlGameData',['../classdata_1_1_ctrl_game_data.html',1,'data']]],
+  ['ctrlgenerate_729',['CtrlGenerate',['../classdomain_1_1controllers_1_1_ctrl_generate.html',1,'domain::controllers']]],
+  ['ctrlkakurodata_730',['CtrlKakuroData',['../classdata_1_1_ctrl_kakuro_data.html',1,'data']]],
+  ['ctrlplay_731',['CtrlPlay',['../classdomain_1_1controllers_1_1_ctrl_play.html',1,'domain::controllers']]],
+  ['ctrlplayer_732',['CtrlPlayer',['../classdomain_1_1controllers_1_1_ctrl_player.html',1,'domain::controllers']]],
+  ['ctrlplayerdata_733',['CtrlPlayerData',['../classdata_1_1_ctrl_player_data.html',1,'data']]],
+  ['ctrlplayerui_734',['CtrlPlayerUI',['../classpresentation_1_1_ctrl_player_u_i.html',1,'presentation']]],
+  ['ctrlplayui_735',['CtrlPlayUI',['../classpresentation_1_1_ctrl_play_u_i.html',1,'presentation']]],
+  ['ctrlresolve_736',['CtrlResolve',['../classdomain_1_1controllers_1_1_ctrl_resolve.html',1,'domain::controllers']]],
+  ['ctrlui_737',['CtrlUI',['../classpresentation_1_1_ctrl_u_i.html',1,'presentation']]],
+  ['ctrluiold_738',['CtrlUIOld',['../classpresentation_1_1_ctrl_u_i_old.html',1,'presentation']]],
+  ['ctrlvalidate_739',['CtrlValidate',['../classdomain_1_1controllers_1_1_ctrl_validate.html',1,'domain::controllers']]]
 ];

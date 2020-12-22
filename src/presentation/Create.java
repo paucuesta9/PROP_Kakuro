@@ -13,11 +13,12 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 /** @file Create.java
+ @brief Clase  <em>Create</em>.
  @class Create
  */
 
 /**
- * @brief Pantalla que permite crear un kakuro
+ * @brief Pantalla Create que permite crear un kakuro
  * @author Pau Cuesta Arcos
  */
 
@@ -321,6 +322,7 @@ public class Create {
                             numColumn.setFocusable(false);
                             ctrlUI.findKakuro(absolutePath);
                             aceptar.setVisible(false);
+                            confirm.setVisible(true);
                             textSize.setVisible(false);
                             setBoard(ctrlUI.getKakuro());
                             sizeRow = kBoard.getRowSize();

@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
  * @brief Clase <em>CtrlPlayer</em>
  */
 
-/** @brief Controlador de jugador
+/** @brief 	Clase CtrlPlayer que contiene los atributos y metodos de un Player
  * @author Pau Cuesta Arcos
  */
 public class CtrlPlayer {

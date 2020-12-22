@@ -1,20 +1,14 @@
 var searchData=
 [
-  ['generate_77',['generate',['../classdomain_1_1controllers_1_1_ctrl_domain.html#af03fb518579bbc53d0a328e13cc4bb77',1,'domain.controllers.CtrlDomain.generate()'],['../classdomain_1_1controllers_1_1_ctrl_generate.html#a0a4a123facfe84a128c6bb338b754f26',1,'domain.controllers.CtrlGenerate.generate()']]],
-  ['getboard_78',['getBoard',['../classdomain_1_1classes_1_1_kakuro.html#a4f1f99e018cd02fcc5f2ed09fb98b774',1,'domain::classes::Kakuro']]],
-  ['getcell_79',['getCell',['../classdomain_1_1classes_1_1_kakuro.html#a55327eb18719eb378ac6bd4cc709a921',1,'domain::classes::Kakuro']]],
-  ['getcolumn_80',['getColumn',['../classdomain_1_1classes_1_1_black_cell.html#a985bffb44e2a81d1e34cd19557222f3f',1,'domain::classes::BlackCell']]],
-  ['getcolumnsize_81',['getColumnSize',['../classdomain_1_1classes_1_1_kakuro.html#a87c0714fffa9bd9e8688cb592d1563cf',1,'domain.classes.Kakuro.getColumnSize()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#a5b9f1375bb3b76814abfb09a225dbd24',1,'domain.controllers.CtrlDomain.getColumnSize()']]],
-  ['getcorrectkakurotostring_82',['getCorrectKakuroToString',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a84a0345c9576dafd89f020650b4054ef',1,'domain::controllers::CtrlDomain']]],
-  ['getcorrectvalue_83',['getCorrectValue',['../classdomain_1_1classes_1_1_white_cell.html#a5e3d8b5dd5d6c43eb64fd342b161ec0b',1,'domain::classes::WhiteCell']]],
-  ['getdifficulty_84',['getDifficulty',['../classdomain_1_1classes_1_1_kakuro.html#a6f933f429d9120f821c11e2dc579ba80',1,'domain::classes::Kakuro']]],
-  ['getid_85',['getId',['../classdomain_1_1classes_1_1_kakuro.html#a9dcb9389798b4458bf271cc838fb3e36',1,'domain::classes::Kakuro']]],
-  ['getinstance_86',['getInstance',['../classdata_1_1_ctrl_data.html#acdb1596f6f67770535452853ee0ace67',1,'data::CtrlData']]],
-  ['getkakuro_87',['getKakuro',['../classdata_1_1_ctrl_data.html#a0e1fe3fea7dce1dbf77b922efa22c525',1,'data.CtrlData.getKakuro()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#a995aae7fccd5b3683d811e2df26dae5b',1,'domain.controllers.CtrlDomain.getKakuro()']]],
-  ['getkakuroandassign_88',['getKakuroAndAssign',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a968805b76373ae5cd79eddd9a792d4eb',1,'domain::controllers::CtrlDomain']]],
-  ['getkakurotostring_89',['getKakuroToString',['../classdomain_1_1controllers_1_1_ctrl_domain.html#ad6f12d4830c90bf5f3e3b0e9696eaf0e',1,'domain::controllers::CtrlDomain']]],
-  ['getnumberoffiles_90',['getNumberOfFiles',['../classdata_1_1_ctrl_data.html#a03331d5269d4d35a33b534cd934605e9',1,'data::CtrlData']]],
-  ['getrow_91',['getRow',['../classdomain_1_1classes_1_1_black_cell.html#a5103f85151cb2c303daec21bbde5debf',1,'domain::classes::BlackCell']]],
-  ['getrowsize_92',['getRowSize',['../classdomain_1_1classes_1_1_kakuro.html#ae1c8dd6d7ef629a6ab63947c7ea17d4d',1,'domain.classes.Kakuro.getRowSize()'],['../classdomain_1_1controllers_1_1_ctrl_domain.html#aefb56e0e0d754e8a400ee0c49c72b00b',1,'domain.controllers.CtrlDomain.getRowSize()']]],
-  ['getvalue_93',['getValue',['../classdomain_1_1classes_1_1_white_cell.html#a52502d3d15abb511c1f610ecf80953e0',1,'domain::classes::WhiteCell']]]
+  ['easy_190',['easy',['../classpresentation_1_1_generate.html#a7ab7ecf9b0d7e008a2984c96346ba853',1,'presentation.Generate.easy()'],['../classpresentation_1_1_new_game.html#a9388a3327a07aa85da9a829b3c76e0cb',1,'presentation.NewGame.easy()']]],
+  ['empezadosi_191',['empezadosI',['../classpresentation_1_1_statistics.html#a3c30a3a8783d3d30b5790d97124fa623',1,'presentation::Statistics']]],
+  ['empezadost_192',['empezadosT',['../classpresentation_1_1_statistics.html#a15c724355437a9a51541c51a6ed57b74',1,'presentation::Statistics']]],
+  ['equals_193',['equals',['../classdomain_1_1classes_1_1_pair.html#a9026c44787482df0d77d78e70ed5f9a3',1,'domain::classes::Pair']]],
+  ['error_194',['Error',['../classpresentation_1_1_error.html',1,'presentation.Error'],['../classpresentation_1_1_error.html#a3aeb16e386aa031ee1c6cc194a269c6c',1,'presentation.Error.Error()']]],
+  ['error_2ejava_195',['Error.java',['../_error_8java.html',1,'']]],
+  ['etcolumn_196',['etColumn',['../classpresentation_1_1_set_values.html#a9076ddadf939e09cc0439664cf155baf',1,'presentation::SetValues']]],
+  ['etrow_197',['etRow',['../classpresentation_1_1_set_values.html#a28b064a5602c76d8793ebf86bf8d36fe',1,'presentation::SetValues']]],
+  ['etvalue_198',['etValue',['../classpresentation_1_1_set_values.html#a4c8e815ba17dece37b50cf354d3bd457',1,'presentation::SetValues']]],
+  ['existsplayer_199',['existsPlayer',['../classdata_1_1_ctrl_data.html#a2d441d8baaa6611e860005ac62fedf96',1,'data.CtrlData.existsPlayer()'],['../classdata_1_1_ctrl_player_data.html#a6d85235dc547fc12e00c7eebae5c358b',1,'data.CtrlPlayerData.existsPlayer()']]],
+  ['exit_200',['exit',['../classpresentation_1_1_generate.html#a1f0d95ead50e6e99181df94528020ae6',1,'presentation.Generate.exit()'],['../classpresentation_1_1_load_game.html#acdccd53d2b325b0e106452fea3c6dd23',1,'presentation.LoadGame.exit()'],['../classpresentation_1_1_new_game.html#a1124265c0516902f059009bdf884b080',1,'presentation.NewGame.exit()'],['../classpresentation_1_1_play.html#a98888d1022eb336289a8b616bc78ebce',1,'presentation.Play.exit()']]]
 ];

@@ -21,6 +21,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /** @file Records.java
+ @brief Clase  <em>Records</em>.
  @class Records
  */
 
@@ -54,7 +55,7 @@ public class Records {
         logo.setIcon(Utils.getLogo());
 
         String[] titles = {"Dificultad", "tamaño", "Kakuro"};
-        //ctrlUI.getListOfKakuros(); //TODO : descomentar aixo després de fer pull, després esborrar, BROJA :)
+        //ctrlUI.getListOfKakuros();
 
 
         JsonArray kak = ctrlUI.getKakuroRecords();

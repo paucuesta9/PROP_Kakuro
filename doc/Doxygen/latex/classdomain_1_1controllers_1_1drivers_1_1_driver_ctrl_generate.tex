@@ -54,7 +54,11 @@ static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ct
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a082982f10121b38d9ef33961db091e26}{test\+D\+FS}} ()
 \begin{DoxyCompactList}\small\item\em Test de la función D\+FS Comprueba que la función D\+FS cuenta correctamente el número de casillas blancas conectadas a una celda dada. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad8881c8209453b7d290151b677c63339}{test\+Connex\+Board}} ()
-\begin{DoxyCompactList}\small\item\em Test de la función connex\+Board Comprueba si la función connex\+Board retorna adecuadamente si un talbero es conexo o no. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Test de la función connex\+Board Comprueba si la función connex\+Board retorna adecuadamente si un talbero es conexo o no, y si tiene un numerp mínimo de casillas blancas. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6cbe88c970cc18fdbd3ec4c340ae26ee}{test\+Check\+RunsH}} ()
+\begin{DoxyCompactList}\small\item\em Test de la función check\+RunsH Comprueba si la función check\+RunsH detecta correctamente cuando hay una run horizontal de mas de 9 celdas blancas. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a5237437f325051f9b4eae30371a12515}{test\+Check\+RunsV}} ()
+\begin{DoxyCompactList}\small\item\em Test de la función check\+RunsV Comprueba si la función check\+RunsV detecta correctamente cuando hay una run vertical de mas de 9 celdas blancas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -490,10 +494,12 @@ Definición en la línea 278 del archivo Driver\+Ctrl\+Generate.\+java.
 \DoxyCodeLine{280         System.out.println(\textcolor{stringliteral}{"{}Introduce un kakuro con celdas blancas y negras sin sumas: "{}});}
 \DoxyCodeLine{281         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
 \DoxyCodeLine{282         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
-\DoxyCodeLine{283         \textcolor{keywordtype}{boolean} b = CtrlGenerate.fillBoard(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
-\DoxyCodeLine{284         \textcolor{keywordflow}{if}( b ) System.out.println(\textcolor{stringliteral}{"{}Se ha podido generar un kakuro unico con este tablero"{}});}
-\DoxyCodeLine{285         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No se ha podido generar un kakuro unico con este tablero"{}});}
-\DoxyCodeLine{286     \}}
+\DoxyCodeLine{283         CtrlGenerate cg = \textcolor{keyword}{new} CtrlGenerate();}
+\DoxyCodeLine{284         cg.initializeMat();}
+\DoxyCodeLine{285         \textcolor{keywordtype}{boolean} b = cg.fillBoard(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),0);}
+\DoxyCodeLine{286         \textcolor{keywordflow}{if}( b ) System.out.println(\textcolor{stringliteral}{"{}Se ha podido generar un kakuro unico con este tablero"{}});}
+\DoxyCodeLine{287         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}No se ha podido generar un kakuro unico con este tablero"{}});}
+\DoxyCodeLine{288     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a4fac379636034e18d73cfa95d51e14df}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a4fac379636034e18d73cfa95d51e14df}} 
@@ -508,19 +514,19 @@ Test de la función how\+Many\+Whites Comprueba si la función how\+Many\+Whites
 
 
 
-Definición en la línea 291 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 293 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{291                                             \{}
-\DoxyCodeLine{292         System.out.println(\textcolor{stringliteral}{"{}Indica un kakuro para hacer el test:"{}});}
-\DoxyCodeLine{293         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
-\DoxyCodeLine{294         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
-\DoxyCodeLine{295         \textcolor{keywordtype}{int} r = CtrlGenerate.howManyWhites(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
-\DoxyCodeLine{296         System.out.print(\textcolor{stringliteral}{"{}El kakuro tiene "{}});}
-\DoxyCodeLine{297         System.out.print(r);}
-\DoxyCodeLine{298         System.out.println(\textcolor{stringliteral}{"{} celdas blancas"{}});}
-\DoxyCodeLine{299     \}}
+\DoxyCodeLine{293                                             \{}
+\DoxyCodeLine{294         System.out.println(\textcolor{stringliteral}{"{}Indica un kakuro para hacer el test:"{}});}
+\DoxyCodeLine{295         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
+\DoxyCodeLine{296         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
+\DoxyCodeLine{297         \textcolor{keywordtype}{int} r = CtrlGenerate.howManyWhites(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
+\DoxyCodeLine{298         System.out.print(\textcolor{stringliteral}{"{}El kakuro tiene "{}});}
+\DoxyCodeLine{299         System.out.print(r);}
+\DoxyCodeLine{300         System.out.println(\textcolor{stringliteral}{"{} celdas blancas"{}});}
+\DoxyCodeLine{301     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a7ce44821c40c0012fe952c9f25a9804f}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a7ce44821c40c0012fe952c9f25a9804f}} 
@@ -535,19 +541,19 @@ Test de la función Generate Comprueba si la función generate genera kakuros v�
 
 
 
-Definición en la línea 304 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 306 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{304                                         \{}
-\DoxyCodeLine{305         System.out.println(\textcolor{stringliteral}{"{}Indica el tamano de tablero deseado: "{}});}
-\DoxyCodeLine{306         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{307         System.out.println(\textcolor{stringliteral}{"{}Indica la dificultad deseada: "{}});}
-\DoxyCodeLine{308         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{309         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = CtrlGenerate.generate(n,d);}
-\DoxyCodeLine{310         System.out.println(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}());}
-\DoxyCodeLine{311         System.out.println(\textcolor{stringliteral}{"{}Se ha generado un kakuro del tamano deseado con solucion unica"{}});}
-\DoxyCodeLine{312     \}}
+\DoxyCodeLine{306                                         \{}
+\DoxyCodeLine{307         System.out.println(\textcolor{stringliteral}{"{}Indica el tamano de tablero deseado: "{}});}
+\DoxyCodeLine{308         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{309         System.out.println(\textcolor{stringliteral}{"{}Indica la dificultad deseada: "{}});}
+\DoxyCodeLine{310         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{311         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = CtrlGenerate.generate(n,n,d);}
+\DoxyCodeLine{312         System.out.println(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}());}
+\DoxyCodeLine{313         System.out.println(\textcolor{stringliteral}{"{}Se ha generado un kakuro del tamano deseado con solucion unica"{}});}
+\DoxyCodeLine{314     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a16b748196d4f794f65eeccf7a20ae17b}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a16b748196d4f794f65eeccf7a20ae17b}} 
@@ -562,23 +568,23 @@ Test de la función first\+Col\+Row Comprueba que la función first\+Col\+Row ge
 
 
 
-Definición en la línea 317 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 319 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{317                                           \{}
-\DoxyCodeLine{318         System.out.println(\textcolor{stringliteral}{"{}Introduce el tamano del tablero (nxn): "{}});}
-\DoxyCodeLine{319         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{320         System.out.println(\textcolor{stringliteral}{"{}Introduce la dificultad: "{}});}
-\DoxyCodeLine{321         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{322         Cell[][] board = \textcolor{keyword}{new} Cell[n][n];}
-\DoxyCodeLine{323         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; ++i)\{}
-\DoxyCodeLine{324             board[0][i] = \textcolor{keyword}{new} BlackCell();}
-\DoxyCodeLine{325             board[i][0] = \textcolor{keyword}{new} BlackCell();}
-\DoxyCodeLine{326         \}}
-\DoxyCodeLine{327         CtrlGenerate.firstColRow(board,d);}
-\DoxyCodeLine{328         System.out.println(\textcolor{stringliteral}{"{}Se ha generado la primera y ultima fila del tablero"{}});}
-\DoxyCodeLine{329     \}}
+\DoxyCodeLine{319                                           \{}
+\DoxyCodeLine{320         System.out.println(\textcolor{stringliteral}{"{}Introduce el tamano del tablero (nxn): "{}});}
+\DoxyCodeLine{321         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{322         System.out.println(\textcolor{stringliteral}{"{}Introduce la dificultad: "{}});}
+\DoxyCodeLine{323         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{324         Cell[][] board = \textcolor{keyword}{new} Cell[n][n];}
+\DoxyCodeLine{325         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; ++i)\{}
+\DoxyCodeLine{326             board[0][i] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{327             board[i][0] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{328         \}}
+\DoxyCodeLine{329         CtrlGenerate.firstColRow(board,d);}
+\DoxyCodeLine{330         System.out.println(\textcolor{stringliteral}{"{}Se ha generado la primera y ultima fila del tablero"{}});}
+\DoxyCodeLine{331     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aabcb2ad26657abf2864e7931432c2692}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aabcb2ad26657abf2864e7931432c2692}} 
@@ -593,26 +599,26 @@ Test de la función first\+Col\+Row Comprueba que la función first\+Col\+Row ge
 
 
 
-Definición en la línea 334 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 336 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{334                                           \{}
-\DoxyCodeLine{335         System.out.println(\textcolor{stringliteral}{"{}Introduce el tamano del tablero (nxn): "{}});}
-\DoxyCodeLine{336         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{337         System.out.println(\textcolor{stringliteral}{"{}Introduce la dificultad: "{}});}
-\DoxyCodeLine{338         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{339         Cell[][] board = \textcolor{keyword}{new} Cell[n][n];}
-\DoxyCodeLine{340         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; ++i)\{}
-\DoxyCodeLine{341             board[0][i] = \textcolor{keyword}{new} BlackCell();}
-\DoxyCodeLine{342             board[i][0] = \textcolor{keyword}{new} BlackCell();}
-\DoxyCodeLine{343         \}}
-\DoxyCodeLine{344         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(0,0,board);}
-\DoxyCodeLine{345         CtrlGenerate.firstColRow(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),d); \textcolor{comment}{//Es necessario para evitar que pete}}
-\DoxyCodeLine{346         CtrlGenerate.randomCells(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),d);}
-\DoxyCodeLine{347         System.out.println(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}());}
-\DoxyCodeLine{348         System.out.println(\textcolor{stringliteral}{"{}Se ha generado un tablero del tamano deseado con casillas blancas y negras"{}});}
-\DoxyCodeLine{349     \}}
+\DoxyCodeLine{336                                           \{}
+\DoxyCodeLine{337         System.out.println(\textcolor{stringliteral}{"{}Introduce el tamano del tablero (nxn): "{}});}
+\DoxyCodeLine{338         \textcolor{keywordtype}{int} n = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{339         System.out.println(\textcolor{stringliteral}{"{}Introduce la dificultad: "{}});}
+\DoxyCodeLine{340         \textcolor{keywordtype}{int} d = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{341         Cell[][] board = \textcolor{keyword}{new} Cell[n][n];}
+\DoxyCodeLine{342         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < n; ++i)\{}
+\DoxyCodeLine{343             board[0][i] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{344             board[i][0] = \textcolor{keyword}{new} BlackCell();}
+\DoxyCodeLine{345         \}}
+\DoxyCodeLine{346         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(0,0,board);}
+\DoxyCodeLine{347         CtrlGenerate.firstColRow(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),d); \textcolor{comment}{//Es necessario para evitar que pete}}
+\DoxyCodeLine{348         CtrlGenerate.randomCells(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),d);}
+\DoxyCodeLine{349         System.out.println(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}());}
+\DoxyCodeLine{350         System.out.println(\textcolor{stringliteral}{"{}Se ha generado un tablero del tamano deseado con casillas blancas y negras"{}});}
+\DoxyCodeLine{351     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6e6a6e4e060fb91a3d3fb05c53a490b5}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6e6a6e4e060fb91a3d3fb05c53a490b5}} 
@@ -627,20 +633,20 @@ Test de la función check\+Board Combrueba que la función Checkboard elimina to
 
 
 
-Definición en la línea 354 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 356 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{354                                          \{}
-\DoxyCodeLine{355         System.out.println(\textcolor{stringliteral}{"{}Escribe un kakuro para realizar el test: "{}});}
-\DoxyCodeLine{356         System.out.println(\textcolor{stringliteral}{"{}El kakuro introducido puede contener casillas blancas solitarias o puede no tenerlas"{}});}
-\DoxyCodeLine{357         System.out.println(\textcolor{stringliteral}{"{}En caso de no tenerlas, el tablero no se vera modificado"{}});}
-\DoxyCodeLine{358         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
-\DoxyCodeLine{359         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
-\DoxyCodeLine{360         CtrlGenerate.checkBoard(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
-\DoxyCodeLine{361         System.out.println(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}());}
-\DoxyCodeLine{362         System.out.println(\textcolor{stringliteral}{"{}El kakuro no contiene casillas blancas solitarias"{}});}
-\DoxyCodeLine{363     \}}
+\DoxyCodeLine{356                                          \{}
+\DoxyCodeLine{357         System.out.println(\textcolor{stringliteral}{"{}Escribe un kakuro para realizar el test: "{}});}
+\DoxyCodeLine{358         System.out.println(\textcolor{stringliteral}{"{}El kakuro introducido puede contener casillas blancas solitarias o puede no tenerlas"{}});}
+\DoxyCodeLine{359         System.out.println(\textcolor{stringliteral}{"{}En caso de no tenerlas, el tablero no se vera modificado"{}});}
+\DoxyCodeLine{360         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
+\DoxyCodeLine{361         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
+\DoxyCodeLine{362         CtrlGenerate.checkBoard(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
+\DoxyCodeLine{363         System.out.println(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae8f9d59dd96375ce457f8e234253ac83}{toString}}());}
+\DoxyCodeLine{364         System.out.println(\textcolor{stringliteral}{"{}El kakuro no contiene casillas blancas solitarias"{}});}
+\DoxyCodeLine{365     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a082982f10121b38d9ef33961db091e26}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a082982f10121b38d9ef33961db091e26}} 
@@ -655,30 +661,30 @@ Test de la función D\+FS Comprueba que la función D\+FS cuenta correctamente e
 
 
 
-Definición en la línea 368 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 370 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{368                                   \{}
-\DoxyCodeLine{369         System.out.println(\textcolor{stringliteral}{"{}Escribe un kakuro para realizar el test:"{}});}
-\DoxyCodeLine{370         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
-\DoxyCodeLine{371         System.out.println(\textcolor{stringliteral}{"{}Fila de una casilla blanca: "{}});}
-\DoxyCodeLine{372         \textcolor{keywordtype}{int} r = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{373         System.out.println(\textcolor{stringliteral}{"{}Columna de una casilla blanca: "{}});}
-\DoxyCodeLine{374         \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{375 }
-\DoxyCodeLine{376         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
-\DoxyCodeLine{377         \textcolor{keywordtype}{int}[][] board = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()][\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()];}
-\DoxyCodeLine{378         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i <\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++i ) \{}
-\DoxyCodeLine{379             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}();++j) \{}
-\DoxyCodeLine{380                 board[i][j] = 0;}
-\DoxyCodeLine{381             \}}
-\DoxyCodeLine{382         \}}
-\DoxyCodeLine{383         \textcolor{keywordtype}{int} res = CtrlGenerate.DFS(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),r,c,board );}
-\DoxyCodeLine{384         System.out.print(\textcolor{stringliteral}{"{}Se pueden alcanzar "{}});}
-\DoxyCodeLine{385         System.out.print(res);}
-\DoxyCodeLine{386         System.out.println(\textcolor{stringliteral}{"{} celdas blancas desde la celda dada"{}});}
-\DoxyCodeLine{387     \}}
+\DoxyCodeLine{370                                   \{}
+\DoxyCodeLine{371         System.out.println(\textcolor{stringliteral}{"{}Escribe un kakuro para realizar el test:"{}});}
+\DoxyCodeLine{372         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
+\DoxyCodeLine{373         System.out.println(\textcolor{stringliteral}{"{}Fila de una casilla blanca: "{}});}
+\DoxyCodeLine{374         \textcolor{keywordtype}{int} r = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{375         System.out.println(\textcolor{stringliteral}{"{}Columna de una casilla blanca: "{}});}
+\DoxyCodeLine{376         \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
+\DoxyCodeLine{379         \textcolor{keywordtype}{int}[][] board = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()][\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()];}
+\DoxyCodeLine{380         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i <\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++i ) \{}
+\DoxyCodeLine{381             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}();++j) \{}
+\DoxyCodeLine{382                 board[i][j] = 0;}
+\DoxyCodeLine{383             \}}
+\DoxyCodeLine{384         \}}
+\DoxyCodeLine{385         \textcolor{keywordtype}{int} res = CtrlGenerate.DFS(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}(),r,c,board );}
+\DoxyCodeLine{386         System.out.print(\textcolor{stringliteral}{"{}Se pueden alcanzar "{}});}
+\DoxyCodeLine{387         System.out.print(res);}
+\DoxyCodeLine{388         System.out.println(\textcolor{stringliteral}{"{} celdas blancas desde la celda dada"{}});}
+\DoxyCodeLine{389     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad8881c8209453b7d290151b677c63339}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad8881c8209453b7d290151b677c63339}} 
@@ -689,22 +695,74 @@ Definición en la línea 368 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 
-Test de la función connex\+Board Comprueba si la función connex\+Board retorna adecuadamente si un talbero es conexo o no. 
+Test de la función connex\+Board Comprueba si la función connex\+Board retorna adecuadamente si un talbero es conexo o no, y si tiene un numerp mínimo de casillas blancas. 
 
 
 
-Definición en la línea 392 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 394 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{392                                           \{}
-\DoxyCodeLine{393         System.out.println(\textcolor{stringliteral}{"{}Escribe un kakuro para realizar el test"{}});}
-\DoxyCodeLine{394         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
-\DoxyCodeLine{395         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
-\DoxyCodeLine{396         \textcolor{keywordtype}{boolean} b = CtrlGenerate.connexBoard(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
-\DoxyCodeLine{397         \textcolor{keywordflow}{if}(b) System.out.println(\textcolor{stringliteral}{"{}El tablero es conexo"{}});}
-\DoxyCodeLine{398         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El tablero no es conexo"{}});}
-\DoxyCodeLine{399     \}}
+\DoxyCodeLine{394                                           \{}
+\DoxyCodeLine{395         System.out.println(\textcolor{stringliteral}{"{}Escribe un kakuro para realizar el test"{}});}
+\DoxyCodeLine{396         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
+\DoxyCodeLine{397         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
+\DoxyCodeLine{398         \textcolor{keywordtype}{boolean} b = CtrlGenerate.connexBoard(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
+\DoxyCodeLine{399         \textcolor{keywordflow}{if}(b) System.out.println(\textcolor{stringliteral}{"{}El tablero es conexo"{}});}
+\DoxyCodeLine{400         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}El tablero no es conexo"{}});}
+\DoxyCodeLine{401     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6cbe88c970cc18fdbd3ec4c340ae26ee}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6cbe88c970cc18fdbd3ec4c340ae26ee}} 
+\index{domain.controllers.drivers.DriverCtrlGenerate@{domain.controllers.drivers.DriverCtrlGenerate}!testCheckRunsH@{testCheckRunsH}}
+\index{testCheckRunsH@{testCheckRunsH}!domain.controllers.drivers.DriverCtrlGenerate@{domain.controllers.drivers.DriverCtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{testCheckRunsH()}{testCheckRunsH()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Generate.\+test\+Check\+RunsH (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de la función check\+RunsH Comprueba si la función check\+RunsH detecta correctamente cuando hay una run horizontal de mas de 9 celdas blancas. 
+
+
+
+Definición en la línea 406 del archivo Driver\+Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{406                                          \{}
+\DoxyCodeLine{407         System.out.println(\textcolor{stringliteral}{"{}Escribe el kakuro para realizar el test"{}});}
+\DoxyCodeLine{408         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
+\DoxyCodeLine{409         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
+\DoxyCodeLine{410         \textcolor{keywordtype}{boolean} b = CtrlGenerate.checkRunsH(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
+\DoxyCodeLine{411         \textcolor{keywordflow}{if}(!b) System.out.println(\textcolor{stringliteral}{"{}El kakuro no tiene runs horizontales de mas de 9 celdas blancas"{}});}
+\DoxyCodeLine{412         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Kakuro incorrecto"{}});}
+\DoxyCodeLine{413     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a5237437f325051f9b4eae30371a12515}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a5237437f325051f9b4eae30371a12515}} 
+\index{domain.controllers.drivers.DriverCtrlGenerate@{domain.controllers.drivers.DriverCtrlGenerate}!testCheckRunsV@{testCheckRunsV}}
+\index{testCheckRunsV@{testCheckRunsV}!domain.controllers.drivers.DriverCtrlGenerate@{domain.controllers.drivers.DriverCtrlGenerate}}
+\doxysubsubsection{\texorpdfstring{testCheckRunsV()}{testCheckRunsV()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+drivers.\+Driver\+Ctrl\+Generate.\+test\+Check\+RunsV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Test de la función check\+RunsV Comprueba si la función check\+RunsV detecta correctamente cuando hay una run vertical de mas de 9 celdas blancas. 
+
+
+
+Definición en la línea 418 del archivo Driver\+Ctrl\+Generate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{418                                          \{}
+\DoxyCodeLine{419         System.out.println(\textcolor{stringliteral}{"{}Escribe el kakuro para realizar el test"{}});}
+\DoxyCodeLine{420         String kakuroString = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}{readKakuro}}();}
+\DoxyCodeLine{421         \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuroString);}
+\DoxyCodeLine{422         \textcolor{keywordtype}{boolean} b = CtrlGenerate.checkRunsV(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a8c70e065f697da3441951f087b1de047}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}());}
+\DoxyCodeLine{423         \textcolor{keywordflow}{if}(!b) System.out.println(\textcolor{stringliteral}{"{}El kakuro no tiene runs verticales de mas de 9 celdas blancas"{}});}
+\DoxyCodeLine{424         \textcolor{keywordflow}{else} System.out.println(\textcolor{stringliteral}{"{}Kakuro incorrecto"{}});}
+\DoxyCodeLine{425     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a9b2f445fe20ea787bb2f1ff21d05ec52}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a9b2f445fe20ea787bb2f1ff21d05ec52}} 
@@ -724,128 +782,138 @@ función main del driver \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_ge
 \end{DoxyParams}
 
 
-Definición en la línea 406 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 432 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{406                                            \{}
-\DoxyCodeLine{407         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. setKakuro \(\backslash\)n 2. Casillas blancas en vertical anteriores a una casilla en concreto \(\backslash\)n 3. Casillas blancas en horizontal anteriores a una casilla en concreto \(\backslash\)n 4. Calcular el tamano de todas las runs horizontales \(\backslash\)n 5. Calcular el tamano de todas las runs verticales"{}}+}
-\DoxyCodeLine{408                 \textcolor{stringliteral}{"{}\(\backslash\)n 6. ComputePosSums \(\backslash\)n 7. Comprobar si todos los elementos de un vector son 0  \(\backslash\)n 8. Interseccion entre vectores 3 \(\backslash\)n 9. Interseccion entre vectores 2"{}} +}
-\DoxyCodeLine{409                 \textcolor{stringliteral}{"{}\(\backslash\)n 10. Interseccion entre vectores 1 \(\backslash\)n 11. Comprobar si un solo hay un valor posible \(\backslash\)n 12. Rellenar un tablero para que sea unico \(\backslash\)n 13 Cuenta casillas blancas \(\backslash\)n 14. Generar un kakuro unico \(\backslash\)n 15. Generar la primera fila y columna de un tablero \(\backslash\)n 16. Rellenar el tablero con casillas blancas y negras"{}} +}
-\DoxyCodeLine{410                 \textcolor{stringliteral}{"{}\(\backslash\)n 17. Comprobar que no hay casillas blancas solitarias \(\backslash\)n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \(\backslash\)n 19. Mirar si el tablero es conexo"{}});}
-\DoxyCodeLine{411 }
-\DoxyCodeLine{412         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{413         \textcolor{keywordflow}{while} (value != 20) \{}
-\DoxyCodeLine{414             \textcolor{keywordflow}{switch} (value) \{}
-\DoxyCodeLine{415                 \textcolor{keywordflow}{case} 1:}
-\DoxyCodeLine{416                     System.out.println();}
-\DoxyCodeLine{417                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setkakuro"{}});}
-\DoxyCodeLine{418                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_adb33fd1ff3d296af2abb846d7aa23fa1}{testSetKakuro}}();}
-\DoxyCodeLine{419                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{420                 \textcolor{keywordflow}{case} 2:}
-\DoxyCodeLine{421                     System.out.println();}
-\DoxyCodeLine{422                     System.out.println(\textcolor{stringliteral}{"{}Se llama a countWhiteCellsV"{}});}
-\DoxyCodeLine{423                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a1c79e092ba0d2aefaeba7f016aaf5bf2}{testCountWhiteCellsV}}();}
-\DoxyCodeLine{424                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{425                 \textcolor{keywordflow}{case} 3:}
-\DoxyCodeLine{426                     System.out.println();}
-\DoxyCodeLine{427                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la countWhiteCellsH"{}});}
-\DoxyCodeLine{428                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad0e51bd5ce77fb4eedd5f434ab3a5229}{testCountWhiteCellsH}}();}
-\DoxyCodeLine{429                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{430                 \textcolor{keywordflow}{case} 4:}
-\DoxyCodeLine{431                     System.out.println();}
-\DoxyCodeLine{432                     System.out.println(\textcolor{stringliteral}{"{}Se llama a NineCellsRow"{}});}
-\DoxyCodeLine{433                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a386a09e109a5244304c3cf02071ff15f}{testNineCellsRow}}();}
-\DoxyCodeLine{434                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{435                 \textcolor{keywordflow}{case} 5:}
-\DoxyCodeLine{436                     System.out.println();}
-\DoxyCodeLine{437                     System.out.println(\textcolor{stringliteral}{"{}Se llama a NineCellsCol"{}});}
-\DoxyCodeLine{438                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_af111bfabddd8c80fa1656f77b797174e}{testNineCellsCol}}();}
-\DoxyCodeLine{439                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{440                 \textcolor{keywordflow}{case} 6:}
-\DoxyCodeLine{441                     System.out.println();}
-\DoxyCodeLine{442                     System.out.println(\textcolor{stringliteral}{"{}Se llama a ComputePosSums"{}});}
-\DoxyCodeLine{443                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a627eef21dcbc2d919141fca84d537981}{testComputePosSums}}();}
-\DoxyCodeLine{444                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{445                 \textcolor{keywordflow}{case} 7:}
-\DoxyCodeLine{446                     System.out.println();}
-\DoxyCodeLine{447                     System.out.println(\textcolor{stringliteral}{"{}Se llama a AllZero"{}});}
-\DoxyCodeLine{448                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a278d46c1a4ccca0abf1d781ad40ef451}{testAllZero}}();}
-\DoxyCodeLine{449                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{450                 \textcolor{keywordflow}{case} 8:}
-\DoxyCodeLine{451                     System.out.println();}
-\DoxyCodeLine{452                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Intersection3"{}});}
-\DoxyCodeLine{453                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a445c6650f23a6f17a2f078e2b5249e17}{testIntersection3}}();}
-\DoxyCodeLine{454                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{455                 \textcolor{keywordflow}{case} 9:}
-\DoxyCodeLine{456                     System.out.println();}
-\DoxyCodeLine{457                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Intersection2"{}});}
-\DoxyCodeLine{458                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad7773eede00178e2999416ccf6fea3f1}{testIntersection2}}();}
-\DoxyCodeLine{459                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{460                 \textcolor{keywordflow}{case} 10:}
-\DoxyCodeLine{461                     System.out.println();}
-\DoxyCodeLine{462                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Intersection"{}});}
-\DoxyCodeLine{463                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a195f1c876713694a52a060d57624f1b3}{testIntersection}}();}
-\DoxyCodeLine{464                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{465                 \textcolor{keywordflow}{case} 11:}
-\DoxyCodeLine{466                     System.out.println();}
-\DoxyCodeLine{467                     System.out.println(\textcolor{stringliteral}{"{}Se llama a isUnique"{}});}
-\DoxyCodeLine{468                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a57ced67a2c3f6e9ffa3aaf3a4060deac}{testIsUnique}}();}
-\DoxyCodeLine{469                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{470                 \textcolor{keywordflow}{case} 12:}
-\DoxyCodeLine{471                     System.out.println();}
-\DoxyCodeLine{472                     System.out.println(\textcolor{stringliteral}{"{}Se llama a fillBoard"{}});}
-\DoxyCodeLine{473                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a4aee9921a6c132a881290a6a9154d747}{testFillBoard}}();}
-\DoxyCodeLine{474                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{475                 \textcolor{keywordflow}{case} 13:}
-\DoxyCodeLine{476                     System.out.println();}
-\DoxyCodeLine{477                     System.out.println(\textcolor{stringliteral}{"{}Se llama a howManyWhites"{}});}
-\DoxyCodeLine{478                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a4fac379636034e18d73cfa95d51e14df}{testHowManyWhites}}();}
-\DoxyCodeLine{479                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{480                 \textcolor{keywordflow}{case} 14:}
-\DoxyCodeLine{481                     System.out.println();}
-\DoxyCodeLine{482                     System.out.println(\textcolor{stringliteral}{"{}Se llama a generate"{}});}
-\DoxyCodeLine{483                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a7ce44821c40c0012fe952c9f25a9804f}{testGenerate}}();}
-\DoxyCodeLine{484                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{485                 \textcolor{keywordflow}{case} 15:}
-\DoxyCodeLine{486                     System.out.println();}
-\DoxyCodeLine{487                     System.out.println(\textcolor{stringliteral}{"{}Se llama a firstColRow"{}});}
-\DoxyCodeLine{488                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a16b748196d4f794f65eeccf7a20ae17b}{testFirstColRow}}();}
-\DoxyCodeLine{489                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{490                 \textcolor{keywordflow}{case} 16:}
-\DoxyCodeLine{491                     System.out.println();}
-\DoxyCodeLine{492                     System.out.println(\textcolor{stringliteral}{"{}Se llama a randomCells"{}});}
-\DoxyCodeLine{493                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aabcb2ad26657abf2864e7931432c2692}{testRandomCells}}();}
-\DoxyCodeLine{494                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{495                 \textcolor{keywordflow}{case} 17:}
-\DoxyCodeLine{496                     System.out.println();}
-\DoxyCodeLine{497                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkBoard"{}});}
-\DoxyCodeLine{498                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6e6a6e4e060fb91a3d3fb05c53a490b5}{testCheckBoard}}();}
-\DoxyCodeLine{499                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{500                 \textcolor{keywordflow}{case} 18:}
-\DoxyCodeLine{501                     System.out.println();}
-\DoxyCodeLine{502                     System.out.println(\textcolor{stringliteral}{"{}Se llama a DFS"{}});}
-\DoxyCodeLine{503                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a082982f10121b38d9ef33961db091e26}{testDFS}}();}
-\DoxyCodeLine{504                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{505                 \textcolor{keywordflow}{case} 19:}
-\DoxyCodeLine{506                     System.out.println();}
-\DoxyCodeLine{507                     System.out.println(\textcolor{stringliteral}{"{}Se llama a connexBoard"{}});}
-\DoxyCodeLine{508                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad8881c8209453b7d290151b677c63339}{testConnexBoard}}();}
-\DoxyCodeLine{509                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{510                 \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{511                     System.out.println();}
-\DoxyCodeLine{512                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
-\DoxyCodeLine{513                     \textcolor{keywordflow}{break};}
-\DoxyCodeLine{514             \}}
-\DoxyCodeLine{515             System.out.println();}
-\DoxyCodeLine{516             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. setKakuro \(\backslash\)n 2. Casillas blancas en vertical anteriores a una casilla en concreto \(\backslash\)n 3. Casillas blancas en horizontal anteriores a una casilla en concreto \(\backslash\)n 4. Calcular el tamano de todas las runs horizontales \(\backslash\)n 5. Calcular el tamano de todas las runs verticales"{}}+}
-\DoxyCodeLine{517                     \textcolor{stringliteral}{"{}\(\backslash\)n 6. ComputePosSums \(\backslash\)n 7. Comprobar si todos los elementos de un vector son 0  \(\backslash\)n 8. Interseccion entre vectores 3 \(\backslash\)n 9. Interseccion entre vectores 2"{}} +}
-\DoxyCodeLine{518                     \textcolor{stringliteral}{"{}\(\backslash\)n 10. Interseccion entre vectores 1 \(\backslash\)n 11. Comprobar si un solo hay un valor posible \(\backslash\)n 12. Rellenar un tablero para que sea unico \(\backslash\)n 13 Cuenta casillas blancas \(\backslash\)n 14. Generar un kakuro unico \(\backslash\)n 15. Generar la primera fila y columna de un tablero \(\backslash\)n 16. Rellenar el tablero con casillas blancas y negras"{}} +}
-\DoxyCodeLine{519                     \textcolor{stringliteral}{"{}\(\backslash\)n 17. Comprobar que no hay casillas blancas solitarias \(\backslash\)n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \(\backslash\)n 19. Mirar si el tablero es conexo"{}});}
-\DoxyCodeLine{520             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
-\DoxyCodeLine{521         \}}
-\DoxyCodeLine{522         System.exit(0);}
-\DoxyCodeLine{523     \}}
+\DoxyCodeLine{432                                            \{}
+\DoxyCodeLine{433         System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. setKakuro \(\backslash\)n 2. Casillas blancas en vertical anteriores a una casilla en concreto \(\backslash\)n 3. Casillas blancas en horizontal anteriores a una casilla en concreto \(\backslash\)n 4. Calcular el tamano de todas las runs horizontales \(\backslash\)n 5. Calcular el tamano de todas las runs verticales"{}}+}
+\DoxyCodeLine{434                 \textcolor{stringliteral}{"{}\(\backslash\)n 6. ComputePosSums \(\backslash\)n 7. Comprobar si todos los elementos de un vector son 0  \(\backslash\)n 8. Interseccion entre vectores 3 \(\backslash\)n 9. Interseccion entre vectores 2"{}} +}
+\DoxyCodeLine{435                 \textcolor{stringliteral}{"{}\(\backslash\)n 10. Interseccion entre vectores 1 \(\backslash\)n 11. Comprobar si un solo hay un valor posible \(\backslash\)n 12. Rellenar un tablero para que sea unico \(\backslash\)n 13 Cuenta casillas blancas \(\backslash\)n 14. Generar un kakuro unico \(\backslash\)n 15. Generar la primera fila y columna de un tablero \(\backslash\)n 16. Rellenar el tablero con casillas blancas y negras"{}} +}
+\DoxyCodeLine{436                 \textcolor{stringliteral}{"{}\(\backslash\)n 17. Comprobar que no hay casillas blancas solitarias \(\backslash\)n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \(\backslash\)n 19. Mirar si el tablero es conexo \(\backslash\)n 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas \(\backslash\)n 21. Mirar que no hay runs verticales de mas de 9 celdas blancas "{}});}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{438         \textcolor{keywordtype}{int} value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{439         \textcolor{keywordflow}{while} (value != 22) \{}
+\DoxyCodeLine{440             \textcolor{keywordflow}{switch} (value) \{}
+\DoxyCodeLine{441                 \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{442                     System.out.println();}
+\DoxyCodeLine{443                     System.out.println(\textcolor{stringliteral}{"{}Se llama a setkakuro"{}});}
+\DoxyCodeLine{444                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_adb33fd1ff3d296af2abb846d7aa23fa1}{testSetKakuro}}();}
+\DoxyCodeLine{445                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{446                 \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{447                     System.out.println();}
+\DoxyCodeLine{448                     System.out.println(\textcolor{stringliteral}{"{}Se llama a countWhiteCellsV"{}});}
+\DoxyCodeLine{449                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a1c79e092ba0d2aefaeba7f016aaf5bf2}{testCountWhiteCellsV}}();}
+\DoxyCodeLine{450                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{451                 \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{452                     System.out.println();}
+\DoxyCodeLine{453                     System.out.println(\textcolor{stringliteral}{"{}Se llama a la countWhiteCellsH"{}});}
+\DoxyCodeLine{454                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad0e51bd5ce77fb4eedd5f434ab3a5229}{testCountWhiteCellsH}}();}
+\DoxyCodeLine{455                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{456                 \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{457                     System.out.println();}
+\DoxyCodeLine{458                     System.out.println(\textcolor{stringliteral}{"{}Se llama a NineCellsRow"{}});}
+\DoxyCodeLine{459                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a386a09e109a5244304c3cf02071ff15f}{testNineCellsRow}}();}
+\DoxyCodeLine{460                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{461                 \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{462                     System.out.println();}
+\DoxyCodeLine{463                     System.out.println(\textcolor{stringliteral}{"{}Se llama a NineCellsCol"{}});}
+\DoxyCodeLine{464                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_af111bfabddd8c80fa1656f77b797174e}{testNineCellsCol}}();}
+\DoxyCodeLine{465                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{466                 \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{467                     System.out.println();}
+\DoxyCodeLine{468                     System.out.println(\textcolor{stringliteral}{"{}Se llama a ComputePosSums"{}});}
+\DoxyCodeLine{469                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a627eef21dcbc2d919141fca84d537981}{testComputePosSums}}();}
+\DoxyCodeLine{470                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{471                 \textcolor{keywordflow}{case} 7:}
+\DoxyCodeLine{472                     System.out.println();}
+\DoxyCodeLine{473                     System.out.println(\textcolor{stringliteral}{"{}Se llama a AllZero"{}});}
+\DoxyCodeLine{474                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a278d46c1a4ccca0abf1d781ad40ef451}{testAllZero}}();}
+\DoxyCodeLine{475                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{476                 \textcolor{keywordflow}{case} 8:}
+\DoxyCodeLine{477                     System.out.println();}
+\DoxyCodeLine{478                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Intersection3"{}});}
+\DoxyCodeLine{479                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a445c6650f23a6f17a2f078e2b5249e17}{testIntersection3}}();}
+\DoxyCodeLine{480                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{481                 \textcolor{keywordflow}{case} 9:}
+\DoxyCodeLine{482                     System.out.println();}
+\DoxyCodeLine{483                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Intersection2"{}});}
+\DoxyCodeLine{484                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad7773eede00178e2999416ccf6fea3f1}{testIntersection2}}();}
+\DoxyCodeLine{485                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{486                 \textcolor{keywordflow}{case} 10:}
+\DoxyCodeLine{487                     System.out.println();}
+\DoxyCodeLine{488                     System.out.println(\textcolor{stringliteral}{"{}Se llama a Intersection"{}});}
+\DoxyCodeLine{489                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a195f1c876713694a52a060d57624f1b3}{testIntersection}}();}
+\DoxyCodeLine{490                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{491                 \textcolor{keywordflow}{case} 11:}
+\DoxyCodeLine{492                     System.out.println();}
+\DoxyCodeLine{493                     System.out.println(\textcolor{stringliteral}{"{}Se llama a isUnique"{}});}
+\DoxyCodeLine{494                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a57ced67a2c3f6e9ffa3aaf3a4060deac}{testIsUnique}}();}
+\DoxyCodeLine{495                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{496                 \textcolor{keywordflow}{case} 12:}
+\DoxyCodeLine{497                     System.out.println();}
+\DoxyCodeLine{498                     System.out.println(\textcolor{stringliteral}{"{}Se llama a fillBoard"{}});}
+\DoxyCodeLine{499                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a4aee9921a6c132a881290a6a9154d747}{testFillBoard}}();}
+\DoxyCodeLine{500                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{501                 \textcolor{keywordflow}{case} 13:}
+\DoxyCodeLine{502                     System.out.println();}
+\DoxyCodeLine{503                     System.out.println(\textcolor{stringliteral}{"{}Se llama a howManyWhites"{}});}
+\DoxyCodeLine{504                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a4fac379636034e18d73cfa95d51e14df}{testHowManyWhites}}();}
+\DoxyCodeLine{505                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{506                 \textcolor{keywordflow}{case} 14:}
+\DoxyCodeLine{507                     System.out.println();}
+\DoxyCodeLine{508                     System.out.println(\textcolor{stringliteral}{"{}Se llama a generate"{}});}
+\DoxyCodeLine{509                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a7ce44821c40c0012fe952c9f25a9804f}{testGenerate}}();}
+\DoxyCodeLine{510                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{511                 \textcolor{keywordflow}{case} 15:}
+\DoxyCodeLine{512                     System.out.println();}
+\DoxyCodeLine{513                     System.out.println(\textcolor{stringliteral}{"{}Se llama a firstColRow"{}});}
+\DoxyCodeLine{514                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a16b748196d4f794f65eeccf7a20ae17b}{testFirstColRow}}();}
+\DoxyCodeLine{515                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{516                 \textcolor{keywordflow}{case} 16:}
+\DoxyCodeLine{517                     System.out.println();}
+\DoxyCodeLine{518                     System.out.println(\textcolor{stringliteral}{"{}Se llama a randomCells"{}});}
+\DoxyCodeLine{519                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aabcb2ad26657abf2864e7931432c2692}{testRandomCells}}();}
+\DoxyCodeLine{520                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{521                 \textcolor{keywordflow}{case} 17:}
+\DoxyCodeLine{522                     System.out.println();}
+\DoxyCodeLine{523                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkBoard"{}});}
+\DoxyCodeLine{524                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6e6a6e4e060fb91a3d3fb05c53a490b5}{testCheckBoard}}();}
+\DoxyCodeLine{525                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{526                 \textcolor{keywordflow}{case} 18:}
+\DoxyCodeLine{527                     System.out.println();}
+\DoxyCodeLine{528                     System.out.println(\textcolor{stringliteral}{"{}Se llama a DFS"{}});}
+\DoxyCodeLine{529                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a082982f10121b38d9ef33961db091e26}{testDFS}}();}
+\DoxyCodeLine{530                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{531                 \textcolor{keywordflow}{case} 19:}
+\DoxyCodeLine{532                     System.out.println();}
+\DoxyCodeLine{533                     System.out.println(\textcolor{stringliteral}{"{}Se llama a connexBoard"{}});}
+\DoxyCodeLine{534                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad8881c8209453b7d290151b677c63339}{testConnexBoard}}();}
+\DoxyCodeLine{535                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{536                 \textcolor{keywordflow}{case} 20:}
+\DoxyCodeLine{537                     System.out.println();}
+\DoxyCodeLine{538                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkRunsH"{}});}
+\DoxyCodeLine{539                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a6cbe88c970cc18fdbd3ec4c340ae26ee}{testCheckRunsH}}();}
+\DoxyCodeLine{540                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{541                 \textcolor{keywordflow}{case} 21:}
+\DoxyCodeLine{542                     System.out.println();}
+\DoxyCodeLine{543                     System.out.println(\textcolor{stringliteral}{"{}Se llama a checkRunsV"{}});}
+\DoxyCodeLine{544                     \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_a5237437f325051f9b4eae30371a12515}{testCheckRunsV}}();}
+\DoxyCodeLine{545                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{546                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{547                     System.out.println();}
+\DoxyCodeLine{548                     System.out.println(\textcolor{stringliteral}{"{}El numero introducido es incorrecto"{}});}
+\DoxyCodeLine{549                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{550             \}}
+\DoxyCodeLine{551             System.out.println();}
+\DoxyCodeLine{552             System.out.println(\textcolor{stringliteral}{"{}Opciones: \(\backslash\)n 1. setKakuro \(\backslash\)n 2. Casillas blancas en vertical anteriores a una casilla en concreto \(\backslash\)n 3. Casillas blancas en horizontal anteriores a una casilla en concreto \(\backslash\)n 4. Calcular el tamano de todas las runs horizontales \(\backslash\)n 5. Calcular el tamano de todas las runs verticales"{}}+}
+\DoxyCodeLine{553                     \textcolor{stringliteral}{"{}\(\backslash\)n 6. ComputePosSums \(\backslash\)n 7. Comprobar si todos los elementos de un vector son 0  \(\backslash\)n 8. Interseccion entre vectores 3 \(\backslash\)n 9. Interseccion entre vectores 2"{}} +}
+\DoxyCodeLine{554                     \textcolor{stringliteral}{"{}\(\backslash\)n 10. Interseccion entre vectores 1 \(\backslash\)n 11. Comprobar si un solo hay un valor posible \(\backslash\)n 12. Rellenar un tablero para que sea unico \(\backslash\)n 13 Cuenta casillas blancas \(\backslash\)n 14. Generar un kakuro unico \(\backslash\)n 15. Generar la primera fila y columna de un tablero \(\backslash\)n 16. Rellenar el tablero con casillas blancas y negras"{}} +}
+\DoxyCodeLine{555                     \textcolor{stringliteral}{"{}\(\backslash\)n 17. Comprobar que no hay casillas blancas solitarias \(\backslash\)n 18. Mirar cuantas casillas blancas estan conectadas con una casilla blanca \(\backslash\)n 19. Mirar si el tablero es conexo \(\backslash\)n 20. Mirar que no hay runs horizontales de mas de 9 celdas blancas \(\backslash\)n 21. Mirar que no hay runs verticales de mas de 9 celdas blancas "{}});}
+\DoxyCodeLine{556             value = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}{readNumber}}();}
+\DoxyCodeLine{557         \}}
+\DoxyCodeLine{558         System.exit(0);}
+\DoxyCodeLine{559     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_acdc85a572109ff7b861c6b6d8def9de8}} 
@@ -863,20 +931,20 @@ kakuro en formato string
 \end{DoxyReturn}
 
 
-Definición en la línea 529 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 565 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{529                                       \{}
-\DoxyCodeLine{530         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{531         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad602616112582ef4df97357c6c618245}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
-\DoxyCodeLine{532         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
-\DoxyCodeLine{533         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
-\DoxyCodeLine{534         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{535         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
-\DoxyCodeLine{536             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad602616112582ef4df97357c6c618245}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{537         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{538     \}}
+\DoxyCodeLine{565                                       \{}
+\DoxyCodeLine{566         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
+\DoxyCodeLine{567         String[] valuesSize = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad602616112582ef4df97357c6c618245}{reader}}.next().split(\textcolor{stringliteral}{"{},"{}});}
+\DoxyCodeLine{568         \textcolor{keywordtype}{int} row = Integer.parseInt(valuesSize[0]);}
+\DoxyCodeLine{569         \textcolor{keywordtype}{int} column = Integer.parseInt(valuesSize[1]);}
+\DoxyCodeLine{570         content.append((row) + \textcolor{stringliteral}{"{},"{}} + (column) + \textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{571         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < row; ++i)}
+\DoxyCodeLine{572             content.append(\mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad602616112582ef4df97357c6c618245}{reader}}.next()).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{573         \textcolor{keywordflow}{return} content.toString();}
+\DoxyCodeLine{574     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}\label{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_aadfdf08499cef4570fceef9fc7b273d6}} 
@@ -894,15 +962,15 @@ el entero leido
 \end{DoxyReturn}
 
 
-Definición en la línea 544 del archivo Driver\+Ctrl\+Generate.\+java.
+Definición en la línea 580 del archivo Driver\+Ctrl\+Generate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{544                                    \{}
-\DoxyCodeLine{545         \textcolor{keywordtype}{int} number = 0;}
-\DoxyCodeLine{546         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad602616112582ef4df97357c6c618245}{reader}}.nextInt();}
-\DoxyCodeLine{547         \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{548     \}}
+\DoxyCodeLine{580                                    \{}
+\DoxyCodeLine{581         \textcolor{keywordtype}{int} number = 0;}
+\DoxyCodeLine{582         number = \mbox{\hyperlink{classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate_ad602616112582ef4df97357c6c618245}{reader}}.nextInt();}
+\DoxyCodeLine{583         \textcolor{keywordflow}{return} number;}
+\DoxyCodeLine{584     \}}
 
 \end{DoxyCode}
 

@@ -1,5 +1,6 @@
 package presentation;
 
+import domain.classes.Exceptions.CantGenerateException;
 import domain.classes.Exceptions.WrongPasswordException;
 import domain.controllers.CtrlDomain;
 
@@ -8,12 +9,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/** @file CtrlUI.java
+/** @file CtrlUIOld.java
+ @brief Clase  <em>CtrlUIOld</em>.
  @class CtrlUIOld
  */
 
 
-/** @brief Clase CtrlUI que contiene los atributos y metodos para el intercambio de atributos entre controladores
+/** @brief Clase CtrlUIOld que contiene los atributos y metodos para el intercambio de atributos entre controladores
  * @author Judith Almoño Gómez
  */
 public class CtrlUIOld {
@@ -194,7 +196,12 @@ public class CtrlUIOld {
                 kakuroSizeRow = readNumber();
                 kakuroSizeColumn = readNumber();
             }
-            cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn, true);
+            try {
+                cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn, true);
+            } catch (CantGenerateException e) {
+                System.out.println("No se ha encontrado ningun Kakuro con estas dimensiones y no se pueden generar nuevos de tamaño superior a 20");
+                play();
+            }
 
 
         // }

@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /** @file DriverPlayer.java
+ * @brief Clase  <em>DriverPlayer</em>.
  * @class DriverPlayer
- *
  */
 
 /** @brief Clase DriverPlayer que comprueba la correctividad de las funciones de Player

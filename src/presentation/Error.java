@@ -11,10 +11,11 @@ import java.awt.event.ActionListener;
 import java.net.URI;
 
 /** @file Error.java
+ @brief Clase  <em>Error</em>.
  @class Error
  */
 
-/** @brief Pantalla que  muestra un Dialog con mensaje
+/** @brief Pantalla Error que muestra un Dialog con mensaje
  * @author Judith Almoño Gómez
  */
 

@@ -8,7 +8,7 @@ Clase \mbox{\hyperlink{class_main}{Main}} que lanza el juego.
 \doxysubsection*{Métodos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_main_a8a5d0f827edddff706cc0e6740d0579a}{main}} (String\mbox{[}$\,$\mbox{]} args)
+static void \mbox{\hyperlink{class_main_a8a5d0f827edddff706cc0e6740d0579a}{main}} (String\mbox{[}$\,$\mbox{]} args)  throws File\+Not\+Found\+Exception 
 \begin{DoxyCompactList}\small\item\em Función inicial que lanza la interfaz (en este caso por consola) \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -20,7 +20,7 @@ Pau Cuesta Arcos
 \end{DoxyAuthor}
 
 
-Definición en la línea 17 del archivo Main.\+java.
+Definición en la línea 20 del archivo Main.\+java.
 
 
 
@@ -29,7 +29,7 @@ Definición en la línea 17 del archivo Main.\+java.
 \index{Main@{Main}!main@{main}}
 \index{main@{main}!Main@{Main}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily static void Main.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static void Main.\+main (\begin{DoxyParamCaption}\item[{String\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -37,14 +37,23 @@ Función inicial que lanza la interfaz (en este caso por consola)
 
 
 
-Definición en la línea 21 del archivo Main.\+java.
+Definición en la línea 24 del archivo Main.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21                                            \{}
-\DoxyCodeLine{22         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i}{CtrlUI}} ui = \textcolor{keyword}{new} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i}{CtrlUI}}();}
-\DoxyCodeLine{23         ui.\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aef8d86118547505ecba97200a0215fdc}{run}}();}
-\DoxyCodeLine{24     \}}
+\DoxyCodeLine{24                                                                         \{}
+\DoxyCodeLine{25         \textcolor{keywordflow}{if} (Integer.parseInt(args[0]) == 1)}
+\DoxyCodeLine{26             javax.swing.SwingUtilities.invokeLater(\textcolor{keyword}{new} Runnable() \{}
+\DoxyCodeLine{27                 \textcolor{keyword}{public} \textcolor{keywordtype}{void} run() \{}
+\DoxyCodeLine{28                     \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i}{CtrlUI}} ui = \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i}{CtrlUI}}.\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_a3df25050ebf6990395bd97fec3c89d1b}{getInstance}}();}
+\DoxyCodeLine{29                     ui.\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_aef8d86118547505ecba97200a0215fdc}{run}}();}
+\DoxyCodeLine{30                 \}}
+\DoxyCodeLine{31             \});}
+\DoxyCodeLine{32         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{33         \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_old}{CtrlUIOld}} ctrlUIOld = \textcolor{keyword}{new} \mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_old}{CtrlUIOld}}();}
+\DoxyCodeLine{34         ctrlUIOld.\mbox{\hyperlink{classpresentation_1_1_ctrl_u_i_old_a42d4269955cf02944f25eadbe8c20367}{run}}();}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36     \}}
 
 \end{DoxyCode}
 

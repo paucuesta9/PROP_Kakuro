@@ -13,11 +13,12 @@ import java.awt.*;
 import java.awt.event.*;
 
 /** @file AskSave.java
+ @brief Clase  <em>AskSave</em>.
  @class AskSave
  */
 
 /**
- * @brief Pantalla que pregunta si quieres guardar un cierto kakuro
+ * @brief Pantalla AskSave que pregunta si quieres guardar un cierto kakuro
  * @author Alvaro Armada Ruiz
  */
 

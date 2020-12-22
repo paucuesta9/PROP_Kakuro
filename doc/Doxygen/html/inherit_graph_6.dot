@@ -4,5 +4,11 @@ digraph "Representación gráfica de la clase"
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="domain.controllers.CtrlResolve",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1controllers_1_1_ctrl_resolve.html",tooltip="Clase CtrlResolve que contiene los atributos y metodos para la funcionalidad de resolver."];
+  Node35 [label="Exception",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node35 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node0 [label="domain.classes.Exceptions.\lNoTypeCellException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_exceptions_1_1_no_type_cell_exception.html",tooltip="Clase NoTypeCellException que contiene la constructora para que salte la excepción."];
+  Node35 -> Node37 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node37 [label="domain.classes.Exceptions.\lPlayerExists",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_exceptions_1_1_player_exists.html",tooltip="Clase PlayerExists que contiene la constructora para que salte la excepción."];
+  Node35 -> Node38 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node38 [label="domain.classes.Exceptions.\lWrongPasswordException",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_exceptions_1_1_wrong_password_exception.html",tooltip="Clase WrongPasswordException que contiene la constructora para que salte la excepción."];
 }

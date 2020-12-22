@@ -4,5 +4,5 @@ digraph "Representación gráfica de la clase"
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="domain.controllers.drivers.\lDriverCtrlValidate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate.html",tooltip="Clase DriverCtrlValidate que comprueba la correctividad de las funciones del controlador CtrlValidate..."];
+  Node0 [label="domain.controllers.CtrlPlay",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1controllers_1_1_ctrl_play.html",tooltip="Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar."];
 }

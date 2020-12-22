@@ -21,16 +21,33 @@ static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdomain_1_1controllers_1_1_c
 \item 
 static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}{validate\+Pos\+Sums}} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, int\mbox{[}$\,$\mbox{]} pos\+Sums, int num, int row, int i, int j)
 \item 
-static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{is\+Unique}} (int\mbox{[}$\,$\mbox{]} a)
-\begin{DoxyCompactList}\small\item\em Comprueba si solo hay un 1 en un array de 9 posiciones. \end{DoxyCompactList}\item 
 static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ab84cf62667f274225d32968579cfa722}{check\+For\+New\+Uniques}} (int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board)
 \begin{DoxyCompactList}\small\item\em Encuentra casillas con valor trivial. \end{DoxyCompactList}\item 
 static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ad065a3724cb464b2919e6127077260f7}{set\+Difficulty}} ()
 \begin{DoxyCompactList}\small\item\em Asigna dificultad a un kakuro Asigna dificultad 1 si es un kakuro fácil, 2 si es mediano o 3 si es difícil. \end{DoxyCompactList}\item 
 static double \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a47c851a5435749e7fdd78845a416d0fc}{how\+Many\+Numbers}} (int\mbox{[}$\,$\mbox{]} a)
 \begin{DoxyCompactList}\small\item\em Cuenta cuantos 1 hay en un array de 9 posiciones. \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}{validate}} (int r, int c, int sum, int\mbox{[}$\,$\mbox{]} vec, int\mbox{[}$\,$\mbox{]} res)
-\begin{DoxyCompactList}\small\item\em Valida un Kakuro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a8dfa3a4b231fde3b594364ba2481be49}{ini\+Column}} (int i, int j, int\mbox{[}$\,$\mbox{]} pos\+Sums, int num\+White\+Run, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board)
+\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{is\+Unique}} (int\mbox{[}$\,$\mbox{]} a)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3c2a3fe5f137bcfec6eff2ddb53d6a10}{intersection}} (int\mbox{[}$\,$\mbox{]} a, int\mbox{[}$\,$\mbox{]} b)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ac6625f5dfafdca96e7d1cf76652e1d8b}{ini\+Row}} (int i, int j, int\mbox{[}$\,$\mbox{]} pos\+Sums, int num\+White\+Run, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ab7515f5d5e190c977812a4520190a2ab}{spread\+Unique}} (int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques)
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a7df245e67edcb0cef5db61ef508d3485}{validate}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a805de3d7f76c279610e5b204b2dcb346}{spread\+Unique\+Col}} (int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a2e0de31542c0838a766a51008be61bc2}{spread\+Unique\+Row}} (int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}{validate\+Recursive}} (int r, int c, int sum, int\mbox{[}$\,$\mbox{]} vec, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, int a\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,7 +63,7 @@ Alvaro Armada Ruiz
 \end{DoxyAuthor}
 
 
-Definición en la línea 16 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 17 del archivo Ctrl\+Validate.\+java.
 
 
 
@@ -63,11 +80,11 @@ Creadora por defecto.
 
 
 
-Definición en la línea 28 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 29 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28 \{\}}
+\DoxyCodeLine{29 \{\}}
 
 \end{DoxyCode}
 
@@ -92,13 +109,13 @@ Settea un Kakuro al controlador para poder trabajar con él
 \end{DoxyParams}
 
 
-Definición en la línea 37 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 38 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{37                                                        \{}
-\DoxyCodeLine{38         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}} = currentKakuro;}
-\DoxyCodeLine{39     \}}
+\DoxyCodeLine{38                                                        \{}
+\DoxyCodeLine{39         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}} = currentKakuro;}
+\DoxyCodeLine{40     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a12f48736c2d74d65a2099f6d34f9509b}\label{classdomain_1_1controllers_1_1_ctrl_validate_a12f48736c2d74d65a2099f6d34f9509b}} 
@@ -126,31 +143,31 @@ Definición en la línea 37 del archivo Ctrl\+Validate.\+java.
 \end{DoxyParams}
 
 
-Definición en la línea 52 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 53 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{52                                                                                                                \{}
-\DoxyCodeLine{53         \textcolor{keywordflow}{if} (reducedNum < 0 || index > lim)}
-\DoxyCodeLine{54             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56         \textcolor{keywordflow}{if} (reducedNum == 0 \&\& index == lim) \{}
-\DoxyCodeLine{57             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < index; i++)}
-\DoxyCodeLine{58                 posSums[arr[i]-\/1] = 1;}
-\DoxyCodeLine{59             \textcolor{keywordflow}{return};}
-\DoxyCodeLine{60         \}}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62         \textcolor{keywordtype}{int} prev = (index == 0) ? 0 : arr[index -\/ 1];}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64         \textcolor{keywordflow}{if}(prev == 9 || index >= lim) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = prev+1; k <= 9 ; k++) \{}
-\DoxyCodeLine{67             \textcolor{keywordflow}{if} (k!=no) \{}
-\DoxyCodeLine{68                 arr[index] = k;}
-\DoxyCodeLine{69                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a12f48736c2d74d65a2099f6d34f9509b}{computePosSumsRec}}(arr, index + 1, reducedNum -\/ k, lim, posSums, no);}
-\DoxyCodeLine{70             \}}
-\DoxyCodeLine{71         \}}
-\DoxyCodeLine{72     \}}
+\DoxyCodeLine{53                                                                                                                \{}
+\DoxyCodeLine{54         \textcolor{keywordflow}{if} (reducedNum < 0 || index > lim)}
+\DoxyCodeLine{55             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \textcolor{keywordflow}{if} (reducedNum == 0 \&\& index == lim) \{}
+\DoxyCodeLine{58             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < index; i++)}
+\DoxyCodeLine{59                 posSums[arr[i]-\/1] = 1;}
+\DoxyCodeLine{60             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{61         \}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} prev = (index == 0) ? 0 : arr[index -\/ 1];}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65         \textcolor{keywordflow}{if}(prev == 9 || index >= lim) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = prev+1; k <= 9 ; k++) \{}
+\DoxyCodeLine{68             \textcolor{keywordflow}{if} (k!=no) \{}
+\DoxyCodeLine{69                 arr[index] = k;}
+\DoxyCodeLine{70                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a12f48736c2d74d65a2099f6d34f9509b}{computePosSumsRec}}(arr, index + 1, reducedNum -\/ k, lim, posSums, no);}
+\DoxyCodeLine{71             \}}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}\label{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}} 
@@ -175,19 +192,19 @@ un array de 9 posiciones en el que dado un valor x, un número de casillas y un 
 \end{DoxyReturn}
 
 
-Definición en la línea 84 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 85 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{84                                                               \{ \textcolor{comment}{//calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.}}
-\DoxyCodeLine{85         \textcolor{keywordtype}{int} [] posSums = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[9];}
-\DoxyCodeLine{86         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<9; ++i) posSums[i] = 0;}
-\DoxyCodeLine{87 }
-\DoxyCodeLine{88         \textcolor{keywordtype}{int} [] arr = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[n];}
-\DoxyCodeLine{89 }
-\DoxyCodeLine{90         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a12f48736c2d74d65a2099f6d34f9509b}{computePosSumsRec}}(arr, 0, x-\/no, n, posSums, no);}
-\DoxyCodeLine{91         \textcolor{keywordflow}{return} posSums;}
-\DoxyCodeLine{92     \}}
+\DoxyCodeLine{85                                                               \{ \textcolor{comment}{//calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.}}
+\DoxyCodeLine{86         \textcolor{keywordtype}{int} [] posSums = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[9];}
+\DoxyCodeLine{87         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<9; ++i) posSums[i] = 0;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89         \textcolor{keywordtype}{int} [] arr = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[n];}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a12f48736c2d74d65a2099f6d34f9509b}{computePosSumsRec}}(arr, 0, x-\/no, n, posSums, no);}
+\DoxyCodeLine{92         \textcolor{keywordflow}{return} posSums;}
+\DoxyCodeLine{93     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}\label{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}} 
@@ -218,88 +235,53 @@ número de casillas únicas nuevas que se han encontrado
 \end{DoxyReturn}
 
 
-Definición en la línea 106 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 107 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{106                                                                                                             \{}
-\DoxyCodeLine{107         \textcolor{keywordtype}{int} unique = 0;}
-\DoxyCodeLine{108         \textcolor{keywordflow}{if}(row == 1) \{}
-\DoxyCodeLine{109             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x=1; x<=num; ++x) \{}
-\DoxyCodeLine{110                 \textcolor{keywordtype}{int} uniqueTemp = 0;}
-\DoxyCodeLine{111                 \textcolor{keywordflow}{if}(tempBoard[i][j+x][0]==-\/1)}
-\DoxyCodeLine{112                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y)}
-\DoxyCodeLine{113                         tempBoard[i][j+x][y] = posSums[y];}
-\DoxyCodeLine{114 }
-\DoxyCodeLine{115                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{116                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \{}
-\DoxyCodeLine{117                         \textcolor{keywordflow}{if}(tempBoard[i][j+x][y] == 0 || posSums[y] == 0) tempBoard[i][j+x][y] = 0;}
-\DoxyCodeLine{118                         \textcolor{keywordflow}{else} ++uniqueTemp;}
-\DoxyCodeLine{119                     \}}
-\DoxyCodeLine{120                 \}}
-\DoxyCodeLine{121 }
-\DoxyCodeLine{122                 \textcolor{keywordflow}{if} (uniqueTemp == 1) \{}
-\DoxyCodeLine{123                     ++unique;}
-\DoxyCodeLine{124                 \}}
-\DoxyCodeLine{125             \}}
-\DoxyCodeLine{126         \}}
-\DoxyCodeLine{127         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{128             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x=1; x<=num; ++x) \{}
-\DoxyCodeLine{129                 \textcolor{keywordtype}{int} uniqueTemp = 0;}
-\DoxyCodeLine{130                 \textcolor{keywordflow}{if}(tempBoard[i+x][j][0]==-\/1)}
-\DoxyCodeLine{131                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y)}
-\DoxyCodeLine{132                         tempBoard[i+x][j][y] = posSums[y];}
-\DoxyCodeLine{133 }
-\DoxyCodeLine{134                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{135                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \{}
-\DoxyCodeLine{136                         \textcolor{keywordflow}{if}(tempBoard[i+x][j][y] == 0 || posSums[y] == 0) tempBoard[i+x][j][y] = 0;}
-\DoxyCodeLine{137                         \textcolor{keywordflow}{else} ++uniqueTemp;}
-\DoxyCodeLine{138                     \}}
-\DoxyCodeLine{139                 \}}
-\DoxyCodeLine{140 }
-\DoxyCodeLine{141                 \textcolor{keywordflow}{if} (uniqueTemp == 1) \{}
-\DoxyCodeLine{142                     System.out.println(\textcolor{stringliteral}{"{}Unique i:"{}}+(i+x)+\textcolor{stringliteral}{"{} j:"{}}+(j));}
-\DoxyCodeLine{143                     ++unique;}
-\DoxyCodeLine{144                 \}}
-\DoxyCodeLine{145             \}}
-\DoxyCodeLine{146         \}}
-\DoxyCodeLine{147         \textcolor{keywordflow}{return} unique;}
-\DoxyCodeLine{148     \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}\label{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}} 
-\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!isUnique@{isUnique}}
-\index{isUnique@{isUnique}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
-\doxysubsubsection{\texorpdfstring{isUnique()}{isUnique()}}
-{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Validate.\+is\+Unique (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
-
-
-
-Comprueba si solo hay un 1 en un array de 9 posiciones. 
-
-
-\begin{DoxyParams}{Parámetros}
-{\em a} & array de 9 posiciones que pueden ser 1 o 0\\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Devuelve}
-true si solo hay un 1, 
-
-false si no hay 1 o hay mas de un 1 
-\end{DoxyReturn}
-
-
-Definición en la línea 158 del archivo Ctrl\+Validate.\+java.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{158                                              \{ \textcolor{comment}{//a tiene mida 9}}
-\DoxyCodeLine{159         \textcolor{keywordtype}{int} b = 0;}
-\DoxyCodeLine{160         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<9; ++i)}
-\DoxyCodeLine{161             \textcolor{keywordflow}{if}(a[i]==1) ++b;}
-\DoxyCodeLine{162 }
-\DoxyCodeLine{163         \textcolor{keywordflow}{return} (b==1);}
-\DoxyCodeLine{164     \}}
+\DoxyCodeLine{107                                                                                                             \{}
+\DoxyCodeLine{108         \textcolor{keywordtype}{int} unique = 0;}
+\DoxyCodeLine{109         \textcolor{keywordflow}{if}(row == 1) \{}
+\DoxyCodeLine{110             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x=1; x<=num; ++x) \{}
+\DoxyCodeLine{111                 \textcolor{keywordtype}{int} uniqueTemp = 0;}
+\DoxyCodeLine{112                 \textcolor{keywordflow}{if}(tempBoard[i][j+x][0]==-\/1)}
+\DoxyCodeLine{113                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y)}
+\DoxyCodeLine{114                         tempBoard[i][j+x][y] = posSums[y];}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{116                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{117                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \{}
+\DoxyCodeLine{118                         \textcolor{keywordflow}{if}(tempBoard[i][j+x][y] == 0 || posSums[y] == 0) tempBoard[i][j+x][y] = 0;}
+\DoxyCodeLine{119                         \textcolor{keywordflow}{else} ++uniqueTemp;}
+\DoxyCodeLine{120                     \}}
+\DoxyCodeLine{121                 \}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123                 \textcolor{keywordflow}{if} (uniqueTemp == 1) \{}
+\DoxyCodeLine{124                     ++unique;}
+\DoxyCodeLine{125                 \}}
+\DoxyCodeLine{126             \}}
+\DoxyCodeLine{127         \}}
+\DoxyCodeLine{128         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{129             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x=1; x<=num; ++x) \{}
+\DoxyCodeLine{130                 \textcolor{keywordtype}{int} uniqueTemp = 0;}
+\DoxyCodeLine{131                 \textcolor{keywordflow}{if}(tempBoard[i+x][j][0]==-\/1)}
+\DoxyCodeLine{132                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y)}
+\DoxyCodeLine{133                         tempBoard[i+x][j][y] = posSums[y];}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{136                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \{}
+\DoxyCodeLine{137                         \textcolor{keywordflow}{if}(tempBoard[i+x][j][y] == 0 || posSums[y] == 0) tempBoard[i+x][j][y] = 0;}
+\DoxyCodeLine{138                         \textcolor{keywordflow}{else} ++uniqueTemp;}
+\DoxyCodeLine{139                     \}}
+\DoxyCodeLine{140                 \}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142                 \textcolor{keywordflow}{if} (uniqueTemp == 1) \{}
+\DoxyCodeLine{143                   \textcolor{comment}{//  System.out.println("{}Unique i:"{}+(i+x)+"{} j:"{}+(j));}}
+\DoxyCodeLine{144                     ++unique;}
+\DoxyCodeLine{145                 \}}
+\DoxyCodeLine{146             \}}
+\DoxyCodeLine{147         \}}
+\DoxyCodeLine{148         \textcolor{keywordflow}{return} unique;}
+\DoxyCodeLine{149     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_ab84cf62667f274225d32968579cfa722}\label{classdomain_1_1controllers_1_1_ctrl_validate_ab84cf62667f274225d32968579cfa722}} 
@@ -324,97 +306,97 @@ número de casillas nuevas con valor único
 \end{DoxyReturn}
 
 
-Definición en la línea 176 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 162 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{176                                                                \{}
-\DoxyCodeLine{177         Cell[][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
-\DoxyCodeLine{178         \textcolor{keywordtype}{int} changed = 0;}
-\DoxyCodeLine{179         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
-\DoxyCodeLine{180             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
-\DoxyCodeLine{181                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
-\DoxyCodeLine{182                     \textcolor{keywordflow}{if} (j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()-\/1 \&\& board[i][j+1].isWhite()) \{ \textcolor{comment}{//fila hacia derecha}}
-\DoxyCodeLine{183                         \textcolor{comment}{// System.out.println("{}i: "{}+i+"{} j: "{}+(j+1));}}
-\DoxyCodeLine{184                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
-\DoxyCodeLine{185                         \textcolor{keywordtype}{int} numUnique = 0;}
-\DoxyCodeLine{186                         \textcolor{keywordtype}{int} numTemp = 0;}
-\DoxyCodeLine{187                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i][j+1])) \{}
-\DoxyCodeLine{188                             \textcolor{comment}{//System.out.println("{}i: "{}+i+"{}j: "{}+(j+1));}}
-\DoxyCodeLine{189                             ++numUnique;}
-\DoxyCodeLine{190                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
-\DoxyCodeLine{191                                 \textcolor{keywordflow}{if} (tempBoard[i][j+1][r] == 1) numTemp = numTemp + r + 1;}
-\DoxyCodeLine{192                             \}}
-\DoxyCodeLine{193                         \}}
-\DoxyCodeLine{194 }
-\DoxyCodeLine{195                         \textcolor{keywordflow}{while}(j+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+1+numWhiteRun].isWhite()) \{}
-\DoxyCodeLine{196                             ++numWhiteRun;}
-\DoxyCodeLine{197                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i][j+numWhiteRun])) \{}
-\DoxyCodeLine{198                                 \textcolor{comment}{// System.out.println("{}i: "{}+i+"{}j: "{}+(j+1));}}
-\DoxyCodeLine{199                                 ++numUnique;}
-\DoxyCodeLine{200                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
-\DoxyCodeLine{201                                     \textcolor{keywordflow}{if} (tempBoard[i][j+numWhiteRun][r] == 1) numTemp = numTemp + r + 1;}
-\DoxyCodeLine{202                                 \}}
-\DoxyCodeLine{203                             \}}
-\DoxyCodeLine{204                         \}}
-\DoxyCodeLine{205                         \textcolor{keywordflow}{if} (numWhiteRun == numUnique + 1) \{}
-\DoxyCodeLine{206                             \textcolor{comment}{// System.out.println("{}i: "{}+i+"{}j: "{}+j);}}
-\DoxyCodeLine{207                             ++changed;}
-\DoxyCodeLine{208                             BlackCell b = (BlackCell) board[i][j];}
-\DoxyCodeLine{209                             numTemp = b.getRow()-\/numTemp;}
-\DoxyCodeLine{210                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 1; r<=numWhiteRun; ++r) \{}
-\DoxyCodeLine{211                                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i][j+r])) \{}
-\DoxyCodeLine{212                                    \textcolor{comment}{// System.out.println("{}New unique: "{}+(i)+"{} "{}+(j+r));}}
-\DoxyCodeLine{213                                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rr = 0; rr<9; ++rr) \{}
-\DoxyCodeLine{214                                         \textcolor{keywordflow}{if}(rr==numTemp-\/1) tempBoard[i][r+j][rr] = 1;}
-\DoxyCodeLine{215                                         \textcolor{keywordflow}{else} tempBoard[i][r+j][rr] = 0;}
-\DoxyCodeLine{216                                     \}}
-\DoxyCodeLine{217                                 \}}
-\DoxyCodeLine{218                             \}}
-\DoxyCodeLine{219                         \}}
-\DoxyCodeLine{220                     \}}
-\DoxyCodeLine{221                     \textcolor{keywordflow}{if} (i<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()-\/1 \&\& board[i+1][j].isWhite()) \{ \textcolor{comment}{//columna hacia abajo}}
-\DoxyCodeLine{222                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
-\DoxyCodeLine{223                         \textcolor{keywordtype}{int} numUnique = 0;}
-\DoxyCodeLine{224                         \textcolor{keywordtype}{int} numTemp = 0;}
-\DoxyCodeLine{225                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i+1][j])) \{}
-\DoxyCodeLine{226                             ++numUnique;}
-\DoxyCodeLine{227                             \textcolor{comment}{//  System.out.println("{}i: "{}+(i+1)+"{}j: "{}+j);}}
-\DoxyCodeLine{228                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
-\DoxyCodeLine{229                                 \textcolor{keywordflow}{if} (tempBoard[i+1][j][r] == 1) numTemp = numTemp + r + 1;}
-\DoxyCodeLine{230                             \}}
-\DoxyCodeLine{231                         \}}
-\DoxyCodeLine{232 }
-\DoxyCodeLine{233                         \textcolor{keywordflow}{while}(i+1+numWhiteRun<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+1+numWhiteRun][j].isWhite()) \{}
-\DoxyCodeLine{234                             ++numWhiteRun;}
-\DoxyCodeLine{235                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i+numWhiteRun][j])) \{}
-\DoxyCodeLine{236                                 ++numUnique;}
-\DoxyCodeLine{237                                 \textcolor{comment}{//   System.out.println("{}i: "{}+(i+1)+"{}j: "{}+j);}}
-\DoxyCodeLine{238                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
-\DoxyCodeLine{239                                     \textcolor{keywordflow}{if} (tempBoard[i+numWhiteRun][j][r] == 1) numTemp = numTemp + r + 1;}
+\DoxyCodeLine{162                                                                \{}
+\DoxyCodeLine{163         \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}[][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
+\DoxyCodeLine{164         \textcolor{keywordtype}{int} changed = 0;}
+\DoxyCodeLine{165         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{166             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{167                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{168                     \textcolor{keywordflow}{if} (j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()-\/1 \&\& board[i][j+1].isWhite()) \{ \textcolor{comment}{//fila hacia derecha}}
+\DoxyCodeLine{169                         \textcolor{comment}{// System.out.println("{}i: "{}+i+"{} j: "{}+(j+1));}}
+\DoxyCodeLine{170                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{171                         \textcolor{keywordtype}{int} numUnique = 0;}
+\DoxyCodeLine{172                         \textcolor{keywordtype}{int} numTemp = 0;}
+\DoxyCodeLine{173                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i][j+1])!=0) \{}
+\DoxyCodeLine{174                             \textcolor{comment}{//System.out.println("{}i: "{}+i+"{}j: "{}+(j+1));}}
+\DoxyCodeLine{175                             ++numUnique;}
+\DoxyCodeLine{176                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
+\DoxyCodeLine{177                                 \textcolor{keywordflow}{if} (tempBoard[i][j+1][r] == 1) numTemp = numTemp + r + 1;}
+\DoxyCodeLine{178                             \}}
+\DoxyCodeLine{179                         \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181                         \textcolor{keywordflow}{while}(j+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+1+numWhiteRun].isWhite()) \{}
+\DoxyCodeLine{182                             ++numWhiteRun;}
+\DoxyCodeLine{183                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i][j+numWhiteRun])!=0) \{}
+\DoxyCodeLine{184                                 \textcolor{comment}{// System.out.println("{}i: "{}+i+"{}j: "{}+(j+1));}}
+\DoxyCodeLine{185                                 ++numUnique;}
+\DoxyCodeLine{186                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
+\DoxyCodeLine{187                                     \textcolor{keywordflow}{if} (tempBoard[i][j+numWhiteRun][r] == 1) numTemp = numTemp + r + 1;}
+\DoxyCodeLine{188                                 \}}
+\DoxyCodeLine{189                             \}}
+\DoxyCodeLine{190                         \}}
+\DoxyCodeLine{191                         \textcolor{keywordflow}{if} (numWhiteRun == numUnique + 1) \{}
+\DoxyCodeLine{192                             \textcolor{comment}{// System.out.println("{}i: "{}+i+"{}j: "{}+j);}}
+\DoxyCodeLine{193                             ++changed;}
+\DoxyCodeLine{194                             \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{195                             numTemp = b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}()-\/numTemp;}
+\DoxyCodeLine{196                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 1; r<=numWhiteRun; ++r) \{}
+\DoxyCodeLine{197                                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i][j+r])==0) \{}
+\DoxyCodeLine{198                                    \textcolor{comment}{// System.out.println("{}New unique: "{}+(i)+"{} "{}+(j+r));}}
+\DoxyCodeLine{199                                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rr = 0; rr<9; ++rr) \{}
+\DoxyCodeLine{200                                         \textcolor{keywordflow}{if}(rr==numTemp-\/1) tempBoard[i][r+j][rr] = 1;}
+\DoxyCodeLine{201                                         \textcolor{keywordflow}{else} tempBoard[i][r+j][rr] = 0;}
+\DoxyCodeLine{202                                     \}}
+\DoxyCodeLine{203                                 \}}
+\DoxyCodeLine{204                             \}}
+\DoxyCodeLine{205                         \}}
+\DoxyCodeLine{206                     \}}
+\DoxyCodeLine{207                     \textcolor{keywordflow}{if} (i<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()-\/1 \&\& board[i+1][j].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{ \textcolor{comment}{//columna hacia abajo}}
+\DoxyCodeLine{208                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{209                         \textcolor{keywordtype}{int} numUnique = 0;}
+\DoxyCodeLine{210                         \textcolor{keywordtype}{int} numTemp = 0;}
+\DoxyCodeLine{211                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i+1][j])!=0) \{}
+\DoxyCodeLine{212                             ++numUnique;}
+\DoxyCodeLine{213                             \textcolor{comment}{//  System.out.println("{}i: "{}+(i+1)+"{}j: "{}+j);}}
+\DoxyCodeLine{214                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
+\DoxyCodeLine{215                                 \textcolor{keywordflow}{if} (tempBoard[i+1][j][r] == 1) numTemp = numTemp + r + 1;}
+\DoxyCodeLine{216                             \}}
+\DoxyCodeLine{217                         \}}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219                         \textcolor{keywordflow}{while}(i+1+numWhiteRun<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+1+numWhiteRun][j].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{220                             ++numWhiteRun;}
+\DoxyCodeLine{221                             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i+numWhiteRun][j])!=0) \{}
+\DoxyCodeLine{222                                 ++numUnique;}
+\DoxyCodeLine{223                                 \textcolor{comment}{//   System.out.println("{}i: "{}+(i+1)+"{}j: "{}+j);}}
+\DoxyCodeLine{224                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 0; r<9; ++r) \{}
+\DoxyCodeLine{225                                     \textcolor{keywordflow}{if} (tempBoard[i+numWhiteRun][j][r] == 1) numTemp = numTemp + r + 1;}
+\DoxyCodeLine{226                                 \}}
+\DoxyCodeLine{227                             \}}
+\DoxyCodeLine{228                         \}}
+\DoxyCodeLine{229                         \textcolor{keywordflow}{if} (numWhiteRun == numUnique + 1) \{}
+\DoxyCodeLine{230                             ++changed;}
+\DoxyCodeLine{231                             \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{232                             numTemp = b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}()-\/numTemp;}
+\DoxyCodeLine{233                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 1; r<=numWhiteRun; ++r) \{}
+\DoxyCodeLine{234                                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i+r][j])==0) \{}
+\DoxyCodeLine{235                                    \textcolor{comment}{// System.out.println("{}New unique: "{}+(i+r)+"{} "{}+j);}}
+\DoxyCodeLine{236                                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rr = 0; rr<9; ++rr) \{}
+\DoxyCodeLine{237                                         \textcolor{keywordflow}{if}(rr==numTemp-\/1) tempBoard[i+r][j][rr] = 1;}
+\DoxyCodeLine{238                                         \textcolor{keywordflow}{else} tempBoard[i+r][j][rr] = 0;}
+\DoxyCodeLine{239                                     \}}
 \DoxyCodeLine{240                                 \}}
 \DoxyCodeLine{241                             \}}
 \DoxyCodeLine{242                         \}}
-\DoxyCodeLine{243                         \textcolor{keywordflow}{if} (numWhiteRun == numUnique + 1) \{}
-\DoxyCodeLine{244                             ++changed;}
-\DoxyCodeLine{245                             BlackCell b = (BlackCell) board[i][j];}
-\DoxyCodeLine{246                             numTemp = b.getColumn()-\/numTemp;}
-\DoxyCodeLine{247                             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} r = 1; r<=numWhiteRun; ++r) \{}
-\DoxyCodeLine{248                                 \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i+r][j])) \{}
-\DoxyCodeLine{249                                    \textcolor{comment}{// System.out.println("{}New unique: "{}+(i+r)+"{} "{}+j);}}
-\DoxyCodeLine{250                                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} rr = 0; rr<9; ++rr) \{}
-\DoxyCodeLine{251                                         \textcolor{keywordflow}{if}(rr==numTemp-\/1) tempBoard[i+r][j][rr] = 1;}
-\DoxyCodeLine{252                                         \textcolor{keywordflow}{else} tempBoard[i+r][j][rr] = 0;}
-\DoxyCodeLine{253                                     \}}
-\DoxyCodeLine{254                                 \}}
-\DoxyCodeLine{255                             \}}
-\DoxyCodeLine{256                         \}}
-\DoxyCodeLine{257                     \}}
-\DoxyCodeLine{258                 \}}
-\DoxyCodeLine{259             \}}
-\DoxyCodeLine{260         \}}
-\DoxyCodeLine{261         \textcolor{keywordflow}{return} changed;}
-\DoxyCodeLine{262     \}}
+\DoxyCodeLine{243                     \}}
+\DoxyCodeLine{244                 \}}
+\DoxyCodeLine{245             \}}
+\DoxyCodeLine{246         \}}
+\DoxyCodeLine{247         \textcolor{keywordflow}{return} changed;}
+\DoxyCodeLine{248     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_ad065a3724cb464b2919e6127077260f7}\label{classdomain_1_1controllers_1_1_ctrl_validate_ad065a3724cb464b2919e6127077260f7}} 
@@ -429,227 +411,227 @@ Asigna dificultad a un kakuro Asigna dificultad 1 si es un kakuro fácil, 2 si e
 
 
 
-Definición en la línea 269 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 255 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{269                                        \{}
-\DoxyCodeLine{270         \textcolor{comment}{//System.out.println("{}uwu1"{});}}
-\DoxyCodeLine{271         \textcolor{keywordtype}{int} maxRunLength = 0;}
-\DoxyCodeLine{272         \textcolor{keywordtype}{int} avgRunLength = 0;}
-\DoxyCodeLine{273         \textcolor{keywordtype}{int} numWhiteCell = 0;}
-\DoxyCodeLine{274         \textcolor{keywordtype}{int} numBlackCell = 0;}
-\DoxyCodeLine{275         \textcolor{keywordtype}{int} numRun = 0;}
-\DoxyCodeLine{276         \textcolor{keywordtype}{int} unique = 0;}
-\DoxyCodeLine{277 }
-\DoxyCodeLine{278         \textcolor{keywordtype}{int} temp = 0;   \textcolor{comment}{//guardamos la longitud de la run actual.}}
-\DoxyCodeLine{279 }
-\DoxyCodeLine{280         Cell [][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
-\DoxyCodeLine{281 }
-\DoxyCodeLine{282         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
-\DoxyCodeLine{283             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
-\DoxyCodeLine{284                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) \{}
-\DoxyCodeLine{285                     ++numWhiteCell;}
-\DoxyCodeLine{286                     ++temp;}
-\DoxyCodeLine{287                 \}}
-\DoxyCodeLine{288                 \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{289                     ++numBlackCell;}
-\DoxyCodeLine{290                     \textcolor{keywordflow}{if} (temp > maxRunLength) maxRunLength = temp;}
-\DoxyCodeLine{291                     \textcolor{keywordflow}{if} (temp!=0) \{}
-\DoxyCodeLine{292                         ++numRun;}
-\DoxyCodeLine{293                         avgRunLength += temp;}
-\DoxyCodeLine{294                     \}}
-\DoxyCodeLine{295                     temp = 0;}
-\DoxyCodeLine{296                 \}}
-\DoxyCodeLine{297             \}}
-\DoxyCodeLine{298         \}}
-\DoxyCodeLine{299 }
-\DoxyCodeLine{300         \textcolor{keywordflow}{if} (temp!=0) \{}
-\DoxyCodeLine{301             ++numRun;}
-\DoxyCodeLine{302             avgRunLength += temp;}
-\DoxyCodeLine{303         \}}
-\DoxyCodeLine{304 }
-\DoxyCodeLine{305         avgRunLength /= numRun;}
-\DoxyCodeLine{306 }
-\DoxyCodeLine{307         \textcolor{keywordtype}{int} [][][] tempBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[ \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()][ \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()][9];}
-\DoxyCodeLine{308         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} z=0; z<9; ++z) tempBoard [i][j][z] = -\/1;}
-\DoxyCodeLine{309 }
-\DoxyCodeLine{310         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
-\DoxyCodeLine{311             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
-\DoxyCodeLine{312                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
-\DoxyCodeLine{313                     \textcolor{keywordflow}{if} (j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()-\/1 \&\& board[i][j+1].isWhite()) \{ \textcolor{comment}{//fila hacia derecha}}
-\DoxyCodeLine{314                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
-\DoxyCodeLine{315                         \textcolor{keywordflow}{while}(j+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+1+numWhiteRun].isWhite()) ++numWhiteRun;}
-\DoxyCodeLine{316                         BlackCell b = (BlackCell) board[i][j];}
-\DoxyCodeLine{317                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.getRow(), numWhiteRun,0);}
-\DoxyCodeLine{318                         unique+= \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}{validatePosSums}}(tempBoard, posSums, numWhiteRun, 1, i, j);}
-\DoxyCodeLine{319                     \}}
-\DoxyCodeLine{320                     \textcolor{keywordflow}{if} (i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()-\/1 \&\& board[i+1][j].isWhite()) \{ \textcolor{comment}{//columna hacia abajo}}
-\DoxyCodeLine{321                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
-\DoxyCodeLine{322                         \textcolor{keywordflow}{while}(i+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+1+numWhiteRun][j].isWhite()) ++numWhiteRun;}
-\DoxyCodeLine{323                         BlackCell b = (BlackCell) board[i][j];}
-\DoxyCodeLine{324                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.getColumn(), numWhiteRun,0);}
-\DoxyCodeLine{325                         unique+= \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}{validatePosSums}}(tempBoard, posSums, numWhiteRun, 0, i, j);}
-\DoxyCodeLine{326                     \}}
-\DoxyCodeLine{327                 \}}
-\DoxyCodeLine{328             \}}
-\DoxyCodeLine{329         \}}
-\DoxyCodeLine{330 }
-\DoxyCodeLine{331         \textcolor{keywordtype}{boolean} changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{332         \textcolor{keywordtype}{int} newUniques = 0;}
-\DoxyCodeLine{333         \textcolor{keywordflow}{while} (changed) \{}
-\DoxyCodeLine{334             changed = \textcolor{keyword}{false};}
-\DoxyCodeLine{335             \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ab84cf62667f274225d32968579cfa722}{checkForNewUniques}}(tempBoard);}
-\DoxyCodeLine{336             \textcolor{keywordflow}{if}(c!=0) changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{337             newUniques += c;}
-\DoxyCodeLine{338         \}}
-\DoxyCodeLine{339 }
-\DoxyCodeLine{340         \textcolor{keywordtype}{int} implied = 0;}
-\DoxyCodeLine{341 }
-\DoxyCodeLine{342         changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{343         \textcolor{keywordflow}{while} (changed) \{   \textcolor{comment}{//we check for implied}}
-\DoxyCodeLine{344             changed = \textcolor{keyword}{false};}
-\DoxyCodeLine{345             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
-\DoxyCodeLine{346                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{255                                        \{}
+\DoxyCodeLine{256         \textcolor{comment}{//System.out.println("{}uwu1"{});}}
+\DoxyCodeLine{257         \textcolor{keywordtype}{int} maxRunLength = 0;}
+\DoxyCodeLine{258         \textcolor{keywordtype}{int} avgRunLength = 0;}
+\DoxyCodeLine{259         \textcolor{keywordtype}{int} numWhiteCell = 0;}
+\DoxyCodeLine{260         \textcolor{keywordtype}{int} numBlackCell = 0;}
+\DoxyCodeLine{261         \textcolor{keywordtype}{int} numRun = 0;}
+\DoxyCodeLine{262         \textcolor{keywordtype}{int} unique = 0;}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{264         \textcolor{keywordtype}{int} temp = 0;   \textcolor{comment}{//guardamos la longitud de la run actual.}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266         \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}} [][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{268         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{269             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{270                 \textcolor{keywordflow}{if} (board[i][j].isWhite()) \{}
+\DoxyCodeLine{271                     ++numWhiteCell;}
+\DoxyCodeLine{272                     ++temp;}
+\DoxyCodeLine{273                 \}}
+\DoxyCodeLine{274                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{275                     ++numBlackCell;}
+\DoxyCodeLine{276                     \textcolor{keywordflow}{if} (temp > maxRunLength) maxRunLength = temp;}
+\DoxyCodeLine{277                     \textcolor{keywordflow}{if} (temp!=0) \{}
+\DoxyCodeLine{278                         ++numRun;}
+\DoxyCodeLine{279                         avgRunLength += temp;}
+\DoxyCodeLine{280                     \}}
+\DoxyCodeLine{281                     temp = 0;}
+\DoxyCodeLine{282                 \}}
+\DoxyCodeLine{283             \}}
+\DoxyCodeLine{284         \}}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286         \textcolor{keywordflow}{if} (temp!=0) \{}
+\DoxyCodeLine{287             ++numRun;}
+\DoxyCodeLine{288             avgRunLength += temp;}
+\DoxyCodeLine{289         \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291         avgRunLength /= numRun;}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293         \textcolor{keywordtype}{int} [][][] tempBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[ \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()][ \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()][9];}
+\DoxyCodeLine{294         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} z=0; z<9; ++z) tempBoard [i][j][z] = -\/1;}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{297             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{298                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{299                     \textcolor{keywordflow}{if} (j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()-\/1 \&\& board[i][j+1].isWhite()) \{ \textcolor{comment}{//fila hacia derecha}}
+\DoxyCodeLine{300                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{301                         \textcolor{keywordflow}{while}(j+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+1+numWhiteRun].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{302                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{303                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}(), numWhiteRun,0);}
+\DoxyCodeLine{304                         unique+= \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}{validatePosSums}}(tempBoard, posSums, numWhiteRun, 1, i, j);}
+\DoxyCodeLine{305                     \}}
+\DoxyCodeLine{306                     \textcolor{keywordflow}{if} (i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()-\/1 \&\& board[i+1][j].isWhite()) \{ \textcolor{comment}{//columna hacia abajo}}
+\DoxyCodeLine{307                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{308                         \textcolor{keywordflow}{while}(i+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+1+numWhiteRun][j].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{309                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{310                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}(), numWhiteRun,0);}
+\DoxyCodeLine{311                         unique+= \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a518f5a8bfbeef1ad7d84f80a79a31a69}{validatePosSums}}(tempBoard, posSums, numWhiteRun, 0, i, j);}
+\DoxyCodeLine{312                     \}}
+\DoxyCodeLine{313                 \}}
+\DoxyCodeLine{314             \}}
+\DoxyCodeLine{315         \}}
+\DoxyCodeLine{316 }
+\DoxyCodeLine{317         \textcolor{keywordtype}{boolean} changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{318         \textcolor{keywordtype}{int} newUniques = 0;}
+\DoxyCodeLine{319         \textcolor{keywordflow}{while} (changed) \{}
+\DoxyCodeLine{320             changed = \textcolor{keyword}{false};}
+\DoxyCodeLine{321             \textcolor{keywordtype}{int} c = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ab84cf62667f274225d32968579cfa722}{checkForNewUniques}}(tempBoard);}
+\DoxyCodeLine{322             \textcolor{keywordflow}{if}(c!=0) changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{323             newUniques += c;}
+\DoxyCodeLine{324         \}}
+\DoxyCodeLine{325 }
+\DoxyCodeLine{326         \textcolor{keywordtype}{int} implied = 0;}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328         changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{329         \textcolor{keywordflow}{while} (changed) \{   \textcolor{comment}{//we check for implied}}
+\DoxyCodeLine{330             changed = \textcolor{keyword}{false};}
+\DoxyCodeLine{331             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{332                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{333 }
+\DoxyCodeLine{334                     \textcolor{keywordflow}{if}(board[i][j].isWhite()) \{}
+\DoxyCodeLine{335                         \textcolor{comment}{//subimos para arriba pa saber de cuanto es la run y de paso cogemos el valor de vertical}}
+\DoxyCodeLine{336                         \textcolor{comment}{//idem para horizontal}}
+\DoxyCodeLine{337                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{338                         \textcolor{keywordflow}{while} ((i-\/numWhiteRun)>=0 \&\& board[i-\/numWhiteRun][j].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{339                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i-\/numWhiteRun][j];}
+\DoxyCodeLine{340                         \textcolor{keywordtype}{int} vertical = b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}();}
+\DoxyCodeLine{341                         temp = 1;   \textcolor{comment}{//contar fichas blancas hacia abajo}}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343                         \textcolor{keywordflow}{while} ((i+temp)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+temp][j].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{344                             ++numWhiteRun;}
+\DoxyCodeLine{345                             ++temp;}
+\DoxyCodeLine{346                         \}}
 \DoxyCodeLine{347 }
-\DoxyCodeLine{348                     \textcolor{keywordflow}{if}(board[i][j].isWhite()) \{}
-\DoxyCodeLine{349                         \textcolor{comment}{//subimos para arriba pa saber de cuanto es la run y de paso cogemos el valor de vertical}}
-\DoxyCodeLine{350                         \textcolor{comment}{//idem para horizontal}}
-\DoxyCodeLine{351                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
-\DoxyCodeLine{352                         \textcolor{keywordflow}{while} ((i-\/numWhiteRun)>=0 \&\& board[i-\/numWhiteRun][j].isWhite()) ++numWhiteRun;}
-\DoxyCodeLine{353                         BlackCell b = (BlackCell) board[i-\/numWhiteRun][j];}
-\DoxyCodeLine{354                         \textcolor{keywordtype}{int} vertical = b.getColumn();}
-\DoxyCodeLine{355                         temp = 1;   \textcolor{comment}{//contar fichas blancas hacia abajo}}
-\DoxyCodeLine{356 }
-\DoxyCodeLine{357                         \textcolor{keywordflow}{while} ((i+temp)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+temp][j].isWhite()) \{}
-\DoxyCodeLine{358                             ++numWhiteRun;}
-\DoxyCodeLine{359                             ++temp;}
-\DoxyCodeLine{360                         \}}
-\DoxyCodeLine{361 }
-\DoxyCodeLine{362                         \textcolor{keywordtype}{int} arr [] = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [9];}
-\DoxyCodeLine{363                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) arr[a] = 0;}
-\DoxyCodeLine{364 }
-\DoxyCodeLine{365                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) \{}
-\DoxyCodeLine{366                             \textcolor{keywordflow}{if} (tempBoard[i][j][a] == 1) \{}
-\DoxyCodeLine{367                                 \textcolor{keywordtype}{int} p [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(vertical, numWhiteRun -\/ 1, a + 1);}
-\DoxyCodeLine{368                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \textcolor{keywordflow}{if}(p[y] == 1) arr[y] = 1;}
-\DoxyCodeLine{369                             \}}
-\DoxyCodeLine{370                         \}}
-\DoxyCodeLine{371 }
-\DoxyCodeLine{372                         numWhiteRun = 1;}
-\DoxyCodeLine{373                         \textcolor{keywordflow}{while} ((i-\/numWhiteRun)>=0 \&\& board[i-\/numWhiteRun][j].isWhite()) \{}
-\DoxyCodeLine{374                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
-\DoxyCodeLine{375                                 \textcolor{keywordflow}{if} (tempBoard[i-\/numWhiteRun][j][y]==1 \&\& arr[y]==0) \{}
-\DoxyCodeLine{376                                     changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{377                                     tempBoard [i-\/numWhiteRun][j][y] = 0;}
-\DoxyCodeLine{378                                 \}}
-\DoxyCodeLine{379                             \}}
-\DoxyCodeLine{380                             ++numWhiteRun;}
-\DoxyCodeLine{381                         \}}
-\DoxyCodeLine{382                         numWhiteRun = 1;}
-\DoxyCodeLine{383                         \textcolor{keywordflow}{while} ((i+numWhiteRun)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+numWhiteRun][j].isWhite()) \{}
-\DoxyCodeLine{384                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
-\DoxyCodeLine{385                                 \textcolor{keywordflow}{if} (tempBoard[i+numWhiteRun][j][y]==1 \&\& arr[y]==0) \{}
-\DoxyCodeLine{386                                     changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{387                                     tempBoard [i+numWhiteRun][j][y] = 0;}
-\DoxyCodeLine{388                                 \}}
-\DoxyCodeLine{389                             \}}
-\DoxyCodeLine{390                             ++numWhiteRun;}
-\DoxyCodeLine{391                         \}}
-\DoxyCodeLine{392 }
-\DoxyCodeLine{393                         numWhiteRun = 1;}
-\DoxyCodeLine{394                         \textcolor{keywordflow}{while} ((j-\/numWhiteRun)>=0 \&\& board[i][j-\/numWhiteRun].isWhite()) ++numWhiteRun;}
-\DoxyCodeLine{395                         b = (BlackCell) board[i][j-\/numWhiteRun];}
-\DoxyCodeLine{396                         \textcolor{keywordtype}{int} horizontal = b.getRow();}
-\DoxyCodeLine{397                         temp = 1;}
-\DoxyCodeLine{398 }
-\DoxyCodeLine{399                         \textcolor{keywordflow}{while} ((j+temp)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+temp].isWhite()) \{}
-\DoxyCodeLine{400                             ++numWhiteRun;}
-\DoxyCodeLine{401                             ++temp;}
-\DoxyCodeLine{402                         \}}
-\DoxyCodeLine{403 }
-\DoxyCodeLine{404                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) arr[a] = 0;}
-\DoxyCodeLine{405 }
-\DoxyCodeLine{406                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) \{}
-\DoxyCodeLine{407                             \textcolor{keywordflow}{if} (tempBoard[i][j][a] == 1) \{}
-\DoxyCodeLine{408                                 \textcolor{keywordtype}{int} p [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(horizontal, numWhiteRun -\/ 1, a + 1);}
-\DoxyCodeLine{409                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \textcolor{keywordflow}{if}(p[y] == 1) arr[y] = 1;}
-\DoxyCodeLine{410                             \}}
-\DoxyCodeLine{411                         \}}
-\DoxyCodeLine{412                         numWhiteRun = 1;}
-\DoxyCodeLine{413                         \textcolor{keywordflow}{while} ((j-\/numWhiteRun)>=0 \&\& board[i][j-\/numWhiteRun].isWhite()) \{}
-\DoxyCodeLine{414                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
-\DoxyCodeLine{415                                 \textcolor{keywordflow}{if} (tempBoard[i][j-\/numWhiteRun][y]==1 \&\& arr[y]==0) \{}
-\DoxyCodeLine{416                                     changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{417                                     tempBoard [i][j-\/numWhiteRun][y] = 0;}
-\DoxyCodeLine{418                                 \}}
-\DoxyCodeLine{419                             \}}
-\DoxyCodeLine{420                             ++numWhiteRun;}
-\DoxyCodeLine{421                         \}}
-\DoxyCodeLine{422                         numWhiteRun = 1;}
-\DoxyCodeLine{423                         \textcolor{keywordflow}{while} ((j+numWhiteRun)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+numWhiteRun].isWhite()) \{}
-\DoxyCodeLine{424                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
-\DoxyCodeLine{425                                 \textcolor{keywordflow}{if} (tempBoard[i][j+numWhiteRun][y]==1 \&\& arr[y]==0) \{}
-\DoxyCodeLine{426                                     changed = \textcolor{keyword}{true};}
-\DoxyCodeLine{427                                     tempBoard [i][j+numWhiteRun][y] = 0;}
-\DoxyCodeLine{428                                 \}}
-\DoxyCodeLine{429                             \}}
-\DoxyCodeLine{430                             ++numWhiteRun;}
-\DoxyCodeLine{431                         \}}
-\DoxyCodeLine{432                     \}}
-\DoxyCodeLine{433                 \}}
-\DoxyCodeLine{434             \}}
-\DoxyCodeLine{435         \}}
-\DoxyCodeLine{436         \textcolor{comment}{//System.out.println("{}uwu2"{});}}
-\DoxyCodeLine{437         \textcolor{keywordtype}{int} prueba = 0;}
-\DoxyCodeLine{438         \textcolor{keywordtype}{double} number = 0;}
-\DoxyCodeLine{439 }
+\DoxyCodeLine{348                         \textcolor{keywordtype}{int} arr [] = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [9];}
+\DoxyCodeLine{349                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) arr[a] = 0;}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) \{}
+\DoxyCodeLine{352                             \textcolor{keywordflow}{if} (tempBoard[i][j][a] == 1) \{}
+\DoxyCodeLine{353                                 \textcolor{keywordtype}{int} p [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(vertical, numWhiteRun -\/ 1, a + 1);}
+\DoxyCodeLine{354                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \textcolor{keywordflow}{if}(p[y] == 1) arr[y] = 1;}
+\DoxyCodeLine{355                             \}}
+\DoxyCodeLine{356                         \}}
+\DoxyCodeLine{357 }
+\DoxyCodeLine{358                         numWhiteRun = 1;}
+\DoxyCodeLine{359                         \textcolor{keywordflow}{while} ((i-\/numWhiteRun)>=0 \&\& board[i-\/numWhiteRun][j].isWhite()) \{}
+\DoxyCodeLine{360                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
+\DoxyCodeLine{361                                 \textcolor{keywordflow}{if} (tempBoard[i-\/numWhiteRun][j][y]==1 \&\& arr[y]==0) \{}
+\DoxyCodeLine{362                                     changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{363                                     tempBoard [i-\/numWhiteRun][j][y] = 0;}
+\DoxyCodeLine{364                                 \}}
+\DoxyCodeLine{365                             \}}
+\DoxyCodeLine{366                             ++numWhiteRun;}
+\DoxyCodeLine{367                         \}}
+\DoxyCodeLine{368                         numWhiteRun = 1;}
+\DoxyCodeLine{369                         \textcolor{keywordflow}{while} ((i+numWhiteRun)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+numWhiteRun][j].isWhite()) \{}
+\DoxyCodeLine{370                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
+\DoxyCodeLine{371                                 \textcolor{keywordflow}{if} (tempBoard[i+numWhiteRun][j][y]==1 \&\& arr[y]==0) \{}
+\DoxyCodeLine{372                                     changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{373                                     tempBoard [i+numWhiteRun][j][y] = 0;}
+\DoxyCodeLine{374                                 \}}
+\DoxyCodeLine{375                             \}}
+\DoxyCodeLine{376                             ++numWhiteRun;}
+\DoxyCodeLine{377                         \}}
+\DoxyCodeLine{378 }
+\DoxyCodeLine{379                         numWhiteRun = 1;}
+\DoxyCodeLine{380                         \textcolor{keywordflow}{while} ((j-\/numWhiteRun)>=0 \&\& board[i][j-\/numWhiteRun].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{381                         b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j-\/numWhiteRun];}
+\DoxyCodeLine{382                         \textcolor{keywordtype}{int} horizontal = b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}();}
+\DoxyCodeLine{383                         temp = 1;}
+\DoxyCodeLine{384 }
+\DoxyCodeLine{385                         \textcolor{keywordflow}{while} ((j+temp)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+temp].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{386                             ++numWhiteRun;}
+\DoxyCodeLine{387                             ++temp;}
+\DoxyCodeLine{388                         \}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) arr[a] = 0;}
+\DoxyCodeLine{391 }
+\DoxyCodeLine{392                         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} a = 0; a<9; ++a) \{}
+\DoxyCodeLine{393                             \textcolor{keywordflow}{if} (tempBoard[i][j][a] == 1) \{}
+\DoxyCodeLine{394                                 \textcolor{keywordtype}{int} p [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(horizontal, numWhiteRun -\/ 1, a + 1);}
+\DoxyCodeLine{395                                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y=0; y<9; ++y) \textcolor{keywordflow}{if}(p[y] == 1) arr[y] = 1;}
+\DoxyCodeLine{396                             \}}
+\DoxyCodeLine{397                         \}}
+\DoxyCodeLine{398                         numWhiteRun = 1;}
+\DoxyCodeLine{399                         \textcolor{keywordflow}{while} ((j-\/numWhiteRun)>=0 \&\& board[i][j-\/numWhiteRun].isWhite()) \{}
+\DoxyCodeLine{400                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
+\DoxyCodeLine{401                                 \textcolor{keywordflow}{if} (tempBoard[i][j-\/numWhiteRun][y]==1 \&\& arr[y]==0) \{}
+\DoxyCodeLine{402                                     changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{403                                     tempBoard [i][j-\/numWhiteRun][y] = 0;}
+\DoxyCodeLine{404                                 \}}
+\DoxyCodeLine{405                             \}}
+\DoxyCodeLine{406                             ++numWhiteRun;}
+\DoxyCodeLine{407                         \}}
+\DoxyCodeLine{408                         numWhiteRun = 1;}
+\DoxyCodeLine{409                         \textcolor{keywordflow}{while} ((j+numWhiteRun)< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+numWhiteRun].isWhite()) \{}
+\DoxyCodeLine{410                             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} y = 0; y<9; ++y) \{}
+\DoxyCodeLine{411                                 \textcolor{keywordflow}{if} (tempBoard[i][j+numWhiteRun][y]==1 \&\& arr[y]==0) \{}
+\DoxyCodeLine{412                                     changed = \textcolor{keyword}{true};}
+\DoxyCodeLine{413                                     tempBoard [i][j+numWhiteRun][y] = 0;}
+\DoxyCodeLine{414                                 \}}
+\DoxyCodeLine{415                             \}}
+\DoxyCodeLine{416                             ++numWhiteRun;}
+\DoxyCodeLine{417                         \}}
+\DoxyCodeLine{418                     \}}
+\DoxyCodeLine{419                 \}}
+\DoxyCodeLine{420             \}}
+\DoxyCodeLine{421         \}}
+\DoxyCodeLine{422         \textcolor{comment}{//System.out.println("{}uwu2"{});}}
+\DoxyCodeLine{423         \textcolor{keywordtype}{int} prueba = 0;}
+\DoxyCodeLine{424         \textcolor{keywordtype}{double} number = 0;}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{426 }
+\DoxyCodeLine{427         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{428             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{429                 \textcolor{keywordflow}{if}(board[i][j].isWhite()) \{}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{431                     number += \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a47c851a5435749e7fdd78845a416d0fc}{howManyNumbers}}(tempBoard[i][j]);}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i][j])!=0)}
+\DoxyCodeLine{434                         ++prueba;}
+\DoxyCodeLine{435                 \}}
+\DoxyCodeLine{436 }
+\DoxyCodeLine{437             \}}
+\DoxyCodeLine{438         \}}
+\DoxyCodeLine{439         number = number/numWhiteCell;}
 \DoxyCodeLine{440 }
-\DoxyCodeLine{441         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
-\DoxyCodeLine{442             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
-\DoxyCodeLine{443                 \textcolor{keywordflow}{if}(board[i][j].isWhite()) \{}
-\DoxyCodeLine{444 }
-\DoxyCodeLine{445                     number += \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a47c851a5435749e7fdd78845a416d0fc}{howManyNumbers}}(tempBoard[i][j]);}
-\DoxyCodeLine{446 }
-\DoxyCodeLine{447                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ada92c94e13b2a1f6b4e2e65de4e1907a}{isUnique}}(tempBoard[i][j]))}
-\DoxyCodeLine{448                         ++prueba;}
-\DoxyCodeLine{449                 \}}
-\DoxyCodeLine{450 }
-\DoxyCodeLine{451             \}}
-\DoxyCodeLine{452         \}}
-\DoxyCodeLine{453         number = number/numWhiteCell;}
-\DoxyCodeLine{454 }
+\DoxyCodeLine{441 }
+\DoxyCodeLine{442         \textcolor{keywordtype}{int} difficulty = 0;}
+\DoxyCodeLine{443 }
+\DoxyCodeLine{444         \textcolor{keywordflow}{if} (numBlackCell+numWhiteCell<100); \textcolor{comment}{//facil -\/10x10}}
+\DoxyCodeLine{445         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numBlackCell+numWhiteCell>223) difficulty+=2; \textcolor{comment}{//dificil +12x12}}
+\DoxyCodeLine{446         \textcolor{keywordflow}{else} ++difficulty; \textcolor{comment}{//media entre los dos}}
+\DoxyCodeLine{447 }
+\DoxyCodeLine{448         \textcolor{keywordflow}{if} (100*numWhiteCell/(numBlackCell+numWhiteCell)<=58); \textcolor{comment}{//facil}}
+\DoxyCodeLine{449         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (100*numWhiteCell/(numBlackCell+numWhiteCell)>=63) difficulty+=2;\textcolor{comment}{//dificil}}
+\DoxyCodeLine{450         \textcolor{keywordflow}{else} ++difficulty; \textcolor{comment}{//media entre los dos}}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{452         \textcolor{keywordflow}{if} (numWhiteCell/(unique+newUniques)<3); \textcolor{comment}{//facil}}
+\DoxyCodeLine{453         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numWhiteCell/(unique+newUniques)>=5) difficulty+=2;}
+\DoxyCodeLine{454         \textcolor{keywordflow}{else} ++difficulty;}
 \DoxyCodeLine{455 }
-\DoxyCodeLine{456         \textcolor{keywordtype}{int} difficulty = 0;}
-\DoxyCodeLine{457 }
-\DoxyCodeLine{458         \textcolor{keywordflow}{if} (numBlackCell+numWhiteCell<100); \textcolor{comment}{//facil -\/10x10}}
-\DoxyCodeLine{459         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numBlackCell+numWhiteCell>144) difficulty+=2; \textcolor{comment}{//dificil +12x12}}
-\DoxyCodeLine{460         \textcolor{keywordflow}{else} ++difficulty; \textcolor{comment}{//media entre los dos}}
-\DoxyCodeLine{461 }
-\DoxyCodeLine{462         \textcolor{keywordflow}{if} (100*numWhiteCell/(numBlackCell+numWhiteCell)<=58); \textcolor{comment}{//facil}}
-\DoxyCodeLine{463         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (100*numWhiteCell/(numBlackCell+numWhiteCell)>=63) difficulty+=2;\textcolor{comment}{//dificil}}
-\DoxyCodeLine{464         \textcolor{keywordflow}{else} ++difficulty; \textcolor{comment}{//media entre los dos}}
-\DoxyCodeLine{465 }
-\DoxyCodeLine{466         \textcolor{keywordflow}{if} (numWhiteCell/(unique+newUniques)<3); \textcolor{comment}{//facil}}
-\DoxyCodeLine{467         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (numWhiteCell/(unique+newUniques)>=5) difficulty+=2;}
-\DoxyCodeLine{468         \textcolor{keywordflow}{else} ++difficulty;}
-\DoxyCodeLine{469 }
-\DoxyCodeLine{470         \textcolor{keywordflow}{if} (number<1.2); \textcolor{comment}{//facil}}
-\DoxyCodeLine{471         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (number>2) difficulty+=2;}
-\DoxyCodeLine{472         \textcolor{keywordflow}{else} ++difficulty;}
-\DoxyCodeLine{473 }
-\DoxyCodeLine{474         \textcolor{keywordflow}{if} (avgRunLength > 4) ++difficulty;}
-\DoxyCodeLine{475         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (maxRunLength == 9) ++difficulty;}
-\DoxyCodeLine{476 }
-\DoxyCodeLine{477         \textcolor{keywordtype}{double} diff = (double) difficulty / 4.0;}
-\DoxyCodeLine{478 }
-\DoxyCodeLine{479         diff = Math.round(diff);}
-\DoxyCodeLine{480 }
-\DoxyCodeLine{481         difficulty = (int) diff;}
-\DoxyCodeLine{482         ++difficulty;}
-\DoxyCodeLine{483         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(difficulty);}
-\DoxyCodeLine{484 }
-\DoxyCodeLine{485     \}}
+\DoxyCodeLine{456         \textcolor{keywordflow}{if} (number<1.2); \textcolor{comment}{//facil}}
+\DoxyCodeLine{457         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (number>2) difficulty+=2;}
+\DoxyCodeLine{458         \textcolor{keywordflow}{else} ++difficulty;}
+\DoxyCodeLine{459 }
+\DoxyCodeLine{460         \textcolor{keywordflow}{if} (avgRunLength > 4) ++difficulty;}
+\DoxyCodeLine{461         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (maxRunLength == 9) ++difficulty;}
+\DoxyCodeLine{462 }
+\DoxyCodeLine{463         \textcolor{keywordtype}{double} diff = (double) difficulty / 4.0;}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465         diff = Math.round(diff);}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{467         difficulty = (int) diff;}
+\DoxyCodeLine{468         ++difficulty;}
+\DoxyCodeLine{469         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(difficulty);}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{471     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a47c851a5435749e7fdd78845a416d0fc}\label{classdomain_1_1controllers_1_1_ctrl_validate_a47c851a5435749e7fdd78845a416d0fc}} 
@@ -672,89 +654,329 @@ retorna cuantos 1 hay en a
 \end{DoxyReturn}
 
 
-Definición en la línea 494 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 480 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{494                                                   \{}
-\DoxyCodeLine{495         \textcolor{keywordtype}{double} b = 0;}
-\DoxyCodeLine{496         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) \{}
-\DoxyCodeLine{497             \textcolor{keywordflow}{if}(a[i]==1) ++b;}
-\DoxyCodeLine{498         \}}
-\DoxyCodeLine{499         \textcolor{keywordflow}{return} b;}
-\DoxyCodeLine{500     \}}
+\DoxyCodeLine{480                                                   \{}
+\DoxyCodeLine{481         \textcolor{keywordtype}{double} b = 0;}
+\DoxyCodeLine{482         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) \{}
+\DoxyCodeLine{483             \textcolor{keywordflow}{if}(a[i]==1) ++b;}
+\DoxyCodeLine{484         \}}
+\DoxyCodeLine{485         \textcolor{keywordflow}{return} b;}
+\DoxyCodeLine{486     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}\label{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a8dfa3a4b231fde3b594364ba2481be49}\label{classdomain_1_1controllers_1_1_ctrl_validate_a8dfa3a4b231fde3b594364ba2481be49}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!iniColumn@{iniColumn}}
+\index{iniColumn@{iniColumn}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{iniColumn()}{iniColumn()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+ini\+Column (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Sums,  }\item[{int}]{num\+White\+Run,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 489 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{489                                                                                                       \{}
+\DoxyCodeLine{490         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x<numWhiteRun; ++x) \{}
+\DoxyCodeLine{491             System.arraycopy(posSums, 0, tempBoard[i+1+x][j], 0, 9);}
+\DoxyCodeLine{492         \}}
+\DoxyCodeLine{493     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}\label{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!isUnique@{isUnique}}
+\index{isUnique@{isUnique}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{isUnique()}{isUnique()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Validate.\+is\+Unique (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 495 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{495                                          \{}
+\DoxyCodeLine{496         \textcolor{keywordtype}{int} n = 0;}
+\DoxyCodeLine{497         \textcolor{keywordtype}{int} v = 0;}
+\DoxyCodeLine{498         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) \{}
+\DoxyCodeLine{499             \textcolor{keywordflow}{if} (a[i]==1) \{}
+\DoxyCodeLine{500                 ++n;}
+\DoxyCodeLine{501                 v = i+1;}
+\DoxyCodeLine{502             \}}
+\DoxyCodeLine{503         \}}
+\DoxyCodeLine{504         \textcolor{keywordflow}{if} (n==1) \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{505         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{506     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a3c2a3fe5f137bcfec6eff2ddb53d6a10}\label{classdomain_1_1controllers_1_1_ctrl_validate_a3c2a3fe5f137bcfec6eff2ddb53d6a10}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!intersection@{intersection}}
+\index{intersection@{intersection}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{intersection()}{intersection()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+intersection (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{a,  }\item[{int\mbox{[}$\,$\mbox{]}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 508 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{508                                                         \{ \textcolor{comment}{//se modifica a}}
+\DoxyCodeLine{509         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<9; ++i) \{}
+\DoxyCodeLine{510             \textcolor{keywordflow}{if}(!(a[i]==1 \&\& b[i]==1)) a[i] = 0;}
+\DoxyCodeLine{511         \}}
+\DoxyCodeLine{512     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_ac6625f5dfafdca96e7d1cf76652e1d8b}\label{classdomain_1_1controllers_1_1_ctrl_validate_ac6625f5dfafdca96e7d1cf76652e1d8b}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!iniRow@{iniRow}}
+\index{iniRow@{iniRow}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{iniRow()}{iniRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+ini\+Row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Sums,  }\item[{int}]{num\+White\+Run,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 514 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{514                                                                                                                                        \{}
+\DoxyCodeLine{515         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x<numWhiteRun; ++x) \{}
+\DoxyCodeLine{516             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3c2a3fe5f137bcfec6eff2ddb53d6a10}{intersection}}(tempBoard[i][j+1+x], posSums);}
+\DoxyCodeLine{517             \textcolor{keywordtype}{int} v = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i][j+1+x]);}
+\DoxyCodeLine{518             \textcolor{keywordflow}{if} (v != 0) \{}
+\DoxyCodeLine{519                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j+1+x];}
+\DoxyCodeLine{520                 \textcolor{keywordflow}{if} (w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}()==0) \{}
+\DoxyCodeLine{521                     \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}(i, j + 1 + x);}
+\DoxyCodeLine{522                     uniques.add(p);}
+\DoxyCodeLine{523                     w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(v);}
+\DoxyCodeLine{524                 \}}
+\DoxyCodeLine{525             \}}
+\DoxyCodeLine{526         \}}
+\DoxyCodeLine{527     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a805de3d7f76c279610e5b204b2dcb346}\label{classdomain_1_1controllers_1_1_ctrl_validate_a805de3d7f76c279610e5b204b2dcb346}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!spreadUniqueCol@{spreadUniqueCol}}
+\index{spreadUniqueCol@{spreadUniqueCol}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{spreadUniqueCol()}{spreadUniqueCol()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+spread\+Unique\+Col (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 529 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{529                                                                                                                 \{}
+\DoxyCodeLine{530         \textcolor{keywordtype}{int} up = 0;}
+\DoxyCodeLine{531         \textcolor{keywordtype}{int} down = 0;}
+\DoxyCodeLine{532         \textcolor{keywordflow}{while} (i+1+down < board.length \&\& board[i+1+down][j].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) ++down;}
+\DoxyCodeLine{533         \textcolor{keywordflow}{while} (board[i-\/1-\/up][j].isWhite()) ++up;}
+\DoxyCodeLine{534         \textcolor{keywordtype}{int} run = up + down + 1;}
+\DoxyCodeLine{535 }
+\DoxyCodeLine{536         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i-\/1-\/up][j];}
+\DoxyCodeLine{537         \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j];}
+\DoxyCodeLine{538         \textcolor{keywordtype}{int} posSums [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}(), run-\/1, w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}());}
+\DoxyCodeLine{539 }
+\DoxyCodeLine{540         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x<run; ++x) \{}
+\DoxyCodeLine{541             \textcolor{keywordflow}{if} (i-\/up+x!=i) \{}
+\DoxyCodeLine{542                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} wt = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i-\/up+x][j];}
+\DoxyCodeLine{543                 \textcolor{keywordflow}{if} (wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}()==0) \{}
+\DoxyCodeLine{544                     \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3c2a3fe5f137bcfec6eff2ddb53d6a10}{intersection}}(tempBoard[i -\/ up + x][j], posSums);}
+\DoxyCodeLine{545                     \textcolor{keywordtype}{int} v = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i -\/ up + x][j]);}
+\DoxyCodeLine{546                     \textcolor{keywordflow}{if} (v != 0) \{}
+\DoxyCodeLine{547                         \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}(i -\/ up + x, j);}
+\DoxyCodeLine{548                         uniques.add(p);}
+\DoxyCodeLine{549                         wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(v);}
+\DoxyCodeLine{550                     \}}
+\DoxyCodeLine{551                 \}}
+\DoxyCodeLine{552             \}}
+\DoxyCodeLine{553         \}}
+\DoxyCodeLine{554 }
+\DoxyCodeLine{555     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a2e0de31542c0838a766a51008be61bc2}\label{classdomain_1_1controllers_1_1_ctrl_validate_a2e0de31542c0838a766a51008be61bc2}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!spreadUniqueRow@{spreadUniqueRow}}
+\index{spreadUniqueRow@{spreadUniqueRow}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{spreadUniqueRow()}{spreadUniqueRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+spread\+Unique\+Row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 557 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{557                                                                                                                 \{}
+\DoxyCodeLine{558         \textcolor{keywordtype}{int} left = 0;}
+\DoxyCodeLine{559         \textcolor{keywordtype}{int} right = 0;}
+\DoxyCodeLine{560         \textcolor{keywordflow}{while} (board[i][j-\/1-\/left].isWhite()) ++left;}
+\DoxyCodeLine{561         \textcolor{keywordflow}{while} (j+1+right < board[0].length \&\& board[i][j+1+right].isWhite()) ++right;}
+\DoxyCodeLine{562         \textcolor{keywordtype}{int} run = left + right + 1;}
+\DoxyCodeLine{563 }
+\DoxyCodeLine{564         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j-\/1-\/left];}
+\DoxyCodeLine{565         \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j];}
+\DoxyCodeLine{566         \textcolor{keywordtype}{int} posSums [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}(), run-\/1, w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}());}
+\DoxyCodeLine{567 }
+\DoxyCodeLine{568         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x<run; ++x) \{}
+\DoxyCodeLine{569             \textcolor{keywordflow}{if} (j-\/left-\/x!=j) \{}
+\DoxyCodeLine{570                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} wt = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j-\/left+x];}
+\DoxyCodeLine{571                 \textcolor{keywordflow}{if} (wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}()==0) \{}
+\DoxyCodeLine{572                     \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3c2a3fe5f137bcfec6eff2ddb53d6a10}{intersection}}(tempBoard[i][j -\/ left + x], posSums);}
+\DoxyCodeLine{573                     \textcolor{keywordtype}{int} v = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa11b9864272ff28035bfa84501e611cf}{isUnique}}(tempBoard[i][j -\/ left + x]);}
+\DoxyCodeLine{574                     \textcolor{keywordflow}{if} (v != 0) \{}
+\DoxyCodeLine{575                         \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}(i, j -\/ left + x);}
+\DoxyCodeLine{576                         uniques.add(p);}
+\DoxyCodeLine{577                         wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(v);}
+\DoxyCodeLine{578                     \}}
+\DoxyCodeLine{579                 \}}
+\DoxyCodeLine{580             \}}
+\DoxyCodeLine{581         \}}
+\DoxyCodeLine{582     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_ab7515f5d5e190c977812a4520190a2ab}\label{classdomain_1_1controllers_1_1_ctrl_validate_ab7515f5d5e190c977812a4520190a2ab}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!spreadUnique@{spreadUnique}}
+\index{spreadUnique@{spreadUnique}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{spreadUnique()}{spreadUnique()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+spread\+Unique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 584 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{584                                                                                                             \{}
+\DoxyCodeLine{585         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a805de3d7f76c279610e5b204b2dcb346}{spreadUniqueCol}}(i, j, tempBoard, board, uniques);}
+\DoxyCodeLine{586         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a2e0de31542c0838a766a51008be61bc2}{spreadUniqueRow}}(i, j, tempBoard, board, uniques);}
+\DoxyCodeLine{587     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_a7df245e67edcb0cef5db61ef508d3485}\label{classdomain_1_1controllers_1_1_ctrl_validate_a7df245e67edcb0cef5db61ef508d3485}} 
 \index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!validate@{validate}}
 \index{validate@{validate}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
 \doxysubsubsection{\texorpdfstring{validate()}{validate()}}
-{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+validate (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{int}]{sum,  }\item[{int\mbox{[}$\,$\mbox{]}}]{vec,  }\item[{int\mbox{[}$\,$\mbox{]}}]{res }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Validate.\+validate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
-Valida un Kakuro. 
-
-
-\begin{DoxyParams}{Parámetros}
-{\em r} & fila que estamos tratando \\
-\hline
-{\em c} & columna que estamos tratando \\
-\hline
-{\em sum} & valor que tiene que sumar la fila que estamos tratando \\
-\hline
-{\em vec} & vector de 10 posiciones donde vec\mbox{[}i\mbox{]} es 1 si hemos puesto i en la fila, 0 si no. \\
-\hline
-{\em res} & guarda cuantas soluciones hemos encontrado hasta el momento \\
-\hline
-\end{DoxyParams}
-
-
-Definición en la línea 511 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 590 del archivo Ctrl\+Validate.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{511                                                                                \{}
-\DoxyCodeLine{512         \textcolor{keywordflow}{if} (res[0]==2) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{513         \textcolor{keywordflow}{if}( r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() ) \{ res[0]++; \} \textcolor{comment}{//hemos llegado al final, la solucion es correcta}}
-\DoxyCodeLine{514         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{515             Cell[][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
-\DoxyCodeLine{516             \textcolor{keywordflow}{if}( !board[r][c].isWhite() ) \{ \textcolor{comment}{// estamos en una casilla negra; queremos cambiar de columna o de casilla}}
-\DoxyCodeLine{517                 \textcolor{keywordflow}{if} (sum != 0) \textcolor{keywordflow}{return};}
-\DoxyCodeLine{518                 BlackCell b = (BlackCell) board[r][c];}
-\DoxyCodeLine{519 }
-\DoxyCodeLine{520                 \textcolor{keywordflow}{if} (c != \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \{ \textcolor{comment}{// si no estem a la utlima columna}}
-\DoxyCodeLine{521                     \textcolor{keywordflow}{if} (board[r][c + 1].isWhite()) \{}
-\DoxyCodeLine{522                         sum = b.getRow();}
-\DoxyCodeLine{523                     \}}
-\DoxyCodeLine{524                 \}}
-\DoxyCodeLine{525                 \textcolor{keywordtype}{int} [] aux = \{0,0,0,0,0,0,0,0,0,0\};}
-\DoxyCodeLine{526                 \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}{validate}}(r + 1, 0, 0, aux, res); \textcolor{comment}{//cambiamos de fila, estamos en la ultima columna \}}}
-\DoxyCodeLine{527                 \textcolor{keywordflow}{else} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}{validate}}(r,c+1, sum, aux, res); \textcolor{comment}{//cambiamos de columna}}
-\DoxyCodeLine{528             \}}
-\DoxyCodeLine{529             \textcolor{keywordflow}{else} \{ \textcolor{comment}{// si estamos en una casilla blanca}}
-\DoxyCodeLine{530                 vec[0] = 1; \textcolor{comment}{//indica que s'ha modificat}}
-\DoxyCodeLine{531                 WhiteCell w = (WhiteCell) board[r][c];}
-\DoxyCodeLine{532                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < 10 \&\& sum-\/i >= 0; ++i ) \{}
-\DoxyCodeLine{533                     \textcolor{keywordflow}{if} ( vec[i] == 0) \{}
-\DoxyCodeLine{534                         vec[i] = 1;}
-\DoxyCodeLine{535                         w.setCorrectValue(i);}
-\DoxyCodeLine{536                         \textcolor{keywordtype}{boolean} f = \textcolor{keyword}{false};}
-\DoxyCodeLine{537                         \textcolor{keywordflow}{if}(r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() -\/ 1 || !board[r+1][c].isWhite()) f =\textcolor{keyword}{true};}
-\DoxyCodeLine{538                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{checkColumn}}(r-\/1, c, i, f, i)) \{}
-\DoxyCodeLine{539                             \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i != 0) \{ \}}
-\DoxyCodeLine{540                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i == 0) \{ \textcolor{comment}{// estamos en la ultima casilla de la fila pero la suma es correcta}}
-\DoxyCodeLine{541                                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}{validate}}(r + 1, 0, 0, vec, res);}
-\DoxyCodeLine{542                             \}}
-\DoxyCodeLine{543                             \textcolor{keywordflow}{else} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ae54d7f9447256860979d02bde1b1338f}{validate}}(r, c + 1, sum-\/i, vec, res);}
-\DoxyCodeLine{544                         \}}
-\DoxyCodeLine{545                         vec[i] = 0;}
-\DoxyCodeLine{546                     \}}
-\DoxyCodeLine{547                 \}}
-\DoxyCodeLine{548             \}}
-\DoxyCodeLine{549         \}}
-\DoxyCodeLine{550         \textcolor{keywordflow}{return};}
-\DoxyCodeLine{551     \}\textcolor{comment}{//}}
+\DoxyCodeLine{590                                      \{}
+\DoxyCodeLine{591         \textcolor{comment}{//inicialización}}
+\DoxyCodeLine{592 }
+\DoxyCodeLine{593         \textcolor{keywordtype}{int} [][][] tempBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()][\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()][9];}
+\DoxyCodeLine{594         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} z=0; z<9; ++z) tempBoard [i][j][z] = -\/1;}
+\DoxyCodeLine{595 }
+\DoxyCodeLine{596         \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}} [][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
+\DoxyCodeLine{597         Set<Pair> uniques = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{598         \textcolor{keywordtype}{int} numWhite = 0;}
+\DoxyCodeLine{599         \textcolor{keywordtype}{int} numBlack = 0;}
+\DoxyCodeLine{600 }
+\DoxyCodeLine{601         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{602             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{603                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{604                     ++numBlack;}
+\DoxyCodeLine{605                     \textcolor{keywordflow}{if} (i < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()-\/1 \&\& board[i+1][j].isWhite()) \{\textcolor{comment}{//columna hacia abajo}}
+\DoxyCodeLine{606                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{607                         \textcolor{keywordflow}{while}(i+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+1+numWhiteRun][j].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{608                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{609                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}(), numWhiteRun, 0);}
+\DoxyCodeLine{610                         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a8dfa3a4b231fde3b594364ba2481be49}{iniColumn}}(i, j, posSums, numWhiteRun, tempBoard);}
+\DoxyCodeLine{611                     \}}
+\DoxyCodeLine{612                     \textcolor{keywordflow}{if} (j < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()-\/1 \&\& board[i][j+1].isWhite()) \{\textcolor{comment}{//fila hacia derecha}}
+\DoxyCodeLine{613                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{614                         \textcolor{keywordflow}{while}(j+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+1+numWhiteRun].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{615                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{616                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_a3a3646df3741dafbb0a44cd391895599}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}(), numWhiteRun, 0);}
+\DoxyCodeLine{617                         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ac6625f5dfafdca96e7d1cf76652e1d8b}{iniRow}}(i, j, posSums, numWhiteRun, tempBoard, uniques, board);}
+\DoxyCodeLine{618                     \}}
+\DoxyCodeLine{619                 \} \textcolor{keywordflow}{else} ++numWhite;}
+\DoxyCodeLine{620             \}}
+\DoxyCodeLine{621         \}}
+\DoxyCodeLine{622         \textcolor{keywordflow}{if} (numBlack == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()* \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{623         \textcolor{keywordtype}{int} u = uniques.size();}
+\DoxyCodeLine{624         \textcolor{keywordflow}{while} (uniques.size()!=0 \&\& u!=numWhite) \{}
+\DoxyCodeLine{625             Iterator it = uniques.iterator();}
+\DoxyCodeLine{626             \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = (\mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}) it.next();}
+\DoxyCodeLine{627             it.remove();}
+\DoxyCodeLine{628             \textcolor{keywordtype}{int} tmpu = uniques.size();}
+\DoxyCodeLine{629             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_ab7515f5d5e190c977812a4520190a2ab}{spreadUnique}}(p.\mbox{\hyperlink{classdomain_1_1classes_1_1_pair_a9ef2245c7b137461dbf012d10ddbed92}{getFirst}}(), p.\mbox{\hyperlink{classdomain_1_1classes_1_1_pair_a52253d5bf807590338a03d758f05ac33}{getSecond}}(), tempBoard, board, uniques);}
+\DoxyCodeLine{630             \textcolor{keywordtype}{int} ttmpu = uniques.size();}
+\DoxyCodeLine{631             u = u + (ttmpu -\/ tmpu);}
+\DoxyCodeLine{632         \}}
+\DoxyCodeLine{633 }
+\DoxyCodeLine{634         \textcolor{keywordflow}{if} (u==numWhite) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{635         \textcolor{keywordtype}{int} [] tmp = \{0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{636         \textcolor{comment}{//return resolveRecursive(0,0,0, tmp, board, tempBoard);}}
+\DoxyCodeLine{637         \textcolor{keywordtype}{int} a[] = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[1]; a[0] = 0;}
+\DoxyCodeLine{638         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}{validateRecursive}}(0,0,0, tmp, tempBoard, a);}
+\DoxyCodeLine{639 }
+\DoxyCodeLine{640         \textcolor{keywordflow}{if} (a[0]==1) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{641         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{642     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}\label{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}} 
+\index{domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}!validateRecursive@{validateRecursive}}
+\index{validateRecursive@{validateRecursive}!domain.controllers.CtrlValidate@{domain.controllers.CtrlValidate}}
+\doxysubsubsection{\texorpdfstring{validateRecursive()}{validateRecursive()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Validate.\+validate\+Recursive (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{int}]{sum,  }\item[{int\mbox{[}$\,$\mbox{]}}]{vec,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{int}]{a\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 644 del archivo Ctrl\+Validate.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{644                                                                                                             \{}
+\DoxyCodeLine{645         \textcolor{keywordflow}{if} (a[0]==2) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{646         \textcolor{keywordflow}{if}( r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() ) \{ ++a[0]; \} \textcolor{comment}{//hemos llegado al final, la solucion es correcta}}
+\DoxyCodeLine{647         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{648             \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}[][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
+\DoxyCodeLine{649             \textcolor{keywordflow}{if}( !board[r][c].isWhite() ) \{ \textcolor{comment}{// estamos en una casilla negra; queremos cambiar de columna o de casilla}}
+\DoxyCodeLine{650                 \textcolor{keywordflow}{if} (sum != 0) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{651                 \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[r][c];}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{653                 \textcolor{keywordflow}{if} (c != \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \{ \textcolor{comment}{// si no estem a la utlima columna}}
+\DoxyCodeLine{654                     \textcolor{keywordflow}{if} (board[r][c + 1].isWhite()) \{}
+\DoxyCodeLine{655                         sum = b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}();}
+\DoxyCodeLine{656                     \}}
+\DoxyCodeLine{657                 \}}
+\DoxyCodeLine{658                 \textcolor{keywordtype}{int} [] aux = \{0,0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{659                 \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}{validateRecursive}}(r + 1, 0, 0, aux, tempBoard, a); \textcolor{comment}{//cambiamos de fila, estamos en la ultima columna \}}}
+\DoxyCodeLine{660                 \textcolor{keywordflow}{else} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}{validateRecursive}}(r,c+1, sum, aux, tempBoard, a); \textcolor{comment}{//cambiamos de columna}}
+\DoxyCodeLine{661             \}}
+\DoxyCodeLine{662             \textcolor{keywordflow}{else} \{ \textcolor{comment}{// si estamos en una casilla blanca}}
+\DoxyCodeLine{663                 vec[0] = 1; \textcolor{comment}{//indica que s'ha modificat}}
+\DoxyCodeLine{664                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[r][c];}
+\DoxyCodeLine{665                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < 10 \&\& sum-\/i >= 0; ++i ) \{}
+\DoxyCodeLine{666                     \textcolor{keywordflow}{if} ( vec[i] == 0 \&\& tempBoard[r][c][i-\/1]==1) \{}
+\DoxyCodeLine{667                         vec[i] = 1;}
+\DoxyCodeLine{668                         w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(i);}
+\DoxyCodeLine{669                         \textcolor{keywordtype}{boolean} f = \textcolor{keyword}{false};}
+\DoxyCodeLine{670                         \textcolor{keywordflow}{if}(r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() -\/ 1 || !board[r+1][c].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) f =\textcolor{keyword}{true};}
+\DoxyCodeLine{671                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{checkColumn}}(r-\/1, c, i, f, i)) \{}
+\DoxyCodeLine{672                             \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i != 0) \{ \}}
+\DoxyCodeLine{673                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_af461ecba8403f362c8a2f0af8b40a32a}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i == 0) \{ \textcolor{comment}{// estamos en la ultima casilla de la fila pero la suma es correcta}}
+\DoxyCodeLine{674                                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}{validateRecursive}}( r + 1, 0, 0, vec, tempBoard, a);}
+\DoxyCodeLine{675                             \}}
+\DoxyCodeLine{676                             \textcolor{keywordflow}{else} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_validate_aa8962147df26bebb492a1047dba6399d}{validateRecursive}}(r, c + 1, sum-\/i, vec, tempBoard, a);}
+\DoxyCodeLine{677                         \}}
+\DoxyCodeLine{678                         vec[i] = 0;}
+\DoxyCodeLine{679                     \}}
+\DoxyCodeLine{680                 \}}
+\DoxyCodeLine{681             \}}
+\DoxyCodeLine{682         \}}
+\DoxyCodeLine{683     \}}
 
 \end{DoxyCode}
 
@@ -768,7 +990,7 @@ Definición en la línea 511 del archivo Ctrl\+Validate.\+java.
 
 kakuro instancia del kakuro con el que se trabaja en este momento 
 
-Definición en la línea 22 del archivo Ctrl\+Validate.\+java.
+Definición en la línea 23 del archivo Ctrl\+Validate.\+java.
 
 
 

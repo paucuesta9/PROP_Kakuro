@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kakuro
-   &#160;<span id="projectnumber">version 1 20-nov-2020</span>
+   &#160;<span id="projectnumber">version Final 22-dec-2020</span>
    </div>
   </td>
  </tr>
@@ -394,8 +394,8 @@ Atributos privados estáticos</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                                                    {</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        CtrlData ctrlData = <span class="keyword">new</span> CtrlData();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">try</span> {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">int</span> result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hay &quot;</span> + result + <span class="stringliteral">&quot; kakuro(s) con esta dificultad y tamaño&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="comment">//int result = ctrlData.getNumberOfFiles(diff, sizeRow, sizeColumn);</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            System.out.println(<span class="stringliteral">&quot;Hay &quot;</span> + <span class="comment">/*result*/</span> <span class="stringliteral">&quot; kakuro(s) con esta dificultad y tamaño&quot;</span>);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        } <span class="keywordflow">catch</span> (NullPointerException e) {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            System.out.println(<span class="stringliteral">&quot;No hay ningún kakuro con estas condiciones&quot;</span>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>

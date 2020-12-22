@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['validate_221',['validate',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a9f1e10a0ea84bf53bf417392e3193d96',1,'domain.controllers.CtrlDomain.validate()'],['../classdomain_1_1controllers_1_1_ctrl_validate.html#ae54d7f9447256860979d02bde1b1338f',1,'domain.controllers.CtrlValidate.validate()']]],
-  ['validatepossums_222',['validatePosSums',['../classdomain_1_1controllers_1_1_ctrl_validate.html#a518f5a8bfbeef1ad7d84f80a79a31a69',1,'domain::controllers::CtrlValidate']]],
-  ['value_223',['value',['../classdomain_1_1classes_1_1_white_cell.html#a887f2146a2f0d7ce3ee2c378e5e0139a',1,'domain::classes::WhiteCell']]]
+  ['oncancel_387',['onCancel',['../classpresentation_1_1_color_chooser.html#a2edcb69e90b7a5dd2f59d7fb77467637',1,'presentation.ColorChooser.onCancel()'],['../classpresentation_1_1_set_values.html#ad6c67e149809e1b88d14b554351e51ae',1,'presentation.SetValues.onCancel()']]],
+  ['onok_388',['onOK',['../classpresentation_1_1_color_chooser.html#a88c7acca06039d797ac6dffa47197051',1,'presentation.ColorChooser.onOK()'],['../classpresentation_1_1_error.html#a410ecb83d59fc0f0d4bd3829c71d8860',1,'presentation.Error.onOK()'],['../classpresentation_1_1_finished_game.html#abef03a80c4b614ba470dbea048f25d25',1,'presentation.FinishedGame.onOK()'],['../classpresentation_1_1_set_values.html#ae7520e1c7246338a720aa60d7ea918d3',1,'presentation.SetValues.onOK()']]],
+  ['option_389',['option',['../classpresentation_1_1_ask_save.html#ab1502790ccb47c6812d715db265864ad',1,'presentation::AskSave']]],
+  ['ordena_390',['ordena',['../classdomain_1_1classes_1_1_created_ranking.html#a9bea4fd2e4dbc0e141d2c8baebd12971',1,'domain.classes.CreatedRanking.ordena()'],['../classdomain_1_1classes_1_1_points_ranking.html#a224f13697adc16774043ff7d2126a977',1,'domain.classes.PointsRanking.ordena()'],['../classdomain_1_1classes_1_1_ranking.html#a76960dc6a11b31166f400b70d87ec37a',1,'domain.classes.Ranking.ordena()'],['../classdomain_1_1classes_1_1_wins_ranking.html#ac8c4a0c13dedbf34afe1a351ee430d96',1,'domain.classes.WinsRanking.ordena()']]]
 ];

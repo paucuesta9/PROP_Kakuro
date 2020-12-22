@@ -8,15 +8,36 @@ Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve}{Ctrl\+Resolv
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a3891298519de42096951bba9e02abd30}{Ctrl\+Resolve}} ()
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a1517cc680be7fc79a2aa696ab3d9a88a}{Ctrl\+Resolve}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}})
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a15410977ac258275d856a32dd0d22dd4}{set\+Kakuro}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} current\+Kakuro)
-\begin{DoxyCompactList}\small\item\em Setter de Kakuro. \end{DoxyCompactList}\item 
-static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}{resolve}} (int r, int c, int sum, int\mbox{[}$\,$\mbox{]} vec)
-\begin{DoxyCompactList}\small\item\em Resuelve un Kakuro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}{compute\+Pos\+Sums}} (int x, int n, int no)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a29a609592c45d93bd63670d022cedd07}{ini\+Column}} (int i, int j, int\mbox{[}$\,$\mbox{]} pos\+Sums, int num\+White\+Run, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board)
+\item 
+static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aeaa18e40d3d74f59af0a4f92940ab596}{is\+Unique}} (int\mbox{[}$\,$\mbox{]} a)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a00bebaf1173f67ff4c1f3123448c29b5}{intersection}} (int\mbox{[}$\,$\mbox{]} a, int\mbox{[}$\,$\mbox{]} b)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a7208fba30fb419fbb7c89a65e2d4bb54}{ini\+Row}} (int i, int j, int\mbox{[}$\,$\mbox{]} pos\+Sums, int num\+White\+Run, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a798e578e82e07872cd2135df8e73ab2c}{spread\+Unique}} (int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques)
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a1b97f1193948e101cae04a14a276ae15}{resolve}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_ad6c7dea2cb0852c10bedbde9083d4385}{compute\+Pos\+Sums\+Rec}} (int arr\mbox{[}$\,$\mbox{]}, int index, int reduced\+Num, int lim, int pos\+Sums\mbox{[}$\,$\mbox{]}, int no)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a69db36da35f91007fbe1bd23d86c0907}{spread\+Unique\+Col}} (int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques)
+\item 
+static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a686a072372ab066e4278f2de9c285236}{spread\+Unique\+Row}} (int i, int j, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board, \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} board, Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$ uniques)
+\item 
+static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}{resolve\+Recursive}} (int r, int c, int sum, int\mbox{[}$\,$\mbox{]} vec, int\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} temp\+Board)
+\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,16 +53,16 @@ Pol Vallespí Soro
 \end{DoxyAuthor}
 
 
-Definición en la línea 15 del archivo Ctrl\+Resolve.\+java.
+Definición en la línea 17 del archivo Ctrl\+Resolve.\+java.
 
 
 
 \doxysubsection{Documentación del constructor y destructor}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a3891298519de42096951bba9e02abd30}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a3891298519de42096951bba9e02abd30}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a1517cc680be7fc79a2aa696ab3d9a88a}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a1517cc680be7fc79a2aa696ab3d9a88a}} 
 \index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!CtrlResolve@{CtrlResolve}}
 \index{CtrlResolve@{CtrlResolve}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
 \doxysubsubsection{\texorpdfstring{CtrlResolve()}{CtrlResolve()}}
-{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Resolve.\+Ctrl\+Resolve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Resolve.\+Ctrl\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{kakuro }\end{DoxyParamCaption})}
 
 
 
@@ -49,116 +70,412 @@ Creadora por defecto.
 
 
 
-Definición en la línea 25 del archivo Ctrl\+Resolve.\+java.
+Definición en la línea 27 del archivo Ctrl\+Resolve.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25 \{\}}
+\DoxyCodeLine{27                                       \{}
+\DoxyCodeLine{28         this.kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}};}
+\DoxyCodeLine{29     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a15410977ac258275d856a32dd0d22dd4}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a15410977ac258275d856a32dd0d22dd4}} 
-\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!setKakuro@{setKakuro}}
-\index{setKakuro@{setKakuro}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
-\doxysubsubsection{\texorpdfstring{setKakuro()}{setKakuro()}}
-{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+set\+Kakuro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{current\+Kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_ad6c7dea2cb0852c10bedbde9083d4385}\label{classdomain_1_1controllers_1_1_ctrl_resolve_ad6c7dea2cb0852c10bedbde9083d4385}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!computePosSumsRec@{computePosSumsRec}}
+\index{computePosSumsRec@{computePosSumsRec}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{computePosSumsRec()}{computePosSumsRec()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+compute\+Pos\+Sums\+Rec (\begin{DoxyParamCaption}\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{index,  }\item[{int}]{reduced\+Num,  }\item[{int}]{lim,  }\item[{int}]{pos\+Sums\mbox{[}$\,$\mbox{]},  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-
-
-Setter de Kakuro. 
-
-Settea un Kakuro al controlador para poder trabajar con él
+@\+Brief Función recursiva que calcula los numeros que aparecen en las combinaciones para sumar un determinado número con un determinado número de casillas
 
 
 \begin{DoxyParams}{Parámetros}
-{\em current\+Kakuro} & instància de Kakuro \\
+{\em arr} & array en el que guardamos los números de una combinación para intentar llegar hasta el número objetivo \\
+\hline
+{\em index} & apunta al último número que hemos añadido a la suma para llegar al número objetivo \\
+\hline
+{\em reduced\+Num} & inicializado al número objetivo, en cada iteración se le resta el número añadido a la suma para llegar al número objetivo \\
+\hline
+{\em lim} & numero de casillas que tenemos disponibles para colocar números \\
+\hline
+{\em pos\+Sums} & es el array en el que se guardan al final los números que aparecen en las combinacions para llegar al número objetivo \\
+\hline
+{\em no} & indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número. \\
 \hline
 \end{DoxyParams}
 
 
-Definición en la línea 33 del archivo Ctrl\+Resolve.\+java.
+Definición en la línea 43 del archivo Ctrl\+Resolve.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33                                                        \{}
-\DoxyCodeLine{34         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}} = currentKakuro;}
-\DoxyCodeLine{35     \}}
+\DoxyCodeLine{43                                                                                                                 \{}
+\DoxyCodeLine{44         \textcolor{keywordflow}{if} (reducedNum < 0 || index > lim)}
+\DoxyCodeLine{45             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47         \textcolor{keywordflow}{if} (reducedNum == 0 \&\& index == lim) \{}
+\DoxyCodeLine{48             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < index; i++)}
+\DoxyCodeLine{49                 posSums[arr[i]-\/1] = 1;}
+\DoxyCodeLine{50             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{keywordtype}{int} prev = (index == 0) ? 0 : arr[index -\/ 1];}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{keywordflow}{if}(prev == 9 || index >= lim) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k = prev+1; k <= 9 ; k++) \{}
+\DoxyCodeLine{58             \textcolor{keywordflow}{if} (k!=no) \{}
+\DoxyCodeLine{59                 arr[index] = k;}
+\DoxyCodeLine{60                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_ad6c7dea2cb0852c10bedbde9083d4385}{computePosSumsRec}}(arr, index + 1, reducedNum -\/ k, lim, posSums, no);}
+\DoxyCodeLine{61             \}}
+\DoxyCodeLine{62         \}}
+\DoxyCodeLine{63     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}\label{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}} 
-\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!resolve@{resolve}}
-\index{resolve@{resolve}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
-\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
-{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Resolve.\+resolve (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{int}]{sum,  }\item[{int\mbox{[}$\,$\mbox{]}}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!computePosSums@{computePosSums}}
+\index{computePosSums@{computePosSums}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{computePosSums()}{computePosSums()}}
+{\footnotesize\ttfamily static int \mbox{[}$\,$\mbox{]} domain.\+controllers.\+Ctrl\+Resolve.\+compute\+Pos\+Sums (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{n,  }\item[{int}]{no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-
-
-Resuelve un Kakuro. 
+@\+Brief Calcula los números que aparecen en las combinaciones para sumar un determinado número con un determinado número de casillas
 
 
 \begin{DoxyParams}{Parámetros}
-{\em r} & fila que estamos tratando \\
+{\em x} & es el número del cual queremos saber las combinaciones de números que suman hasta él con un número determinado de casillas \\
 \hline
-{\em c} & columna que estamos tratando \\
+{\em n} & es el número determinado de casillas \\
 \hline
-{\em sum} & valor que tenemos que sumer en la run horizontal \\
-\hline
-{\em vec} & vector de 10 posiciones donde vec\mbox{[}i\mbox{]} = 1 si hemos puesto i en la run horizontal, 0 si no. \\
+{\em no} & indica si en las casillas blancas ya tenemos un número fijado (0 no lo tenemos, otro número es el número fijado), y por lo tanto queremos solo las combinaciones en las que aparezca ese número.\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Devuelve}
-true si se encuentra una solución, false si no 
+un array de 9 posiciones en el que dado un valor x, un número de casillas y un valor de no, deja un 1 en las posiciones de los números que aparezcan en las combinaciones y un 0 para aquellos que no 
 \end{DoxyReturn}
 
 
-Definición en la línea 45 del archivo Ctrl\+Resolve.\+java.
+Definición en la línea 75 del archivo Ctrl\+Resolve.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{45                                                                      \{}
-\DoxyCodeLine{46         \textcolor{keywordflow}{if}( r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() ) \{ \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \} \textcolor{comment}{//hemos llegado al final, la solucion es correcta}}
-\DoxyCodeLine{47         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{48             Cell[][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
-\DoxyCodeLine{49             \textcolor{keywordflow}{if}( !board[r][c].isWhite() ) \{ \textcolor{comment}{// estamos en una casilla negra; queremos cambiar de columna o de casilla}}
-\DoxyCodeLine{50                 \textcolor{keywordflow}{if} (sum != 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{51                 BlackCell b = (BlackCell) board[r][c];}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53                 \textcolor{keywordflow}{if} (c != \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \{ \textcolor{comment}{// si no estem a la utlima columna}}
-\DoxyCodeLine{54                     \textcolor{keywordflow}{if} (board[r][c + 1].isWhite()) \{}
-\DoxyCodeLine{55                         sum = b.getRow();}
-\DoxyCodeLine{56                     \}}
-\DoxyCodeLine{57                 \}}
-\DoxyCodeLine{58                 \textcolor{keywordtype}{int} [] aux = \{0,0,0,0,0,0,0,0,0,0\};}
-\DoxyCodeLine{59                 \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}{resolve}}(r + 1, 0, 0, aux); \textcolor{comment}{//cambiamos de fila, estamos en la ultima columna \}}}
-\DoxyCodeLine{60                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}{resolve}}(r,c+1, sum, aux); \textcolor{comment}{//cambiamos de columna}}
-\DoxyCodeLine{61             \}}
-\DoxyCodeLine{62             \textcolor{keywordflow}{else} \{ \textcolor{comment}{// si estamos en una casilla blanca}}
-\DoxyCodeLine{63                 vec[0] = 1; \textcolor{comment}{//indica que s'ha modificat}}
-\DoxyCodeLine{64                 WhiteCell w = (WhiteCell) board[r][c];}
-\DoxyCodeLine{65                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < 10 \&\& sum-\/i >= 0; ++i ) \{}
-\DoxyCodeLine{66                     \textcolor{keywordflow}{if} ( vec[i] == 0) \{}
-\DoxyCodeLine{67                         vec[i] = 1;}
-\DoxyCodeLine{68                         w.setCorrectValue(i);}
-\DoxyCodeLine{69                         \textcolor{keywordtype}{boolean} f = \textcolor{keyword}{false};}
-\DoxyCodeLine{70                         \textcolor{keywordflow}{if}(r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() -\/ 1 || !board[r+1][c].isWhite()) f =\textcolor{keyword}{true};}
-\DoxyCodeLine{71                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{checkColumn}}(r-\/1, c, i, f, i)) \{}
-\DoxyCodeLine{72                             \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i != 0) \{ \}}
-\DoxyCodeLine{73                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i == 0) \{ \textcolor{comment}{// estamos en la ultima casilla de la fila pero la suma es correcta}}
-\DoxyCodeLine{74                                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}{resolve}}( r + 1, 0, 0, vec)) \{}
-\DoxyCodeLine{75                                     \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// quiere decir que hemos llegado al final y esta bien}}
-\DoxyCodeLine{76                                 \}}
-\DoxyCodeLine{77                             \}}
-\DoxyCodeLine{78                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aa9592e02827ee874f2ff338df5e81bbd}{resolve}}(r, c + 1, sum-\/i, vec)) \{ \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \}}
-\DoxyCodeLine{79                         \}}
-\DoxyCodeLine{80                         vec[i] = 0;}
-\DoxyCodeLine{81                     \}}
-\DoxyCodeLine{82                 \}}
-\DoxyCodeLine{83             \}}
-\DoxyCodeLine{84         \}}
-\DoxyCodeLine{85         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{86     \}}
+\DoxyCodeLine{75                                                               \{ \textcolor{comment}{//calcula combinaciones de numeros que suman x con n numeros. deja los resultados en posSums.}}
+\DoxyCodeLine{76         \textcolor{keywordtype}{int} [] posSums = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[9];}
+\DoxyCodeLine{77         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<9; ++i) posSums[i] = 0;}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} [] arr = \textcolor{keyword}{new} \textcolor{keywordtype}{int}[n];}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_ad6c7dea2cb0852c10bedbde9083d4385}{computePosSumsRec}}(arr, 0, x-\/no, n, posSums, no);}
+\DoxyCodeLine{82         \textcolor{keywordflow}{return} posSums;}
+\DoxyCodeLine{83     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a29a609592c45d93bd63670d022cedd07}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a29a609592c45d93bd63670d022cedd07}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!iniColumn@{iniColumn}}
+\index{iniColumn@{iniColumn}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{iniColumn()}{iniColumn()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+ini\+Column (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Sums,  }\item[{int}]{num\+White\+Run,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 85 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85                                                                                                       \{}
+\DoxyCodeLine{86         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x<numWhiteRun; ++x) \{}
+\DoxyCodeLine{87             System.arraycopy(posSums, 0, tempBoard[i+1+x][j], 0, 9);}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_aeaa18e40d3d74f59af0a4f92940ab596}\label{classdomain_1_1controllers_1_1_ctrl_resolve_aeaa18e40d3d74f59af0a4f92940ab596}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!isUnique@{isUnique}}
+\index{isUnique@{isUnique}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{isUnique()}{isUnique()}}
+{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Resolve.\+is\+Unique (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 91 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91                                          \{}
+\DoxyCodeLine{92         \textcolor{keywordtype}{int} n = 0;}
+\DoxyCodeLine{93         \textcolor{keywordtype}{int} v = 0;}
+\DoxyCodeLine{94         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<9; ++i) \{}
+\DoxyCodeLine{95             \textcolor{keywordflow}{if} (a[i]==1) \{}
+\DoxyCodeLine{96                 ++n;}
+\DoxyCodeLine{97                 v = i+1;}
+\DoxyCodeLine{98             \}}
+\DoxyCodeLine{99         \}}
+\DoxyCodeLine{100         \textcolor{keywordflow}{if} (n==1) \textcolor{keywordflow}{return} v;}
+\DoxyCodeLine{101         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{102     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a00bebaf1173f67ff4c1f3123448c29b5}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a00bebaf1173f67ff4c1f3123448c29b5}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!intersection@{intersection}}
+\index{intersection@{intersection}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{intersection()}{intersection()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+intersection (\begin{DoxyParamCaption}\item[{int\mbox{[}$\,$\mbox{]}}]{a,  }\item[{int\mbox{[}$\,$\mbox{]}}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 104 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104                                                         \{ \textcolor{comment}{//se modifica a}}
+\DoxyCodeLine{105         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i<9; ++i) \{}
+\DoxyCodeLine{106             \textcolor{keywordflow}{if}(!(a[i]==1 \&\& b[i]==1)) a[i] = 0;}
+\DoxyCodeLine{107         \}}
+\DoxyCodeLine{108     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a7208fba30fb419fbb7c89a65e2d4bb54}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a7208fba30fb419fbb7c89a65e2d4bb54}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!iniRow@{iniRow}}
+\index{iniRow@{iniRow}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{iniRow()}{iniRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+ini\+Row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int\mbox{[}$\,$\mbox{]}}]{pos\+Sums,  }\item[{int}]{num\+White\+Run,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 110 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{110                                                                                                                                        \{}
+\DoxyCodeLine{111         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x<numWhiteRun; ++x) \{}
+\DoxyCodeLine{112             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a00bebaf1173f67ff4c1f3123448c29b5}{intersection}}(tempBoard[i][j+1+x], posSums);}
+\DoxyCodeLine{113             \textcolor{keywordtype}{int} v = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aeaa18e40d3d74f59af0a4f92940ab596}{isUnique}}(tempBoard[i][j+1+x]);}
+\DoxyCodeLine{114             \textcolor{keywordflow}{if} (v != 0) \{}
+\DoxyCodeLine{115                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j+1+x];}
+\DoxyCodeLine{116                 \textcolor{keywordflow}{if} (w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}()==0) \{}
+\DoxyCodeLine{117                     \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}(i, j + 1 + x);}
+\DoxyCodeLine{118                     uniques.add(p);}
+\DoxyCodeLine{119                     w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(v);}
+\DoxyCodeLine{120                 \}}
+\DoxyCodeLine{121             \}}
+\DoxyCodeLine{122         \}}
+\DoxyCodeLine{123     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a69db36da35f91007fbe1bd23d86c0907}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a69db36da35f91007fbe1bd23d86c0907}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!spreadUniqueCol@{spreadUniqueCol}}
+\index{spreadUniqueCol@{spreadUniqueCol}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{spreadUniqueCol()}{spreadUniqueCol()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+spread\+Unique\+Col (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 125 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{125                                                                                                                 \{}
+\DoxyCodeLine{126         \textcolor{keywordtype}{int} up = 0;}
+\DoxyCodeLine{127         \textcolor{keywordtype}{int} down = 0;}
+\DoxyCodeLine{128         \textcolor{keywordflow}{while} (i+1+down < board.length \&\& board[i+1+down][j].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) ++down;}
+\DoxyCodeLine{129         \textcolor{keywordflow}{while} (board[i-\/1-\/up][j].isWhite()) ++up;}
+\DoxyCodeLine{130         \textcolor{keywordtype}{int} run = up + down + 1;}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i-\/1-\/up][j];}
+\DoxyCodeLine{133         \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j];}
+\DoxyCodeLine{134         \textcolor{keywordtype}{int} posSums [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}(), run-\/1, w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}());}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x<run; ++x) \{}
+\DoxyCodeLine{137             \textcolor{keywordflow}{if} (i-\/up+x!=i) \{}
+\DoxyCodeLine{138                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} wt = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i-\/up+x][j];}
+\DoxyCodeLine{139                 \textcolor{keywordflow}{if} (wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}()==0) \{}
+\DoxyCodeLine{140                     \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a00bebaf1173f67ff4c1f3123448c29b5}{intersection}}(tempBoard[i -\/ up + x][j], posSums);}
+\DoxyCodeLine{141                     \textcolor{keywordtype}{int} v = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aeaa18e40d3d74f59af0a4f92940ab596}{isUnique}}(tempBoard[i -\/ up + x][j]);}
+\DoxyCodeLine{142                     \textcolor{keywordflow}{if} (v != 0) \{}
+\DoxyCodeLine{143                         \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}(i -\/ up + x, j);}
+\DoxyCodeLine{144                         uniques.add(p);}
+\DoxyCodeLine{145                         wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(v);}
+\DoxyCodeLine{146                     \}}
+\DoxyCodeLine{147                 \}}
+\DoxyCodeLine{148             \}}
+\DoxyCodeLine{149         \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a686a072372ab066e4278f2de9c285236}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a686a072372ab066e4278f2de9c285236}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!spreadUniqueRow@{spreadUniqueRow}}
+\index{spreadUniqueRow@{spreadUniqueRow}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{spreadUniqueRow()}{spreadUniqueRow()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+spread\+Unique\+Row (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 153 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{153                                                                                                                 \{}
+\DoxyCodeLine{154         \textcolor{keywordtype}{int} left = 0;}
+\DoxyCodeLine{155         \textcolor{keywordtype}{int} right = 0;}
+\DoxyCodeLine{156         \textcolor{keywordflow}{while} (board[i][j-\/1-\/left].isWhite()) ++left;}
+\DoxyCodeLine{157         \textcolor{keywordflow}{while} (j+1+right < board[0].length \&\& board[i][j+1+right].isWhite()) ++right;}
+\DoxyCodeLine{158         \textcolor{keywordtype}{int} run = left + right + 1;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j-\/1-\/left];}
+\DoxyCodeLine{161         \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j];}
+\DoxyCodeLine{162         \textcolor{keywordtype}{int} posSums [] = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}(), run-\/1, w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}());}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} x = 0; x<run; ++x) \{}
+\DoxyCodeLine{165             \textcolor{keywordflow}{if} (j-\/left-\/x!=j) \{}
+\DoxyCodeLine{166                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} wt = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[i][j-\/left+x];}
+\DoxyCodeLine{167                 \textcolor{keywordflow}{if} (wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a5e3d8b5dd5d6c43eb64fd342b161ec0b}{getCorrectValue}}()==0) \{}
+\DoxyCodeLine{168                     \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a00bebaf1173f67ff4c1f3123448c29b5}{intersection}}(tempBoard[i][j -\/ left + x], posSums);}
+\DoxyCodeLine{169                     \textcolor{keywordtype}{int} v = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_aeaa18e40d3d74f59af0a4f92940ab596}{isUnique}}(tempBoard[i][j -\/ left + x]);}
+\DoxyCodeLine{170                     \textcolor{keywordflow}{if} (v != 0) \{}
+\DoxyCodeLine{171                         \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = \textcolor{keyword}{new} \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}(i, j -\/ left + x);}
+\DoxyCodeLine{172                         uniques.add(p);}
+\DoxyCodeLine{173                         wt.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(v);}
+\DoxyCodeLine{174                     \}}
+\DoxyCodeLine{175                 \}}
+\DoxyCodeLine{176             \}}
+\DoxyCodeLine{177         \}}
+\DoxyCodeLine{178     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a798e578e82e07872cd2135df8e73ab2c}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a798e578e82e07872cd2135df8e73ab2c}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!spreadUnique@{spreadUnique}}
+\index{spreadUnique@{spreadUnique}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{spreadUnique()}{spreadUnique()}}
+{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Resolve.\+spread\+Unique (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}}]{board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]},  }\item[{Set$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} $>$}]{uniques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 180 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{180                                                                                                             \{}
+\DoxyCodeLine{181         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a69db36da35f91007fbe1bd23d86c0907}{spreadUniqueCol}}(i, j, tempBoard, board, uniques);}
+\DoxyCodeLine{182         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a686a072372ab066e4278f2de9c285236}{spreadUniqueRow}}(i, j, tempBoard, board, uniques);}
+\DoxyCodeLine{183     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a1b97f1193948e101cae04a14a276ae15}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a1b97f1193948e101cae04a14a276ae15}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!resolve@{resolve}}
+\index{resolve@{resolve}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{resolve()}{resolve()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Resolve.\+resolve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definición en la línea 186 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186                                     \{}
+\DoxyCodeLine{187       \textcolor{comment}{//inicialización}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189         \textcolor{keywordtype}{int} [][][] tempBoard = \textcolor{keyword}{new} \textcolor{keywordtype}{int} [\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()][\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()][9];}
+\DoxyCodeLine{190         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} z=0; z<9; ++z) tempBoard [i][j][z] = -\/1;}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192         \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}} [][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
+\DoxyCodeLine{193         Set<Pair> uniques = \textcolor{keyword}{new} HashSet<>();}
+\DoxyCodeLine{194         \textcolor{keywordtype}{int} numWhite = 0;}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(); ++i) \{}
+\DoxyCodeLine{197             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0; j < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(); ++j) \{}
+\DoxyCodeLine{198                 \textcolor{keywordflow}{if} (!board[i][j].isWhite()) \{}
+\DoxyCodeLine{199                     \textcolor{keywordflow}{if} (i < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}()-\/1 \&\& board[i+1][j].isWhite()) \{\textcolor{comment}{//columna hacia abajo}}
+\DoxyCodeLine{200                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{201                         \textcolor{keywordflow}{while}(i+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& board[i+1+numWhiteRun][j].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{202                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{203                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a985bffb44e2a81d1e34cd19557222f3f}{getColumn}}(), numWhiteRun, 0);}
+\DoxyCodeLine{204                         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a29a609592c45d93bd63670d022cedd07}{iniColumn}}(i, j, posSums, numWhiteRun, tempBoard);}
+\DoxyCodeLine{205                     \}}
+\DoxyCodeLine{206                     \textcolor{keywordflow}{if} (j < \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()-\/1 \&\& board[i][j+1].isWhite()) \{\textcolor{comment}{//fila hacia derecha}}
+\DoxyCodeLine{207                         \textcolor{keywordtype}{int} numWhiteRun = 1;}
+\DoxyCodeLine{208                         \textcolor{keywordflow}{while}(j+1+numWhiteRun< \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& board[i][j+1+numWhiteRun].isWhite()) ++numWhiteRun;}
+\DoxyCodeLine{209                         \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[i][j];}
+\DoxyCodeLine{210                         \textcolor{keywordtype}{int} [] posSums = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a0963b4ff10ff45bc1dc4e4fe02252b2e}{computePosSums}}(b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}(), numWhiteRun, 0);}
+\DoxyCodeLine{211                         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a7208fba30fb419fbb7c89a65e2d4bb54}{iniRow}}(i, j, posSums, numWhiteRun, tempBoard, uniques, board);}
+\DoxyCodeLine{212                     \}}
+\DoxyCodeLine{213                 \} \textcolor{keywordflow}{else} ++numWhite;}
+\DoxyCodeLine{214             \}}
+\DoxyCodeLine{215         \}}
+\DoxyCodeLine{216         \textcolor{keywordtype}{int} u = uniques.size();}
+\DoxyCodeLine{217         \textcolor{keywordflow}{while} (uniques.size()!=0 \&\& u!=numWhite) \{}
+\DoxyCodeLine{218             Iterator it = uniques.iterator();}
+\DoxyCodeLine{219             \mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}} p = (\mbox{\hyperlink{classdomain_1_1classes_1_1_pair}{Pair}}) it.next();}
+\DoxyCodeLine{220             it.remove();}
+\DoxyCodeLine{221             \textcolor{keywordtype}{int} tmpu = uniques.size();}
+\DoxyCodeLine{222             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a798e578e82e07872cd2135df8e73ab2c}{spreadUnique}}(p.\mbox{\hyperlink{classdomain_1_1classes_1_1_pair_a9ef2245c7b137461dbf012d10ddbed92}{getFirst}}(), p.\mbox{\hyperlink{classdomain_1_1classes_1_1_pair_a52253d5bf807590338a03d758f05ac33}{getSecond}}(), tempBoard, board, uniques);}
+\DoxyCodeLine{223             \textcolor{keywordtype}{int} ttmpu = uniques.size();}
+\DoxyCodeLine{224             u = u + (ttmpu -\/ tmpu);}
+\DoxyCodeLine{225         \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227         \textcolor{keywordflow}{if} (u==numWhite) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{228         \textcolor{keywordtype}{int} [] tmp = \{0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{229         \textcolor{comment}{//return resolveRecursive(0,0,0, tmp, board, tempBoard);}}
+\DoxyCodeLine{230         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}{resolveRecursive}}(0,0,0, tmp, tempBoard);}
+\DoxyCodeLine{231     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}\label{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}} 
+\index{domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}!resolveRecursive@{resolveRecursive}}
+\index{resolveRecursive@{resolveRecursive}!domain.controllers.CtrlResolve@{domain.controllers.CtrlResolve}}
+\doxysubsubsection{\texorpdfstring{resolveRecursive()}{resolveRecursive()}}
+{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Resolve.\+resolve\+Recursive (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c,  }\item[{int}]{sum,  }\item[{int\mbox{[}$\,$\mbox{]}}]{vec,  }\item[{int}]{temp\+Board\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]}\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 233 del archivo Ctrl\+Resolve.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{233                                                                                                      \{}
+\DoxyCodeLine{234         \textcolor{keywordflow}{if}( r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() ) \{ \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \} \textcolor{comment}{//hemos llegado al final, la solucion es correcta}}
+\DoxyCodeLine{235         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{236             \mbox{\hyperlink{classdomain_1_1classes_1_1_cell}{Cell}}[][] board = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4f1f99e018cd02fcc5f2ed09fb98b774}{getBoard}}();}
+\DoxyCodeLine{237             \textcolor{keywordflow}{if}( !board[r][c].isWhite() ) \{ \textcolor{comment}{// estamos en una casilla negra; queremos cambiar de columna o de casilla}}
+\DoxyCodeLine{238                 \textcolor{keywordflow}{if} (sum != 0) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{239                 \mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}} b = (\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell}{BlackCell}}) board[r][c];}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241                 \textcolor{keywordflow}{if} (c != \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \{ \textcolor{comment}{// si no estem a la utlima columna}}
+\DoxyCodeLine{242                     \textcolor{keywordflow}{if} (board[r][c + 1].isWhite()) \{}
+\DoxyCodeLine{243                         sum = b.\mbox{\hyperlink{classdomain_1_1classes_1_1_black_cell_a5103f85151cb2c303daec21bbde5debf}{getRow}}();}
+\DoxyCodeLine{244                     \}}
+\DoxyCodeLine{245                 \}}
+\DoxyCodeLine{246                 \textcolor{keywordtype}{int} [] aux = \{0,0,0,0,0,0,0,0,0,0\};}
+\DoxyCodeLine{247                 \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1) \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}{resolveRecursive}}(r + 1, 0, 0, aux, tempBoard); \textcolor{comment}{//cambiamos de fila, estamos en la ultima columna \}}}
+\DoxyCodeLine{248                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}{resolveRecursive}}(r,c+1, sum, aux, tempBoard); \textcolor{comment}{//cambiamos de columna}}
+\DoxyCodeLine{249             \}}
+\DoxyCodeLine{250             \textcolor{keywordflow}{else} \{ \textcolor{comment}{// si estamos en una casilla blanca}}
+\DoxyCodeLine{251                 vec[0] = 1; \textcolor{comment}{//indica que s'ha modificat}}
+\DoxyCodeLine{252                 \mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}} w = (\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell}{WhiteCell}}) board[r][c];}
+\DoxyCodeLine{253                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < 10 \&\& sum-\/i >= 0; ++i ) \{}
+\DoxyCodeLine{254                     \textcolor{keywordflow}{if} ( vec[i] == 0 \&\& tempBoard[r][c][i-\/1]==1) \{}
+\DoxyCodeLine{255                         vec[i] = 1;}
+\DoxyCodeLine{256                         w.\mbox{\hyperlink{classdomain_1_1classes_1_1_white_cell_a0a8f27ecdf5391f6a28d5e856d5b4878}{setCorrectValue}}(i);}
+\DoxyCodeLine{257                         \textcolor{keywordtype}{boolean} f = \textcolor{keyword}{false};}
+\DoxyCodeLine{258                         \textcolor{keywordflow}{if}(r == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() -\/ 1 || !board[r+1][c].\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) f =\textcolor{keyword}{true};}
+\DoxyCodeLine{259                         \textcolor{keywordflow}{if}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a707e08a057dcf5667451719a4190ecbd}{checkColumn}}(r-\/1, c, i, f, i)) \{}
+\DoxyCodeLine{260                             \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i != 0) \{ \}}
+\DoxyCodeLine{261                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (c == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a8ed1708d14b918c81435011a480fb8c7}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() -\/ 1 \&\& sum-\/i == 0) \{ \textcolor{comment}{// estamos en la ultima casilla de la fila pero la suma es correcta}}
+\DoxyCodeLine{262                                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}{resolveRecursive}}( r + 1, 0, 0, vec, tempBoard)) \{}
+\DoxyCodeLine{263                                     \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \textcolor{comment}{// quiere decir que hemos llegado al final y esta bien}}
+\DoxyCodeLine{264                                 \}}
+\DoxyCodeLine{265                             \}}
+\DoxyCodeLine{266                             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_resolve_a2b8d097e616ac33e2e418956e3826f95}{resolveRecursive}}(r, c + 1, sum-\/i, vec, tempBoard)) \{ \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{267                         \}}
+\DoxyCodeLine{268                         vec[i] = 0;}
+\DoxyCodeLine{269                     \}}
+\DoxyCodeLine{270                 \}}
+\DoxyCodeLine{271             \}}
+\DoxyCodeLine{272         \}}
+\DoxyCodeLine{273         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{274     \}}
 
 \end{DoxyCode}
 
@@ -172,7 +489,7 @@ Definición en la línea 45 del archivo Ctrl\+Resolve.\+java.
 
 Instància del kakuro con el que se trabaja en cada momento 
 
-Definición en la línea 20 del archivo Ctrl\+Resolve.\+java.
+Definición en la línea 22 del archivo Ctrl\+Resolve.\+java.
 
 
 

@@ -5,6 +5,7 @@ import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 
 /** @file Scroll.java
+ @brief Clase  <em>Scroll</em>.
  @class Scroll
  */
 

@@ -1,6 +1,6 @@
 Opciones: 
  1. Login 
- 2. Sign Up 
+ 2. signUp 
  3. Salir
 
 Se llama a Login
@@ -10,7 +10,7 @@ Introduzca una contrasena
 Se ha iniciado sesion
 Opciones: 
  1. Login 
- 2. Sign Up 
+ 2. signUp 
  3. Salir
 
 Se llama a Login
@@ -20,16 +20,7 @@ Introduzca una contrasena
 Usuario no encontrado
 Opciones: 
  1. Login 
- 2. Sign Up 
- 3. Salir
-
-Se llama a signUp
-Introduzca un nombre de usuario
-Introduzca una contrasena
-Usuario ya existente
-Opciones: 
- 1. Login 
- 2. Sign Up 
+ 2. signUp 
  3. Salir
 
 Se llama a signUp
@@ -38,5 +29,14 @@ Introduzca una contrasena
 OK
 Opciones: 
  1. Login 
- 2. Sign Up 
+ 2. signUp 
+ 3. Salir
+
+Se llama a signUp
+Introduzca un nombre de usuario
+Introduzca una contrasena
+OK
+Opciones: 
+ 1. Login 
+ 2. signUp 
  3. Salir

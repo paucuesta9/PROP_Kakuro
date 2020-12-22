@@ -6,7 +6,7 @@ import java.util.Objects;
  @brief Clase  <em>Pair</em>.
  */
 
-/** @brief Clase de pair, donde ambos elementos son enteros
+/** @brief Clase Pair, donde ambos elementos son enteros
  * @author Alvaro Armada Ruiz
  */
 

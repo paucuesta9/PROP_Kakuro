@@ -9,10 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** @file CtrlPlayerUI.java
+ * @brief Clase  <em>CtrlPlayerUI</em>.
  * @class CtrlPlayerUI
  */
 
-/** @brief Controlador de presentación de jugador
+/** @brief Clase CtrlPlayerUI de presentación de jugador
  * @author Pau Cuesta Arcos
  */
 public class CtrlPlayerUI {

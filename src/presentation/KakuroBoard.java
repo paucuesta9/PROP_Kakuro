@@ -9,10 +9,11 @@ import javax.swing.*;
 import java.awt.*;
 
 /** @file KakuroBoard.java
+ * @brief Clase  <em>KakuroBoard</em>.
  * @class KakuroBoard
  */
 
-/** @brief Clase que carga un kakuro con sus atributos
+/** @brief Clase KakuroBoard que carga un kakuro con sus atributos
  * @author Pau Cuesta Arcos
  */
 

@@ -6,6 +6,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 import data.*;
 import domain.classes.*;
+import domain.classes.Exceptions.CantGenerateException;
 import domain.classes.Exceptions.PlayerExists;
 import domain.classes.Exceptions.WrongPasswordException;
 
@@ -128,7 +129,7 @@ public class CtrlDomain {
      * @param kakuroSizeColumn número de columnas del tablero
      * @param training indica si la partida es en modo entrenamiento
      */
-    public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn, boolean training) {
+    public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn, boolean training) throws CantGenerateException {
         ctrlPlay = new CtrlPlay(difficulty, kakuroSizeRow, kakuroSizeColumn, this, training);
         currentGame = ctrlPlay.getGame();
         currentKakuro = ctrlPlay.getKakuro();
@@ -139,9 +140,10 @@ public class CtrlDomain {
      *  Se inicia una partida con el kakuro correspondiente al path escrito
      *
      * @param absolutePath Ruta absoluta en la que se encuentra el kakuro a jugar
+     * @param training resepresenta si es en modo entrenamiento
      */
-    public void startNewGame(String absolutePath) {
-        ctrlPlay = new CtrlPlay(absolutePath, this);
+    public void startNewGame(String absolutePath, boolean training) {
+        ctrlPlay = new CtrlPlay(absolutePath, this, training);
         currentGame = ctrlPlay.getGame();
         currentKakuro = ctrlPlay.getKakuro();
     }

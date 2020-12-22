@@ -9,10 +9,11 @@ import java.awt.*;
 import java.awt.event.*;
 
 /** @file SetValues.java
+ @brief Clase  <em>SetValues</em>.
  @class SetValues
  */
 
-/** @brief Pantalla que muestra un Dialog para introducir la suma de columna y/o fila
+/** @brief Pantalla SetValues que muestra un Dialog para introducir la suma de columna y/o fila
  * @author Pau Cuesta Arcos
  */
 

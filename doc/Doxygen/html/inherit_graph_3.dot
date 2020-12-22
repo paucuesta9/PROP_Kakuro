@@ -4,5 +4,5 @@ digraph "Representación gráfica de la clase"
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="domain.controllers.CtrlDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1controllers_1_1_ctrl_domain.html",tooltip="Clase CtrlDomain que contiene los atributos y metodos para el intercambio de atributos entre controla..."];
+  Node0 [label="data.CtrlPlayerData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdata_1_1_ctrl_player_data.html",tooltip="Clase CtrlPlayerData para guardar información sobre los jugadores en ficheros."];
 }

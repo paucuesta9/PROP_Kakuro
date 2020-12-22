@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /** @file DriverWinsRanking.java
+ * @brief Clase  <em>DriverWinsRanking</em>.
  * @class DriverWinsRanking
- *
  */
 
 /**

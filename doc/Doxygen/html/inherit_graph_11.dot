@@ -4,5 +4,11 @@ digraph "Representación gráfica de la clase"
   edge [fontname="FreeSans",fontsize="10",labelfontname="FreeSans",labelfontsize="10"];
   node [fontname="FreeSans",fontsize="10",shape=record];
   rankdir="LR";
-  Node0 [label="domain.controllers.drivers.\lDriverCtrlDomain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html",tooltip="Clase DriverCtrlDomain que comprueba la correctividad de las funciones del controlador CtrlDomain."];
+  Node0 [label="domain.classes.Ranking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_ranking.html",tooltip="Clase Cell que contiene los métodos necesarios para cualquier tipo de ranking."];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node1 [label="domain.classes.CreatedRanking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_created_ranking.html",tooltip="Clase CreatedRanking que representa el ranking por partidas creadas e indica como ordenar a los jugad..."];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node2 [label="domain.classes.PointsRanking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_points_ranking.html",tooltip="Clase PointsRanking que representa el ranking por puntos e indica como ordenar a los jugadores según ..."];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="FreeSans"];
+  Node3 [label="domain.classes.WinsRanking",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdomain_1_1classes_1_1_wins_ranking.html",tooltip="Clase WinsRanking que representa el ranking por victorias e indica como ordenar a los jugadores según..."];
 }

@@ -14,12 +14,13 @@ import java.net.URL;
 import java.util.Locale;
 
 /** @file Generate.java
+ @brief Clase  <em>Generate</em>.
  @class Generate
  */
 
 /**
  * @author Alvaro Armada Ruiz
- * @brief Pantalla para generar kakuros
+ * @brief Pantalla Generate para generar kakuros
  */
 
 public class Generate {
@@ -42,6 +43,7 @@ public class Generate {
     private JLabel logo;
     private JPanel panelGenerate;
     private JPanel buttonDiff;
+    private JPanel diffText;
 
     private CtrlUI ctrlUI;
     private JFrame frame;
@@ -190,14 +192,16 @@ public class Generate {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (!g) {
-                    if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText()) >= 3 && Integer.parseInt(numColumn.getText()) >= 3) {
+                    if (!numRow.getText().equals("") && !numColumn.getText().equals("") && Integer.parseInt(numRow.getText()) >= 3 && Integer.parseInt(numColumn.getText()) >= 3 && Integer.parseInt(numRow.getText()) <= 20 && Integer.parseInt(numColumn.getText()) <= 20) {
                         g = true;
-                        exit.setVisible(false);
+                        diffText.setVisible(false);
+                        buttonDiff.setVisible(false);
+                        exit.setVisible(true);
                         URL url = Generate.class.getClassLoader().getResource("images/load.gif");
                         ImageIcon imageIcon = new ImageIcon(url);
                         generateButton.setText("");
                         generateButton.setIcon(imageIcon);
-                        exit.setEnabled(false);
+                        exit.setEnabled(true);
                         Thread t = new Thread() {
                             public void run() {
                                 ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
@@ -206,16 +210,16 @@ public class Generate {
                             }
                         };
                         t.start();
-                    } else Utils.showError("Tamaño inválido");
+                    } else if (Integer.parseInt(numRow.getText()) > 20 || Integer.parseInt(numColumn.getText()) > 20)
+                        Utils.showError("El tamaño máximo es 20");
+                    else Utils.showError("Tamaño inválido");
                 }
             }
         });
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!g) {
-                    ctrlUI.toMain();
-                }
+                ctrlUI.toMain();
             }
         });
     }
@@ -275,15 +279,15 @@ public class Generate {
         numColumn.setHorizontalAlignment(0);
         numColumn.setOpaque(false);
         columnSize.add(numColumn, new GridConstraints(0, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_FIXED, new Dimension(50, -1), new Dimension(50, -1), new Dimension(50, -1), 0, false));
-        final JPanel panel3 = new JPanel();
-        panel3.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
-        panel3.setBackground(new Color(-1973022));
-        panel2.add(panel3, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
+        diffText = new JPanel();
+        diffText.setLayout(new GridLayoutManager(1, 1, new Insets(0, 0, 0, 0), -1, -1));
+        diffText.setBackground(new Color(-1973022));
+        panel2.add(diffText, new GridConstraints(6, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_BOTH, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, null, null, null, 0, false));
         difficulty = new JLabel();
         difficulty.setText("Indique la dificultad del tablero:");
-        panel3.add(difficulty, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        diffText.add(difficulty, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
         final Spacer spacer1 = new Spacer();
-        panel2.add(spacer1, new GridConstraints(5, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 50), new Dimension(-1, 50), new Dimension(-1, 50), 0, false));
+        panel2.add(spacer1, new GridConstraints(5, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(-1, 50), new Dimension(-1, 50), 0, false));
         final Spacer spacer2 = new Spacer();
         panel2.add(spacer2, new GridConstraints(1, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_VERTICAL, 1, GridConstraints.SIZEPOLICY_WANT_GROW, new Dimension(-1, 15), new Dimension(-1, 15), new Dimension(-1, 15), 0, false));
         buttonDiff = new JPanel();
@@ -400,7 +404,10 @@ public class Generate {
                 resultName = currentFont.getName();
             }
         }
-        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
+        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
+        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
     }
 
     /**

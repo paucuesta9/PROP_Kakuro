@@ -8,8 +8,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /** @file DriverCtrlPlayer.java
+ * @brief Clase  <em>DriverCtrlPlayer</em>.
  * @class DriverCtrlPlayer
- *
  */
 
 /** @brief Clase DriverCtrlPlayer que comprueba la correctividad de las funciones de la clase CtrlPlayer

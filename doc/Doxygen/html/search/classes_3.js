@@ -1,5 +1,19 @@
 var searchData=
 [
-  ['kakuro_247',['Kakuro',['../classdomain_1_1classes_1_1_kakuro.html',1,'domain::classes']]],
-  ['kakurotest_248',['KakuroTest',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html',1,'domain::controllers::junits']]]
+  ['driverblackcell_740',['DriverBlackCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell.html',1,'domain::controllers::drivers']]],
+  ['drivercell_741',['DriverCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html',1,'domain::controllers::drivers']]],
+  ['drivercreatedranking_742',['DriverCreatedRanking',['../classdomain_1_1controllers_1_1drivers_1_1_driver_created_ranking.html',1,'domain::controllers::drivers']]],
+  ['driverctrldata_743',['DriverCtrlData',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html',1,'domain::controllers::drivers']]],
+  ['driverctrldomain_744',['DriverCtrlDomain',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html',1,'domain::controllers::drivers']]],
+  ['driverctrlgenerate_745',['DriverCtrlGenerate',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate.html',1,'domain::controllers::drivers']]],
+  ['driverctrlplay_746',['DriverCtrlPlay',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play.html',1,'domain::controllers::drivers']]],
+  ['driverctrlplayer_747',['DriverCtrlPlayer',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_player.html',1,'domain::controllers::drivers']]],
+  ['driverctrlresolve_748',['DriverCtrlResolve',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve.html',1,'domain::controllers::drivers']]],
+  ['driverctrlvalidate_749',['DriverCtrlValidate',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate.html',1,'domain::controllers::drivers']]],
+  ['drivergame_750',['DriverGame',['../classdomain_1_1controllers_1_1drivers_1_1_driver_game.html',1,'domain::controllers::drivers']]],
+  ['driverkakuro_751',['DriverKakuro',['../classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html',1,'domain::controllers::drivers']]],
+  ['driverplayer_752',['DriverPlayer',['../classdomain_1_1controllers_1_1drivers_1_1_driver_player.html',1,'domain::controllers::drivers']]],
+  ['driverpointsranking_753',['DriverPointsRanking',['../classdomain_1_1controllers_1_1drivers_1_1_driver_points_ranking.html',1,'domain::controllers::drivers']]],
+  ['driverwhitecell_754',['DriverWhiteCell',['../classdomain_1_1controllers_1_1drivers_1_1_driver_white_cell.html',1,'domain::controllers::drivers']]],
+  ['driverwinsranking_755',['DriverWinsRanking',['../classdomain_1_1controllers_1_1drivers_1_1_driver_wins_ranking.html',1,'domain::controllers::drivers']]]
 ];

@@ -1,14 +1,16 @@
 package presentation;
 
+import domain.classes.Exceptions.CantGenerateException;
 import domain.controllers.CtrlPlay;
 
 import java.util.ArrayList;
 
 /** @file CtrlPlayUI.java
+ * @brief Clase  <em>CtrlPlayUI</em>.
  * @class CtrlPlayUI
  */
 
-/** @brief Controlador de presentación para jugar
+/** @brief Clase CtrlPlayUI de presentación para jugar
  * @author Judith Almoño Gómez
  */
 
@@ -63,12 +65,12 @@ public class CtrlPlayUI {
        return ctrlUI.finishGame(selfFinished);
     }
 
-    public void startGame(int diff, int rowSize, int columnSize, boolean training) {
+    public void startGame(int diff, int rowSize, int columnSize, boolean training) throws CantGenerateException {
         ctrlUI.startGame(diff, rowSize, columnSize, training);
     }
 
-    public void startGame(String absolutePath) {
-        ctrlUI.startGame(absolutePath);
+    public void startGame(String absolutePath, boolean training) {
+        ctrlUI.startGame(absolutePath, training);
     }
 
     public ArrayList<ArrayList<Integer>> getStartedGames() {

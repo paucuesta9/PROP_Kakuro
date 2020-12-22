@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 
 /** @file Slider.java
+ @brief Clase  <em>Slider</em>.
  @class Slider
  */
 

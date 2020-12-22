@@ -3,6 +3,7 @@ package presentation;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import domain.classes.Exceptions.CantGenerateException;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -17,6 +18,7 @@ import java.io.File;
 import java.util.Locale;
 
 /** @file NewGame.java
+ @brief Clase  <em>NewGame</em>.
  @class NewGame
  */
 
@@ -199,7 +201,7 @@ public class NewGame {
                     if (!absolutePath.contains(System.getProperty("user.dir")) || (absolutePath.contains(System.getProperty("user.dir")) && (!difficultyPath || absolutePath.contains("solutions"))))
                         Utils.showError("Por favor, indique un Kakuro de la base de datos de la aplicación");
                     else {
-                        ctrlPlayUI.startGame(absolutePath);
+                        ctrlPlayUI.startGame(absolutePath, training);
                         String kakuro = ctrlPlayUI.getKakuro();
                         ctrlUI.toPlay(kakuro, training);
                     }
@@ -292,9 +294,14 @@ public class NewGame {
                         thr = true;
                         t = new Thread() {
                             public void run() { //esto es para poder cancelar la generacion en caso que no acabe
-                                ctrlPlayUI.startGame(diff, rowSize, columnSize, training);
-                                String kakuro = ctrlPlayUI.getKakuro();
-                                ctrlUI.toPlay(kakuro, training);
+                                try {
+                                    ctrlPlayUI.startGame(diff, rowSize, columnSize, training);
+                                    String kakuro = ctrlPlayUI.getKakuro();
+                                    ctrlUI.toPlay(kakuro, training);
+                                } catch (CantGenerateException cantGenerateException) {
+                                    Utils.showError("No se ha encontrado ningun kakuro de estas dimensiones y lo máximo que se puede generar es de tamaño 20");
+                                    ctrlUI.toNewGame(training);
+                                }
                             }
                         };
                         t.start();
@@ -507,7 +514,10 @@ public class NewGame {
                 resultName = currentFont.getName();
             }
         }
-        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
+        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
+        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
     }
 
     /**

@@ -5,7 +5,7 @@
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = utf-8
 PROJECT_NAME           = "Kakuro"
-PROJECT_NUMBER         = "version 1 20-nov-2020"
+PROJECT_NUMBER         = "version Final 22-dec-2020"
 OUTPUT_DIRECTORY       = "./doc/Doxygen/"
 CREATE_SUBDIRS         = NO
 OUTPUT_LANGUAGE        = Spanish

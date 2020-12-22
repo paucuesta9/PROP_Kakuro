@@ -8,8 +8,8 @@ import com.google.gson.annotations.SerializedName;
  *
  */
 
-/** @brief Clase que representa las estadísticas de un jugador
- * @autor Alvaro Armada Ruiz
+/** @brief Clase Stats que representa las estadísticas de un jugador
+ * @author Alvaro Armada Ruiz
  */
 public class Stats {
     /**

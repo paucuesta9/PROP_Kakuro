@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['fillboard_312',['fillBoard',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a051da95602fb86344981352dd8bc61ea',1,'domain::controllers::CtrlGenerate']]],
-  ['fillboardaux_313',['fillBoardAux',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a72b9030a69b4d6f3d63e5fa17421945c',1,'domain::controllers::CtrlGenerate']]],
-  ['fillboardaux2_314',['fillBoardAux2',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a8c0be63ced36ea72df57146afca476f5',1,'domain::controllers::CtrlGenerate']]],
-  ['firstcolrow_315',['firstColRow',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a9e4f9172e63fcdc43c9681435d146d89',1,'domain::controllers::CtrlGenerate']]]
+  ['dfs_937',['DFS',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a0f5fd0dc320710be3846602c942478b9',1,'domain::controllers::CtrlGenerate']]],
+  ['drawcolorchooser_938',['drawColorChooser',['../classpresentation_1_1_color_chooser.html#a3dff22f7ccae378e5290969bda231b37',1,'presentation::ColorChooser']]],
+  ['drawconfig_939',['drawConfig',['../classpresentation_1_1_config.html#a7bfe0ac5d80898b0f449e36b13fcb25d',1,'presentation::Config']]],
+  ['drawerror_940',['drawError',['../classpresentation_1_1_error.html#a71b17136758367f4295cbce78d76e941',1,'presentation::Error']]],
+  ['drawfinishedgame_941',['drawFinishedGame',['../classpresentation_1_1_finished_game.html#a0eb410a74ea5deb82a79d7a7e54f3d61',1,'presentation::FinishedGame']]],
+  ['drawsetvalues_942',['drawSetValues',['../classpresentation_1_1_set_values.html#a5f4cbf3d0fe0b7e70b64606b2c525c28',1,'presentation::SetValues']]],
+  ['drawstatistics_943',['drawStatistics',['../classpresentation_1_1_statistics.html#a68c4d4c7cdedbbbd2ced6aa3192fb550',1,'presentation::Statistics']]]
 ];

@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /** @file DriverPointsRanking.java
+ * @brief Clase  <em>DriverPointsRanking</em>.
  * @class DriverPointsRanking
- *
  */
 
 /**

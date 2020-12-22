@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 /** @file KakuroWhiteCell.java
+ @brief Clase  <em>KakuroWhiteCell</em>.
  @class KakuroWhiteCell
  */
 

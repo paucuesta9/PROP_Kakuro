@@ -11,18 +11,49 @@ Clase \mbox{\hyperlink{classdata_1_1_ctrl_data}{Ctrl\+Data}} para obtener y guar
 \mbox{\hyperlink{classdata_1_1_ctrl_data_ad531e4834fc183b445e925a493cdeb3a}{Ctrl\+Data}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classdata_1_1_ctrl_data_a81eb64d33003810c4e2ffc0cb9dab7f2}{search\+Kakuro}} (int difficulty, int kakuro\+Size\+Row, int kakuro\+Size\+Column)  throws I\+O\+Exception 
-\begin{DoxyCompactList}\small\item\em Busca un kakuro en fichero. \end{DoxyCompactList}\item 
+\item 
 String \mbox{\hyperlink{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}{get\+Kakuro}} (String file\+Path)  throws I\+O\+Exception 
-\begin{DoxyCompactList}\small\item\em Busca un kakuro en fichero a partir de una ruta relativa. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Esta función retorna el kakuro de la ruta establecida. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classdata_1_1_ctrl_data_a4d39c4aa0fde118f333f73a489218f7c}{save\+Kakuro}} (String content, String solution, int diff, int size\+Row, int size\+Column)
-\begin{DoxyCompactList}\small\item\em Guarda un kakuro en fichero. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{get\+Number\+Of\+Files}} (int diff, int size\+Row, int size\+Column)  throws Null\+Pointer\+Exception 
-\begin{DoxyCompactList}\small\item\em Mira cuántos ficheros tienen una dificultad y tamaño en concreto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Esta función guarda el kakuro y su solución en fichero. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdata_1_1_ctrl_data_aa1aa1bfe06407986ddef3ebff7a6e29d}{get\+Number\+Of\+Players}} ()  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Esta función retorna el número de jugadores. \end{DoxyCompactList}\item 
+Json\+Reader\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classdata_1_1_ctrl_data_a5d24d28f1635302d7f12df9630b483f0}{get\+List\+Of\+Players}} ()  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Esta función retorna una lista de los jugadores. \end{DoxyCompactList}\item 
+Json\+Reader \mbox{\hyperlink{classdata_1_1_ctrl_data_ae617ea8a9d0ca2e13fb2804e11f38747}{get\+User}} (String username)  throws File\+Not\+Found\+Exception 
+\item 
+void \mbox{\hyperlink{classdata_1_1_ctrl_data_ac5831b44014d3fd77b5de591055bb557}{save\+Player}} (String username, String player\+J\+S\+ON)
+\begin{DoxyCompactList}\small\item\em Guarda al jugador. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdata_1_1_ctrl_data_a2d441d8baaa6611e860005ac62fedf96}{exists\+Player}} (String username)
+\begin{DoxyCompactList}\small\item\em Esta función nos indica si existe un jugador con el nombre de usuario pasado por parámetro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdata_1_1_ctrl_data_a7bdc6354bbec66f11c0c10be801adac1}{get\+New\+Game\+Id}} (String username)
+\begin{DoxyCompactList}\small\item\em Esta función retorna un id válido para una partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata_1_1_ctrl_data_a7fb56d78ca8aab2b3874d8064eba2fd9}{save\+Kakuro\+Game}} (String kakuro, String username, int id)
+\begin{DoxyCompactList}\small\item\em Esta función guarda una partida del usuario. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata_1_1_ctrl_data_a0541adfac1fb03435c508831c768ad67}{get\+List\+Of\+Kakuros}} ()
+\begin{DoxyCompactList}\small\item\em Esta función actualiza los records de kakuros. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classdata_1_1_ctrl_data_ac8b60faaac9cd47a123bff70d447be35}{get\+This\+Kakuro}} (String s)
+\begin{DoxyCompactList}\small\item\em Busca un kakuro a partir de una ruta relativa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdata_1_1_ctrl_data_ad0f6466163fc58d822d992a112f7f201}{save\+Kakuro\+Record}} (Json\+Array record)
+\begin{DoxyCompactList}\small\item\em Función que actualiza los records de kakuros. \end{DoxyCompactList}\item 
+Json\+Array \mbox{\hyperlink{classdata_1_1_ctrl_data_a2633ee99d81892796a1187b52a3db7c7}{getkakuro\+Record}} ()
+\begin{DoxyCompactList}\small\item\em Función que obtiene la información de records del fichero json correspondiente. \end{DoxyCompactList}\item 
+List$<$ Json\+Object $>$ \mbox{\hyperlink{classdata_1_1_ctrl_data_a1cc2c4dc44f185cfe84710ba7a9c852a}{sort\+Json}} (Json\+Array l)
+\begin{DoxyCompactList}\small\item\em Esta función ordenada los kakuros en formato json según dificultad y tamaño. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Métodos públicos estáticos}
 \begin{DoxyCompactItemize}
 \item 
 static \mbox{\hyperlink{classdata_1_1_ctrl_data}{Ctrl\+Data}} \mbox{\hyperlink{classdata_1_1_ctrl_data_acdb1596f6f67770535452853ee0ace67}{get\+Instance}} ()
 \begin{DoxyCompactList}\small\item\em Obtiene la instancia del \mbox{\hyperlink{classdata_1_1_ctrl_data}{Ctrl\+Data}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classdata_1_1_ctrl_player_data}{Ctrl\+Player\+Data}} \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrl\+Player\+Data}}
+\item 
+\mbox{\hyperlink{classdata_1_1_ctrl_game_data}{Ctrl\+Game\+Data}} \mbox{\hyperlink{classdata_1_1_ctrl_data_a17973f1d73c0a085a26e8f08593ab5c6}{ctrl\+Game\+Data}}
+\item 
+\mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data}{Ctrl\+Kakuro\+Data}} \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrl\+Kakuro\+Data}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados estáticos}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,7 +69,7 @@ Pau Cuesta Arcos
 \end{DoxyAuthor}
 
 
-Definición en la línea 14 del archivo Ctrl\+Data.\+java.
+Definición en la línea 24 del archivo Ctrl\+Data.\+java.
 
 
 
@@ -55,13 +86,15 @@ Creadora por defecto.
 
 
 
-Definición en la línea 34 del archivo Ctrl\+Data.\+java.
+Definición en la línea 56 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{34                       \{}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36     \}}
+\DoxyCodeLine{56                       \{}
+\DoxyCodeLine{57         \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrlPlayerData}} = \textcolor{keyword}{new} CtrlPlayerData();}
+\DoxyCodeLine{58         \mbox{\hyperlink{classdata_1_1_ctrl_data_a17973f1d73c0a085a26e8f08593ab5c6}{ctrlGameData}} = \textcolor{keyword}{new} CtrlGameData();}
+\DoxyCodeLine{59         \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrlKakuroData}} = \textcolor{keyword}{new} CtrlKakuroData();}
+\DoxyCodeLine{60     \}}
 
 \end{DoxyCode}
 
@@ -82,15 +115,15 @@ la instancia
 \end{DoxyReturn}
 
 
-Definición en la línea 25 del archivo Ctrl\+Data.\+java.
+Definición en la línea 47 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25                                          \{}
-\DoxyCodeLine{26         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdata_1_1_ctrl_data_a5f2fb5f6bfa941398e0d5cd30a542c1e}{ctrlData}} == \textcolor{keyword}{null})}
-\DoxyCodeLine{27             \mbox{\hyperlink{classdata_1_1_ctrl_data_a5f2fb5f6bfa941398e0d5cd30a542c1e}{ctrlData}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdata_1_1_ctrl_data_ad531e4834fc183b445e925a493cdeb3a}{CtrlData}}();}
-\DoxyCodeLine{28         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a5f2fb5f6bfa941398e0d5cd30a542c1e}{ctrlData}};}
-\DoxyCodeLine{29     \}}
+\DoxyCodeLine{47                                          \{}
+\DoxyCodeLine{48         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdata_1_1_ctrl_data_a5f2fb5f6bfa941398e0d5cd30a542c1e}{ctrlData}} == \textcolor{keyword}{null})}
+\DoxyCodeLine{49             \mbox{\hyperlink{classdata_1_1_ctrl_data_a5f2fb5f6bfa941398e0d5cd30a542c1e}{ctrlData}} = \textcolor{keyword}{new} \mbox{\hyperlink{classdata_1_1_ctrl_data_ad531e4834fc183b445e925a493cdeb3a}{CtrlData}}();}
+\DoxyCodeLine{50         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a5f2fb5f6bfa941398e0d5cd30a542c1e}{ctrlData}};}
+\DoxyCodeLine{51     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdata_1_1_ctrl_data_a81eb64d33003810c4e2ffc0cb9dab7f2}\label{classdata_1_1_ctrl_data_a81eb64d33003810c4e2ffc0cb9dab7f2}} 
@@ -99,42 +132,34 @@ Definición en la línea 25 del archivo Ctrl\+Data.\+java.
 \doxysubsubsection{\texorpdfstring{searchKakuro()}{searchKakuro()}}
 {\footnotesize\ttfamily String data.\+Ctrl\+Data.\+search\+Kakuro (\begin{DoxyParamCaption}\item[{int}]{difficulty,  }\item[{int}]{kakuro\+Size\+Row,  }\item[{int}]{kakuro\+Size\+Column }\end{DoxyParamCaption}) throws I\+O\+Exception}
 
-
-
-Busca un kakuro en fichero. 
+@bief Busca un kakuro con las características pedidas
 
 
 \begin{DoxyParams}{Parámetros}
-{\em difficulty} & representa la dificultad del kakuro buscado \\
+{\em difficulty} & dificultad del kakuro \\
 \hline
-{\em kakuro\+Size\+Row} & representa el tamaño de filas del kakuro buscado \\
+{\em kakuro\+Size\+Row} & número de filas del kakuro \\
 \hline
-{\em kakuro\+Size\+Column} & representa el tamaño de columnas del kakuro buscado \\
+{\em kakuro\+Size\+Column} & número de columnas del kakuro \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Devuelve}
-un kakuro con la dificultad y el tamaño deseado en formato String 
+un string que representa el kakuro encontrado 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Excepciones}
+{\em I\+O\+Exception} & en caso de que no exista un kakuro de esas características \\
+\hline
+\end{DoxyExceptions}
 
-Definición en la línea 45 del archivo Ctrl\+Data.\+java.
+
+Definición en la línea 70 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{45                                                                                                             \{}
-\DoxyCodeLine{46         Random random = \textcolor{keyword}{new} Random();}
-\DoxyCodeLine{47         \textcolor{keywordtype}{int} numFile;}
-\DoxyCodeLine{48         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{49             numFile = \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{getNumberOfFiles}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
-\DoxyCodeLine{50         \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
-\DoxyCodeLine{51             \textcolor{keywordflow}{throw} \textcolor{keyword}{new} IOException();}
-\DoxyCodeLine{52         \}}
-\DoxyCodeLine{53         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = random.nextInt(numFile);}
-\DoxyCodeLine{54         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{55         content.append(\textcolor{keywordtype}{id}).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{56         content.append(\mbox{\hyperlink{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}{getKakuro}}(\textcolor{stringliteral}{"{}data/diff"{}} + difficulty + \textcolor{stringliteral}{"{}/"{}} + kakuroSizeRow + \textcolor{stringliteral}{"{}\_"{}} + kakuroSizeColumn + \textcolor{stringliteral}{"{}/"{}} + \textcolor{keywordtype}{id} + \textcolor{stringliteral}{"{}.txt"{}}));}
-\DoxyCodeLine{57         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{58     \}}
+\DoxyCodeLine{70                                                                                                             \{}
+\DoxyCodeLine{71         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrlKakuroData}}.\mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data_acec3e9c4455e4643b306038a569bfdba}{searchKakuro}}(difficulty, kakuroSizeRow, kakuroSizeColumn);}
+\DoxyCodeLine{72     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}\label{classdata_1_1_ctrl_data_a0e1fe3fea7dce1dbf77b922efa22c525}} 
@@ -145,33 +170,30 @@ Definición en la línea 45 del archivo Ctrl\+Data.\+java.
 
 
 
-Busca un kakuro en fichero a partir de una ruta relativa. 
+Esta función retorna el kakuro de la ruta establecida. 
 
 
 \begin{DoxyParams}{Parámetros}
-{\em file\+Path} & representa una ruta relativa \\
+{\em file\+Path} & ruta en la que se encuentra el kakuro \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Devuelve}
-el kakuro que se encuentra en la ruta relativa en formato String 
+un string que representa el kakuro 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Excepciones}
+{\em I\+O\+Exception} & en caso de que no se encuentre el kakuro \\
+\hline
+\end{DoxyExceptions}
 
-Definición en la línea 65 del archivo Ctrl\+Data.\+java.
+
+Definición en la línea 80 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{65                                                                 \{}
-\DoxyCodeLine{66         StringBuilder content = \textcolor{keyword}{new} StringBuilder();}
-\DoxyCodeLine{67         File file = \textcolor{keyword}{new} File(filePath);}
-\DoxyCodeLine{68         FileReader fr = \textcolor{keyword}{new} FileReader(file);}
-\DoxyCodeLine{69         BufferedReader br = \textcolor{keyword}{new} BufferedReader(fr);}
-\DoxyCodeLine{70         String line = \textcolor{keyword}{null};}
-\DoxyCodeLine{71         \textcolor{keywordflow}{while} ((line = br.readLine()) != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{72             content.append(line).append(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{73         \}}
-\DoxyCodeLine{74         \textcolor{keywordflow}{return} content.toString();}
-\DoxyCodeLine{75     \}}
+\DoxyCodeLine{80                                                                 \{}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrlKakuroData}}.\mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data_a43371b87e93cc6b10d2185aeeae642ce}{getKakuro}}(filePath);}
+\DoxyCodeLine{82     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdata_1_1_ctrl_data_a4d39c4aa0fde118f333f73a489218f7c}\label{classdata_1_1_ctrl_data_a4d39c4aa0fde118f333f73a489218f7c}} 
@@ -182,93 +204,419 @@ Definición en la línea 65 del archivo Ctrl\+Data.\+java.
 
 
 
-Guarda un kakuro en fichero. 
+Esta función guarda el kakuro y su solución en fichero. 
 
 
 \begin{DoxyParams}{Parámetros}
-{\em content} & representa el contenido del kakuro \\
+{\em content} & contenido del kakuro \\
 \hline
-{\em solution} & representa el kakuro resuelto \\
+{\em solution} & solución del kakuro \\
 \hline
-{\em diff} & representa la dificultad del kakuro \\
+{\em diff} & dificultad del kakuro \\
 \hline
-{\em size\+Row} & representa el tamaño de filas del kakuro \\
+{\em size\+Row} & número de filas del kakuro \\
 \hline
-{\em size\+Column} & representa el tamaño de columnas del kakuro \\
-\hline
-\end{DoxyParams}
-
-
-Definición en la línea 85 del archivo Ctrl\+Data.\+java.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{85                                                                                                   \{}
-\DoxyCodeLine{86         FileWriter file = \textcolor{keyword}{null};}
-\DoxyCodeLine{87         \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{88             \textcolor{keywordtype}{int} number;}
-\DoxyCodeLine{89             \textcolor{keywordflow}{try} \{}
-\DoxyCodeLine{90                 number = \mbox{\hyperlink{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}{getNumberOfFiles}}(diff, sizeRow, sizeColumn);}
-\DoxyCodeLine{91             \} \textcolor{keywordflow}{catch} (NullPointerException e) \{}
-\DoxyCodeLine{92                 number = 0;}
-\DoxyCodeLine{93                 File folder = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}data/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn);}
-\DoxyCodeLine{94                 folder.mkdir();}
-\DoxyCodeLine{95             \}}
-\DoxyCodeLine{96             \textcolor{keywordflow}{if} (solution != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{97                 File folderSol = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}data/solutions/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn);}
-\DoxyCodeLine{98                 folderSol.mkdir();}
-\DoxyCodeLine{99             \}}
-\DoxyCodeLine{100             file = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}data/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn + \textcolor{stringliteral}{"{}/"{}} + number + \textcolor{stringliteral}{"{}.txt"{}});}
-\DoxyCodeLine{101             PrintWriter pw = \textcolor{keyword}{new} PrintWriter(file);}
-\DoxyCodeLine{102             pw.print(content);}
-\DoxyCodeLine{103             pw.close();}
-\DoxyCodeLine{104             \textcolor{keywordflow}{if} (solution != \textcolor{keyword}{null}) \{}
-\DoxyCodeLine{105                 file = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}data/solutions/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn + \textcolor{stringliteral}{"{}/"{}} + number + \textcolor{stringliteral}{"{}.txt"{}});}
-\DoxyCodeLine{106                 PrintWriter pwSol = \textcolor{keyword}{new} PrintWriter(file);}
-\DoxyCodeLine{107                 pwSol.print(solution);}
-\DoxyCodeLine{108                 pwSol.close();}
-\DoxyCodeLine{109             \}}
-\DoxyCodeLine{110             \textcolor{keywordflow}{return} number;}
-\DoxyCodeLine{111         \} \textcolor{keywordflow}{catch} (IOException ioException) \{}
-\DoxyCodeLine{112             ioException.printStackTrace();}
-\DoxyCodeLine{113         \}}
-\DoxyCodeLine{114         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{115     \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}\label{classdata_1_1_ctrl_data_a03331d5269d4d35a33b534cd934605e9}} 
-\index{data.CtrlData@{data.CtrlData}!getNumberOfFiles@{getNumberOfFiles}}
-\index{getNumberOfFiles@{getNumberOfFiles}!data.CtrlData@{data.CtrlData}}
-\doxysubsubsection{\texorpdfstring{getNumberOfFiles()}{getNumberOfFiles()}}
-{\footnotesize\ttfamily int data.\+Ctrl\+Data.\+get\+Number\+Of\+Files (\begin{DoxyParamCaption}\item[{int}]{diff,  }\item[{int}]{size\+Row,  }\item[{int}]{size\+Column }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
-
-
-
-Mira cuántos ficheros tienen una dificultad y tamaño en concreto. 
-
-Busca cuantos ficheros hay con dificultad=diff y tamaño=size 
-\begin{DoxyParams}{Parámetros}
-{\em diff} & representa la dificultad de un kakuro \\
-\hline
-{\em size\+Row} & representa el tamaño de filas de un kakuro \\
-\hline
-{\em size\+Column} & representa el tamaño de columnas del kakuro \\
+{\em size\+Column} & número de columnas del kakuro \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Devuelve}
-la cantidad de ficheros que cumplen las condiciones 
+un entero que representa el número del kakuro 
 \end{DoxyReturn}
+
+
+Definición en la línea 93 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{93                                                                                                   \{}
+\DoxyCodeLine{94         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrlKakuroData}}.\mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data_a8051477ce0819468044c3f42e99c351f}{saveKakuro}}(content, solution, diff, sizeRow, sizeColumn);}
+\DoxyCodeLine{95     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_aa1aa1bfe06407986ddef3ebff7a6e29d}\label{classdata_1_1_ctrl_data_aa1aa1bfe06407986ddef3ebff7a6e29d}} 
+\index{data.CtrlData@{data.CtrlData}!getNumberOfPlayers@{getNumberOfPlayers}}
+\index{getNumberOfPlayers@{getNumberOfPlayers}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getNumberOfPlayers()}{getNumberOfPlayers()}}
+{\footnotesize\ttfamily int data.\+Ctrl\+Data.\+get\+Number\+Of\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Esta función retorna el número de jugadores. 
+
+\begin{DoxyReturn}{Devuelve}
+un entero que representa el número de jugadores 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Null\+Pointer\+Exception} & en caso de que no existan jugadores \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 102 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{102                                                                 \{}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrlPlayerData}}.\mbox{\hyperlink{classdata_1_1_ctrl_player_data_a6db613604f4d4cd24040b3aeb9ca6136}{getNumberOfPlayers}}();}
+\DoxyCodeLine{104     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a5d24d28f1635302d7f12df9630b483f0}\label{classdata_1_1_ctrl_data_a5d24d28f1635302d7f12df9630b483f0}} 
+\index{data.CtrlData@{data.CtrlData}!getListOfPlayers@{getListOfPlayers}}
+\index{getListOfPlayers@{getListOfPlayers}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getListOfPlayers()}{getListOfPlayers()}}
+{\footnotesize\ttfamily Json\+Reader \mbox{[}$\,$\mbox{]} data.\+Ctrl\+Data.\+get\+List\+Of\+Players (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Esta función retorna una lista de los jugadores. 
+
+\begin{DoxyReturn}{Devuelve}
+un vector con todos los jugadores en formato json 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em Null\+Pointer\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definición en la línea 115 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{115                                                                        \{}
+\DoxyCodeLine{116         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrlPlayerData}}.\mbox{\hyperlink{classdata_1_1_ctrl_player_data_ae4787384375fd16aed671e8013e12c5b}{getListOfPlayers}}();}
+\DoxyCodeLine{117     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_ae617ea8a9d0ca2e13fb2804e11f38747}\label{classdata_1_1_ctrl_data_ae617ea8a9d0ca2e13fb2804e11f38747}} 
+\index{data.CtrlData@{data.CtrlData}!getUser@{getUser}}
+\index{getUser@{getUser}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily Json\+Reader data.\+Ctrl\+Data.\+get\+User (\begin{DoxyParamCaption}\item[{String}]{username }\end{DoxyParamCaption}) throws File\+Not\+Found\+Exception}
+
+Esta función retorna el archivo json del usuario correspondiente
+
+
+\begin{DoxyParams}{Parámetros}
+{\em username} & nombre de usuario del que se ha de retornar el archivo json \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+un json con la información del usuario correspondiente 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Excepciones}
+{\em File\+Not\+Found\+Exception} & en caso de que no exista un usuario con ese nombre de usuario \\
+\hline
+\end{DoxyExceptions}
 
 
 Definición en la línea 125 del archivo Ctrl\+Data.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{125                                                                                                    \{}
-\DoxyCodeLine{126         File folder = \textcolor{keyword}{new} File(\textcolor{stringliteral}{"{}data/diff"{}} + diff + \textcolor{stringliteral}{"{}/"{}} + sizeRow + \textcolor{stringliteral}{"{}\_"{}} + sizeColumn);}
-\DoxyCodeLine{127         File[] listFiles = folder.listFiles();}
-\DoxyCodeLine{128         \textcolor{keywordflow}{return} listFiles.length;}
-\DoxyCodeLine{129     \}}
+\DoxyCodeLine{125                                                                             \{}
+\DoxyCodeLine{126         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrlPlayerData}}.\mbox{\hyperlink{classdata_1_1_ctrl_player_data_a385bdd1e8b4d220817ad2ccf875733fb}{getUser}}(username);}
+\DoxyCodeLine{127     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_ac5831b44014d3fd77b5de591055bb557}\label{classdata_1_1_ctrl_data_ac5831b44014d3fd77b5de591055bb557}} 
+\index{data.CtrlData@{data.CtrlData}!savePlayer@{savePlayer}}
+\index{savePlayer@{savePlayer}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{savePlayer()}{savePlayer()}}
+{\footnotesize\ttfamily void data.\+Ctrl\+Data.\+save\+Player (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{player\+J\+S\+ON }\end{DoxyParamCaption})}
+
+
+
+Guarda al jugador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em username} & nombre de usuario del jugador a guardar \\
+\hline
+{\em player\+J\+S\+ON} & contenido del fichero asociado al jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 134 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{134                                                                \{}
+\DoxyCodeLine{135         \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrlPlayerData}}.\mbox{\hyperlink{classdata_1_1_ctrl_player_data_af27632568392ce45fa024bb38901b2e4}{savePlayer}}(username, playerJSON);}
+\DoxyCodeLine{136     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a2d441d8baaa6611e860005ac62fedf96}\label{classdata_1_1_ctrl_data_a2d441d8baaa6611e860005ac62fedf96}} 
+\index{data.CtrlData@{data.CtrlData}!existsPlayer@{existsPlayer}}
+\index{existsPlayer@{existsPlayer}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{existsPlayer()}{existsPlayer()}}
+{\footnotesize\ttfamily boolean data.\+Ctrl\+Data.\+exists\+Player (\begin{DoxyParamCaption}\item[{String}]{username }\end{DoxyParamCaption})}
+
+
+
+Esta función nos indica si existe un jugador con el nombre de usuario pasado por parámetro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em username} & nombre de usuario a comprobar si ya existe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+cierto en caso de que ya exista un usuario con nombre de usuario username, falso en caso contrario 
+\end{DoxyReturn}
+
+
+Definición en la línea 143 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{143                                                  \{}
+\DoxyCodeLine{144         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}{ctrlPlayerData}}.\mbox{\hyperlink{classdata_1_1_ctrl_player_data_a6d85235dc547fc12e00c7eebae5c358b}{existsPlayer}}(username);}
+\DoxyCodeLine{145     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a7bdc6354bbec66f11c0c10be801adac1}\label{classdata_1_1_ctrl_data_a7bdc6354bbec66f11c0c10be801adac1}} 
+\index{data.CtrlData@{data.CtrlData}!getNewGameId@{getNewGameId}}
+\index{getNewGameId@{getNewGameId}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getNewGameId()}{getNewGameId()}}
+{\footnotesize\ttfamily int data.\+Ctrl\+Data.\+get\+New\+Game\+Id (\begin{DoxyParamCaption}\item[{String}]{username }\end{DoxyParamCaption})}
+
+
+
+Esta función retorna un id válido para una partida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em username} & nombre del usuario que necesita el id \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+un entero que representa un id válido para una partida del usuario username 
+\end{DoxyReturn}
+
+
+Definición en la línea 152 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{152                                              \{}
+\DoxyCodeLine{153         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdata_1_1_ctrl_data_a17973f1d73c0a085a26e8f08593ab5c6}{ctrlGameData}}.\mbox{\hyperlink{classdata_1_1_ctrl_game_data_ae004ed963cd5b2fbc8eb3075f4b6f262}{getNewGameId}}(username);}
+\DoxyCodeLine{154     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a7fb56d78ca8aab2b3874d8064eba2fd9}\label{classdata_1_1_ctrl_data_a7fb56d78ca8aab2b3874d8064eba2fd9}} 
+\index{data.CtrlData@{data.CtrlData}!saveKakuroGame@{saveKakuroGame}}
+\index{saveKakuroGame@{saveKakuroGame}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{saveKakuroGame()}{saveKakuroGame()}}
+{\footnotesize\ttfamily void data.\+Ctrl\+Data.\+save\+Kakuro\+Game (\begin{DoxyParamCaption}\item[{String}]{kakuro,  }\item[{String}]{username,  }\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Esta función guarda una partida del usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em kakuro} & string que representa el kakuro a guardar \\
+\hline
+{\em username} & nombre de usuario del jugador \\
+\hline
+{\em id} & entero que representa el identifcador de la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 162 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{162                                                                        \{}
+\DoxyCodeLine{163         \mbox{\hyperlink{classdata_1_1_ctrl_data_a17973f1d73c0a085a26e8f08593ab5c6}{ctrlGameData}}.\mbox{\hyperlink{classdata_1_1_ctrl_game_data_a1a517ac9c8db71a3566923ec78609b72}{saveKakuroGame}}(kakuro, username, \textcolor{keywordtype}{id});}
+\DoxyCodeLine{164     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a0541adfac1fb03435c508831c768ad67}\label{classdata_1_1_ctrl_data_a0541adfac1fb03435c508831c768ad67}} 
+\index{data.CtrlData@{data.CtrlData}!getListOfKakuros@{getListOfKakuros}}
+\index{getListOfKakuros@{getListOfKakuros}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getListOfKakuros()}{getListOfKakuros()}}
+{\footnotesize\ttfamily void data.\+Ctrl\+Data.\+get\+List\+Of\+Kakuros (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Esta función actualiza los records de kakuros. 
+
+
+
+Definición en la línea 169 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{169                                    \{}
+\DoxyCodeLine{170         \mbox{\hyperlink{classdata_1_1_ctrl_data_ad0f6466163fc58d822d992a112f7f201}{saveKakuroRecord}}( \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrlKakuroData}}.\mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data_a536db1d16427607192d18784e0640653}{getListOfKakuros}}());}
+\DoxyCodeLine{171     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_ac8b60faaac9cd47a123bff70d447be35}\label{classdata_1_1_ctrl_data_ac8b60faaac9cd47a123bff70d447be35}} 
+\index{data.CtrlData@{data.CtrlData}!getThisKakuro@{getThisKakuro}}
+\index{getThisKakuro@{getThisKakuro}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getThisKakuro()}{getThisKakuro()}}
+{\footnotesize\ttfamily String data.\+Ctrl\+Data.\+get\+This\+Kakuro (\begin{DoxyParamCaption}\item[{String}]{s }\end{DoxyParamCaption})}
+
+
+
+Busca un kakuro a partir de una ruta relativa. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em s} & ruta relativa donde se encuentra el kakuro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+string que representa el kakuro encontrado 
+\end{DoxyReturn}
+
+
+Definición en la línea 178 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{178                                           \{}
+\DoxyCodeLine{179         String k = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{180         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{181             k = \mbox{\hyperlink{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}{ctrlKakuroData}}.\mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data_a43371b87e93cc6b10d2185aeeae642ce}{getKakuro}}(s);}
+\DoxyCodeLine{182         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{183             e.printStackTrace();}
+\DoxyCodeLine{184         \}}
+\DoxyCodeLine{185         \textcolor{keywordflow}{return} k;}
+\DoxyCodeLine{186     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_ad0f6466163fc58d822d992a112f7f201}\label{classdata_1_1_ctrl_data_ad0f6466163fc58d822d992a112f7f201}} 
+\index{data.CtrlData@{data.CtrlData}!saveKakuroRecord@{saveKakuroRecord}}
+\index{saveKakuroRecord@{saveKakuroRecord}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{saveKakuroRecord()}{saveKakuroRecord()}}
+{\footnotesize\ttfamily void data.\+Ctrl\+Data.\+save\+Kakuro\+Record (\begin{DoxyParamCaption}\item[{Json\+Array}]{record }\end{DoxyParamCaption})}
+
+
+
+Función que actualiza los records de kakuros. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em record} & información de records a guardar en el fichero json correspondiente \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 192 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{192                                                    \{}
+\DoxyCodeLine{193         FileWriter file = \textcolor{keyword}{null};}
+\DoxyCodeLine{194         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{195             file = \textcolor{keyword}{new} FileWriter(\textcolor{stringliteral}{"{}data/kakuros.json"{}});}
+\DoxyCodeLine{196         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{197             e.printStackTrace();}
+\DoxyCodeLine{198         \}}
+\DoxyCodeLine{199         PrintWriter pw = \textcolor{keyword}{new} PrintWriter(file);}
+\DoxyCodeLine{200         pw.print(\textcolor{keyword}{new} Gson().toJson(record));}
+\DoxyCodeLine{201         pw.close();}
+\DoxyCodeLine{202     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a2633ee99d81892796a1187b52a3db7c7}\label{classdata_1_1_ctrl_data_a2633ee99d81892796a1187b52a3db7c7}} 
+\index{data.CtrlData@{data.CtrlData}!getkakuroRecord@{getkakuroRecord}}
+\index{getkakuroRecord@{getkakuroRecord}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{getkakuroRecord()}{getkakuroRecord()}}
+{\footnotesize\ttfamily Json\+Array data.\+Ctrl\+Data.\+getkakuro\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que obtiene la información de records del fichero json correspondiente. 
+
+\begin{DoxyReturn}{Devuelve}
+un Json\+Array con información sobre los records de kakuro 
+\end{DoxyReturn}
+
+
+Definición en la línea 209 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{209                                        \{}
+\DoxyCodeLine{210         JsonReader reader = \textcolor{keyword}{null};}
+\DoxyCodeLine{211         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{212             reader = \textcolor{keyword}{new} JsonReader(\textcolor{keyword}{new} FileReader(\textcolor{stringliteral}{"{}data/kakuros.json"{}}));}
+\DoxyCodeLine{213         \} \textcolor{keywordflow}{catch} (FileNotFoundException e) \{}
+\DoxyCodeLine{214             e.printStackTrace();}
+\DoxyCodeLine{215         \}}
+\DoxyCodeLine{216         JsonArray l = \textcolor{keyword}{new} Gson().fromJson(reader, JsonArray.class);}
+\DoxyCodeLine{217         String newObject = \textcolor{keyword}{new} Gson().toJson(\mbox{\hyperlink{classdata_1_1_ctrl_data_a1cc2c4dc44f185cfe84710ba7a9c852a}{sortJson}}(l));}
+\DoxyCodeLine{218         l = \textcolor{keyword}{new} Gson().fromJson(newObject, JsonArray.class);}
+\DoxyCodeLine{219         \textcolor{keywordflow}{return} l;}
+\DoxyCodeLine{220     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a1cc2c4dc44f185cfe84710ba7a9c852a}\label{classdata_1_1_ctrl_data_a1cc2c4dc44f185cfe84710ba7a9c852a}} 
+\index{data.CtrlData@{data.CtrlData}!sortJson@{sortJson}}
+\index{sortJson@{sortJson}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{sortJson()}{sortJson()}}
+{\footnotesize\ttfamily List$<$Json\+Object$>$ data.\+Ctrl\+Data.\+sort\+Json (\begin{DoxyParamCaption}\item[{Json\+Array}]{l }\end{DoxyParamCaption})}
+
+
+
+Esta función ordenada los kakuros en formato json según dificultad y tamaño. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em l} & información de los kakuros \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+una lista de json ordenados 
+\end{DoxyReturn}
+
+
+Definición en la línea 227 del archivo Ctrl\+Data.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{227                                                   \{}
+\DoxyCodeLine{228         List<JsonObject> list = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{229         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < l.size(); ++i) \{}
+\DoxyCodeLine{230             list.add(l.get(i).getAsJsonObject());}
+\DoxyCodeLine{231         \}}
+\DoxyCodeLine{232         list.sort((e1, e2) -\/> \{}
+\DoxyCodeLine{233             \textcolor{keyword}{final} \textcolor{keywordtype}{int} i1 = Integer.parseInt(e1.getAsJsonObject().get(\textcolor{stringliteral}{"{}diff"{}}).getAsString());}
+\DoxyCodeLine{234             \textcolor{keyword}{final} \textcolor{keywordtype}{int} i2 = Integer.parseInt(e2.getAsJsonObject().get(\textcolor{stringliteral}{"{}diff"{}}).getAsString());}
+\DoxyCodeLine{235             \textcolor{keyword}{final} \textcolor{keywordtype}{int} i3 = Integer.compare(i1, i2);}
+\DoxyCodeLine{236             if (i1 != i2) \textcolor{keywordflow}{return} i3;}
+\DoxyCodeLine{237             String size1 = e1.getAsJsonObject().\textcolor{keyword}{get}(\textcolor{stringliteral}{"{}size"{}}).getAsString();}
+\DoxyCodeLine{238             String[] sizes1 = size1.split(\textcolor{stringliteral}{"{}\_"{}});}
+\DoxyCodeLine{239             \textcolor{keywordtype}{int} size1\_1 = Integer.parseInt(sizes1[0]);}
+\DoxyCodeLine{240             \textcolor{keywordtype}{int} size1\_2 = Integer.parseInt(sizes1[1]);}
+\DoxyCodeLine{241             String size2 = e2.getAsJsonObject().\textcolor{keyword}{get}(\textcolor{stringliteral}{"{}size"{}}).getAsString();}
+\DoxyCodeLine{242             String[] sizes2 = size2.split(\textcolor{stringliteral}{"{}\_"{}});}
+\DoxyCodeLine{243             \textcolor{keywordtype}{int} size2\_1 = Integer.parseInt(sizes2[0]);}
+\DoxyCodeLine{244             \textcolor{keywordtype}{int} size2\_2 = Integer.parseInt(sizes2[1]);}
+\DoxyCodeLine{245             \textcolor{keyword}{final} \textcolor{keywordtype}{int} i6 = Integer.compare(size1\_1, size2\_1);}
+\DoxyCodeLine{246             \textcolor{keywordflow}{if} (size1\_1 != size2\_1) \textcolor{keywordflow}{return} i6;}
+\DoxyCodeLine{247             \textcolor{keyword}{final} \textcolor{keywordtype}{int} i10 = Integer.compare(size1\_2, size2\_2);}
+\DoxyCodeLine{248             \textcolor{keywordflow}{if} (size1\_2 != size2\_2) \textcolor{keywordflow}{return} i10;}
+\DoxyCodeLine{249             String id1 = e1.getAsJsonObject().\textcolor{keyword}{get}(\textcolor{stringliteral}{"{}id"{}}).getAsString();}
+\DoxyCodeLine{250             String id2 = e2.getAsJsonObject().\textcolor{keyword}{get}(\textcolor{stringliteral}{"{}id"{}}).getAsString();}
+\DoxyCodeLine{251             \textcolor{keywordtype}{int} intId1 = Integer.parseInt(id1.substring(0, id1.indexOf(\textcolor{stringliteral}{"{}."{}})));}
+\DoxyCodeLine{252             \textcolor{keywordtype}{int} intId2 = Integer.parseInt(id2.substring(0, id2.indexOf(\textcolor{stringliteral}{"{}."{}})));}
+\DoxyCodeLine{253             \textcolor{keyword}{final} \textcolor{keywordtype}{int} i9 = Integer.compare(intId1, intId2);}
+\DoxyCodeLine{254             \textcolor{keywordflow}{return} i9;}
+\DoxyCodeLine{255         \});}
+\DoxyCodeLine{256         \textcolor{keywordflow}{return} list;}
+\DoxyCodeLine{257     \}}
 
 \end{DoxyCode}
 
@@ -282,7 +630,37 @@ Definición en la línea 125 del archivo Ctrl\+Data.\+java.
 
 ctrl\+Data es la instancia del \mbox{\hyperlink{classdata_1_1_ctrl_data}{Ctrl\+Data}} 
 
-Definición en la línea 18 del archivo Ctrl\+Data.\+java.
+Definición en la línea 28 del archivo Ctrl\+Data.\+java.
+
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}\label{classdata_1_1_ctrl_data_a52ae1d9d30184c2431c257e2d93d9ff7}} 
+\index{data.CtrlData@{data.CtrlData}!ctrlPlayerData@{ctrlPlayerData}}
+\index{ctrlPlayerData@{ctrlPlayerData}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{ctrlPlayerData}{ctrlPlayerData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata_1_1_ctrl_player_data}{Ctrl\+Player\+Data}} data.\+Ctrl\+Data.\+ctrl\+Player\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+ctrl\+Player\+Data es la instancia de ctrl\+Playuer\+Data 
+
+Definición en la línea 32 del archivo Ctrl\+Data.\+java.
+
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a17973f1d73c0a085a26e8f08593ab5c6}\label{classdata_1_1_ctrl_data_a17973f1d73c0a085a26e8f08593ab5c6}} 
+\index{data.CtrlData@{data.CtrlData}!ctrlGameData@{ctrlGameData}}
+\index{ctrlGameData@{ctrlGameData}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{ctrlGameData}{ctrlGameData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata_1_1_ctrl_game_data}{Ctrl\+Game\+Data}} data.\+Ctrl\+Data.\+ctrl\+Game\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+ctrl\+Game\+Data es la instancia del ctrl\+Game\+Data 
+
+Definición en la línea 36 del archivo Ctrl\+Data.\+java.
+
+\mbox{\Hypertarget{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}\label{classdata_1_1_ctrl_data_a956207758024feb37adc8143a520363b}} 
+\index{data.CtrlData@{data.CtrlData}!ctrlKakuroData@{ctrlKakuroData}}
+\index{ctrlKakuroData@{ctrlKakuroData}!data.CtrlData@{data.CtrlData}}
+\doxysubsubsection{\texorpdfstring{ctrlKakuroData}{ctrlKakuroData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdata_1_1_ctrl_kakuro_data}{Ctrl\+Kakuro\+Data}} data.\+Ctrl\+Data.\+ctrl\+Kakuro\+Data\hspace{0.3cm}{\ttfamily [private]}}
+
+ctrl\+Kakuro\+Data es la instancia del ctrl\+Kakuro\+Data 
+
+Definición en la línea 40 del archivo Ctrl\+Data.\+java.
 
 
 

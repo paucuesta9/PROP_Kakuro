@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['help_333',['help',['../classpresentation_1_1_ctrl_u_i.html#a671b857cb4b762add84beca6c58c1ce5',1,'presentation::CtrlUI']]],
-  ['helpcorrectnumber_334',['helpCorrectNumber',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a29785e3d8f7975fec97544606c3b3773',1,'domain.controllers.CtrlDomain.helpCorrectNumber()'],['../classdomain_1_1controllers_1_1_ctrl_play.html#a5f0c3b1a74d4a71dac54936a4e1aace8',1,'domain.controllers.CtrlPlay.helpCorrectNumber()']]],
-  ['helpmyvalue_335',['helpMyValue',['../classdomain_1_1controllers_1_1_ctrl_domain.html#ac571b44b2ea9370ad8dc99cbb51c2672',1,'domain.controllers.CtrlDomain.helpMyValue()'],['../classdomain_1_1controllers_1_1_ctrl_play.html#a6556ede4ec7f0d1e8e617ffe46b887b9',1,'domain.controllers.CtrlPlay.helpMyValue()']]],
-  ['howmanynumbers_336',['howManyNumbers',['../classdomain_1_1controllers_1_1_ctrl_validate.html#a47c851a5435749e7fdd78845a416d0fc',1,'domain::controllers::CtrlValidate']]],
-  ['howmanywhites_337',['howManyWhites',['../classdomain_1_1controllers_1_1_ctrl_generate.html#af1b1932c1763741fca669281d1151fb8',1,'domain::controllers::CtrlGenerate']]]
+  ['fillboard_947',['fillBoard',['../classdomain_1_1controllers_1_1_ctrl_generate.html#aad1fd335d5b101123b344ffa15019b5f',1,'domain::controllers::CtrlGenerate']]],
+  ['fillboardaux_948',['fillBoardAux',['../classdomain_1_1controllers_1_1_ctrl_generate.html#aff8f1b92ba28a838119313ad720316aa',1,'domain::controllers::CtrlGenerate']]],
+  ['fillboardaux2_949',['fillBoardAux2',['../classdomain_1_1controllers_1_1_ctrl_generate.html#aa2b585d7dafc7e8eaafeb652d85bc1de',1,'domain::controllers::CtrlGenerate']]],
+  ['findkakuro_950',['findKakuro',['../classpresentation_1_1_ctrl_u_i.html#adb88dd57cc7805700a5c9d340d2ea0b0',1,'presentation::CtrlUI']]],
+  ['finishedgame_951',['FinishedGame',['../classpresentation_1_1_finished_game.html#a23f3d6c72dd33a5dc12273e642d0a2d0',1,'presentation::FinishedGame']]],
+  ['finishgame_952',['finishGame',['../classdomain_1_1controllers_1_1_ctrl_domain.html#a2cddf096335f4e5c4371f68668b2065f',1,'domain.controllers.CtrlDomain.finishGame()'],['../classdomain_1_1controllers_1_1_ctrl_play.html#af9e28694a61973cb717640fe521f0f57',1,'domain.controllers.CtrlPlay.finishGame()'],['../classpresentation_1_1_ctrl_play_u_i.html#a4c8b90ac6c9968397f2751f8a51b7df8',1,'presentation.CtrlPlayUI.finishGame()'],['../classpresentation_1_1_ctrl_u_i.html#a1237b90c8f69bd69f1ce531b81e9b71b',1,'presentation.CtrlUI.finishGame()'],['../classpresentation_1_1_play.html#aebfa71110089c6cf0ca9b79a73b8cd04',1,'presentation.Play.finishGame()']]],
+  ['firstcolrow_953',['firstColRow',['../classdomain_1_1controllers_1_1_ctrl_generate.html#a9e4f9172e63fcdc43c9681435d146d89',1,'domain::controllers::CtrlGenerate']]]
 ];

@@ -1,6 +1,7 @@
 package domain.controllers.drivers;
 
 import domain.classes.*;
+import domain.classes.Exceptions.CantGenerateException;
 import domain.controllers.CtrlPlay;
 import domain.controllers.stubs.CtrlDomain;
 
@@ -24,7 +25,11 @@ public class DriverCtrlPlay {
      */
     private static void testCtrlPlay1() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay play = new CtrlPlay(0,9,9,cdStub, true);
+        try {
+            CtrlPlay play = new CtrlPlay(0,9,9,cdStub, true);
+        } catch (CantGenerateException e) {
+            e.printStackTrace();
+        }
         System.out.println("Se ha creado");
     }
 
@@ -32,7 +37,7 @@ public class DriverCtrlPlay {
      */
     private static void testCtrlPlay2() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay play = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        CtrlPlay play = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub, false);
         System.out.println("Se ha creado");
     }
 
@@ -56,7 +61,7 @@ public class DriverCtrlPlay {
      */
     private static void testHelpMyValue() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub, false);
         System.out.println("Introduce la fila de la celda:");
         int x = readNumber();
         System.out.println("Introduce la columna de la celda:");
@@ -75,7 +80,7 @@ public class DriverCtrlPlay {
      */
     private static void testHelpCorrectNumber() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub, false);
         System.out.println("Introduce la fila de la celda:");
         int x = readNumber();
         System.out.println("Introduce la columna de la celda:");
@@ -92,7 +97,7 @@ public class DriverCtrlPlay {
      */
     private static void testFinishGame() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
+        CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub, false);
         System.out.println("Se ha pulsado el boton de resolver? (0->false, 1->true)");
         int x = readNumber();
         boolean b = (x==1);

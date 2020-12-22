@@ -1,30 +1,53 @@
 \hypertarget{classdomain_1_1classes_1_1_player}{}\doxysection{Referencia de la Clase domain.\+classes.\+Player}
 \label{classdomain_1_1classes_1_1_player}\index{domain.classes.Player@{domain.classes.Player}}
+
+
+Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} que representa un jugador y contiene los atributos necesarios de un jugador.  
+
+
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5225c768a2f042c88f1d155f291631ee}{Player}} ()
+\begin{DoxyCompactList}\small\item\em No args constructor for use in serialization. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a420c7cabc691ff2bc54e7e3da62016ba}{Player}} (String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}}, String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}})
-\item 
+\begin{DoxyCompactList}\small\item\em Creadora de \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} con usuario y contraseña. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a1ac0c23acfc4d38ccc64362991b80e73}{Player}} (String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}}, String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}}, \mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}, \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{current\+Game}}, List$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{saved\+Games}}, \mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}})
+\begin{DoxyCompactList}\small\item\em Creadora en la que se pasan todos los atributos necesarios. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2c1006f9d70e9a5978a4c57a3cc6f199}{get\+Username}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter del nombre de usuario. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0822bfc4ba9295acee5ffe7a9fb3318c}{set\+Username}} (String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}})
-\item 
+\begin{DoxyCompactList}\small\item\em Setter del nombre de usuario. \end{DoxyCompactList}\item 
 String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_aa4cb8c5973d54916a5fc1e76ddbc87d2}{get\+Password}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter de la contraseña. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ac180ace525ebef1cc7f4a86f40076124}{set\+Password}} (String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}})
-\item 
+\begin{DoxyCompactList}\small\item\em Setter de la contraseña. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{get\+Stats}} ()
+\begin{DoxyCompactList}\small\item\em Getter de las estadísticas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a03c7128437e86969820c6b278e330939}{set\+Stats}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}})
+\begin{DoxyCompactList}\small\item\em Setter de las estadísticas. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_aa1f74a418d4d29012736720d0b21f262}{get\+Current\+Game}} ()
-\item 
-void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}{set\+Current\+Game}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}{current\+Game}})
-\item 
-Array\+List$<$ Integer $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_af01bbe24d9eed44a4021a77f332d7f1f}{get\+Started\+Games}} ()
-\item 
-void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a3e01e8a4048b63a072281fe6626a1270}{set\+Started\+Games}} (Array\+List$<$ Integer $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{started\+Games}})
-\item 
-void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a3516139a9d778240f6391491d704ba5e}{add\+Started\+Game}} (int id)
-\item 
-void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a791569774ecd300636f08c18687d3530}{deleted\+Started\+Game}} (int id)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Getter de la partida actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}{set\+Current\+Game}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{current\+Game}})
+\begin{DoxyCompactList}\small\item\em Setter de la partida actual. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a9434a396f79f648edc2188bb6684ef1c}{get\+Saved\+Games}} ()
+\begin{DoxyCompactList}\small\item\em Getter de las partidas guardadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0e0393f28c3a1a15efffcce739fddf88}{set\+Saved\+Games}} (List$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{saved\+Games}})
+\begin{DoxyCompactList}\small\item\em Setter de las partidas guardadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_afca3b11603d77bfe05e93d1d55914f46}{get\+Config}} ()
+\begin{DoxyCompactList}\small\item\em Getter de la configuración. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a953ece724e289e2f4d577b800c251be3}{set\+Config}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}})
+\begin{DoxyCompactList}\small\item\em Setter de la configuración. \end{DoxyCompactList}\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a09f0ac2bf3a349151630153cbded2bac}{get\+Config\+To\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Retorna la configuración. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a0214915746aa290c86fca108cc44bdff}{reset\+Congif\+Colors}} ()
+\begin{DoxyCompactList}\small\item\em Función que reseta los colores. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a212a8aa83f3b2f69f3aef038ac28670f}{add\+Saved\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Función que añade la partida actual a las partidas guardadas. \end{DoxyCompactList}\item 
+Array\+List$<$ Integer $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a6779dc4dd63d8add887fd271460e7b7d}{get\+Stats\+Int}} ()
+\begin{DoxyCompactList}\small\item\em Función que retorna las estadísticas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ae84b81230e6ccf293c0b5a19ea41a361}{get\+Game}} (int game)
+\begin{DoxyCompactList}\small\item\em Función que retorna una partida de la lista de guardadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,36 +55,119 @@ String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d
 \item 
 String \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}}
 \item 
-\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}{current\+Game}}
+\mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}
 \item 
-Array\+List$<$ Integer $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{started\+Games}}
+transient \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{current\+Game}}
+\item 
+List$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} $>$ \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{saved\+Games}} = null
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} que representa un jugador y contiene los atributos necesarios de un jugador. 
+
+\begin{DoxyAuthor}{Autor}
+Pau Cuesta Arcos 
+\end{DoxyAuthor}
 
 
-Definición en la línea 5 del archivo Player.\+java.
+Definición en la línea 16 del archivo Player.\+java.
 
 
 
 \doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a5225c768a2f042c88f1d155f291631ee}\label{classdomain_1_1classes_1_1_player_a5225c768a2f042c88f1d155f291631ee}} 
+\index{domain.classes.Player@{domain.classes.Player}!Player@{Player}}
+\index{Player@{Player}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily domain.\+classes.\+Player.\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+No args constructor for use in serialization. 
+
+
+
+Definición en la línea 56 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56                     \{}
+\DoxyCodeLine{57     \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a420c7cabc691ff2bc54e7e3da62016ba}\label{classdomain_1_1classes_1_1_player_a420c7cabc691ff2bc54e7e3da62016ba}} 
 \index{domain.classes.Player@{domain.classes.Player}!Player@{Player}}
 \index{Player@{Player}!domain.classes.Player@{domain.classes.Player}}
-\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily domain.\+classes.\+Player.\+Player (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{password }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 11 del archivo Player.\+java.
+Creadora de \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} con usuario y contraseña. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em username} & nombre de usuario del jugador \\
+\hline
+{\em password} & contraseña del jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 64 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11                                                     \{}
-\DoxyCodeLine{12         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
-\DoxyCodeLine{13         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
-\DoxyCodeLine{14     \}}
+\DoxyCodeLine{64                                                     \{}
+\DoxyCodeLine{65         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
+\DoxyCodeLine{66         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
+\DoxyCodeLine{67         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}} = \textcolor{keyword}{new} Stats();}
+\DoxyCodeLine{68         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}} = \textcolor{keyword}{new} ArrayList<Game>();}
+\DoxyCodeLine{69         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}} = \textcolor{keyword}{new} Config();}
+\DoxyCodeLine{70     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a1ac0c23acfc4d38ccc64362991b80e73}\label{classdomain_1_1classes_1_1_player_a1ac0c23acfc4d38ccc64362991b80e73}} 
+\index{domain.classes.Player@{domain.classes.Player}!Player@{Player}}
+\index{Player@{Player}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily domain.\+classes.\+Player.\+Player (\begin{DoxyParamCaption}\item[{String}]{username,  }\item[{String}]{password,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}}}]{stats,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}}]{current\+Game,  }\item[{List$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} $>$}]{saved\+Games,  }\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}}}]{config }\end{DoxyParamCaption})}
+
+
+
+Creadora en la que se pasan todos los atributos necesarios. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em password} & contraseña del jugador \\
+\hline
+{\em stats} & estadísticas del jugador \\
+\hline
+{\em saved\+Games} & partidas guardadas del jugador \\
+\hline
+{\em config} & configuración del jugador \\
+\hline
+{\em username} & nombre de usuario del jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 80 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                                                                                                          \{}
+\DoxyCodeLine{81         super();}
+\DoxyCodeLine{82         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
+\DoxyCodeLine{83         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
+\DoxyCodeLine{84         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}};}
+\DoxyCodeLine{85         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{currentGame}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{currentGame}};}
+\DoxyCodeLine{86         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}};}
+\DoxyCodeLine{87         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}};}
+\DoxyCodeLine{88     \}}
 
 \end{DoxyCode}
 
@@ -75,13 +181,20 @@ Definición en la línea 11 del archivo Player.\+java.
 
 
 
-Definición en la línea 16 del archivo Player.\+java.
+Getter del nombre de usuario. 
+
+\begin{DoxyReturn}{Devuelve}
+string que representa el nombre de usuario del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 94 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{16                                 \{}
-\DoxyCodeLine{17         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
-\DoxyCodeLine{18     \}}
+\DoxyCodeLine{94                                 \{}
+\DoxyCodeLine{95         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
+\DoxyCodeLine{96     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a0822bfc4ba9295acee5ffe7a9fb3318c}\label{classdomain_1_1classes_1_1_player_a0822bfc4ba9295acee5ffe7a9fb3318c}} 
@@ -92,13 +205,22 @@ Definición en la línea 16 del archivo Player.\+java.
 
 
 
-Definición en la línea 20 del archivo Player.\+java.
+Setter del nombre de usuario. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em username} & nombre de usuario que tendrá el jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 103 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{20                                              \{}
-\DoxyCodeLine{21         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
-\DoxyCodeLine{22     \}}
+\DoxyCodeLine{103                                              \{}
+\DoxyCodeLine{104         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a08248a89c0f2eecfd052d6d072e5d40e}{username}};}
+\DoxyCodeLine{105     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_aa4cb8c5973d54916a5fc1e76ddbc87d2}\label{classdomain_1_1classes_1_1_player_aa4cb8c5973d54916a5fc1e76ddbc87d2}} 
@@ -109,13 +231,20 @@ Definición en la línea 20 del archivo Player.\+java.
 
 
 
-Definición en la línea 24 del archivo Player.\+java.
+Getter de la contraseña. 
+
+\begin{DoxyReturn}{Devuelve}
+string que representa contraseña del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 111 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{24                                 \{}
-\DoxyCodeLine{25         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
-\DoxyCodeLine{26     \}}
+\DoxyCodeLine{111                                 \{}
+\DoxyCodeLine{112         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
+\DoxyCodeLine{113     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_ac180ace525ebef1cc7f4a86f40076124}\label{classdomain_1_1classes_1_1_player_ac180ace525ebef1cc7f4a86f40076124}} 
@@ -126,13 +255,72 @@ Definición en la línea 24 del archivo Player.\+java.
 
 
 
-Definición en la línea 28 del archivo Player.\+java.
+Setter de la contraseña. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em password} & contraseña que tendrá el jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 119 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{28                                              \{}
-\DoxyCodeLine{29         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
-\DoxyCodeLine{30     \}}
+\DoxyCodeLine{119                                              \{}
+\DoxyCodeLine{120         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}{password}};}
+\DoxyCodeLine{121     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}\label{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}} 
+\index{domain.classes.Player@{domain.classes.Player}!getStats@{getStats}}
+\index{getStats@{getStats}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{getStats()}{getStats()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}} domain.\+classes.\+Player.\+get\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de las estadísticas. 
+
+\begin{DoxyReturn}{Devuelve}
+estadísticas del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 127 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{127                             \{}
+\DoxyCodeLine{128         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}};}
+\DoxyCodeLine{129     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a03c7128437e86969820c6b278e330939}\label{classdomain_1_1classes_1_1_player_a03c7128437e86969820c6b278e330939}} 
+\index{domain.classes.Player@{domain.classes.Player}!setStats@{setStats}}
+\index{setStats@{setStats}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{setStats()}{setStats()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Player.\+set\+Stats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}}}]{stats }\end{DoxyParamCaption})}
+
+
+
+Setter de las estadísticas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em stats} & estadísticas que tendrá el jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 135 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{135                                       \{}
+\DoxyCodeLine{136         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}};}
+\DoxyCodeLine{137     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_aa1f74a418d4d29012736720d0b21f262}\label{classdomain_1_1classes_1_1_player_aa1f74a418d4d29012736720d0b21f262}} 
@@ -143,13 +331,20 @@ Definición en la línea 28 del archivo Player.\+java.
 
 
 
-Definición en la línea 32 del archivo Player.\+java.
+Getter de la partida actual. 
+
+\begin{DoxyReturn}{Devuelve}
+la partida actual del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 143 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{32                                  \{}
-\DoxyCodeLine{33         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}{currentGame}};}
-\DoxyCodeLine{34     \}}
+\DoxyCodeLine{143                                  \{}
+\DoxyCodeLine{144         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{currentGame}};}
+\DoxyCodeLine{145     \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}\label{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}} 
@@ -160,81 +355,256 @@ Definición en la línea 32 del archivo Player.\+java.
 
 
 
-Definición en la línea 36 del archivo Player.\+java.
+Setter de la partida actual. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em current\+Game} & la partida actual del juador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 151 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{36                                                  \{}
-\DoxyCodeLine{37         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}{currentGame}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}{currentGame}};}
-\DoxyCodeLine{38     \}}
+\DoxyCodeLine{151                                                  \{}
+\DoxyCodeLine{152         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{currentGame}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{currentGame}};}
+\DoxyCodeLine{153     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_af01bbe24d9eed44a4021a77f332d7f1f}\label{classdomain_1_1classes_1_1_player_af01bbe24d9eed44a4021a77f332d7f1f}} 
-\index{domain.classes.Player@{domain.classes.Player}!getStartedGames@{getStartedGames}}
-\index{getStartedGames@{getStartedGames}!domain.classes.Player@{domain.classes.Player}}
-\doxysubsubsection{\texorpdfstring{getStartedGames()}{getStartedGames()}}
-{\footnotesize\ttfamily Array\+List$<$Integer$>$ domain.\+classes.\+Player.\+get\+Started\+Games (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a9434a396f79f648edc2188bb6684ef1c}\label{classdomain_1_1classes_1_1_player_a9434a396f79f648edc2188bb6684ef1c}} 
+\index{domain.classes.Player@{domain.classes.Player}!getSavedGames@{getSavedGames}}
+\index{getSavedGames@{getSavedGames}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{getSavedGames()}{getSavedGames()}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}$>$ domain.\+classes.\+Player.\+get\+Saved\+Games (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 40 del archivo Player.\+java.
+Getter de las partidas guardadas. 
+
+\begin{DoxyReturn}{Devuelve}
+Una lista con todas las partidas guardadas del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 159 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{40                                                 \{}
-\DoxyCodeLine{41         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{startedGames}};}
-\DoxyCodeLine{42     \}}
+\DoxyCodeLine{159                                       \{}
+\DoxyCodeLine{160         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}};}
+\DoxyCodeLine{161     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a3e01e8a4048b63a072281fe6626a1270}\label{classdomain_1_1classes_1_1_player_a3e01e8a4048b63a072281fe6626a1270}} 
-\index{domain.classes.Player@{domain.classes.Player}!setStartedGames@{setStartedGames}}
-\index{setStartedGames@{setStartedGames}!domain.classes.Player@{domain.classes.Player}}
-\doxysubsubsection{\texorpdfstring{setStartedGames()}{setStartedGames()}}
-{\footnotesize\ttfamily void domain.\+classes.\+Player.\+set\+Started\+Games (\begin{DoxyParamCaption}\item[{Array\+List$<$ Integer $>$}]{started\+Games }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a0e0393f28c3a1a15efffcce739fddf88}\label{classdomain_1_1classes_1_1_player_a0e0393f28c3a1a15efffcce739fddf88}} 
+\index{domain.classes.Player@{domain.classes.Player}!setSavedGames@{setSavedGames}}
+\index{setSavedGames@{setSavedGames}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{setSavedGames()}{setSavedGames()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Player.\+set\+Saved\+Games (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} $>$}]{saved\+Games }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 44 del archivo Player.\+java.
+Setter de las partidas guardadas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em saved\+Games} & lista con las partidas guardadas que tendrá el jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 167 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{44                                                                  \{}
-\DoxyCodeLine{45         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{startedGames}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{startedGames}};}
-\DoxyCodeLine{46     \}}
+\DoxyCodeLine{167                                                      \{}
+\DoxyCodeLine{168         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}};}
+\DoxyCodeLine{169     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a3516139a9d778240f6391491d704ba5e}\label{classdomain_1_1classes_1_1_player_a3516139a9d778240f6391491d704ba5e}} 
-\index{domain.classes.Player@{domain.classes.Player}!addStartedGame@{addStartedGame}}
-\index{addStartedGame@{addStartedGame}!domain.classes.Player@{domain.classes.Player}}
-\doxysubsubsection{\texorpdfstring{addStartedGame()}{addStartedGame()}}
-{\footnotesize\ttfamily void domain.\+classes.\+Player.\+add\+Started\+Game (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_afca3b11603d77bfe05e93d1d55914f46}\label{classdomain_1_1classes_1_1_player_afca3b11603d77bfe05e93d1d55914f46}} 
+\index{domain.classes.Player@{domain.classes.Player}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}} domain.\+classes.\+Player.\+get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 48 del archivo Player.\+java.
+Getter de la configuración. 
+
+\begin{DoxyReturn}{Devuelve}
+la configuración del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 175 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{48                                        \{}
-\DoxyCodeLine{49         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{startedGames}}.add(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{50     \}}
+\DoxyCodeLine{175                               \{}
+\DoxyCodeLine{176         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}};}
+\DoxyCodeLine{177     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a791569774ecd300636f08c18687d3530}\label{classdomain_1_1classes_1_1_player_a791569774ecd300636f08c18687d3530}} 
-\index{domain.classes.Player@{domain.classes.Player}!deletedStartedGame@{deletedStartedGame}}
-\index{deletedStartedGame@{deletedStartedGame}!domain.classes.Player@{domain.classes.Player}}
-\doxysubsubsection{\texorpdfstring{deletedStartedGame()}{deletedStartedGame()}}
-{\footnotesize\ttfamily void domain.\+classes.\+Player.\+deleted\+Started\+Game (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a953ece724e289e2f4d577b800c251be3}\label{classdomain_1_1classes_1_1_player_a953ece724e289e2f4d577b800c251be3}} 
+\index{domain.classes.Player@{domain.classes.Player}!setConfig@{setConfig}}
+\index{setConfig@{setConfig}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{setConfig()}{setConfig()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Player.\+set\+Config (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}}}]{config }\end{DoxyParamCaption})}
 
 
 
-Definición en la línea 52 del archivo Player.\+java.
+Setter de la configuración. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em config} & la configuración que tendrá el jugador \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 183 del archivo Player.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{52                                            \{}
-\DoxyCodeLine{53         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}{startedGames}}.remove(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{54     \}}
+\DoxyCodeLine{183                                          \{}
+\DoxyCodeLine{184         this.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}} = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}};}
+\DoxyCodeLine{185     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a09f0ac2bf3a349151630153cbded2bac}\label{classdomain_1_1classes_1_1_player_a09f0ac2bf3a349151630153cbded2bac}} 
+\index{domain.classes.Player@{domain.classes.Player}!getConfigToArray@{getConfigToArray}}
+\index{getConfigToArray@{getConfigToArray}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{getConfigToArray()}{getConfigToArray()}}
+{\footnotesize\ttfamily Array\+List$<$String$>$ domain.\+classes.\+Player.\+get\+Config\+To\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna la configuración. 
+
+\begin{DoxyReturn}{Devuelve}
+Una lista con la configuración del usuario en formato string 
+\end{DoxyReturn}
+
+
+Definición en la línea 191 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{191                                                 \{}
+\DoxyCodeLine{192         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_config_acedc336e9b3529e9e5ecd96c16cb987d}{getConfig}}();}
+\DoxyCodeLine{193     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a0214915746aa290c86fca108cc44bdff}\label{classdomain_1_1classes_1_1_player_a0214915746aa290c86fca108cc44bdff}} 
+\index{domain.classes.Player@{domain.classes.Player}!resetCongifColors@{resetCongifColors}}
+\index{resetCongifColors@{resetCongifColors}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{resetCongifColors()}{resetCongifColors()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Player.\+reset\+Congif\+Colors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que reseta los colores. 
+
+
+
+Definición en la línea 198 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{198                                     \{}
+\DoxyCodeLine{199         \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}{config}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_config_aece94807b890ab643746efa8790c745e}{resetColors}}();}
+\DoxyCodeLine{200     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a212a8aa83f3b2f69f3aef038ac28670f}\label{classdomain_1_1classes_1_1_player_a212a8aa83f3b2f69f3aef038ac28670f}} 
+\index{domain.classes.Player@{domain.classes.Player}!addSavedGame@{addSavedGame}}
+\index{addSavedGame@{addSavedGame}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{addSavedGame()}{addSavedGame()}}
+{\footnotesize\ttfamily void domain.\+classes.\+Player.\+add\+Saved\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que añade la partida actual a las partidas guardadas. 
+
+
+
+Definición en la línea 205 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{205                                \{}
+\DoxyCodeLine{206         \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}}.add(\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}{currentGame}});}
+\DoxyCodeLine{207     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a6779dc4dd63d8add887fd271460e7b7d}\label{classdomain_1_1classes_1_1_player_a6779dc4dd63d8add887fd271460e7b7d}} 
+\index{domain.classes.Player@{domain.classes.Player}!getStatsInt@{getStatsInt}}
+\index{getStatsInt@{getStatsInt}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{getStatsInt()}{getStatsInt()}}
+{\footnotesize\ttfamily Array\+List$<$Integer$>$ domain.\+classes.\+Player.\+get\+Stats\+Int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función que retorna las estadísticas. 
+
+\begin{DoxyReturn}{Devuelve}
+una lista de enteros que representan las estadísticas del jugador 
+\end{DoxyReturn}
+
+
+Definición en la línea 213 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{213                                             \{}
+\DoxyCodeLine{214         ArrayList<Integer> a = \textcolor{keyword}{new} ArrayList<>();}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216         a.add(\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_ad9c0c48cb4737f16679efe45dda0b030}{getFinished}}());}
+\DoxyCodeLine{217         a.add(\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_ad18b497ffab1d796f45ce7504497910c}{getTotal}}());}
+\DoxyCodeLine{218         a.add(\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_ae470e8c523bfb4785c08c8c527274952}{getHelps}}());}
+\DoxyCodeLine{219         a.add(\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_aa673d1ced7ae317670ff679c608b6d7c}{getPoints}}());}
+\DoxyCodeLine{220         a.add(\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}{stats}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_a9129186824a827bf10ba7ad92487e8b7}{getCreated}}());}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222         \textcolor{keywordflow}{return} a;}
+\DoxyCodeLine{223     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_ae84b81230e6ccf293c0b5a19ea41a361}\label{classdomain_1_1classes_1_1_player_ae84b81230e6ccf293c0b5a19ea41a361}} 
+\index{domain.classes.Player@{domain.classes.Player}!getGame@{getGame}}
+\index{getGame@{getGame}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{getGame()}{getGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} domain.\+classes.\+Player.\+get\+Game (\begin{DoxyParamCaption}\item[{int}]{game }\end{DoxyParamCaption})}
+
+
+
+Función que retorna una partida de la lista de guardadas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & el número de partida del jugador a retornar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+la partida del jugador número game. 
+\end{DoxyReturn}
+
+
+Definición en la línea 230 del archivo Player.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{230                                   \{}
+\DoxyCodeLine{231         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}}.size(); ++i) \{}
+\DoxyCodeLine{232             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}}.get(i).getId() == game) \{}
+\DoxyCodeLine{233                 Game loadGame = \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}}.get(i);}
+\DoxyCodeLine{234                 \mbox{\hyperlink{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}{savedGames}}.remove(i);}
+\DoxyCodeLine{235                 \textcolor{keywordflow}{return} loadGame;}
+\DoxyCodeLine{236             \}}
+\DoxyCodeLine{237         \}}
+\DoxyCodeLine{238         \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{239     \}}
 
 \end{DoxyCode}
 
@@ -246,9 +616,9 @@ Definición en la línea 52 del archivo Player.\+java.
 \doxysubsubsection{\texorpdfstring{username}{username}}
 {\footnotesize\ttfamily String domain.\+classes.\+Player.\+username\hspace{0.3cm}{\ttfamily [private]}}
 
+username representa el nombre de usuario del jugador 
 
-
-Definición en la línea 6 del archivo Player.\+java.
+Definición en la línea 22 del archivo Player.\+java.
 
 \mbox{\Hypertarget{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}\label{classdomain_1_1classes_1_1_player_ad159a6971337cdcba654b8baabe86e4e}} 
 \index{domain.classes.Player@{domain.classes.Player}!password@{password}}
@@ -256,29 +626,49 @@ Definición en la línea 6 del archivo Player.\+java.
 \doxysubsubsection{\texorpdfstring{password}{password}}
 {\footnotesize\ttfamily String domain.\+classes.\+Player.\+password\hspace{0.3cm}{\ttfamily [private]}}
 
+password representa la contraseña del jugador 
 
+Definición en la línea 28 del archivo Player.\+java.
 
-Definición en la línea 7 del archivo Player.\+java.
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}\label{classdomain_1_1classes_1_1_player_a5d0c2c006b1d5c19a180dd464ac81e5d}} 
+\index{domain.classes.Player@{domain.classes.Player}!stats@{stats}}
+\index{stats@{stats}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{stats}{stats}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_stats}{Stats}} domain.\+classes.\+Player.\+stats\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}\label{classdomain_1_1classes_1_1_player_a646f009d3647a3190b63d342238533f9}} 
+stats representa las estadísticas del jugador 
+
+Definición en la línea 34 del archivo Player.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}\label{classdomain_1_1classes_1_1_player_a855f38f14445d0a5199ffa778b40bfaf}} 
 \index{domain.classes.Player@{domain.classes.Player}!currentGame@{currentGame}}
 \index{currentGame@{currentGame}!domain.classes.Player@{domain.classes.Player}}
 \doxysubsubsection{\texorpdfstring{currentGame}{currentGame}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} domain.\+classes.\+Player.\+current\+Game\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily transient \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} domain.\+classes.\+Player.\+current\+Game\hspace{0.3cm}{\ttfamily [private]}}
 
+current\+Game representa la partida actual del jugador 
 
+Definición en la línea 38 del archivo Player.\+java.
 
-Definición en la línea 8 del archivo Player.\+java.
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}\label{classdomain_1_1classes_1_1_player_a76932f556e209eb5ea06e0616b24a862}} 
+\index{domain.classes.Player@{domain.classes.Player}!savedGames@{savedGames}}
+\index{savedGames@{savedGames}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{savedGames}{savedGames}}
+{\footnotesize\ttfamily List$<$\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}}$>$ domain.\+classes.\+Player.\+saved\+Games = null\hspace{0.3cm}{\ttfamily [private]}}
 
-\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}\label{classdomain_1_1classes_1_1_player_a2aaf81b307ae50a8994120fb42f4b8fc}} 
-\index{domain.classes.Player@{domain.classes.Player}!startedGames@{startedGames}}
-\index{startedGames@{startedGames}!domain.classes.Player@{domain.classes.Player}}
-\doxysubsubsection{\texorpdfstring{startedGames}{startedGames}}
-{\footnotesize\ttfamily Array\+List$<$Integer$>$ domain.\+classes.\+Player.\+started\+Games\hspace{0.3cm}{\ttfamily [private]}}
+saved\+Games representa las partidas guardadas del jugador 
 
+Definición en la línea 44 del archivo Player.\+java.
 
+\mbox{\Hypertarget{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}\label{classdomain_1_1classes_1_1_player_a88baea35189ee1b2da00a09ee5a1c2a4}} 
+\index{domain.classes.Player@{domain.classes.Player}!config@{config}}
+\index{config@{config}!domain.classes.Player@{domain.classes.Player}}
+\doxysubsubsection{\texorpdfstring{config}{config}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_config}{Config}} domain.\+classes.\+Player.\+config\hspace{0.3cm}{\ttfamily [private]}}
 
-Definición en la línea 9 del archivo Player.\+java.
+config representa la configuración del usuario 
+
+Definición en la línea 50 del archivo Player.\+java.
 
 
 

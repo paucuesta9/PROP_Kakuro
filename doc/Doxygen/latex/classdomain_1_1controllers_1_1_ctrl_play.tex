@@ -8,21 +8,52 @@ Clase \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play}{Ctrl\+Play}} qu
 \doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39a61d1023541ec24fe07aa12adeaa41}{Ctrl\+Play}} ()
-\begin{DoxyCompactList}\small\item\em Creadora por defecto. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Métodos públicos estáticos}
-\begin{DoxyCompactItemize}
-\item 
-static void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9d66408386bacf495bb9c78ac529799b}{start\+Game}} (\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} new\+Kakuro)
-\begin{DoxyCompactList}\small\item\em Empieza una partida. \end{DoxyCompactList}\item 
-static int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a6556ede4ec7f0d1e8e617ffe46b887b9}{help\+My\+Value}} (int x, int y)
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a1465b0ae2086c0920908cee34714f7db}{Ctrl\+Play}} (int difficulty, int row\+Size, int column\+Size, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}, boolean training)
+\begin{DoxyCompactList}\small\item\em Creadora a partir de unas características. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a1eb533910b14eb32b8811ec5d6b3d646}{Ctrl\+Play}} (String absolute\+Path, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}})
+\begin{DoxyCompactList}\small\item\em Creadora a partir de un kakuro existente. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9dfbc418f7ae10155593c73cc934064e}{Ctrl\+Play}} (int game, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}})
+\begin{DoxyCompactList}\small\item\em Creadora a partir de una partida empezada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9657afa9ca32fa97519df417640fe634}{set\+Correct\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correct\+Value de la correspondiente celda blanca. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9eae2eaa0143695274188319aca7d0a1}{check\+Validity}} (int x, int y, int value)
+\begin{DoxyCompactList}\small\item\em Comprueba la validez de un número añadido a una celda blanca. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a81b623839d1808209e105617da1a50ff}{help\+My\+Value}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Ayuda para el valor del usuario. \end{DoxyCompactList}\item 
-static boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a5f0c3b1a74d4a71dac54936a4e1aace8}{help\+Correct\+Number}} (int x, int y)
-\begin{DoxyCompactList}\small\item\em Ayuda para el valor correcto de una celda blanca. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsection*{Atributos privados estáticos}
+int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a03f0a13fc74cf7a161c861fabbfe5d7e}{help\+Correct\+Number}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Ayuda para el valor correcto de una celda blanca. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9bdb862e13c254016763a6031f6aa93e}{update\+Points}} (int points)
+\begin{DoxyCompactList}\small\item\em Actualización de los puntos de la partida. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a63699995127120d1d0e3405d5e487912}{kakuro\+Set\+Value}} (int x, int y, int value)
+\begin{DoxyCompactList}\small\item\em Setter de valor en una celda. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7b6adb6646a03b9827f15dfc9b7aa68}{is\+Finished}} ()
+\begin{DoxyCompactList}\small\item\em Se mira si el usuario ha completado el tablero. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a3eecf30c4a5341affb895ce1f6235783}{set\+Time\+To\+Game}} (int game\+Time)
+\begin{DoxyCompactList}\small\item\em Guardar el tiempo en la partida. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af9e28694a61973cb717640fe521f0f57}{finish\+Game}} (boolean self\+Finished)
+\begin{DoxyCompactList}\small\item\em Acabar partida. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a3c80f4c388ea59aa26386541b924a4a7}{set\+Value}} (int x, int y, int value)
+\begin{DoxyCompactList}\small\item\em Setter valor celda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_adce33d203bfe082e2ab8e53b42d5d4e3}{update\+Stats\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Actualizar estadísticas del jugador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_aa8c506deb5a64933f20ef5f40bea81d3}{get\+Game}} ()
+\begin{DoxyCompactList}\small\item\em Getter de game. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a1c71a7ba8f0104615a7351a57105bb37}{get\+Kakuro}} ()
+\begin{DoxyCompactList}\small\item\em Getter de kakuro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a0cede9b42faffd6cc74d05f2c7f8e1a8}{get\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Getter de time. \end{DoxyCompactList}\item 
+Array\+List$<$ String $>$ \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a8c3f97896e25c08a2026a55ee9c95928}{get\+Helps}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}
+\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{current\+Kakuro}}
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{current\+Game}}
+\item 
+\mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{current\+Player}}
+\item 
+\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}
 \end{DoxyCompactItemize}
 
 
@@ -34,67 +65,225 @@ Judith Almoño Gómez
 \end{DoxyAuthor}
 
 
-Definición en la línea 13 del archivo Ctrl\+Play.\+java.
+Definición en la línea 24 del archivo Ctrl\+Play.\+java.
 
 
 
 \doxysubsection{Documentación del constructor y destructor}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a39a61d1023541ec24fe07aa12adeaa41}\label{classdomain_1_1controllers_1_1_ctrl_play_a39a61d1023541ec24fe07aa12adeaa41}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a1465b0ae2086c0920908cee34714f7db}\label{classdomain_1_1controllers_1_1_ctrl_play_a1465b0ae2086c0920908cee34714f7db}} 
 \index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!CtrlPlay@{CtrlPlay}}
 \index{CtrlPlay@{CtrlPlay}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
-\doxysubsubsection{\texorpdfstring{CtrlPlay()}{CtrlPlay()}}
-{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Play.\+Ctrl\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{CtrlPlay()}{CtrlPlay()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Play.\+Ctrl\+Play (\begin{DoxyParamCaption}\item[{int}]{difficulty,  }\item[{int}]{row\+Size,  }\item[{int}]{column\+Size,  }\item[{\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}}}]{cd,  }\item[{boolean}]{training }\end{DoxyParamCaption})}
 
 
 
-Creadora por defecto. 
+Creadora a partir de unas características. 
 
 
+\begin{DoxyParams}{Parámetros}
+{\em difficulty} & representa la dificultad del kakuro de la partida \\
+\hline
+{\em row\+Size} & representa el número de filas del kakuro de la partida \\
+\hline
+{\em column\+Size} & representa el número de columnas del kakuro de la partida \\
+\hline
+{\em cd} & representa la instancia del ctrl\+Domain \\
+\hline
+{\em training} & represneta si se empieza partida en modo entrenamiento \\
+\hline
+\end{DoxyParams}
 
-Definición en la línea 22 del archivo Ctrl\+Play.\+java.
+
+Definición en la línea 49 del archivo Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{22                       \{}
-\DoxyCodeLine{23 }
-\DoxyCodeLine{24     \}}
+\DoxyCodeLine{49                                                                                                   \{}
+\DoxyCodeLine{50         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}};}
+\DoxyCodeLine{51         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aed6ab0f50924f309670750a014c6c0d0}{getCurrentPlayer}}();}
+\DoxyCodeLine{52         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{53             String kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a1b935a9e1d06256e382ab7b0069ca1fe}{searchKakuro}}(difficulty, rowSize, columnSize);}
+\DoxyCodeLine{54             \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = Character.getNumericValue(kakuro.charAt(0));}
+\DoxyCodeLine{55             this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuro.substring(2));}
+\DoxyCodeLine{56             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{57             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(difficulty);}
+\DoxyCodeLine{58             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}});}
+\DoxyCodeLine{59         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{60             System.out.println(\textcolor{stringliteral}{"{}No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)"{}});}
+\DoxyCodeLine{61             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}} = CtrlGenerate.generate(rowSize,columnSize, difficulty);}
+\DoxyCodeLine{62             System.out.println(\textcolor{stringliteral}{"{}Finalmente la dificultad es de "{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}());}
+\DoxyCodeLine{63             CtrlResolve ctrlResolve =  \textcolor{keyword}{new} CtrlResolve(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}});}
+\DoxyCodeLine{64             ctrlResolve.resolve();}
+\DoxyCodeLine{65             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}});}
+\DoxyCodeLine{66             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ab9f3e2b8baf92a477fb68b25c4c4ad68}{saveKakuro}}());}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a7d8f510398cb2ef631d0cf8acfa8ed81}{getGameId}}();}
+\DoxyCodeLine{69         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}} = \textcolor{keyword}{new} Game(\textcolor{keywordtype}{id}, 0, 0, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}(), rowSize, columnSize, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}(), \textcolor{keyword}{new} ArrayList<>());}
+\DoxyCodeLine{70         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}{setCurrentGame}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}});}
+\DoxyCodeLine{71         \textcolor{keywordflow}{if} (!training) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{getStats}}().\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_a71badf5209fe70a3ba07e4e78942ffc0}{setTotal}}(1);}
+\DoxyCodeLine{72         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9657afa9ca32fa97519df417640fe634}{setCorrectValues}}();}
+\DoxyCodeLine{73     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a1eb533910b14eb32b8811ec5d6b3d646}\label{classdomain_1_1controllers_1_1_ctrl_play_a1eb533910b14eb32b8811ec5d6b3d646}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!CtrlPlay@{CtrlPlay}}
+\index{CtrlPlay@{CtrlPlay}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{CtrlPlay()}{CtrlPlay()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Play.\+Ctrl\+Play (\begin{DoxyParamCaption}\item[{String}]{absolute\+Path,  }\item[{\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}}}]{cd }\end{DoxyParamCaption})}
+
+
+
+Creadora a partir de un kakuro existente. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em absolute\+Path} & representa el path donde se encuentra el kakuro \\
+\hline
+{\em cd} & representa la instancia del \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 80 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{80                                                         \{}
+\DoxyCodeLine{81         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}};}
+\DoxyCodeLine{82         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aed6ab0f50924f309670750a014c6c0d0}{getCurrentPlayer}}();}
+\DoxyCodeLine{83         String kakuro = \textcolor{keyword}{null};}
+\DoxyCodeLine{84         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{85             kakuro = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(absolutePath);}
+\DoxyCodeLine{86         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{87             e.printStackTrace();}
+\DoxyCodeLine{88         \}}
+\DoxyCodeLine{89         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = Integer.parseInt(absolutePath.substring(absolutePath.lastIndexOf(\textcolor{stringliteral}{"{}\(\backslash\)\(\backslash\)"{}}) + 1, absolutePath.lastIndexOf(\textcolor{stringliteral}{"{}."{}})));}
+\DoxyCodeLine{90         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}} = \textcolor{keyword}{new} Kakuro(kakuro);}
+\DoxyCodeLine{91         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{92         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(Character.getNumericValue(absolutePath.charAt(absolutePath.indexOf(\textcolor{stringliteral}{"{}diff"{}}) + 4)));}
+\DoxyCodeLine{93         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}});}
+\DoxyCodeLine{94         \textcolor{keywordtype}{id} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a7d8f510398cb2ef631d0cf8acfa8ed81}{getGameId}}();}
+\DoxyCodeLine{95         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}} = \textcolor{keyword}{new} Game(\textcolor{keywordtype}{id}, 0, 0, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}(), \textcolor{keyword}{new} ArrayList<>());}
+\DoxyCodeLine{96         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}{setCurrentGame}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}});}
+\DoxyCodeLine{97         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{getStats}}().\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_a71badf5209fe70a3ba07e4e78942ffc0}{setTotal}}(1);}
+\DoxyCodeLine{98         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9657afa9ca32fa97519df417640fe634}{setCorrectValues}}();}
+\DoxyCodeLine{99     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a9dfbc418f7ae10155593c73cc934064e}\label{classdomain_1_1controllers_1_1_ctrl_play_a9dfbc418f7ae10155593c73cc934064e}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!CtrlPlay@{CtrlPlay}}
+\index{CtrlPlay@{CtrlPlay}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{CtrlPlay()}{CtrlPlay()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily domain.\+controllers.\+Ctrl\+Play.\+Ctrl\+Play (\begin{DoxyParamCaption}\item[{int}]{game,  }\item[{\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}}}]{cd }\end{DoxyParamCaption})}
+
+
+
+Creadora a partir de una partida empezada. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game} & representa la partida empezada \\
+\hline
+{\em cd} & representa la instancia del \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 106 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{106                                              \{}
+\DoxyCodeLine{107         this.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}};}
+\DoxyCodeLine{108         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aed6ab0f50924f309670750a014c6c0d0}{getCurrentPlayer}}();}
+\DoxyCodeLine{109         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_ae84b81230e6ccf293c0b5a19ea41a361}{getGame}}(game);}
+\DoxyCodeLine{110         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a25c2d8f04863c4e46835a7f98c424aa1}{setCurrentGame}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}});}
+\DoxyCodeLine{111         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{112             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a8ab03f9ceec1f9b6e6a24ccc561b9e4c}{setKakuro}}(\textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(\textcolor{stringliteral}{"{}data/players/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2c1006f9d70e9a5978a4c57a3cc6f199}{getUsername}}() + \textcolor{stringliteral}{"{}/"{}} + game + \textcolor{stringliteral}{"{}.txt"{}})));}
+\DoxyCodeLine{113         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{114             e.printStackTrace();}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}} = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_ad05549b617186eef98d2323fe3f87d1d}{getKakuro}}();}
+\DoxyCodeLine{117         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_aff1a1a9873228b4ddaa2e2204ca42aac}{setDifficulty}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a8d8c01241e98070e1927365ed6ef5824}{getDiff}}());}
+\DoxyCodeLine{118         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a141712f76d3eca32be8e2792bf87c93e}{setId}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_ad2d8ca1a8abdfafab661746758769fe1}{getKakuroId}}());}
+\DoxyCodeLine{119         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{120             Kakuro sol = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(\textcolor{stringliteral}{"{}data/solutions/diff"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a8d8c01241e98070e1927365ed6ef5824}{getDiff}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() + \textcolor{stringliteral}{"{}\_"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}() + \textcolor{stringliteral}{"{}.txt"{}}));}
+\DoxyCodeLine{121             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}{setCorrectValues}}(sol);}
+\DoxyCodeLine{122             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_ac3498321dc99c9fcfb10f5a121577d26}{setKakuro}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}});}
+\DoxyCodeLine{123         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{124             e.printStackTrace();}
+\DoxyCodeLine{125         \}}
+\DoxyCodeLine{126     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Documentación de las funciones miembro}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a9d66408386bacf495bb9c78ac529799b}\label{classdomain_1_1controllers_1_1_ctrl_play_a9d66408386bacf495bb9c78ac529799b}} 
-\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!startGame@{startGame}}
-\index{startGame@{startGame}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
-\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
-{\footnotesize\ttfamily static void domain.\+controllers.\+Ctrl\+Play.\+start\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}}}]{new\+Kakuro }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a9657afa9ca32fa97519df417640fe634}\label{classdomain_1_1controllers_1_1_ctrl_play_a9657afa9ca32fa97519df417640fe634}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!setCorrectValues@{setCorrectValues}}
+\index{setCorrectValues@{setCorrectValues}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{setCorrectValues()}{setCorrectValues()}}
+{\footnotesize\ttfamily void domain.\+controllers.\+Ctrl\+Play.\+set\+Correct\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Empieza una partida. 
+Busca la solución del kakuro actual y escribe el valor correcto de cada celda blanca en el atributo correct\+Value de la correspondiente celda blanca. 
 
 
-\begin{DoxyParams}{Parámetros}
-{\em new\+Kakuro} & representa el kakuro nuevo que se jugará \\
-\hline
-\end{DoxyParams}
 
-
-Definición en la línea 30 del archivo Ctrl\+Play.\+java.
+Definición en la línea 131 del archivo Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{30                                                    \{}
-\DoxyCodeLine{31         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}} = newKakuro;}
-\DoxyCodeLine{32         CtrlResolve.setKakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}});}
-\DoxyCodeLine{33     \}}
+\DoxyCodeLine{131                                    \{}
+\DoxyCodeLine{132         \textcolor{keywordflow}{try} \{}
+\DoxyCodeLine{133             Kakuro sol = \textcolor{keyword}{new} Kakuro(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a995aae7fccd5b3683d811e2df26dae5b}{getKakuro}}(\textcolor{stringliteral}{"{}data/solutions/diff"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() + \textcolor{stringliteral}{"{}\_"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() + \textcolor{stringliteral}{"{}/"{}} + \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}() + \textcolor{stringliteral}{"{}.txt"{}}));}
+\DoxyCodeLine{134             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a4cf5c9f7824a0cd91ca1e45b3784223b}{setCorrectValues}}(sol);}
+\DoxyCodeLine{135         \} \textcolor{keywordflow}{catch} (IOException e) \{}
+\DoxyCodeLine{136             e.printStackTrace();}
+\DoxyCodeLine{137         \}}
+\DoxyCodeLine{138     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a6556ede4ec7f0d1e8e617ffe46b887b9}\label{classdomain_1_1controllers_1_1_ctrl_play_a6556ede4ec7f0d1e8e617ffe46b887b9}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a9eae2eaa0143695274188319aca7d0a1}\label{classdomain_1_1controllers_1_1_ctrl_play_a9eae2eaa0143695274188319aca7d0a1}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!checkValidity@{checkValidity}}
+\index{checkValidity@{checkValidity}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{checkValidity()}{checkValidity()}}
+{\footnotesize\ttfamily boolean domain.\+controllers.\+Ctrl\+Play.\+check\+Validity (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Comprueba la validez de un número añadido a una celda blanca. 
+
+Comprueba si el valor añadido a la celda blanca cumple las condiciones de la fila y de la columna 
+\begin{DoxyParams}{Parámetros}
+{\em x} & representa el número de la fila del tablero \\
+\hline
+{\em y} & representa el número de la columna del tablero \\
+\hline
+{\em value} & representa el valor añadido a la celda blanca \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas 
+\end{DoxyReturn}
+
+
+Definición en la línea 148 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148                                                           \{}
+\DoxyCodeLine{149         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6b2a225e6f17a124600ba85002d27cc6}{checkValidity}}(x, y, value);}
+\DoxyCodeLine{150     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a81b623839d1808209e105617da1a50ff}\label{classdomain_1_1controllers_1_1_ctrl_play_a81b623839d1808209e105617da1a50ff}} 
 \index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!helpMyValue@{helpMyValue}}
 \index{helpMyValue@{helpMyValue}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
 \doxysubsubsection{\texorpdfstring{helpMyValue()}{helpMyValue()}}
-{\footnotesize\ttfamily static int domain.\+controllers.\+Ctrl\+Play.\+help\+My\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily int domain.\+controllers.\+Ctrl\+Play.\+help\+My\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
 
 
@@ -118,25 +307,31 @@ Se activa la ayuda que comprueba si el valor que el usuario ha puesto es correct
 \end{DoxyReturn}
 
 
-Definición en la línea 45 del archivo Ctrl\+Play.\+java.
+Definición en la línea 162 del archivo Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{45                                                 \{}
-\DoxyCodeLine{46         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y).\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
-\DoxyCodeLine{47             \textcolor{keywordtype}{int} value = ((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getValue();}
-\DoxyCodeLine{48             \textcolor{keywordflow}{if} (value == 0) \textcolor{keywordflow}{return} -\/2;}
-\DoxyCodeLine{49             \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} (((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getCorrectValue() == value) ? 1 : 0;}
-\DoxyCodeLine{50         \}}
-\DoxyCodeLine{51         \textcolor{keywordflow}{return} -\/1;}
-\DoxyCodeLine{52     \}}
+\DoxyCodeLine{162                                          \{}
+\DoxyCodeLine{163         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9bdb862e13c254016763a6031f6aa93e}{updatePoints}}(-\/1);}
+\DoxyCodeLine{164         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{getStats}}().\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_a9f10a7af3376d1535dce1d81b56dafe2}{setHelps}}(1);}
+\DoxyCodeLine{165         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y).\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{166             \textcolor{keywordtype}{int} value = ((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getValue();}
+\DoxyCodeLine{167             \textcolor{keywordflow}{if} (value == 0) \textcolor{keywordflow}{return} -\/2;}
+\DoxyCodeLine{168             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{169                 \textcolor{keywordtype}{int} help = (((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getCorrectValue() == value) ? 1 : 0;}
+\DoxyCodeLine{170                 \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_afd4f227d77a75c7d62774356c3e81a73}{addHelp}}(x, y, help);}
+\DoxyCodeLine{171                 \textcolor{keywordflow}{return} help;}
+\DoxyCodeLine{172             \}}
+\DoxyCodeLine{173         \}}
+\DoxyCodeLine{174         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{175     \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a5f0c3b1a74d4a71dac54936a4e1aace8}\label{classdomain_1_1controllers_1_1_ctrl_play_a5f0c3b1a74d4a71dac54936a4e1aace8}} 
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a03f0a13fc74cf7a161c861fabbfe5d7e}\label{classdomain_1_1controllers_1_1_ctrl_play_a03f0a13fc74cf7a161c861fabbfe5d7e}} 
 \index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!helpCorrectNumber@{helpCorrectNumber}}
 \index{helpCorrectNumber@{helpCorrectNumber}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
 \doxysubsubsection{\texorpdfstring{helpCorrectNumber()}{helpCorrectNumber()}}
-{\footnotesize\ttfamily static boolean domain.\+controllers.\+Ctrl\+Play.\+help\+Correct\+Number (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily int domain.\+controllers.\+Ctrl\+Play.\+help\+Correct\+Number (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
 
 
@@ -154,31 +349,392 @@ cierto si es una celda blanca y falso si es una celda negra
 \end{DoxyReturn}
 
 
-Definición en la línea 61 del archivo Ctrl\+Play.\+java.
+Definición en la línea 184 del archivo Ctrl\+Play.\+java.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{61                                                           \{}
-\DoxyCodeLine{62         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y).\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
-\DoxyCodeLine{63             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, ((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}{kakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getCorrectValue());}
-\DoxyCodeLine{64             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
-\DoxyCodeLine{65         \}}
-\DoxyCodeLine{66         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
-\DoxyCodeLine{67     \}}
+\DoxyCodeLine{184                                                \{}
+\DoxyCodeLine{185         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9bdb862e13c254016763a6031f6aa93e}{updatePoints}}(-\/2);}
+\DoxyCodeLine{186         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{getStats}}().\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_a9f10a7af3376d1535dce1d81b56dafe2}{setHelps}}(1);}
+\DoxyCodeLine{187         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y).\mbox{\hyperlink{classdomain_1_1classes_1_1_cell_a7982cd500b04ddc6d282e53d8b7fb354}{isWhite}}()) \{}
+\DoxyCodeLine{188             \textcolor{keywordtype}{int} correctNumber = ((WhiteCell) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a55327eb18719eb378ac6bd4cc709a921}{getCell}}(x, y)).getCorrectValue();}
+\DoxyCodeLine{189             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, correctNumber);}
+\DoxyCodeLine{190             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_afd4f227d77a75c7d62774356c3e81a73}{addHelp}}(x, y, 1);}
+\DoxyCodeLine{191             \textcolor{keywordflow}{return} correctNumber;}
+\DoxyCodeLine{192         \}}
+\DoxyCodeLine{193         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{194     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a9bdb862e13c254016763a6031f6aa93e}\label{classdomain_1_1controllers_1_1_ctrl_play_a9bdb862e13c254016763a6031f6aa93e}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!updatePoints@{updatePoints}}
+\index{updatePoints@{updatePoints}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{updatePoints()}{updatePoints()}}
+{\footnotesize\ttfamily void domain.\+controllers.\+Ctrl\+Play.\+update\+Points (\begin{DoxyParamCaption}\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+Actualización de los puntos de la partida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em points} & representan los puntos a añadir a los puntos de la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 200 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{200                                          \{}
+\DoxyCodeLine{201         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a4c78afacef4ceaa8c5adf71458a3b33f}{setPoints}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a6c007bb3b460a1f317a560939287bd45}{getPoints}}() + points);}
+\DoxyCodeLine{202     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a63699995127120d1d0e3405d5e487912}\label{classdomain_1_1controllers_1_1_ctrl_play_a63699995127120d1d0e3405d5e487912}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!kakuroSetValue@{kakuroSetValue}}
+\index{kakuroSetValue@{kakuroSetValue}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{kakuroSetValue()}{kakuroSetValue()}}
+{\footnotesize\ttfamily boolean domain.\+controllers.\+Ctrl\+Play.\+kakuro\+Set\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter de valor en una celda. 
+
+Se setea el valor en la celda de la posición \mbox{[}x\mbox{]}\mbox{[}y\mbox{]} con el valor \char`\"{}value\char`\"{} si la celda es blanca
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & Posición de fila de una celda \\
+\hline
+{\em y} & Posición de columna de una celda \\
+\hline
+{\em value} & Valor que el usuario quiere colocar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve cierto si la celda es blanco, en caso contrario, devuelve falso 
+\end{DoxyReturn}
+
+
+Definición en la línea 213 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{213                                                            \{}
+\DoxyCodeLine{214         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, value);}
+\DoxyCodeLine{215     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_af7b6adb6646a03b9827f15dfc9b7aa68}\label{classdomain_1_1controllers_1_1_ctrl_play_af7b6adb6646a03b9827f15dfc9b7aa68}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily boolean domain.\+controllers.\+Ctrl\+Play.\+is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Se mira si el usuario ha completado el tablero. 
+
+\begin{DoxyReturn}{Devuelve}
+cierto si el usuario ha colocado todos los valores de las celdas y son correctos, en caso contrario, devuelve falso 
+\end{DoxyReturn}
+
+
+Definición en la línea 221 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{221                                 \{}
+\DoxyCodeLine{222         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c8c024bed669cb0807263fd040888c}{isFinished}}();}
+\DoxyCodeLine{223     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a3eecf30c4a5341affb895ce1f6235783}\label{classdomain_1_1controllers_1_1_ctrl_play_a3eecf30c4a5341affb895ce1f6235783}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!setTimeToGame@{setTimeToGame}}
+\index{setTimeToGame@{setTimeToGame}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{setTimeToGame()}{setTimeToGame()}}
+{\footnotesize\ttfamily void domain.\+controllers.\+Ctrl\+Play.\+set\+Time\+To\+Game (\begin{DoxyParamCaption}\item[{int}]{game\+Time }\end{DoxyParamCaption})}
+
+
+
+Guardar el tiempo en la partida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em game\+Time} & representa el tiempo a guardar de la partida \\
+\hline
+\end{DoxyParams}
+
+
+Definición en la línea 229 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{229                                             \{}
+\DoxyCodeLine{230         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_ab8118c7193ff8c82071078ab3884c635}{setTime}}(gameTime);}
+\DoxyCodeLine{231     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_af9e28694a61973cb717640fe521f0f57}\label{classdomain_1_1controllers_1_1_ctrl_play_af9e28694a61973cb717640fe521f0f57}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!finishGame@{finishGame}}
+\index{finishGame@{finishGame}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{finishGame()}{finishGame()}}
+{\footnotesize\ttfamily int domain.\+controllers.\+Ctrl\+Play.\+finish\+Game (\begin{DoxyParamCaption}\item[{boolean}]{self\+Finished }\end{DoxyParamCaption})}
+
+
+
+Acabar partida. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em self\+Finished} & representa si el kakuro se ha resuelto con el boton resolver o lo ha resuelto el usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+los puntos de la partida 
+\end{DoxyReturn}
+
+
+Definición en la línea 238 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{238                                                 \{}
+\DoxyCodeLine{239         \textcolor{keywordtype}{int} points = 0;}
+\DoxyCodeLine{240         \textcolor{keywordflow}{if} (selfFinished) \{}
+\DoxyCodeLine{241             \textcolor{keywordtype}{int} diff = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}();}
+\DoxyCodeLine{242             \textcolor{keywordflow}{if} (diff == 1) points = 10;}
+\DoxyCodeLine{243             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (diff == 2) points = 20;}
+\DoxyCodeLine{244             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (diff == 3) points = 30;}
+\DoxyCodeLine{245             points += Integer.max(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}(), \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}()) / 2;}
+\DoxyCodeLine{246             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a9bdb862e13c254016763a6031f6aa93e}{updatePoints}}(points);}
+\DoxyCodeLine{247             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a93a58551c68cac726b7849880e3da1f8}{updateStatsPlayer}}();}
+\DoxyCodeLine{248             JsonArray records = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a8e53f271cbdf7f36e4871170ce7e2c0e}{getRecords}}();}
+\DoxyCodeLine{249             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < records.size(); ++i) \{}
+\DoxyCodeLine{250                 JsonObject record = records.get(i).getAsJsonObject();}
+\DoxyCodeLine{251                 diff = Integer.parseInt(record.get(\textcolor{stringliteral}{"{}diff"{}}).getAsString());}
+\DoxyCodeLine{252                 String size = record.get(\textcolor{stringliteral}{"{}size"{}}).getAsString();}
+\DoxyCodeLine{253                 String \textcolor{keywordtype}{id} = record.get(\textcolor{stringliteral}{"{}id"{}}).getAsString();}
+\DoxyCodeLine{254                 \textcolor{keywordtype}{id} = \textcolor{keywordtype}{id}.substring(0, \textcolor{keywordtype}{id}.indexOf(\textcolor{stringliteral}{"{}."{}}));}
+\DoxyCodeLine{255                 \textcolor{keywordtype}{int} idInt = Integer.parseInt(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{256                 String[] sizes = size.split(\textcolor{stringliteral}{"{}\_"{}});}
+\DoxyCodeLine{257                 \textcolor{keywordtype}{int} rowSize = Integer.parseInt(sizes[0]);}
+\DoxyCodeLine{258                 \textcolor{keywordtype}{int} columnSize = Integer.parseInt(sizes[1]);}
+\DoxyCodeLine{259                 \textcolor{keywordflow}{if} (diff == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a6f933f429d9120f821c11e2dc579ba80}{getDifficulty}}() \&\& rowSize == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_ae1c8dd6d7ef629a6ab63947c7ea17d4d}{getRowSize}}() \&\& columnSize == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a87c0714fffa9bd9e8688cb592d1563cf}{getColumnSize}}() \&\& idInt == \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a9dcb9389798b4458bf271cc838fb3e36}{getId}}()) \{}
+\DoxyCodeLine{260                     \textcolor{keywordflow}{if} (record.get(\textcolor{stringliteral}{"{}minTime"{}}).getAsInt() == 0 || record.get(\textcolor{stringliteral}{"{}minTime"{}}).getAsInt() > \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_abae5b2e7011c460d447bb3e1f333a188}{getTime}}()) \{}
+\DoxyCodeLine{261                         record.addProperty(\textcolor{stringliteral}{"{}minTime"{}}, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_abae5b2e7011c460d447bb3e1f333a188}{getTime}}());}
+\DoxyCodeLine{262                         record.addProperty(\textcolor{stringliteral}{"{}player"{}}, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a2c1006f9d70e9a5978a4c57a3cc6f199}{getUsername}}());}
+\DoxyCodeLine{263                         record.addProperty(\textcolor{stringliteral}{"{}maxPoints"{}}, \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a6c007bb3b460a1f317a560939287bd45}{getPoints}}());}
+\DoxyCodeLine{264                     \}}
+\DoxyCodeLine{265                 \}}
+\DoxyCodeLine{266             \}}
+\DoxyCodeLine{267             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_a924d92b5857861ca9846f2dbc9f2c0a7}{saveRecords}}(records);}
+\DoxyCodeLine{268         \}}
+\DoxyCodeLine{269         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{270             \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a4c78afacef4ceaa8c5adf71458a3b33f}{setPoints}}(0);}
+\DoxyCodeLine{271         \}}
+\DoxyCodeLine{272         points = \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a6c007bb3b460a1f317a560939287bd45}{getPoints}}();}
+\DoxyCodeLine{273         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}{cd}}.\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain_aa303875c695a5699cf930daa703195c9}{savePlayer}}();}
+\DoxyCodeLine{274         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{275         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}} = \textcolor{keyword}{null};}
+\DoxyCodeLine{276         \textcolor{keywordflow}{return} points;}
+\DoxyCodeLine{277     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a3c80f4c388ea59aa26386541b924a4a7}\label{classdomain_1_1controllers_1_1_ctrl_play_a3c80f4c388ea59aa26386541b924a4a7}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!setValue@{setValue}}
+\index{setValue@{setValue}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{setValue()}{setValue()}}
+{\footnotesize\ttfamily boolean domain.\+controllers.\+Ctrl\+Play.\+set\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Setter valor celda. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em x} & representa la posición de la celda respecto las filas \\
+\hline
+{\em y} & representa la posición de la celda respecto las columnas \\
+\hline
+{\em value} & representa el valor de la celda a introducir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+cierto si se ha insertado el valor 
+\end{DoxyReturn}
+
+
+Definición en la línea 286 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{286                                                      \{}
+\DoxyCodeLine{287         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a3385c9c47b71fadac4d83f498c8aac5e}{removeHelp}}(x, y);}
+\DoxyCodeLine{288         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro_a58370a7d8e7bdab2d8fe176588698086}{setValue}}(x, y, value);}
+\DoxyCodeLine{289     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_adce33d203bfe082e2ab8e53b42d5d4e3}\label{classdomain_1_1controllers_1_1_ctrl_play_adce33d203bfe082e2ab8e53b42d5d4e3}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!updateStatsPlayer@{updateStatsPlayer}}
+\index{updateStatsPlayer@{updateStatsPlayer}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{updateStatsPlayer()}{updateStatsPlayer()}}
+{\footnotesize\ttfamily void domain.\+controllers.\+Ctrl\+Play.\+update\+Stats\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Actualizar estadísticas del jugador. 
+
+
+
+Definición en la línea 294 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{294                                     \{}
+\DoxyCodeLine{295         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{getStats}}().\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_a86e1799065af53561c63d1bca2ceacdf}{setPoints}}(\mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a6c007bb3b460a1f317a560939287bd45}{getPoints}}());}
+\DoxyCodeLine{296         \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}{currentPlayer}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_player_a962f0ca0da797d8cff0f2b9736585bfa}{getStats}}().\mbox{\hyperlink{classdomain_1_1classes_1_1_stats_af9db17f6baaa2b7c817c24b8450ae4cf}{setFinished}}(1);}
+\DoxyCodeLine{297     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_aa8c506deb5a64933f20ef5f40bea81d3}\label{classdomain_1_1controllers_1_1_ctrl_play_aa8c506deb5a64933f20ef5f40bea81d3}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!getGame@{getGame}}
+\index{getGame@{getGame}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{getGame()}{getGame()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} domain.\+controllers.\+Ctrl\+Play.\+get\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de game. 
+
+\begin{DoxyReturn}{Devuelve}
+la partida actual 
+\end{DoxyReturn}
+
+
+Definición en la línea 303 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{303                           \{}
+\DoxyCodeLine{304         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}};}
+\DoxyCodeLine{305     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a1c71a7ba8f0104615a7351a57105bb37}\label{classdomain_1_1controllers_1_1_ctrl_play_a1c71a7ba8f0104615a7351a57105bb37}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!getKakuro@{getKakuro}}
+\index{getKakuro@{getKakuro}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{getKakuro()}{getKakuro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+controllers.\+Ctrl\+Play.\+get\+Kakuro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de kakuro. 
+
+\begin{DoxyReturn}{Devuelve}
+el kakuro de la partida 
+\end{DoxyReturn}
+
+
+Definición en la línea 311 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{311                               \{}
+\DoxyCodeLine{312         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}{currentKakuro}};}
+\DoxyCodeLine{313     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a0cede9b42faffd6cc74d05f2c7f8e1a8}\label{classdomain_1_1controllers_1_1_ctrl_play_a0cede9b42faffd6cc74d05f2c7f8e1a8}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!getTime@{getTime}}
+\index{getTime@{getTime}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily int domain.\+controllers.\+Ctrl\+Play.\+get\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getter de time. 
+
+\begin{DoxyReturn}{Devuelve}
+el tiempo de la partida 
+\end{DoxyReturn}
+
+
+Definición en la línea 319 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{319                          \{}
+\DoxyCodeLine{320         \textcolor{keywordflow}{return} \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_abae5b2e7011c460d447bb3e1f333a188}{getTime}}();}
+\DoxyCodeLine{321     \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a8c3f97896e25c08a2026a55ee9c95928}\label{classdomain_1_1controllers_1_1_ctrl_play_a8c3f97896e25c08a2026a55ee9c95928}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!getHelps@{getHelps}}
+\index{getHelps@{getHelps}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{getHelps()}{getHelps()}}
+{\footnotesize\ttfamily Array\+List$<$String$>$ domain.\+controllers.\+Ctrl\+Play.\+get\+Helps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Getter de las ayudas
+
+\begin{DoxyReturn}{Devuelve}
+una lista con todas las ayudas utilizadas 
+\end{DoxyReturn}
+
+
+Definición en la línea 327 del archivo Ctrl\+Play.\+java.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{327                                         \{}
+\DoxyCodeLine{328         \textcolor{keywordflow}{return} (ArrayList<String>) \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}{currentGame}}.\mbox{\hyperlink{classdomain_1_1classes_1_1_game_a04e19ade2ff15d0d04c45e6e363e285f}{getHelps}}();}
+\DoxyCodeLine{329     \}}
 
 \end{DoxyCode}
 
 
 \doxysubsection{Documentación de los datos miembro}
-\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}\label{classdomain_1_1controllers_1_1_ctrl_play_af7dcf929d86e16db2b4784a9162311a2}} 
-\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!kakuro@{kakuro}}
-\index{kakuro@{kakuro}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
-\doxysubsubsection{\texorpdfstring{kakuro}{kakuro}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+controllers.\+Ctrl\+Play.\+kakuro\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}\label{classdomain_1_1controllers_1_1_ctrl_play_ad57ae2ee9f074c181c1a76c7e4de1628}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!currentKakuro@{currentKakuro}}
+\index{currentKakuro@{currentKakuro}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{currentKakuro}{currentKakuro}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_kakuro}{Kakuro}} domain.\+controllers.\+Ctrl\+Play.\+current\+Kakuro\hspace{0.3cm}{\ttfamily [private]}}
 
-kakuro instancia del kakuro con el que se trabaja en este momento 
+current\+Kakuro representa la instancia del kakuro con la que se trabaja en este momento 
 
-Definición en la línea 17 del archivo Ctrl\+Play.\+java.
+Definición en la línea 29 del archivo Ctrl\+Play.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}\label{classdomain_1_1controllers_1_1_ctrl_play_ab6429e1c6536f5aada42166561dcd9f3}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!currentGame@{currentGame}}
+\index{currentGame@{currentGame}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{currentGame}{currentGame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_game}{Game}} domain.\+controllers.\+Ctrl\+Play.\+current\+Game\hspace{0.3cm}{\ttfamily [private]}}
+
+current\+Game representa la instancia de la partida con la que se trabaja en este momento 
+
+Definición en la línea 33 del archivo Ctrl\+Play.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}\label{classdomain_1_1controllers_1_1_ctrl_play_a39f6635b3df003304d21f45f77ff015e}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!currentPlayer@{currentPlayer}}
+\index{currentPlayer@{currentPlayer}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{currentPlayer}{currentPlayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1classes_1_1_player}{Player}} domain.\+controllers.\+Ctrl\+Play.\+current\+Player\hspace{0.3cm}{\ttfamily [private]}}
+
+current\+Player representa la instancia del jugador con la que se trabaja en este momento 
+
+Definición en la línea 37 del archivo Ctrl\+Play.\+java.
+
+\mbox{\Hypertarget{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}\label{classdomain_1_1controllers_1_1_ctrl_play_a74027a2bd4976ffd029bb2c108b6810a}} 
+\index{domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}!cd@{cd}}
+\index{cd@{cd}!domain.controllers.CtrlPlay@{domain.controllers.CtrlPlay}}
+\doxysubsubsection{\texorpdfstring{cd}{cd}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classdomain_1_1controllers_1_1_ctrl_domain}{Ctrl\+Domain}} domain.\+controllers.\+Ctrl\+Play.\+cd\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 39 del archivo Ctrl\+Play.\+java.
 
 
 

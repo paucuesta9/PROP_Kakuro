@@ -16,9 +16,6 @@ default: class
 class:
 	javac -d bin -encoding UTF-8 -cp $(CLPTH) -sourcepath src src/Main.java $(CLASSES)/*.java $(CONTROLADORES)/*.java $(VISTA)/*.java $(DATA)/*.java $(DRIVERS)/*.java $(JUNIT)/*.java
 
-runjarOld:
-	java -jar Kakuro.jar 2
-
 run:
 	java -cp $(CLPTH) Main 1
 
@@ -84,6 +81,42 @@ run_driver_CtrlData_man:
 
 run_driver_CtrlData_auto:
 	java -cp $(CLPTH) domain.controllers.drivers.DriverCtrlData < data/juegos_prueba/Inputs/input_CtrlData.txt
+
+run_driver_CreatedRanking_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverCreatedRanking
+
+run_driver_CreatedRanking_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverCreatedRanking < data/juegos_prueba/Inputs/input_CreatedRanking.txt
+
+run_driver_PointsRanking_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverPointsRanking
+
+run_driver_PointsRanking_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverPointsRanking < data/juegos_prueba/Inputs/input_PointsRanking.txt
+
+run_driver_WinsRanking_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverWinsRanking
+
+run_driver_WinsRanking_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverWinsRanking < data/juegos_prueba/Inputs/input_WinsRanking.txt
+
+run_driver_CtrlPlayer_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverCtrlPlayer
+
+run_driver_CtrlPlayer_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverCtrlPlayer < data/juegos_prueba/Inputs/input_CtrlPlayer.txt
+
+run_driver_Game_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverGame
+
+run_driver_Game_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverGame < data/juegos_prueba/Inputs/input_Game.txt
+
+run_driver_Player_man:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverPlayer
+
+run_driver_Player_auto:
+	java -cp $(CLPTH) domain.controllers.drivers.DriverPlayer < data/juegos_prueba/Inputs/input_Player.txt
 
 run_junit:
 	java -cp $(CLPTH) org.junit.runner.JUnitCore domain.controllers.junits.KakuroTest

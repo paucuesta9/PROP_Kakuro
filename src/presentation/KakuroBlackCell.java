@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 
 /** @file KakuroBlackCell.java
+ @brief Clase  <em>KakuroBlackCell</em>.
  @class KakuroBlackCell
  */
 

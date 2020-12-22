@@ -1,6 +1,25 @@
 var searchData=
 [
-  ['proyecto_20prop_3a_20kakuro_123',['Proyecto PROP: Kakuro',['../index.html',1,'']]],
-  ['play_124',['play',['../classpresentation_1_1_ctrl_u_i.html#a44c82744a9fa87856db8b1c9d89c49ae',1,'presentation::CtrlUI']]],
-  ['presentation_125',['presentation',['../namespacepresentation.html',1,'']]]
+  ['kakuro_326',['Kakuro',['../classdomain_1_1classes_1_1_kakuro.html',1,'domain.classes.Kakuro'],['../classdomain_1_1classes_1_1_kakuro.html#ae23ea3d97fa0401abcb6dd7cf0d4f54e',1,'domain.classes.Kakuro.Kakuro(int id, int difficulty, Cell[][] board)'],['../classdomain_1_1classes_1_1_kakuro.html#a6ea6319b9b2d3afe0647c66b670bb7a5',1,'domain.classes.Kakuro.Kakuro(String kakuro)'],['../classdomain_1_1classes_1_1_game.html#a9b5f6d3a2a23638f6fc2b105a54c8894',1,'domain.classes.Game.kakuro()'],['../classdomain_1_1controllers_1_1_ctrl_resolve.html#a8ed1708d14b918c81435011a480fb8c7',1,'domain.controllers.CtrlResolve.kakuro()'],['../classdomain_1_1controllers_1_1_ctrl_validate.html#af461ecba8403f362c8a2f0af8b40a32a',1,'domain.controllers.CtrlValidate.kakuro()']]],
+  ['kakuro_2ejava_327',['Kakuro.java',['../_kakuro_8java.html',1,'']]],
+  ['kakuro_5fmal_5fchar_328',['KAKURO_MAL_CHAR',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#a257265c9078e09c1a0ea932560a69495',1,'domain::controllers::junits::KakuroTest']]],
+  ['kakuro_5fmal_5findex_329',['KAKURO_MAL_INDEX',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#afc36b5f6db0935cc5c545af6cdcd8a56',1,'domain::controllers::junits::KakuroTest']]],
+  ['kakuro_5fsmall_330',['KAKURO_SMALL',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#aaf6854c15752887cb378886f94a0db86',1,'domain::controllers::junits::KakuroTest']]],
+  ['kakuro_5fsmall_5fsolved_331',['KAKURO_SMALL_SOLVED',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#a4e712aada975a9cf3240fd82c994cbfa',1,'domain::controllers::junits::KakuroTest']]],
+  ['kakuro_5ftext_5fenunciado_332',['KAKURO_TEXT_ENUNCIADO',['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html#a4bb89533423e28707aab6b0ac21cf20b',1,'domain.controllers.drivers.DriverCtrlDomain.KAKURO_TEXT_ENUNCIADO()'],['../classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve.html#a93680557585dce169be05993116cf62c',1,'domain.controllers.drivers.DriverCtrlResolve.KAKURO_TEXT_ENUNCIADO()'],['../classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a31742309b2c280b4a55f35bfdd756a1c',1,'domain.controllers.drivers.DriverKakuro.KAKURO_TEXT_ENUNCIADO()'],['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#a1b7d2d301b77025a093e2a6dc02cadb1',1,'domain.controllers.junits.KakuroTest.KAKURO_TEXT_ENUNCIADO()']]],
+  ['kakuroblackcell_333',['KakuroBlackCell',['../classpresentation_1_1_kakuro_black_cell.html',1,'presentation.KakuroBlackCell'],['../classpresentation_1_1_kakuro_black_cell.html#a1a70c221deda33715d43d3252d1e262e',1,'presentation.KakuroBlackCell.KakuroBlackCell()']]],
+  ['kakuroblackcell_2ejava_334',['KakuroBlackCell.java',['../_kakuro_black_cell_8java.html',1,'']]],
+  ['kakuroboard_335',['KakuroBoard',['../classpresentation_1_1_kakuro_board.html',1,'presentation.KakuroBoard'],['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#a114a30db96548c278fa2bb448d802917',1,'domain.controllers.junits.KakuroTest.KakuroBoard()']]],
+  ['kakuroboard_2ejava_336',['KakuroBoard.java',['../_kakuro_board_8java.html',1,'']]],
+  ['kakurocell_337',['KakuroCell',['../classpresentation_1_1_kakuro_cell.html',1,'presentation']]],
+  ['kakurocell_2ejava_338',['KakuroCell.java',['../_kakuro_cell_8java.html',1,'']]],
+  ['kakuroid_339',['kakuroId',['../classdomain_1_1classes_1_1_game.html#a8bb957ea28b8abf3421d5884e74a1568',1,'domain::classes::Game']]],
+  ['kakurosetvalue_340',['kakuroSetValue',['../classdomain_1_1controllers_1_1_ctrl_domain.html#aade2f964f7f12976d9a3bbb642c140c9',1,'domain.controllers.CtrlDomain.kakuroSetValue()'],['../classdomain_1_1controllers_1_1_ctrl_play.html#a63699995127120d1d0e3405d5e487912',1,'domain.controllers.CtrlPlay.kakuroSetValue()']]],
+  ['kakurostring_341',['KakuroString',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html#aeb10993460e691c3e36eee09754b788f',1,'domain::controllers::junits::KakuroTest']]],
+  ['kakurotest_342',['KakuroTest',['../classdomain_1_1controllers_1_1junits_1_1_kakuro_test.html',1,'domain::controllers::junits']]],
+  ['kakurotest_2ejava_343',['KakuroTest.java',['../_kakuro_test_8java.html',1,'']]],
+  ['kakurowhitecell_344',['KakuroWhiteCell',['../classpresentation_1_1_kakuro_white_cell.html',1,'presentation.KakuroWhiteCell'],['../classpresentation_1_1_kakuro_white_cell.html#a563e5a4a2cbbf2c614611c2a3ef06ca6',1,'presentation.KakuroWhiteCell.KakuroWhiteCell()']]],
+  ['kakurowhitecell_2ejava_345',['KakuroWhiteCell.java',['../_kakuro_white_cell_8java.html',1,'']]],
+  ['kaux_346',['kAux',['../classpresentation_1_1_ask_save.html#a5db1c8defa5f861e376f111651b8da73',1,'presentation.AskSave.kAux()'],['../classpresentation_1_1_show_kakuro.html#ae3cbe4653947a1688fba9c772e42f2cd',1,'presentation.ShowKakuro.kAux()']]],
+  ['kboard_347',['kBoard',['../classpresentation_1_1_create.html#acb85c35cea7680ec18336fca1ddf1a5b',1,'presentation::Create']]]
 ];

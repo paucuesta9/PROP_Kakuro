@@ -14,12 +14,13 @@ import java.awt.event.ActionListener;
 import java.util.Locale;
 
 /** @file Main.java
- @class Main
+ * @brief Clase  <em>Main</em>.
+ * @class Main
  */
 
 /**
  * @author Pau Cuesta Arcos
- * @brief Pantalla principal que muestra todas las opciones disponibles
+ * @brief Pantalla Main principal que muestra todas las opciones disponibles
  */
 
 public class Main {
@@ -120,6 +121,7 @@ public class Main {
             public void actionPerformed(ActionEvent e) {
                 Utils.updateVolume(-70);
                 ctrlUI.toLogin();
+                ctrlUI.logOut();
             }
         });
         statsButton.addActionListener(new ActionListener() {
@@ -261,7 +263,10 @@ public class Main {
                 resultName = currentFont.getName();
             }
         }
-        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
+        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
+        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
+        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
     }
 
     /**

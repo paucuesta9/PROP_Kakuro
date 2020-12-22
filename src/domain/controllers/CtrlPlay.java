@@ -9,6 +9,7 @@ package domain.controllers;
  */
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import domain.classes.Exceptions.CantGenerateException;
 import domain.classes.Game;
 import domain.classes.Kakuro;
 import domain.classes.Player;
@@ -21,8 +22,7 @@ import java.util.List;
 /** @brief Clase CtrlPlay que contiene los atributos y metodos para la funcionalidad de jugar
  * @author Judith Almoño Gómez
  */
-public class
-CtrlPlay {
+public class CtrlPlay {
     /**
      * currentKakuro representa la instancia del kakuro con la que se trabaja en este momento
      */
@@ -36,7 +36,15 @@ CtrlPlay {
      */
     private Player currentPlayer;
 
+    /**
+     * cd representa el controlador de dominio
+     */
     private CtrlDomain cd;
+
+    /**
+     * training representa si está en modo entrenamiento
+     */
+    private boolean training;
 
     /** @brief Creadora a partir de unas características
      *
@@ -46,8 +54,9 @@ CtrlPlay {
      * @param cd representa la instancia del ctrlDomain
      * @param training represneta si se empieza partida en modo entrenamiento
      */
-    public CtrlPlay(int difficulty, int rowSize, int columnSize, CtrlDomain cd, boolean training) {
+    public CtrlPlay(int difficulty, int rowSize, int columnSize, CtrlDomain cd, boolean training) throws CantGenerateException {
         this.cd = cd;
+        this.training = training;
         currentPlayer = cd.getCurrentPlayer();
         try {
             String kakuro = cd.searchKakuro(difficulty, rowSize, columnSize);
@@ -57,6 +66,7 @@ CtrlPlay {
             currentKakuro.setDifficulty(difficulty);
             cd.setKakuro(currentKakuro);
         } catch (IOException e) {
+            if (rowSize > 20 || columnSize > 20) throw new CantGenerateException();
             System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)");
             currentKakuro = CtrlGenerate.generate(rowSize,columnSize, difficulty);
             System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
@@ -76,9 +86,11 @@ CtrlPlay {
      *
      * @param absolutePath representa el path donde se encuentra el kakuro
      * @param cd representa la instancia del CtrlDomain
+     * @param training representa si esta en modo entrenamiento
      */
-    public CtrlPlay(String absolutePath, CtrlDomain cd) {
+    public CtrlPlay(String absolutePath, CtrlDomain cd, boolean training) {
         this.cd = cd;
+        this.training = training;
         currentPlayer = cd.getCurrentPlayer();
         String kakuro = null;
         try {
@@ -105,6 +117,7 @@ CtrlPlay {
      */
     public CtrlPlay(int game, CtrlDomain cd) {
         this.cd = cd;
+        this.training = false;
         currentPlayer = cd.getCurrentPlayer();
         currentGame = currentPlayer.getGame(game);
         currentPlayer.setCurrentGame(currentGame);
@@ -160,7 +173,7 @@ CtrlPlay {
      * @return -2 si no se ha colocado un valor
      */
     public int helpMyValue(int x, int y) {
-        updatePoints(-1);
+        if (!training) updatePoints(-1);
         currentPlayer.getStats().setHelps(1);
         if (currentKakuro.getCell(x, y).isWhite()) {
             int value = ((WhiteCell) currentKakuro.getCell(x, y)).getValue();
@@ -182,7 +195,7 @@ CtrlPlay {
      * @return cierto si es una celda blanca y falso si es una celda negra
      */
     public int helpCorrectNumber(int x, int y) {
-        updatePoints(-2);
+        if (!training) updatePoints(-2);
         currentPlayer.getStats().setHelps(1);
         if (currentKakuro.getCell(x, y).isWhite()) {
             int correctNumber = ((WhiteCell) currentKakuro.getCell(x, y)).getCorrectValue();

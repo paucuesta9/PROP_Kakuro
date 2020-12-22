@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kakuro
-   &#160;<span id="projectnumber">version 1 20-nov-2020</span>
+   &#160;<span id="projectnumber">version Final 22-dec-2020</span>
    </div>
   </td>
  </tr>
@@ -83,7 +83,7 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:ae23ea3d97fa0401abcb6dd7cf0d4f54e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1classes_1_1_kakuro.html#ae23ea3d97fa0401abcb6dd7cf0d4f54e">Kakuro</a> (int <a class="el" href="classdomain_1_1classes_1_1_kakuro.html#ab02c48d2633c881861bcc730ccbd5844">id</a>, int <a class="el" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a>, <a class="el" href="classdomain_1_1classes_1_1_cell.html">Cell</a>[][] <a class="el" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>)</td></tr>
 <tr class="memdesc:ae23ea3d97fa0401abcb6dd7cf0d4f54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora con todos los parámtros.  <a href="classdomain_1_1classes_1_1_kakuro.html#ae23ea3d97fa0401abcb6dd7cf0d4f54e">Más...</a><br /></td></tr>
 <tr class="separator:ae23ea3d97fa0401abcb6dd7cf0d4f54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ea6319b9b2d3afe0647c66b670bb7a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1classes_1_1_kakuro.html#a6ea6319b9b2d3afe0647c66b670bb7a5">Kakuro</a> (String kakuro)</td></tr>
+<tr class="memitem:a6ea6319b9b2d3afe0647c66b670bb7a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1classes_1_1_kakuro.html#a6ea6319b9b2d3afe0647c66b670bb7a5">Kakuro</a> (String kakuro)  throws NumberFormatException </td></tr>
 <tr class="memdesc:a6ea6319b9b2d3afe0647c66b670bb7a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora a partir de String.  <a href="classdomain_1_1classes_1_1_kakuro.html#a6ea6319b9b2d3afe0647c66b670bb7a5">Más...</a><br /></td></tr>
 <tr class="separator:a6ea6319b9b2d3afe0647c66b670bb7a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8f9d59dd96375ce457f8e234253ac83"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classdomain_1_1classes_1_1_kakuro.html#ae8f9d59dd96375ce457f8e234253ac83">toString</a> ()</td></tr>
@@ -222,7 +222,7 @@ Atributos privados</h2></td></tr>
           <td>(</td>
           <td class="paramtype">String&#160;</td>
           <td class="paramname"><em>kakuro</em></td><td>)</td>
-          <td></td>
+          <td> throws NumberFormatException</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -237,36 +237,40 @@ Atributos privados</h2></td></tr>
 </dl>
 
 <p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00055">55</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                 {</div>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                              {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        String[] values = kakuro.split(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        String[] valuesSize = values[0].split(<span class="stringliteral">&quot;,&quot;</span>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a> = Integer.parseInt(valuesSize[0]);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a> = Integer.parseInt(valuesSize[1]);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a> = <span class="keyword">new</span> Cell[<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>][<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>];</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            String[] valuesRow = values[i + 1].split(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">if</span> (valuesRow[j].equals(<span class="stringliteral">&quot;*&quot;</span>)) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> BlackCell();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (valuesRow[j].equals(<span class="stringliteral">&quot;?&quot;</span>)) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> WhiteCell();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (valuesRow[j].charAt(0) == <span class="charliteral">&#39;C&#39;</span> || valuesRow[j].charAt(0) == <span class="charliteral">&#39;F&#39;</span>) {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <span class="keywordtype">int</span> vertical = 0, horizontal = 0;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                    <span class="keywordflow">if</span> (valuesRow[j].charAt(0) == <span class="charliteral">&#39;C&#39;</span>) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        valuesRow[j] = valuesRow[j].substring(1);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                        <span class="keywordflow">if</span> (valuesRow[j].contains(<span class="stringliteral">&quot;F&quot;</span>)) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                            String[] CF = valuesRow[j].split(<span class="stringliteral">&quot;F&quot;</span>);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                            vertical = Integer.parseInt(CF[0]);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            horizontal = Integer.parseInt(CF[1]);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                            vertical = Integer.parseInt(valuesRow[j]);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        horizontal = Integer.parseInt(valuesRow[j].substring(1));</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> BlackCell(vertical, horizontal);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                } <span class="keywordflow">else</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> WhiteCell(Integer.parseInt(valuesRow[j]));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                String[] valuesRow = values[i + 1].split(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    <span class="keywordflow">if</span> (valuesRow[j].equals(<span class="stringliteral">&quot;*&quot;</span>)) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> BlackCell();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (valuesRow[j].equals(<span class="stringliteral">&quot;?&quot;</span>)) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> WhiteCell();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (valuesRow[j].charAt(0) == <span class="charliteral">&#39;C&#39;</span> || valuesRow[j].charAt(0) == <span class="charliteral">&#39;F&#39;</span>) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        <span class="keywordtype">int</span> vertical = 0, horizontal = 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                        <span class="keywordflow">if</span> (valuesRow[j].charAt(0) == <span class="charliteral">&#39;C&#39;</span>) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                            valuesRow[j] = valuesRow[j].substring(1);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                            <span class="keywordflow">if</span> (valuesRow[j].contains(<span class="stringliteral">&quot;F&quot;</span>)) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                String[] CF = valuesRow[j].split(<span class="stringliteral">&quot;F&quot;</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                vertical = Integer.parseInt(CF[0]);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                horizontal = Integer.parseInt(CF[1]);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                vertical = Integer.parseInt(valuesRow[j]);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                            horizontal = Integer.parseInt(valuesRow[j].substring(1));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> BlackCell(vertical, horizontal);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    } <span class="keywordflow">else</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j] = <span class="keyword">new</span> WhiteCell(Integer.parseInt(valuesRow[j]));</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        } <span class="keywordflow">catch</span> (NumberFormatException e) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">throw</span> <span class="keyword">new</span> NumberFormatException();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -290,33 +294,33 @@ Atributos privados</h2></td></tr>
 <p>Se convierte el <a class="el" href="classdomain_1_1classes_1_1_kakuro.html" title="Clase Kakuro que contiene los atributos y metodos de un tablero.">Kakuro</a> a un String en formato fichero</p>
 <dl class="section return"><dt>Devuelve</dt><dd>String en formato de fichero para guardarlo en un archivo o printear en consola </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00092">92</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                             {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        String line;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        line = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        content.append(line).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite()) {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                    WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">if</span> (w.getValue() != 0) content.append(w.getValue());</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    <span class="keywordflow">else</span> content.append(<span class="stringliteral">&quot;?&quot;</span>);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    BlackCell bc = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() == 0 &amp;&amp; bc.getRow() == 0) {</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        content.append(<span class="stringliteral">&quot;*&quot;</span>);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() != 0) content.append(<span class="stringliteral">&quot;C&quot;</span> + bc.getColumn());</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="keywordflow">if</span> (bc.getRow() != 0) content.append(<span class="stringliteral">&quot;F&quot;</span> + bc.getRow());</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="keywordflow">if</span> (j != <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a> - 1) content.append(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            content.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        }</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">return</span> content.toString();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00096">96</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                             {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        String line;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        line = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        content.append(line).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite()) {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    <span class="keywordflow">if</span> (w.getValue() != 0) content.append(w.getValue());</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    <span class="keywordflow">else</span> content.append(<span class="stringliteral">&quot;?&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    BlackCell bc = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() == 0 &amp;&amp; bc.getRow() == 0) {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        content.append(<span class="stringliteral">&quot;*&quot;</span>);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() != 0) content.append(<span class="stringliteral">&quot;C&quot;</span> + bc.getColumn());</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    <span class="keywordflow">if</span> (bc.getRow() != 0) content.append(<span class="stringliteral">&quot;F&quot;</span> + bc.getRow());</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="keywordflow">if</span> (j != <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a> - 1) content.append(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            content.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> content.toString();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -339,32 +343,32 @@ Atributos privados</h2></td></tr>
 <p>Se convierte el <a class="el" href="classdomain_1_1classes_1_1_kakuro.html" title="Clase Kakuro que contiene los atributos y metodos de un tablero.">Kakuro</a> a un String en formato fichero</p>
 <dl class="section return"><dt>Devuelve</dt><dd>String en formato de fichero para guardarlo en un archivo o printear en consola </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00125">125</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        String line;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        line = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        content.append(line).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite()) {</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                    WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    content.append(w.getCorrectValue());</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    BlackCell bc = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() == 0 &amp;&amp; bc.getRow() == 0) {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        content.append(<span class="stringliteral">&quot;*&quot;</span>);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() != 0) content.append(<span class="stringliteral">&quot;C&quot;</span> + bc.getColumn());</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <span class="keywordflow">if</span> (bc.getRow() != 0) content.append(<span class="stringliteral">&quot;F&quot;</span> + bc.getRow());</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">if</span> (j != <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a> - 1) content.append(<span class="stringliteral">&quot;,&quot;</span>);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            content.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">return</span> content.toString();</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00129">129</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                                    {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        StringBuilder content = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        String line;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        line = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a> + <span class="stringliteral">&quot;,&quot;</span> + <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        content.append(line).append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite()) {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                    WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                    content.append(w.getCorrectValue());</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                }</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                    BlackCell bc = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j];</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() == 0 &amp;&amp; bc.getRow() == 0) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        content.append(<span class="stringliteral">&quot;*&quot;</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    <span class="keywordflow">if</span> (bc.getColumn() != 0) content.append(<span class="stringliteral">&quot;C&quot;</span> + bc.getColumn());</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                    <span class="keywordflow">if</span> (bc.getRow() != 0) content.append(<span class="stringliteral">&quot;F&quot;</span> + bc.getRow());</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">if</span> (j != <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a> - 1) content.append(<span class="stringliteral">&quot;,&quot;</span>);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            }</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            content.append(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        }</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> content.toString();</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -386,10 +390,10 @@ Atributos privados</h2></td></tr>
 <p>Getter del Identificador. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>Int con el identificador </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00155">155</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                       {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ab02c48d2633c881861bcc730ccbd5844">id</a>;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00159">159</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                       {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ab02c48d2633c881861bcc730ccbd5844">id</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -417,10 +421,10 @@ Atributos privados</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00163">163</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                              {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        this.<span class="keywordtype">id</span> = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ab02c48d2633c881861bcc730ccbd5844">id</a>;</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00167">167</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                              {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        this.<span class="keywordtype">id</span> = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ab02c48d2633c881861bcc730ccbd5844">id</a>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -442,10 +446,10 @@ Atributos privados</h2></td></tr>
 <p>Getter de la dificultad. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>entero con la dificultad (De 1 a 3) </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00171">171</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                               {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a>;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00175">175</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                               {</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -473,10 +477,10 @@ Atributos privados</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00179">179</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                              {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        this.<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a> = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00183">183</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                                              {</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        this.<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a> = <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">difficulty</a>;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -498,10 +502,10 @@ Atributos privados</h2></td></tr>
 <p>Getter del tamaño de fila. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>entero con el tamaño de la fila </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00187">187</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                            {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00191">191</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                            {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -523,10 +527,10 @@ Atributos privados</h2></td></tr>
 <p>Getter del tamaño de columna. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>entero con el tamaño de la columna </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00203">203</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                               {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00207">207</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                               {</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -548,10 +552,10 @@ Atributos privados</h2></td></tr>
 <p>Getter del tablero. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>una matriz de celdas, es decir el tablero del kakuro </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00219">219</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                               {</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00223">223</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                               {</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -591,10 +595,10 @@ Atributos privados</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>la Celda de nuestro tablero en la posición [x][y] </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00229">229</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                                      {</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[x][y];</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00233">233</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                      {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[x][y];</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -641,10 +645,10 @@ Atributos privados</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>true si la llamada a la celda devuelve true, en este caso, si la celda es blanca, en caso contrario devuelve false </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00248">248</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                                                     {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[x][y].<a class="code" href="classdomain_1_1classes_1_1_cell.html#ab6d78b474aeb403b214da18f4ff31a4a">setValue</a>(value);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00252">252</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                                     {</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[x][y].<a class="code" href="classdomain_1_1classes_1_1_cell.html#ab6d78b474aeb403b214da18f4ff31a4a">setValue</a>(value);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -672,15 +676,15 @@ Atributos privados</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00256">256</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                                             {</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite()) {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                    ((WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j]).setCorrectValue(((WhiteCell) sol.getCell(i, j)).getValue());</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        }</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00260">260</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                                             {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j)</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite()) {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                    ((WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j]).setCorrectValue(((WhiteCell) sol.getCell(i, j)).getValue());</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -743,21 +747,21 @@ Atributos privados</h2></td></tr>
 <dd>
 False si hay valores repetidos o, si f es false y la suma es demasiado grande o, si f es true, y la suma es diferente </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00275">275</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                                                                        {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c].isWhite()) {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            BlackCell b = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            <span class="keywordflow">if</span>(f &amp;&amp; b.getColumn() == sum) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!f &amp;&amp; b.getColumn() &gt; sum) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        }</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">if</span>( w.getCorrectValue() == i ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            sum += w.getCorrectValue();</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">checkColumn</a>(r-1,c,i,f,sum);</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;        }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00279">279</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                                                                        {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span>(!<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c].isWhite()) {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            BlackCell b = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            <span class="keywordflow">if</span>(f &amp;&amp; b.getColumn() == sum) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!f &amp;&amp; b.getColumn() &gt; sum) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">if</span>( w.getCorrectValue() == i ) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            sum += w.getCorrectValue();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">checkColumn</a>(r-1,c,i,f,sum);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        }</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -832,35 +836,35 @@ False si hay valores repetidos o, si f es false y la suma es demasiado grande o,
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>devuelve cierto si se cumplen las condiciones y falso si no se cumplen </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00302">302</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                                                                                                        {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c].isWhite()) {</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            <span class="keywordflow">if</span> (total != -1) {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                <span class="comment">//sum -= value;</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            }</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                BlackCell b = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                total = b.getRow();</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(r, c + 1, value, sum, total, posy, all);</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            }</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (total == -1 &amp;&amp; c-1 &gt;= 0) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(r, c - 1, value, sum, total, posy, all);</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == value &amp;&amp; c != posy) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == 0) all = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                sum += w.getValue();</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                <span class="keywordflow">if</span> (c+1 &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[0].length) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(r, c + 1, value, sum, total, posy, all);</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                }</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00306">306</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                                                                                        {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c].isWhite()) {</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">if</span> (total != -1) {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="comment">//sum -= value;</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                BlackCell b = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                total = b.getRow();</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(r, c + 1, value, sum, total, posy, all);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="keywordflow">if</span> (total == -1 &amp;&amp; c-1 &gt;= 0) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(r, c - 1, value, sum, total, posy, all);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                WhiteCell w = (WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == value &amp;&amp; c != posy) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == 0) all = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                sum += w.getValue();</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordflow">if</span> (c+1 &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[0].length) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(r, c + 1, value, sum, total, posy, all);</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                    <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                }</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            }</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -935,35 +939,35 @@ False si hay valores repetidos o, si f es false y la suma es demasiado grande o,
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>devuelve cierto si se cumplen las condiciones y falso si no se cumplen </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00343">343</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                                                                                                           {</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c].isWhite()) {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">if</span> (total != -1) {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                <span class="comment">//sum -= value;</span></div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            }</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                BlackCell b = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                total = b.getColumn();</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(r+1, c, value, sum, total, posx, all);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordflow">if</span> (total == -1 &amp;&amp; r-1 &gt;= 0) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(r -1, c, value, sum, total, posx, all);</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                WhiteCell w = (WhiteCell)  <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == value &amp;&amp; r != posx) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == 0) all = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                sum += w.getValue();</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                <span class="keywordflow">if</span> (r+1 &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>.length) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(r+1, c, value, sum, total, posx, all);</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                    <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            }</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00347">347</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                                                                                                           {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c].isWhite()) {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">if</span> (total != -1) {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                <span class="comment">//sum -= value;</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                BlackCell b = (BlackCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                total = b.getColumn();</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(r+1, c, value, sum, total, posx, all);</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keywordflow">if</span> (total == -1 &amp;&amp; r-1 &gt;= 0) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(r -1, c, value, sum, total, posx, all);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                WhiteCell w = (WhiteCell)  <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[r][c];</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == value &amp;&amp; r != posx) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <span class="keywordflow">if</span> (w.getValue() == 0) all = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                sum += w.getValue();</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="keywordflow">if</span> (r+1 &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>.length) <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(r+1, c, value, sum, total, posx, all);</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                    <span class="keywordflow">if</span> (all) <span class="keywordflow">return</span> total == sum || total == 0;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                    <span class="keywordflow">else</span> <span class="keywordflow">return</span> total &gt;= sum || total == 0;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;            }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1010,10 +1014,10 @@ False si hay valores repetidos o, si f es false y la suma es demasiado grande o,
 </dl>
 <dl class="section return"><dt>Devuelve</dt><dd>devuelve cierto si se cumplen las condiciones tanto en la fila como en la columna y falso si no se cumplen en la fila, la columna o ambas </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00380">380</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                                                          {</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(x, y-1, value, 0, -1, y, <span class="keyword">true</span>) &amp;&amp; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(x-1, y, value, 0, -1, x, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00384">384</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                                                          {</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">checkRowValidity</a>(x, y-1, value, 0, -1, y, <span class="keyword">true</span>) &amp;&amp; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">checkColumnValidity</a>(x-1, y, value, 0, -1, x, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1035,15 +1039,15 @@ False si hay valores repetidos o, si f es false y la suma es demasiado grande o,
 <p>Comprueba si se ha rellenado el tablero entero y correctamente. </p>
 <dl class="section return"><dt>Devuelve</dt><dd>cierto si el usuario ha completado el tablero de forma correcto, en caso que falte algun valor por colocar o alguna no sea correcto devuelve falso </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00388">388</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
-<div class="fragment"><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                                {</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite() &amp;&amp; ((WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j]).getValue() != ((WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j]).getCorrectValue()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            }</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        }</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    }</div>
+<p class="definition">Definición en la línea <a class="el" href="_kakuro_8java_source.html#l00392">392</a> del archivo <a class="el" href="_kakuro_8java_source.html">Kakuro.java</a>.</p>
+<div class="fragment"><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                                {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">rowSize</a>; ++i) {</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">columnSize</a>; ++j) {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j].isWhite() &amp;&amp; ((WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j]).getValue() != ((WhiteCell) <a class="code" href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">board</a>[i][j]).getCorrectValue()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1180,10 +1184,10 @@ False si hay valores repetidos o, si f es false y la suma es demasiado grande o,
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_ac04999a69528c86ca7262f9496a21bca"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">domain.classes.Kakuro.rowSize</a></div><div class="ttdeci">int rowSize</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00023">Kakuro.java:23</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a513e4e80c50d688b4b8003be040b15a6"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a513e4e80c50d688b4b8003be040b15a6">domain.classes.Kakuro.difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00019">Kakuro.java:19</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_cell_html_ab6d78b474aeb403b214da18f4ff31a4a"><div class="ttname"><a href="classdomain_1_1classes_1_1_cell.html#ab6d78b474aeb403b214da18f4ff31a4a">domain.classes.Cell.setValue</a></div><div class="ttdeci">boolean setValue(int value)</div><div class="ttdoc">Setter de value.</div><div class="ttdef"><b>Definition:</b> <a href="_cell_8java_source.html#l00034">Cell.java:34</a></div></div>
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a707e08a057dcf5667451719a4190ecbd"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">domain.classes.Kakuro.checkColumn</a></div><div class="ttdeci">boolean checkColumn(int r, int c, int i, boolean f, int sum)</div><div class="ttdoc">Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del table...</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00275">Kakuro.java:275</a></div></div>
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a1a451ba114c66bdb50f8652d55d4c8d6"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">domain.classes.Kakuro.checkRowValidity</a></div><div class="ttdeci">boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy, boolean all)</div><div class="ttdoc">Comprueba la validez de la fila.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00302">Kakuro.java:302</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a707e08a057dcf5667451719a4190ecbd"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a707e08a057dcf5667451719a4190ecbd">domain.classes.Kakuro.checkColumn</a></div><div class="ttdeci">boolean checkColumn(int r, int c, int i, boolean f, int sum)</div><div class="ttdoc">Comprueba si un valor es posible para una celda teniendo en cuenta el estado en ese momento del table...</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00279">Kakuro.java:279</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a1a451ba114c66bdb50f8652d55d4c8d6"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a1a451ba114c66bdb50f8652d55d4c8d6">domain.classes.Kakuro.checkRowValidity</a></div><div class="ttdeci">boolean checkRowValidity(int r, int c, int value, int sum, int total, int posy, boolean all)</div><div class="ttdoc">Comprueba la validez de la fila.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00306">Kakuro.java:306</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_a15b207f751a534b85dba19d1c36211ef"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#a15b207f751a534b85dba19d1c36211ef">domain.classes.Kakuro.columnSize</a></div><div class="ttdeci">int columnSize</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00027">Kakuro.java:27</a></div></div>
-<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_afee68cba6b239db809d3add332ec4ed5"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">domain.classes.Kakuro.checkColumnValidity</a></div><div class="ttdeci">boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx, boolean all)</div><div class="ttdoc">Comprueba la validez de la columna.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00343">Kakuro.java:343</a></div></div>
+<div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_afee68cba6b239db809d3add332ec4ed5"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#afee68cba6b239db809d3add332ec4ed5">domain.classes.Kakuro.checkColumnValidity</a></div><div class="ttdeci">boolean checkColumnValidity(int r, int c, int value, int sum, int total, int posx, boolean all)</div><div class="ttdoc">Comprueba la validez de la columna.</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00347">Kakuro.java:347</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_ab02c48d2633c881861bcc730ccbd5844"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#ab02c48d2633c881861bcc730ccbd5844">domain.classes.Kakuro.id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00015">Kakuro.java:15</a></div></div>
 <div class="ttc" id="aclassdomain_1_1classes_1_1_kakuro_html_ad39f2edb0e3a6eae95dfa01c52ae0243"><div class="ttname"><a href="classdomain_1_1classes_1_1_kakuro.html#ad39f2edb0e3a6eae95dfa01c52ae0243">domain.classes.Kakuro.board</a></div><div class="ttdeci">Cell[][] board</div><div class="ttdef"><b>Definition:</b> <a href="_kakuro_8java_source.html#l00031">Kakuro.java:31</a></div></div>
 <!-- start footer part -->

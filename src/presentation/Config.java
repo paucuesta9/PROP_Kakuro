@@ -15,6 +15,7 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
 /** @file Config.java
+ @brief Clase  <em>Config</em>.
  @class Config
  */
 

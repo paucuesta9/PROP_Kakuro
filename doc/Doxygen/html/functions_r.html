@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Kakuro
-   &#160;<span id="projectnumber">version 1 20-nov-2020</span>
+   &#160;<span id="projectnumber">version Final 22-dec-2020</span>
    </div>
   </td>
  </tr>
@@ -68,18 +68,37 @@ $(function() {
 <li>randomCells()
 : <a class="el" href="classdomain_1_1controllers_1_1_ctrl_generate.html#aae44309f751febdfa27d62094f381070">domain.controllers.CtrlGenerate</a>
 </li>
+<li>Ranking()
+: <a class="el" href="classdomain_1_1classes_1_1_ranking.html#acc9bc0a88292edf757687969d3a5b874">domain.classes.Ranking</a>
+</li>
+<li>rankingButton
+: <a class="el" href="classpresentation_1_1_main.html#a16f27aa617467693a6b225de4d292d5f">presentation.Main</a>
+</li>
+<li>rankings
+: <a class="el" href="classpresentation_1_1_ctrl_u_i.html#a8e3c43d091ee8a2f9a4908e1cca189d4">presentation.CtrlUI</a>
+</li>
+<li>Rankings()
+: <a class="el" href="classpresentation_1_1_rankings.html#a961918ecb09bd5562cfd8e49b58c45ba">presentation.Rankings</a>
+</li>
 <li>reader
 : <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell.html#aa52da59c7588ec98c61aadd4aaff6e69">domain.controllers.drivers.DriverBlackCell</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#a622b462ebaa319eb77195a3228ee4378">domain.controllers.drivers.DriverCell</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_created_ranking.html#a91e2c8e6c49f0d1640e8b29674bb235c">domain.controllers.drivers.DriverCreatedRanking</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html#ac27a3df005dc290ecfe77ee9da5d5c37">domain.controllers.drivers.DriverCtrlData</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html#a988d74c4a5156a552c80c0c96e609725">domain.controllers.drivers.DriverCtrlDomain</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate.html#ad602616112582ef4df97357c6c618245">domain.controllers.drivers.DriverCtrlGenerate</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play.html#ad790fa0f402e70a066418496aec92689">domain.controllers.drivers.DriverCtrlPlay</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_player.html#aa4e1ffa07e374f62a0d44fb39dec932a">domain.controllers.drivers.DriverCtrlPlayer</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve.html#a4b8a67e05cca41e93b8fb6afc2b815f3">domain.controllers.drivers.DriverCtrlResolve</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate.html#af5ff7f60a87a3469e67721ad8c4baa65">domain.controllers.drivers.DriverCtrlValidate</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_game.html#ab27e65f8c45bb8f909921dace3707db9">domain.controllers.drivers.DriverGame</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#a9497efdfb2f144d46528bd1b32e15d86">domain.controllers.drivers.DriverKakuro</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_player.html#a19352c47876b3ddb2ed0eea0b5a9e7b1">domain.controllers.drivers.DriverPlayer</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_points_ranking.html#a6bdea6f1aad1b3ad99e7bdbf1d2b535d">domain.controllers.drivers.DriverPointsRanking</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_white_cell.html#ab5fc6c191c3cd74b99f103c3b82e9567">domain.controllers.drivers.DriverWhiteCell</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_wins_ranking.html#a2f2bff90d1e9de253a76415057723514">domain.controllers.drivers.DriverWinsRanking</a>
 , <a class="el" href="classpresentation_1_1_ctrl_u_i.html#a91c1a196e1d53661bd964daca33ab0b9">presentation.CtrlUI</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i_old.html#ac7df6dec1868d5d4bbdc7a9533d43da0">presentation.CtrlUIOld</a>
 </li>
 <li>readKakuro()
 : <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html#abd6a4a25db515d69ba975828fac19e25">domain.controllers.drivers.DriverCtrlData</a>
@@ -92,33 +111,107 @@ $(function() {
 </li>
 <li>readLine()
 : <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html#adee8dd8f4453931e40c499e1610309af">domain.controllers.drivers.DriverCtrlData</a>
-, <a class="el" href="classpresentation_1_1_ctrl_u_i.html#ad3b85499e69ebc491ba0acbdf2f1e679">presentation.CtrlUI</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i_old.html#aa83ca1e1433d0408b0ef5455bbef8833">presentation.CtrlUIOld</a>
 </li>
 <li>readNumber()
 : <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_black_cell.html#ad89a7c238fdcc585b8b5ccc15b36c5e9">domain.controllers.drivers.DriverBlackCell</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_cell.html#ac83f60264cb181c3b8d9a1265d376ef0">domain.controllers.drivers.DriverCell</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_created_ranking.html#a09eab09fadbdf1527ec32567dc7a5871">domain.controllers.drivers.DriverCreatedRanking</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_data.html#a7e0e6c9753b7c772e6b9fe62c63e211b">domain.controllers.drivers.DriverCtrlData</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_domain.html#a8c0f65a68b1814e29727325121b399a9">domain.controllers.drivers.DriverCtrlDomain</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_generate.html#aadfdf08499cef4570fceef9fc7b273d6">domain.controllers.drivers.DriverCtrlGenerate</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_play.html#a5cbab565d735e4d14c19e0a2857a3109">domain.controllers.drivers.DriverCtrlPlay</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_player.html#a693870fe5d3c1c0e6dd3229caf9e57f9">domain.controllers.drivers.DriverCtrlPlayer</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_resolve.html#aef217495b41035b537ac5ee605bf36a8">domain.controllers.drivers.DriverCtrlResolve</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_ctrl_validate.html#abfc72945b73009e07d5d22fd81881974">domain.controllers.drivers.DriverCtrlValidate</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_game.html#a2fda553e69a134992b6494bdf2e4c9e7">domain.controllers.drivers.DriverGame</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_kakuro.html#ae1c57298458724404ade22ed20b7ba8d">domain.controllers.drivers.DriverKakuro</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_player.html#a9bdc868eee6b13877d9465e89533c9fd">domain.controllers.drivers.DriverPlayer</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_points_ranking.html#a5bfdfca0e6b0c69b9e55d7ae4105bbc9">domain.controllers.drivers.DriverPointsRanking</a>
 , <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_white_cell.html#a6a394dd4cafc3fd5d2fd09eb402f5b28">domain.controllers.drivers.DriverWhiteCell</a>
-, <a class="el" href="classpresentation_1_1_ctrl_u_i.html#a788646b757229e013cedf037d4fdee82">presentation.CtrlUI</a>
+, <a class="el" href="classdomain_1_1controllers_1_1drivers_1_1_driver_wins_ranking.html#ad0759ecf61d38d0f31fe2fe67c44a386">domain.controllers.drivers.DriverWinsRanking</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i_old.html#afe9569cac0929ee65d94bb4b21f1782d">presentation.CtrlUIOld</a>
+</li>
+<li>Record
+: <a class="el" href="classpresentation_1_1_show_kakuro.html#a6f5da49b8fa86e0b16798d815b0ce69f">presentation.ShowKakuro</a>
+</li>
+<li>records
+: <a class="el" href="classpresentation_1_1_ctrl_u_i.html#a22fd95268f323388ace60d4e224ce8a0">presentation.CtrlUI</a>
+</li>
+<li>Records()
+: <a class="el" href="classpresentation_1_1_records.html#ae443de81f898f6cadfb92749dae5c6cb">presentation.Records</a>
+</li>
+<li>recordsButton
+: <a class="el" href="classpresentation_1_1_main.html#a37e0c3037addb8036430465671bd03e4">presentation.Main</a>
+</li>
+<li>register
+: <a class="el" href="classpresentation_1_1_ctrl_u_i.html#ac595b476288e96a9139748d2616220b5">presentation.CtrlUI</a>
+</li>
+<li>Register()
+: <a class="el" href="classpresentation_1_1_register.html#a38b64c46ec5acef461a981f57dc4c4fe">presentation.Register</a>
+</li>
+<li>registrarseButton
+: <a class="el" href="classpresentation_1_1_register.html#a8edcb3a97a6dffe9292a8f81ff1e316f">presentation.Register</a>
+</li>
+<li>removeHelp()
+: <a class="el" href="classdomain_1_1classes_1_1_game.html#a3385c9c47b71fadac4d83f498c8aac5e">domain.classes.Game</a>
+</li>
+<li>repetirContrasenaPasswordField
+: <a class="el" href="classpresentation_1_1_register.html#a4033d5f1d5ffccf67b76ceac4e8c7a85">presentation.Register</a>
+</li>
+<li>reset
+: <a class="el" href="classpresentation_1_1_config.html#af8da5fa8f60328b441aebdf60ee593a9">presentation.Config</a>
+</li>
+<li>resetColors()
+: <a class="el" href="classdomain_1_1classes_1_1_config.html#aece94807b890ab643746efa8790c745e">domain.classes.Config</a>
+</li>
+<li>resetConfigColors()
+: <a class="el" href="classdomain_1_1controllers_1_1_ctrl_domain.html#a3e793f193af9fd214bbcfb03f27755ab">domain.controllers.CtrlDomain</a>
+, <a class="el" href="classpresentation_1_1_ctrl_player_u_i.html#a12e063dc95dadb5cd931ea4ecec2c987">presentation.CtrlPlayerUI</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i.html#aad5b50ddff96a126d7521401c5dd8d95">presentation.CtrlUI</a>
+</li>
+<li>resetCongifColors()
+: <a class="el" href="classdomain_1_1classes_1_1_player.html#a0214915746aa290c86fca108cc44bdff">domain.classes.Player</a>
+</li>
+<li>resetParameters()
+: <a class="el" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ad759f4f2a4bd7a5918db28b254282158">domain.controllers.CtrlDomain</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i.html#a9e5500ca14124c8bfcb46aa8803ec52a">presentation.CtrlUI</a>
 </li>
 <li>resolve()
 : <a class="el" href="classdomain_1_1controllers_1_1_ctrl_domain.html#ae2291141db524d97560745e7f608b5ef">domain.controllers.CtrlDomain</a>
-, <a class="el" href="classdomain_1_1controllers_1_1_ctrl_resolve.html#aa9592e02827ee874f2ff338df5e81bbd">domain.controllers.CtrlResolve</a>
+, <a class="el" href="classdomain_1_1controllers_1_1_ctrl_resolve.html#a1b97f1193948e101cae04a14a276ae15">domain.controllers.CtrlResolve</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i.html#a50dccba9b8b008b0920f6d0e71b66651">presentation.CtrlUI</a>
+, <a class="el" href="classpresentation_1_1_play.html#a27e73d41fabe2abaeb3d0aff4f01b2f6">presentation.Play</a>
+</li>
+<li>resolveRecursive()
+: <a class="el" href="classdomain_1_1controllers_1_1_ctrl_resolve.html#a2b8d097e616ac33e2e418956e3826f95">domain.controllers.CtrlResolve</a>
+</li>
+<li>result
+: <a class="el" href="classpresentation_1_1_set_values.html#a4e66d705546fab58ad963fb570de7805">presentation.SetValues</a>
+</li>
+<li>roboto
+: <a class="el" href="classpresentation_1_1_utils.html#adc0fa7c0136d38195b17e753fbc9abfc">presentation.Utils</a>
 </li>
 <li>row
 : <a class="el" href="classdomain_1_1classes_1_1_black_cell.html#aba4335b13cc26463cb770752637319bc">domain.classes.BlackCell</a>
+, <a class="el" href="classpresentation_1_1_kakuro_black_cell.html#a16ce3055283f34e38b581cfcaf8325ca">presentation.KakuroBlackCell</a>
 </li>
 <li>rowSize
-: <a class="el" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">domain.classes.Kakuro</a>
+: <a class="el" href="classdomain_1_1classes_1_1_game.html#a2c88fd8e5b189dc2922a77966499b5fe">domain.classes.Game</a>
+, <a class="el" href="classdomain_1_1classes_1_1_kakuro.html#ac04999a69528c86ca7262f9496a21bca">domain.classes.Kakuro</a>
+, <a class="el" href="classpresentation_1_1_create.html#ac6682b105c30323b65576c7a01acb7e3">presentation.Create</a>
+, <a class="el" href="classpresentation_1_1_generate.html#afc577fdc6582b13d3ef01aae389d0776">presentation.Generate</a>
+, <a class="el" href="classpresentation_1_1_kakuro_board.html#a9898f701867bf0173ab0af0c29cf66cb">presentation.KakuroBoard</a>
+, <a class="el" href="classpresentation_1_1_play.html#ab2533394d1c4c0ce03756b3dad5cccf7">presentation.Play</a>
+</li>
+<li>rowSizeText
+: <a class="el" href="classpresentation_1_1_create.html#a9e658585897fe08c2730b973a2d7eb38">presentation.Create</a>
+, <a class="el" href="classpresentation_1_1_generate.html#a044e629950d826101e0cca46e6a548aa">presentation.Generate</a>
+, <a class="el" href="classpresentation_1_1_new_game.html#af39ceb92bce51649a219bba2bdc24733">presentation.NewGame</a>
 </li>
 <li>run()
 : <a class="el" href="classpresentation_1_1_ctrl_u_i.html#aef8d86118547505ecba97200a0215fdc">presentation.CtrlUI</a>
+, <a class="el" href="classpresentation_1_1_ctrl_u_i_old.html#a42d4269955cf02944f25eadbe8c20367">presentation.CtrlUIOld</a>
 </li>
 </ul>
 </div><!-- contents -->

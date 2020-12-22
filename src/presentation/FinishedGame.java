@@ -13,10 +13,11 @@ import java.awt.event.*;
 import java.net.URL;
 
 /** @file FinishedGame.java
+ @brief Clase  <em>FinishedGame</em>.
  @class FinishedGame
  */
 
-/** @brief Pantalla que muestra un Dialog cuando completas un kakuro en modo normal
+/** @brief Pantalla FinishedGame que muestra un Dialog cuando completas un kakuro en modo normal
  * @author Judith Almoño Gómez
  */
 
