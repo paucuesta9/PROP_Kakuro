@@ -408,7 +408,7 @@ public class Create {
                 } else if (Integer.parseInt(numRow.getText()) < 3 || Integer.parseInt(numColumn.getText()) < 3) {
                     Utils.showError("El tamaño debe ser mínimo 3x3");
                 } else if (Integer.parseInt(numRow.getText()) > 60 || Integer.parseInt(numColumn.getText()) > 60) {
-                    Utils.showError("El tamaño debe ser máximo 60");
+                    Utils.showError("El tamaño debe ser máximo 60x60");
                 } else {
                     numRow.setFocusable(false);
                     numColumn.setFocusable(false);
