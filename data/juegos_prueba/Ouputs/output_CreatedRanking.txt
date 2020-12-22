@@ -1,0 +1,22 @@
+Opciones: 
+ 1. Creadora 
+ 2. Lista ordenada de jugadores por kakuros creados 
+ 3. Salir
+
+Se llama a la Creadora
+Se ha creado
+
+Opciones: 
+ 1. Creadora 
+ 2. Lista ordenada de jugadores por kakuros creados 
+ 3. Salir
+
+Se llama a getList
+Se ordenan los jugadores segun los kakuros creados
+1 polFeo 1 
+2 1234 0 
+
+Opciones: 
+ 1. Creadora 
+ 2. Lista ordenada de jugadores por kakuros creados 
+ 3. Salir

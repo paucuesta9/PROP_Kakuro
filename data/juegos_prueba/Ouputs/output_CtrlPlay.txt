@@ -1,95 +1,118 @@
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique un Kakuro en el formato correcto
-Se llama a startGame
-Se ha empezado una partida
-
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
+Constructora 1
+Se llama a Constructora 1
+Se ha creado
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
-Se llama a helpMyValue
-La celda no tiene un valor asignado
-
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
+Constructora 2
+Se llama a Constructora 2
+Se ha creado
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
-Se llama a helpMyValue
-La celda no es blanca
-
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
+Constructora 3
+Se llama a Constructora 3
+Se ha creado
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
 Se llama a helpMyValue
-La celda no es blanca
+Introduce la fila de la celda:
+Introduce la columna de la celda:
 
-Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
-Se llama a helpMyValue
 El valor es correcto
-
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e 'y' y el valor de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
 Se llama a helpMyValue
+Introduce la fila de la celda:
+Introduce la columna de la celda:
+
+La celda no es blanca
+Opciones: 
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
+Se llama a helpCorrectNumber
+Introduce la fila de la celda:
+Introduce la columna de la celda:
+
 El valor no es correcto
-
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
 Se llama a helpCorrectNumber
-El valor de la celda se ha cambiado correctamente
+Introduce la fila de la celda:
+Introduce la columna de la celda:
 
+El valor es correcto
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
-Se llama a helpCorrectNumber
-No es una celda blanca
-
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
+Se llama a FinishGame
+Se ha pulsado el boton de resolver? (0->false, 1->true)
+Update stats
+Se ha guardado el jugador
+Se han sumado 14 puntos
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
-Se llama a helpCorrectNumber
-No es una celda blanca
-
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir
+Se llama a FinishGame
+Se ha pulsado el boton de resolver? (0->false, 1->true)
+Se ha guardado el jugador
+Se han sumado 0 puntos
 Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
-Indique la posicion x e y de la celda que quiere obtener la ayuda, el kakuro ha comprobar y el kakuro resuelto
-Se llama a helpCorrectNumber
-El valor de la celda se ha cambiado correctamente
-
-Opciones: 
-1. Empezar una partida 
- 2. Ayuda para el valor del usuario 
- 3. Ayuda para el valor correcto de una celda blanca 
- 4. Salir
+ 1. 1ra constructora 
+ 2. 2da constructora 
+ 3. 3ra constructora 
+ 4. Comprobar si un valor es correcto 
+ 5. Retornar el valor correcto 
+ 6. Acabar una partida 
+ 7. Salir

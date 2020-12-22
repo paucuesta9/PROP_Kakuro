@@ -19,6 +19,7 @@ public class CtrlDomain extends domain.controllers.CtrlDomain {
 
     private Gson gson;
     private Kakuro currentKakuro;
+    private Player currentPlayer;
 
     public  CtrlDomain() {
 
@@ -107,4 +108,14 @@ public class CtrlDomain extends domain.controllers.CtrlDomain {
         System.out.println("Update stats");
     }
 
+
+    @Override
+    public void setCurrentPlayer(Player currentPlayer) {
+        this.currentPlayer = currentPlayer;
+    }
+
+    @Override
+    public void savePlayer() {
+        System.out.println("Se ha guardado el jugador");
+    }
 }

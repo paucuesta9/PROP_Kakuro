@@ -1,40 +1,17 @@
 Opciones: 
  1. Creadora 
- 2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
+ 2. Comprobar que las coordenadas son correctas
+ 3. Lista de partidas empezadas
+ 5. Salir
 
 Se llama a la Creadora
 
 Opciones: 
  1. Creadora 
  2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
-
-Se llama a start new game
-Indique la dificultad del kakuro: 
-Indique el numero de filas del kakuro:
-Indique el numero de columnas del kakuro:
-Se ha creado la partida correctamente
-
-Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
-
-Se llama a start new game
-Indique la dificultad del kakuro: 
-Indique el numero de filas del kakuro:
-Indique el numero de columnas del kakuro:
-Se ha creado la partida correctamente
-
-Opciones: 
- 1. Creadora 
- 2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
+ 3. Comprobar que las coordenadas son correctas 
+ 4. Lista de partidas empezadas
+ 5. Salir
 
 Se llama a checkCoord
 Introduce la ruta de un kakuro para hacer el test: 
@@ -45,8 +22,9 @@ Coordenadas incorrectas
 Opciones: 
  1. Creadora 
  2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
+ 3. Comprobar que las coordenadas son correctas 
+ 4. Lista de partidas empezadas
+ 5. Salir
 
 Se llama a checkCoord
 Introduce la ruta de un kakuro para hacer el test: 
@@ -57,8 +35,9 @@ Coordenadas incorrectas
 Opciones: 
  1. Creadora 
  2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
+ 3. Comprobar que las coordenadas son correctas 
+ 4. Lista de partidas empezadas
+ 5. Salir
 
 Se llama a checkCoord
 Introduce la ruta de un kakuro para hacer el test: 
@@ -69,5 +48,17 @@ Coordenadas correctas
 Opciones: 
  1. Creadora 
  2. Empezar una partida 
- 3. Comprobar que las coordenadas son correctas
- 4. Salir
+ 3. Comprobar que las coordenadas son correctas 
+ 4. Lista de partidas empezadas
+ 5. Salir
+
+Se llama a getStartedGames
+0 1 6 2 3 4 5 
+6 5 0 4 3 2 1 
+
+Opciones: 
+ 1. Creadora 
+ 2. Empezar una partida 
+ 3. Comprobar que las coordenadas son correctas 
+ 4. Lista de partidas empezadas
+ 5. Salir

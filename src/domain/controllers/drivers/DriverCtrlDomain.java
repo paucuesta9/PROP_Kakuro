@@ -40,22 +40,7 @@ public class DriverCtrlDomain {
      */
     private static void testCreadora() {
     }
-    /** @brief Test de la función startNewGame
-     *
-     * Comprueba si la función hace correctamente la función de buscar un kakuro de la dificultad y tamaño indicado
-     * y si inicia correctamente la partida
-     */
-    private static void testStartNewGame() {
-        System.out.println("Indique la dificultad del kakuro: ");
-        int difficulty = readNumber();
-        System.out.println("Indique el numero de filas del kakuro:");
-        int kakuroRows = readNumber();
-        System.out.println("Indique el numero de columnas del kakuro:");
-        int kakuroCols = readNumber();
-        CtrlDomain cd = new CtrlDomain();
-        cd.startNewGame(difficulty,kakuroRows,kakuroCols);
-        System.out.println("Se ha creado la partida correctamente");
-    }
+
     /** @brief Test de la función checkCoord
      *
      * Comprueba si la función checkBoard detecta correctamente cuando unas coordenadas pertenecen al tablero y cuando no
@@ -69,6 +54,7 @@ public class DriverCtrlDomain {
         int columna = readNumber();
 
         CtrlDomain cd = new CtrlDomain();
+        cd.setKakuro(KAKURO_TEXT_ENUNCIADO);
         try {
             cd.getKakuro("data/"+s+".txt");
         } catch (IOException e) {
@@ -80,10 +66,11 @@ public class DriverCtrlDomain {
 
     }
 
-    /** @brief Función que comprueba que se retornan en formato adecuado todas las partidas del usuario actual
-     *
+    /**@brief Test de la función startedGames()
+     * Retorna las partidas empezadas
      */
-    private static void testGetStartedGames() {
+
+    private static void testStartedGames() {
         CtrlDomain cd = new CtrlDomain();
         Player p = new Player();
         List<String> h = new ArrayList<>();
@@ -109,9 +96,9 @@ public class DriverCtrlDomain {
      * Nos permite escoger el test que queremos realizar
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. Creadora \n 2. Empezar una partida \n 3. Comprobar que las coordenadas son correctas\n 4. Lista de partidas empezadas\n 5. Salir");
+        System.out.println("Opciones: \n 1. Creadora \n 2. Comprobar que las coordenadas son correctas\n 3. Lista de partidas empezadas\n 5. Salir");
         int value = readNumber();
-        while (value != 5) {
+        while (value != 4) {
             int x, y;
             switch (value) {
                 case 1:
@@ -121,18 +108,13 @@ public class DriverCtrlDomain {
                     break;
                 case 2:
                     System.out.println();
-                    System.out.println("Se llama a start new game");
-                    testStartNewGame();
-                    break;
-                case 3:
-                    System.out.println();
                     System.out.println("Se llama a checkCoord");
                     testCheckCoord();
                     break;
-                case 4:
+                case 3:
                     System.out.println();
                     System.out.println("Se llama a getStartedGames");
-                    testGetStartedGames();
+                    testStartedGames();
                     break;
                 default:
                     System.out.println();

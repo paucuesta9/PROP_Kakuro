@@ -1,0 +1,42 @@
+Opciones: 
+ 1. Login 
+ 2. signUp 
+ 3. Salir
+
+Se llama a Login
+Existe un usuario con username 1234 y contrasena 1234, y otro con usuario polFeo y contrasena 1234
+Introduzca un nombre de usuario
+Introduzca una contrasena
+Se ha iniciado sesion
+Opciones: 
+ 1. Login 
+ 2. signUp 
+ 3. Salir
+
+Se llama a Login
+Existe un usuario con username 1234 y contrasena 1234, y otro con usuario polFeo y contrasena 1234
+Introduzca un nombre de usuario
+Introduzca una contrasena
+Usuario no encontrado
+Opciones: 
+ 1. Login 
+ 2. signUp 
+ 3. Salir
+
+Se llama a signUp
+Introduzca un nombre de usuario
+Introduzca una contrasena
+OK
+Opciones: 
+ 1. Login 
+ 2. signUp 
+ 3. Salir
+
+Se llama a signUp
+Introduzca un nombre de usuario
+Introduzca una contrasena
+OK
+Opciones: 
+ 1. Login 
+ 2. signUp 
+ 3. Salir
