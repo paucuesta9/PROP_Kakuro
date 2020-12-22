@@ -32,7 +32,8 @@ public class CtrlDomain extends domain.controllers.CtrlDomain {
     }
     @Override
     public void saveNewPlayer(String username, String playerJSON) throws PlayerExists {
-        System.out.println("OK");
+        if(username.equals("1234")) throw new PlayerExists();
+        else System.out.println("OK");
     }
     @Override
     public JsonReader[] getListOfPlayers() throws NullPointerException {
