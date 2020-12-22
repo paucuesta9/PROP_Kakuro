@@ -67,9 +67,7 @@ public class CtrlPlay {
             cd.setKakuro(currentKakuro);
         } catch (IOException e) {
             if (rowSize > 20 || columnSize > 20) throw new CantGenerateException();
-            System.out.println("No se ha encontrado ningun kakuro con estas características, se está generando uno... (Puede que finalmente no sea la misma dificultad)");
             currentKakuro = CtrlGenerate.generate(rowSize,columnSize, difficulty);
-            System.out.println("Finalmente la dificultad es de " + currentKakuro.getDifficulty());
             CtrlResolve ctrlResolve =  new CtrlResolve(currentKakuro);
             ctrlResolve.resolve();
             cd.setKakuro(currentKakuro);
