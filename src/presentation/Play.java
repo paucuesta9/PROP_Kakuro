@@ -463,23 +463,27 @@ public class Play {
                         int keyCode = e.getKeyCode();
                         if (keyCode == KeyEvent.VK_UP) {
                             if (posX - 1 >= 0 && components[(posX - 1) * columnSize + posY] instanceof KakuroWhiteCell) {
-                                --posX;
-                                components[posX * columnSize + posY].requestFocus();
+                                if (components[(posX - 1) * columnSize + posY].getBackground() != Utils.colorCorrectCell) {
+                                    components[(posX - 1) * columnSize + posY].requestFocus();
+                                }
                             }
                         } else if (keyCode == KeyEvent.VK_DOWN) {
                             if (posX + 1 < rowSize && components[(posX + 1) * columnSize + posY] instanceof KakuroWhiteCell) {
-                                ++posX;
-                                components[posX * columnSize + posY].requestFocus();
+                                if (components[(posX + 1) * columnSize + posY].getBackground() != Utils.colorCorrectCell) {
+                                    components[(posX + 1) * columnSize + posY].requestFocus();
+                                }
                             }
                         } else if (keyCode == KeyEvent.VK_LEFT) {
                             if (posY - 1 >= 0 && components[posX * columnSize + posY - 1] instanceof KakuroWhiteCell) {
-                                --posY;
-                                components[posX * columnSize + posY].requestFocus();
+                                if (components[posX * columnSize + posY - 1].getBackground() != Utils.colorCorrectCell) {
+                                    components[posX * columnSize + posY - 1].requestFocus();
+                                }
                             }
                         } else if (keyCode == KeyEvent.VK_RIGHT) {
                             if (posY + 1 < columnSize && components[posX * columnSize + posY + 1] instanceof KakuroWhiteCell) {
-                                ++posY;
-                                components[posX * columnSize + posY].requestFocus();
+                                if (components[posX * columnSize + posY + 1].getBackground() != Utils.colorCorrectCell) {
+                                    components[posX * columnSize + posY + 1].requestFocus();
+                                }
                             }
                         }
                     }
