@@ -49,6 +49,8 @@ public class Generate {
     private JFrame frame;
 
     private boolean g = false;
+    Thread t;
+    private boolean thread = false;
 
     int diff = 1;
 
@@ -202,8 +204,9 @@ public class Generate {
                         generateButton.setText("");
                         generateButton.setIcon(imageIcon);
                         exit.setEnabled(true);
-                        Thread t = new Thread() {
+                        t = new Thread() {
                             public void run() {
+                                thread = true;
                                 ctrlUI.generate(Integer.parseInt(numRow.getText()), Integer.parseInt(numColumn.getText()), diff);
                                 ctrlUI.resolve();
                                 ctrlUI.toAskSave("¿Desea guardar el kakuro generado?", ctrlUI.getKakuro(), 1);
@@ -211,7 +214,7 @@ public class Generate {
                         };
                         t.start();
                     } else if (Integer.parseInt(numRow.getText()) > 20 || Integer.parseInt(numColumn.getText()) > 20)
-                        Utils.showError("El tamaño máximo es 20");
+                        Utils.showError("El tamaño máximo es 20x20");
                     else Utils.showError("Tamaño inválido");
                 }
             }
@@ -219,6 +222,7 @@ public class Generate {
         exit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (thread) t.stop();
                 ctrlUI.toMain();
             }
         });
@@ -404,10 +408,7 @@ public class Generate {
                 resultName = currentFont.getName();
             }
         }
-        Font font = new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
-        boolean isMac = System.getProperty("os.name", "").toLowerCase(Locale.ENGLISH).startsWith("mac");
-        Font fontWithFallback = isMac ? new Font(font.getFamily(), font.getStyle(), font.getSize()) : new StyleContext().getFont(font.getFamily(), font.getStyle(), font.getSize());
-        return fontWithFallback instanceof FontUIResource ? fontWithFallback : new FontUIResource(fontWithFallback);
+        return new Font(resultName, style >= 0 ? style : currentFont.getStyle(), size >= 0 ? size : currentFont.getSize());
     }
 
     /**
