@@ -558,10 +558,13 @@ public class Create {
 
     private void setBoard(String kakuro) {
         kBoard = new KakuroBoard(kakuro);
-        board.add(kBoard);
-        board.validate();
-        cells = kBoard.getComponents();
-        listenersCells();
+        if (kBoard.getRowSize() > 60 || kBoard.getColumnSize() > 60) Utils.showError("El tamaño debe ser máximo 60");
+        else {
+            board.add(kBoard);
+            board.validate();
+            cells = kBoard.getComponents();
+            listenersCells();
+        }
     }
 
     public JPanel getDefaultPanel() {
