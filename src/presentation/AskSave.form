@@ -54,6 +54,7 @@
                 <properties>
                   <background color="-16777216"/>
                   <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
                   <focusPainted value="false"/>
                   <opaque value="false"/>
                   <text value="Sí"/>
@@ -69,6 +70,7 @@
                 </constraints>
                 <properties>
                   <borderPainted value="false"/>
+                  <contentAreaFilled value="false"/>
                   <focusPainted value="false"/>
                   <opaque value="false"/>
                   <text value="No"/>

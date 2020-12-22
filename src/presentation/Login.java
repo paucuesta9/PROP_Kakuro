@@ -128,7 +128,7 @@ public class Login {
         iniciarSesionButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (!mod1 || !mod) Utils.showError("Usuario o contraseña no válida");
+                if (!mod1 || !mod) Utils.showError("Usuario y/o contraseña no válida");
                 else {
                     try {
                         ctrlPlayerUI.login(usuarioTextField.getText(), contrasenaPasswordField.getPassword());

@@ -18,8 +18,8 @@ import java.awt.event.*;
  */
 
 /**
- * @brief Pantalla AskSave que pregunta si quieres guardar un cierto kakuro
  * @author Alvaro Armada Ruiz
+ * @brief Pantalla AskSave que pregunta si quieres guardar un cierto kakuro
  */
 
 public class AskSave {
@@ -186,12 +186,14 @@ public class AskSave {
         síButton = new JButton();
         síButton.setBackground(new Color(-16777216));
         síButton.setBorderPainted(false);
+        síButton.setContentAreaFilled(false);
         síButton.setFocusPainted(false);
         síButton.setOpaque(false);
         síButton.setText("Sí");
         panel3.add(síButton, new GridConstraints(0, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(100, 40), new Dimension(100, 40), new Dimension(100, 40), 0, false));
         noButton = new JButton();
         noButton.setBorderPainted(false);
+        noButton.setContentAreaFilled(false);
         noButton.setFocusPainted(false);
         noButton.setOpaque(false);
         noButton.setText("No");

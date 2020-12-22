@@ -166,8 +166,8 @@ public class Register {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (usuarioTextField.getText().equals("") || contrasenaPasswordField.getText().equals("") || repetirContrasenaPasswordField.getText().equals(""))
-                    Utils.showError("Usuario o contraseñas no válidas");
-                else if (!mod || !mod1 || !mod2) Utils.showError("Usuario o contraseñas no válidas");
+                    Utils.showError("Usuario y/o contraseñas no válidas");
+                else if (!mod || !mod1 || !mod2) Utils.showError("Usuario y/o contraseñas no válidas");
                 else if (repetirContrasenaPasswordField.getText().equals(contrasenaPasswordField.getText())) {
                     try {
                         ctrlPlayerUI.signUp(usuarioTextField.getText(), contrasenaPasswordField.getText());
