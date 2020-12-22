@@ -1,12 +1,11 @@
 package domain.controllers.drivers;
 
-import domain.classes.Cell;
-import domain.classes.Kakuro;
-import domain.classes.Player;
-import domain.classes.WhiteCell;
+import domain.classes.*;
 import domain.controllers.CtrlPlay;
 import domain.controllers.stubs.CtrlDomain;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /** @file DriverCtrlPlay.java
@@ -38,7 +37,17 @@ public class DriverCtrlPlay {
     }
 
     private static void testCtrlPlay3() {
-
+        CtrlDomain cdStub = new CtrlDomain();
+        List<String> h = new ArrayList<>();
+        Game game1 = new Game(0,1,2,3,4,5,6,h);
+        Player p = new Player();
+        List<Game> l = new ArrayList<>();
+        l.add(game1);
+        p.setUsername("1234");
+        p.setSavedGames(l);
+        cdStub.setCurrentPlayer(p);
+        CtrlPlay cp = new CtrlPlay(1,cdStub);
+        System.out.println("Se ha creado");
     }
 
 
@@ -84,7 +93,7 @@ public class DriverCtrlPlay {
     private static void testFinishGame() {
         CtrlDomain cdStub = new CtrlDomain();
         CtrlPlay p = new CtrlPlay("estoNoImporta\\diff1\\3_3\\0.txt",cdStub);
-        System.out.println("¿Se ha pulsado el boton de resolver? (0->false, 1->true)");
+        System.out.println("Se ha pulsado el boton de resolver? (0->false, 1->true)");
         int x = readNumber();
         boolean b = (x==1);
         System.out.println("Se han sumado "+p.finishGame(b)+" puntos");
@@ -95,7 +104,7 @@ public class DriverCtrlPlay {
      * Indica las opciones que hay para testear
      */
     public static void main(String[] args) {
-        System.out.println("Opciones: \n 1. 1ra constructora \n 2. 2da constructora \n 3. 3ra constructora \n 4. Comprobar si un valor és correcto \n 5. Retornar el valor correcto \n 6. Acabar una partida \n 7. Salir");
+        System.out.println("Opciones: \n 1. 1ra constructora \n 2. 2da constructora \n 3. 3ra constructora \n 4. Comprobar si un valor es correcto \n 5. Retornar el valor correcto \n 6. Acabar una partida \n 7. Salir");
         int value = readNumber();
         while (value != 7) {
             int x, y;
@@ -131,7 +140,7 @@ public class DriverCtrlPlay {
                     System.out.println("El numero introducido es incorrecto");
                     break;
             }
-            System.out.println("Opciones: \n 1. 1ra constructora \n 2. 2da constructora \n 3. 3ra constructora \n 4. Comprobar si un valor és correcto \n 5. Retornar el valor correcto \n 6. Acabar una partida \n 7. Salir");
+            System.out.println("Opciones: \n 1. 1ra constructora \n 2. 2da constructora \n 3. 3ra constructora \n 4. Comprobar si un valor es correcto \n 5. Retornar el valor correcto \n 6. Acabar una partida \n 7. Salir");
             value = readNumber();
         }
         System.exit(0);

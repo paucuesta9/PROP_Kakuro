@@ -1,0 +1,22 @@
+Opciones: 
+ 1. Creadora 
+ 2. Lista ordenada de jugadores por victorias 
+ 3. Salir
+
+Se llama a la Creadora
+Se ha creado
+
+Opciones: 
+ 1. Creadora 
+ 2. Lista ordenada de jugadores por victorias 
+ 3. Salir
+
+Se llama a getList
+Se ordenan los jugadores segun victorias
+1 1234 59 
+2 polFeo 5 
+
+Opciones: 
+ 1. Creadora 
+ 2. Lista ordenada de jugadores por victorias 
+ 3. Salir
