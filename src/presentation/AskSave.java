@@ -130,7 +130,9 @@ public class AskSave {
             public void actionPerformed(ActionEvent e) {
                 if (option == 1) {
                     String info = ctrlUI.saveAndGetInfo();
-                    Utils.showError("El kakuro se ha guardado en data/" + info);
+                    String diff = info.substring(4, 5);
+                    GraphicsEnvironment.getLocalGraphicsEnvironment().registerFont(Utils.roboto);
+                    Utils.showError("<html> <p style=\"text-align:center;\">La dificultad es " + diff + ".</p> <p style=\"text-align:center;\">El kakuro se ha guardado en data/" + info + "</p> </html>");
                 } else {
                     ctrlUI.saveGame();
                 }
