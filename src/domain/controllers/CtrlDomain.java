@@ -126,10 +126,10 @@ public class CtrlDomain {
      * @param difficulty dificultad del tablero, entre 1 y 3
      * @param kakuroSizeRow número de filas del tablero
      * @param kakuroSizeColumn número de columnas del tablero
-     *
+     * @param training indica si la partida es en modo entrenamiento
      */
-    public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn) {
-        ctrlPlay = new CtrlPlay(difficulty, kakuroSizeRow, kakuroSizeColumn, this);
+    public void startNewGame(int difficulty, int kakuroSizeRow, int kakuroSizeColumn, boolean training) {
+        ctrlPlay = new CtrlPlay(difficulty, kakuroSizeRow, kakuroSizeColumn, this, training);
         currentGame = ctrlPlay.getGame();
         currentKakuro = ctrlPlay.getKakuro();
     }
@@ -577,7 +577,7 @@ public class CtrlDomain {
      *
      */
     public void addCreatedToPlayer() {
-        currentPlayer.getStats().setCreated(currentPlayer.getStats().getCreated() + 1);
+        currentPlayer.getStats().setCreated(1);
         savePlayer();
     }
 }

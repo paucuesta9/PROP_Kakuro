@@ -44,8 +44,9 @@ CtrlPlay {
      * @param rowSize representa el número de filas del kakuro de la partida
      * @param columnSize representa el número de columnas del kakuro de la partida
      * @param cd representa la instancia del ctrlDomain
+     * @param training represneta si se empieza partida en modo entrenamiento
      */
-    public CtrlPlay(int difficulty, int rowSize, int columnSize, CtrlDomain cd) {
+    public CtrlPlay(int difficulty, int rowSize, int columnSize, CtrlDomain cd, boolean training) {
         this.cd = cd;
         currentPlayer = cd.getCurrentPlayer();
         try {
@@ -67,7 +68,7 @@ CtrlPlay {
         int id = cd.getGameId();
         currentGame = new Game(id, 0, 0, currentKakuro.getId(), rowSize, columnSize, currentKakuro.getDifficulty(), new ArrayList<>());
         currentPlayer.setCurrentGame(currentGame);
-        currentPlayer.getStats().setTotal(1);
+        if (!training) currentPlayer.getStats().setTotal(1);
         setCorrectValues();
     }
 

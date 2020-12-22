@@ -24,7 +24,7 @@ public class DriverCtrlPlay {
      */
     private static void testCtrlPlay1() {
         CtrlDomain cdStub = new CtrlDomain();
-        CtrlPlay play = new CtrlPlay(0,9,9,cdStub);
+        CtrlPlay play = new CtrlPlay(0,9,9,cdStub, true);
         System.out.println("Se ha creado");
     }
 

@@ -194,7 +194,7 @@ public class CtrlUIOld {
                 kakuroSizeRow = readNumber();
                 kakuroSizeColumn = readNumber();
             }
-            cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn);
+            cd.startNewGame(difficulty, kakuroSizeRow, kakuroSizeColumn, true);
 
 
         // }

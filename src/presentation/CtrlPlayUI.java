@@ -63,8 +63,8 @@ public class CtrlPlayUI {
        return ctrlUI.finishGame(selfFinished);
     }
 
-    public void startGame(int diff, int rowSize, int columnSize) {
-        ctrlUI.startGame(diff, rowSize, columnSize);
+    public void startGame(int diff, int rowSize, int columnSize, boolean training) {
+        ctrlUI.startGame(diff, rowSize, columnSize, training);
     }
 
     public void startGame(String absolutePath) {

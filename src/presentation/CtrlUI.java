@@ -203,8 +203,8 @@ public class CtrlUI {
         return cd.helpCorrectNumber(x,y);
     }
 
-    public void startGame(int diff, int rowSize, int columnSize) {
-        cd.startNewGame(diff, rowSize, columnSize);
+    public void startGame(int diff, int rowSize, int columnSize, boolean trainig) {
+        cd.startNewGame(diff, rowSize, columnSize, trainig);
     }
 
     public void startGame(String absolutePath) {
